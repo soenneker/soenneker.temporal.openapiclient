@@ -445,6 +445,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTimedOutEventAttributes WorkflowExecutionTimedOutEventAttributes { get; set; }
 #endif
+        /// <summary>Attributes for an event indicating that time skipping state changed for a workflow execution, either time was advanced or time skipping was disabled automatically due to a bound being reached. The worker_may_ignore field in HistoryEvent should always be set true for this event.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTimeSkippingTransitionedEventAttributes? WorkflowExecutionTimeSkippingTransitionedEventAttributes { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTimeSkippingTransitionedEventAttributes WorkflowExecutionTimeSkippingTransitionedEventAttributes { get; set; }
+#endif
         /// <summary>Attributes for an event marking that a workflow execution was unpaused.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -621,6 +629,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "workflowExecutionSignaledEventAttributes", n => { WorkflowExecutionSignaledEventAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributes.CreateFromDiscriminatorValue); } },
                 { "workflowExecutionStartedEventAttributes", n => { WorkflowExecutionStartedEventAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes.CreateFromDiscriminatorValue); } },
                 { "workflowExecutionTerminatedEventAttributes", n => { WorkflowExecutionTerminatedEventAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTerminatedEventAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTerminatedEventAttributes.CreateFromDiscriminatorValue); } },
+                { "workflowExecutionTimeSkippingTransitionedEventAttributes", n => { WorkflowExecutionTimeSkippingTransitionedEventAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTimeSkippingTransitionedEventAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTimeSkippingTransitionedEventAttributes.CreateFromDiscriminatorValue); } },
                 { "workflowExecutionTimedOutEventAttributes", n => { WorkflowExecutionTimedOutEventAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTimedOutEventAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTimedOutEventAttributes.CreateFromDiscriminatorValue); } },
                 { "workflowExecutionUnpausedEventAttributes", n => { WorkflowExecutionUnpausedEventAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUnpausedEventAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUnpausedEventAttributes.CreateFromDiscriminatorValue); } },
                 { "workflowExecutionUpdateAcceptedEventAttributes", n => { WorkflowExecutionUpdateAcceptedEventAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAcceptedEventAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAcceptedEventAttributes.CreateFromDiscriminatorValue); } },
@@ -699,6 +708,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes>("workflowExecutionStartedEventAttributes", WorkflowExecutionStartedEventAttributes);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTerminatedEventAttributes>("workflowExecutionTerminatedEventAttributes", WorkflowExecutionTerminatedEventAttributes);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTimedOutEventAttributes>("workflowExecutionTimedOutEventAttributes", WorkflowExecutionTimedOutEventAttributes);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTimeSkippingTransitionedEventAttributes>("workflowExecutionTimeSkippingTransitionedEventAttributes", WorkflowExecutionTimeSkippingTransitionedEventAttributes);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUnpausedEventAttributes>("workflowExecutionUnpausedEventAttributes", WorkflowExecutionUnpausedEventAttributes);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAcceptedEventAttributes>("workflowExecutionUpdateAcceptedEventAttributes", WorkflowExecutionUpdateAcceptedEventAttributes);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAdmittedEventAttributes>("workflowExecutionUpdateAdmittedEventAttributes", WorkflowExecutionUpdateAdmittedEventAttributes);

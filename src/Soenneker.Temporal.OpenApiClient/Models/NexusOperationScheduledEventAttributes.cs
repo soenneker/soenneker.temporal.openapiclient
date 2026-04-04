@@ -63,7 +63,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string RequestId { get; set; }
 #endif
-        /// <summary>Schedule-to-close timeout for this operation. Indicates how long the caller is willing to wait for operation completion. Calls are retried internally by the server. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;to&quot; is used to indicate interval. --)</summary>
+        /// <summary>Schedule-to-close timeout for this operation. Indicates how long the caller is willing to wait for operation completion. Calls are retried internally by the server. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;to&quot; is used to indicate interval. --) (-- api-linter: core::0142::time-field-names=disabled     aip.dev/not-precedent: &quot;timeout&quot; is an acceptable suffix for duration fields in this API. --)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ScheduleToCloseTimeout { get; set; }

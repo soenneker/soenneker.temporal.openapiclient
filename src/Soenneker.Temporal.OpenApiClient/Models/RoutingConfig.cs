@@ -14,7 +14,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Specifies which Deployment Version should receive new workflow executions and tasks of existing unversioned or AutoUpgrade workflows. Nil value means no Version in this Deployment (except Ramping Version, if present) receives traffic other than tasks of previously Pinned workflows. In absence of a Current Version, remaining traffic after any ramp (if set)  goes to unversioned workers (those with `UNVERSIONED` (or unspecified) `WorkerVersioningMode`.).  Note: Current Version is overridden by the Ramping Version for a portion of traffic when ramp percentage is non-zero (see `ramping_deployment_version` and `ramping_version_percentage`).</summary>
+        /// <summary>Specifies which Deployment Version should receive new workflow executions and tasks of existing unversioned or AutoUpgrade workflows. Nil value means no Version in this Deployment (except Ramping Version, if present) receives traffic other than tasks of previously Pinned workflows. In absence of a Current Version, remaining traffic after any ramp (if set)  goes to unversioned workers (those with `UNVERSIONED` (or unspecified) `WorkerVersioningMode`.). Note: Current Version is overridden by the Ramping Version for a portion of traffic when ramp percentage is non-zero (see `ramping_deployment_version` and `ramping_version_percentage`).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion? CurrentDeploymentVersion { get; set; }
@@ -54,7 +54,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public float? RampingVersionPercentage { get; set; }
         /// <summary>Last time ramping version percentage was changed. If ramping version is changed, this is also updated, even if the percentage stays the same.</summary>
         public DateTimeOffset? RampingVersionPercentageChangedTime { get; set; }
-        /// <summary>Monotonically increasing value which is incremented on every mutation  to any field of this message to achieve eventual consistency between task queues and their partitions.</summary>
+        /// <summary>Monotonically increasing value which is incremented on every mutation to any field of this message to achieve eventual consistency between task queues and their partitions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RevisionNumber { get; set; }

@@ -98,6 +98,31 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.WorkerDeployments.Ite
             return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentResponse>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
+        /// Creates a new Worker Deployment. Experimental. This API might significantly change or be removed in a future release.
+        /// </summary>
+        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentResponse"/></returns>
+        /// <param name="body">Creates a new WorkerDeployment.</param>
+        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
+        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Temporal.OpenApiClient.Models.Status">When receiving a 4XX or 5XX status code</exception>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentResponse?> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        {
+#nullable restore
+#else
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentResponse> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        {
+#endif
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
+            var requestInfo = ToPostRequestInformation(body, requestConfiguration);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "XXX", global::Soenneker.Temporal.OpenApiClient.Models.Status.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentResponse>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        }
+        /// <summary>
         /// Deletes records of (an old) Deployment. A deployment can only be deleted if it has no Version in it. Experimental. This API might significantly change or be removed in a future release.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
@@ -133,6 +158,28 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.WorkerDeployments.Ite
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
+            return requestInfo;
+        }
+        /// <summary>
+        /// Creates a new Worker Deployment. Experimental. This API might significantly change or be removed in a future release.
+        /// </summary>
+        /// <returns>A <see cref="RequestInformation"/></returns>
+        /// <param name="body">Creates a new WorkerDeployment.</param>
+        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        {
+#nullable restore
+#else
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        {
+#endif
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
+            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            requestInfo.Configure(requestConfiguration);
+            requestInfo.Headers.TryAdd("Accept", "application/json");
+            requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
             return requestInfo;
         }
         /// <summary>

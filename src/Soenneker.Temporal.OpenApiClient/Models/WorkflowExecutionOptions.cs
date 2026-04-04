@@ -22,6 +22,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public global::Soenneker.Temporal.OpenApiClient.Models.Priority Priority { get; set; }
 #endif
+        /// <summary>Time-skipping configuration for this workflow execution. If not set, the time-skipping conf will not get updated upon request,  i.e. the existing time-skipping conf will be preserved.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Temporal.OpenApiClient.Models.TimeSkippingConfig? TimeSkippingConfig { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Temporal.OpenApiClient.Models.TimeSkippingConfig TimeSkippingConfig { get; set; }
+#endif
         /// <summary>If set, takes precedence over the Versioning Behavior sent by the SDK on Workflow Task completion.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -56,6 +64,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "priority", n => { Priority = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Priority>(global::Soenneker.Temporal.OpenApiClient.Models.Priority.CreateFromDiscriminatorValue); } },
+                { "timeSkippingConfig", n => { TimeSkippingConfig = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TimeSkippingConfig>(global::Soenneker.Temporal.OpenApiClient.Models.TimeSkippingConfig.CreateFromDiscriminatorValue); } },
                 { "versioningOverride", n => { VersioningOverride = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverride>(global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverride.CreateFromDiscriminatorValue); } },
             };
         }
@@ -67,6 +76,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Priority>("priority", Priority);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TimeSkippingConfig>("timeSkippingConfig", TimeSkippingConfig);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverride>("versioningOverride", VersioningOverride);
             writer.WriteAdditionalData(AdditionalData);
         }

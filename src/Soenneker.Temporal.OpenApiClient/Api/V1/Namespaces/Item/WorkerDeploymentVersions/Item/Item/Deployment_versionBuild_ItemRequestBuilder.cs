@@ -3,7 +3,9 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.WorkerDeploymentVersions.Item.Item.UpdateComputeConfig;
 using Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.WorkerDeploymentVersions.Item.Item.UpdateMetadata;
+using Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.WorkerDeploymentVersions.Item.Item.ValidateComputeConfig;
 using Soenneker.Temporal.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
@@ -18,10 +20,20 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.WorkerDeployme
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Deployment_versionBuild_ItemRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The updateComputeConfig property</summary>
+        public global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.WorkerDeploymentVersions.Item.Item.UpdateComputeConfig.UpdateComputeConfigRequestBuilder UpdateComputeConfig
+        {
+            get => new global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.WorkerDeploymentVersions.Item.Item.UpdateComputeConfig.UpdateComputeConfigRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The updateMetadata property</summary>
         public global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.WorkerDeploymentVersions.Item.Item.UpdateMetadata.UpdateMetadataRequestBuilder UpdateMetadata
         {
             get => new global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.WorkerDeploymentVersions.Item.Item.UpdateMetadata.UpdateMetadataRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The validateComputeConfig property</summary>
+        public global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.WorkerDeploymentVersions.Item.Item.ValidateComputeConfig.ValidateComputeConfigRequestBuilder ValidateComputeConfig
+        {
+            get => new global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.WorkerDeploymentVersions.Item.Item.ValidateComputeConfig.ValidateComputeConfigRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.WorkerDeploymentVersions.Item.Item.Deployment_versionBuild_ItemRequestBuilder"/> and sets the default values.

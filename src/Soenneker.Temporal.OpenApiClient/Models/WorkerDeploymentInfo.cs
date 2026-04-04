@@ -51,7 +51,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #endif
         /// <summary>Indicates whether the routing_config has been fully propagated to all relevant task queues and their partitions.</summary>
         public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfo_routingConfigUpdateState? RoutingConfigUpdateState { get; set; }
-        /// <summary>Deployment Versions that are currently tracked in this Deployment. A DeploymentVersion will be cleaned up automatically if all the following conditions meet: - It does not receive new executions (is not current or ramping) - It has no active pollers (see WorkerDeploymentVersionInfo.pollers_status)  - It is drained (see WorkerDeploymentVersionInfo.drainage_status)</summary>
+        /// <summary>Deployment Versions that are currently tracked in this Deployment. A DeploymentVersion will be cleaned up automatically if all the following conditions meet: - It does not receive new executions (is not current or ramping) - It has no active pollers (see WorkerDeploymentVersionInfo.pollers_status) - It is drained (see WorkerDeploymentVersionInfo.drainage_status)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfo_WorkerDeploymentVersionSummary>? VersionSummaries { get; set; }

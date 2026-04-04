@@ -248,5 +248,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         #pragma warning disable CS1591
         EVENT_TYPE_WORKFLOW_EXECUTION_UNPAUSED,
         #pragma warning restore CS1591
+        [EnumMember(Value = "EVENT_TYPE_WORKFLOW_EXECUTION_TIME_SKIPPING_TRANSITIONED")]
+        #pragma warning disable CS1591
+        EVENT_TYPE_WORKFLOW_EXECUTION_TIME_SKIPPING_TRANSITIONED,
+        #pragma warning restore CS1591
     }
 }

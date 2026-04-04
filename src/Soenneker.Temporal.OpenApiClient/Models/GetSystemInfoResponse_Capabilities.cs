@@ -31,6 +31,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public bool? Nexus { get; set; }
         /// <summary>True if the server knows about the sdk metadata field on WFT completions and will record it in history</summary>
         public bool? SdkMetadata { get; set; }
+        /// <summary>True if the server supports server-scaled deployments. This flag is dependent both on server version and for server-scaled deployments to be enabled via server configuration.</summary>
+        public bool? ServerScaledDeployments { get; set; }
         /// <summary>True if signal and query headers are supported.</summary>
         public bool? SignalAndQueryHeader { get; set; }
         /// <summary>Supports scheduled workflow features.</summary>
@@ -70,6 +72,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "internalErrorDifferentiation", n => { InternalErrorDifferentiation = n.GetBoolValue(); } },
                 { "nexus", n => { Nexus = n.GetBoolValue(); } },
                 { "sdkMetadata", n => { SdkMetadata = n.GetBoolValue(); } },
+                { "serverScaledDeployments", n => { ServerScaledDeployments = n.GetBoolValue(); } },
                 { "signalAndQueryHeader", n => { SignalAndQueryHeader = n.GetBoolValue(); } },
                 { "supportsSchedules", n => { SupportsSchedules = n.GetBoolValue(); } },
                 { "upsertMemo", n => { UpsertMemo = n.GetBoolValue(); } },
@@ -90,6 +93,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteBoolValue("internalErrorDifferentiation", InternalErrorDifferentiation);
             writer.WriteBoolValue("nexus", Nexus);
             writer.WriteBoolValue("sdkMetadata", SdkMetadata);
+            writer.WriteBoolValue("serverScaledDeployments", ServerScaledDeployments);
             writer.WriteBoolValue("signalAndQueryHeader", SignalAndQueryHeader);
             writer.WriteBoolValue("supportsSchedules", SupportsSchedules);
             writer.WriteBoolValue("upsertMemo", UpsertMemo);

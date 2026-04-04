@@ -46,6 +46,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public global::Soenneker.Temporal.OpenApiClient.Models.Priority Priority { get; set; }
 #endif
+        /// <summary>If set, the time-skipping configuration was changed. Contains the full updated configuration.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Temporal.OpenApiClient.Models.TimeSkippingConfig? TimeSkippingConfig { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Temporal.OpenApiClient.Models.TimeSkippingConfig TimeSkippingConfig { get; set; }
+#endif
         /// <summary>Versioning override removed in this event.</summary>
         public bool? UnsetVersioningOverride { get; set; }
         /// <summary>Versioning override upserted in this event. Ignored if nil or if unset_versioning_override is true.</summary>
@@ -85,6 +93,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "attachedRequestId", n => { AttachedRequestId = n.GetStringValue(); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
                 { "priority", n => { Priority = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Priority>(global::Soenneker.Temporal.OpenApiClient.Models.Priority.CreateFromDiscriminatorValue); } },
+                { "timeSkippingConfig", n => { TimeSkippingConfig = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TimeSkippingConfig>(global::Soenneker.Temporal.OpenApiClient.Models.TimeSkippingConfig.CreateFromDiscriminatorValue); } },
                 { "unsetVersioningOverride", n => { UnsetVersioningOverride = n.GetBoolValue(); } },
                 { "versioningOverride", n => { VersioningOverride = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverride>(global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverride.CreateFromDiscriminatorValue); } },
             };
@@ -100,6 +109,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("attachedRequestId", AttachedRequestId);
             writer.WriteStringValue("identity", Identity);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Priority>("priority", Priority);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TimeSkippingConfig>("timeSkippingConfig", TimeSkippingConfig);
             writer.WriteBoolValue("unsetVersioningOverride", UnsetVersioningOverride);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverride>("versioningOverride", VersioningOverride);
             writer.WriteAdditionalData(AdditionalData);

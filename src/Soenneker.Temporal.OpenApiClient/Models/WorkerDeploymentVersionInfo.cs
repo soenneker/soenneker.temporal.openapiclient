@@ -15,11 +15,19 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Optional. Contains the new worker compute configuration for the Worker Deployment. Used for worker scale management.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Temporal.OpenApiClient.Models.ComputeConfig? ComputeConfig { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Temporal.OpenApiClient.Models.ComputeConfig ComputeConfig { get; set; }
+#endif
         /// <summary>The createTime property</summary>
         public DateTimeOffset? CreateTime { get; set; }
         /// <summary>(-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &apos;Since&apos; captures the field semantics despite being a preposition. --) Unset if not current.</summary>
         public DateTimeOffset? CurrentSinceTime { get; set; }
-        /// <summary>The deploymentName property</summary>
+        /// <summary>Deprecated. User deployment_version.deployment_name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DeploymentName { get; set; }
@@ -49,6 +57,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public DateTimeOffset? LastCurrentTime { get; set; }
         /// <summary>Timestamp when this version last stopped being current or ramping. Cleared if the version becomes current or ramping again.</summary>
         public DateTimeOffset? LastDeactivationTime { get; set; }
+        /// <summary>Identity of the last client who modified the configuration of this Version. As of now, this field only covers changes through the following APIs: - `CreateWorkerDeploymentVersion` - `UpdateWorkerDeploymentVersionComputeConfig` - `UpdateWorkerDeploymentVersionMetadata`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? LastModifierIdentity { get; set; }
+#nullable restore
+#else
+        public string LastModifierIdentity { get; set; }
+#endif
         /// <summary>Arbitrary user-provided metadata attached to this version.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -106,6 +122,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "computeConfig", n => { ComputeConfig = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ComputeConfig>(global::Soenneker.Temporal.OpenApiClient.Models.ComputeConfig.CreateFromDiscriminatorValue); } },
                 { "createTime", n => { CreateTime = n.GetDateTimeOffsetValue(); } },
                 { "currentSinceTime", n => { CurrentSinceTime = n.GetDateTimeOffsetValue(); } },
                 { "deploymentName", n => { DeploymentName = n.GetStringValue(); } },
@@ -114,6 +131,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "firstActivationTime", n => { FirstActivationTime = n.GetDateTimeOffsetValue(); } },
                 { "lastCurrentTime", n => { LastCurrentTime = n.GetDateTimeOffsetValue(); } },
                 { "lastDeactivationTime", n => { LastDeactivationTime = n.GetDateTimeOffsetValue(); } },
+                { "lastModifierIdentity", n => { LastModifierIdentity = n.GetStringValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.VersionMetadata>(global::Soenneker.Temporal.OpenApiClient.Models.VersionMetadata.CreateFromDiscriminatorValue); } },
                 { "rampPercentage", n => { RampPercentage = n.GetFloatValue(); } },
                 { "rampingSinceTime", n => { RampingSinceTime = n.GetDateTimeOffsetValue(); } },
@@ -130,6 +148,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ComputeConfig>("computeConfig", ComputeConfig);
             writer.WriteDateTimeOffsetValue("createTime", CreateTime);
             writer.WriteDateTimeOffsetValue("currentSinceTime", CurrentSinceTime);
             writer.WriteStringValue("deploymentName", DeploymentName);
@@ -138,6 +157,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("firstActivationTime", FirstActivationTime);
             writer.WriteDateTimeOffsetValue("lastCurrentTime", LastCurrentTime);
             writer.WriteDateTimeOffsetValue("lastDeactivationTime", LastDeactivationTime);
+            writer.WriteStringValue("lastModifierIdentity", LastModifierIdentity);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.VersionMetadata>("metadata", Metadata);
             writer.WriteDateTimeOffsetValue("rampingSinceTime", RampingSinceTime);
             writer.WriteFloatValue("rampPercentage", RampPercentage);

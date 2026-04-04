@@ -31,5 +31,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         #pragma warning disable CS1591
         WORKER_DEPLOYMENT_VERSION_STATUS_DRAINED,
         #pragma warning restore CS1591
+        [EnumMember(Value = "WORKER_DEPLOYMENT_VERSION_STATUS_CREATED")]
+        #pragma warning disable CS1591
+        WORKER_DEPLOYMENT_VERSION_STATUS_CREATED,
+        #pragma warning restore CS1591
     }
 }
