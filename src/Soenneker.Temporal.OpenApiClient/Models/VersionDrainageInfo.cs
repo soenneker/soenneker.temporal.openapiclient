@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// Information about workflow drainage to help the user determine when it is safe to decommission a Version. Not present while version is current or ramping. Experimental. Worker Deployments are experimental and might significantly change in the future.
+    /// Information about workflow drainage to help the user determine when it is safe to decommission a Version. Not present while version is current or ramping.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class VersionDrainageInfo : IAdditionalDataHolder, IParsable

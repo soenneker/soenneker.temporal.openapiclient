@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// Each scaling group describes a compute config for a specific subset of the worker  deployment version: covering a specific set of task types and/or regions. Having different configurations for different task types, allows independent tuning of activity and workflow task processing (for example). The key of the map is the ID of the scaling group used to reference it in subsequent update calls.
+    /// Each scaling group describes a compute config for a specific subset of the worker deployment version: covering a specific set of task types and/or regions. Having different configurations for different task types, allows independent tuning of activity and workflow task processing (for example). The key of the map is the ID of the scaling group used to reference it in subsequent update calls.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ComputeConfig_scalingGroups : IAdditionalDataHolder, IParsable

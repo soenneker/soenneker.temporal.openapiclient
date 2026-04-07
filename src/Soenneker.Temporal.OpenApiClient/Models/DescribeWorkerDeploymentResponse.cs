@@ -22,7 +22,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string ConflictToken { get; set; }
 #endif
-        /// <summary>A Worker Deployment (Deployment, for short) represents all workers serving  a shared set of Task Queues. Typically, a Deployment represents one service or  application. A Deployment contains multiple Deployment Versions, each representing a different  version of workers. (see documentation of WorkerDeploymentVersionInfo) Deployment records are created in Temporal server automatically when their first poller arrives to the server. Experimental. Worker Deployments are experimental and might significantly change in the future.</summary>
+        /// <summary>A Worker Deployment (Deployment, for short) represents all workers serving a shared set of Task Queues. Typically, a Deployment represents one service or application. A Deployment contains multiple Deployment Versions, each representing a different version of workers. (see documentation of WorkerDeploymentVersionInfo) Deployment records are created in Temporal server automatically when their first poller arrives to the server.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfo? WorkerDeploymentInfo { get; set; }

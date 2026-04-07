@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// Worker Deployment options set in SDK that need to be sent to server in every poll. Experimental. Worker Deployments are experimental and might significantly change in the future.
+    /// Worker Deployment options set in SDK that need to be sent to server in every poll.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WorkerDeploymentOptions : IAdditionalDataHolder, IParsable

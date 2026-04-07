@@ -15,7 +15,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Each scaling group describes a compute config for a specific subset of the worker  deployment version: covering a specific set of task types and/or regions. Having different configurations for different task types, allows independent tuning of activity and workflow task processing (for example). The key of the map is the ID of the scaling group used to reference it in subsequent update calls.</summary>
+        /// <summary>Each scaling group describes a compute config for a specific subset of the worker deployment version: covering a specific set of task types and/or regions. Having different configurations for different task types, allows independent tuning of activity and workflow task processing (for example). The key of the map is the ID of the scaling group used to reference it in subsequent update calls.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Temporal.OpenApiClient.Models.ComputeConfig_scalingGroups? ScalingGroups { get; set; }

@@ -30,7 +30,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public global::Soenneker.Temporal.OpenApiClient.Models.Deployment Deployment { get; set; }
 #endif
-        /// <summary>The Worker Deployment Version that completed this task. Must be set if `versioning_behavior` is set. This value updates workflow execution&apos;s `versioning_info.deployment_version`. Experimental. Worker Deployments are experimental and might significantly change in the future.</summary>
+        /// <summary>The Worker Deployment Version that completed this task. Must be set if `versioning_behavior` is set. This value updates workflow execution&apos;s `versioning_info.deployment_version`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion? DeploymentVersion { get; set; }
@@ -80,7 +80,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #endif
         /// <summary>Versioning behavior sent by the worker that completed this task for this particular workflow execution. UNSPECIFIED means the task was completed by an unversioned worker. This value updates workflow execution&apos;s `versioning_info.behavior`.</summary>
         public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributes_versioningBehavior? VersioningBehavior { get; set; }
-        /// <summary>The name of Worker Deployment that completed this task. Must be set if `versioning_behavior` is set. This value updates workflow execution&apos;s `worker_deployment_name`. Experimental. Worker Deployments are experimental and might significantly change in the future.</summary>
+        /// <summary>The name of Worker Deployment that completed this task. Must be set if `versioning_behavior` is set. This value updates workflow execution&apos;s `worker_deployment_name`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? WorkerDeploymentName { get; set; }
@@ -88,7 +88,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string WorkerDeploymentName { get; set; }
 #endif
-        /// <summary>The Worker Deployment Version that completed this task. Must be set if `versioning_behavior` is set. This value updates workflow execution&apos;s `versioning_info.version`. Experimental. Worker Deployments are experimental and might significantly change in the future. Deprecated. Replaced with `deployment_version`.</summary>
+        /// <summary>The Worker Deployment Version that completed this task. Must be set if `versioning_behavior` is set. This value updates workflow execution&apos;s `versioning_info.version`. Deprecated. Replaced with `deployment_version`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? WorkerDeploymentVersion { get; set; }

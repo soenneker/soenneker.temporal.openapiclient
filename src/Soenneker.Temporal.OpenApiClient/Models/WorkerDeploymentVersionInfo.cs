@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// A Worker Deployment Version (Version, for short) represents all workers of the same  code and config within a Deployment. Workers of the same Version are expected to  behave exactly the same so when executions move between them there are no  non-determinism issues. Worker Deployment Versions are created in Temporal server automatically when  their first poller arrives to the server. Experimental. Worker Deployments are experimental and might significantly change in the future.
+    /// A Worker Deployment Version (Version, for short) represents all workers of the same code and config within a Deployment. Workers of the same Version are expected to behave exactly the same so when executions move between them there are no non-determinism issues. Worker Deployment Versions are created in Temporal server automatically when their first poller arrives to the server.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WorkerDeploymentVersionInfo : IAdditionalDataHolder, IParsable

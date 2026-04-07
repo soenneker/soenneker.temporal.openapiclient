@@ -22,6 +22,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public global::Soenneker.Temporal.OpenApiClient.Models.Payloads Details { get; set; }
 #endif
+        /// <summary>The identity of the worker or client that requested the cancellation.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Identity { get; set; }
+#nullable restore
+#else
+        public string Identity { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.CanceledFailureInfo"/> and sets the default values.
         /// </summary>
@@ -48,6 +56,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "details", n => { Details = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>(global::Soenneker.Temporal.OpenApiClient.Models.Payloads.CreateFromDiscriminatorValue); } },
+                { "identity", n => { Identity = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -58,6 +67,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>("details", Details);
+            writer.WriteStringValue("identity", Identity);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

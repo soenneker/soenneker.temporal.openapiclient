@@ -22,7 +22,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public List<global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponse_VersionTaskQueue> VersionTaskQueues { get; set; }
 #endif
-        /// <summary>A Worker Deployment Version (Version, for short) represents all workers of the same  code and config within a Deployment. Workers of the same Version are expected to  behave exactly the same so when executions move between them there are no  non-determinism issues. Worker Deployment Versions are created in Temporal server automatically when  their first poller arrives to the server. Experimental. Worker Deployments are experimental and might significantly change in the future.</summary>
+        /// <summary>A Worker Deployment Version (Version, for short) represents all workers of the same code and config within a Deployment. Workers of the same Version are expected to behave exactly the same so when executions move between them there are no non-determinism issues. Worker Deployment Versions are created in Temporal server automatically when their first poller arrives to the server.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersionInfo? WorkerDeploymentVersionInfo { get; set; }

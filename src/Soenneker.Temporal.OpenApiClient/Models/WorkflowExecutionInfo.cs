@@ -191,7 +191,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionVersioningInfo VersioningInfo { get; set; }
 #endif
-        /// <summary>The name of Worker Deployment that completed the most recent workflow task. Experimental. Worker Deployments are experimental and might change in the future.</summary>
+        /// <summary>The name of Worker Deployment that completed the most recent workflow task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? WorkerDeploymentName { get; set; }

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// Used as part of WorkflowExecutionStartedEventAttributes to pass down the AutoUpgrade behavior and source deployment version  to a workflow execution whose parent/previous workflow has an AutoUpgrade behavior.
+    /// Used as part of WorkflowExecutionStartedEventAttributes to pass down the AutoUpgrade behavior and source deployment version to a workflow execution whose parent/previous workflow has an AutoUpgrade behavior.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class InheritedAutoUpgradeInfo : IAdditionalDataHolder, IParsable
