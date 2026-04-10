@@ -8,13 +8,15 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// Used as part of WorkflowExecutionStartedEventAttributes to pass down the AutoUpgrade behavior and source deployment version to a workflow execution whose parent/previous workflow has an AutoUpgrade behavior.
+    /// Used as part of WorkflowExecutionStartedEventAttributes to pass down the AutoUpgrade behavior and source deployment version to a workflow execution whose parent/previous workflow has an AutoUpgrade behavior. Also used for Upgrade-on-CaN behaviors AutoUpgrade and UseRampingVersion.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class InheritedAutoUpgradeInfo : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Experimental. If this workflow is the result of a continue-as-new, this field is set to the initial_versioning_behavior specified in that command. Only used for the initial task of this run and the initial task of any retries of this run. Not passed to children or to future continue-as-new. Note: In the first release of Upgrade-on-CaN, when the only ContinueAsNewVersioningBehavior was AutoUpgrade, a non-empty InheritedAutoUpgradeInfo meant that the workflow should start as AutoUpgrade. So for compatibility with history events generated during that time, know that an UNSPECIFIED value here is equivalent to AutoUpgrade value if the InheritedAutoUpgradeInfo is non-empty.</summary>
+        public global::Soenneker.Temporal.OpenApiClient.Models.InheritedAutoUpgradeInfo_continueAsNewInitialVersioningBehavior? ContinueAsNewInitialVersioningBehavior { get; set; }
         /// <summary>The revision number of the source deployment version of the parent/previous workflow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -56,6 +58,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "continueAsNewInitialVersioningBehavior", n => { ContinueAsNewInitialVersioningBehavior = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.InheritedAutoUpgradeInfo_continueAsNewInitialVersioningBehavior>(); } },
                 { "sourceDeploymentRevisionNumber", n => { SourceDeploymentRevisionNumber = n.GetStringValue(); } },
                 { "sourceDeploymentVersion", n => { SourceDeploymentVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion>(global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion.CreateFromDiscriminatorValue); } },
             };
@@ -67,6 +70,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.InheritedAutoUpgradeInfo_continueAsNewInitialVersioningBehavior>("continueAsNewInitialVersioningBehavior", ContinueAsNewInitialVersioningBehavior);
             writer.WriteStringValue("sourceDeploymentRevisionNumber", SourceDeploymentRevisionNumber);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion>("sourceDeploymentVersion", SourceDeploymentVersion);
             writer.WriteAdditionalData(AdditionalData);
