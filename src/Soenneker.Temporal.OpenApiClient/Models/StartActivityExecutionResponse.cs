@@ -14,6 +14,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Link to the started activity.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Temporal.OpenApiClient.Models.Link? Link { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Temporal.OpenApiClient.Models.Link Link { get; set; }
+#endif
         /// <summary>The run ID of the activity that was started - or used (via ACTIVITY_ID_CONFLICT_POLICY_USE_EXISTING).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -49,6 +57,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "link", n => { Link = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Link>(global::Soenneker.Temporal.OpenApiClient.Models.Link.CreateFromDiscriminatorValue); } },
                 { "runId", n => { RunId = n.GetStringValue(); } },
                 { "started", n => { Started = n.GetBoolValue(); } },
             };
@@ -60,6 +69,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Link>("link", Link);
             writer.WriteStringValue("runId", RunId);
             writer.WriteBoolValue("started", Started);
             writer.WriteAdditionalData(AdditionalData);

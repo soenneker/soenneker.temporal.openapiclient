@@ -155,7 +155,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public global::Soenneker.Temporal.OpenApiClient.Models.ExternalWorkflowExecutionSignaledEventAttributes ExternalWorkflowExecutionSignaledEventAttributes { get; set; }
 #endif
-        /// <summary>Links associated with the event.</summary>
+        /// <summary>Links to related entities, such as the entity that started this event&apos;s workflow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Temporal.OpenApiClient.Models.Link>? Links { get; set; }

@@ -7,37 +7,54 @@ using System.IO;
 using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
+    /// <summary>
+    /// A link to an activity.
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class CallbackInfo_Trigger : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class Link_Activity : IAdditionalDataHolder, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Trigger for when the workflow is closed.</summary>
+        /// <summary>The activityId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo_WorkflowClosed? WorkflowClosed { get; set; }
+        public string? ActivityId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo_WorkflowClosed WorkflowClosed { get; set; }
+        public string ActivityId { get; set; }
+#endif
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The namespace property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Namespace { get; set; }
+#nullable restore
+#else
+        public string Namespace { get; set; }
+#endif
+        /// <summary>The runId property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? RunId { get; set; }
+#nullable restore
+#else
+        public string RunId { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo_Trigger"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.Link_Activity"/> and sets the default values.
         /// </summary>
-        public CallbackInfo_Trigger()
+        public Link_Activity()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo_Trigger"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Models.Link_Activity"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo_Trigger CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Temporal.OpenApiClient.Models.Link_Activity CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo_Trigger();
+            return new global::Soenneker.Temporal.OpenApiClient.Models.Link_Activity();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -47,7 +64,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "workflowClosed", n => { WorkflowClosed = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo_WorkflowClosed>(global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo_WorkflowClosed.CreateFromDiscriminatorValue); } },
+                { "activityId", n => { ActivityId = n.GetStringValue(); } },
+                { "namespace", n => { Namespace = n.GetStringValue(); } },
+                { "runId", n => { RunId = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -57,7 +76,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo_WorkflowClosed>("workflowClosed", WorkflowClosed);
+            writer.WriteStringValue("activityId", ActivityId);
+            writer.WriteStringValue("namespace", Namespace);
+            writer.WriteStringValue("runId", RunId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

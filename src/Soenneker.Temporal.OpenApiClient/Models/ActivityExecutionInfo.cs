@@ -115,6 +115,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string LastWorkerIdentity { get; set; }
 #endif
+        /// <summary>Links to related entities, such as the entity that started this activity.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.Link>? Links { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.Link> Links { get; set; }
+#endif
         /// <summary>The time when the next activity attempt will be scheduled. If activity is currently scheduled or started, this field will be null.</summary>
         public DateTimeOffset? NextAttemptScheduleTime { get; set; }
         /// <summary>Priority metadata.</summary>
@@ -253,6 +261,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "lastHeartbeatTime", n => { LastHeartbeatTime = n.GetDateTimeOffsetValue(); } },
                 { "lastStartedTime", n => { LastStartedTime = n.GetDateTimeOffsetValue(); } },
                 { "lastWorkerIdentity", n => { LastWorkerIdentity = n.GetStringValue(); } },
+                { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.Link>(global::Soenneker.Temporal.OpenApiClient.Models.Link.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "nextAttemptScheduleTime", n => { NextAttemptScheduleTime = n.GetDateTimeOffsetValue(); } },
                 { "priority", n => { Priority = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Priority>(global::Soenneker.Temporal.OpenApiClient.Models.Priority.CreateFromDiscriminatorValue); } },
                 { "retryPolicy", n => { RetryPolicy = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RetryPolicy>(global::Soenneker.Temporal.OpenApiClient.Models.RetryPolicy.CreateFromDiscriminatorValue); } },
@@ -294,6 +303,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("lastHeartbeatTime", LastHeartbeatTime);
             writer.WriteDateTimeOffsetValue("lastStartedTime", LastStartedTime);
             writer.WriteStringValue("lastWorkerIdentity", LastWorkerIdentity);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.Link>("links", Links);
             writer.WriteDateTimeOffsetValue("nextAttemptScheduleTime", NextAttemptScheduleTime);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Priority>("priority", Priority);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RetryPolicy>("retryPolicy", RetryPolicy);

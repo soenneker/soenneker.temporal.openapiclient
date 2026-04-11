@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
+    /// <summary>The current state of the callback.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum CallbackInfo_state
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "CALLBACK_STATE_UNSPECIFIED")]
         #pragma warning disable CS1591

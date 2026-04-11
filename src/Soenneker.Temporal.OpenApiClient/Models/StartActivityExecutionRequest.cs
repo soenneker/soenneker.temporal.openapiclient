@@ -30,6 +30,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Callbacks to be called by the server when this activity reaches a terminal state. Callback addresses must be whitelisted in the server&apos;s dynamic configuration.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.Callback>? CompletionCallbacks { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.Callback> CompletionCallbacks { get; set; }
+#endif
         /// <summary>Header for context propagation and tracing purposes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -65,6 +73,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Temporal.OpenApiClient.Models.Payloads Input { get; set; }
+#endif
+        /// <summary>Links to be associated with the activity. Callbacks may also have associated links; links already included with a callback should not be duplicated here.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.Link>? Links { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.Link> Links { get; set; }
 #endif
         /// <summary>The namespace property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -173,12 +189,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             {
                 { "activityId", n => { ActivityId = n.GetStringValue(); } },
                 { "activityType", n => { ActivityType = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityType>(global::Soenneker.Temporal.OpenApiClient.Models.ActivityType.CreateFromDiscriminatorValue); } },
+                { "completionCallbacks", n => { CompletionCallbacks = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.Callback>(global::Soenneker.Temporal.OpenApiClient.Models.Callback.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "header", n => { Header = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Header>(global::Soenneker.Temporal.OpenApiClient.Models.Header.CreateFromDiscriminatorValue); } },
                 { "heartbeatTimeout", n => { HeartbeatTimeout = n.GetStringValue(); } },
                 { "idConflictPolicy", n => { IdConflictPolicy = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_idConflictPolicy>(); } },
                 { "idReusePolicy", n => { IdReusePolicy = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_idReusePolicy>(); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
                 { "input", n => { Input = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>(global::Soenneker.Temporal.OpenApiClient.Models.Payloads.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.Link>(global::Soenneker.Temporal.OpenApiClient.Models.Link.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "namespace", n => { Namespace = n.GetStringValue(); } },
                 { "priority", n => { Priority = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Priority>(global::Soenneker.Temporal.OpenApiClient.Models.Priority.CreateFromDiscriminatorValue); } },
                 { "requestId", n => { RequestId = n.GetStringValue(); } },
@@ -200,12 +218,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("activityId", ActivityId);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityType>("activityType", ActivityType);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.Callback>("completionCallbacks", CompletionCallbacks);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Header>("header", Header);
             writer.WriteStringValue("heartbeatTimeout", HeartbeatTimeout);
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_idConflictPolicy>("idConflictPolicy", IdConflictPolicy);
             writer.WriteStringValue("identity", Identity);
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_idReusePolicy>("idReusePolicy", IdReusePolicy);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>("input", Input);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.Link>("links", Links);
             writer.WriteStringValue("namespace", Namespace);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Priority>("priority", Priority);
             writer.WriteStringValue("requestId", RequestId);

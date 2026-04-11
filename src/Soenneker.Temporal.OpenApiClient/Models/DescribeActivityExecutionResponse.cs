@@ -14,6 +14,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Callbacks attached to this activity execution and their current state.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo>? Callbacks { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo> Callbacks { get; set; }
+#endif
         /// <summary>Information about the activity execution.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -79,6 +87,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "callbacks", n => { Callbacks = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo>(global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "info", n => { Info = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityExecutionInfo>(global::Soenneker.Temporal.OpenApiClient.Models.ActivityExecutionInfo.CreateFromDiscriminatorValue); } },
                 { "input", n => { Input = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>(global::Soenneker.Temporal.OpenApiClient.Models.Payloads.CreateFromDiscriminatorValue); } },
                 { "longPollToken", n => { LongPollToken = n.GetStringValue(); } },
@@ -93,6 +102,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo>("callbacks", Callbacks);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityExecutionInfo>("info", Info);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>("input", Input);
             writer.WriteStringValue("longPollToken", LongPollToken);

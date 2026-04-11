@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// CallbackInfo contains the state of an attached workflow callback.
+    /// Common callback information. Specific CallbackInfo messages should embed this and may include additional fields.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CallbackInfo : IAdditionalDataHolder, IParsable
@@ -47,16 +47,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public DateTimeOffset? NextAttemptScheduleTime { get; set; }
         /// <summary>The time when the callback was registered.</summary>
         public DateTimeOffset? RegistrationTime { get; set; }
-        /// <summary>The state property</summary>
+        /// <summary>The current state of the callback.</summary>
         public global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo_state? State { get; set; }
-        /// <summary>Trigger for this callback.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo_Trigger? Trigger { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo_Trigger Trigger { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo"/> and sets the default values.
         /// </summary>
@@ -90,7 +82,6 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "nextAttemptScheduleTime", n => { NextAttemptScheduleTime = n.GetDateTimeOffsetValue(); } },
                 { "registrationTime", n => { RegistrationTime = n.GetDateTimeOffsetValue(); } },
                 { "state", n => { State = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo_state>(); } },
-                { "trigger", n => { Trigger = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo_Trigger>(global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo_Trigger.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -108,7 +99,6 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("nextAttemptScheduleTime", NextAttemptScheduleTime);
             writer.WriteDateTimeOffsetValue("registrationTime", RegistrationTime);
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo_state>("state", State);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo_Trigger>("trigger", Trigger);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
