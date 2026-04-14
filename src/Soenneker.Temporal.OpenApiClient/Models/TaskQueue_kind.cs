@@ -19,5 +19,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         #pragma warning disable CS1591
         TASK_QUEUE_KIND_STICKY,
         #pragma warning restore CS1591
+        [EnumMember(Value = "TASK_QUEUE_KIND_WORKER_COMMANDS")]
+        #pragma warning disable CS1591
+        TASK_QUEUE_KIND_WORKER_COMMANDS,
+        #pragma warning restore CS1591
     }
 }

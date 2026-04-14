@@ -253,6 +253,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public global::Soenneker.Temporal.OpenApiClient.Models.TaskQueue TaskQueue { get; set; }
 #endif
+        /// <summary>Initial time-skipping configuration for this workflow execution, recorded at start time. This may have been set explicitly via the start workflow request, or propagated from a parent/previous execution. The configuration may be updated after start via UpdateWorkflowExecutionOptions, which will be reflected in the WorkflowExecutionOptionsUpdatedEvent.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Temporal.OpenApiClient.Models.TimeSkippingConfig? TimeSkippingConfig { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Temporal.OpenApiClient.Models.TimeSkippingConfig TimeSkippingConfig { get; set; }
+#endif
         /// <summary>Versioning override applied to this workflow when it was started. Children, crons, retries, and continue-as-new will inherit source run&apos;s override if pinned and if the new workflow&apos;s Task Queue belongs to the override version.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -360,6 +368,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "searchAttributes", n => { SearchAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes.CreateFromDiscriminatorValue); } },
                 { "sourceVersionStamp", n => { SourceVersionStamp = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerVersionStamp>(global::Soenneker.Temporal.OpenApiClient.Models.WorkerVersionStamp.CreateFromDiscriminatorValue); } },
                 { "taskQueue", n => { TaskQueue = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TaskQueue>(global::Soenneker.Temporal.OpenApiClient.Models.TaskQueue.CreateFromDiscriminatorValue); } },
+                { "timeSkippingConfig", n => { TimeSkippingConfig = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TimeSkippingConfig>(global::Soenneker.Temporal.OpenApiClient.Models.TimeSkippingConfig.CreateFromDiscriminatorValue); } },
                 { "versioningOverride", n => { VersioningOverride = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverride>(global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverride.CreateFromDiscriminatorValue); } },
                 { "workflowExecutionExpirationTime", n => { WorkflowExecutionExpirationTime = n.GetDateTimeOffsetValue(); } },
                 { "workflowExecutionTimeout", n => { WorkflowExecutionTimeout = n.GetStringValue(); } },
@@ -408,6 +417,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes>("searchAttributes", SearchAttributes);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerVersionStamp>("sourceVersionStamp", SourceVersionStamp);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TaskQueue>("taskQueue", TaskQueue);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TimeSkippingConfig>("timeSkippingConfig", TimeSkippingConfig);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverride>("versioningOverride", VersioningOverride);
             writer.WriteDateTimeOffsetValue("workflowExecutionExpirationTime", WorkflowExecutionExpirationTime);
             writer.WriteStringValue("workflowExecutionTimeout", WorkflowExecutionTimeout);
