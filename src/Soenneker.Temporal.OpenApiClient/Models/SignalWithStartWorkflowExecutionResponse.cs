@@ -22,6 +22,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string RunId { get; set; }
 #endif
+        /// <summary>Link to be associated with the WorkflowExecutionSignaled event. Added on the response to propagate the backlink. Available from Temporal server 1.31 and up.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Temporal.OpenApiClient.Models.Link? SignalLink { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Temporal.OpenApiClient.Models.Link SignalLink { get; set; }
+#endif
         /// <summary>If true, a new workflow was started.</summary>
         public bool? Started { get; set; }
         /// <summary>
@@ -50,6 +58,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "runId", n => { RunId = n.GetStringValue(); } },
+                { "signalLink", n => { SignalLink = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Link>(global::Soenneker.Temporal.OpenApiClient.Models.Link.CreateFromDiscriminatorValue); } },
                 { "started", n => { Started = n.GetBoolValue(); } },
             };
         }
@@ -61,6 +70,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("runId", RunId);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Link>("signalLink", SignalLink);
             writer.WriteBoolValue("started", Started);
             writer.WriteAdditionalData(AdditionalData);
         }

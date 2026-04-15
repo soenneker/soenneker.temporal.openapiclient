@@ -46,6 +46,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public global::Soenneker.Temporal.OpenApiClient.Models.Payloads Input { get; set; }
 #endif
+        /// <summary>The request ID of the Signal request, used by the server to attach this to the correct Event ID when generating link.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? RequestId { get; set; }
+#nullable restore
+#else
+        public string RequestId { get; set; }
+#endif
         /// <summary>The name/type of the signal to fire</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -85,6 +93,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "header", n => { Header = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Header>(global::Soenneker.Temporal.OpenApiClient.Models.Header.CreateFromDiscriminatorValue); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
                 { "input", n => { Input = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>(global::Soenneker.Temporal.OpenApiClient.Models.Payloads.CreateFromDiscriminatorValue); } },
+                { "requestId", n => { RequestId = n.GetStringValue(); } },
                 { "signalName", n => { SignalName = n.GetStringValue(); } },
                 { "skipGenerateWorkflowTask", n => { SkipGenerateWorkflowTask = n.GetBoolValue(); } },
             };
@@ -100,6 +109,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Header>("header", Header);
             writer.WriteStringValue("identity", Identity);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>("input", Input);
+            writer.WriteStringValue("requestId", RequestId);
             writer.WriteStringValue("signalName", SignalName);
             writer.WriteBoolValue("skipGenerateWorkflowTask", SkipGenerateWorkflowTask);
             writer.WriteAdditionalData(AdditionalData);
