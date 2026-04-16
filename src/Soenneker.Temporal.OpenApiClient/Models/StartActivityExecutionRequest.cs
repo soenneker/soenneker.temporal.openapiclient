@@ -90,6 +90,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string Namespace { get; set; }
 #endif
+        /// <summary>Options for handling conflicts when using ACTIVITY_ID_CONFLICT_POLICY_USE_EXISTING.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Temporal.OpenApiClient.Models.OnConflictOptions? OnConflictOptions { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Temporal.OpenApiClient.Models.OnConflictOptions OnConflictOptions { get; set; }
+#endif
         /// <summary>Priority metadata.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -198,6 +206,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "input", n => { Input = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>(global::Soenneker.Temporal.OpenApiClient.Models.Payloads.CreateFromDiscriminatorValue); } },
                 { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.Link>(global::Soenneker.Temporal.OpenApiClient.Models.Link.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "namespace", n => { Namespace = n.GetStringValue(); } },
+                { "onConflictOptions", n => { OnConflictOptions = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.OnConflictOptions>(global::Soenneker.Temporal.OpenApiClient.Models.OnConflictOptions.CreateFromDiscriminatorValue); } },
                 { "priority", n => { Priority = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Priority>(global::Soenneker.Temporal.OpenApiClient.Models.Priority.CreateFromDiscriminatorValue); } },
                 { "requestId", n => { RequestId = n.GetStringValue(); } },
                 { "retryPolicy", n => { RetryPolicy = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RetryPolicy>(global::Soenneker.Temporal.OpenApiClient.Models.RetryPolicy.CreateFromDiscriminatorValue); } },
@@ -227,6 +236,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>("input", Input);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.Link>("links", Links);
             writer.WriteStringValue("namespace", Namespace);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.OnConflictOptions>("onConflictOptions", OnConflictOptions);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Priority>("priority", Priority);
             writer.WriteStringValue("requestId", RequestId);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RetryPolicy>("retryPolicy", RetryPolicy);

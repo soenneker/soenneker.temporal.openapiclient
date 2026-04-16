@@ -8,18 +8,18 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// When StartWorkflowExecution uses the conflict policy WORKFLOW_ID_CONFLICT_POLICY_USE_EXISTING and there is already an existing running workflow, OnConflictOptions defines actions to be taken on the existing running workflow. In this case, it will create a WorkflowExecutionOptionsUpdatedEvent history event in the running workflow with the changes requested in this object.
+    /// When starting an execution with a conflict policy that uses an existing execution and there is already an existing running execution, OnConflictOptions defines actions to be taken on the existing running execution.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class OnConflictOptions : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Attaches the completion callbacks to the running workflow.</summary>
+        /// <summary>Attaches the completion callbacks to the running execution.</summary>
         public bool? AttachCompletionCallbacks { get; set; }
-        /// <summary>Attaches the links to the WorkflowExecutionOptionsUpdatedEvent history event.</summary>
+        /// <summary>Attaches the links to the running execution.</summary>
         public bool? AttachLinks { get; set; }
-        /// <summary>Attaches the request ID to the running workflow.</summary>
+        /// <summary>Attaches the request ID to the running execution.</summary>
         public bool? AttachRequestId { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.OnConflictOptions"/> and sets the default values.
