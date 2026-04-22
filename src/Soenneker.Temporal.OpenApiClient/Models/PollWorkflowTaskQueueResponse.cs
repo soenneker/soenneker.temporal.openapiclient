@@ -48,6 +48,22 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string NextPageToken { get; set; }
 #endif
+        /// <summary>This poller group ID identifies the owner of the workflow task awaiting for query response. Corresponding RespondQueryTaskCompleted should pass this value for proper routing.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PollerGroupId { get; set; }
+#nullable restore
+#else
+        public string PollerGroupId { get; set; }
+#endif
+        /// <summary>The weighted list of poller groups IDs that client should use for future polls to this task queue. Client is expected to:   1. Maintain minimum number of pollers no less than the number of groups.   2. Try to assign the next poll to a group without any pending polls,   3. If every group has some pending polls, assign the next poll to a group randomly     according to the weights.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.PollerGroupInfo>? PollerGroupInfos { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.PollerGroupInfo> PollerGroupInfos { get; set; }
+#endif
         /// <summary>Server-advised information the SDK may use to adjust its poller count.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -154,6 +170,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "history", n => { History = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.History>(global::Soenneker.Temporal.OpenApiClient.Models.History.CreateFromDiscriminatorValue); } },
                 { "messages", n => { Messages = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.Message>(global::Soenneker.Temporal.OpenApiClient.Models.Message.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "nextPageToken", n => { NextPageToken = n.GetStringValue(); } },
+                { "pollerGroupId", n => { PollerGroupId = n.GetStringValue(); } },
+                { "pollerGroupInfos", n => { PollerGroupInfos = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.PollerGroupInfo>(global::Soenneker.Temporal.OpenApiClient.Models.PollerGroupInfo.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "pollerScalingDecision", n => { PollerScalingDecision = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PollerScalingDecision>(global::Soenneker.Temporal.OpenApiClient.Models.PollerScalingDecision.CreateFromDiscriminatorValue); } },
                 { "previousStartedEventId", n => { PreviousStartedEventId = n.GetStringValue(); } },
                 { "queries", n => { Queries = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PollWorkflowTaskQueueResponse_queries>(global::Soenneker.Temporal.OpenApiClient.Models.PollWorkflowTaskQueueResponse_queries.CreateFromDiscriminatorValue); } },
@@ -179,6 +197,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.History>("history", History);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.Message>("messages", Messages);
             writer.WriteStringValue("nextPageToken", NextPageToken);
+            writer.WriteStringValue("pollerGroupId", PollerGroupId);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.PollerGroupInfo>("pollerGroupInfos", PollerGroupInfos);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PollerScalingDecision>("pollerScalingDecision", PollerScalingDecision);
             writer.WriteStringValue("previousStartedEventId", PreviousStartedEventId);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PollWorkflowTaskQueueResponse_queries>("queries", Queries);
