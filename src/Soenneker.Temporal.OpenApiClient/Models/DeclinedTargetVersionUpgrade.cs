@@ -23,6 +23,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion DeploymentVersion { get; set; }
 #endif
+        /// <summary>Revision number of the task queue routing config at the time the target was declined. If an incoming target&apos;s revision is &lt;= this value, it is not newer and is not used for deciding whether or not to suppress the upgrade signal.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? RevisionNumber { get; set; }
+#nullable restore
+#else
+        public string RevisionNumber { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.DeclinedTargetVersionUpgrade"/> and sets the default values.
         /// </summary>
@@ -49,6 +57,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "deploymentVersion", n => { DeploymentVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion>(global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion.CreateFromDiscriminatorValue); } },
+                { "revisionNumber", n => { RevisionNumber = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -59,6 +68,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion>("deploymentVersion", DeploymentVersion);
+            writer.WriteStringValue("revisionNumber", RevisionNumber);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
