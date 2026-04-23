@@ -15,7 +15,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The number of attempts made to deliver the start operation request. This number represents a minimum bound since the attempt is incremented after the request completes.</summary>
+        /// <summary>The number of attempts made to deliver the start operation request. This number is approximate, it is incremented when a task is added to the history queue. In practice, there could be more attempts if a task is executed but fails to commit, or less attempts if a task was never executed.</summary>
         public int? Attempt { get; set; }
         /// <summary>If the state is BLOCKED, blocked reason provides additional information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -31,6 +31,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public global::Soenneker.Temporal.OpenApiClient.Models.Link_BatchJob BatchJob { get; set; }
 #endif
+        /// <summary>A link to a standalone Nexus operation.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Temporal.OpenApiClient.Models.Link_NexusOperation? NexusOperation { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Temporal.OpenApiClient.Models.Link_NexusOperation NexusOperation { get; set; }
+#endif
         /// <summary>The workflowEvent property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -66,6 +74,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             {
                 { "activity", n => { Activity = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Link_Activity>(global::Soenneker.Temporal.OpenApiClient.Models.Link_Activity.CreateFromDiscriminatorValue); } },
                 { "batchJob", n => { BatchJob = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Link_BatchJob>(global::Soenneker.Temporal.OpenApiClient.Models.Link_BatchJob.CreateFromDiscriminatorValue); } },
+                { "nexusOperation", n => { NexusOperation = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Link_NexusOperation>(global::Soenneker.Temporal.OpenApiClient.Models.Link_NexusOperation.CreateFromDiscriminatorValue); } },
                 { "workflowEvent", n => { WorkflowEvent = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Link_WorkflowEvent>(global::Soenneker.Temporal.OpenApiClient.Models.Link_WorkflowEvent.CreateFromDiscriminatorValue); } },
             };
         }
@@ -78,6 +87,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Link_Activity>("activity", Activity);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Link_BatchJob>("batchJob", BatchJob);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Link_NexusOperation>("nexusOperation", NexusOperation);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Link_WorkflowEvent>("workflowEvent", WorkflowEvent);
             writer.WriteAdditionalData(AdditionalData);
         }

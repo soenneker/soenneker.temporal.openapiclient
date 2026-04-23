@@ -14,6 +14,8 @@ using Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.ArchivedWorkflows;
 using Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.BatchOperations;
 using Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.CurrentDeployment;
 using Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Deployments;
+using Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.NexusOperationCount;
+using Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.NexusOperations;
 using Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.ScheduleCount;
 using Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Schedules;
 using Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.SearchAttributes;
@@ -94,6 +96,16 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item
         public global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Deployments.DeploymentsRequestBuilder Deployments
         {
             get => new global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Deployments.DeploymentsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The nexusOperationCount property</summary>
+        public global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.NexusOperationCount.NexusOperationCountRequestBuilder NexusOperationCount
+        {
+            get => new global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.NexusOperationCount.NexusOperationCountRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The nexusOperations property</summary>
+        public global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.NexusOperations.NexusOperationsRequestBuilder NexusOperations
+        {
+            get => new global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.NexusOperations.NexusOperationsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The scheduleCount property</summary>
         public global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.ScheduleCount.ScheduleCountRequestBuilder ScheduleCount

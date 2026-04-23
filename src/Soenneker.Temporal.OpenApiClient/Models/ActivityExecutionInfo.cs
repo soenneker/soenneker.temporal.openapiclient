@@ -211,6 +211,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string TaskQueue { get; set; }
 #endif
+        /// <summary>Total number of heartbeats recorded across all attempts of this activity, including retries.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? TotalHeartbeatCount { get; set; }
+#nullable restore
+#else
+        public string TotalHeartbeatCount { get; set; }
+#endif
         /// <summary>Metadata for use by user interfaces to display the fixed as-of-start summary and details of the activity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -276,6 +284,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "stateTransitionCount", n => { StateTransitionCount = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityExecutionInfo_status>(); } },
                 { "taskQueue", n => { TaskQueue = n.GetStringValue(); } },
+                { "totalHeartbeatCount", n => { TotalHeartbeatCount = n.GetStringValue(); } },
                 { "userMetadata", n => { UserMetadata = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UserMetadata>(global::Soenneker.Temporal.OpenApiClient.Models.UserMetadata.CreateFromDiscriminatorValue); } },
             };
         }
@@ -318,6 +327,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("stateTransitionCount", StateTransitionCount);
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityExecutionInfo_status>("status", Status);
             writer.WriteStringValue("taskQueue", TaskQueue);
+            writer.WriteStringValue("totalHeartbeatCount", TotalHeartbeatCount);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UserMetadata>("userMetadata", UserMetadata);
             writer.WriteAdditionalData(AdditionalData);
         }

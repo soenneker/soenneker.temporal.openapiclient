@@ -13,6 +13,8 @@ using Soenneker.Temporal.OpenApiClient.Namespaces.Item.ArchivedWorkflows;
 using Soenneker.Temporal.OpenApiClient.Namespaces.Item.BatchOperations;
 using Soenneker.Temporal.OpenApiClient.Namespaces.Item.CurrentDeployment;
 using Soenneker.Temporal.OpenApiClient.Namespaces.Item.Deployments;
+using Soenneker.Temporal.OpenApiClient.Namespaces.Item.NexusOperationCount;
+using Soenneker.Temporal.OpenApiClient.Namespaces.Item.NexusOperations;
 using Soenneker.Temporal.OpenApiClient.Namespaces.Item.ScheduleCount;
 using Soenneker.Temporal.OpenApiClient.Namespaces.Item.Schedules;
 using Soenneker.Temporal.OpenApiClient.Namespaces.Item.TaskQueues;
@@ -89,6 +91,16 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item
         public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Deployments.DeploymentsRequestBuilder Deployments
         {
             get => new global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Deployments.DeploymentsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The nexusOperationCount property</summary>
+        public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.NexusOperationCount.NexusOperationCountRequestBuilder NexusOperationCount
+        {
+            get => new global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.NexusOperationCount.NexusOperationCountRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The nexusOperations property</summary>
+        public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.NexusOperations.NexusOperationsRequestBuilder NexusOperations
+        {
+            get => new global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.NexusOperations.NexusOperationsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The scheduleCount property</summary>
         public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.ScheduleCount.ScheduleCountRequestBuilder ScheduleCount
