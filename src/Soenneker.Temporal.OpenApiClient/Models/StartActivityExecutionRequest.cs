@@ -146,6 +146,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes SearchAttributes { get; set; }
 #endif
+        /// <summary>Time to wait before dispatching the first activity task. This delay is not applied to retry attempts.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? StartDelay { get; set; }
+#nullable restore
+#else
+        public string StartDelay { get; set; }
+#endif
         /// <summary>Maximum time an activity is allowed to execute after being picked up by a worker. This timeout is always retryable. Either this or `schedule_to_close_timeout` must be specified. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;to&quot; is used to indicate interval. --)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -213,6 +221,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "scheduleToCloseTimeout", n => { ScheduleToCloseTimeout = n.GetStringValue(); } },
                 { "scheduleToStartTimeout", n => { ScheduleToStartTimeout = n.GetStringValue(); } },
                 { "searchAttributes", n => { SearchAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes.CreateFromDiscriminatorValue); } },
+                { "startDelay", n => { StartDelay = n.GetStringValue(); } },
                 { "startToCloseTimeout", n => { StartToCloseTimeout = n.GetStringValue(); } },
                 { "taskQueue", n => { TaskQueue = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TaskQueue>(global::Soenneker.Temporal.OpenApiClient.Models.TaskQueue.CreateFromDiscriminatorValue); } },
                 { "userMetadata", n => { UserMetadata = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UserMetadata>(global::Soenneker.Temporal.OpenApiClient.Models.UserMetadata.CreateFromDiscriminatorValue); } },
@@ -243,6 +252,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("scheduleToCloseTimeout", ScheduleToCloseTimeout);
             writer.WriteStringValue("scheduleToStartTimeout", ScheduleToStartTimeout);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes>("searchAttributes", SearchAttributes);
+            writer.WriteStringValue("startDelay", StartDelay);
             writer.WriteStringValue("startToCloseTimeout", StartToCloseTimeout);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TaskQueue>("taskQueue", TaskQueue);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UserMetadata>("userMetadata", UserMetadata);
