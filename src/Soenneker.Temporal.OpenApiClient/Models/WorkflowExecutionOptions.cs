@@ -22,7 +22,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public global::Soenneker.Temporal.OpenApiClient.Models.Priority Priority { get; set; }
 #endif
-        /// <summary>Time-skipping configuration for this workflow execution. If not set, the time-skipping conf will not get updated upon request,  i.e. the existing time-skipping conf will be preserved.</summary>
+        /// <summary>Time-skipping configuration for this workflow execution. If not set, the time-skipping configuration is not updated by this request; the existing configuration is preserved.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Temporal.OpenApiClient.Models.TimeSkippingConfig? TimeSkippingConfig { get; set; }

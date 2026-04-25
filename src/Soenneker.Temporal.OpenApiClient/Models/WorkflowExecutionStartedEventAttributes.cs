@@ -115,6 +115,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion InheritedPinnedVersion { get; set; }
 #endif
+        /// <summary>The time skipped by the previous execution that started this workflow. It can happen in cases of child workflows and continue-as-new workflows.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? InitialSkippedDuration { get; set; }
+#nullable restore
+#else
+        public string InitialSkippedDuration { get; set; }
+#endif
         /// <summary>The initiator property</summary>
         public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_initiator? Initiator { get; set; }
         /// <summary>SDK will deserialize this and provide it as arguments to the workflow function</summary>
@@ -350,6 +358,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "inheritedAutoUpgradeInfo", n => { InheritedAutoUpgradeInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.InheritedAutoUpgradeInfo>(global::Soenneker.Temporal.OpenApiClient.Models.InheritedAutoUpgradeInfo.CreateFromDiscriminatorValue); } },
                 { "inheritedBuildId", n => { InheritedBuildId = n.GetStringValue(); } },
                 { "inheritedPinnedVersion", n => { InheritedPinnedVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion>(global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion.CreateFromDiscriminatorValue); } },
+                { "initialSkippedDuration", n => { InitialSkippedDuration = n.GetStringValue(); } },
                 { "initiator", n => { Initiator = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_initiator>(); } },
                 { "input", n => { Input = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>(global::Soenneker.Temporal.OpenApiClient.Models.Payloads.CreateFromDiscriminatorValue); } },
                 { "lastCompletionResult", n => { LastCompletionResult = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>(global::Soenneker.Temporal.OpenApiClient.Models.Payloads.CreateFromDiscriminatorValue); } },
@@ -399,6 +408,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.InheritedAutoUpgradeInfo>("inheritedAutoUpgradeInfo", InheritedAutoUpgradeInfo);
             writer.WriteStringValue("inheritedBuildId", InheritedBuildId);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion>("inheritedPinnedVersion", InheritedPinnedVersion);
+            writer.WriteStringValue("initialSkippedDuration", InitialSkippedDuration);
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_initiator>("initiator", Initiator);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>("input", Input);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>("lastCompletionResult", LastCompletionResult);

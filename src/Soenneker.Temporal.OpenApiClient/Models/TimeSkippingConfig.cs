@@ -8,16 +8,14 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// Configuration for time skipping during a workflow execution. When enabled, virtual time advances automatically whenever there is no in-flight work. In-flight work includes activities, child workflows, Nexus operations, signal/cancel external workflow operations, and possibly other features added in the future. User timers are not classified as in-flight work and will be skipped over. When time advances, it skips to the earlier of the next user timer or the configured bound, if either exists.
+    /// Configuration for time skipping during a workflow execution. When enabled, virtual time advances automatically whenever there is no in-flight work. In-flight work includes activities, child workflows, Nexus operations, signal/cancel external workflow operations, and possibly other features added in the future. User timers are not classified as in-flight work and will be skipped over. When time advances, it skips to the earlier of the next user timer or the configured bound, if either exists.  Propagation behavior of time skipping: The enabled flag, bound fields, and accumulated skipped duration are propagated to related executions as follows: (1) Child workflows and continue-as-new: both the configuration and the accumulated skipped duration are     inherited from the current execution. The configured bound is shared between the inherited skipped     duration and any additional duration skipped by the new run. (2) Retry and cron: the configuration and accumulated skipped duration are inherited as recorded when the     current workflow started; the accumulated skipped duration of the current run is not propagated. (3) Reset: the new run retains the time-skipping configuration of the current execution. Because reset replays     all events up to the reset point and re-applies any UpdateWorkflowExecutionOptions changes made after that     point, the resulting run ends up with the same final time-skipping configuration as the previous run.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TimeSkippingConfig : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>If set, the enabled field is not propagated to transitively related workflows.</summary>
-        public bool? DisablePropagation { get; set; }
-        /// <summary>Enables or disables time skipping for this workflow execution. By default, this field is propagated to transitively related workflows (child workflows/start-as-new/reset)  at the time they are started. Changes made after a transitively related workflow has started are not propagated.</summary>
+        /// <summary>Enables or disables time skipping for this workflow execution.</summary>
         public bool? Enabled { get; set; }
         /// <summary>Maximum elapsed time since time skipping was enabled. This includes both skipped time and real time elapsing.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -35,8 +33,6 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string MaxSkippedDuration { get; set; }
 #endif
-        /// <summary>Absolute virtual timestamp at which time skipping is disabled. Time skipping will not advance beyond this point.</summary>
-        public DateTimeOffset? MaxTargetTime { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.TimeSkippingConfig"/> and sets the default values.
         /// </summary>
@@ -62,11 +58,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "disablePropagation", n => { DisablePropagation = n.GetBoolValue(); } },
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
                 { "maxElapsedDuration", n => { MaxElapsedDuration = n.GetStringValue(); } },
                 { "maxSkippedDuration", n => { MaxSkippedDuration = n.GetStringValue(); } },
-                { "maxTargetTime", n => { MaxTargetTime = n.GetDateTimeOffsetValue(); } },
             };
         }
         /// <summary>
@@ -76,11 +70,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteBoolValue("disablePropagation", DisablePropagation);
             writer.WriteBoolValue("enabled", Enabled);
             writer.WriteStringValue("maxElapsedDuration", MaxElapsedDuration);
             writer.WriteStringValue("maxSkippedDuration", MaxSkippedDuration);
-            writer.WriteDateTimeOffsetValue("maxTargetTime", MaxTargetTime);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
