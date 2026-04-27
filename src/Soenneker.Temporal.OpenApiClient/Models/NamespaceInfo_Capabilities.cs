@@ -27,6 +27,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public bool? StandaloneActivities { get; set; }
         /// <summary>True if the namespace supports sync update</summary>
         public bool? SyncUpdate { get; set; }
+        /// <summary>True if the namespace supports worker commands (server-to-worker communication via control queues).</summary>
+        public bool? WorkerCommands { get; set; }
         /// <summary>True if the namespace supports worker heartbeats</summary>
         public bool? WorkerHeartbeats { get; set; }
         /// <summary>True if the namespace supports server-side completion of outstanding worker polls on shutdown. When enabled, the server will complete polls for workers that send WorkerInstanceKey in their poll requests and call ShutdownWorker with the same WorkerInstanceKey. The poll will return an empty response. When this flag is true, workers should allow polls to return gracefully rather than terminating any open polls on shutdown.</summary>
@@ -64,6 +66,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "reportedProblemsSearchAttribute", n => { ReportedProblemsSearchAttribute = n.GetBoolValue(); } },
                 { "standaloneActivities", n => { StandaloneActivities = n.GetBoolValue(); } },
                 { "syncUpdate", n => { SyncUpdate = n.GetBoolValue(); } },
+                { "workerCommands", n => { WorkerCommands = n.GetBoolValue(); } },
                 { "workerHeartbeats", n => { WorkerHeartbeats = n.GetBoolValue(); } },
                 { "workerPollCompleteOnShutdown", n => { WorkerPollCompleteOnShutdown = n.GetBoolValue(); } },
                 { "workflowPause", n => { WorkflowPause = n.GetBoolValue(); } },
@@ -82,6 +85,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteBoolValue("reportedProblemsSearchAttribute", ReportedProblemsSearchAttribute);
             writer.WriteBoolValue("standaloneActivities", StandaloneActivities);
             writer.WriteBoolValue("syncUpdate", SyncUpdate);
+            writer.WriteBoolValue("workerCommands", WorkerCommands);
             writer.WriteBoolValue("workerHeartbeats", WorkerHeartbeats);
             writer.WriteBoolValue("workerPollCompleteOnShutdown", WorkerPollCompleteOnShutdown);
             writer.WriteBoolValue("workflowPause", WorkflowPause);
