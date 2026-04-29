@@ -7,12 +7,19 @@ using System.IO;
 using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
-    /// <summary>
-    /// NOTE: keep in sync with temporal.api.batch.v1.BatchOperationUpdateActivityOptions Deprecated. Use `UpdateActivityExecutionOptionsRequest`.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class UpdateActivityOptionsRequest : IAdditionalDataHolder, IParsable
+    #pragma warning disable CS1591
+    public partial class UpdateActivityExecutionOptionsRequest : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
+        /// <summary>The ID of the activity to target.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ActivityId { get; set; }
+#nullable restore
+#else
+        public string ActivityId { get; set; }
+#endif
         /// <summary>Activity options. Partial updates are accepted and controlled by update_mask</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -23,22 +30,6 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Execution info of the workflow which scheduled this activity</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution? Execution { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution Execution { get; set; }
-#endif
-        /// <summary>Only activity with this ID will be updated.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get; set; }
-#nullable restore
-#else
-        public string Id { get; set; }
-#endif
         /// <summary>The identity of the client who initiated this request</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -47,8 +38,6 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string Identity { get; set; }
 #endif
-        /// <summary>Update all running activities.</summary>
-        public bool? MatchAll { get; set; }
         /// <summary>Namespace of the workflow which scheduled this activity</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -57,15 +46,23 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string Namespace { get; set; }
 #endif
-        /// <summary>If set, the activity options will be restored to the default. Default options are then options activity was created with. They are part of the first schedule event. This flag cannot be combined with any other option; if you supply restore_original together with other options, the request will be rejected.</summary>
-        public bool? RestoreOriginal { get; set; }
-        /// <summary>Update all running activities of this type.</summary>
+        /// <summary>Resource ID for routing. Contains &quot;workflow:{workflow_id}&quot; for workflow activities or &quot;activity:{activity_id}&quot; for standalone activities.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get; set; }
+        public string? ResourceId { get; set; }
 #nullable restore
 #else
-        public string Type { get; set; }
+        public string ResourceId { get; set; }
+#endif
+        /// <summary>If set, the activity options will be restored to the default. Default options are then options activity was created with. They are part of the first schedule event. This flag cannot be combined with any other option; if you supply restore_original together with other options, the request will be rejected.</summary>
+        public bool? RestoreOriginal { get; set; }
+        /// <summary>Run ID of the workflow or standalone activity.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? RunId { get; set; }
+#nullable restore
+#else
+        public string RunId { get; set; }
 #endif
         /// <summary>Controls which fields from `activity_options` will be applied</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -75,22 +72,30 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string UpdateMask { get; set; }
 #endif
+        /// <summary>If provided, targets a workflow activity for the given workflow ID. If empty, targets a standalone activity.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? WorkflowId { get; set; }
+#nullable restore
+#else
+        public string WorkflowId { get; set; }
+#endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.UpdateActivityOptionsRequest"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.UpdateActivityExecutionOptionsRequest"/> and sets the default values.
         /// </summary>
-        public UpdateActivityOptionsRequest()
+        public UpdateActivityExecutionOptionsRequest()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Models.UpdateActivityOptionsRequest"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Models.UpdateActivityExecutionOptionsRequest"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Temporal.OpenApiClient.Models.UpdateActivityOptionsRequest CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Temporal.OpenApiClient.Models.UpdateActivityExecutionOptionsRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.UpdateActivityOptionsRequest();
+            return new global::Soenneker.Temporal.OpenApiClient.Models.UpdateActivityExecutionOptionsRequest();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -100,15 +105,15 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "activityId", n => { ActivityId = n.GetStringValue(); } },
                 { "activityOptions", n => { ActivityOptions = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityOptions>(global::Soenneker.Temporal.OpenApiClient.Models.ActivityOptions.CreateFromDiscriminatorValue); } },
-                { "execution", n => { Execution = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution.CreateFromDiscriminatorValue); } },
-                { "id", n => { Id = n.GetStringValue(); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
-                { "matchAll", n => { MatchAll = n.GetBoolValue(); } },
                 { "namespace", n => { Namespace = n.GetStringValue(); } },
+                { "resourceId", n => { ResourceId = n.GetStringValue(); } },
                 { "restoreOriginal", n => { RestoreOriginal = n.GetBoolValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
+                { "runId", n => { RunId = n.GetStringValue(); } },
                 { "updateMask", n => { UpdateMask = n.GetStringValue(); } },
+                { "workflowId", n => { WorkflowId = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -118,15 +123,15 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("activityId", ActivityId);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityOptions>("activityOptions", ActivityOptions);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution>("execution", Execution);
-            writer.WriteStringValue("id", Id);
             writer.WriteStringValue("identity", Identity);
-            writer.WriteBoolValue("matchAll", MatchAll);
             writer.WriteStringValue("namespace", Namespace);
+            writer.WriteStringValue("resourceId", ResourceId);
             writer.WriteBoolValue("restoreOriginal", RestoreOriginal);
-            writer.WriteStringValue("type", Type);
+            writer.WriteStringValue("runId", RunId);
             writer.WriteStringValue("updateMask", UpdateMask);
+            writer.WriteStringValue("workflowId", WorkflowId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

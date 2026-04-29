@@ -7,10 +7,11 @@ using System.IO;
 using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
+    /// <summary>
+    /// Deprecated. Use `UpdateActivityExecutionOptionsResponse`.
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public partial class UpdateActivityOptionsResponse : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
     {
         /// <summary>Activity options after an update</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

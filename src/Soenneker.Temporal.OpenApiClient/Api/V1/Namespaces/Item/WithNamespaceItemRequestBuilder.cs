@@ -172,7 +172,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithNamespaceItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespace}{?id*}", pathParameters)
+        public WithNamespaceItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespace}{?id*,weakConsistency*}", pathParameters)
         {
         }
         /// <summary>
@@ -180,7 +180,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithNamespaceItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespace}{?id*}", rawUrl)
+        public WithNamespaceItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespace}{?id*,weakConsistency*}", rawUrl)
         {
         }
         /// <summary>
@@ -249,6 +249,9 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item
             [QueryParameter("id")]
             public string Id { get; set; }
 #endif
+            /// <summary>If true, the server may serve the response from an eventually-consistent source instead of reading through to persistence. Defaults to false, which preserves read-after-write consistency. SDKs should set this when fetching namespace capabilities on worker/client startup.</summary>
+            [QueryParameter("weakConsistency")]
+            public bool? WeakConsistency { get; set; }
         }
     }
 }

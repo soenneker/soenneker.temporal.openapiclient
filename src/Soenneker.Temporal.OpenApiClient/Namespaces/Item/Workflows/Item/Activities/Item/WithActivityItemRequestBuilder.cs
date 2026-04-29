@@ -5,7 +5,11 @@ using Microsoft.Kiota.Abstractions;
 using Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Activities.Item.Complete;
 using Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Activities.Item.Fail;
 using Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Activities.Item.Heartbeat;
+using Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Activities.Item.Pause;
+using Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Activities.Item.Reset;
 using Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Activities.Item.ResolveAsCanceled;
+using Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Activities.Item.Unpause;
+using Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Activities.Item.UpdateOptions;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -33,10 +37,30 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Activi
         {
             get => new global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Activities.Item.Heartbeat.HeartbeatRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The pause property</summary>
+        public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Activities.Item.Pause.PauseRequestBuilder Pause
+        {
+            get => new global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Activities.Item.Pause.PauseRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The reset property</summary>
+        public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Activities.Item.Reset.ResetRequestBuilder Reset
+        {
+            get => new global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Activities.Item.Reset.ResetRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The resolveAsCanceled property</summary>
         public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Activities.Item.ResolveAsCanceled.ResolveAsCanceledRequestBuilder ResolveAsCanceled
         {
             get => new global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Activities.Item.ResolveAsCanceled.ResolveAsCanceledRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The unpause property</summary>
+        public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Activities.Item.Unpause.UnpauseRequestBuilder Unpause
+        {
+            get => new global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Activities.Item.Unpause.UnpauseRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The updateOptions property</summary>
+        public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Activities.Item.UpdateOptions.UpdateOptionsRequestBuilder UpdateOptions
+        {
+            get => new global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Activities.Item.UpdateOptions.UpdateOptionsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Activities.Item.WithActivityItemRequestBuilder"/> and sets the default values.

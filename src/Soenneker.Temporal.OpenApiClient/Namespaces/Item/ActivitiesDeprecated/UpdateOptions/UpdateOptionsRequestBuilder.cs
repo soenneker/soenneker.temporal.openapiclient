@@ -37,7 +37,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.ActivitiesDeprecated.
         /// UpdateActivityOptions is called by the client to update the options of an activity by its ID or type. If there are multiple pending activities of the provided type - all of them will be updated. This API will be deprecated soon and replaced with a newer UpdateActivityExecutionOptions that is better named and structured to work well for standalone activities.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Models.UpdateActivityOptionsResponse"/></returns>
-        /// <param name="body">NOTE: keep in sync with temporal.api.batch.v1.BatchOperationUpdateActivityOptions</param>
+        /// <param name="body">NOTE: keep in sync with temporal.api.batch.v1.BatchOperationUpdateActivityOptions Deprecated. Use `UpdateActivityExecutionOptionsRequest`.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Temporal.OpenApiClient.Models.Status">When receiving a 4XX or 5XX status code</exception>
@@ -62,7 +62,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.ActivitiesDeprecated.
         /// UpdateActivityOptions is called by the client to update the options of an activity by its ID or type. If there are multiple pending activities of the provided type - all of them will be updated. This API will be deprecated soon and replaced with a newer UpdateActivityExecutionOptions that is better named and structured to work well for standalone activities.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
-        /// <param name="body">NOTE: keep in sync with temporal.api.batch.v1.BatchOperationUpdateActivityOptions</param>
+        /// <param name="body">NOTE: keep in sync with temporal.api.batch.v1.BatchOperationUpdateActivityOptions Deprecated. Use `UpdateActivityExecutionOptionsRequest`.</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
