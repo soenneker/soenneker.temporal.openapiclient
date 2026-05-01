@@ -46,7 +46,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workers
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WorkersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespace}/workers{?nextPageToken*,pageSize*,query*}", pathParameters)
+        public WorkersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespace}/workers{?includeSystemWorkers*,nextPageToken*,pageSize*,query*}", pathParameters)
         {
         }
         /// <summary>
@@ -54,7 +54,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workers
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WorkersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespace}/workers{?nextPageToken*,pageSize*,query*}", rawUrl)
+        public WorkersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespace}/workers{?includeSystemWorkers*,nextPageToken*,pageSize*,query*}", rawUrl)
         {
         }
         /// <summary>
@@ -114,6 +114,9 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workers
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WorkersRequestBuilderGetQueryParameters 
         {
+            /// <summary>When true, the response will include system workers that are created implicitly by the server and not by the user. By default, system workers are excluded.</summary>
+            [QueryParameter("includeSystemWorkers")]
+            public bool? IncludeSystemWorkers { get; set; }
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("nextPageToken")]
