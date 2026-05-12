@@ -25,6 +25,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public bool? ReportedProblemsSearchAttribute { get; set; }
         /// <summary>True if the namespace supports standalone activities</summary>
         public bool? StandaloneActivities { get; set; }
+        /// <summary>True if the namespace supports standalone Nexus operations.</summary>
+        public bool? StandaloneNexusOperation { get; set; }
         /// <summary>True if the namespace supports sync update</summary>
         public bool? SyncUpdate { get; set; }
         /// <summary>True if the namespace supports worker commands (server-to-worker communication via control queues).</summary>
@@ -65,6 +67,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "pollerAutoscaling", n => { PollerAutoscaling = n.GetBoolValue(); } },
                 { "reportedProblemsSearchAttribute", n => { ReportedProblemsSearchAttribute = n.GetBoolValue(); } },
                 { "standaloneActivities", n => { StandaloneActivities = n.GetBoolValue(); } },
+                { "standaloneNexusOperation", n => { StandaloneNexusOperation = n.GetBoolValue(); } },
                 { "syncUpdate", n => { SyncUpdate = n.GetBoolValue(); } },
                 { "workerCommands", n => { WorkerCommands = n.GetBoolValue(); } },
                 { "workerHeartbeats", n => { WorkerHeartbeats = n.GetBoolValue(); } },
@@ -84,6 +87,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteBoolValue("pollerAutoscaling", PollerAutoscaling);
             writer.WriteBoolValue("reportedProblemsSearchAttribute", ReportedProblemsSearchAttribute);
             writer.WriteBoolValue("standaloneActivities", StandaloneActivities);
+            writer.WriteBoolValue("standaloneNexusOperation", StandaloneNexusOperation);
             writer.WriteBoolValue("syncUpdate", SyncUpdate);
             writer.WriteBoolValue("workerCommands", WorkerCommands);
             writer.WriteBoolValue("workerHeartbeats", WorkerHeartbeats);
