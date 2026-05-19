@@ -39,6 +39,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public global::Soenneker.Temporal.OpenApiClient.Models.Link_NexusOperation NexusOperation { get; set; }
 #endif
+        /// <summary>A link to a workflow execution. This is a more general version of WorkflowEvent that doesn&apos;t specify a  particular event within the workflow, useful when you want to link to a workflow but there is no particular event to link to, such as a Query or a Rejected Update.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Temporal.OpenApiClient.Models.Link_Workflow? Workflow { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Temporal.OpenApiClient.Models.Link_Workflow Workflow { get; set; }
+#endif
         /// <summary>The workflowEvent property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -75,6 +83,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "activity", n => { Activity = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Link_Activity>(global::Soenneker.Temporal.OpenApiClient.Models.Link_Activity.CreateFromDiscriminatorValue); } },
                 { "batchJob", n => { BatchJob = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Link_BatchJob>(global::Soenneker.Temporal.OpenApiClient.Models.Link_BatchJob.CreateFromDiscriminatorValue); } },
                 { "nexusOperation", n => { NexusOperation = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Link_NexusOperation>(global::Soenneker.Temporal.OpenApiClient.Models.Link_NexusOperation.CreateFromDiscriminatorValue); } },
+                { "workflow", n => { Workflow = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Link_Workflow>(global::Soenneker.Temporal.OpenApiClient.Models.Link_Workflow.CreateFromDiscriminatorValue); } },
                 { "workflowEvent", n => { WorkflowEvent = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Link_WorkflowEvent>(global::Soenneker.Temporal.OpenApiClient.Models.Link_WorkflowEvent.CreateFromDiscriminatorValue); } },
             };
         }
@@ -88,6 +97,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Link_Activity>("activity", Activity);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Link_BatchJob>("batchJob", BatchJob);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Link_NexusOperation>("nexusOperation", NexusOperation);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Link_Workflow>("workflow", Workflow);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Link_WorkflowEvent>("workflowEvent", WorkflowEvent);
             writer.WriteAdditionalData(AdditionalData);
         }

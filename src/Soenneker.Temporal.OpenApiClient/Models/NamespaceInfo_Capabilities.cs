@@ -37,6 +37,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public bool? WorkerPollCompleteOnShutdown { get; set; }
         /// <summary>True if the namespace supports pausing workflows</summary>
         public bool? WorkflowPause { get; set; }
+        /// <summary>True if the namespace supports attaching callbacks on workflow updates</summary>
+        public bool? WorkflowUpdateCallbacks { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_Capabilities"/> and sets the default values.
         /// </summary>
@@ -73,6 +75,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "workerHeartbeats", n => { WorkerHeartbeats = n.GetBoolValue(); } },
                 { "workerPollCompleteOnShutdown", n => { WorkerPollCompleteOnShutdown = n.GetBoolValue(); } },
                 { "workflowPause", n => { WorkflowPause = n.GetBoolValue(); } },
+                { "workflowUpdateCallbacks", n => { WorkflowUpdateCallbacks = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -93,6 +96,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteBoolValue("workerHeartbeats", WorkerHeartbeats);
             writer.WriteBoolValue("workerPollCompleteOnShutdown", WorkerPollCompleteOnShutdown);
             writer.WriteBoolValue("workflowPause", WorkflowPause);
+            writer.WriteBoolValue("workflowUpdateCallbacks", WorkflowUpdateCallbacks);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
