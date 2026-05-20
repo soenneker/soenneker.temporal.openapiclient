@@ -49,6 +49,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public global::Soenneker.Temporal.OpenApiClient.Models.ScheduleSpec Spec { get; set; }
 #endif
+        /// <summary>Size of the schedule&apos;s internal state (including payloads) in bytes.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? StateSizeBytes { get; set; }
+#nullable restore
+#else
+        public string StateSizeBytes { get; set; }
+#endif
         /// <summary>From action: Action is a oneof field, but we need to encode this in JSON and oneof fields don&apos;t work well with JSON. If action is start_workflow, this is set:</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -87,6 +95,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "paused", n => { Paused = n.GetBoolValue(); } },
                 { "recentActions", n => { RecentActions = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResult>(global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResult.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "spec", n => { Spec = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleSpec>(global::Soenneker.Temporal.OpenApiClient.Models.ScheduleSpec.CreateFromDiscriminatorValue); } },
+                { "stateSizeBytes", n => { StateSizeBytes = n.GetStringValue(); } },
                 { "workflowType", n => { WorkflowType = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowType>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowType.CreateFromDiscriminatorValue); } },
             };
         }
@@ -102,6 +111,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteBoolValue("paused", Paused);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResult>("recentActions", RecentActions);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleSpec>("spec", Spec);
+            writer.WriteStringValue("stateSizeBytes", StateSizeBytes);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowType>("workflowType", WorkflowType);
             writer.WriteAdditionalData(AdditionalData);
         }
