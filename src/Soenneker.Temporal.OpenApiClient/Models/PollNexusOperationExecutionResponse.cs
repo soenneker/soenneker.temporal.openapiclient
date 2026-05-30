@@ -17,10 +17,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The failure if the operation completed unsuccessfully.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Failure? Failure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PollNexusOperationExecutionResponse_failure? Failure { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Failure Failure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PollNexusOperationExecutionResponse_failure Failure { get; set; }
 #endif
         /// <summary>Operation token. Only populated for asynchronous operations after a successful StartOperation call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -33,10 +33,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The result if the operation completed successfully.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Result { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PollNexusOperationExecutionResponse_result? Result { get; set; }
 #nullable restore
 #else
-        public UntypedNode Result { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PollNexusOperationExecutionResponse_result Result { get; set; }
 #endif
         /// <summary>The run ID of the operation, useful when run_id was not specified in the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -73,9 +73,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "failure", n => { Failure = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Failure>(global::Soenneker.Temporal.OpenApiClient.Models.Failure.CreateFromDiscriminatorValue); } },
+                { "failure", n => { Failure = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PollNexusOperationExecutionResponse_failure>(global::Soenneker.Temporal.OpenApiClient.Models.PollNexusOperationExecutionResponse_failure.CreateFromDiscriminatorValue); } },
                 { "operationToken", n => { OperationToken = n.GetStringValue(); } },
-                { "result", n => { Result = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "result", n => { Result = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PollNexusOperationExecutionResponse_result>(global::Soenneker.Temporal.OpenApiClient.Models.PollNexusOperationExecutionResponse_result.CreateFromDiscriminatorValue); } },
                 { "runId", n => { RunId = n.GetStringValue(); } },
                 { "waitStage", n => { WaitStage = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.PollNexusOperationExecutionResponse_waitStage>(); } },
             };
@@ -87,9 +87,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Failure>("failure", Failure);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PollNexusOperationExecutionResponse_failure>("failure", Failure);
             writer.WriteStringValue("operationToken", OperationToken);
-            writer.WriteObjectValue<UntypedNode>("result", Result);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PollNexusOperationExecutionResponse_result>("result", Result);
             writer.WriteStringValue("runId", RunId);
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.PollNexusOperationExecutionResponse_waitStage>("waitStage", WaitStage);
             writer.WriteAdditionalData(AdditionalData);

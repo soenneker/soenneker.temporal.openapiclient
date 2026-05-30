@@ -23,7 +23,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.CurrentDeployment
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("deploymentSeries_name%2Did", position);
+                urlTplParams.Add("deployment%2Eseries_name", position);
                 return new global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.CurrentDeployment.Item.DeploymentSeries_nameItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }

@@ -18,10 +18,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Callbacks to be delivered internally within the system. This variant is not settable in the API and will be rejected by the service with an INVALID_ARGUMENT error. The only reason that this is exposed is because callbacks are replicated across clusters via the WorkflowExecutionStarted event, which is defined in the public API.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Callback_Internal? Internal { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CallbackInternal? Internal { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Callback_Internal Internal { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CallbackInternal Internal { get; set; }
 #endif
         /// <summary>Links associated with the callback. It can be used to link to underlying resources of the callback.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -34,10 +34,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The nexus property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Callback_Nexus? Nexus { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CallbackNexus? Nexus { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Callback_Nexus Nexus { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CallbackNexus Nexus { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.Callback"/> and sets the default values.
@@ -64,9 +64,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "internal", n => { Internal = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Callback_Internal>(global::Soenneker.Temporal.OpenApiClient.Models.Callback_Internal.CreateFromDiscriminatorValue); } },
+                { "internal", n => { Internal = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CallbackInternal>(global::Soenneker.Temporal.OpenApiClient.Models.CallbackInternal.CreateFromDiscriminatorValue); } },
                 { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.Link>(global::Soenneker.Temporal.OpenApiClient.Models.Link.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "nexus", n => { Nexus = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Callback_Nexus>(global::Soenneker.Temporal.OpenApiClient.Models.Callback_Nexus.CreateFromDiscriminatorValue); } },
+                { "nexus", n => { Nexus = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CallbackNexus>(global::Soenneker.Temporal.OpenApiClient.Models.CallbackNexus.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -76,9 +76,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Callback_Internal>("internal", Internal);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CallbackInternal>("internal", Internal);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.Link>("links", Links);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Callback_Nexus>("nexus", Nexus);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CallbackNexus>("nexus", Nexus);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

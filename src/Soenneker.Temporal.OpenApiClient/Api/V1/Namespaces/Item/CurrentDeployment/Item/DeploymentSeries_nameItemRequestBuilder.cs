@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.CurrentDeployment.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v1\namespaces\{namespace}\current-deployment\{deploymentSeries_name-id}
+    /// Builds and executes requests for operations under \api\v1\namespaces\{namespace}\current-deployment\{deployment.series_name}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DeploymentSeries_nameItemRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.CurrentDeploym
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DeploymentSeries_nameItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespace}/current-deployment/{deploymentSeries_name%2Did}", pathParameters)
+        public DeploymentSeries_nameItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespace}/current-deployment/{deployment%2Eseries_name}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.CurrentDeploym
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DeploymentSeries_nameItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespace}/current-deployment/{deploymentSeries_name%2Did}", rawUrl)
+        public DeploymentSeries_nameItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespace}/current-deployment/{deployment%2Eseries_name}", rawUrl)
         {
         }
         /// <summary>

@@ -19,10 +19,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The update request associated with this event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Request? Request { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAdmittedEventAttributes_request? Request { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Request Request { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAdmittedEventAttributes_request Request { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAdmittedEventAttributes"/> and sets the default values.
@@ -50,7 +50,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "origin", n => { Origin = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAdmittedEventAttributes_origin>(); } },
-                { "request", n => { Request = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Request>(global::Soenneker.Temporal.OpenApiClient.Models.Request.CreateFromDiscriminatorValue); } },
+                { "request", n => { Request = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAdmittedEventAttributes_request>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAdmittedEventAttributes_request.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAdmittedEventAttributes_origin>("origin", Origin);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Request>("request", Request);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAdmittedEventAttributes_request>("request", Request);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -34,10 +34,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Input for the operation. The server converts this into Nexus request content and the appropriate content headers internally when sending the StartOperation request. On the handler side, if it is also backed by Temporal, the content is transformed back to the original Payload stored in this event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Input { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationScheduledEventAttributes_input? Input { get; set; }
 #nullable restore
 #else
-        public UntypedNode Input { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationScheduledEventAttributes_input Input { get; set; }
 #endif
         /// <summary>Header to attach to the Nexus request. Note these headers are not the same as Temporal headers on internal activities and child workflows, these are transmitted to Nexus operations that may be external and are not traditional payloads.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -63,7 +63,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string RequestId { get; set; }
 #endif
-        /// <summary>Schedule-to-close timeout for this operation. Indicates how long the caller is willing to wait for operation completion. Calls are retried internally by the server. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;to&quot; is used to indicate interval. --) (-- api-linter: core::0142::time-field-names=disabled     aip.dev/not-precedent: &quot;timeout&quot; is an acceptable suffix for duration fields in this API. --)</summary>
+        /// <summary>&quot;Schedule-to-close timeout for this operation. Indicates how long the caller is willing to wait for operation completion. Calls are retried internally by the server. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: \&quot;to\&quot; is used to indicate interval. --) (-- api-linter: core::0142::time-field-names=disabled     aip.dev/not-precedent: \&quot;timeout\&quot; is an acceptable suffix for duration fields in this API. --)&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ScheduleToCloseTimeout { get; set; }
@@ -71,7 +71,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string ScheduleToCloseTimeout { get; set; }
 #endif
-        /// <summary>Schedule-to-start timeout for this operation. See ScheduleNexusOperationCommandAttributes.schedule_to_start_timeout for details. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;to&quot; is used to indicate interval. --)</summary>
+        /// <summary>&quot;Schedule-to-start timeout for this operation. See ScheduleNexusOperationCommandAttributes.schedule_to_start_timeout for details. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: \&quot;to\&quot; is used to indicate interval. --)&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ScheduleToStartTimeout { get; set; }
@@ -87,7 +87,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string Service { get; set; }
 #endif
-        /// <summary>Start-to-close timeout for this operation. See ScheduleNexusOperationCommandAttributes.start_to_close_timeout for details. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;to&quot; is used to indicate interval. --)</summary>
+        /// <summary>&quot;Start-to-close timeout for this operation. See ScheduleNexusOperationCommandAttributes.start_to_close_timeout for details. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: \&quot;to\&quot; is used to indicate interval. --)&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? StartToCloseTimeout { get; set; }
@@ -130,7 +130,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             {
                 { "endpoint", n => { Endpoint = n.GetStringValue(); } },
                 { "endpointId", n => { EndpointId = n.GetStringValue(); } },
-                { "input", n => { Input = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "input", n => { Input = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationScheduledEventAttributes_input>(global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationScheduledEventAttributes_input.CreateFromDiscriminatorValue); } },
                 { "nexusHeader", n => { NexusHeader = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationScheduledEventAttributes_nexusHeader>(global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationScheduledEventAttributes_nexusHeader.CreateFromDiscriminatorValue); } },
                 { "operation", n => { Operation = n.GetStringValue(); } },
                 { "requestId", n => { RequestId = n.GetStringValue(); } },
@@ -150,7 +150,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("endpoint", Endpoint);
             writer.WriteStringValue("endpointId", EndpointId);
-            writer.WriteObjectValue<UntypedNode>("input", Input);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationScheduledEventAttributes_input>("input", Input);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationScheduledEventAttributes_nexusHeader>("nexusHeader", NexusHeader);
             writer.WriteStringValue("operation", Operation);
             writer.WriteStringValue("requestId", RequestId);

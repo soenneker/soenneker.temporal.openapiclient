@@ -22,13 +22,13 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string NewExecutionRunId { get; set; }
 #endif
-        /// <summary>Serialized result of workflow completion (ie: The return value of the workflow function)</summary>
+        /// <summary>&quot;Serialized result of workflow completion (ie: The return value of the workflow function)&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Payloads? Result { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionCompletedEventAttributes_result? Result { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Payloads Result { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionCompletedEventAttributes_result Result { get; set; }
 #endif
         /// <summary>The `WORKFLOW_TASK_COMPLETED` event which this command was reported with</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -64,7 +64,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "newExecutionRunId", n => { NewExecutionRunId = n.GetStringValue(); } },
-                { "result", n => { Result = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>(global::Soenneker.Temporal.OpenApiClient.Models.Payloads.CreateFromDiscriminatorValue); } },
+                { "result", n => { Result = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionCompletedEventAttributes_result>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionCompletedEventAttributes_result.CreateFromDiscriminatorValue); } },
                 { "workflowTaskCompletedEventId", n => { WorkflowTaskCompletedEventId = n.GetStringValue(); } },
             };
         }
@@ -76,7 +76,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("newExecutionRunId", NewExecutionRunId);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>("result", Result);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionCompletedEventAttributes_result>("result", Result);
             writer.WriteStringValue("workflowTaskCompletedEventId", WorkflowTaskCompletedEventId);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -62,10 +62,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Search attributes from the start request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes? SearchAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionListInfo_searchAttributes? SearchAttributes { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes SearchAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionListInfo_searchAttributes SearchAttributes { get; set; }
 #endif
         /// <summary>Service name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -74,6 +74,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #nullable restore
 #else
         public string Service { get; set; }
+#endif
+        /// <summary>Updated once on scheduled and once on terminal status.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? StateSizeBytes { get; set; }
+#nullable restore
+#else
+        public string StateSizeBytes { get; set; }
 #endif
         /// <summary>Updated on terminal status.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -117,8 +125,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "operationId", n => { OperationId = n.GetStringValue(); } },
                 { "runId", n => { RunId = n.GetStringValue(); } },
                 { "scheduleTime", n => { ScheduleTime = n.GetDateTimeOffsetValue(); } },
-                { "searchAttributes", n => { SearchAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes.CreateFromDiscriminatorValue); } },
+                { "searchAttributes", n => { SearchAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionListInfo_searchAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionListInfo_searchAttributes.CreateFromDiscriminatorValue); } },
                 { "service", n => { Service = n.GetStringValue(); } },
+                { "stateSizeBytes", n => { StateSizeBytes = n.GetStringValue(); } },
                 { "stateTransitionCount", n => { StateTransitionCount = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionListInfo_status>(); } },
             };
@@ -137,8 +146,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("operationId", OperationId);
             writer.WriteStringValue("runId", RunId);
             writer.WriteDateTimeOffsetValue("scheduleTime", ScheduleTime);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes>("searchAttributes", SearchAttributes);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionListInfo_searchAttributes>("searchAttributes", SearchAttributes);
             writer.WriteStringValue("service", Service);
+            writer.WriteStringValue("stateSizeBytes", StateSizeBytes);
             writer.WriteStringValue("stateTransitionCount", StateTransitionCount);
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionListInfo_status>("status", Status);
             writer.WriteAdditionalData(AdditionalData);

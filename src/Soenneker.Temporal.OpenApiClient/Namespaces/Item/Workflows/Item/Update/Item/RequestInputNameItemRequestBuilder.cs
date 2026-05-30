@@ -37,7 +37,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Update
         /// Invokes the specified Update function on user Workflow code.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponse"/></returns>
-        /// <param name="body">(-- api-linter: core::0134=disabled     aip.dev/not-precedent: Update RPCs don&apos;t follow Google API format. --)</param>
+        /// <param name="body">&quot;(-- api-linter: core::0134=disabled     aip.dev/not-precedent: Update RPCs don&apos;t follow Google API format. --)&quot;</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Temporal.OpenApiClient.Models.Status">When receiving a 4XX or 5XX status code</exception>
@@ -62,7 +62,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Update
         /// Invokes the specified Update function on user Workflow code.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
-        /// <param name="body">(-- api-linter: core::0134=disabled     aip.dev/not-precedent: Update RPCs don&apos;t follow Google API format. --)</param>
+        /// <param name="body">&quot;(-- api-linter: core::0134=disabled     aip.dev/not-precedent: Update RPCs don&apos;t follow Google API format. --)&quot;</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

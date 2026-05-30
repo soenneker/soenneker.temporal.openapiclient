@@ -108,7 +108,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.TaskQueues.Item
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class TaskQueueItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>Deprecated. ENHANCED mode is also being deprecated. Select the API mode to use for this request: DEFAULT mode (if unset) or ENHANCED mode. Consult the documentation for each field to understand which mode it is supported in.</summary>
+            /// <summary>&quot;Deprecated. ENHANCED mode is also being deprecated. Select the API mode to use for this request: DEFAULT mode (if unset) or ENHANCED mode. Consult the documentation for each field to understand which mode it is supported in.&quot;</summary>
             [QueryParameter("apiMode")]
             public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.TaskQueues.Item.GetApiModeQueryParameterType? ApiMode { get; set; }
             /// <summary>Deprecated, use `report_stats` instead. If true, the task queue status will be included in the response.</summary>
@@ -126,7 +126,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.TaskQueues.Item
             /// <summary>Deprecated (as part of the ENHANCED mode deprecation). Report task reachability for the requested versions and all task types (task reachability is not reported per task type).</summary>
             [QueryParameter("reportTaskReachability")]
             public bool? ReportTaskReachability { get; set; }
-            /// <summary>Default: TASK_QUEUE_KIND_NORMAL.</summary>
+            /// <summary>&quot;Default: TASK_QUEUE_KIND_NORMAL.&quot;</summary>
             [QueryParameter("taskQueue%2Ekind")]
             public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.TaskQueues.Item.GetTaskQueueKindQueryParameterType? TaskQueueKind { get; set; }
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

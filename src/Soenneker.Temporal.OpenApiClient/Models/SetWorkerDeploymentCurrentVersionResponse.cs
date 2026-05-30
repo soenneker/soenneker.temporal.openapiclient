@@ -25,10 +25,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The version that was current before executing this operation. Deprecated in favor of idempotency of the API. Use `DescribeWorkerDeployment` to get the Current version info before calling this API. By passing the `conflict_token` got from the `DescribeWorkerDeployment` call to this API you can ensure there is no interfering changes between the two calls.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion? PreviousDeploymentVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SetWorkerDeploymentCurrentVersionResponse_previousDeploymentVersion? PreviousDeploymentVersion { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion PreviousDeploymentVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SetWorkerDeploymentCurrentVersionResponse_previousDeploymentVersion PreviousDeploymentVersion { get; set; }
 #endif
         /// <summary>Deprecated. Use `previous_deployment_version`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -64,7 +64,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "conflictToken", n => { ConflictToken = n.GetStringValue(); } },
-                { "previousDeploymentVersion", n => { PreviousDeploymentVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion>(global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion.CreateFromDiscriminatorValue); } },
+                { "previousDeploymentVersion", n => { PreviousDeploymentVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SetWorkerDeploymentCurrentVersionResponse_previousDeploymentVersion>(global::Soenneker.Temporal.OpenApiClient.Models.SetWorkerDeploymentCurrentVersionResponse_previousDeploymentVersion.CreateFromDiscriminatorValue); } },
                 { "previousVersion", n => { PreviousVersion = n.GetStringValue(); } },
             };
         }
@@ -76,7 +76,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("conflictToken", ConflictToken);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion>("previousDeploymentVersion", PreviousDeploymentVersion);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SetWorkerDeploymentCurrentVersionResponse_previousDeploymentVersion>("previousDeploymentVersion", PreviousDeploymentVersion);
             writer.WriteStringValue("previousVersion", PreviousVersion);
             writer.WriteAdditionalData(AdditionalData);
         }

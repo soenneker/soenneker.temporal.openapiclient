@@ -17,10 +17,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>All capabilities the namespace supports.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_Capabilities? Capabilities { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_capabilities? Capabilities { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_Capabilities Capabilities { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_capabilities Capabilities { get; set; }
 #endif
         /// <summary>A key-value map for any customized purpose.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -49,10 +49,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Namespace configured limits</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_Limits? Limits { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_limits? Limits { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_Limits Limits { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_limits Limits { get; set; }
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -99,11 +99,11 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "capabilities", n => { Capabilities = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_Capabilities>(global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_Capabilities.CreateFromDiscriminatorValue); } },
+                { "capabilities", n => { Capabilities = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_capabilities>(global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_capabilities.CreateFromDiscriminatorValue); } },
                 { "data", n => { Data = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_data>(global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_data.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "limits", n => { Limits = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_Limits>(global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_Limits.CreateFromDiscriminatorValue); } },
+                { "limits", n => { Limits = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_limits>(global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_limits.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "ownerEmail", n => { OwnerEmail = n.GetStringValue(); } },
                 { "state", n => { State = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_state>(); } },
@@ -117,11 +117,11 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_Capabilities>("capabilities", Capabilities);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_capabilities>("capabilities", Capabilities);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_data>("data", Data);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_Limits>("limits", Limits);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_limits>("limits", Limits);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("ownerEmail", OwnerEmail);
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_state>("state", State);

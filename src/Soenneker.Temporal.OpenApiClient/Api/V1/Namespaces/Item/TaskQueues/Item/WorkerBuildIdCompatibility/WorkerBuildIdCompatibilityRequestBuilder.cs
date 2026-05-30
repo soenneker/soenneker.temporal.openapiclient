@@ -34,7 +34,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Ite
         {
         }
         /// <summary>
-        /// Deprecated. Use `GetWorkerVersioningRules`. Fetches the worker build id versioning sets for a task queue.
+        /// Deprecated. Use `GetWorkerVersioningRules`. Will be removed in server version v1.32.0. Fetches the worker build id versioning sets for a task queue.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Models.GetWorkerBuildIdCompatibilityResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -57,7 +57,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Ite
             return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Models.GetWorkerBuildIdCompatibilityResponse>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Models.GetWorkerBuildIdCompatibilityResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Deprecated. Use `GetWorkerVersioningRules`. Fetches the worker build id versioning sets for a task queue.
+        /// Deprecated. Use `GetWorkerVersioningRules`. Will be removed in server version v1.32.0. Fetches the worker build id versioning sets for a task queue.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -85,7 +85,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Ite
             return new global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Item.WorkerBuildIdCompatibility.WorkerBuildIdCompatibilityRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Deprecated. Use `GetWorkerVersioningRules`. Fetches the worker build id versioning sets for a task queue.
+        /// Deprecated. Use `GetWorkerVersioningRules`. Will be removed in server version v1.32.0. Fetches the worker build id versioning sets for a task queue.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WorkerBuildIdCompatibilityRequestBuilderGetQueryParameters 

@@ -33,7 +33,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #endif
         /// <summary>The createTime property</summary>
         public DateTimeOffset? CreateTime { get; set; }
-        /// <summary>(-- api-linter: core::0214::resource-expiry=disabled     aip.dev/not-precedent: TTL is not defined for ResetPointInfo. --) The time that the run is deleted due to retention.</summary>
+        /// <summary>&quot;(-- api-linter: core::0214::resource-expiry=disabled     aip.dev/not-precedent: TTL is not defined for ResetPointInfo. --) The time that the run is deleted due to retention.&quot;</summary>
         public DateTimeOffset? ExpireTime { get; set; }
         /// <summary>Event ID of the first WorkflowTaskCompleted event processed by this worker build.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

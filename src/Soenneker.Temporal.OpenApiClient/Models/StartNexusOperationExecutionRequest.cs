@@ -37,10 +37,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Serialized input to the operation. Passed as the request payload.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Input { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_input? Input { get; set; }
 #nullable restore
 #else
-        public UntypedNode Input { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_input Input { get; set; }
 #endif
         /// <summary>The namespace property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -82,7 +82,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string RequestId { get; set; }
 #endif
-        /// <summary>Schedule-to-close timeout for this operation. Indicates how long the caller is willing to wait for operation completion. Calls are retried internally by the server. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;to&quot; is used to indicate interval. --)</summary>
+        /// <summary>&quot;Schedule-to-close timeout for this operation. Indicates how long the caller is willing to wait for operation completion. Calls are retried internally by the server. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: \&quot;to\&quot; is used to indicate interval. --)&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ScheduleToCloseTimeout { get; set; }
@@ -90,7 +90,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string ScheduleToCloseTimeout { get; set; }
 #endif
-        /// <summary>Schedule-to-start timeout for this operation. Indicates how long the caller is willing to wait for the operation to be started (or completed if synchronous) by the handler. If not set or zero, no schedule-to-start timeout is enforced. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;to&quot; is used to indicate interval. --)</summary>
+        /// <summary>&quot;Schedule-to-start timeout for this operation. Indicates how long the caller is willing to wait for the operation to be started (or completed if synchronous) by the handler. If not set or zero, no schedule-to-start timeout is enforced. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: \&quot;to\&quot; is used to indicate interval. --)&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ScheduleToStartTimeout { get; set; }
@@ -101,10 +101,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Search attributes for indexing.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes? SearchAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_searchAttributes? SearchAttributes { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes SearchAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_searchAttributes SearchAttributes { get; set; }
 #endif
         /// <summary>Service name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -114,7 +114,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string Service { get; set; }
 #endif
-        /// <summary>Start-to-close timeout for this operation. Indicates how long the caller is willing to wait for an asynchronous operation to complete after it has been started. Synchronous operations ignore this timeout. If not set or zero, no start-to-close timeout is enforced. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;to&quot; is used to indicate interval. --)</summary>
+        /// <summary>&quot;Start-to-close timeout for this operation. Indicates how long the caller is willing to wait for an asynchronous operation to complete after it has been started. Synchronous operations ignore this timeout. If not set or zero, no start-to-close timeout is enforced. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: \&quot;to\&quot; is used to indicate interval. --)&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? StartToCloseTimeout { get; set; }
@@ -125,10 +125,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Metadata for use by user interfaces to display the fixed as-of-start summary and details of the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.UserMetadata? UserMetadata { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_userMetadata? UserMetadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.UserMetadata UserMetadata { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_userMetadata UserMetadata { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest"/> and sets the default values.
@@ -159,7 +159,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "idConflictPolicy", n => { IdConflictPolicy = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_idConflictPolicy>(); } },
                 { "idReusePolicy", n => { IdReusePolicy = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_idReusePolicy>(); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
-                { "input", n => { Input = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "input", n => { Input = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_input>(global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_input.CreateFromDiscriminatorValue); } },
                 { "namespace", n => { Namespace = n.GetStringValue(); } },
                 { "nexusHeader", n => { NexusHeader = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_nexusHeader>(global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_nexusHeader.CreateFromDiscriminatorValue); } },
                 { "operation", n => { Operation = n.GetStringValue(); } },
@@ -167,10 +167,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "requestId", n => { RequestId = n.GetStringValue(); } },
                 { "scheduleToCloseTimeout", n => { ScheduleToCloseTimeout = n.GetStringValue(); } },
                 { "scheduleToStartTimeout", n => { ScheduleToStartTimeout = n.GetStringValue(); } },
-                { "searchAttributes", n => { SearchAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes.CreateFromDiscriminatorValue); } },
+                { "searchAttributes", n => { SearchAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_searchAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_searchAttributes.CreateFromDiscriminatorValue); } },
                 { "service", n => { Service = n.GetStringValue(); } },
                 { "startToCloseTimeout", n => { StartToCloseTimeout = n.GetStringValue(); } },
-                { "userMetadata", n => { UserMetadata = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UserMetadata>(global::Soenneker.Temporal.OpenApiClient.Models.UserMetadata.CreateFromDiscriminatorValue); } },
+                { "userMetadata", n => { UserMetadata = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_userMetadata>(global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_userMetadata.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -184,7 +184,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_idConflictPolicy>("idConflictPolicy", IdConflictPolicy);
             writer.WriteStringValue("identity", Identity);
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_idReusePolicy>("idReusePolicy", IdReusePolicy);
-            writer.WriteObjectValue<UntypedNode>("input", Input);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_input>("input", Input);
             writer.WriteStringValue("namespace", Namespace);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_nexusHeader>("nexusHeader", NexusHeader);
             writer.WriteStringValue("operation", Operation);
@@ -192,10 +192,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("requestId", RequestId);
             writer.WriteStringValue("scheduleToCloseTimeout", ScheduleToCloseTimeout);
             writer.WriteStringValue("scheduleToStartTimeout", ScheduleToStartTimeout);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes>("searchAttributes", SearchAttributes);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_searchAttributes>("searchAttributes", SearchAttributes);
             writer.WriteStringValue("service", Service);
             writer.WriteStringValue("startToCloseTimeout", StartToCloseTimeout);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UserMetadata>("userMetadata", UserMetadata);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_userMetadata>("userMetadata", UserMetadata);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

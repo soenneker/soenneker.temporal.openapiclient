@@ -34,20 +34,20 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Activities.Item.Cance
         {
         }
         /// <summary>
-        /// RequestCancelActivityExecution requests cancellation of an activity execution. Cancellation is cooperative: this call records the request, but the activity must detect and acknowledge it for the activity to reach CANCELED status. The cancellation signal is delivered via `cancel_requested` in the heartbeat response; SDKs surface this via language-idiomatic mechanisms (context cancellation, exceptions, abort signals).
+        /// &quot;RequestCancelActivityExecution requests cancellation of an activity execution. Cancellation is cooperative: this call records the request, but the activity must detect and acknowledge it for the activity to reach CANCELED status. The cancellation signal is delivered via `cancel_requested` in the heartbeat response; SDKs surface this via language-idiomatic mechanisms (context cancellation, exceptions, abort signals).&quot;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelActivityExecutionResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Activities.Item.Cancel.CancelPostResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Temporal.OpenApiClient.Models.Status">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelActivityExecutionResponse?> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelActivityExecutionRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Activities.Item.Cancel.CancelPostResponse?> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelActivityExecutionRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelActivityExecutionResponse> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelActivityExecutionRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Activities.Item.Cancel.CancelPostResponse> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelActivityExecutionRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -56,10 +56,10 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Activities.Item.Cance
             {
                 { "XXX", global::Soenneker.Temporal.OpenApiClient.Models.Status.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelActivityExecutionResponse>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelActivityExecutionResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Activities.Item.Cancel.CancelPostResponse>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Activities.Item.Cancel.CancelPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// RequestCancelActivityExecution requests cancellation of an activity execution. Cancellation is cooperative: this call records the request, but the activity must detect and acknowledge it for the activity to reach CANCELED status. The cancellation signal is delivered via `cancel_requested` in the heartbeat response; SDKs surface this via language-idiomatic mechanisms (context cancellation, exceptions, abort signals).
+        /// &quot;RequestCancelActivityExecution requests cancellation of an activity execution. Cancellation is cooperative: this call records the request, but the activity must detect and acknowledge it for the activity to reach CANCELED status. The cancellation signal is delivered via `cancel_requested` in the heartbeat response; SDKs surface this via language-idiomatic mechanisms (context cancellation, exceptions, abort signals).&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

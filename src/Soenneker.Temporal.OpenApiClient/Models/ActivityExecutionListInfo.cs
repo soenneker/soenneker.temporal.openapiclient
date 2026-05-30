@@ -24,10 +24,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The type of the activity, a string that maps to a registered activity on a worker.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityType? ActivityType { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityExecutionListInfo_activityType? ActivityType { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityType ActivityType { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityExecutionListInfo_activityType ActivityType { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -54,10 +54,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Search attributes from the start request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes? SearchAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityExecutionListInfo_searchAttributes? SearchAttributes { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes SearchAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityExecutionListInfo_searchAttributes SearchAttributes { get; set; }
 #endif
         /// <summary>Updated once on scheduled and once on terminal status.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -111,12 +111,12 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "activityId", n => { ActivityId = n.GetStringValue(); } },
-                { "activityType", n => { ActivityType = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityType>(global::Soenneker.Temporal.OpenApiClient.Models.ActivityType.CreateFromDiscriminatorValue); } },
+                { "activityType", n => { ActivityType = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityExecutionListInfo_activityType>(global::Soenneker.Temporal.OpenApiClient.Models.ActivityExecutionListInfo_activityType.CreateFromDiscriminatorValue); } },
                 { "closeTime", n => { CloseTime = n.GetDateTimeOffsetValue(); } },
                 { "executionDuration", n => { ExecutionDuration = n.GetStringValue(); } },
                 { "runId", n => { RunId = n.GetStringValue(); } },
                 { "scheduleTime", n => { ScheduleTime = n.GetDateTimeOffsetValue(); } },
-                { "searchAttributes", n => { SearchAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes.CreateFromDiscriminatorValue); } },
+                { "searchAttributes", n => { SearchAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityExecutionListInfo_searchAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.ActivityExecutionListInfo_searchAttributes.CreateFromDiscriminatorValue); } },
                 { "stateSizeBytes", n => { StateSizeBytes = n.GetStringValue(); } },
                 { "stateTransitionCount", n => { StateTransitionCount = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityExecutionListInfo_status>(); } },
@@ -131,12 +131,12 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("activityId", ActivityId);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityType>("activityType", ActivityType);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityExecutionListInfo_activityType>("activityType", ActivityType);
             writer.WriteDateTimeOffsetValue("closeTime", CloseTime);
             writer.WriteStringValue("executionDuration", ExecutionDuration);
             writer.WriteStringValue("runId", RunId);
             writer.WriteDateTimeOffsetValue("scheduleTime", ScheduleTime);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes>("searchAttributes", SearchAttributes);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityExecutionListInfo_searchAttributes>("searchAttributes", SearchAttributes);
             writer.WriteStringValue("stateSizeBytes", StateSizeBytes);
             writer.WriteStringValue("stateTransitionCount", StateTransitionCount);
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityExecutionListInfo_status>("status", Status);

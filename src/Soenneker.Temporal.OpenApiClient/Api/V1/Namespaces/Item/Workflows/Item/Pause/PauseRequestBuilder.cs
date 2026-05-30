@@ -34,20 +34,20 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item
         {
         }
         /// <summary>
-        /// Note: This is an experimental API and the behavior may change in a future release. PauseWorkflowExecution pauses the workflow execution specified in the request. Pausing a workflow execution results in - The workflow execution status changes to `PAUSED` and a new WORKFLOW_EXECUTION_PAUSED event is added to the history - No new workflow tasks or activity tasks are dispatched.   - Any workflow task currently executing on the worker will be allowed to complete.   - Any activity task currently executing will be paused. - All server-side events will continue to be processed by the server. - Queries &amp; Updates on a paused workflow will be rejected.
+        /// &quot;Note: This is an experimental API and the behavior may change in a future release. PauseWorkflowExecution pauses the workflow execution specified in the request. Pausing a workflow execution results in - The workflow execution status changes to `PAUSED` and a new WORKFLOW_EXECUTION_PAUSED event is added to the history - No new workflow tasks or activity tasks are dispatched.   - Any workflow task currently executing on the worker will be allowed to complete.   - Any activity task currently executing will be paused. - All server-side events will continue to be processed by the server. - Queries &amp; Updates on a paused workflow will be rejected.&quot;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Models.PauseWorkflowExecutionResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Pause.PausePostResponse"/></returns>
         /// <param name="body">Request to pause a workflow execution.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Temporal.OpenApiClient.Models.Status">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.PauseWorkflowExecutionResponse?> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.PauseWorkflowExecutionRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Pause.PausePostResponse?> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.PauseWorkflowExecutionRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.PauseWorkflowExecutionResponse> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.PauseWorkflowExecutionRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Pause.PausePostResponse> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.PauseWorkflowExecutionRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -56,10 +56,10 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item
             {
                 { "XXX", global::Soenneker.Temporal.OpenApiClient.Models.Status.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Models.PauseWorkflowExecutionResponse>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Models.PauseWorkflowExecutionResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Pause.PausePostResponse>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Pause.PausePostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Note: This is an experimental API and the behavior may change in a future release. PauseWorkflowExecution pauses the workflow execution specified in the request. Pausing a workflow execution results in - The workflow execution status changes to `PAUSED` and a new WORKFLOW_EXECUTION_PAUSED event is added to the history - No new workflow tasks or activity tasks are dispatched.   - Any workflow task currently executing on the worker will be allowed to complete.   - Any activity task currently executing will be paused. - All server-side events will continue to be processed by the server. - Queries &amp; Updates on a paused workflow will be rejected.
+        /// &quot;Note: This is an experimental API and the behavior may change in a future release. PauseWorkflowExecution pauses the workflow execution specified in the request. Pausing a workflow execution results in - The workflow execution status changes to `PAUSED` and a new WORKFLOW_EXECUTION_PAUSED event is added to the history - No new workflow tasks or activity tasks are dispatched.   - Any workflow task currently executing on the worker will be allowed to complete.   - Any activity task currently executing will be paused. - All server-side events will continue to be processed by the server. - Queries &amp; Updates on a paused workflow will be rejected.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">Request to pause a workflow execution.</param>

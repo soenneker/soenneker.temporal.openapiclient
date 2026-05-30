@@ -17,10 +17,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Link to be associated with the WorkflowExecutionSignaled event. Added on the response to propagate the backlink. Available from Temporal server 1.31 and up.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Link? Link { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWorkflowExecutionResponse_link? Link { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Link Link { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWorkflowExecutionResponse_link Link { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.SignalWorkflowExecutionResponse"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "link", n => { Link = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Link>(global::Soenneker.Temporal.OpenApiClient.Models.Link.CreateFromDiscriminatorValue); } },
+                { "link", n => { Link = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWorkflowExecutionResponse_link>(global::Soenneker.Temporal.OpenApiClient.Models.SignalWorkflowExecutionResponse_link.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Link>("link", Link);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWorkflowExecutionResponse_link>("link", Link);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

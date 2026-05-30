@@ -54,17 +54,17 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Schedules.Item
         /// <summary>
         /// Deletes a schedule, removing it from the system.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Models.DeleteScheduleResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Schedules.Item.WithScheduleDeleteResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Temporal.OpenApiClient.Models.Status">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.DeleteScheduleResponse?> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Schedules.Item.WithScheduleItemRequestBuilder.WithScheduleItemRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Schedules.Item.WithScheduleDeleteResponse?> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Schedules.Item.WithScheduleItemRequestBuilder.WithScheduleItemRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.DeleteScheduleResponse> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Schedules.Item.WithScheduleItemRequestBuilder.WithScheduleItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Schedules.Item.WithScheduleDeleteResponse> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Schedules.Item.WithScheduleItemRequestBuilder.WithScheduleItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -72,7 +72,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Schedules.Item
             {
                 { "XXX", global::Soenneker.Temporal.OpenApiClient.Models.Status.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Models.DeleteScheduleResponse>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Models.DeleteScheduleResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Schedules.Item.WithScheduleDeleteResponse>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Schedules.Item.WithScheduleDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns the schedule description and current state of an existing schedule.
@@ -101,7 +101,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Schedules.Item
         /// Creates a new schedule.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleResponse"/></returns>
-        /// <param name="body">(-- api-linter: core::0203::optional=disabled     aip.dev/not-precedent: field_behavior annotation not available in our gogo fork --)</param>
+        /// <param name="body">&quot;(-- api-linter: core::0203::optional=disabled     aip.dev/not-precedent: field_behavior annotation not available in our gogo fork --)&quot;</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Temporal.OpenApiClient.Models.Status">When receiving a 4XX or 5XX status code</exception>
@@ -164,7 +164,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Schedules.Item
         /// Creates a new schedule.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
-        /// <param name="body">(-- api-linter: core::0203::optional=disabled     aip.dev/not-precedent: field_behavior annotation not available in our gogo fork --)</param>
+        /// <param name="body">&quot;(-- api-linter: core::0203::optional=disabled     aip.dev/not-precedent: field_behavior annotation not available in our gogo fork --)&quot;</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

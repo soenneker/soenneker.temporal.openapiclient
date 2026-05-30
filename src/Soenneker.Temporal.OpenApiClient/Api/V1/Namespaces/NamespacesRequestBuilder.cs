@@ -72,18 +72,18 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces
         /// <summary>
         /// RegisterNamespace creates a new namespace which can be used as a container for all resources. A Namespace is a top level entity within Temporal, and is used as a container for resources like workflow executions, task queues, etc. A Namespace acts as a sandbox and provides isolation for all resources within the namespace. All resources belongs to exactly one namespace.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.NamespacesPostResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Temporal.OpenApiClient.Models.Status">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceResponse?> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.NamespacesPostResponse?> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceResponse> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.NamespacesPostResponse> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -92,7 +92,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces
             {
                 { "XXX", global::Soenneker.Temporal.OpenApiClient.Models.Status.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceResponse>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.NamespacesPostResponse>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.NamespacesPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// ListNamespaces returns the information and configuration for all namespaces.
@@ -150,7 +150,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class NamespacesRequestBuilderGetQueryParameters 
         {
-            /// <summary>By default namespaces in NAMESPACE_STATE_DELETED state are not included. Setting include_deleted to true will include deleted namespaces. Note: Namespace is in NAMESPACE_STATE_DELETED state when it was deleted from the system but associated data is not deleted yet.</summary>
+            /// <summary>&quot;By default namespaces in NAMESPACE_STATE_DELETED state are not included. Setting include_deleted to true will include deleted namespaces. Note: Namespace is in NAMESPACE_STATE_DELETED state when it was deleted from the system but associated data is not deleted yet.&quot;</summary>
             [QueryParameter("namespaceFilter%2EincludeDeleted")]
             public bool? NamespaceFilterIncludeDeleted { get; set; }
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

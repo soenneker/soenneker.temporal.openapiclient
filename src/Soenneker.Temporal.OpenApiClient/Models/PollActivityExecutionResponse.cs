@@ -14,7 +14,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The outcome of a completed activity execution: either a successful result or a failure.</summary>
+        /// <summary>&quot;The outcome of a completed activity execution: either a successful result or a failure.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Temporal.OpenApiClient.Models.ActivityExecutionOutcome? Outcome { get; set; }

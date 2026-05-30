@@ -18,10 +18,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>This ramp is useful for gradual Blue/Green deployments (and similar) where you want to send a certain portion of the traffic to the target Build ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.RampByPercentage? PercentageRamp { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BuildIdAssignmentRule_percentageRamp? PercentageRamp { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.RampByPercentage PercentageRamp { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BuildIdAssignmentRule_percentageRamp PercentageRamp { get; set; }
 #endif
         /// <summary>The targetBuildId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -56,7 +56,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "percentageRamp", n => { PercentageRamp = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RampByPercentage>(global::Soenneker.Temporal.OpenApiClient.Models.RampByPercentage.CreateFromDiscriminatorValue); } },
+                { "percentageRamp", n => { PercentageRamp = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.BuildIdAssignmentRule_percentageRamp>(global::Soenneker.Temporal.OpenApiClient.Models.BuildIdAssignmentRule_percentageRamp.CreateFromDiscriminatorValue); } },
                 { "targetBuildId", n => { TargetBuildId = n.GetStringValue(); } },
             };
         }
@@ -67,7 +67,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RampByPercentage>("percentageRamp", PercentageRamp);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.BuildIdAssignmentRule_percentageRamp>("percentageRamp", PercentageRamp);
             writer.WriteStringValue("targetBuildId", TargetBuildId);
             writer.WriteAdditionalData(AdditionalData);
         }

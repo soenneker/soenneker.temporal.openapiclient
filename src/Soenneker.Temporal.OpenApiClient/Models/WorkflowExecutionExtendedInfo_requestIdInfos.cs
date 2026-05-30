@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// Request ID information (eg: history event information associated with the request ID). Note: It only contains request IDs from StartWorkflowExecution requests, including indirect calls (eg: if SignalWithStartWorkflowExecution starts a new workflow, then the request ID is used in the StartWorkflowExecution request).
+    /// &quot;Request ID information (eg: history event information associated with the request ID). Note: It only contains request IDs from StartWorkflowExecution requests, including indirect calls (eg: if SignalWithStartWorkflowExecution starts a new workflow, then the request ID is used in the StartWorkflowExecution request).&quot;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WorkflowExecutionExtendedInfo_requestIdInfos : IAdditionalDataHolder, IParsable

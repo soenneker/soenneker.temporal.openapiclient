@@ -69,10 +69,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Version info of the worker to whom this task was dispatched. Deprecated. This field should be cleaned up when versioning-2 API is removed. [cleanup-experimental-wv]</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerVersionStamp? WorkerVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskStartedEventAttributes_workerVersion? WorkerVersion { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerVersionStamp WorkerVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskStartedEventAttributes_workerVersion WorkerVersion { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskStartedEventAttributes"/> and sets the default values.
@@ -107,7 +107,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "suggestContinueAsNew", n => { SuggestContinueAsNew = n.GetBoolValue(); } },
                 { "suggestContinueAsNewReasons", n => { SuggestContinueAsNewReasons = n.GetCollectionOfEnumValues<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskStartedEventAttributes_suggestContinueAsNewReasons>()?.AsList(); } },
                 { "targetWorkerDeploymentVersionChanged", n => { TargetWorkerDeploymentVersionChanged = n.GetBoolValue(); } },
-                { "workerVersion", n => { WorkerVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerVersionStamp>(global::Soenneker.Temporal.OpenApiClient.Models.WorkerVersionStamp.CreateFromDiscriminatorValue); } },
+                { "workerVersion", n => { WorkerVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskStartedEventAttributes_workerVersion>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskStartedEventAttributes_workerVersion.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -125,7 +125,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteBoolValue("suggestContinueAsNew", SuggestContinueAsNew);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskStartedEventAttributes_suggestContinueAsNewReasons>("suggestContinueAsNewReasons", SuggestContinueAsNewReasons);
             writer.WriteBoolValue("targetWorkerDeploymentVersionChanged", TargetWorkerDeploymentVersionChanged);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerVersionStamp>("workerVersion", WorkerVersion);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskStartedEventAttributes_workerVersion>("workerVersion", WorkerVersion);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

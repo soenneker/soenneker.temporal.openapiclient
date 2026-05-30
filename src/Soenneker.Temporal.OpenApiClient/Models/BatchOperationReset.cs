@@ -26,10 +26,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Describes what to reset to and how. If set, `reset_type` and `reset_reapply_type` are ignored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ResetOptions? Options { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationReset_options? Options { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ResetOptions Options { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationReset_options Options { get; set; }
 #endif
         /// <summary>Operations to perform after the workflow has been reset. These operations will be applied to the *new* run of the workflow execution in the order they are provided. All operations are applied to the workflow before the first new workflow task is generated</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -69,7 +69,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "identity", n => { Identity = n.GetStringValue(); } },
-                { "options", n => { Options = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ResetOptions>(global::Soenneker.Temporal.OpenApiClient.Models.ResetOptions.CreateFromDiscriminatorValue); } },
+                { "options", n => { Options = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationReset_options>(global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationReset_options.CreateFromDiscriminatorValue); } },
                 { "postResetOperations", n => { PostResetOperations = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperation>(global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperation.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "resetReapplyType", n => { ResetReapplyType = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationReset_resetReapplyType>(); } },
                 { "resetType", n => { ResetType = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationReset_resetType>(); } },
@@ -83,7 +83,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("identity", Identity);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ResetOptions>("options", Options);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationReset_options>("options", Options);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperation>("postResetOperations", PostResetOperations);
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationReset_resetReapplyType>("resetReapplyType", ResetReapplyType);
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationReset_resetType>("resetType", ResetType);

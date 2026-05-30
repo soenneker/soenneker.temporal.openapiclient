@@ -36,18 +36,18 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Termin
         /// <summary>
         /// TerminateWorkflowExecution terminates an existing workflow execution by recording a `WORKFLOW_EXECUTION_TERMINATED` event in the history and immediately terminating the execution instance.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Models.TerminateWorkflowExecutionResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Terminate.TerminatePostResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Temporal.OpenApiClient.Models.Status">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.TerminateWorkflowExecutionResponse?> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.TerminateWorkflowExecutionRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Terminate.TerminatePostResponse?> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.TerminateWorkflowExecutionRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.TerminateWorkflowExecutionResponse> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.TerminateWorkflowExecutionRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Terminate.TerminatePostResponse> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.TerminateWorkflowExecutionRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -56,7 +56,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Termin
             {
                 { "XXX", global::Soenneker.Temporal.OpenApiClient.Models.Status.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Models.TerminateWorkflowExecutionResponse>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Models.TerminateWorkflowExecutionResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Terminate.TerminatePostResponse>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Terminate.TerminatePostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// TerminateWorkflowExecution terminates an existing workflow execution by recording a `WORKFLOW_EXECUTION_TERMINATED` event in the history and immediately terminating the execution instance.

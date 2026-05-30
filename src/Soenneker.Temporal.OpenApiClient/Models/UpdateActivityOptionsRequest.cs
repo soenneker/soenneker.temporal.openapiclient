@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// NOTE: keep in sync with temporal.api.batch.v1.BatchOperationUpdateActivityOptions Deprecated. Use `UpdateActivityExecutionOptionsRequest`.
+    /// &quot;NOTE: keep in sync with temporal.api.batch.v1.BatchOperationUpdateActivityOptions Deprecated. Use `UpdateActivityExecutionOptionsRequest`.&quot;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpdateActivityOptionsRequest : IAdditionalDataHolder, IParsable
@@ -16,20 +16,20 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Activity options. Partial updates are accepted and controlled by update_mask</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityOptions? ActivityOptions { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateActivityOptionsRequest_activityOptions? ActivityOptions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityOptions ActivityOptions { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateActivityOptionsRequest_activityOptions ActivityOptions { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Execution info of the workflow which scheduled this activity</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution? Execution { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateActivityOptionsRequest_execution? Execution { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution Execution { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateActivityOptionsRequest_execution Execution { get; set; }
 #endif
         /// <summary>Only activity with this ID will be updated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -100,8 +100,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "activityOptions", n => { ActivityOptions = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityOptions>(global::Soenneker.Temporal.OpenApiClient.Models.ActivityOptions.CreateFromDiscriminatorValue); } },
-                { "execution", n => { Execution = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution.CreateFromDiscriminatorValue); } },
+                { "activityOptions", n => { ActivityOptions = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateActivityOptionsRequest_activityOptions>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateActivityOptionsRequest_activityOptions.CreateFromDiscriminatorValue); } },
+                { "execution", n => { Execution = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateActivityOptionsRequest_execution>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateActivityOptionsRequest_execution.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
                 { "matchAll", n => { MatchAll = n.GetBoolValue(); } },
@@ -118,8 +118,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityOptions>("activityOptions", ActivityOptions);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution>("execution", Execution);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateActivityOptionsRequest_activityOptions>("activityOptions", ActivityOptions);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateActivityOptionsRequest_execution>("execution", Execution);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("identity", Identity);
             writer.WriteBoolValue("matchAll", MatchAll);

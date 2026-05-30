@@ -14,13 +14,13 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Specifies which Deployment Version should receive new workflow executions and tasks of existing unversioned or AutoUpgrade workflows. Nil value means no Version in this Deployment (except Ramping Version, if present) receives traffic other than tasks of previously Pinned workflows. In absence of a Current Version, remaining traffic after any ramp (if set)  goes to unversioned workers (those with `UNVERSIONED` (or unspecified) `WorkerVersioningMode`.). Note: Current Version is overridden by the Ramping Version for a portion of traffic when ramp percentage is non-zero (see `ramping_deployment_version` and `ramping_version_percentage`).</summary>
+        /// <summary>&quot;Specifies which Deployment Version should receive new workflow executions and tasks of existing unversioned or AutoUpgrade workflows. Nil value means no Version in this Deployment (except Ramping Version, if present) receives traffic other than tasks of previously Pinned workflows. In absence of a Current Version, remaining traffic after any ramp (if set)  goes to unversioned workers (those with `UNVERSIONED` (or unspecified) `WorkerVersioningMode`.). Note: Current Version is overridden by the Ramping Version for a portion of traffic when ramp percentage is non-zero (see `ramping_deployment_version` and `ramping_version_percentage`).&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion? CurrentDeploymentVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RoutingConfig_currentDeploymentVersion? CurrentDeploymentVersion { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion CurrentDeploymentVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RoutingConfig_currentDeploymentVersion CurrentDeploymentVersion { get; set; }
 #endif
         /// <summary>Deprecated. Use `current_deployment_version`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -35,10 +35,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>When ramp percentage is non-zero, that portion of traffic is shifted from the Current Version to the Ramping Version. Must always be different from `current_deployment_version` unless both are nil. Nil value represents all the unversioned workers (those with `UNVERSIONED` (or unspecified) `WorkerVersioningMode`.) Note that it is possible to ramp from one Version to another Version, or from unversioned workers to a particular Version, or from a particular Version to unversioned workers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion? RampingDeploymentVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RoutingConfig_rampingDeploymentVersion? RampingDeploymentVersion { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion RampingDeploymentVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RoutingConfig_rampingDeploymentVersion RampingDeploymentVersion { get; set; }
 #endif
         /// <summary>Deprecated. Use `ramping_deployment_version`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -50,7 +50,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #endif
         /// <summary>Last time ramping version was changed. Not updated if only the ramp percentage changes.</summary>
         public DateTimeOffset? RampingVersionChangedTime { get; set; }
-        /// <summary>Percentage of tasks that are routed to the Ramping Version instead of the Current Version. Valid range: [0, 100]. A 100% value means the Ramping Version is receiving full traffic but not yet &quot;promoted&quot; to be the Current Version, likely due to pending validations. A 0% value means the Ramping Version is receiving no traffic.</summary>
+        /// <summary>&quot;Percentage of tasks that are routed to the Ramping Version instead of the Current Version. Valid range: [0, 100]. A 100% value means the Ramping Version is receiving full traffic but not yet \&quot;promoted\&quot; to be the Current Version, likely due to pending validations. A 0% value means the Ramping Version is receiving no traffic.&quot;</summary>
         public float? RampingVersionPercentage { get; set; }
         /// <summary>Last time ramping version percentage was changed. If ramping version is changed, this is also updated, even if the percentage stays the same.</summary>
         public DateTimeOffset? RampingVersionPercentageChangedTime { get; set; }
@@ -87,10 +87,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "currentDeploymentVersion", n => { CurrentDeploymentVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion>(global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion.CreateFromDiscriminatorValue); } },
+                { "currentDeploymentVersion", n => { CurrentDeploymentVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RoutingConfig_currentDeploymentVersion>(global::Soenneker.Temporal.OpenApiClient.Models.RoutingConfig_currentDeploymentVersion.CreateFromDiscriminatorValue); } },
                 { "currentVersion", n => { CurrentVersion = n.GetStringValue(); } },
                 { "currentVersionChangedTime", n => { CurrentVersionChangedTime = n.GetDateTimeOffsetValue(); } },
-                { "rampingDeploymentVersion", n => { RampingDeploymentVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion>(global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion.CreateFromDiscriminatorValue); } },
+                { "rampingDeploymentVersion", n => { RampingDeploymentVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RoutingConfig_rampingDeploymentVersion>(global::Soenneker.Temporal.OpenApiClient.Models.RoutingConfig_rampingDeploymentVersion.CreateFromDiscriminatorValue); } },
                 { "rampingVersion", n => { RampingVersion = n.GetStringValue(); } },
                 { "rampingVersionChangedTime", n => { RampingVersionChangedTime = n.GetDateTimeOffsetValue(); } },
                 { "rampingVersionPercentage", n => { RampingVersionPercentage = n.GetFloatValue(); } },
@@ -105,10 +105,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion>("currentDeploymentVersion", CurrentDeploymentVersion);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RoutingConfig_currentDeploymentVersion>("currentDeploymentVersion", CurrentDeploymentVersion);
             writer.WriteStringValue("currentVersion", CurrentVersion);
             writer.WriteDateTimeOffsetValue("currentVersionChangedTime", CurrentVersionChangedTime);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion>("rampingDeploymentVersion", RampingDeploymentVersion);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RoutingConfig_rampingDeploymentVersion>("rampingDeploymentVersion", RampingDeploymentVersion);
             writer.WriteStringValue("rampingVersion", RampingVersion);
             writer.WriteDateTimeOffsetValue("rampingVersionChangedTime", RampingVersionChangedTime);
             writer.WriteFloatValue("rampingVersionPercentage", RampingVersionPercentage);

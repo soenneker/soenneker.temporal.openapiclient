@@ -22,7 +22,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public int? LastIntervalFailureTasks { get; set; }
         /// <summary>Number of tasks processed in since the last heartbeat from the worker. This is a cumulative counter, and it is reset to 0 each time the worker sends a heartbeat. Contains both successful and failed tasks.</summary>
         public int? LastIntervalProcessedTasks { get; set; }
-        /// <summary>Kind of the slot supplier, which is used to determine how the slots are allocated. Possible values: &quot;Fixed | ResourceBased | Custom String&quot;</summary>
+        /// <summary>&quot;Kind of the slot supplier, which is used to determine how the slots are allocated. Possible values: \&quot;Fixed | ResourceBased | Custom String\&quot;&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SlotSupplierKind { get; set; }

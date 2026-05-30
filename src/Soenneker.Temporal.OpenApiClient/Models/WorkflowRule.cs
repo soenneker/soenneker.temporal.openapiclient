@@ -15,7 +15,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Identity of the actor that created the rule (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: It is better reflect the intent this way, we will also have updated_by. --) (-- api-linter: core::0142::time-field-names=disabled     aip.dev/not-precedent: Same as above. All other options sounds clumsy --)</summary>
+        /// <summary>&quot;Identity of the actor that created the rule (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: It is better reflect the intent this way, we will also have updated_by. --) (-- api-linter: core::0142::time-field-names=disabled     aip.dev/not-precedent: Same as above. All other options sounds clumsy --)&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CreatedByIdentity { get; set; }
@@ -36,10 +36,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Rule specification</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRuleSpec? Spec { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRule_spec? Spec { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRuleSpec Spec { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRule_spec Spec { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRule"/> and sets the default values.
@@ -69,7 +69,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "createTime", n => { CreateTime = n.GetDateTimeOffsetValue(); } },
                 { "createdByIdentity", n => { CreatedByIdentity = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "spec", n => { Spec = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRuleSpec>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRuleSpec.CreateFromDiscriminatorValue); } },
+                { "spec", n => { Spec = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRule_spec>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRule_spec.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -82,7 +82,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("createdByIdentity", CreatedByIdentity);
             writer.WriteDateTimeOffsetValue("createTime", CreateTime);
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRuleSpec>("spec", Spec);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRule_spec>("spec", Spec);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

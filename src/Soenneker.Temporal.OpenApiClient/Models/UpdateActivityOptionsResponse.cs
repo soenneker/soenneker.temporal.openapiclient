@@ -16,10 +16,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Activity options after an update</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityOptions? ActivityOptions { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateActivityOptionsResponse_activityOptions? ActivityOptions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityOptions ActivityOptions { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateActivityOptionsResponse_activityOptions ActivityOptions { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -48,7 +48,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "activityOptions", n => { ActivityOptions = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityOptions>(global::Soenneker.Temporal.OpenApiClient.Models.ActivityOptions.CreateFromDiscriminatorValue); } },
+                { "activityOptions", n => { ActivityOptions = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateActivityOptionsResponse_activityOptions>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateActivityOptionsResponse_activityOptions.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -58,7 +58,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityOptions>("activityOptions", ActivityOptions);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateActivityOptionsResponse_activityOptions>("activityOptions", ActivityOptions);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

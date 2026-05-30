@@ -54,10 +54,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Deployment Versions that are currently tracked in this Deployment. A DeploymentVersion will be cleaned up automatically if all the following conditions meet: - It does not receive new executions (is not current or ramping) - It has no active pollers (see WorkerDeploymentVersionInfo.pollers_status) - It is drained (see WorkerDeploymentVersionInfo.drainage_status)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfo_WorkerDeploymentVersionSummary>? VersionSummaries { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummary>? VersionSummaries { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfo_WorkerDeploymentVersionSummary> VersionSummaries { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummary> VersionSummaries { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfo"/> and sets the default values.
@@ -90,7 +90,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "routingConfig", n => { RoutingConfig = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RoutingConfig>(global::Soenneker.Temporal.OpenApiClient.Models.RoutingConfig.CreateFromDiscriminatorValue); } },
                 { "routingConfigUpdateState", n => { RoutingConfigUpdateState = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfo_routingConfigUpdateState>(); } },
-                { "versionSummaries", n => { VersionSummaries = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfo_WorkerDeploymentVersionSummary>(global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfo_WorkerDeploymentVersionSummary.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "versionSummaries", n => { VersionSummaries = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummary>(global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummary.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -106,7 +106,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RoutingConfig>("routingConfig", RoutingConfig);
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfo_routingConfigUpdateState>("routingConfigUpdateState", RoutingConfigUpdateState);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfo_WorkerDeploymentVersionSummary>("versionSummaries", VersionSummaries);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummary>("versionSummaries", VersionSummaries);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

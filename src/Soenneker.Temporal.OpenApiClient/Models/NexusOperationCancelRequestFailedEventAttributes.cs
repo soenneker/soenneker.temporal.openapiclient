@@ -17,10 +17,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Failure details. A NexusOperationFailureInfo wrapping a CanceledFailureInfo.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Failure? Failure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCancelRequestFailedEventAttributes_failure? Failure { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Failure Failure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCancelRequestFailedEventAttributes_failure Failure { get; set; }
 #endif
         /// <summary>The ID of the `NEXUS_OPERATION_CANCEL_REQUESTED` event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -71,7 +71,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "failure", n => { Failure = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Failure>(global::Soenneker.Temporal.OpenApiClient.Models.Failure.CreateFromDiscriminatorValue); } },
+                { "failure", n => { Failure = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCancelRequestFailedEventAttributes_failure>(global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCancelRequestFailedEventAttributes_failure.CreateFromDiscriminatorValue); } },
                 { "requestedEventId", n => { RequestedEventId = n.GetStringValue(); } },
                 { "scheduledEventId", n => { ScheduledEventId = n.GetStringValue(); } },
                 { "workflowTaskCompletedEventId", n => { WorkflowTaskCompletedEventId = n.GetStringValue(); } },
@@ -84,7 +84,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Failure>("failure", Failure);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCancelRequestFailedEventAttributes_failure>("failure", Failure);
             writer.WriteStringValue("requestedEventId", RequestedEventId);
             writer.WriteStringValue("scheduledEventId", ScheduledEventId);
             writer.WriteStringValue("workflowTaskCompletedEventId", WorkflowTaskCompletedEventId);

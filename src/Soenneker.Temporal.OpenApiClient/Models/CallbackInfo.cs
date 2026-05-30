@@ -28,20 +28,20 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Information on how this callback should be invoked (e.g. its URL and type).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Callback? Callback { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo_callback? Callback { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Callback Callback { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo_callback Callback { get; set; }
 #endif
         /// <summary>The time when the last attempt completed.</summary>
         public DateTimeOffset? LastAttemptCompleteTime { get; set; }
         /// <summary>The last attempt&apos;s failure, if any.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Failure? LastAttemptFailure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo_lastAttemptFailure? LastAttemptFailure { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Failure LastAttemptFailure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo_lastAttemptFailure LastAttemptFailure { get; set; }
 #endif
         /// <summary>The time when the next attempt is scheduled.</summary>
         public DateTimeOffset? NextAttemptScheduleTime { get; set; }
@@ -76,9 +76,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             {
                 { "attempt", n => { Attempt = n.GetIntValue(); } },
                 { "blockedReason", n => { BlockedReason = n.GetStringValue(); } },
-                { "callback", n => { Callback = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Callback>(global::Soenneker.Temporal.OpenApiClient.Models.Callback.CreateFromDiscriminatorValue); } },
+                { "callback", n => { Callback = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo_callback>(global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo_callback.CreateFromDiscriminatorValue); } },
                 { "lastAttemptCompleteTime", n => { LastAttemptCompleteTime = n.GetDateTimeOffsetValue(); } },
-                { "lastAttemptFailure", n => { LastAttemptFailure = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Failure>(global::Soenneker.Temporal.OpenApiClient.Models.Failure.CreateFromDiscriminatorValue); } },
+                { "lastAttemptFailure", n => { LastAttemptFailure = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo_lastAttemptFailure>(global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo_lastAttemptFailure.CreateFromDiscriminatorValue); } },
                 { "nextAttemptScheduleTime", n => { NextAttemptScheduleTime = n.GetDateTimeOffsetValue(); } },
                 { "registrationTime", n => { RegistrationTime = n.GetDateTimeOffsetValue(); } },
                 { "state", n => { State = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo_state>(); } },
@@ -93,9 +93,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("attempt", Attempt);
             writer.WriteStringValue("blockedReason", BlockedReason);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Callback>("callback", Callback);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo_callback>("callback", Callback);
             writer.WriteDateTimeOffsetValue("lastAttemptCompleteTime", LastAttemptCompleteTime);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Failure>("lastAttemptFailure", LastAttemptFailure);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo_lastAttemptFailure>("lastAttemptFailure", LastAttemptFailure);
             writer.WriteDateTimeOffsetValue("nextAttemptScheduleTime", NextAttemptScheduleTime);
             writer.WriteDateTimeOffsetValue("registrationTime", RegistrationTime);
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo_state>("state", State);

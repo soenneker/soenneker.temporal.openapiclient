@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// Worker info message, contains information about the worker and its current state. All information is provided by the worker itself. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: Removing those words make names less clear. --)
+    /// &quot;Worker info message, contains information about the worker and its current state. All information is provided by the worker itself. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: Removing those words make names less clear. --)&quot;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WorkerHeartbeat : IAdditionalDataHolder, IParsable
@@ -62,10 +62,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Worker host information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerHostInfo? HostInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeat_hostInfo? HostInfo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerHostInfo HostInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeat_hostInfo HostInfo { get; set; }
 #endif
         /// <summary>The localActivitySlotsInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -203,7 +203,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "drivers", n => { Drivers = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.StorageDriverInfo>(global::Soenneker.Temporal.OpenApiClient.Models.StorageDriverInfo.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "elapsedSinceLastHeartbeat", n => { ElapsedSinceLastHeartbeat = n.GetStringValue(); } },
                 { "heartbeatTime", n => { HeartbeatTime = n.GetDateTimeOffsetValue(); } },
-                { "hostInfo", n => { HostInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerHostInfo>(global::Soenneker.Temporal.OpenApiClient.Models.WorkerHostInfo.CreateFromDiscriminatorValue); } },
+                { "hostInfo", n => { HostInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeat_hostInfo>(global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeat_hostInfo.CreateFromDiscriminatorValue); } },
                 { "localActivitySlotsInfo", n => { LocalActivitySlotsInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo>(global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo.CreateFromDiscriminatorValue); } },
                 { "nexusPollerInfo", n => { NexusPollerInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerPollerInfo>(global::Soenneker.Temporal.OpenApiClient.Models.WorkerPollerInfo.CreateFromDiscriminatorValue); } },
                 { "nexusTaskSlotsInfo", n => { NexusTaskSlotsInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo>(global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo.CreateFromDiscriminatorValue); } },
@@ -236,7 +236,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.StorageDriverInfo>("drivers", Drivers);
             writer.WriteStringValue("elapsedSinceLastHeartbeat", ElapsedSinceLastHeartbeat);
             writer.WriteDateTimeOffsetValue("heartbeatTime", HeartbeatTime);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerHostInfo>("hostInfo", HostInfo);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeat_hostInfo>("hostInfo", HostInfo);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo>("localActivitySlotsInfo", LocalActivitySlotsInfo);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerPollerInfo>("nexusPollerInfo", NexusPollerInfo);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo>("nexusTaskSlotsInfo", NexusTaskSlotsInfo);

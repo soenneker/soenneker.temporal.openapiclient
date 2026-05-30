@@ -50,10 +50,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Not used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Memo? UpsertedMemo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowPropertiesModifiedExternallyEventAttributes_upsertedMemo? UpsertedMemo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Memo UpsertedMemo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowPropertiesModifiedExternallyEventAttributes_upsertedMemo UpsertedMemo { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkflowPropertiesModifiedExternallyEventAttributes"/> and sets the default values.
@@ -84,7 +84,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "newWorkflowExecutionTimeout", n => { NewWorkflowExecutionTimeout = n.GetStringValue(); } },
                 { "newWorkflowRunTimeout", n => { NewWorkflowRunTimeout = n.GetStringValue(); } },
                 { "newWorkflowTaskTimeout", n => { NewWorkflowTaskTimeout = n.GetStringValue(); } },
-                { "upsertedMemo", n => { UpsertedMemo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Memo>(global::Soenneker.Temporal.OpenApiClient.Models.Memo.CreateFromDiscriminatorValue); } },
+                { "upsertedMemo", n => { UpsertedMemo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowPropertiesModifiedExternallyEventAttributes_upsertedMemo>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowPropertiesModifiedExternallyEventAttributes_upsertedMemo.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -98,7 +98,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("newWorkflowExecutionTimeout", NewWorkflowExecutionTimeout);
             writer.WriteStringValue("newWorkflowRunTimeout", NewWorkflowRunTimeout);
             writer.WriteStringValue("newWorkflowTaskTimeout", NewWorkflowTaskTimeout);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Memo>("upsertedMemo", UpsertedMemo);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowPropertiesModifiedExternallyEventAttributes_upsertedMemo>("upsertedMemo", UpsertedMemo);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

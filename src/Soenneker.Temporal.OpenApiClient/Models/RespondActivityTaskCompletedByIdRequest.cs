@@ -49,10 +49,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The serialized result of activity execution</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Payloads? Result { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedByIdRequest_result? Result { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Payloads Result { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedByIdRequest_result Result { get; set; }
 #endif
         /// <summary>For a workflow activity - the run ID of the workflow which scheduled this activity. For a standalone activity - the run ID of the activity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -99,7 +99,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "identity", n => { Identity = n.GetStringValue(); } },
                 { "namespace", n => { Namespace = n.GetStringValue(); } },
                 { "resourceId", n => { ResourceId = n.GetStringValue(); } },
-                { "result", n => { Result = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>(global::Soenneker.Temporal.OpenApiClient.Models.Payloads.CreateFromDiscriminatorValue); } },
+                { "result", n => { Result = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedByIdRequest_result>(global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedByIdRequest_result.CreateFromDiscriminatorValue); } },
                 { "runId", n => { RunId = n.GetStringValue(); } },
                 { "workflowId", n => { WorkflowId = n.GetStringValue(); } },
             };
@@ -115,7 +115,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("identity", Identity);
             writer.WriteStringValue("namespace", Namespace);
             writer.WriteStringValue("resourceId", ResourceId);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>("result", Result);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedByIdRequest_result>("result", Result);
             writer.WriteStringValue("runId", RunId);
             writer.WriteStringValue("workflowId", WorkflowId);
             writer.WriteAdditionalData(AdditionalData);

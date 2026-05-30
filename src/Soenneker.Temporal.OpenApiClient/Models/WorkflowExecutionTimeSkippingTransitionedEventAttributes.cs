@@ -15,7 +15,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>when true, time skipping was disabled automatically due to a bound being reached. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;after&quot; is used to indicate temporal ordering. --)</summary>
+        /// <summary>&quot;when true, time skipping was disabled automatically due to a bound being reached. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: \&quot;after\&quot; is used to indicate temporal ordering. --)&quot;</summary>
         public bool? DisabledAfterBound { get; set; }
         /// <summary>The virtual time after time skipping was applied.</summary>
         public DateTimeOffset? TargetTime { get; set; }

@@ -18,10 +18,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Execution info of the workflow which scheduled this activity</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution? Execution { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PauseActivityRequest_execution? Execution { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution Execution { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PauseActivityRequest_execution Execution { get; set; }
 #endif
         /// <summary>Only the activity with this ID will be paused.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -63,7 +63,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string RequestId { get; set; }
 #endif
-        /// <summary>Pause all running activities of this type. Note: Experimental - the behavior of pause by activity type might change in a future release.</summary>
+        /// <summary>&quot;Pause all running activities of this type. Note: Experimental - the behavior of pause by activity type might change in a future release.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }
@@ -96,7 +96,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "execution", n => { Execution = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution.CreateFromDiscriminatorValue); } },
+                { "execution", n => { Execution = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PauseActivityRequest_execution>(global::Soenneker.Temporal.OpenApiClient.Models.PauseActivityRequest_execution.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
                 { "namespace", n => { Namespace = n.GetStringValue(); } },
@@ -112,7 +112,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution>("execution", Execution);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PauseActivityRequest_execution>("execution", Execution);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("identity", Identity);
             writer.WriteStringValue("namespace", Namespace);

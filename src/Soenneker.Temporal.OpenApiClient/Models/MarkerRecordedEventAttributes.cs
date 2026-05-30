@@ -25,10 +25,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Some uses of markers, like a local activity, could &quot;fail&quot;. If they did that is recorded here.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Failure? Failure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.MarkerRecordedEventAttributes_failure? Failure { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Failure Failure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.MarkerRecordedEventAttributes_failure Failure { get; set; }
 #endif
         /// <summary>Contains metadata that can be attached to a variety of requests, like starting a workflow, and can be propagated between, for example, workflows and activities.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -38,7 +38,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public global::Soenneker.Temporal.OpenApiClient.Models.Header Header { get; set; }
 #endif
-        /// <summary>Workers use this to identify the &quot;types&quot; of various markers. Ex: Local activity, side effect.</summary>
+        /// <summary>&quot;Workers use this to identify the \&quot;types\&quot; of various markers. Ex: Local activity, side effect.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MarkerName { get; set; }
@@ -80,7 +80,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "details", n => { Details = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.MarkerRecordedEventAttributes_details>(global::Soenneker.Temporal.OpenApiClient.Models.MarkerRecordedEventAttributes_details.CreateFromDiscriminatorValue); } },
-                { "failure", n => { Failure = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Failure>(global::Soenneker.Temporal.OpenApiClient.Models.Failure.CreateFromDiscriminatorValue); } },
+                { "failure", n => { Failure = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.MarkerRecordedEventAttributes_failure>(global::Soenneker.Temporal.OpenApiClient.Models.MarkerRecordedEventAttributes_failure.CreateFromDiscriminatorValue); } },
                 { "header", n => { Header = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Header>(global::Soenneker.Temporal.OpenApiClient.Models.Header.CreateFromDiscriminatorValue); } },
                 { "markerName", n => { MarkerName = n.GetStringValue(); } },
                 { "workflowTaskCompletedEventId", n => { WorkflowTaskCompletedEventId = n.GetStringValue(); } },
@@ -94,7 +94,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.MarkerRecordedEventAttributes_details>("details", Details);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Failure>("failure", Failure);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.MarkerRecordedEventAttributes_failure>("failure", Failure);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Header>("header", Header);
             writer.WriteStringValue("markerName", MarkerName);
             writer.WriteStringValue("workflowTaskCompletedEventId", WorkflowTaskCompletedEventId);

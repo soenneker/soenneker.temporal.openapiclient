@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
-    /// <summary>Default: WORKFLOW_ID_REUSE_POLICY_ALLOW_DUPLICATE.</summary>
+    /// <summary>&quot;Default: WORKFLOW_ID_REUSE_POLICY_ALLOW_DUPLICATE.&quot;</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum StartChildWorkflowExecutionInitiatedEventAttributes_workflowIdReusePolicy
     {

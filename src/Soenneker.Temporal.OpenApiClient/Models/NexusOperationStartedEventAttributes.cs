@@ -15,7 +15,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The operation ID returned by the Nexus handler in the response to the StartOperation request. This ID is used when canceling the operation. Deprecated: Renamed to operation_token.</summary>
+        /// <summary>&quot;The operation ID returned by the Nexus handler in the response to the StartOperation request. This ID is used when canceling the operation. Deprecated: Renamed to operation_token.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OperationId { get; set; }

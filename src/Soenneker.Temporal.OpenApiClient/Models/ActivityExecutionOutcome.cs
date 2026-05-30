@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// The outcome of a completed activity execution: either a successful result or a failure.
+    /// &quot;The outcome of a completed activity execution: either a successful result or a failure.&quot;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ActivityExecutionOutcome : IAdditionalDataHolder, IParsable
@@ -18,18 +18,18 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The failure if the activity completed unsuccessfully.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Failure? Failure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityExecutionOutcome_failure? Failure { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Failure Failure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityExecutionOutcome_failure Failure { get; set; }
 #endif
         /// <summary>The result if the activity completed successfully.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Payloads? Result { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityExecutionOutcome_result? Result { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Payloads Result { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityExecutionOutcome_result Result { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.ActivityExecutionOutcome"/> and sets the default values.
@@ -56,8 +56,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "failure", n => { Failure = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Failure>(global::Soenneker.Temporal.OpenApiClient.Models.Failure.CreateFromDiscriminatorValue); } },
-                { "result", n => { Result = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>(global::Soenneker.Temporal.OpenApiClient.Models.Payloads.CreateFromDiscriminatorValue); } },
+                { "failure", n => { Failure = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityExecutionOutcome_failure>(global::Soenneker.Temporal.OpenApiClient.Models.ActivityExecutionOutcome_failure.CreateFromDiscriminatorValue); } },
+                { "result", n => { Result = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityExecutionOutcome_result>(global::Soenneker.Temporal.OpenApiClient.Models.ActivityExecutionOutcome_result.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,8 +67,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Failure>("failure", Failure);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>("result", Result);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityExecutionOutcome_failure>("failure", Failure);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityExecutionOutcome_result>("result", Result);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

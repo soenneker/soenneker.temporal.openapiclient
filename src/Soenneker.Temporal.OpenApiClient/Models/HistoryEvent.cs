@@ -246,10 +246,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Server-computed authenticated caller identity associated with this event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Principal? Principal { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.HistoryEvent_principal? Principal { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Principal Principal { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.HistoryEvent_principal Principal { get; set; }
 #endif
         /// <summary>The requestCancelExternalWorkflowExecutionFailedEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -342,10 +342,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Metadata on the event. This is often carried over from commands and client calls. Most events won&apos;t have this information, and how this information is used is dependent upon the interface that reads it. Current well-known uses:  * workflow_execution_started_event_attributes - summary and details from start workflow.  * timer_started_event_attributes - summary represents an identifier for the timer for use by    user interfaces.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.UserMetadata? UserMetadata { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.HistoryEvent_userMetadata? UserMetadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.UserMetadata UserMetadata { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.HistoryEvent_userMetadata UserMetadata { get; set; }
 #endif
         /// <summary>Failover version of the event, used by the server for multi-cluster replication and history versioning. SDKs generally ignore this field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -604,7 +604,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "nexusOperationScheduledEventAttributes", n => { NexusOperationScheduledEventAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationScheduledEventAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationScheduledEventAttributes.CreateFromDiscriminatorValue); } },
                 { "nexusOperationStartedEventAttributes", n => { NexusOperationStartedEventAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationStartedEventAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationStartedEventAttributes.CreateFromDiscriminatorValue); } },
                 { "nexusOperationTimedOutEventAttributes", n => { NexusOperationTimedOutEventAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationTimedOutEventAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationTimedOutEventAttributes.CreateFromDiscriminatorValue); } },
-                { "principal", n => { Principal = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Principal>(global::Soenneker.Temporal.OpenApiClient.Models.Principal.CreateFromDiscriminatorValue); } },
+                { "principal", n => { Principal = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.HistoryEvent_principal>(global::Soenneker.Temporal.OpenApiClient.Models.HistoryEvent_principal.CreateFromDiscriminatorValue); } },
                 { "requestCancelExternalWorkflowExecutionFailedEventAttributes", n => { RequestCancelExternalWorkflowExecutionFailedEventAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelExternalWorkflowExecutionFailedEventAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelExternalWorkflowExecutionFailedEventAttributes.CreateFromDiscriminatorValue); } },
                 { "requestCancelExternalWorkflowExecutionInitiatedEventAttributes", n => { RequestCancelExternalWorkflowExecutionInitiatedEventAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelExternalWorkflowExecutionInitiatedEventAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelExternalWorkflowExecutionInitiatedEventAttributes.CreateFromDiscriminatorValue); } },
                 { "signalExternalWorkflowExecutionFailedEventAttributes", n => { SignalExternalWorkflowExecutionFailedEventAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalExternalWorkflowExecutionFailedEventAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.SignalExternalWorkflowExecutionFailedEventAttributes.CreateFromDiscriminatorValue); } },
@@ -616,7 +616,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "timerFiredEventAttributes", n => { TimerFiredEventAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TimerFiredEventAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.TimerFiredEventAttributes.CreateFromDiscriminatorValue); } },
                 { "timerStartedEventAttributes", n => { TimerStartedEventAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TimerStartedEventAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.TimerStartedEventAttributes.CreateFromDiscriminatorValue); } },
                 { "upsertWorkflowSearchAttributesEventAttributes", n => { UpsertWorkflowSearchAttributesEventAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpsertWorkflowSearchAttributesEventAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.UpsertWorkflowSearchAttributesEventAttributes.CreateFromDiscriminatorValue); } },
-                { "userMetadata", n => { UserMetadata = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UserMetadata>(global::Soenneker.Temporal.OpenApiClient.Models.UserMetadata.CreateFromDiscriminatorValue); } },
+                { "userMetadata", n => { UserMetadata = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.HistoryEvent_userMetadata>(global::Soenneker.Temporal.OpenApiClient.Models.HistoryEvent_userMetadata.CreateFromDiscriminatorValue); } },
                 { "version", n => { Version = n.GetStringValue(); } },
                 { "workerMayIgnore", n => { WorkerMayIgnore = n.GetBoolValue(); } },
                 { "workflowExecutionCancelRequestedEventAttributes", n => { WorkflowExecutionCancelRequestedEventAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionCancelRequestedEventAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionCancelRequestedEventAttributes.CreateFromDiscriminatorValue); } },
@@ -682,7 +682,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationScheduledEventAttributes>("nexusOperationScheduledEventAttributes", NexusOperationScheduledEventAttributes);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationStartedEventAttributes>("nexusOperationStartedEventAttributes", NexusOperationStartedEventAttributes);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationTimedOutEventAttributes>("nexusOperationTimedOutEventAttributes", NexusOperationTimedOutEventAttributes);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Principal>("principal", Principal);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.HistoryEvent_principal>("principal", Principal);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelExternalWorkflowExecutionFailedEventAttributes>("requestCancelExternalWorkflowExecutionFailedEventAttributes", RequestCancelExternalWorkflowExecutionFailedEventAttributes);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelExternalWorkflowExecutionInitiatedEventAttributes>("requestCancelExternalWorkflowExecutionInitiatedEventAttributes", RequestCancelExternalWorkflowExecutionInitiatedEventAttributes);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalExternalWorkflowExecutionFailedEventAttributes>("signalExternalWorkflowExecutionFailedEventAttributes", SignalExternalWorkflowExecutionFailedEventAttributes);
@@ -694,7 +694,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TimerFiredEventAttributes>("timerFiredEventAttributes", TimerFiredEventAttributes);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TimerStartedEventAttributes>("timerStartedEventAttributes", TimerStartedEventAttributes);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpsertWorkflowSearchAttributesEventAttributes>("upsertWorkflowSearchAttributesEventAttributes", UpsertWorkflowSearchAttributesEventAttributes);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UserMetadata>("userMetadata", UserMetadata);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.HistoryEvent_userMetadata>("userMetadata", UserMetadata);
             writer.WriteStringValue("version", Version);
             writer.WriteBoolValue("workerMayIgnore", WorkerMayIgnore);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionCanceledEventAttributes>("workflowExecutionCanceledEventAttributes", WorkflowExecutionCanceledEventAttributes);

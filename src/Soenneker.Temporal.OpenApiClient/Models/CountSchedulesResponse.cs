@@ -25,10 +25,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Contains the groups if the request is grouping by a field. The list might not be complete, and the counts of each group is approximate.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.CountSchedulesResponse_AggregationGroup>? Groups { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.CountSchedulesResponseAggregationGroup>? Groups { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.CountSchedulesResponse_AggregationGroup> Groups { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.CountSchedulesResponseAggregationGroup> Groups { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.CountSchedulesResponse"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "count", n => { Count = n.GetStringValue(); } },
-                { "groups", n => { Groups = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.CountSchedulesResponse_AggregationGroup>(global::Soenneker.Temporal.OpenApiClient.Models.CountSchedulesResponse_AggregationGroup.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "groups", n => { Groups = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.CountSchedulesResponseAggregationGroup>(global::Soenneker.Temporal.OpenApiClient.Models.CountSchedulesResponseAggregationGroup.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("count", Count);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.CountSchedulesResponse_AggregationGroup>("groups", Groups);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.CountSchedulesResponseAggregationGroup>("groups", Groups);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

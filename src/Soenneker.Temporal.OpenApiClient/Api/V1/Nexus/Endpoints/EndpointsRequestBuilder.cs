@@ -150,7 +150,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Nexus.Endpoints
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class EndpointsRequestBuilderGetQueryParameters 
         {
-            /// <summary>Name of the incoming endpoint to filter on - optional. Specifying this will result in zero or one results. (-- api-linter: core::203::field-behavior-required=disabled     aip.dev/not-precedent: Not following linter rules. --)</summary>
+            /// <summary>&quot;Name of the incoming endpoint to filter on - optional. Specifying this will result in zero or one results. (-- api-linter: core::203::field-behavior-required=disabled     aip.dev/not-precedent: Not following linter rules. --)&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("name")]
@@ -160,7 +160,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Nexus.Endpoints
             [QueryParameter("name")]
             public string Name { get; set; }
 #endif
-            /// <summary>To get the next page, pass in `ListNexusEndpointsResponse.next_page_token` from the previous page&apos;s response, the token will be empty if there&apos;s no other page. Note: the last page may be empty if the total number of endpoints registered is a multiple of the page size.</summary>
+            /// <summary>&quot;To get the next page, pass in `ListNexusEndpointsResponse.next_page_token` from the previous page&apos;s response, the token will be empty if there&apos;s no other page. Note: the last page may be empty if the total number of endpoints registered is a multiple of the page size.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("nextPageToken")]

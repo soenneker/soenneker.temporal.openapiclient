@@ -17,10 +17,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>If set, each individual fairness key will be limited to this rate, scaled by the weight of the fairness key.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.RateLimitConfig? FairnessKeysRateLimitDefault { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueConfig_fairnessKeysRateLimitDefault? FairnessKeysRateLimitDefault { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.RateLimitConfig FairnessKeysRateLimitDefault { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueConfig_fairnessKeysRateLimitDefault FairnessKeysRateLimitDefault { get; set; }
 #endif
         /// <summary>If set, overrides the fairness weights for the corresponding fairness keys.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -33,10 +33,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Unless modified, this is the system-defined rate limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.RateLimitConfig? QueueRateLimit { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueConfig_queueRateLimit? QueueRateLimit { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.RateLimitConfig QueueRateLimit { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueConfig_queueRateLimit QueueRateLimit { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueConfig"/> and sets the default values.
@@ -63,9 +63,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "fairnessKeysRateLimitDefault", n => { FairnessKeysRateLimitDefault = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RateLimitConfig>(global::Soenneker.Temporal.OpenApiClient.Models.RateLimitConfig.CreateFromDiscriminatorValue); } },
+                { "fairnessKeysRateLimitDefault", n => { FairnessKeysRateLimitDefault = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueConfig_fairnessKeysRateLimitDefault>(global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueConfig_fairnessKeysRateLimitDefault.CreateFromDiscriminatorValue); } },
                 { "fairnessWeightOverrides", n => { FairnessWeightOverrides = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueConfig_fairnessWeightOverrides>(global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueConfig_fairnessWeightOverrides.CreateFromDiscriminatorValue); } },
-                { "queueRateLimit", n => { QueueRateLimit = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RateLimitConfig>(global::Soenneker.Temporal.OpenApiClient.Models.RateLimitConfig.CreateFromDiscriminatorValue); } },
+                { "queueRateLimit", n => { QueueRateLimit = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueConfig_queueRateLimit>(global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueConfig_queueRateLimit.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -75,9 +75,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RateLimitConfig>("fairnessKeysRateLimitDefault", FairnessKeysRateLimitDefault);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueConfig_fairnessKeysRateLimitDefault>("fairnessKeysRateLimitDefault", FairnessKeysRateLimitDefault);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueConfig_fairnessWeightOverrides>("fairnessWeightOverrides", FairnessWeightOverrides);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RateLimitConfig>("queueRateLimit", QueueRateLimit);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueConfig_queueRateLimit>("queueRateLimit", QueueRateLimit);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

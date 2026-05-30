@@ -16,7 +16,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Starting at 1, how many attempts there have been to complete this task</summary>
         public int? Attempt { get; set; }
-        /// <summary>How long the worker has to process this task once receiving it before it times out (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;to&quot; is used to indicate interval. --)</summary>
+        /// <summary>&quot;How long the worker has to process this task once receiving it before it times out (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: \&quot;to\&quot; is used to indicate interval. --)&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? StartToCloseTimeout { get; set; }
@@ -27,10 +27,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The task queue this workflow task was enqueued in, which could be a normal or sticky queue</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.TaskQueue? TaskQueue { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskScheduledEventAttributes_taskQueue? TaskQueue { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.TaskQueue TaskQueue { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskScheduledEventAttributes_taskQueue TaskQueue { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskScheduledEventAttributes"/> and sets the default values.
@@ -59,7 +59,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             {
                 { "attempt", n => { Attempt = n.GetIntValue(); } },
                 { "startToCloseTimeout", n => { StartToCloseTimeout = n.GetStringValue(); } },
-                { "taskQueue", n => { TaskQueue = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TaskQueue>(global::Soenneker.Temporal.OpenApiClient.Models.TaskQueue.CreateFromDiscriminatorValue); } },
+                { "taskQueue", n => { TaskQueue = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskScheduledEventAttributes_taskQueue>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskScheduledEventAttributes_taskQueue.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -71,7 +71,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("attempt", Attempt);
             writer.WriteStringValue("startToCloseTimeout", StartToCloseTimeout);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TaskQueue>("taskQueue", TaskQueue);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskScheduledEventAttributes_taskQueue>("taskQueue", TaskQueue);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -36,18 +36,18 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Cancel
         /// <summary>
         /// RequestCancelWorkflowExecution is called by workers when they want to request cancellation of a workflow execution. This results in a new `WORKFLOW_EXECUTION_CANCEL_REQUESTED` event being written to the workflow history and a new workflow task created for the workflow. It returns success if the requested workflow is already closed. It fails with &apos;NotFound&apos; if the requested workflow doesn&apos;t exist.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelWorkflowExecutionResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Cancel.CancelPostResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Temporal.OpenApiClient.Models.Status">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelWorkflowExecutionResponse?> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelWorkflowExecutionRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Cancel.CancelPostResponse?> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelWorkflowExecutionRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelWorkflowExecutionResponse> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelWorkflowExecutionRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Cancel.CancelPostResponse> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelWorkflowExecutionRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -56,7 +56,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Cancel
             {
                 { "XXX", global::Soenneker.Temporal.OpenApiClient.Models.Status.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelWorkflowExecutionResponse>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelWorkflowExecutionResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Cancel.CancelPostResponse>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Cancel.CancelPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// RequestCancelWorkflowExecution is called by workers when they want to request cancellation of a workflow execution. This results in a new `WORKFLOW_EXECUTION_CANCEL_REQUESTED` event being written to the workflow history and a new workflow task created for the workflow. It returns success if the requested workflow is already closed. It fails with &apos;NotFound&apos; if the requested workflow doesn&apos;t exist.

@@ -36,18 +36,18 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.ActivityComplete
         /// <summary>
         /// RespondActivityTaskCompleted is called by workers when they successfully complete an activity task. For workflow activities, this results in a new `ACTIVITY_TASK_COMPLETED` event being written to the workflow history and a new workflow task created for the workflow. Fails with `NotFound` if the task token is no longer valid due to activity timeout, already being completed, or never having existed.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.ActivityComplete.ActivityCompletePostResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Temporal.OpenApiClient.Models.Status">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedResponse?> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.ActivityComplete.ActivityCompletePostResponse?> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedResponse> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.ActivityComplete.ActivityCompletePostResponse> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -56,7 +56,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.ActivityComplete
             {
                 { "XXX", global::Soenneker.Temporal.OpenApiClient.Models.Status.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedResponse>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.ActivityComplete.ActivityCompletePostResponse>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.ActivityComplete.ActivityCompletePostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// RespondActivityTaskCompleted is called by workers when they successfully complete an activity task. For workflow activities, this results in a new `ACTIVITY_TASK_COMPLETED` event being written to the workflow history and a new workflow task created for the workflow. Fails with `NotFound` if the task token is no longer valid due to activity timeout, already being completed, or never having existed.

@@ -25,10 +25,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The list of worker deployments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponse_WorkerDeploymentSummary>? WorkerDeployments { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummary>? WorkerDeployments { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponse_WorkerDeploymentSummary> WorkerDeployments { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummary> WorkerDeployments { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponse"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "nextPageToken", n => { NextPageToken = n.GetStringValue(); } },
-                { "workerDeployments", n => { WorkerDeployments = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponse_WorkerDeploymentSummary>(global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponse_WorkerDeploymentSummary.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "workerDeployments", n => { WorkerDeployments = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummary>(global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummary.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("nextPageToken", NextPageToken);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponse_WorkerDeploymentSummary>("workerDeployments", WorkerDeployments);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummary>("workerDeployments", WorkerDeployments);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

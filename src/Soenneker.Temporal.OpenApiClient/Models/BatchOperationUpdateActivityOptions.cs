@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// BatchOperationUpdateActivityOptions sends an update-activity-options requests in a batch. NOTE: keep in sync with temporal.api.workflowservice.v1.UpdateActivityRequest
+    /// &quot;BatchOperationUpdateActivityOptions sends an update-activity-options requests in a batch. NOTE: keep in sync with temporal.api.workflowservice.v1.UpdateActivityRequest&quot;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BatchOperationUpdateActivityOptions : IAdditionalDataHolder, IParsable
@@ -16,10 +16,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Update Activity options. Partial updates are accepted and controlled by update_mask.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityOptions? ActivityOptions { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationUpdateActivityOptions_activityOptions? ActivityOptions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityOptions ActivityOptions { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationUpdateActivityOptions_activityOptions ActivityOptions { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -76,7 +76,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "activityOptions", n => { ActivityOptions = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityOptions>(global::Soenneker.Temporal.OpenApiClient.Models.ActivityOptions.CreateFromDiscriminatorValue); } },
+                { "activityOptions", n => { ActivityOptions = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationUpdateActivityOptions_activityOptions>(global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationUpdateActivityOptions_activityOptions.CreateFromDiscriminatorValue); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
                 { "matchAll", n => { MatchAll = n.GetBoolValue(); } },
                 { "restoreOriginal", n => { RestoreOriginal = n.GetBoolValue(); } },
@@ -91,7 +91,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityOptions>("activityOptions", ActivityOptions);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationUpdateActivityOptions_activityOptions>("activityOptions", ActivityOptions);
             writer.WriteStringValue("identity", Identity);
             writer.WriteBoolValue("matchAll", MatchAll);
             writer.WriteBoolValue("restoreOriginal", RestoreOriginal);

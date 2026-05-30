@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// BatchOperationResetActivities sends activity reset requests in a batch. NOTE: keep in sync with temporal.api.workflowservice.v1.ResetActivityRequest
+    /// &quot;BatchOperationResetActivities sends activity reset requests in a batch. NOTE: keep in sync with temporal.api.workflowservice.v1.ResetActivityRequest&quot;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BatchOperationResetActivities : IAdditionalDataHolder, IParsable

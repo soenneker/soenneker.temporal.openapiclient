@@ -49,10 +49,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Defines which workers should receive this command. only single worker is supported at this time.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerSelector? Selector { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.FetchWorkerConfigRequest_selector? Selector { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerSelector Selector { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.FetchWorkerConfigRequest_selector Selector { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.FetchWorkerConfigRequest"/> and sets the default values.
@@ -83,7 +83,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "namespace", n => { Namespace = n.GetStringValue(); } },
                 { "reason", n => { Reason = n.GetStringValue(); } },
                 { "resourceId", n => { ResourceId = n.GetStringValue(); } },
-                { "selector", n => { Selector = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerSelector>(global::Soenneker.Temporal.OpenApiClient.Models.WorkerSelector.CreateFromDiscriminatorValue); } },
+                { "selector", n => { Selector = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.FetchWorkerConfigRequest_selector>(global::Soenneker.Temporal.OpenApiClient.Models.FetchWorkerConfigRequest_selector.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -97,7 +97,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("namespace", Namespace);
             writer.WriteStringValue("reason", Reason);
             writer.WriteStringValue("resourceId", ResourceId);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerSelector>("selector", Selector);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.FetchWorkerConfigRequest_selector>("selector", Selector);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

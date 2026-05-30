@@ -46,10 +46,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The last attempt&apos;s failure, if any.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Failure? LastAttemptFailure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PendingNexusOperationInfo_lastAttemptFailure? LastAttemptFailure { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Failure LastAttemptFailure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PendingNexusOperationInfo_lastAttemptFailure LastAttemptFailure { get; set; }
 #endif
         /// <summary>The time when the next attempt is scheduled.</summary>
         public DateTimeOffset? NextAttemptScheduleTime { get; set; }
@@ -87,7 +87,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #endif
         /// <summary>The time when the operation was scheduled.</summary>
         public DateTimeOffset? ScheduledTime { get; set; }
-        /// <summary>Schedule-to-close timeout for this operation. This is the only timeout settable by a workflow. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;to&quot; is used to indicate interval. --)</summary>
+        /// <summary>&quot;Schedule-to-close timeout for this operation. This is the only timeout settable by a workflow. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: \&quot;to\&quot; is used to indicate interval. --)&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ScheduleToCloseTimeout { get; set; }
@@ -95,7 +95,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string ScheduleToCloseTimeout { get; set; }
 #endif
-        /// <summary>Schedule-to-start timeout for this operation. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;to&quot; is used to indicate interval. --)</summary>
+        /// <summary>&quot;Schedule-to-start timeout for this operation. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: \&quot;to\&quot; is used to indicate interval. --)&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ScheduleToStartTimeout { get; set; }
@@ -111,7 +111,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string Service { get; set; }
 #endif
-        /// <summary>Start-to-close timeout for this operation. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;to&quot; is used to indicate interval. --)</summary>
+        /// <summary>&quot;Start-to-close timeout for this operation. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: \&quot;to\&quot; is used to indicate interval. --)&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? StartToCloseTimeout { get; set; }
@@ -151,7 +151,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "cancellationInfo", n => { CancellationInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCancellationInfo>(global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCancellationInfo.CreateFromDiscriminatorValue); } },
                 { "endpoint", n => { Endpoint = n.GetStringValue(); } },
                 { "lastAttemptCompleteTime", n => { LastAttemptCompleteTime = n.GetDateTimeOffsetValue(); } },
-                { "lastAttemptFailure", n => { LastAttemptFailure = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Failure>(global::Soenneker.Temporal.OpenApiClient.Models.Failure.CreateFromDiscriminatorValue); } },
+                { "lastAttemptFailure", n => { LastAttemptFailure = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingNexusOperationInfo_lastAttemptFailure>(global::Soenneker.Temporal.OpenApiClient.Models.PendingNexusOperationInfo_lastAttemptFailure.CreateFromDiscriminatorValue); } },
                 { "nextAttemptScheduleTime", n => { NextAttemptScheduleTime = n.GetDateTimeOffsetValue(); } },
                 { "operation", n => { Operation = n.GetStringValue(); } },
                 { "operationId", n => { OperationId = n.GetStringValue(); } },
@@ -177,7 +177,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCancellationInfo>("cancellationInfo", CancellationInfo);
             writer.WriteStringValue("endpoint", Endpoint);
             writer.WriteDateTimeOffsetValue("lastAttemptCompleteTime", LastAttemptCompleteTime);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Failure>("lastAttemptFailure", LastAttemptFailure);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingNexusOperationInfo_lastAttemptFailure>("lastAttemptFailure", LastAttemptFailure);
             writer.WriteDateTimeOffsetValue("nextAttemptScheduleTime", NextAttemptScheduleTime);
             writer.WriteStringValue("operation", Operation);
             writer.WriteStringValue("operationId", OperationId);

@@ -17,10 +17,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>If this activity had failed, was retried, and then timed out, that failure is stored as the `cause` in here.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Failure? Failure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskTimedOutEventAttributes_failure? Failure { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Failure Failure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskTimedOutEventAttributes_failure Failure { get; set; }
 #endif
         /// <summary>The retryState property</summary>
         public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskTimedOutEventAttributes_retryState? RetryState { get; set; }
@@ -65,7 +65,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "failure", n => { Failure = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Failure>(global::Soenneker.Temporal.OpenApiClient.Models.Failure.CreateFromDiscriminatorValue); } },
+                { "failure", n => { Failure = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskTimedOutEventAttributes_failure>(global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskTimedOutEventAttributes_failure.CreateFromDiscriminatorValue); } },
                 { "retryState", n => { RetryState = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskTimedOutEventAttributes_retryState>(); } },
                 { "scheduledEventId", n => { ScheduledEventId = n.GetStringValue(); } },
                 { "startedEventId", n => { StartedEventId = n.GetStringValue(); } },
@@ -78,7 +78,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Failure>("failure", Failure);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskTimedOutEventAttributes_failure>("failure", Failure);
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskTimedOutEventAttributes_retryState>("retryState", RetryState);
             writer.WriteStringValue("scheduledEventId", ScheduledEventId);
             writer.WriteStringValue("startedEventId", StartedEventId);

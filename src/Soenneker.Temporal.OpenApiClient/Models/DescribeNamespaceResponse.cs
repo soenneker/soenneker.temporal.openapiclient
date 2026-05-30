@@ -48,6 +48,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo NamespaceInfo { get; set; }
 #endif
+        /// <summary>The initial info that client should use for poller group assignment. This information is updated through poll response. Client is supposed to use the info received in the latest poll response.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.PollerGroupInfo>? PollerGroupInfos { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.PollerGroupInfo> PollerGroupInfos { get; set; }
+#endif
         /// <summary>The replicationConfig property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -86,6 +94,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "failoverVersion", n => { FailoverVersion = n.GetStringValue(); } },
                 { "isGlobalNamespace", n => { IsGlobalNamespace = n.GetBoolValue(); } },
                 { "namespaceInfo", n => { NamespaceInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo>(global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo.CreateFromDiscriminatorValue); } },
+                { "pollerGroupInfos", n => { PollerGroupInfos = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.PollerGroupInfo>(global::Soenneker.Temporal.OpenApiClient.Models.PollerGroupInfo.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "replicationConfig", n => { ReplicationConfig = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceReplicationConfig>(global::Soenneker.Temporal.OpenApiClient.Models.NamespaceReplicationConfig.CreateFromDiscriminatorValue); } },
             };
         }
@@ -101,6 +110,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("failoverVersion", FailoverVersion);
             writer.WriteBoolValue("isGlobalNamespace", IsGlobalNamespace);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo>("namespaceInfo", NamespaceInfo);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.PollerGroupInfo>("pollerGroupInfos", PollerGroupInfos);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceReplicationConfig>("replicationConfig", ReplicationConfig);
             writer.WriteAdditionalData(AdditionalData);
         }

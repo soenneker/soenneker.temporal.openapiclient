@@ -18,10 +18,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Cancellation details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Failure? Failure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCanceledEventAttributes_failure? Failure { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Failure Failure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCanceledEventAttributes_failure Failure { get; set; }
 #endif
         /// <summary>The request ID allocated at schedule time.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -64,7 +64,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "failure", n => { Failure = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Failure>(global::Soenneker.Temporal.OpenApiClient.Models.Failure.CreateFromDiscriminatorValue); } },
+                { "failure", n => { Failure = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCanceledEventAttributes_failure>(global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCanceledEventAttributes_failure.CreateFromDiscriminatorValue); } },
                 { "requestId", n => { RequestId = n.GetStringValue(); } },
                 { "scheduledEventId", n => { ScheduledEventId = n.GetStringValue(); } },
             };
@@ -76,7 +76,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Failure>("failure", Failure);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCanceledEventAttributes_failure>("failure", Failure);
             writer.WriteStringValue("requestId", RequestId);
             writer.WriteStringValue("scheduledEventId", ScheduledEventId);
             writer.WriteAdditionalData(AdditionalData);

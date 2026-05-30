@@ -38,10 +38,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The taskQueueInfos property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfo_TaskQueueInfo>? TaskQueueInfos { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfoTaskQueueInfo>? TaskQueueInfos { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfo_TaskQueueInfo> TaskQueueInfos { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfoTaskQueueInfo> TaskQueueInfos { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfo"/> and sets the default values.
@@ -72,7 +72,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "deployment", n => { Deployment = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Deployment>(global::Soenneker.Temporal.OpenApiClient.Models.Deployment.CreateFromDiscriminatorValue); } },
                 { "isCurrent", n => { IsCurrent = n.GetBoolValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfo_metadata>(global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfo_metadata.CreateFromDiscriminatorValue); } },
-                { "taskQueueInfos", n => { TaskQueueInfos = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfo_TaskQueueInfo>(global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfo_TaskQueueInfo.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "taskQueueInfos", n => { TaskQueueInfos = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfoTaskQueueInfo>(global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfoTaskQueueInfo.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -86,7 +86,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Deployment>("deployment", Deployment);
             writer.WriteBoolValue("isCurrent", IsCurrent);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfo_metadata>("metadata", Metadata);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfo_TaskQueueInfo>("taskQueueInfos", TaskQueueInfos);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfoTaskQueueInfo>("taskQueueInfos", TaskQueueInfos);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

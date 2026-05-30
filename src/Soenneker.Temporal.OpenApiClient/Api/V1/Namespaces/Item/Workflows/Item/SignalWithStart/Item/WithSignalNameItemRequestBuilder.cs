@@ -34,7 +34,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item
         {
         }
         /// <summary>
-        /// SignalWithStartWorkflowExecution is used to ensure a signal is sent to a workflow, even if it isn&apos;t yet started. If the workflow is running, a `WORKFLOW_EXECUTION_SIGNALED` event is recorded in the history and a workflow task is generated. If the workflow is not running or not found, then the workflow is created with `WORKFLOW_EXECUTION_STARTED` and `WORKFLOW_EXECUTION_SIGNALED` events in its history, and a workflow task is generated. (-- api-linter: core::0136::prepositions=disabled     aip.dev/not-precedent: &quot;With&quot; is used to indicate combined operation. --)
+        /// &quot;SignalWithStartWorkflowExecution is used to ensure a signal is sent to a workflow, even if it isn&apos;t yet started. If the workflow is running, a `WORKFLOW_EXECUTION_SIGNALED` event is recorded in the history and a workflow task is generated. If the workflow is not running or not found, then the workflow is created with `WORKFLOW_EXECUTION_STARTED` and `WORKFLOW_EXECUTION_SIGNALED` events in its history, and a workflow task is generated. (-- api-linter: core::0136::prepositions=disabled     aip.dev/not-precedent: \&quot;With\&quot; is used to indicate combined operation. --)&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionResponse"/></returns>
         /// <param name="body">The request body</param>
@@ -59,7 +59,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionResponse>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// SignalWithStartWorkflowExecution is used to ensure a signal is sent to a workflow, even if it isn&apos;t yet started. If the workflow is running, a `WORKFLOW_EXECUTION_SIGNALED` event is recorded in the history and a workflow task is generated. If the workflow is not running or not found, then the workflow is created with `WORKFLOW_EXECUTION_STARTED` and `WORKFLOW_EXECUTION_SIGNALED` events in its history, and a workflow task is generated. (-- api-linter: core::0136::prepositions=disabled     aip.dev/not-precedent: &quot;With&quot; is used to indicate combined operation. --)
+        /// &quot;SignalWithStartWorkflowExecution is used to ensure a signal is sent to a workflow, even if it isn&apos;t yet started. If the workflow is running, a `WORKFLOW_EXECUTION_SIGNALED` event is recorded in the history and a workflow task is generated. If the workflow is not running or not found, then the workflow is created with `WORKFLOW_EXECUTION_STARTED` and `WORKFLOW_EXECUTION_SIGNALED` events in its history, and a workflow task is generated. (-- api-linter: core::0136::prepositions=disabled     aip.dev/not-precedent: \&quot;With\&quot; is used to indicate combined operation. --)&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

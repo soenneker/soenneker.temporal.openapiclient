@@ -15,10 +15,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The activityPause property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRuleAction_ActionActivityPause? ActivityPause { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRuleAction_activityPause? ActivityPause { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRuleAction_ActionActivityPause ActivityPause { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRuleAction_activityPause ActivityPause { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -47,7 +47,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "activityPause", n => { ActivityPause = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRuleAction_ActionActivityPause>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRuleAction_ActionActivityPause.CreateFromDiscriminatorValue); } },
+                { "activityPause", n => { ActivityPause = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRuleAction_activityPause>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRuleAction_activityPause.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRuleAction_ActionActivityPause>("activityPause", ActivityPause);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRuleAction_activityPause>("activityPause", ActivityPause);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

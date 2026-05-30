@@ -34,7 +34,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.TaskQueues.Item.Updat
         {
         }
         /// <summary>
-        /// Updates task queue configuration. For the overall queue rate limit: the rate limit set by this api overrides the worker-set rate limit, which uncouples the rate limit from the worker lifecycle. If the overall queue rate limit is unset, the worker-set rate limit takes effect.
+        /// &quot;Updates task queue configuration. For the overall queue rate limit: the rate limit set by this api overrides the worker-set rate limit, which uncouples the rate limit from the worker lifecycle. If the overall queue rate limit is unset, the worker-set rate limit takes effect.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigResponse"/></returns>
         /// <param name="body">The request body</param>
@@ -59,7 +59,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.TaskQueues.Item.Updat
             return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigResponse>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Updates task queue configuration. For the overall queue rate limit: the rate limit set by this api overrides the worker-set rate limit, which uncouples the rate limit from the worker lifecycle. If the overall queue rate limit is unset, the worker-set rate limit takes effect.
+        /// &quot;Updates task queue configuration. For the overall queue rate limit: the rate limit set by this api overrides the worker-set rate limit, which uncouples the rate limit from the worker lifecycle. If the overall queue rate limit is unset, the worker-set rate limit takes effect.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

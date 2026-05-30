@@ -34,7 +34,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Ite
         {
         }
         /// <summary>
-        /// Fetches the Build ID assignment and redirect rules for a Task Queue. WARNING: Worker Versioning is not yet stable and the API and behavior may change incompatibly.
+        /// Fetches the Build ID assignment and redirect rules for a Task Queue. Will be removed in server version v1.32.0.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Models.GetWorkerVersioningRulesResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -57,7 +57,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Ite
             return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Models.GetWorkerVersioningRulesResponse>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Models.GetWorkerVersioningRulesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Fetches the Build ID assignment and redirect rules for a Task Queue. WARNING: Worker Versioning is not yet stable and the API and behavior may change incompatibly.
+        /// Fetches the Build ID assignment and redirect rules for a Task Queue. Will be removed in server version v1.32.0.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

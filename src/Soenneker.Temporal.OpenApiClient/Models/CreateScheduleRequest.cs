@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// (-- api-linter: core::0203::optional=disabled     aip.dev/not-precedent: field_behavior annotation not available in our gogo fork --)
+    /// &quot;(-- api-linter: core::0203::optional=disabled     aip.dev/not-precedent: field_behavior annotation not available in our gogo fork --)&quot;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CreateScheduleRequest : IAdditionalDataHolder, IParsable
@@ -26,18 +26,18 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Optional initial patch (e.g. to run the action once immediately).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.SchedulePatch? InitialPatch { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequest_initialPatch? InitialPatch { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.SchedulePatch InitialPatch { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequest_initialPatch InitialPatch { get; set; }
 #endif
         /// <summary>Memo and search attributes to attach to the schedule itself.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Memo? Memo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequest_memo? Memo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Memo Memo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequest_memo Memo { get; set; }
 #endif
         /// <summary>The namespace the schedule should be created in.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -58,10 +58,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The schedule spec, policies, action, and initial state.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Schedule? Schedule { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequest_schedule? Schedule { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Schedule Schedule { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequest_schedule Schedule { get; set; }
 #endif
         /// <summary>The id of the new schedule.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -105,11 +105,11 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "identity", n => { Identity = n.GetStringValue(); } },
-                { "initialPatch", n => { InitialPatch = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SchedulePatch>(global::Soenneker.Temporal.OpenApiClient.Models.SchedulePatch.CreateFromDiscriminatorValue); } },
-                { "memo", n => { Memo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Memo>(global::Soenneker.Temporal.OpenApiClient.Models.Memo.CreateFromDiscriminatorValue); } },
+                { "initialPatch", n => { InitialPatch = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequest_initialPatch>(global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequest_initialPatch.CreateFromDiscriminatorValue); } },
+                { "memo", n => { Memo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequest_memo>(global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequest_memo.CreateFromDiscriminatorValue); } },
                 { "namespace", n => { Namespace = n.GetStringValue(); } },
                 { "requestId", n => { RequestId = n.GetStringValue(); } },
-                { "schedule", n => { Schedule = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Schedule>(global::Soenneker.Temporal.OpenApiClient.Models.Schedule.CreateFromDiscriminatorValue); } },
+                { "schedule", n => { Schedule = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequest_schedule>(global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequest_schedule.CreateFromDiscriminatorValue); } },
                 { "scheduleId", n => { ScheduleId = n.GetStringValue(); } },
                 { "searchAttributes", n => { SearchAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes.CreateFromDiscriminatorValue); } },
             };
@@ -122,11 +122,11 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("identity", Identity);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SchedulePatch>("initialPatch", InitialPatch);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Memo>("memo", Memo);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequest_initialPatch>("initialPatch", InitialPatch);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequest_memo>("memo", Memo);
             writer.WriteStringValue("namespace", Namespace);
             writer.WriteStringValue("requestId", RequestId);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Schedule>("schedule", Schedule);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequest_schedule>("schedule", Schedule);
             writer.WriteStringValue("scheduleId", ScheduleId);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes>("searchAttributes", SearchAttributes);
             writer.WriteAdditionalData(AdditionalData);

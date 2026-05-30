@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// (-- api-linter: core::0134=disabled     aip.dev/not-precedent: Update RPCs don&apos;t follow Google API format. --)
+    /// &quot;(-- api-linter: core::0134=disabled     aip.dev/not-precedent: Update RPCs don&apos;t follow Google API format. --)&quot;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpdateWorkflowExecutionRequest : IAdditionalDataHolder, IParsable
@@ -34,26 +34,26 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The request information that will be delivered all the way down to the Workflow Execution.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Request? Request { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionRequest_request? Request { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Request Request { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionRequest_request Request { get; set; }
 #endif
-        /// <summary>Specifies client&apos;s intent to wait for Update results. NOTE: This field works together with API call timeout which is limited by server timeout (maximum wait time). If server timeout is expired before user specified timeout, API call returns even if specified stage is not reached. Actual reached stage will be included in the response.</summary>
+        /// <summary>&quot;Specifies client&apos;s intent to wait for Update results. NOTE: This field works together with API call timeout which is limited by server timeout (maximum wait time). If server timeout is expired before user specified timeout, API call returns even if specified stage is not reached. Actual reached stage will be included in the response.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WaitPolicy? WaitPolicy { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionRequest_waitPolicy? WaitPolicy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WaitPolicy WaitPolicy { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionRequest_waitPolicy WaitPolicy { get; set; }
 #endif
-        /// <summary>The target Workflow Id and (optionally) a specific Run Id thereof. (-- api-linter: core::0203::optional=disabled     aip.dev/not-precedent: false positive triggered by the word &quot;optional&quot; --)</summary>
+        /// <summary>&quot;The target Workflow Id and (optionally) a specific Run Id thereof. (-- api-linter: core::0203::optional=disabled     aip.dev/not-precedent: false positive triggered by the word \&quot;optional\&quot; --)&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution? WorkflowExecution { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionRequest_workflowExecution? WorkflowExecution { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution WorkflowExecution { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionRequest_workflowExecution WorkflowExecution { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionRequest"/> and sets the default values.
@@ -82,9 +82,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             {
                 { "firstExecutionRunId", n => { FirstExecutionRunId = n.GetStringValue(); } },
                 { "namespace", n => { Namespace = n.GetStringValue(); } },
-                { "request", n => { Request = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Request>(global::Soenneker.Temporal.OpenApiClient.Models.Request.CreateFromDiscriminatorValue); } },
-                { "waitPolicy", n => { WaitPolicy = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WaitPolicy>(global::Soenneker.Temporal.OpenApiClient.Models.WaitPolicy.CreateFromDiscriminatorValue); } },
-                { "workflowExecution", n => { WorkflowExecution = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution.CreateFromDiscriminatorValue); } },
+                { "request", n => { Request = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionRequest_request>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionRequest_request.CreateFromDiscriminatorValue); } },
+                { "waitPolicy", n => { WaitPolicy = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionRequest_waitPolicy>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionRequest_waitPolicy.CreateFromDiscriminatorValue); } },
+                { "workflowExecution", n => { WorkflowExecution = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionRequest_workflowExecution>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionRequest_workflowExecution.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -96,9 +96,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("firstExecutionRunId", FirstExecutionRunId);
             writer.WriteStringValue("namespace", Namespace);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Request>("request", Request);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WaitPolicy>("waitPolicy", WaitPolicy);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution>("workflowExecution", WorkflowExecution);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionRequest_request>("request", Request);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionRequest_waitPolicy>("waitPolicy", WaitPolicy);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionRequest_workflowExecution>("workflowExecution", WorkflowExecution);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

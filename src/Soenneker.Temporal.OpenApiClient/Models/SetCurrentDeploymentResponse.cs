@@ -26,10 +26,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Info of the deployment that was current before executing this operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfo? PreviousDeploymentInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentResponse_previousDeploymentInfo? PreviousDeploymentInfo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfo PreviousDeploymentInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentResponse_previousDeploymentInfo PreviousDeploymentInfo { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentResponse"/> and sets the default values.
@@ -57,7 +57,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "currentDeploymentInfo", n => { CurrentDeploymentInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfo>(global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfo.CreateFromDiscriminatorValue); } },
-                { "previousDeploymentInfo", n => { PreviousDeploymentInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfo>(global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfo.CreateFromDiscriminatorValue); } },
+                { "previousDeploymentInfo", n => { PreviousDeploymentInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentResponse_previousDeploymentInfo>(global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentResponse_previousDeploymentInfo.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -68,7 +68,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfo>("currentDeploymentInfo", CurrentDeploymentInfo);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfo>("previousDeploymentInfo", PreviousDeploymentInfo);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentResponse_previousDeploymentInfo>("previousDeploymentInfo", PreviousDeploymentInfo);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

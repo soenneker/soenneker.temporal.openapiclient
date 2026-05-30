@@ -18,10 +18,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion? DeploymentVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionMetadataRequest_deploymentVersion? DeploymentVersion { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion DeploymentVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionMetadataRequest_deploymentVersion DeploymentVersion { get; set; }
 #endif
         /// <summary>Optional. The identity of the client who initiated this request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -88,7 +88,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "deploymentVersion", n => { DeploymentVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion>(global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion.CreateFromDiscriminatorValue); } },
+                { "deploymentVersion", n => { DeploymentVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionMetadataRequest_deploymentVersion>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionMetadataRequest_deploymentVersion.CreateFromDiscriminatorValue); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
                 { "namespace", n => { Namespace = n.GetStringValue(); } },
                 { "removeEntries", n => { RemoveEntries = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -103,7 +103,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion>("deploymentVersion", DeploymentVersion);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionMetadataRequest_deploymentVersion>("deploymentVersion", DeploymentVersion);
             writer.WriteStringValue("identity", Identity);
             writer.WriteStringValue("namespace", Namespace);
             writer.WriteCollectionOfPrimitiveValues<string>("removeEntries", RemoveEntries);

@@ -64,7 +64,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string Reason { get; set; }
 #endif
-        /// <summary>BatchOperationResetActivities sends activity reset requests in a batch. NOTE: keep in sync with temporal.api.workflowservice.v1.ResetActivityRequest</summary>
+        /// <summary>&quot;BatchOperationResetActivities sends activity reset requests in a batch. NOTE: keep in sync with temporal.api.workflowservice.v1.ResetActivityRequest&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationResetActivities? ResetActivitiesOperation { get; set; }
@@ -104,7 +104,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationUnpauseActivities UnpauseActivitiesOperation { get; set; }
 #endif
-        /// <summary>BatchOperationUpdateActivityOptions sends an update-activity-options requests in a batch. NOTE: keep in sync with temporal.api.workflowservice.v1.UpdateActivityRequest</summary>
+        /// <summary>&quot;BatchOperationUpdateActivityOptions sends an update-activity-options requests in a batch. NOTE: keep in sync with temporal.api.workflowservice.v1.UpdateActivityRequest&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationUpdateActivityOptions? UpdateActivityOptionsOperation { get; set; }

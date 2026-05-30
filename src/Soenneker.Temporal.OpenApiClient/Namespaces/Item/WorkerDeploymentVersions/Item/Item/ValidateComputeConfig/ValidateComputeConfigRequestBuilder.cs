@@ -36,18 +36,18 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.WorkerDeploymentVersi
         /// <summary>
         /// Validates the compute config without attaching it to a Worker Deployment Version. Experimental. This API might significantly change or be removed in a future release.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Models.ValidateWorkerDeploymentVersionComputeConfigResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.WorkerDeploymentVersions.Item.Item.ValidateComputeConfig.ValidateComputeConfigPostResponse"/></returns>
         /// <param name="body">Used to validate the compute config without attaching it to a Worker Deployment Version.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Temporal.OpenApiClient.Models.Status">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.ValidateWorkerDeploymentVersionComputeConfigResponse?> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.ValidateWorkerDeploymentVersionComputeConfigRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.WorkerDeploymentVersions.Item.Item.ValidateComputeConfig.ValidateComputeConfigPostResponse?> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.ValidateWorkerDeploymentVersionComputeConfigRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.ValidateWorkerDeploymentVersionComputeConfigResponse> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.ValidateWorkerDeploymentVersionComputeConfigRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.WorkerDeploymentVersions.Item.Item.ValidateComputeConfig.ValidateComputeConfigPostResponse> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.ValidateWorkerDeploymentVersionComputeConfigRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -56,7 +56,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.WorkerDeploymentVersi
             {
                 { "XXX", global::Soenneker.Temporal.OpenApiClient.Models.Status.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Models.ValidateWorkerDeploymentVersionComputeConfigResponse>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Models.ValidateWorkerDeploymentVersionComputeConfigResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.WorkerDeploymentVersions.Item.Item.ValidateComputeConfig.ValidateComputeConfigPostResponse>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.WorkerDeploymentVersions.Item.Item.ValidateComputeConfig.ValidateComputeConfigPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Validates the compute config without attaching it to a Worker Deployment Version. Experimental. This API might significantly change or be removed in a future release.

@@ -17,18 +17,18 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>When signal origin is a workflow execution, this field is set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution? ExternalWorkflowExecution { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributes_externalWorkflowExecution? ExternalWorkflowExecution { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution ExternalWorkflowExecution { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributes_externalWorkflowExecution ExternalWorkflowExecution { get; set; }
 #endif
         /// <summary>Headers that were passed by the sender of the signal and copied by temporal server into the workflow task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Header? Header { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributes_header? Header { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Header Header { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributes_header Header { get; set; }
 #endif
         /// <summary>id of the worker/client who sent this signal</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -41,10 +41,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Will be deserialized and provided as argument(s) to the signal handler</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Payloads? Input { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributes_input? Input { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Payloads Input { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributes_input Input { get; set; }
 #endif
         /// <summary>The request ID of the Signal request, used by the server to attach this to the correct Event ID when generating link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -89,10 +89,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "externalWorkflowExecution", n => { ExternalWorkflowExecution = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution.CreateFromDiscriminatorValue); } },
-                { "header", n => { Header = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Header>(global::Soenneker.Temporal.OpenApiClient.Models.Header.CreateFromDiscriminatorValue); } },
+                { "externalWorkflowExecution", n => { ExternalWorkflowExecution = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributes_externalWorkflowExecution>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributes_externalWorkflowExecution.CreateFromDiscriminatorValue); } },
+                { "header", n => { Header = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributes_header>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributes_header.CreateFromDiscriminatorValue); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
-                { "input", n => { Input = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>(global::Soenneker.Temporal.OpenApiClient.Models.Payloads.CreateFromDiscriminatorValue); } },
+                { "input", n => { Input = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributes_input>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributes_input.CreateFromDiscriminatorValue); } },
                 { "requestId", n => { RequestId = n.GetStringValue(); } },
                 { "signalName", n => { SignalName = n.GetStringValue(); } },
                 { "skipGenerateWorkflowTask", n => { SkipGenerateWorkflowTask = n.GetBoolValue(); } },
@@ -105,10 +105,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution>("externalWorkflowExecution", ExternalWorkflowExecution);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Header>("header", Header);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributes_externalWorkflowExecution>("externalWorkflowExecution", ExternalWorkflowExecution);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributes_header>("header", Header);
             writer.WriteStringValue("identity", Identity);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>("input", Input);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributes_input>("input", Input);
             writer.WriteStringValue("requestId", RequestId);
             writer.WriteStringValue("signalName", SignalName);
             writer.WriteBoolValue("skipGenerateWorkflowTask", SkipGenerateWorkflowTask);

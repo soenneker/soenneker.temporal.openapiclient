@@ -70,7 +70,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.WorkflowRules
             return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Models.ListWorkflowRulesResponse>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Models.ListWorkflowRulesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Create a new workflow rule. The rules are used to control the workflow execution. The rule will be applied to all running and new workflows in the namespace. If the rule with such ID already exist this call will fail Note: the rules are part of namespace configuration and will be stored in the namespace config. Namespace config is eventually consistent.
+        /// &quot;Create a new workflow rule. The rules are used to control the workflow execution. The rule will be applied to all running and new workflows in the namespace. If the rule with such ID already exist this call will fail Note: the rules are part of namespace configuration and will be stored in the namespace config. Namespace config is eventually consistent.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkflowRuleResponse"/></returns>
         /// <param name="body">The request body</param>
@@ -114,7 +114,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.WorkflowRules
             return requestInfo;
         }
         /// <summary>
-        /// Create a new workflow rule. The rules are used to control the workflow execution. The rule will be applied to all running and new workflows in the namespace. If the rule with such ID already exist this call will fail Note: the rules are part of namespace configuration and will be stored in the namespace config. Namespace config is eventually consistent.
+        /// &quot;Create a new workflow rule. The rules are used to control the workflow execution. The rule will be applied to all running and new workflows in the namespace. If the rule with such ID already exist this call will fail Note: the rules are part of namespace configuration and will be stored in the namespace config. Namespace config is eventually consistent.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

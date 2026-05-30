@@ -18,10 +18,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Headers that are passed with the signal to the processing workflow. These can include things like auth or tracing tokens.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Header? Header { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationSignal_header? Header { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Header Header { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationSignal_header Header { get; set; }
 #endif
         /// <summary>The identity of the worker/client</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -34,10 +34,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Serialized value(s) to provide with the signal</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Payloads? Input { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationSignal_input? Input { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Payloads Input { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationSignal_input Input { get; set; }
 #endif
         /// <summary>The workflow author-defined name of the signal to send to the workflow</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -72,9 +72,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "header", n => { Header = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Header>(global::Soenneker.Temporal.OpenApiClient.Models.Header.CreateFromDiscriminatorValue); } },
+                { "header", n => { Header = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationSignal_header>(global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationSignal_header.CreateFromDiscriminatorValue); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
-                { "input", n => { Input = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>(global::Soenneker.Temporal.OpenApiClient.Models.Payloads.CreateFromDiscriminatorValue); } },
+                { "input", n => { Input = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationSignal_input>(global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationSignal_input.CreateFromDiscriminatorValue); } },
                 { "signal", n => { Signal = n.GetStringValue(); } },
             };
         }
@@ -85,9 +85,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Header>("header", Header);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationSignal_header>("header", Header);
             writer.WriteStringValue("identity", Identity);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>("input", Input);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationSignal_input>("input", Input);
             writer.WriteStringValue("signal", Signal);
             writer.WriteAdditionalData(AdditionalData);
         }

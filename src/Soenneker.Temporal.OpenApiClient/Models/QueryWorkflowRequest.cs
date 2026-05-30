@@ -38,7 +38,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQuery Query { get; set; }
 #endif
-        /// <summary>QueryRejectCondition can used to reject the query if workflow state does not satisfy condition. Default: QUERY_REJECT_CONDITION_NONE.</summary>
+        /// <summary>&quot;QueryRejectCondition can used to reject the query if workflow state does not satisfy condition. Default: QUERY_REJECT_CONDITION_NONE.&quot;</summary>
         public global::Soenneker.Temporal.OpenApiClient.Models.QueryWorkflowRequest_queryRejectCondition? QueryRejectCondition { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.QueryWorkflowRequest"/> and sets the default values.

@@ -18,10 +18,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Serialized value(s) to provide to the termination event</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Payloads? Details { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationTermination_details? Details { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Payloads Details { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationTermination_details Details { get; set; }
 #endif
         /// <summary>The identity of the worker/client</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -56,7 +56,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "details", n => { Details = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>(global::Soenneker.Temporal.OpenApiClient.Models.Payloads.CreateFromDiscriminatorValue); } },
+                { "details", n => { Details = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationTermination_details>(global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationTermination_details.CreateFromDiscriminatorValue); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
             };
         }
@@ -67,7 +67,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>("details", Details);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationTermination_details>("details", Details);
             writer.WriteStringValue("identity", Identity);
             writer.WriteAdditionalData(AdditionalData);
         }

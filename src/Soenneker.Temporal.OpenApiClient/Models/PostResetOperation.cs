@@ -18,18 +18,18 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>SignalWorkflow represents sending a signal after a workflow reset. Keep the parameter in sync with temporal.api.workflowservice.v1.SignalWorkflowExecutionRequest.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperation_SignalWorkflow? SignalWorkflow { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationSignalWorkflow? SignalWorkflow { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperation_SignalWorkflow SignalWorkflow { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationSignalWorkflow SignalWorkflow { get; set; }
 #endif
         /// <summary>UpdateWorkflowOptions represents updating workflow execution options after a workflow reset. Keep the parameters in sync with temporal.api.workflowservice.v1.UpdateWorkflowExecutionOptionsRequest.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperation_UpdateWorkflowOptions? UpdateWorkflowOptions { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptions? UpdateWorkflowOptions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperation_UpdateWorkflowOptions UpdateWorkflowOptions { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptions UpdateWorkflowOptions { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperation"/> and sets the default values.
@@ -56,8 +56,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "signalWorkflow", n => { SignalWorkflow = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperation_SignalWorkflow>(global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperation_SignalWorkflow.CreateFromDiscriminatorValue); } },
-                { "updateWorkflowOptions", n => { UpdateWorkflowOptions = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperation_UpdateWorkflowOptions>(global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperation_UpdateWorkflowOptions.CreateFromDiscriminatorValue); } },
+                { "signalWorkflow", n => { SignalWorkflow = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationSignalWorkflow>(global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationSignalWorkflow.CreateFromDiscriminatorValue); } },
+                { "updateWorkflowOptions", n => { UpdateWorkflowOptions = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptions>(global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptions.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,8 +67,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperation_SignalWorkflow>("signalWorkflow", SignalWorkflow);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperation_UpdateWorkflowOptions>("updateWorkflowOptions", UpdateWorkflowOptions);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationSignalWorkflow>("signalWorkflow", SignalWorkflow);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptions>("updateWorkflowOptions", UpdateWorkflowOptions);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -49,7 +49,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string Identity { get; set; }
 #endif
-        /// <summary>Optional. By default this request would be rejected if not all the expected Task Queues are being polled by the new Version, to protect against accidental removal of Task Queues, or worker health issues. Pass `true` here to bypass this protection. The set of expected Task Queues equals to all the Task Queues ever polled from the existing Current Version of the Deployment, with the following exclusions:   - Task Queues that are not used anymore (inferred by having empty backlog and a task     add_rate of 0.)   - Task Queues that are moved to another Worker Deployment (inferred by the Task Queue     having a different Current Version than the Current Version of this deployment.) WARNING: Do not set this flag unless you are sure that the missing task queue poller are not needed. If the request is unexpectedly rejected due to missing pollers, then that means the pollers have not reached to the server yet. Only set this if you expect those pollers to never arrive. Note: this check only happens when the ramping version is about to change, not every time that the percentage changes. Also note that the check is against the deployment&apos;s Current Version, not the previous Ramping Version.</summary>
+        /// <summary>&quot;Optional. By default this request would be rejected if not all the expected Task Queues are being polled by the new Version, to protect against accidental removal of Task Queues, or worker health issues. Pass `true` here to bypass this protection. The set of expected Task Queues equals to all the Task Queues ever polled from the existing Current Version of the Deployment, with the following exclusions:   - Task Queues that are not used anymore (inferred by having empty backlog and a task     add_rate of 0.)   - Task Queues that are moved to another Worker Deployment (inferred by the Task Queue     having a different Current Version than the Current Version of this deployment.) WARNING: Do not set this flag unless you are sure that the missing task queue poller are not needed. If the request is unexpectedly rejected due to missing pollers, then that means the pollers have not reached to the server yet. Only set this if you expect those pollers to never arrive. Note: this check only happens when the ramping version is about to change, not every time that the percentage changes. Also note that the check is against the deployment&apos;s Current Version, not the previous Ramping Version.&quot;</summary>
         public bool? IgnoreMissingTaskQueues { get; set; }
         /// <summary>The namespace property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -59,7 +59,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string Namespace { get; set; }
 #endif
-        /// <summary>Ramp percentage to set. Valid range: [0,100].</summary>
+        /// <summary>&quot;Ramp percentage to set. Valid range: [0,100].&quot;</summary>
         public float? Percentage { get; set; }
         /// <summary>Deprecated. Use `build_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

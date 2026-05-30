@@ -17,10 +17,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>All the Task Queues that have ever polled from this Deployment version.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponse_VersionTaskQueue>? VersionTaskQueues { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponseVersionTaskQueue>? VersionTaskQueues { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponse_VersionTaskQueue> VersionTaskQueues { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponseVersionTaskQueue> VersionTaskQueues { get; set; }
 #endif
         /// <summary>A Worker Deployment Version (Version, for short) represents all workers of the same code and config within a Deployment. Workers of the same Version are expected to behave exactly the same so when executions move between them there are no non-determinism issues. Worker Deployment Versions are created in Temporal server automatically when their first poller arrives to the server.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "versionTaskQueues", n => { VersionTaskQueues = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponse_VersionTaskQueue>(global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponse_VersionTaskQueue.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "versionTaskQueues", n => { VersionTaskQueues = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponseVersionTaskQueue>(global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponseVersionTaskQueue.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "workerDeploymentVersionInfo", n => { WorkerDeploymentVersionInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersionInfo>(global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersionInfo.CreateFromDiscriminatorValue); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponse_VersionTaskQueue>("versionTaskQueues", VersionTaskQueues);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponseVersionTaskQueue>("versionTaskQueues", VersionTaskQueues);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersionInfo>("workerDeploymentVersionInfo", WorkerDeploymentVersionInfo);
             writer.WriteAdditionalData(AdditionalData);
         }

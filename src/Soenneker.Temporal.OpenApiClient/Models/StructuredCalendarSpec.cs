@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// StructuredCalendarSpec describes an event specification relative to the calendar, in a form that&apos;s easy to work with programmatically. Each field can be one or more ranges. A timestamp matches if at least one range of each field matches the corresponding fields of the timestamp, except for year: if year is missing, that means all years match. For all fields besides year, at least one Range must be present to match anything. Relative expressions such as &quot;last day of the month&quot; or &quot;third Monday&quot; are not currently representable; callers must enumerate the concrete days they require.
+    /// &quot;StructuredCalendarSpec describes an event specification relative to the calendar, in a form that&apos;s easy to work with programmatically. Each field can be one or more ranges. A timestamp matches if at least one range of each field matches the corresponding fields of the timestamp, except for year: if year is missing, that means all years match. For all fields besides year, at least one Range must be present to match anything. Relative expressions such as \&quot;last day of the month\&quot; or \&quot;third Monday\&quot; are not currently representable; callers must enumerate the concrete days they require.&quot;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class StructuredCalendarSpec : IAdditionalDataHolder, IParsable
@@ -23,7 +23,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string Comment { get; set; }
 #endif
-        /// <summary>Match days of the month (1-31) (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: standard name of field --)</summary>
+        /// <summary>&quot;Match days of the month (1-31) (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: standard name of field --)&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Temporal.OpenApiClient.Models.RangeObject>? DayOfMonth { get; set; }

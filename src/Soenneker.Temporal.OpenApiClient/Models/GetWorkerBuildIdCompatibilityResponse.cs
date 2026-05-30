@@ -15,7 +15,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Major version sets, in order from oldest to newest. The last element of the list will always be the current default major version. IE: New workflows will target the most recent version in that version set. There may be fewer sets returned than exist, if the request chose to limit this response.</summary>
+        /// <summary>&quot;Major version sets, in order from oldest to newest. The last element of the list will always be the current default major version. IE: New workflows will target the most recent version in that version set. There may be fewer sets returned than exist, if the request chose to limit this response.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Temporal.OpenApiClient.Models.CompatibleVersionSet>? MajorVersionSets { get; set; }

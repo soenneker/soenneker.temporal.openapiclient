@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
-    /// <summary>Default: TASK_QUEUE_KIND_NORMAL.</summary>
+    /// <summary>&quot;Default: TASK_QUEUE_KIND_NORMAL.&quot;</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum TaskQueue_kind
     {

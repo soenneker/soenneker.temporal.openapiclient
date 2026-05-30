@@ -34,20 +34,20 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item
         {
         }
         /// <summary>
-        /// Note: This is an experimental API and the behavior may change in a future release. UnpauseWorkflowExecution unpauses a previously paused workflow execution specified in the request. Unpausing a workflow execution results in - The workflow execution status changes to `RUNNING` and a new WORKFLOW_EXECUTION_UNPAUSED event is added to the history - Workflow tasks and activity tasks are resumed.
+        /// &quot;Note: This is an experimental API and the behavior may change in a future release. UnpauseWorkflowExecution unpauses a previously paused workflow execution specified in the request. Unpausing a workflow execution results in - The workflow execution status changes to `RUNNING` and a new WORKFLOW_EXECUTION_UNPAUSED event is added to the history - Workflow tasks and activity tasks are resumed.&quot;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Models.UnpauseWorkflowExecutionResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Unpause.UnpausePostResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Temporal.OpenApiClient.Models.Status">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.UnpauseWorkflowExecutionResponse?> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.UnpauseWorkflowExecutionRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Unpause.UnpausePostResponse?> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.UnpauseWorkflowExecutionRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.UnpauseWorkflowExecutionResponse> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.UnpauseWorkflowExecutionRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Unpause.UnpausePostResponse> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.UnpauseWorkflowExecutionRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -56,10 +56,10 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item
             {
                 { "XXX", global::Soenneker.Temporal.OpenApiClient.Models.Status.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Models.UnpauseWorkflowExecutionResponse>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Models.UnpauseWorkflowExecutionResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Unpause.UnpausePostResponse>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Unpause.UnpausePostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Note: This is an experimental API and the behavior may change in a future release. UnpauseWorkflowExecution unpauses a previously paused workflow execution specified in the request. Unpausing a workflow execution results in - The workflow execution status changes to `RUNNING` and a new WORKFLOW_EXECUTION_UNPAUSED event is added to the history - Workflow tasks and activity tasks are resumed.
+        /// &quot;Note: This is an experimental API and the behavior may change in a future release. UnpauseWorkflowExecution unpauses a previously paused workflow execution specified in the request. Unpausing a workflow execution results in - The workflow execution status changes to `RUNNING` and a new WORKFLOW_EXECUTION_UNPAUSED event is added to the history - Workflow tasks and activity tasks are resumed.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

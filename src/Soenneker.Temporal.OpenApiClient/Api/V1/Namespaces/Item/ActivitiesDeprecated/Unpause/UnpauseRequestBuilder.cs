@@ -34,20 +34,20 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.ActivitiesDepr
         {
         }
         /// <summary>
-        /// UnpauseActivity unpauses the execution of an activity specified by its ID or type. If there are multiple pending activities of the provided type - all of them will be unpaused. If activity is not paused, this call will have no effect. If the activity was paused while waiting for retry, it will be scheduled immediately (* see &apos;jitter&apos; flag). Once the activity is unpaused, all timeout timers will be regenerated. Flags: &apos;jitter&apos;: the activity will be scheduled at a random time within the jitter duration. &apos;reset_attempts&apos;: the number of attempts will be reset. &apos;reset_heartbeat&apos;: the activity heartbeat timer and heartbeats will be reset. Returns a `NotFound` error if there is no pending activity with the provided ID or type This API will be deprecated soon and replaced with a newer UnpauseActivityExecution that is better named and structured to work well for standalone activities.
+        /// &quot;UnpauseActivity unpauses the execution of an activity specified by its ID or type. If there are multiple pending activities of the provided type - all of them will be unpaused. If activity is not paused, this call will have no effect. If the activity was paused while waiting for retry, it will be scheduled immediately (* see &apos;jitter&apos; flag). Once the activity is unpaused, all timeout timers will be regenerated. Flags: &apos;jitter&apos;: the activity will be scheduled at a random time within the jitter duration. &apos;reset_attempts&apos;: the number of attempts will be reset. &apos;reset_heartbeat&apos;: the activity heartbeat timer and heartbeats will be reset. Returns a `NotFound` error if there is no pending activity with the provided ID or type This API will be deprecated soon and replaced with a newer UnpauseActivityExecution that is better named and structured to work well for standalone activities.&quot;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Models.UnpauseActivityResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.ActivitiesDeprecated.Unpause.UnpausePostResponse"/></returns>
         /// <param name="body">Deprecated. Use `UnpauseActivityExecutionRequest`.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Temporal.OpenApiClient.Models.Status">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.UnpauseActivityResponse?> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.UnpauseActivityRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.ActivitiesDeprecated.Unpause.UnpausePostResponse?> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.UnpauseActivityRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.UnpauseActivityResponse> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.UnpauseActivityRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.ActivitiesDeprecated.Unpause.UnpausePostResponse> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.UnpauseActivityRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -56,10 +56,10 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.ActivitiesDepr
             {
                 { "XXX", global::Soenneker.Temporal.OpenApiClient.Models.Status.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Models.UnpauseActivityResponse>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Models.UnpauseActivityResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.ActivitiesDeprecated.Unpause.UnpausePostResponse>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.ActivitiesDeprecated.Unpause.UnpausePostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// UnpauseActivity unpauses the execution of an activity specified by its ID or type. If there are multiple pending activities of the provided type - all of them will be unpaused. If activity is not paused, this call will have no effect. If the activity was paused while waiting for retry, it will be scheduled immediately (* see &apos;jitter&apos; flag). Once the activity is unpaused, all timeout timers will be regenerated. Flags: &apos;jitter&apos;: the activity will be scheduled at a random time within the jitter duration. &apos;reset_attempts&apos;: the number of attempts will be reset. &apos;reset_heartbeat&apos;: the activity heartbeat timer and heartbeats will be reset. Returns a `NotFound` error if there is no pending activity with the provided ID or type This API will be deprecated soon and replaced with a newer UnpauseActivityExecution that is better named and structured to work well for standalone activities.
+        /// &quot;UnpauseActivity unpauses the execution of an activity specified by its ID or type. If there are multiple pending activities of the provided type - all of them will be unpaused. If activity is not paused, this call will have no effect. If the activity was paused while waiting for retry, it will be scheduled immediately (* see &apos;jitter&apos; flag). Once the activity is unpaused, all timeout timers will be regenerated. Flags: &apos;jitter&apos;: the activity will be scheduled at a random time within the jitter duration. &apos;reset_attempts&apos;: the number of attempts will be reset. &apos;reset_heartbeat&apos;: the activity heartbeat timer and heartbeats will be reset. Returns a `NotFound` error if there is no pending activity with the provided ID or type This API will be deprecated soon and replaced with a newer UnpauseActivityExecution that is better named and structured to work well for standalone activities.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">Deprecated. Use `UnpauseActivityExecutionRequest`.</param>

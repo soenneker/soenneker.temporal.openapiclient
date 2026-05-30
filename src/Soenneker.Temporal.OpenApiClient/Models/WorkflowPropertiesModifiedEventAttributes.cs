@@ -17,10 +17,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>If set, update the workflow memo with the provided values. The values will be merged with the existing memo. If the user wants to delete values, a default/empty Payload should be used as the value for the key being deleted.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Memo? UpsertedMemo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowPropertiesModifiedEventAttributes_upsertedMemo? UpsertedMemo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Memo UpsertedMemo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowPropertiesModifiedEventAttributes_upsertedMemo UpsertedMemo { get; set; }
 #endif
         /// <summary>The `WORKFLOW_TASK_COMPLETED` event which this command was reported with</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "upsertedMemo", n => { UpsertedMemo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Memo>(global::Soenneker.Temporal.OpenApiClient.Models.Memo.CreateFromDiscriminatorValue); } },
+                { "upsertedMemo", n => { UpsertedMemo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowPropertiesModifiedEventAttributes_upsertedMemo>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowPropertiesModifiedEventAttributes_upsertedMemo.CreateFromDiscriminatorValue); } },
                 { "workflowTaskCompletedEventId", n => { WorkflowTaskCompletedEventId = n.GetStringValue(); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Memo>("upsertedMemo", UpsertedMemo);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowPropertiesModifiedEventAttributes_upsertedMemo>("upsertedMemo", UpsertedMemo);
             writer.WriteStringValue("workflowTaskCompletedEventId", WorkflowTaskCompletedEventId);
             writer.WriteAdditionalData(AdditionalData);
         }

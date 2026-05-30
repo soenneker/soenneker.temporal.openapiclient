@@ -57,20 +57,20 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Priority metadata. If this message is not present, or any fields are not present, they inherit the values from the workflow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Priority? Priority { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskScheduledEventAttributes_priority? Priority { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Priority Priority { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskScheduledEventAttributes_priority Priority { get; set; }
 #endif
         /// <summary>Activities are assigned a default retry policy controlled by the service&apos;s dynamic configuration. Retries will happen up to `schedule_to_close_timeout`. To disable retries set retry_policy.maximum_attempts to 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.RetryPolicy? RetryPolicy { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskScheduledEventAttributes_retryPolicy? RetryPolicy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.RetryPolicy RetryPolicy { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskScheduledEventAttributes_retryPolicy RetryPolicy { get; set; }
 #endif
-        /// <summary>Indicates how long the caller is willing to wait for an activity completion. Limits how long retries will be attempted. Either this or `start_to_close_timeout` must be specified. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;to&quot; is used to indicate interval. --)</summary>
+        /// <summary>&quot;Indicates how long the caller is willing to wait for an activity completion. Limits how long retries will be attempted. Either this or `start_to_close_timeout` must be specified. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: \&quot;to\&quot; is used to indicate interval. --)&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ScheduleToCloseTimeout { get; set; }
@@ -78,7 +78,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string ScheduleToCloseTimeout { get; set; }
 #endif
-        /// <summary>Limits time an activity task can stay in a task queue before a worker picks it up. This timeout is always non retryable, as all a retry would achieve is to put it back into the same queue. Defaults to `schedule_to_close_timeout` or workflow execution timeout if not specified. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;to&quot; is used to indicate interval. --)</summary>
+        /// <summary>&quot;Limits time an activity task can stay in a task queue before a worker picks it up. This timeout is always non retryable, as all a retry would achieve is to put it back into the same queue. Defaults to `schedule_to_close_timeout` or workflow execution timeout if not specified. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: \&quot;to\&quot; is used to indicate interval. --)&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ScheduleToStartTimeout { get; set; }
@@ -86,7 +86,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string ScheduleToStartTimeout { get; set; }
 #endif
-        /// <summary>Maximum time an activity is allowed to execute after being picked up by a worker. This timeout is always retryable. Either this or `schedule_to_close_timeout` must be specified. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;to&quot; is used to indicate interval. --)</summary>
+        /// <summary>&quot;Maximum time an activity is allowed to execute after being picked up by a worker. This timeout is always retryable. Either this or `schedule_to_close_timeout` must be specified. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: \&quot;to\&quot; is used to indicate interval. --)&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? StartToCloseTimeout { get; set; }
@@ -142,8 +142,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "header", n => { Header = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Header>(global::Soenneker.Temporal.OpenApiClient.Models.Header.CreateFromDiscriminatorValue); } },
                 { "heartbeatTimeout", n => { HeartbeatTimeout = n.GetStringValue(); } },
                 { "input", n => { Input = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>(global::Soenneker.Temporal.OpenApiClient.Models.Payloads.CreateFromDiscriminatorValue); } },
-                { "priority", n => { Priority = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Priority>(global::Soenneker.Temporal.OpenApiClient.Models.Priority.CreateFromDiscriminatorValue); } },
-                { "retryPolicy", n => { RetryPolicy = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RetryPolicy>(global::Soenneker.Temporal.OpenApiClient.Models.RetryPolicy.CreateFromDiscriminatorValue); } },
+                { "priority", n => { Priority = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskScheduledEventAttributes_priority>(global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskScheduledEventAttributes_priority.CreateFromDiscriminatorValue); } },
+                { "retryPolicy", n => { RetryPolicy = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskScheduledEventAttributes_retryPolicy>(global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskScheduledEventAttributes_retryPolicy.CreateFromDiscriminatorValue); } },
                 { "scheduleToCloseTimeout", n => { ScheduleToCloseTimeout = n.GetStringValue(); } },
                 { "scheduleToStartTimeout", n => { ScheduleToStartTimeout = n.GetStringValue(); } },
                 { "startToCloseTimeout", n => { StartToCloseTimeout = n.GetStringValue(); } },
@@ -164,8 +164,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Header>("header", Header);
             writer.WriteStringValue("heartbeatTimeout", HeartbeatTimeout);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>("input", Input);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Priority>("priority", Priority);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RetryPolicy>("retryPolicy", RetryPolicy);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskScheduledEventAttributes_priority>("priority", Priority);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskScheduledEventAttributes_retryPolicy>("retryPolicy", RetryPolicy);
             writer.WriteStringValue("scheduleToCloseTimeout", ScheduleToCloseTimeout);
             writer.WriteStringValue("scheduleToStartTimeout", ScheduleToStartTimeout);
             writer.WriteStringValue("startToCloseTimeout", StartToCloseTimeout);

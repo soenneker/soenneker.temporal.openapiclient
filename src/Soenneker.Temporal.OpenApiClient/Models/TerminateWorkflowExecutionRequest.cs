@@ -17,10 +17,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Serialized additional information to attach to the termination event</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Payloads? Details { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.TerminateWorkflowExecutionRequest_details? Details { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Payloads Details { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.TerminateWorkflowExecutionRequest_details Details { get; set; }
 #endif
         /// <summary>If set, this call will error if the most recent (if no run id is set on `workflow_execution`), or specified (if it is) workflow execution is not part of the same execution chain as this id.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -95,7 +95,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "details", n => { Details = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>(global::Soenneker.Temporal.OpenApiClient.Models.Payloads.CreateFromDiscriminatorValue); } },
+                { "details", n => { Details = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TerminateWorkflowExecutionRequest_details>(global::Soenneker.Temporal.OpenApiClient.Models.TerminateWorkflowExecutionRequest_details.CreateFromDiscriminatorValue); } },
                 { "firstExecutionRunId", n => { FirstExecutionRunId = n.GetStringValue(); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
                 { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.Link>(global::Soenneker.Temporal.OpenApiClient.Models.Link.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -111,7 +111,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>("details", Details);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TerminateWorkflowExecutionRequest_details>("details", Details);
             writer.WriteStringValue("firstExecutionRunId", FirstExecutionRunId);
             writer.WriteStringValue("identity", Identity);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.Link>("links", Links);

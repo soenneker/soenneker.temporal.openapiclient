@@ -54,17 +54,17 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.WorkerDeployme
         /// <summary>
         /// Used for manual deletion of Versions. User can delete a Version only when all the following conditions are met:  - It is not the Current or Ramping Version of its Deployment.  - It has no active pollers (none of the task queues in the Version have pollers)  - It is not draining (see WorkerDeploymentVersionInfo.drainage_info). This condition    can be skipped by passing `skip-drainage=true`. Experimental. This API might significantly change or be removed in a future release.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Models.DeleteWorkerDeploymentVersionResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.WorkerDeploymentVersions.Item.Item.Build_DeleteResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Temporal.OpenApiClient.Models.Status">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.DeleteWorkerDeploymentVersionResponse?> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.WorkerDeploymentVersions.Item.Item.Deployment_versionBuild_ItemRequestBuilder.Deployment_versionBuild_ItemRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.WorkerDeploymentVersions.Item.Item.Build_DeleteResponse?> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.WorkerDeploymentVersions.Item.Item.Deployment_versionBuild_ItemRequestBuilder.Deployment_versionBuild_ItemRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.DeleteWorkerDeploymentVersionResponse> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.WorkerDeploymentVersions.Item.Item.Deployment_versionBuild_ItemRequestBuilder.Deployment_versionBuild_ItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.WorkerDeploymentVersions.Item.Item.Build_DeleteResponse> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.WorkerDeploymentVersions.Item.Item.Deployment_versionBuild_ItemRequestBuilder.Deployment_versionBuild_ItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -72,7 +72,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.WorkerDeployme
             {
                 { "XXX", global::Soenneker.Temporal.OpenApiClient.Models.Status.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Models.DeleteWorkerDeploymentVersionResponse>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Models.DeleteWorkerDeploymentVersionResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.WorkerDeploymentVersions.Item.Item.Build_DeleteResponse>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.WorkerDeploymentVersions.Item.Item.Build_DeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Describes a worker deployment version. Experimental. This API might significantly change or be removed in a future release.

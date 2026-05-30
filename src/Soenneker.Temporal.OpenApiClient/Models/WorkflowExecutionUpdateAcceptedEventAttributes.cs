@@ -15,10 +15,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The message payload of the original request message that initiated this update.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Request? AcceptedRequest { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAcceptedEventAttributes_acceptedRequest? AcceptedRequest { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Request AcceptedRequest { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAcceptedEventAttributes_acceptedRequest AcceptedRequest { get; set; }
 #endif
         /// <summary>The message ID of the original request message that initiated this update. Needed so that the worker can recreate and deliver that same message as part of replay.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -71,7 +71,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "acceptedRequest", n => { AcceptedRequest = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Request>(global::Soenneker.Temporal.OpenApiClient.Models.Request.CreateFromDiscriminatorValue); } },
+                { "acceptedRequest", n => { AcceptedRequest = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAcceptedEventAttributes_acceptedRequest>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAcceptedEventAttributes_acceptedRequest.CreateFromDiscriminatorValue); } },
                 { "acceptedRequestMessageId", n => { AcceptedRequestMessageId = n.GetStringValue(); } },
                 { "acceptedRequestSequencingEventId", n => { AcceptedRequestSequencingEventId = n.GetStringValue(); } },
                 { "protocolInstanceId", n => { ProtocolInstanceId = n.GetStringValue(); } },
@@ -84,7 +84,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Request>("acceptedRequest", AcceptedRequest);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAcceptedEventAttributes_acceptedRequest>("acceptedRequest", AcceptedRequest);
             writer.WriteStringValue("acceptedRequestMessageId", AcceptedRequestMessageId);
             writer.WriteStringValue("acceptedRequestSequencingEventId", AcceptedRequestSequencingEventId);
             writer.WriteStringValue("protocolInstanceId", ProtocolInstanceId);

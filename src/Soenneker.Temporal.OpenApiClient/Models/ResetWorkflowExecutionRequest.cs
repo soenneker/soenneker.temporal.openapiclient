@@ -62,15 +62,15 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public List<global::Soenneker.Temporal.OpenApiClient.Models.ResetWorkflowExecutionRequest_resetReapplyExcludeTypes?> ResetReapplyExcludeTypes { get; set; }
 #endif
-        /// <summary>Deprecated. Use `options`. Default: RESET_REAPPLY_TYPE_SIGNAL</summary>
+        /// <summary>&quot;Deprecated. Use `options`. Default: RESET_REAPPLY_TYPE_SIGNAL&quot;</summary>
         public global::Soenneker.Temporal.OpenApiClient.Models.ResetWorkflowExecutionRequest_resetReapplyType? ResetReapplyType { get; set; }
         /// <summary>The workflow to reset. If this contains a run ID then the workflow will be reset back to the provided event ID in that run. Otherwise it will be reset to the provided event ID in the current run. In all cases the current run will be terminated and a new run started.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution? WorkflowExecution { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ResetWorkflowExecutionRequest_workflowExecution? WorkflowExecution { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution WorkflowExecution { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ResetWorkflowExecutionRequest_workflowExecution WorkflowExecution { get; set; }
 #endif
         /// <summary>The id of a `WORKFLOW_TASK_COMPLETED`,`WORKFLOW_TASK_TIMED_OUT`, `WORKFLOW_TASK_FAILED`, or `WORKFLOW_TASK_STARTED` event to reset to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -112,7 +112,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "requestId", n => { RequestId = n.GetStringValue(); } },
                 { "resetReapplyExcludeTypes", n => { ResetReapplyExcludeTypes = n.GetCollectionOfEnumValues<global::Soenneker.Temporal.OpenApiClient.Models.ResetWorkflowExecutionRequest_resetReapplyExcludeTypes>()?.AsList(); } },
                 { "resetReapplyType", n => { ResetReapplyType = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.ResetWorkflowExecutionRequest_resetReapplyType>(); } },
-                { "workflowExecution", n => { WorkflowExecution = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution.CreateFromDiscriminatorValue); } },
+                { "workflowExecution", n => { WorkflowExecution = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ResetWorkflowExecutionRequest_workflowExecution>(global::Soenneker.Temporal.OpenApiClient.Models.ResetWorkflowExecutionRequest_workflowExecution.CreateFromDiscriminatorValue); } },
                 { "workflowTaskFinishEventId", n => { WorkflowTaskFinishEventId = n.GetStringValue(); } },
             };
         }
@@ -130,7 +130,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("requestId", RequestId);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Temporal.OpenApiClient.Models.ResetWorkflowExecutionRequest_resetReapplyExcludeTypes>("resetReapplyExcludeTypes", ResetReapplyExcludeTypes);
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.ResetWorkflowExecutionRequest_resetReapplyType>("resetReapplyType", ResetReapplyType);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution>("workflowExecution", WorkflowExecution);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ResetWorkflowExecutionRequest_workflowExecution>("workflowExecution", WorkflowExecution);
             writer.WriteStringValue("workflowTaskFinishEventId", WorkflowTaskFinishEventId);
             writer.WriteAdditionalData(AdditionalData);
         }

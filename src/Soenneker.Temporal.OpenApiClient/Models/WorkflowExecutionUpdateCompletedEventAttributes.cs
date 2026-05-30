@@ -25,18 +25,18 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The metadata about this update.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Meta? Meta { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateCompletedEventAttributes_meta? Meta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Meta Meta { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateCompletedEventAttributes_meta Meta { get; set; }
 #endif
         /// <summary>The outcome of executing the workflow update function.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Outcome? Outcome { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateCompletedEventAttributes_outcome? Outcome { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Outcome Outcome { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateCompletedEventAttributes_outcome Outcome { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateCompletedEventAttributes"/> and sets the default values.
@@ -64,8 +64,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "acceptedEventId", n => { AcceptedEventId = n.GetStringValue(); } },
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Meta>(global::Soenneker.Temporal.OpenApiClient.Models.Meta.CreateFromDiscriminatorValue); } },
-                { "outcome", n => { Outcome = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Outcome>(global::Soenneker.Temporal.OpenApiClient.Models.Outcome.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateCompletedEventAttributes_meta>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateCompletedEventAttributes_meta.CreateFromDiscriminatorValue); } },
+                { "outcome", n => { Outcome = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateCompletedEventAttributes_outcome>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateCompletedEventAttributes_outcome.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -76,8 +76,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("acceptedEventId", AcceptedEventId);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Meta>("meta", Meta);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Outcome>("outcome", Outcome);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateCompletedEventAttributes_meta>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateCompletedEventAttributes_outcome>("outcome", Outcome);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

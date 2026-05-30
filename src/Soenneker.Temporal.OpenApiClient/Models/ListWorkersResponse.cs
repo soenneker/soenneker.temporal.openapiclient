@@ -30,7 +30,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public List<global::Soenneker.Temporal.OpenApiClient.Models.WorkerListInfo> Workers { get; set; }
 #endif
-        /// <summary>Deprecated: Use workers instead. This field returns full WorkerInfo which includes expensive runtime metrics. We will stop populating this field in the future.</summary>
+        /// <summary>&quot;Deprecated: Use workers instead. This field returns full WorkerInfo which includes expensive runtime metrics. We will stop populating this field in the future.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Temporal.OpenApiClient.Models.WorkerInfo>? WorkersInfo { get; set; }

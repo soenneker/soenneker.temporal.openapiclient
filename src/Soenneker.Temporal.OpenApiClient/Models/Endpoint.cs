@@ -15,7 +15,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The date and time when the endpoint was created. (-- api-linter: core::0142::time-field-names=disabled     aip.dev/not-precedent: Not following linter rules. --)</summary>
+        /// <summary>&quot;The date and time when the endpoint was created. (-- api-linter: core::0142::time-field-names=disabled     aip.dev/not-precedent: Not following linter rules. --)&quot;</summary>
         public DateTimeOffset? CreatedTime { get; set; }
         /// <summary>Unique server-generated endpoint ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -25,15 +25,15 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>The date and time when the endpoint was last modified. Will not be set if the endpoint has never been modified. (-- api-linter: core::0142::time-field-names=disabled     aip.dev/not-precedent: Not following linter rules. --)</summary>
+        /// <summary>&quot;The date and time when the endpoint was last modified. Will not be set if the endpoint has never been modified. (-- api-linter: core::0142::time-field-names=disabled     aip.dev/not-precedent: Not following linter rules. --)&quot;</summary>
         public DateTimeOffset? LastModifiedTime { get; set; }
         /// <summary>Spec for the endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.EndpointSpec? Spec { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.Endpoint_spec? Spec { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.EndpointSpec Spec { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.Endpoint_spec Spec { get; set; }
 #endif
         /// <summary>Server exposed URL prefix for invocation of operations on this endpoint. This doesn&apos;t include the protocol, hostname or port as the server does not know how it should be accessed publicly. The URL is stable in the face of endpoint renames.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -79,7 +79,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "createdTime", n => { CreatedTime = n.GetDateTimeOffsetValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "lastModifiedTime", n => { LastModifiedTime = n.GetDateTimeOffsetValue(); } },
-                { "spec", n => { Spec = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.EndpointSpec>(global::Soenneker.Temporal.OpenApiClient.Models.EndpointSpec.CreateFromDiscriminatorValue); } },
+                { "spec", n => { Spec = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Endpoint_spec>(global::Soenneker.Temporal.OpenApiClient.Models.Endpoint_spec.CreateFromDiscriminatorValue); } },
                 { "urlPrefix", n => { UrlPrefix = n.GetStringValue(); } },
                 { "version", n => { Version = n.GetStringValue(); } },
             };
@@ -94,7 +94,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("createdTime", CreatedTime);
             writer.WriteStringValue("id", Id);
             writer.WriteDateTimeOffsetValue("lastModifiedTime", LastModifiedTime);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.EndpointSpec>("spec", Spec);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Endpoint_spec>("spec", Spec);
             writer.WriteStringValue("urlPrefix", UrlPrefix);
             writer.WriteStringValue("version", Version);
             writer.WriteAdditionalData(AdditionalData);
