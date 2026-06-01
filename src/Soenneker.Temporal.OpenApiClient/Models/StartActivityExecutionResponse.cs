@@ -17,10 +17,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Link to the started activity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionResponse_link? Link { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionResponseLink? Link { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionResponse_link Link { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionResponseLink Link { get; set; }
 #endif
         /// <summary>The run ID of the activity that was started - or used (via ACTIVITY_ID_CONFLICT_POLICY_USE_EXISTING).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -57,7 +57,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "link", n => { Link = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionResponse_link>(global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionResponse_link.CreateFromDiscriminatorValue); } },
+                { "link", n => { Link = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionResponseLink>(global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionResponseLink.CreateFromDiscriminatorValue); } },
                 { "runId", n => { RunId = n.GetStringValue(); } },
                 { "started", n => { Started = n.GetBoolValue(); } },
             };
@@ -69,7 +69,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionResponse_link>("link", Link);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionResponseLink>("link", Link);
             writer.WriteStringValue("runId", RunId);
             writer.WriteBoolValue("started", Started);
             writer.WriteAdditionalData(AdditionalData);

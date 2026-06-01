@@ -17,14 +17,14 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces
     {
         /// <summary>Gets an item from the Soenneker.Temporal.OpenApiClient.namespaces.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.WithNamespaceItemRequestBuilder"/></returns>
-        public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.WithNamespaceItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.WithNamespaceValueItemRequestBuilder"/></returns>
+        public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.WithNamespaceValueItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("namespace", position);
-                return new global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.WithNamespaceItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("namespaceValue", position);
+                return new global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.WithNamespaceValueItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

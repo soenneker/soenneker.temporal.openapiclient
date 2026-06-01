@@ -17,18 +17,18 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>All capabilities the namespace supports.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_capabilities? Capabilities { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoCapabilitiesComposed? Capabilities { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_capabilities Capabilities { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoCapabilitiesComposed Capabilities { get; set; }
 #endif
         /// <summary>A key-value map for any customized purpose.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_data? Data { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoDataProperty? Data { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_data Data { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoDataProperty Data { get; set; }
 #endif
         /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -49,10 +49,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Namespace configured limits</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_limits? Limits { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoLimitsComposed? Limits { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_limits Limits { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoLimitsComposed Limits { get; set; }
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -71,7 +71,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public string OwnerEmail { get; set; }
 #endif
         /// <summary>The state property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_state? State { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoState? State { get; set; }
         /// <summary>Whether scheduled workflows are supported on this namespace. This is only needed temporarily while the feature is experimental, so we can give it a high tag.</summary>
         public bool? SupportsSchedules { get; set; }
         /// <summary>
@@ -99,14 +99,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "capabilities", n => { Capabilities = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_capabilities>(global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_capabilities.CreateFromDiscriminatorValue); } },
-                { "data", n => { Data = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_data>(global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_data.CreateFromDiscriminatorValue); } },
+                { "capabilities", n => { Capabilities = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoCapabilitiesComposed>(global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoCapabilitiesComposed.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoDataProperty>(global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoDataProperty.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "limits", n => { Limits = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_limits>(global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_limits.CreateFromDiscriminatorValue); } },
+                { "limits", n => { Limits = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoLimitsComposed>(global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoLimitsComposed.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "ownerEmail", n => { OwnerEmail = n.GetStringValue(); } },
-                { "state", n => { State = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_state>(); } },
+                { "state", n => { State = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoState>(); } },
                 { "supportsSchedules", n => { SupportsSchedules = n.GetBoolValue(); } },
             };
         }
@@ -117,14 +117,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_capabilities>("capabilities", Capabilities);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_data>("data", Data);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoCapabilitiesComposed>("capabilities", Capabilities);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoDataProperty>("data", Data);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_limits>("limits", Limits);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoLimitsComposed>("limits", Limits);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("ownerEmail", OwnerEmail);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo_state>("state", State);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoState>("state", State);
             writer.WriteBoolValue("supportsSchedules", SupportsSchedules);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -26,18 +26,18 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Optional initial patch (e.g. to run the action once immediately).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequest_initialPatch? InitialPatch { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequestInitialPatch? InitialPatch { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequest_initialPatch InitialPatch { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequestInitialPatch InitialPatch { get; set; }
 #endif
         /// <summary>Memo and search attributes to attach to the schedule itself.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequest_memo? Memo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequestMemo? Memo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequest_memo Memo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequestMemo Memo { get; set; }
 #endif
         /// <summary>The namespace the schedule should be created in.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -58,10 +58,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The schedule spec, policies, action, and initial state.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequest_schedule? Schedule { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequestSchedule? Schedule { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequest_schedule Schedule { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequestSchedule Schedule { get; set; }
 #endif
         /// <summary>The id of the new schedule.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -105,11 +105,11 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "identity", n => { Identity = n.GetStringValue(); } },
-                { "initialPatch", n => { InitialPatch = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequest_initialPatch>(global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequest_initialPatch.CreateFromDiscriminatorValue); } },
-                { "memo", n => { Memo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequest_memo>(global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequest_memo.CreateFromDiscriminatorValue); } },
+                { "initialPatch", n => { InitialPatch = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequestInitialPatch>(global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequestInitialPatch.CreateFromDiscriminatorValue); } },
+                { "memo", n => { Memo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequestMemo>(global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequestMemo.CreateFromDiscriminatorValue); } },
                 { "namespace", n => { Namespace = n.GetStringValue(); } },
                 { "requestId", n => { RequestId = n.GetStringValue(); } },
-                { "schedule", n => { Schedule = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequest_schedule>(global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequest_schedule.CreateFromDiscriminatorValue); } },
+                { "schedule", n => { Schedule = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequestSchedule>(global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequestSchedule.CreateFromDiscriminatorValue); } },
                 { "scheduleId", n => { ScheduleId = n.GetStringValue(); } },
                 { "searchAttributes", n => { SearchAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes.CreateFromDiscriminatorValue); } },
             };
@@ -122,11 +122,11 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("identity", Identity);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequest_initialPatch>("initialPatch", InitialPatch);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequest_memo>("memo", Memo);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequestInitialPatch>("initialPatch", InitialPatch);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequestMemo>("memo", Memo);
             writer.WriteStringValue("namespace", Namespace);
             writer.WriteStringValue("requestId", RequestId);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequest_schedule>("schedule", Schedule);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleRequestSchedule>("schedule", Schedule);
             writer.WriteStringValue("scheduleId", ScheduleId);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes>("searchAttributes", SearchAttributes);
             writer.WriteAdditionalData(AdditionalData);

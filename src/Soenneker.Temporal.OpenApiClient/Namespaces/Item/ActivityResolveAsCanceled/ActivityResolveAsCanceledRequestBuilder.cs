@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.ActivityResolveAsCanceled
 {
     /// <summary>
-    /// Builds and executes requests for operations under \namespaces\{namespace}\activity-resolve-as-canceled
+    /// Builds and executes requests for operations under \namespaces\{namespaceValue}\activity-resolve-as-canceled
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ActivityResolveAsCanceledRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.ActivityResolveAsCanc
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ActivityResolveAsCanceledRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespace}/activity-resolve-as-canceled", pathParameters)
+        public ActivityResolveAsCanceledRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/activity-resolve-as-canceled", pathParameters)
         {
         }
         /// <summary>
@@ -30,24 +30,24 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.ActivityResolveAsCanc
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ActivityResolveAsCanceledRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespace}/activity-resolve-as-canceled", rawUrl)
+        public ActivityResolveAsCanceledRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/activity-resolve-as-canceled", rawUrl)
         {
         }
         /// <summary>
         /// RespondActivityTaskFailed is called by workers when processing an activity task fails. For workflow activities, this results in a new `ACTIVITY_TASK_CANCELED` event being written to the workflow history and a new workflow task created for the workflow. Fails with `NotFound` if the task token is no longer valid due to activity timeout, already being completed, or never having existed.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.ActivityResolveAsCanceled.ActivityResolveAsCanceledPostResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCanceled2200Response"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Temporal.OpenApiClient.Models.Status">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.ActivityResolveAsCanceled.ActivityResolveAsCanceledPostResponse?> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCanceledRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCanceled2200Response?> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCanceledRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.ActivityResolveAsCanceled.ActivityResolveAsCanceledPostResponse> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCanceledRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCanceled2200Response> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCanceledRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -56,7 +56,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.ActivityResolveAsCanc
             {
                 { "XXX", global::Soenneker.Temporal.OpenApiClient.Models.Status.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.ActivityResolveAsCanceled.ActivityResolveAsCanceledPostResponse>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.ActivityResolveAsCanceled.ActivityResolveAsCanceledPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCanceled2200Response>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCanceled2200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// RespondActivityTaskFailed is called by workers when processing an activity task fails. For workflow activities, this results in a new `ACTIVITY_TASK_CANCELED` event being written to the workflow history and a new workflow task created for the workflow. Fails with `NotFound` if the task token is no longer valid due to activity timeout, already being completed, or never having existed.

@@ -25,18 +25,18 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The deployment that completed this task. May or may not be set for unversioned workers, depending on whether a value is sent by the SDK. This value updates workflow execution&apos;s `versioning_info.deployment`. Deprecated. Replaced with `deployment_version`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributes_deployment? Deployment { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesDeployment? Deployment { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributes_deployment Deployment { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesDeployment Deployment { get; set; }
 #endif
         /// <summary>The Worker Deployment Version that completed this task. Must be set if `versioning_behavior` is set. This value updates workflow execution&apos;s `versioning_info.deployment_version`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributes_deploymentVersion? DeploymentVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesDeploymentVersion? DeploymentVersion { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributes_deploymentVersion DeploymentVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesDeploymentVersion DeploymentVersion { get; set; }
 #endif
         /// <summary>Identity of the worker who completed this task</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -49,10 +49,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Local usage data sent during workflow task completion and recorded here for posterity</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributes_meteringMetadata? MeteringMetadata { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesMeteringMetadata? MeteringMetadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributes_meteringMetadata MeteringMetadata { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesMeteringMetadata MeteringMetadata { get; set; }
 #endif
         /// <summary>The id of the `WORKFLOW_TASK_SCHEDULED` event this task corresponds to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -65,10 +65,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Data the SDK wishes to record for itself, but server need not interpret, and does not directly impact workflow state.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributes_sdkMetadata? SdkMetadata { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesSdkMetadata? SdkMetadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributes_sdkMetadata SdkMetadata { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesSdkMetadata SdkMetadata { get; set; }
 #endif
         /// <summary>The id of the `WORKFLOW_TASK_STARTED` event this task corresponds to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -79,7 +79,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public string StartedEventId { get; set; }
 #endif
         /// <summary>Versioning behavior sent by the worker that completed this task for this particular workflow execution. UNSPECIFIED means the task was completed by an unversioned worker. This value updates workflow execution&apos;s `versioning_info.behavior`.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributes_versioningBehavior? VersioningBehavior { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesVersioningBehavior? VersioningBehavior { get; set; }
         /// <summary>The name of Worker Deployment that completed this task. Must be set if `versioning_behavior` is set. This value updates workflow execution&apos;s `worker_deployment_name`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -99,10 +99,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Version info of the worker who processed this workflow task. If present, the `build_id` field within is also used as `binary_checksum`, which may be omitted in that case (it may also be populated to preserve compatibility). Deprecated. Use `deployment_version` and `versioning_behavior` instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributes_workerVersion? WorkerVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesWorkerVersion? WorkerVersion { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributes_workerVersion WorkerVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesWorkerVersion WorkerVersion { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributes"/> and sets the default values.
@@ -130,17 +130,17 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "binaryChecksum", n => { BinaryChecksum = n.GetStringValue(); } },
-                { "deployment", n => { Deployment = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributes_deployment>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributes_deployment.CreateFromDiscriminatorValue); } },
-                { "deploymentVersion", n => { DeploymentVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributes_deploymentVersion>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributes_deploymentVersion.CreateFromDiscriminatorValue); } },
+                { "deployment", n => { Deployment = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesDeployment>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesDeployment.CreateFromDiscriminatorValue); } },
+                { "deploymentVersion", n => { DeploymentVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesDeploymentVersion>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesDeploymentVersion.CreateFromDiscriminatorValue); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
-                { "meteringMetadata", n => { MeteringMetadata = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributes_meteringMetadata>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributes_meteringMetadata.CreateFromDiscriminatorValue); } },
+                { "meteringMetadata", n => { MeteringMetadata = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesMeteringMetadata>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesMeteringMetadata.CreateFromDiscriminatorValue); } },
                 { "scheduledEventId", n => { ScheduledEventId = n.GetStringValue(); } },
-                { "sdkMetadata", n => { SdkMetadata = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributes_sdkMetadata>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributes_sdkMetadata.CreateFromDiscriminatorValue); } },
+                { "sdkMetadata", n => { SdkMetadata = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesSdkMetadata>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesSdkMetadata.CreateFromDiscriminatorValue); } },
                 { "startedEventId", n => { StartedEventId = n.GetStringValue(); } },
-                { "versioningBehavior", n => { VersioningBehavior = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributes_versioningBehavior>(); } },
+                { "versioningBehavior", n => { VersioningBehavior = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesVersioningBehavior>(); } },
                 { "workerDeploymentName", n => { WorkerDeploymentName = n.GetStringValue(); } },
                 { "workerDeploymentVersion", n => { WorkerDeploymentVersion = n.GetStringValue(); } },
-                { "workerVersion", n => { WorkerVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributes_workerVersion>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributes_workerVersion.CreateFromDiscriminatorValue); } },
+                { "workerVersion", n => { WorkerVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesWorkerVersion>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesWorkerVersion.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -151,17 +151,17 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("binaryChecksum", BinaryChecksum);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributes_deployment>("deployment", Deployment);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributes_deploymentVersion>("deploymentVersion", DeploymentVersion);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesDeployment>("deployment", Deployment);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesDeploymentVersion>("deploymentVersion", DeploymentVersion);
             writer.WriteStringValue("identity", Identity);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributes_meteringMetadata>("meteringMetadata", MeteringMetadata);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesMeteringMetadata>("meteringMetadata", MeteringMetadata);
             writer.WriteStringValue("scheduledEventId", ScheduledEventId);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributes_sdkMetadata>("sdkMetadata", SdkMetadata);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesSdkMetadata>("sdkMetadata", SdkMetadata);
             writer.WriteStringValue("startedEventId", StartedEventId);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributes_versioningBehavior>("versioningBehavior", VersioningBehavior);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesVersioningBehavior>("versioningBehavior", VersioningBehavior);
             writer.WriteStringValue("workerDeploymentName", WorkerDeploymentName);
             writer.WriteStringValue("workerDeploymentVersion", WorkerDeploymentVersion);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributes_workerVersion>("workerVersion", WorkerVersion);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesWorkerVersion>("workerVersion", WorkerVersion);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

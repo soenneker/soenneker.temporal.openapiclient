@@ -15,14 +15,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An explanation of why this event was written to history.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAdmittedEventAttributes_origin? Origin { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAdmittedEventAttributesOrigin? Origin { get; set; }
         /// <summary>The update request associated with this event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAdmittedEventAttributes_request? Request { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAdmittedEventAttributesRequest? Request { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAdmittedEventAttributes_request Request { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAdmittedEventAttributesRequest Request { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAdmittedEventAttributes"/> and sets the default values.
@@ -49,8 +49,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "origin", n => { Origin = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAdmittedEventAttributes_origin>(); } },
-                { "request", n => { Request = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAdmittedEventAttributes_request>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAdmittedEventAttributes_request.CreateFromDiscriminatorValue); } },
+                { "origin", n => { Origin = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAdmittedEventAttributesOrigin>(); } },
+                { "request", n => { Request = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAdmittedEventAttributesRequest>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAdmittedEventAttributesRequest.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -60,8 +60,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAdmittedEventAttributes_origin>("origin", Origin);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAdmittedEventAttributes_request>("request", Request);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAdmittedEventAttributesOrigin>("origin", Origin);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAdmittedEventAttributesRequest>("request", Request);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

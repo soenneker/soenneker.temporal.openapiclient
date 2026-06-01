@@ -25,18 +25,18 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Worker deployment options that user has set in the worker.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCanceledByIdRequest_deploymentOptions? DeploymentOptions { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCanceledByIdRequestDeploymentOptions? DeploymentOptions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCanceledByIdRequest_deploymentOptions DeploymentOptions { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCanceledByIdRequestDeploymentOptions DeploymentOptions { get; set; }
 #endif
         /// <summary>Serialized additional information to attach to the cancellation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCanceledByIdRequest_details? Details { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCanceledByIdRequestDetails? Details { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCanceledByIdRequest_details Details { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCanceledByIdRequestDetails Details { get; set; }
 #endif
         /// <summary>The identity of the worker/client</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -104,8 +104,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "activityId", n => { ActivityId = n.GetStringValue(); } },
-                { "deploymentOptions", n => { DeploymentOptions = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCanceledByIdRequest_deploymentOptions>(global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCanceledByIdRequest_deploymentOptions.CreateFromDiscriminatorValue); } },
-                { "details", n => { Details = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCanceledByIdRequest_details>(global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCanceledByIdRequest_details.CreateFromDiscriminatorValue); } },
+                { "deploymentOptions", n => { DeploymentOptions = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCanceledByIdRequestDeploymentOptions>(global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCanceledByIdRequestDeploymentOptions.CreateFromDiscriminatorValue); } },
+                { "details", n => { Details = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCanceledByIdRequestDetails>(global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCanceledByIdRequestDetails.CreateFromDiscriminatorValue); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
                 { "namespace", n => { Namespace = n.GetStringValue(); } },
                 { "resourceId", n => { ResourceId = n.GetStringValue(); } },
@@ -121,8 +121,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("activityId", ActivityId);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCanceledByIdRequest_deploymentOptions>("deploymentOptions", DeploymentOptions);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCanceledByIdRequest_details>("details", Details);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCanceledByIdRequestDeploymentOptions>("deploymentOptions", DeploymentOptions);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCanceledByIdRequestDetails>("details", Details);
             writer.WriteStringValue("identity", Identity);
             writer.WriteStringValue("namespace", Namespace);
             writer.WriteStringValue("resourceId", ResourceId);

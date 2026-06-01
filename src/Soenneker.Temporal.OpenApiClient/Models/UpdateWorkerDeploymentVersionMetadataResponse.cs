@@ -17,10 +17,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Full metadata after performing the update.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionMetadataResponse_metadata? Metadata { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionMetadataResponseMetadata? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionMetadataResponse_metadata Metadata { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionMetadataResponseMetadata Metadata { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionMetadataResponse"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionMetadataResponse_metadata>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionMetadataResponse_metadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionMetadataResponseMetadata>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionMetadataResponseMetadata.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionMetadataResponse_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionMetadataResponseMetadata>("metadata", Metadata);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

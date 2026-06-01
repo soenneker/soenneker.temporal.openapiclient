@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.WorkflowRules
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v1\namespaces\{namespace}\workflow-rules
+    /// Builds and executes requests for operations under \api\v1\namespaces\{namespaceValue}\workflow-rules
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WorkflowRulesRequestBuilder : BaseRequestBuilder
@@ -35,7 +35,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.WorkflowRules
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WorkflowRulesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespace}/workflow-rules{?nextPageToken*}", pathParameters)
+        public WorkflowRulesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespaceValue}/workflow-rules{?nextPageToken*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.WorkflowRules
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WorkflowRulesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespace}/workflow-rules{?nextPageToken*}", rawUrl)
+        public WorkflowRulesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespaceValue}/workflow-rules{?nextPageToken*}", rawUrl)
         {
         }
         /// <summary>

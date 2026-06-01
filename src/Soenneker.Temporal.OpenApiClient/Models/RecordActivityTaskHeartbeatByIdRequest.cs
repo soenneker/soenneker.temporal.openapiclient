@@ -25,10 +25,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Arbitrary data, of which the most recent call is kept, to store for this activity</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.RecordActivityTaskHeartbeatByIdRequest_details? Details { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RecordActivityTaskHeartbeatByIdRequestDetails? Details { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.RecordActivityTaskHeartbeatByIdRequest_details Details { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RecordActivityTaskHeartbeatByIdRequestDetails Details { get; set; }
 #endif
         /// <summary>The identity of the worker/client</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -96,7 +96,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "activityId", n => { ActivityId = n.GetStringValue(); } },
-                { "details", n => { Details = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RecordActivityTaskHeartbeatByIdRequest_details>(global::Soenneker.Temporal.OpenApiClient.Models.RecordActivityTaskHeartbeatByIdRequest_details.CreateFromDiscriminatorValue); } },
+                { "details", n => { Details = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RecordActivityTaskHeartbeatByIdRequestDetails>(global::Soenneker.Temporal.OpenApiClient.Models.RecordActivityTaskHeartbeatByIdRequestDetails.CreateFromDiscriminatorValue); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
                 { "namespace", n => { Namespace = n.GetStringValue(); } },
                 { "resourceId", n => { ResourceId = n.GetStringValue(); } },
@@ -112,7 +112,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("activityId", ActivityId);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RecordActivityTaskHeartbeatByIdRequest_details>("details", Details);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RecordActivityTaskHeartbeatByIdRequestDetails>("details", Details);
             writer.WriteStringValue("identity", Identity);
             writer.WriteStringValue("namespace", Namespace);
             writer.WriteStringValue("resourceId", ResourceId);

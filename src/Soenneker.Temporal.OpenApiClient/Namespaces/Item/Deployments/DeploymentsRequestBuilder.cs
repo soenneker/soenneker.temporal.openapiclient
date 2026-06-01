@@ -13,21 +13,21 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Deployments
 {
     /// <summary>
-    /// Builds and executes requests for operations under \namespaces\{namespace}\deployments
+    /// Builds and executes requests for operations under \namespaces\{namespaceValue}\deployments
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DeploymentsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Temporal.OpenApiClient.namespaces.item.deployments.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Deployments.Item.DeploymentSeries_nameItemRequestBuilder"/></returns>
-        public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Deployments.Item.DeploymentSeries_nameItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Deployments.Item.WithDeploymentSeriesNameItemRequestBuilder"/></returns>
+        public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Deployments.Item.WithDeploymentSeriesNameItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("deployment%2Eseries_name", position);
-                return new global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Deployments.Item.DeploymentSeries_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("deploymentSeriesName", position);
+                return new global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Deployments.Item.WithDeploymentSeriesNameItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Deployments
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DeploymentsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespace}/deployments{?nextPageToken*,pageSize*,seriesName*}", pathParameters)
+        public DeploymentsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/deployments{?nextPageToken*,pageSize*,seriesName*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Deployments
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DeploymentsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespace}/deployments{?nextPageToken*,pageSize*,seriesName*}", rawUrl)
+        public DeploymentsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/deployments{?nextPageToken*,pageSize*,seriesName*}", rawUrl)
         {
         }
         /// <summary>

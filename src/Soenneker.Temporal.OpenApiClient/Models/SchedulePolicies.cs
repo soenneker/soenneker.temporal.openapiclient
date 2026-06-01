@@ -25,7 +25,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>If true, and the action would start a workflow, a timestamp will not be appended to the scheduled workflow id.</summary>
         public bool? KeepOriginalWorkflowId { get; set; }
         /// <summary>Policy for overlaps. Note that this can be changed after a schedule has taken some actions, and some changes might produce unintuitive results. In general, the later policy overrides the earlier policy.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.SchedulePolicies_overlapPolicy? OverlapPolicy { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SchedulePoliciesOverlapPolicy? OverlapPolicy { get; set; }
         /// <summary>&quot;If true, and a workflow run fails or times out, turn on \&quot;paused\&quot;. This applies after retry policies: the full chain of retries must fail to trigger a pause here.&quot;</summary>
         public bool? PauseOnFailure { get; set; }
         /// <summary>
@@ -55,7 +55,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             {
                 { "catchupWindow", n => { CatchupWindow = n.GetStringValue(); } },
                 { "keepOriginalWorkflowId", n => { KeepOriginalWorkflowId = n.GetBoolValue(); } },
-                { "overlapPolicy", n => { OverlapPolicy = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.SchedulePolicies_overlapPolicy>(); } },
+                { "overlapPolicy", n => { OverlapPolicy = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.SchedulePoliciesOverlapPolicy>(); } },
                 { "pauseOnFailure", n => { PauseOnFailure = n.GetBoolValue(); } },
             };
         }
@@ -68,7 +68,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("catchupWindow", CatchupWindow);
             writer.WriteBoolValue("keepOriginalWorkflowId", KeepOriginalWorkflowId);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.SchedulePolicies_overlapPolicy>("overlapPolicy", OverlapPolicy);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.SchedulePoliciesOverlapPolicy>("overlapPolicy", OverlapPolicy);
             writer.WriteBoolValue("pauseOnFailure", PauseOnFailure);
             writer.WriteAdditionalData(AdditionalData);
         }

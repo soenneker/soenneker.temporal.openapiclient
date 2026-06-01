@@ -17,10 +17,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>All capabilities the system supports.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.GetSystemInfoResponse_capabilities? Capabilities { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.GetSystemInfoResponseCapabilitiesComposed? Capabilities { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.GetSystemInfoResponse_capabilities Capabilities { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.GetSystemInfoResponseCapabilitiesComposed Capabilities { get; set; }
 #endif
         /// <summary>Version of the server.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "capabilities", n => { Capabilities = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.GetSystemInfoResponse_capabilities>(global::Soenneker.Temporal.OpenApiClient.Models.GetSystemInfoResponse_capabilities.CreateFromDiscriminatorValue); } },
+                { "capabilities", n => { Capabilities = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.GetSystemInfoResponseCapabilitiesComposed>(global::Soenneker.Temporal.OpenApiClient.Models.GetSystemInfoResponseCapabilitiesComposed.CreateFromDiscriminatorValue); } },
                 { "serverVersion", n => { ServerVersion = n.GetStringValue(); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.GetSystemInfoResponse_capabilities>("capabilities", Capabilities);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.GetSystemInfoResponseCapabilitiesComposed>("capabilities", Capabilities);
             writer.WriteStringValue("serverVersion", ServerVersion);
             writer.WriteAdditionalData(AdditionalData);
         }

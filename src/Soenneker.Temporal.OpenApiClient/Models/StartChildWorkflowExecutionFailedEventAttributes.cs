@@ -15,7 +15,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The cause property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartChildWorkflowExecutionFailedEventAttributes_cause? Cause { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartChildWorkflowExecutionFailedEventAttributesCause? Cause { get; set; }
         /// <summary>Deprecated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -97,7 +97,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "cause", n => { Cause = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.StartChildWorkflowExecutionFailedEventAttributes_cause>(); } },
+                { "cause", n => { Cause = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.StartChildWorkflowExecutionFailedEventAttributesCause>(); } },
                 { "control", n => { Control = n.GetStringValue(); } },
                 { "initiatedEventId", n => { InitiatedEventId = n.GetStringValue(); } },
                 { "namespace", n => { Namespace = n.GetStringValue(); } },
@@ -114,7 +114,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.StartChildWorkflowExecutionFailedEventAttributes_cause>("cause", Cause);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.StartChildWorkflowExecutionFailedEventAttributesCause>("cause", Cause);
             writer.WriteStringValue("control", Control);
             writer.WriteStringValue("initiatedEventId", InitiatedEventId);
             writer.WriteStringValue("namespace", Namespace);

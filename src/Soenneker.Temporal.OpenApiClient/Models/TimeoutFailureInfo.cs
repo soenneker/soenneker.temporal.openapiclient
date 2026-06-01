@@ -23,7 +23,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public global::Soenneker.Temporal.OpenApiClient.Models.Payloads LastHeartbeatDetails { get; set; }
 #endif
         /// <summary>The timeoutType property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.TimeoutFailureInfo_timeoutType? TimeoutType { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.TimeoutFailureInfoTimeoutType? TimeoutType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.TimeoutFailureInfo"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "lastHeartbeatDetails", n => { LastHeartbeatDetails = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>(global::Soenneker.Temporal.OpenApiClient.Models.Payloads.CreateFromDiscriminatorValue); } },
-                { "timeoutType", n => { TimeoutType = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.TimeoutFailureInfo_timeoutType>(); } },
+                { "timeoutType", n => { TimeoutType = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.TimeoutFailureInfoTimeoutType>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>("lastHeartbeatDetails", LastHeartbeatDetails);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.TimeoutFailureInfo_timeoutType>("timeoutType", TimeoutType);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.TimeoutFailureInfoTimeoutType>("timeoutType", TimeoutType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

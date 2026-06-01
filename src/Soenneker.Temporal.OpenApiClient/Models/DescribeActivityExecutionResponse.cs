@@ -25,18 +25,18 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Information about the activity execution.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeActivityExecutionResponse_info? Info { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeActivityExecutionResponseInfo? Info { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeActivityExecutionResponse_info Info { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeActivityExecutionResponseInfo Info { get; set; }
 #endif
         /// <summary>Serialized activity input, passed as arguments to the activity function. Only set if include_input was true in the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeActivityExecutionResponse_input? Input { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeActivityExecutionResponseInput? Input { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeActivityExecutionResponse_input Input { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeActivityExecutionResponseInput Input { get; set; }
 #endif
         /// <summary>Token for follow-on long-poll requests. Absent only if the activity is complete.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -49,10 +49,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Only set if the activity is completed and include_outcome was true in the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeActivityExecutionResponse_outcome? Outcome { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeActivityExecutionResponseOutcome? Outcome { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeActivityExecutionResponse_outcome Outcome { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeActivityExecutionResponseOutcome Outcome { get; set; }
 #endif
         /// <summary>The run ID of the activity, useful when run_id was not specified in the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -88,10 +88,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "callbacks", n => { Callbacks = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo>(global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "info", n => { Info = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeActivityExecutionResponse_info>(global::Soenneker.Temporal.OpenApiClient.Models.DescribeActivityExecutionResponse_info.CreateFromDiscriminatorValue); } },
-                { "input", n => { Input = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeActivityExecutionResponse_input>(global::Soenneker.Temporal.OpenApiClient.Models.DescribeActivityExecutionResponse_input.CreateFromDiscriminatorValue); } },
+                { "info", n => { Info = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeActivityExecutionResponseInfo>(global::Soenneker.Temporal.OpenApiClient.Models.DescribeActivityExecutionResponseInfo.CreateFromDiscriminatorValue); } },
+                { "input", n => { Input = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeActivityExecutionResponseInput>(global::Soenneker.Temporal.OpenApiClient.Models.DescribeActivityExecutionResponseInput.CreateFromDiscriminatorValue); } },
                 { "longPollToken", n => { LongPollToken = n.GetStringValue(); } },
-                { "outcome", n => { Outcome = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeActivityExecutionResponse_outcome>(global::Soenneker.Temporal.OpenApiClient.Models.DescribeActivityExecutionResponse_outcome.CreateFromDiscriminatorValue); } },
+                { "outcome", n => { Outcome = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeActivityExecutionResponseOutcome>(global::Soenneker.Temporal.OpenApiClient.Models.DescribeActivityExecutionResponseOutcome.CreateFromDiscriminatorValue); } },
                 { "runId", n => { RunId = n.GetStringValue(); } },
             };
         }
@@ -103,10 +103,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo>("callbacks", Callbacks);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeActivityExecutionResponse_info>("info", Info);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeActivityExecutionResponse_input>("input", Input);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeActivityExecutionResponseInfo>("info", Info);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeActivityExecutionResponseInput>("input", Input);
             writer.WriteStringValue("longPollToken", LongPollToken);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeActivityExecutionResponse_outcome>("outcome", Outcome);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeActivityExecutionResponseOutcome>("outcome", Outcome);
             writer.WriteStringValue("runId", RunId);
             writer.WriteAdditionalData(AdditionalData);
         }

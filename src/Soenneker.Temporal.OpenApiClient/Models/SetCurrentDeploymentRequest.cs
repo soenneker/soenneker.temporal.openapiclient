@@ -42,10 +42,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Optional. Use to add or remove user-defined metadata entries. Metadata entries are exposed when describing a deployment. It is a good place for information such as operator name, links to internal deployment pipelines, etc.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentRequest_updateMetadata? UpdateMetadata { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentRequestUpdateMetadata? UpdateMetadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentRequest_updateMetadata UpdateMetadata { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentRequestUpdateMetadata UpdateMetadata { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentRequest"/> and sets the default values.
@@ -75,7 +75,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "deployment", n => { Deployment = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Deployment>(global::Soenneker.Temporal.OpenApiClient.Models.Deployment.CreateFromDiscriminatorValue); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
                 { "namespace", n => { Namespace = n.GetStringValue(); } },
-                { "updateMetadata", n => { UpdateMetadata = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentRequest_updateMetadata>(global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentRequest_updateMetadata.CreateFromDiscriminatorValue); } },
+                { "updateMetadata", n => { UpdateMetadata = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentRequestUpdateMetadata>(global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentRequestUpdateMetadata.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -88,7 +88,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Deployment>("deployment", Deployment);
             writer.WriteStringValue("identity", Identity);
             writer.WriteStringValue("namespace", Namespace);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentRequest_updateMetadata>("updateMetadata", UpdateMetadata);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentRequestUpdateMetadata>("updateMetadata", UpdateMetadata);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

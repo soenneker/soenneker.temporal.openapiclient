@@ -23,7 +23,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The startedTime property</summary>
         public DateTimeOffset? StartedTime { get; set; }
         /// <summary>The state property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.PendingWorkflowTaskInfo_state? State { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PendingWorkflowTaskInfoState? State { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.PendingWorkflowTaskInfo"/> and sets the default values.
         /// </summary>
@@ -53,7 +53,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "originalScheduledTime", n => { OriginalScheduledTime = n.GetDateTimeOffsetValue(); } },
                 { "scheduledTime", n => { ScheduledTime = n.GetDateTimeOffsetValue(); } },
                 { "startedTime", n => { StartedTime = n.GetDateTimeOffsetValue(); } },
-                { "state", n => { State = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingWorkflowTaskInfo_state>(); } },
+                { "state", n => { State = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingWorkflowTaskInfoState>(); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("originalScheduledTime", OriginalScheduledTime);
             writer.WriteDateTimeOffsetValue("scheduledTime", ScheduledTime);
             writer.WriteDateTimeOffsetValue("startedTime", StartedTime);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingWorkflowTaskInfo_state>("state", State);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingWorkflowTaskInfoState>("state", State);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

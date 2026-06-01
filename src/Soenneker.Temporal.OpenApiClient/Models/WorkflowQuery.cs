@@ -18,18 +18,18 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Headers that were passed by the caller of the query and copied by temporal server into the workflow task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQuery_header? Header { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQueryHeader? Header { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQuery_header Header { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQueryHeader Header { get; set; }
 #endif
         /// <summary>Serialized arguments that will be provided to the query handler.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQuery_queryArgs? QueryArgs { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQueryQueryArgs? QueryArgs { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQuery_queryArgs QueryArgs { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQueryQueryArgs QueryArgs { get; set; }
 #endif
         /// <summary>The workflow-author-defined identifier of the query. Typically a function name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -64,8 +64,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "header", n => { Header = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQuery_header>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQuery_header.CreateFromDiscriminatorValue); } },
-                { "queryArgs", n => { QueryArgs = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQuery_queryArgs>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQuery_queryArgs.CreateFromDiscriminatorValue); } },
+                { "header", n => { Header = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQueryHeader>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQueryHeader.CreateFromDiscriminatorValue); } },
+                { "queryArgs", n => { QueryArgs = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQueryQueryArgs>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQueryQueryArgs.CreateFromDiscriminatorValue); } },
                 { "queryType", n => { QueryType = n.GetStringValue(); } },
             };
         }
@@ -76,8 +76,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQuery_header>("header", Header);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQuery_queryArgs>("queryArgs", QueryArgs);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQueryHeader>("header", Header);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQueryQueryArgs>("queryArgs", QueryArgs);
             writer.WriteStringValue("queryType", QueryType);
             writer.WriteAdditionalData(AdditionalData);
         }

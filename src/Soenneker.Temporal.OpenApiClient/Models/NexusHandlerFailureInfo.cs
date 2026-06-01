@@ -15,7 +15,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Retry behavior, defaults to the retry behavior of the error type as defined in the spec.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.NexusHandlerFailureInfo_retryBehavior? RetryBehavior { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusHandlerFailureInfoRetryBehavior? RetryBehavior { get; set; }
         /// <summary>The Nexus error type as defined in the spec: https://github.com/nexus-rpc/api/blob/main/SPEC.md#predefined-handler-errors.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -49,7 +49,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "retryBehavior", n => { RetryBehavior = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusHandlerFailureInfo_retryBehavior>(); } },
+                { "retryBehavior", n => { RetryBehavior = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusHandlerFailureInfoRetryBehavior>(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
         }
@@ -60,7 +60,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusHandlerFailureInfo_retryBehavior>("retryBehavior", RetryBehavior);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusHandlerFailureInfoRetryBehavior>("retryBehavior", RetryBehavior);
             writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

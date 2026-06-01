@@ -13,21 +13,21 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows
 {
     /// <summary>
-    /// Builds and executes requests for operations under \namespaces\{namespace}\workflows
+    /// Builds and executes requests for operations under \namespaces\{namespaceValue}\workflows
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WorkflowsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Temporal.OpenApiClient.namespaces.item.workflows.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.ExecutionWorkflow_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.ExecutionWorkflow_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.ExecutionWorkflowItemRequestBuilder"/></returns>
+        public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.ExecutionWorkflowItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("executionWorkflow_%2Did", position);
-                return new global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.ExecutionWorkflow_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("executionWorkflow%2Did", position);
+                return new global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.ExecutionWorkflowItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -35,7 +35,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WorkflowsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespace}/workflows{?nextPageToken*,pageSize*,query*}", pathParameters)
+        public WorkflowsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/workflows{?nextPageToken*,pageSize*,query*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WorkflowsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespace}/workflows{?nextPageToken*,pageSize*,query*}", rawUrl)
+        public WorkflowsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/workflows{?nextPageToken*,pageSize*,query*}", rawUrl)
         {
         }
         /// <summary>

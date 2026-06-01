@@ -17,26 +17,26 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The failure if the operation completed unsuccessfully.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponse_failure? Failure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponseFailure? Failure { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponse_failure Failure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponseFailure Failure { get; set; }
 #endif
         /// <summary>Information about the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponse_info? Info { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponseInfo? Info { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponse_info Info { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponseInfo Info { get; set; }
 #endif
         /// <summary>Serialized operation input, passed as the request payload. Only set if include_input was true in the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponse_input? Input { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponseInput? Input { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponse_input Input { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponseInput Input { get; set; }
 #endif
         /// <summary>Token for follow-on long-poll requests. Absent only if the operation is complete.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -49,10 +49,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The result if the operation completed successfully.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponse_result? Result { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponseResult? Result { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponse_result Result { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponseResult Result { get; set; }
 #endif
         /// <summary>The run ID of the operation, useful when run_id was not specified in the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -87,11 +87,11 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "failure", n => { Failure = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponse_failure>(global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponse_failure.CreateFromDiscriminatorValue); } },
-                { "info", n => { Info = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponse_info>(global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponse_info.CreateFromDiscriminatorValue); } },
-                { "input", n => { Input = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponse_input>(global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponse_input.CreateFromDiscriminatorValue); } },
+                { "failure", n => { Failure = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponseFailure>(global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponseFailure.CreateFromDiscriminatorValue); } },
+                { "info", n => { Info = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponseInfo>(global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponseInfo.CreateFromDiscriminatorValue); } },
+                { "input", n => { Input = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponseInput>(global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponseInput.CreateFromDiscriminatorValue); } },
                 { "longPollToken", n => { LongPollToken = n.GetStringValue(); } },
-                { "result", n => { Result = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponse_result>(global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponse_result.CreateFromDiscriminatorValue); } },
+                { "result", n => { Result = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponseResult>(global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponseResult.CreateFromDiscriminatorValue); } },
                 { "runId", n => { RunId = n.GetStringValue(); } },
             };
         }
@@ -102,11 +102,11 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponse_failure>("failure", Failure);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponse_info>("info", Info);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponse_input>("input", Input);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponseFailure>("failure", Failure);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponseInfo>("info", Info);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponseInput>("input", Input);
             writer.WriteStringValue("longPollToken", LongPollToken);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponse_result>("result", Result);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeNexusOperationExecutionResponseResult>("result", Result);
             writer.WriteStringValue("runId", RunId);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -46,10 +46,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The last attempt&apos;s failure, if any.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.PendingNexusOperationInfo_lastAttemptFailure? LastAttemptFailure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PendingNexusOperationInfoLastAttemptFailure? LastAttemptFailure { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.PendingNexusOperationInfo_lastAttemptFailure LastAttemptFailure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PendingNexusOperationInfoLastAttemptFailure LastAttemptFailure { get; set; }
 #endif
         /// <summary>The time when the next attempt is scheduled.</summary>
         public DateTimeOffset? NextAttemptScheduleTime { get; set; }
@@ -120,7 +120,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public string StartToCloseTimeout { get; set; }
 #endif
         /// <summary>The state property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.PendingNexusOperationInfo_state? State { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PendingNexusOperationInfoState? State { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.PendingNexusOperationInfo"/> and sets the default values.
         /// </summary>
@@ -151,7 +151,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "cancellationInfo", n => { CancellationInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCancellationInfo>(global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCancellationInfo.CreateFromDiscriminatorValue); } },
                 { "endpoint", n => { Endpoint = n.GetStringValue(); } },
                 { "lastAttemptCompleteTime", n => { LastAttemptCompleteTime = n.GetDateTimeOffsetValue(); } },
-                { "lastAttemptFailure", n => { LastAttemptFailure = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingNexusOperationInfo_lastAttemptFailure>(global::Soenneker.Temporal.OpenApiClient.Models.PendingNexusOperationInfo_lastAttemptFailure.CreateFromDiscriminatorValue); } },
+                { "lastAttemptFailure", n => { LastAttemptFailure = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingNexusOperationInfoLastAttemptFailure>(global::Soenneker.Temporal.OpenApiClient.Models.PendingNexusOperationInfoLastAttemptFailure.CreateFromDiscriminatorValue); } },
                 { "nextAttemptScheduleTime", n => { NextAttemptScheduleTime = n.GetDateTimeOffsetValue(); } },
                 { "operation", n => { Operation = n.GetStringValue(); } },
                 { "operationId", n => { OperationId = n.GetStringValue(); } },
@@ -162,7 +162,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "scheduledTime", n => { ScheduledTime = n.GetDateTimeOffsetValue(); } },
                 { "service", n => { Service = n.GetStringValue(); } },
                 { "startToCloseTimeout", n => { StartToCloseTimeout = n.GetStringValue(); } },
-                { "state", n => { State = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingNexusOperationInfo_state>(); } },
+                { "state", n => { State = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingNexusOperationInfoState>(); } },
             };
         }
         /// <summary>
@@ -177,7 +177,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCancellationInfo>("cancellationInfo", CancellationInfo);
             writer.WriteStringValue("endpoint", Endpoint);
             writer.WriteDateTimeOffsetValue("lastAttemptCompleteTime", LastAttemptCompleteTime);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingNexusOperationInfo_lastAttemptFailure>("lastAttemptFailure", LastAttemptFailure);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingNexusOperationInfoLastAttemptFailure>("lastAttemptFailure", LastAttemptFailure);
             writer.WriteDateTimeOffsetValue("nextAttemptScheduleTime", NextAttemptScheduleTime);
             writer.WriteStringValue("operation", Operation);
             writer.WriteStringValue("operationId", OperationId);
@@ -188,7 +188,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("scheduleToStartTimeout", ScheduleToStartTimeout);
             writer.WriteStringValue("service", Service);
             writer.WriteStringValue("startToCloseTimeout", StartToCloseTimeout);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingNexusOperationInfo_state>("state", State);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingNexusOperationInfoState>("state", State);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

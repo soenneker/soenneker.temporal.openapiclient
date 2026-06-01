@@ -17,18 +17,18 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The arguments to pass to the named Update handler.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Input_args? Args { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.InputArgs? Args { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Input_args Args { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.InputArgs Args { get; set; }
 #endif
         /// <summary>Headers that are passed with the Update from the requesting entity. These can include things like auth or tracing tokens.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Input_header? Header { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.InputHeader? Header { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Input_header Header { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.InputHeader Header { get; set; }
 #endif
         /// <summary>The name of the Update handler to invoke on the target Workflow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -63,8 +63,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "args", n => { Args = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Input_args>(global::Soenneker.Temporal.OpenApiClient.Models.Input_args.CreateFromDiscriminatorValue); } },
-                { "header", n => { Header = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Input_header>(global::Soenneker.Temporal.OpenApiClient.Models.Input_header.CreateFromDiscriminatorValue); } },
+                { "args", n => { Args = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.InputArgs>(global::Soenneker.Temporal.OpenApiClient.Models.InputArgs.CreateFromDiscriminatorValue); } },
+                { "header", n => { Header = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.InputHeader>(global::Soenneker.Temporal.OpenApiClient.Models.InputHeader.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
             };
         }
@@ -75,8 +75,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Input_args>("args", Args);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Input_header>("header", Header);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.InputArgs>("args", Args);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.InputHeader>("header", Header);
             writer.WriteStringValue("name", Name);
             writer.WriteAdditionalData(AdditionalData);
         }

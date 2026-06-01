@@ -15,7 +15,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.NexusOperations.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \namespaces\{namespace}\nexus-operations\{operationId}
+    /// Builds and executes requests for operations under \namespaces\{namespaceValue}\nexus-operations\{operationId}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithOperationItemRequestBuilder : BaseRequestBuilder
@@ -40,7 +40,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.NexusOperations.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithOperationItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespace}/nexus-operations/{operationId}{?includeInput*,includeOutcome*,longPollToken*,runId*}", pathParameters)
+        public WithOperationItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/nexus-operations/{operationId}{?includeInput*,includeOutcome*,longPollToken*,runId*}", pathParameters)
         {
         }
         /// <summary>
@@ -48,7 +48,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.NexusOperations.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithOperationItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespace}/nexus-operations/{operationId}{?includeInput*,includeOutcome*,longPollToken*,runId*}", rawUrl)
+        public WithOperationItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/nexus-operations/{operationId}{?includeInput*,includeOutcome*,longPollToken*,runId*}", rawUrl)
         {
         }
         /// <summary>

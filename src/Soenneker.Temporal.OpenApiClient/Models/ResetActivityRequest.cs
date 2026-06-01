@@ -18,10 +18,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Execution info of the workflow which scheduled this activity</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ResetActivityRequest_execution? Execution { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ResetActivityRequestExecution? Execution { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ResetActivityRequest_execution Execution { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ResetActivityRequestExecution Execution { get; set; }
 #endif
         /// <summary>Only activity with this ID will be reset.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -96,7 +96,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "execution", n => { Execution = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ResetActivityRequest_execution>(global::Soenneker.Temporal.OpenApiClient.Models.ResetActivityRequest_execution.CreateFromDiscriminatorValue); } },
+                { "execution", n => { Execution = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ResetActivityRequestExecution>(global::Soenneker.Temporal.OpenApiClient.Models.ResetActivityRequestExecution.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
                 { "jitter", n => { Jitter = n.GetStringValue(); } },
@@ -115,7 +115,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ResetActivityRequest_execution>("execution", Execution);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ResetActivityRequestExecution>("execution", Execution);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("identity", Identity);
             writer.WriteStringValue("jitter", Jitter);

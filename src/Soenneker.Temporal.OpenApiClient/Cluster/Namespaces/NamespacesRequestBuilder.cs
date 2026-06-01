@@ -20,14 +20,14 @@ namespace Soenneker.Temporal.OpenApiClient.Cluster.Namespaces
     {
         /// <summary>Gets an item from the Soenneker.Temporal.OpenApiClient.cluster.namespaces.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Cluster.Namespaces.Item.WithNamespaceItemRequestBuilder"/></returns>
-        public global::Soenneker.Temporal.OpenApiClient.Cluster.Namespaces.Item.WithNamespaceItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Cluster.Namespaces.Item.WithNamespaceValueItemRequestBuilder"/></returns>
+        public global::Soenneker.Temporal.OpenApiClient.Cluster.Namespaces.Item.WithNamespaceValueItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("namespace", position);
-                return new global::Soenneker.Temporal.OpenApiClient.Cluster.Namespaces.Item.WithNamespaceItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("namespaceValue", position);
+                return new global::Soenneker.Temporal.OpenApiClient.Cluster.Namespaces.Item.WithNamespaceValueItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -72,18 +72,18 @@ namespace Soenneker.Temporal.OpenApiClient.Cluster.Namespaces
         /// <summary>
         /// RegisterNamespace creates a new namespace which can be used as a container for all resources. A Namespace is a top level entity within Temporal, and is used as a container for resources like workflow executions, task queues, etc. A Namespace acts as a sandbox and provides isolation for all resources within the namespace. All resources belongs to exactly one namespace.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Cluster.Namespaces.NamespacesPostResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespace2200Response"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Temporal.OpenApiClient.Models.Status">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Cluster.Namespaces.NamespacesPostResponse?> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespace2200Response?> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Cluster.Namespaces.NamespacesPostResponse> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespace2200Response> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -92,7 +92,7 @@ namespace Soenneker.Temporal.OpenApiClient.Cluster.Namespaces
             {
                 { "XXX", global::Soenneker.Temporal.OpenApiClient.Models.Status.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Cluster.Namespaces.NamespacesPostResponse>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Cluster.Namespaces.NamespacesPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespace2200Response>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespace2200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// ListNamespaces returns the information and configuration for all namespaces.

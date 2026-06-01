@@ -10,21 +10,21 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v1\namespaces\{namespace}\task-queues
+    /// Builds and executes requests for operations under \api\v1\namespaces\{namespaceValue}\task-queues
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TaskQueuesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Temporal.OpenApiClient.api.v1.namespaces.item.taskQueues.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Item.TaskQueueItemRequestBuilder"/></returns>
-        public global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Item.TaskQueueItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Item.TaskQueueNameItemRequestBuilder"/></returns>
+        public global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Item.TaskQueueNameItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("taskQueue%2Did", position);
-                return new global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Item.TaskQueueItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("taskQueueName%2Did", position);
+                return new global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Item.TaskQueueNameItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -32,7 +32,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TaskQueuesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespace}/task-queues", pathParameters)
+        public TaskQueuesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespaceValue}/task-queues", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TaskQueuesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespace}/task-queues", rawUrl)
+        public TaskQueuesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespaceValue}/task-queues", rawUrl)
         {
         }
     }

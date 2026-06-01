@@ -49,7 +49,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public string JobId { get; set; }
 #endif
         /// <summary>Batch operation type</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeBatchOperationResponse_operationType? OperationType { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeBatchOperationResponseOperationType? OperationType { get; set; }
         /// <summary>Reason indicates the reason to stop a operation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -61,7 +61,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Batch operation start time</summary>
         public DateTimeOffset? StartTime { get; set; }
         /// <summary>Batch operation state</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeBatchOperationResponse_state? State { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeBatchOperationResponseState? State { get; set; }
         /// <summary>Total operation count</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -100,10 +100,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "failureOperationCount", n => { FailureOperationCount = n.GetStringValue(); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
                 { "jobId", n => { JobId = n.GetStringValue(); } },
-                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeBatchOperationResponse_operationType>(); } },
+                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeBatchOperationResponseOperationType>(); } },
                 { "reason", n => { Reason = n.GetStringValue(); } },
                 { "startTime", n => { StartTime = n.GetDateTimeOffsetValue(); } },
-                { "state", n => { State = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeBatchOperationResponse_state>(); } },
+                { "state", n => { State = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeBatchOperationResponseState>(); } },
                 { "totalOperationCount", n => { TotalOperationCount = n.GetStringValue(); } },
             };
         }
@@ -119,10 +119,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("failureOperationCount", FailureOperationCount);
             writer.WriteStringValue("identity", Identity);
             writer.WriteStringValue("jobId", JobId);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeBatchOperationResponse_operationType>("operationType", OperationType);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeBatchOperationResponseOperationType>("operationType", OperationType);
             writer.WriteStringValue("reason", Reason);
             writer.WriteDateTimeOffsetValue("startTime", StartTime);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeBatchOperationResponse_state>("state", State);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeBatchOperationResponseState>("state", State);
             writer.WriteStringValue("totalOperationCount", TotalOperationCount);
             writer.WriteAdditionalData(AdditionalData);
         }

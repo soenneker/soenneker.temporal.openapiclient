@@ -31,7 +31,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public string StartedEventId { get; set; }
 #endif
         /// <summary>The timeoutType property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskTimedOutEventAttributes_timeoutType? TimeoutType { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskTimedOutEventAttributesTimeoutType? TimeoutType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskTimedOutEventAttributes"/> and sets the default values.
         /// </summary>
@@ -59,7 +59,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             {
                 { "scheduledEventId", n => { ScheduledEventId = n.GetStringValue(); } },
                 { "startedEventId", n => { StartedEventId = n.GetStringValue(); } },
-                { "timeoutType", n => { TimeoutType = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskTimedOutEventAttributes_timeoutType>(); } },
+                { "timeoutType", n => { TimeoutType = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskTimedOutEventAttributesTimeoutType>(); } },
             };
         }
         /// <summary>
@@ -71,7 +71,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("scheduledEventId", ScheduledEventId);
             writer.WriteStringValue("startedEventId", StartedEventId);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskTimedOutEventAttributes_timeoutType>("timeoutType", TimeoutType);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskTimedOutEventAttributesTimeoutType>("timeoutType", TimeoutType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -25,7 +25,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfoTaskQueueInfo_type? Type { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfoTaskQueueInfoType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfoTaskQueueInfo"/> and sets the default values.
         /// </summary>
@@ -53,7 +53,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             {
                 { "firstPollerTime", n => { FirstPollerTime = n.GetDateTimeOffsetValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfoTaskQueueInfo_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfoTaskQueueInfoType>(); } },
             };
         }
         /// <summary>
@@ -65,7 +65,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("firstPollerTime", FirstPollerTime);
             writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfoTaskQueueInfo_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfoTaskQueueInfoType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

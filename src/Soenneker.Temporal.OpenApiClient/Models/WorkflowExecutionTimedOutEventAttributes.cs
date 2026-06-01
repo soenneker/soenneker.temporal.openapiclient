@@ -23,7 +23,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public string NewExecutionRunId { get; set; }
 #endif
         /// <summary>The retryState property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTimedOutEventAttributes_retryState? RetryState { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTimedOutEventAttributesRetryState? RetryState { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTimedOutEventAttributes"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "newExecutionRunId", n => { NewExecutionRunId = n.GetStringValue(); } },
-                { "retryState", n => { RetryState = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTimedOutEventAttributes_retryState>(); } },
+                { "retryState", n => { RetryState = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTimedOutEventAttributesRetryState>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("newExecutionRunId", NewExecutionRunId);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTimedOutEventAttributes_retryState>("retryState", RetryState);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTimedOutEventAttributesRetryState>("retryState", RetryState);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

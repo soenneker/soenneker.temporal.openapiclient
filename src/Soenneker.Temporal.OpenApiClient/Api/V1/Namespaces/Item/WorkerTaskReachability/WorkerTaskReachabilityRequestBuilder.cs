@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.WorkerTaskReachability
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v1\namespaces\{namespace}\worker-task-reachability
+    /// Builds and executes requests for operations under \api\v1\namespaces\{namespaceValue}\worker-task-reachability
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WorkerTaskReachabilityRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.WorkerTaskReac
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WorkerTaskReachabilityRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespace}/worker-task-reachability{?buildIds*,reachability*,taskQueues*}", pathParameters)
+        public WorkerTaskReachabilityRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespaceValue}/worker-task-reachability{?buildIds*,reachability*,taskQueues*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.WorkerTaskReac
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WorkerTaskReachabilityRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespace}/worker-task-reachability{?buildIds*,reachability*,taskQueues*}", rawUrl)
+        public WorkerTaskReachabilityRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespaceValue}/worker-task-reachability{?buildIds*,reachability*,taskQueues*}", rawUrl)
         {
         }
         /// <summary>
@@ -102,7 +102,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.WorkerTaskReac
 #endif
             /// <summary>Type of reachability to query for. `TASK_REACHABILITY_NEW_WORKFLOWS` is always returned in the response. Use `TASK_REACHABILITY_EXISTING_WORKFLOWS` if your application needs to respond to queries on closed workflows. Otherwise, use `TASK_REACHABILITY_OPEN_WORKFLOWS`. Default is `TASK_REACHABILITY_EXISTING_WORKFLOWS` if left unspecified. See the TaskReachability docstring for information about each enum variant.</summary>
             [QueryParameter("reachability")]
-            public global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.WorkerTaskReachability.GetReachabilityQueryParameterType? Reachability { get; set; }
+            public global::Soenneker.Temporal.OpenApiClient.Models.GetWorkerTaskReachabilityReachabilityParameter? Reachability { get; set; }
             /// <summary>Task queues to retrieve reachability for. Leave this empty to query for all task queues associated with given build ids in the namespace. Must specify at least one task queue if querying for an unversioned worker. The number of task queues that the server will fetch reachability information for is limited. See the `GetWorkerTaskReachabilityResponse` documentation for more information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

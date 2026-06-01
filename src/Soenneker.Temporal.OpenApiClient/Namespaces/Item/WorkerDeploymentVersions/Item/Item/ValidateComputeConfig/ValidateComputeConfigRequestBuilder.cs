@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.WorkerDeploymentVersions.Item.Item.ValidateComputeConfig
 {
     /// <summary>
-    /// Builds and executes requests for operations under \namespaces\{namespace}\worker-deployment-versions\{deployment_version.deployment_name}\{deployment_version.build_id}\validate-compute-config
+    /// Builds and executes requests for operations under \namespaces\{namespaceValue}\worker-deployment-versions\{deploymentVersionDeploymentName}\{deploymentVersionBuildId}\validate-compute-config
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ValidateComputeConfigRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.WorkerDeploymentVersi
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ValidateComputeConfigRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespace}/worker-deployment-versions/{deployment_version%2Edeployment_name}/{deployment_version%2Ebuild_id}/validate-compute-config", pathParameters)
+        public ValidateComputeConfigRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/worker-deployment-versions/{deploymentVersionDeploymentName}/{deploymentVersionBuildId}/validate-compute-config", pathParameters)
         {
         }
         /// <summary>
@@ -30,24 +30,24 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.WorkerDeploymentVersi
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ValidateComputeConfigRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespace}/worker-deployment-versions/{deployment_version%2Edeployment_name}/{deployment_version%2Ebuild_id}/validate-compute-config", rawUrl)
+        public ValidateComputeConfigRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/worker-deployment-versions/{deploymentVersionDeploymentName}/{deploymentVersionBuildId}/validate-compute-config", rawUrl)
         {
         }
         /// <summary>
         /// Validates the compute config without attaching it to a Worker Deployment Version. Experimental. This API might significantly change or be removed in a future release.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.WorkerDeploymentVersions.Item.Item.ValidateComputeConfig.ValidateComputeConfigPostResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Models.ValidateWorkerDeploymentVersionComputeConfig2200Response"/></returns>
         /// <param name="body">Used to validate the compute config without attaching it to a Worker Deployment Version.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Temporal.OpenApiClient.Models.Status">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.WorkerDeploymentVersions.Item.Item.ValidateComputeConfig.ValidateComputeConfigPostResponse?> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.ValidateWorkerDeploymentVersionComputeConfigRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.ValidateWorkerDeploymentVersionComputeConfig2200Response?> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.ValidateWorkerDeploymentVersionComputeConfigRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.WorkerDeploymentVersions.Item.Item.ValidateComputeConfig.ValidateComputeConfigPostResponse> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.ValidateWorkerDeploymentVersionComputeConfigRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.ValidateWorkerDeploymentVersionComputeConfig2200Response> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.ValidateWorkerDeploymentVersionComputeConfigRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -56,7 +56,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.WorkerDeploymentVersi
             {
                 { "XXX", global::Soenneker.Temporal.OpenApiClient.Models.Status.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.WorkerDeploymentVersions.Item.Item.ValidateComputeConfig.ValidateComputeConfigPostResponse>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.WorkerDeploymentVersions.Item.Item.ValidateComputeConfig.ValidateComputeConfigPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Models.ValidateWorkerDeploymentVersionComputeConfig2200Response>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Models.ValidateWorkerDeploymentVersionComputeConfig2200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Validates the compute config without attaching it to a Worker Deployment Version. Experimental. This API might significantly change or be removed in a future release.

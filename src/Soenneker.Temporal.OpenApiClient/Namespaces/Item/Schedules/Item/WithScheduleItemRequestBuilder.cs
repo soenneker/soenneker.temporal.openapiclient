@@ -15,7 +15,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Schedules.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \namespaces\{namespace}\schedules\{scheduleId}
+    /// Builds and executes requests for operations under \namespaces\{namespaceValue}\schedules\{scheduleId}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithScheduleItemRequestBuilder : BaseRequestBuilder
@@ -40,7 +40,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Schedules.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithScheduleItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespace}/schedules/{scheduleId}{?identity*}", pathParameters)
+        public WithScheduleItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/schedules/{scheduleId}{?identity*}", pathParameters)
         {
         }
         /// <summary>
@@ -48,23 +48,23 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Schedules.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithScheduleItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespace}/schedules/{scheduleId}{?identity*}", rawUrl)
+        public WithScheduleItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/schedules/{scheduleId}{?identity*}", rawUrl)
         {
         }
         /// <summary>
         /// Deletes a schedule, removing it from the system.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Schedules.Item.WithScheduleDeleteResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Models.DeleteSchedule2200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Temporal.OpenApiClient.Models.Status">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Schedules.Item.WithScheduleDeleteResponse?> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Schedules.Item.WithScheduleItemRequestBuilder.WithScheduleItemRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.DeleteSchedule2200Response?> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Schedules.Item.WithScheduleItemRequestBuilder.WithScheduleItemRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Schedules.Item.WithScheduleDeleteResponse> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Schedules.Item.WithScheduleItemRequestBuilder.WithScheduleItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.DeleteSchedule2200Response> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Schedules.Item.WithScheduleItemRequestBuilder.WithScheduleItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -72,7 +72,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Schedules.Item
             {
                 { "XXX", global::Soenneker.Temporal.OpenApiClient.Models.Status.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Schedules.Item.WithScheduleDeleteResponse>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Schedules.Item.WithScheduleDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Models.DeleteSchedule2200Response>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Models.DeleteSchedule2200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns the schedule description and current state of an existing schedule.

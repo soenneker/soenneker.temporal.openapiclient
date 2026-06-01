@@ -33,10 +33,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>If set, overrides the fairness weight for each specified fairness key. Fairness keys not listed in this map will keep their existing overrides (if any).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequest_setFairnessWeightOverrides? SetFairnessWeightOverrides { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestSetFairnessWeightOverridesProperty? SetFairnessWeightOverrides { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequest_setFairnessWeightOverrides SetFairnessWeightOverrides { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestSetFairnessWeightOverridesProperty SetFairnessWeightOverrides { get; set; }
 #endif
         /// <summary>Selects the task queue to update.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -47,7 +47,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public string TaskQueue { get; set; }
 #endif
         /// <summary>The taskQueueType property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequest_taskQueueType? TaskQueueType { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestTaskQueueType? TaskQueueType { get; set; }
         /// <summary>If set, removes any existing fairness weight overrides for each specified fairness key. Fairness weights for corresponding keys fall back to the values set during task creation (if any), or to the default weight of 1.0.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -59,18 +59,18 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Update to the default fairness key rate limit. If not set, this configuration is unchanged. If the `rate_limit` field in the `RateLimitUpdate` is missing, remove the existing rate limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequest_updateFairnessKeyRateLimitDefault? UpdateFairnessKeyRateLimitDefault { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestUpdateFairnessKeyRateLimitDefault? UpdateFairnessKeyRateLimitDefault { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequest_updateFairnessKeyRateLimitDefault UpdateFairnessKeyRateLimitDefault { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestUpdateFairnessKeyRateLimitDefault UpdateFairnessKeyRateLimitDefault { get; set; }
 #endif
         /// <summary>&quot;Update to queue-wide rate limit. If not set, this configuration is unchanged. NOTE: A limit set by the worker is overriden; and restored again when reset. If the `rate_limit` field in the `RateLimitUpdate` is missing, remove the existing rate limit.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequest_updateQueueRateLimit? UpdateQueueRateLimit { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestUpdateQueueRateLimit? UpdateQueueRateLimit { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequest_updateQueueRateLimit UpdateQueueRateLimit { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestUpdateQueueRateLimit UpdateQueueRateLimit { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequest"/> and sets the default values.
@@ -99,12 +99,12 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             {
                 { "identity", n => { Identity = n.GetStringValue(); } },
                 { "namespace", n => { Namespace = n.GetStringValue(); } },
-                { "setFairnessWeightOverrides", n => { SetFairnessWeightOverrides = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequest_setFairnessWeightOverrides>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequest_setFairnessWeightOverrides.CreateFromDiscriminatorValue); } },
+                { "setFairnessWeightOverrides", n => { SetFairnessWeightOverrides = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestSetFairnessWeightOverridesProperty>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestSetFairnessWeightOverridesProperty.CreateFromDiscriminatorValue); } },
                 { "taskQueue", n => { TaskQueue = n.GetStringValue(); } },
-                { "taskQueueType", n => { TaskQueueType = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequest_taskQueueType>(); } },
+                { "taskQueueType", n => { TaskQueueType = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestTaskQueueType>(); } },
                 { "unsetFairnessWeightOverrides", n => { UnsetFairnessWeightOverrides = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "updateFairnessKeyRateLimitDefault", n => { UpdateFairnessKeyRateLimitDefault = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequest_updateFairnessKeyRateLimitDefault>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequest_updateFairnessKeyRateLimitDefault.CreateFromDiscriminatorValue); } },
-                { "updateQueueRateLimit", n => { UpdateQueueRateLimit = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequest_updateQueueRateLimit>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequest_updateQueueRateLimit.CreateFromDiscriminatorValue); } },
+                { "updateFairnessKeyRateLimitDefault", n => { UpdateFairnessKeyRateLimitDefault = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestUpdateFairnessKeyRateLimitDefault>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestUpdateFairnessKeyRateLimitDefault.CreateFromDiscriminatorValue); } },
+                { "updateQueueRateLimit", n => { UpdateQueueRateLimit = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestUpdateQueueRateLimit>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestUpdateQueueRateLimit.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -116,12 +116,12 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("identity", Identity);
             writer.WriteStringValue("namespace", Namespace);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequest_setFairnessWeightOverrides>("setFairnessWeightOverrides", SetFairnessWeightOverrides);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestSetFairnessWeightOverridesProperty>("setFairnessWeightOverrides", SetFairnessWeightOverrides);
             writer.WriteStringValue("taskQueue", TaskQueue);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequest_taskQueueType>("taskQueueType", TaskQueueType);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestTaskQueueType>("taskQueueType", TaskQueueType);
             writer.WriteCollectionOfPrimitiveValues<string>("unsetFairnessWeightOverrides", UnsetFairnessWeightOverrides);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequest_updateFairnessKeyRateLimitDefault>("updateFairnessKeyRateLimitDefault", UpdateFairnessKeyRateLimitDefault);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequest_updateQueueRateLimit>("updateQueueRateLimit", UpdateQueueRateLimit);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestUpdateFairnessKeyRateLimitDefault>("updateFairnessKeyRateLimitDefault", UpdateFairnessKeyRateLimitDefault);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestUpdateQueueRateLimit>("updateQueueRateLimit", UpdateQueueRateLimit);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

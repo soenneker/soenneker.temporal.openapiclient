@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Schedules.Item.MatchingTimes
 {
     /// <summary>
-    /// Builds and executes requests for operations under \namespaces\{namespace}\schedules\{scheduleId}\matching-times
+    /// Builds and executes requests for operations under \namespaces\{namespaceValue}\schedules\{scheduleId}\matching-times
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MatchingTimesRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Schedules.Item.Matchi
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MatchingTimesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespace}/schedules/{scheduleId}/matching-times{?endTime*,startTime*}", pathParameters)
+        public MatchingTimesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/schedules/{scheduleId}/matching-times{?endTime*,startTime*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Schedules.Item.Matchi
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MatchingTimesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespace}/schedules/{scheduleId}/matching-times{?endTime*,startTime*}", rawUrl)
+        public MatchingTimesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/schedules/{scheduleId}/matching-times{?endTime*,startTime*}", rawUrl)
         {
         }
         /// <summary>

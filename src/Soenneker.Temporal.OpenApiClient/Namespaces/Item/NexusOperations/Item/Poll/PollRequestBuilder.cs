@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.NexusOperations.Item.Poll
 {
     /// <summary>
-    /// Builds and executes requests for operations under \namespaces\{namespace}\nexus-operations\{operationId}\poll
+    /// Builds and executes requests for operations under \namespaces\{namespaceValue}\nexus-operations\{operationId}\poll
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PollRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.NexusOperations.Item.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PollRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespace}/nexus-operations/{operationId}/poll{?runId*,waitStage*}", pathParameters)
+        public PollRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/nexus-operations/{operationId}/poll{?runId*,waitStage*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.NexusOperations.Item.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PollRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespace}/nexus-operations/{operationId}/poll{?runId*,waitStage*}", rawUrl)
+        public PollRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/nexus-operations/{operationId}/poll{?runId*,waitStage*}", rawUrl)
         {
         }
         /// <summary>
@@ -102,7 +102,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.NexusOperations.Item.
 #endif
             /// <summary>Stage to wait for. The operation may be in a more advanced stage when the poll is unblocked.</summary>
             [QueryParameter("waitStage")]
-            public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.NexusOperations.Item.Poll.GetWaitStageQueryParameterType? WaitStage { get; set; }
+            public global::Soenneker.Temporal.OpenApiClient.Models.PollNexusOperationExecution2WaitStageParameter? WaitStage { get; set; }
         }
     }
 }

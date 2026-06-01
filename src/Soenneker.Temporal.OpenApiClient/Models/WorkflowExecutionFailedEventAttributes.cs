@@ -17,10 +17,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>&quot;Serialized result of workflow failure (ex: An exception thrown, or error returned)&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionFailedEventAttributes_failure? Failure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionFailedEventAttributesFailure? Failure { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionFailedEventAttributes_failure Failure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionFailedEventAttributesFailure Failure { get; set; }
 #endif
         /// <summary>If another run is started by cron or retry, this contains the new run id.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -31,7 +31,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public string NewExecutionRunId { get; set; }
 #endif
         /// <summary>The retryState property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionFailedEventAttributes_retryState? RetryState { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionFailedEventAttributesRetryState? RetryState { get; set; }
         /// <summary>The `WORKFLOW_TASK_COMPLETED` event which this command was reported with</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -65,9 +65,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "failure", n => { Failure = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionFailedEventAttributes_failure>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionFailedEventAttributes_failure.CreateFromDiscriminatorValue); } },
+                { "failure", n => { Failure = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionFailedEventAttributesFailure>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionFailedEventAttributesFailure.CreateFromDiscriminatorValue); } },
                 { "newExecutionRunId", n => { NewExecutionRunId = n.GetStringValue(); } },
-                { "retryState", n => { RetryState = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionFailedEventAttributes_retryState>(); } },
+                { "retryState", n => { RetryState = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionFailedEventAttributesRetryState>(); } },
                 { "workflowTaskCompletedEventId", n => { WorkflowTaskCompletedEventId = n.GetStringValue(); } },
             };
         }
@@ -78,9 +78,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionFailedEventAttributes_failure>("failure", Failure);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionFailedEventAttributesFailure>("failure", Failure);
             writer.WriteStringValue("newExecutionRunId", NewExecutionRunId);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionFailedEventAttributes_retryState>("retryState", RetryState);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionFailedEventAttributesRetryState>("retryState", RetryState);
             writer.WriteStringValue("workflowTaskCompletedEventId", WorkflowTaskCompletedEventId);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -33,10 +33,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>User metadata provided on start workflow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionConfig_userMetadata? UserMetadata { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionConfigUserMetadata? UserMetadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionConfig_userMetadata UserMetadata { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionConfigUserMetadata UserMetadata { get; set; }
 #endif
         /// <summary>The workflowExecutionTimeout property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -81,7 +81,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             {
                 { "defaultWorkflowTaskTimeout", n => { DefaultWorkflowTaskTimeout = n.GetStringValue(); } },
                 { "taskQueue", n => { TaskQueue = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TaskQueue>(global::Soenneker.Temporal.OpenApiClient.Models.TaskQueue.CreateFromDiscriminatorValue); } },
-                { "userMetadata", n => { UserMetadata = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionConfig_userMetadata>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionConfig_userMetadata.CreateFromDiscriminatorValue); } },
+                { "userMetadata", n => { UserMetadata = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionConfigUserMetadata>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionConfigUserMetadata.CreateFromDiscriminatorValue); } },
                 { "workflowExecutionTimeout", n => { WorkflowExecutionTimeout = n.GetStringValue(); } },
                 { "workflowRunTimeout", n => { WorkflowRunTimeout = n.GetStringValue(); } },
             };
@@ -95,7 +95,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("defaultWorkflowTaskTimeout", DefaultWorkflowTaskTimeout);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TaskQueue>("taskQueue", TaskQueue);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionConfig_userMetadata>("userMetadata", UserMetadata);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionConfigUserMetadata>("userMetadata", UserMetadata);
             writer.WriteStringValue("workflowExecutionTimeout", WorkflowExecutionTimeout);
             writer.WriteStringValue("workflowRunTimeout", WorkflowRunTimeout);
             writer.WriteAdditionalData(AdditionalData);

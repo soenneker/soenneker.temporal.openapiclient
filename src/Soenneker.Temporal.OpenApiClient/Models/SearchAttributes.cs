@@ -18,10 +18,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The indexedFields property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes_indexedFields? IndexedFields { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributesIndexedFieldsProperty? IndexedFields { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes_indexedFields IndexedFields { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributesIndexedFieldsProperty IndexedFields { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes"/> and sets the default values.
@@ -48,7 +48,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "indexedFields", n => { IndexedFields = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes_indexedFields>(global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes_indexedFields.CreateFromDiscriminatorValue); } },
+                { "indexedFields", n => { IndexedFields = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributesIndexedFieldsProperty>(global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributesIndexedFieldsProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -58,7 +58,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes_indexedFields>("indexedFields", IndexedFields);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributesIndexedFieldsProperty>("indexedFields", IndexedFields);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

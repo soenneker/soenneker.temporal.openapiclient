@@ -17,10 +17,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Data post acceptance. Can be used to issue additional updates to this record.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.CreateNexusEndpointResponse_endpoint? Endpoint { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CreateNexusEndpointResponseEndpoint? Endpoint { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.CreateNexusEndpointResponse_endpoint Endpoint { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CreateNexusEndpointResponseEndpoint Endpoint { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.CreateNexusEndpointResponse"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "endpoint", n => { Endpoint = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CreateNexusEndpointResponse_endpoint>(global::Soenneker.Temporal.OpenApiClient.Models.CreateNexusEndpointResponse_endpoint.CreateFromDiscriminatorValue); } },
+                { "endpoint", n => { Endpoint = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CreateNexusEndpointResponseEndpoint>(global::Soenneker.Temporal.OpenApiClient.Models.CreateNexusEndpointResponseEndpoint.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CreateNexusEndpointResponse_endpoint>("endpoint", Endpoint);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CreateNexusEndpointResponseEndpoint>("endpoint", Endpoint);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

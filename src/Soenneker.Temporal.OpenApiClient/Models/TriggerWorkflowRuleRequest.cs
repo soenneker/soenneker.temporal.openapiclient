@@ -17,10 +17,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Execution info of the workflow which scheduled this activity</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.TriggerWorkflowRuleRequest_execution? Execution { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.TriggerWorkflowRuleRequestExecution? Execution { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.TriggerWorkflowRuleRequest_execution Execution { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.TriggerWorkflowRuleRequestExecution Execution { get; set; }
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -49,10 +49,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>&quot;Note: Rule ID and expiration date are not used in the trigger request.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.TriggerWorkflowRuleRequest_spec? Spec { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.TriggerWorkflowRuleRequestSpec? Spec { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.TriggerWorkflowRuleRequest_spec Spec { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.TriggerWorkflowRuleRequestSpec Spec { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.TriggerWorkflowRuleRequest"/> and sets the default values.
@@ -79,11 +79,11 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "execution", n => { Execution = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TriggerWorkflowRuleRequest_execution>(global::Soenneker.Temporal.OpenApiClient.Models.TriggerWorkflowRuleRequest_execution.CreateFromDiscriminatorValue); } },
+                { "execution", n => { Execution = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TriggerWorkflowRuleRequestExecution>(global::Soenneker.Temporal.OpenApiClient.Models.TriggerWorkflowRuleRequestExecution.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
                 { "namespace", n => { Namespace = n.GetStringValue(); } },
-                { "spec", n => { Spec = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TriggerWorkflowRuleRequest_spec>(global::Soenneker.Temporal.OpenApiClient.Models.TriggerWorkflowRuleRequest_spec.CreateFromDiscriminatorValue); } },
+                { "spec", n => { Spec = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TriggerWorkflowRuleRequestSpec>(global::Soenneker.Temporal.OpenApiClient.Models.TriggerWorkflowRuleRequestSpec.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -93,11 +93,11 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TriggerWorkflowRuleRequest_execution>("execution", Execution);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TriggerWorkflowRuleRequestExecution>("execution", Execution);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("identity", Identity);
             writer.WriteStringValue("namespace", Namespace);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TriggerWorkflowRuleRequest_spec>("spec", Spec);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TriggerWorkflowRuleRequestSpec>("spec", Spec);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

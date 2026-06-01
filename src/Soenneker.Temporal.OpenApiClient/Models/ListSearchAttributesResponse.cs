@@ -17,26 +17,26 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Mapping between custom (user-registered) search attribute name to its IndexedValueType.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponse_customAttributes? CustomAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponseCustomAttributesProperty? CustomAttributes { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponse_customAttributes CustomAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponseCustomAttributesProperty CustomAttributes { get; set; }
 #endif
         /// <summary>Mapping from the attribute name to the visibility storage native type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponse_storageSchema? StorageSchema { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponseStorageSchemaProperty? StorageSchema { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponse_storageSchema StorageSchema { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponseStorageSchemaProperty StorageSchema { get; set; }
 #endif
         /// <summary>Mapping between system (predefined) search attribute name to its IndexedValueType.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponse_systemAttributes? SystemAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponseSystemAttributesProperty? SystemAttributes { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponse_systemAttributes SystemAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponseSystemAttributesProperty SystemAttributes { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponse"/> and sets the default values.
@@ -63,9 +63,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "customAttributes", n => { CustomAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponse_customAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponse_customAttributes.CreateFromDiscriminatorValue); } },
-                { "storageSchema", n => { StorageSchema = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponse_storageSchema>(global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponse_storageSchema.CreateFromDiscriminatorValue); } },
-                { "systemAttributes", n => { SystemAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponse_systemAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponse_systemAttributes.CreateFromDiscriminatorValue); } },
+                { "customAttributes", n => { CustomAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponseCustomAttributesProperty>(global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponseCustomAttributesProperty.CreateFromDiscriminatorValue); } },
+                { "storageSchema", n => { StorageSchema = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponseStorageSchemaProperty>(global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponseStorageSchemaProperty.CreateFromDiscriminatorValue); } },
+                { "systemAttributes", n => { SystemAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponseSystemAttributesProperty>(global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponseSystemAttributesProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -75,9 +75,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponse_customAttributes>("customAttributes", CustomAttributes);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponse_storageSchema>("storageSchema", StorageSchema);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponse_systemAttributes>("systemAttributes", SystemAttributes);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponseCustomAttributesProperty>("customAttributes", CustomAttributes);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponseStorageSchemaProperty>("storageSchema", StorageSchema);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponseSystemAttributesProperty>("systemAttributes", SystemAttributes);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

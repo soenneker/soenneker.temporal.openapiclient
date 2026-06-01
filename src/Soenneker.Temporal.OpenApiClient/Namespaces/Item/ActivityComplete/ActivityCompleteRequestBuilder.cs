@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.ActivityComplete
 {
     /// <summary>
-    /// Builds and executes requests for operations under \namespaces\{namespace}\activity-complete
+    /// Builds and executes requests for operations under \namespaces\{namespaceValue}\activity-complete
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ActivityCompleteRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.ActivityComplete
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ActivityCompleteRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespace}/activity-complete", pathParameters)
+        public ActivityCompleteRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/activity-complete", pathParameters)
         {
         }
         /// <summary>
@@ -30,24 +30,24 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.ActivityComplete
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ActivityCompleteRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespace}/activity-complete", rawUrl)
+        public ActivityCompleteRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/activity-complete", rawUrl)
         {
         }
         /// <summary>
         /// RespondActivityTaskCompleted is called by workers when they successfully complete an activity task. For workflow activities, this results in a new `ACTIVITY_TASK_COMPLETED` event being written to the workflow history and a new workflow task created for the workflow. Fails with `NotFound` if the task token is no longer valid due to activity timeout, already being completed, or never having existed.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.ActivityComplete.ActivityCompletePostResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompleted2200Response"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Temporal.OpenApiClient.Models.Status">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.ActivityComplete.ActivityCompletePostResponse?> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompleted2200Response?> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.ActivityComplete.ActivityCompletePostResponse> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompleted2200Response> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -56,7 +56,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.ActivityComplete
             {
                 { "XXX", global::Soenneker.Temporal.OpenApiClient.Models.Status.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.ActivityComplete.ActivityCompletePostResponse>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.ActivityComplete.ActivityCompletePostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompleted2200Response>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompleted2200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// RespondActivityTaskCompleted is called by workers when they successfully complete an activity task. For workflow activities, this results in a new `ACTIVITY_TASK_COMPLETED` event being written to the workflow history and a new workflow task created for the workflow. Fails with `NotFound` if the task token is no longer valid due to activity timeout, already being completed, or never having existed.

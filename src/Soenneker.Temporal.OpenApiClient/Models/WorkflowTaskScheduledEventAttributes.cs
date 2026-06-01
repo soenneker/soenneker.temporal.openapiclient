@@ -27,10 +27,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The task queue this workflow task was enqueued in, which could be a normal or sticky queue</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskScheduledEventAttributes_taskQueue? TaskQueue { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskScheduledEventAttributesTaskQueue? TaskQueue { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskScheduledEventAttributes_taskQueue TaskQueue { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskScheduledEventAttributesTaskQueue TaskQueue { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskScheduledEventAttributes"/> and sets the default values.
@@ -59,7 +59,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             {
                 { "attempt", n => { Attempt = n.GetIntValue(); } },
                 { "startToCloseTimeout", n => { StartToCloseTimeout = n.GetStringValue(); } },
-                { "taskQueue", n => { TaskQueue = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskScheduledEventAttributes_taskQueue>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskScheduledEventAttributes_taskQueue.CreateFromDiscriminatorValue); } },
+                { "taskQueue", n => { TaskQueue = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskScheduledEventAttributesTaskQueue>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskScheduledEventAttributesTaskQueue.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -71,7 +71,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("attempt", Attempt);
             writer.WriteStringValue("startToCloseTimeout", StartToCloseTimeout);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskScheduledEventAttributes_taskQueue>("taskQueue", TaskQueue);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskScheduledEventAttributesTaskQueue>("taskQueue", TaskQueue);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

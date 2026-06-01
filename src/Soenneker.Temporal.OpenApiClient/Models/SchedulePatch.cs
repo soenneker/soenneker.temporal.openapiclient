@@ -33,10 +33,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>If set, trigger one action immediately.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.SchedulePatch_triggerImmediately? TriggerImmediately { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SchedulePatchTriggerImmediately? TriggerImmediately { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.SchedulePatch_triggerImmediately TriggerImmediately { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SchedulePatchTriggerImmediately TriggerImmediately { get; set; }
 #endif
         /// <summary>The unpause property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -73,7 +73,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             {
                 { "backfillRequest", n => { BackfillRequest = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.BackfillRequest>(global::Soenneker.Temporal.OpenApiClient.Models.BackfillRequest.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "pause", n => { Pause = n.GetStringValue(); } },
-                { "triggerImmediately", n => { TriggerImmediately = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SchedulePatch_triggerImmediately>(global::Soenneker.Temporal.OpenApiClient.Models.SchedulePatch_triggerImmediately.CreateFromDiscriminatorValue); } },
+                { "triggerImmediately", n => { TriggerImmediately = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SchedulePatchTriggerImmediately>(global::Soenneker.Temporal.OpenApiClient.Models.SchedulePatchTriggerImmediately.CreateFromDiscriminatorValue); } },
                 { "unpause", n => { Unpause = n.GetStringValue(); } },
             };
         }
@@ -86,7 +86,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.BackfillRequest>("backfillRequest", BackfillRequest);
             writer.WriteStringValue("pause", Pause);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SchedulePatch_triggerImmediately>("triggerImmediately", TriggerImmediately);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SchedulePatchTriggerImmediately>("triggerImmediately", TriggerImmediately);
             writer.WriteStringValue("unpause", Unpause);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -24,7 +24,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public string Message { get; set; }
 #endif
         /// <summary>The severity property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.Alert_severity? Severity { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.AlertSeverity? Severity { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.Alert"/> and sets the default values.
         /// </summary>
@@ -51,7 +51,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "message", n => { Message = n.GetStringValue(); } },
-                { "severity", n => { Severity = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.Alert_severity>(); } },
+                { "severity", n => { Severity = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.AlertSeverity>(); } },
             };
         }
         /// <summary>
@@ -62,7 +62,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("message", Message);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.Alert_severity>("severity", Severity);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.AlertSeverity>("severity", Severity);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

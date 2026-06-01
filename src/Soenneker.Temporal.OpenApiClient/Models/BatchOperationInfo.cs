@@ -27,7 +27,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Batch operation start time</summary>
         public DateTimeOffset? StartTime { get; set; }
         /// <summary>Batch operation state</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationInfo_state? State { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationInfoState? State { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationInfo"/> and sets the default values.
         /// </summary>
@@ -56,7 +56,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "closeTime", n => { CloseTime = n.GetDateTimeOffsetValue(); } },
                 { "jobId", n => { JobId = n.GetStringValue(); } },
                 { "startTime", n => { StartTime = n.GetDateTimeOffsetValue(); } },
-                { "state", n => { State = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationInfo_state>(); } },
+                { "state", n => { State = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationInfoState>(); } },
             };
         }
         /// <summary>
@@ -69,7 +69,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("closeTime", CloseTime);
             writer.WriteStringValue("jobId", JobId);
             writer.WriteDateTimeOffsetValue("startTime", StartTime);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationInfo_state>("state", State);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationInfoState>("state", State);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

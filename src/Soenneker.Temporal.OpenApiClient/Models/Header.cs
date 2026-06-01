@@ -18,10 +18,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The fields property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Header_fields? Fields { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.HeaderFieldsProperty? Fields { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Header_fields Fields { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.HeaderFieldsProperty Fields { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.Header"/> and sets the default values.
@@ -48,7 +48,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "fields", n => { Fields = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Header_fields>(global::Soenneker.Temporal.OpenApiClient.Models.Header_fields.CreateFromDiscriminatorValue); } },
+                { "fields", n => { Fields = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.HeaderFieldsProperty>(global::Soenneker.Temporal.OpenApiClient.Models.HeaderFieldsProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -58,7 +58,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Header_fields>("fields", Fields);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.HeaderFieldsProperty>("fields", Fields);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

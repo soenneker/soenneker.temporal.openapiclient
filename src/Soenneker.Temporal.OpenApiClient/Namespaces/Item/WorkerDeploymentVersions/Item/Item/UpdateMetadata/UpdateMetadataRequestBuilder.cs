@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.WorkerDeploymentVersions.Item.Item.UpdateMetadata
 {
     /// <summary>
-    /// Builds and executes requests for operations under \namespaces\{namespace}\worker-deployment-versions\{deployment_version.deployment_name}\{deployment_version.build_id}\update-metadata
+    /// Builds and executes requests for operations under \namespaces\{namespaceValue}\worker-deployment-versions\{deploymentVersionDeploymentName}\{deploymentVersionBuildId}\update-metadata
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpdateMetadataRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.WorkerDeploymentVersi
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public UpdateMetadataRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespace}/worker-deployment-versions/{deployment_version%2Edeployment_name}/{deployment_version%2Ebuild_id}/update-metadata", pathParameters)
+        public UpdateMetadataRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/worker-deployment-versions/{deploymentVersionDeploymentName}/{deploymentVersionBuildId}/update-metadata", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.WorkerDeploymentVersi
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public UpdateMetadataRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespace}/worker-deployment-versions/{deployment_version%2Edeployment_name}/{deployment_version%2Ebuild_id}/update-metadata", rawUrl)
+        public UpdateMetadataRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/worker-deployment-versions/{deploymentVersionDeploymentName}/{deploymentVersionBuildId}/update-metadata", rawUrl)
         {
         }
         /// <summary>

@@ -33,10 +33,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>A key-value map for any customized purpose.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequest_data? Data { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestDataProperty? Data { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequest_data Data { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestDataProperty Data { get; set; }
 #endif
         /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -47,7 +47,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public string Description { get; set; }
 #endif
         /// <summary>If unspecified (ARCHIVAL_STATE_UNSPECIFIED) then default server configuration is used.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequest_historyArchivalState? HistoryArchivalState { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestHistoryArchivalState? HistoryArchivalState { get; set; }
         /// <summary>The historyArchivalUri property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -83,7 +83,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public string SecurityToken { get; set; }
 #endif
         /// <summary>If unspecified (ARCHIVAL_STATE_UNSPECIFIED) then default server configuration is used.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequest_visibilityArchivalState? VisibilityArchivalState { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestVisibilityArchivalState? VisibilityArchivalState { get; set; }
         /// <summary>The visibilityArchivalUri property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -127,15 +127,15 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             {
                 { "activeClusterName", n => { ActiveClusterName = n.GetStringValue(); } },
                 { "clusters", n => { Clusters = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.ClusterReplicationConfig>(global::Soenneker.Temporal.OpenApiClient.Models.ClusterReplicationConfig.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "data", n => { Data = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequest_data>(global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequest_data.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestDataProperty>(global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestDataProperty.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "historyArchivalState", n => { HistoryArchivalState = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequest_historyArchivalState>(); } },
+                { "historyArchivalState", n => { HistoryArchivalState = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestHistoryArchivalState>(); } },
                 { "historyArchivalUri", n => { HistoryArchivalUri = n.GetStringValue(); } },
                 { "isGlobalNamespace", n => { IsGlobalNamespace = n.GetBoolValue(); } },
                 { "namespace", n => { Namespace = n.GetStringValue(); } },
                 { "ownerEmail", n => { OwnerEmail = n.GetStringValue(); } },
                 { "securityToken", n => { SecurityToken = n.GetStringValue(); } },
-                { "visibilityArchivalState", n => { VisibilityArchivalState = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequest_visibilityArchivalState>(); } },
+                { "visibilityArchivalState", n => { VisibilityArchivalState = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestVisibilityArchivalState>(); } },
                 { "visibilityArchivalUri", n => { VisibilityArchivalUri = n.GetStringValue(); } },
                 { "workflowExecutionRetentionPeriod", n => { WorkflowExecutionRetentionPeriod = n.GetStringValue(); } },
             };
@@ -149,15 +149,15 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("activeClusterName", ActiveClusterName);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.ClusterReplicationConfig>("clusters", Clusters);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequest_data>("data", Data);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestDataProperty>("data", Data);
             writer.WriteStringValue("description", Description);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequest_historyArchivalState>("historyArchivalState", HistoryArchivalState);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestHistoryArchivalState>("historyArchivalState", HistoryArchivalState);
             writer.WriteStringValue("historyArchivalUri", HistoryArchivalUri);
             writer.WriteBoolValue("isGlobalNamespace", IsGlobalNamespace);
             writer.WriteStringValue("namespace", Namespace);
             writer.WriteStringValue("ownerEmail", OwnerEmail);
             writer.WriteStringValue("securityToken", SecurityToken);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequest_visibilityArchivalState>("visibilityArchivalState", VisibilityArchivalState);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestVisibilityArchivalState>("visibilityArchivalState", VisibilityArchivalState);
             writer.WriteStringValue("visibilityArchivalUri", VisibilityArchivalUri);
             writer.WriteStringValue("workflowExecutionRetentionPeriod", WorkflowExecutionRetentionPeriod);
             writer.WriteAdditionalData(AdditionalData);

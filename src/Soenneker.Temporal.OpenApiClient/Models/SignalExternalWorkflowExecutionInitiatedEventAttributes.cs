@@ -35,10 +35,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Serialized arguments to provide to the signal handler</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.SignalExternalWorkflowExecutionInitiatedEventAttributes_input? Input { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SignalExternalWorkflowExecutionInitiatedEventAttributesInput? Input { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.SignalExternalWorkflowExecutionInitiatedEventAttributes_input Input { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SignalExternalWorkflowExecutionInitiatedEventAttributesInput Input { get; set; }
 #endif
         /// <summary>Namespace of the to-be-signalled workflow. SDKs and UI tools should use `namespace` field but server must use `namespace_id` only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -108,7 +108,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "childWorkflowOnly", n => { ChildWorkflowOnly = n.GetBoolValue(); } },
                 { "control", n => { Control = n.GetStringValue(); } },
                 { "header", n => { Header = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Header>(global::Soenneker.Temporal.OpenApiClient.Models.Header.CreateFromDiscriminatorValue); } },
-                { "input", n => { Input = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalExternalWorkflowExecutionInitiatedEventAttributes_input>(global::Soenneker.Temporal.OpenApiClient.Models.SignalExternalWorkflowExecutionInitiatedEventAttributes_input.CreateFromDiscriminatorValue); } },
+                { "input", n => { Input = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalExternalWorkflowExecutionInitiatedEventAttributesInput>(global::Soenneker.Temporal.OpenApiClient.Models.SignalExternalWorkflowExecutionInitiatedEventAttributesInput.CreateFromDiscriminatorValue); } },
                 { "namespace", n => { Namespace = n.GetStringValue(); } },
                 { "namespaceId", n => { NamespaceId = n.GetStringValue(); } },
                 { "signalName", n => { SignalName = n.GetStringValue(); } },
@@ -126,7 +126,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteBoolValue("childWorkflowOnly", ChildWorkflowOnly);
             writer.WriteStringValue("control", Control);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Header>("header", Header);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalExternalWorkflowExecutionInitiatedEventAttributes_input>("input", Input);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalExternalWorkflowExecutionInitiatedEventAttributesInput>("input", Input);
             writer.WriteStringValue("namespace", Namespace);
             writer.WriteStringValue("namespaceId", NamespaceId);
             writer.WriteStringValue("signalName", SignalName);

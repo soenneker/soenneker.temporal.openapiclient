@@ -49,10 +49,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Serialized arguments to the workflow. These are passed as arguments to the workflow function.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_input? Input { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestInput? Input { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_input Input { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestInput Input { get; set; }
 #endif
         /// <summary>Links to be associated with the WorkflowExecutionStarted and WorkflowExecutionSignaled events.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -81,10 +81,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Priority metadata</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_priority? Priority { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestPriority? Priority { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_priority Priority { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestPriority Priority { get; set; }
 #endif
         /// <summary>Used to de-dupe signal w/ start requests</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -97,10 +97,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Retry policy for the workflow</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_retryPolicy? RetryPolicy { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestRetryPolicy? RetryPolicy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_retryPolicy RetryPolicy { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestRetryPolicy RetryPolicy { get; set; }
 #endif
         /// <summary>A user-defined set of *indexed* fields that are used/exposed when listing/searching workflows. The payload is not serialized in a user-defined way.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -113,10 +113,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Serialized value(s) to provide with the signal</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_signalInput? SignalInput { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestSignalInput? SignalInput { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_signalInput SignalInput { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestSignalInput SignalInput { get; set; }
 #endif
         /// <summary>The workflow author-defined name of the signal to send to the workflow</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -129,34 +129,34 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The task queue to start this workflow on, if it will be started</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_taskQueue? TaskQueue { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestTaskQueue? TaskQueue { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_taskQueue TaskQueue { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestTaskQueue TaskQueue { get; set; }
 #endif
         /// <summary>Time-skipping configuration. If not set, time skipping is disabled.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_timeSkippingConfig? TimeSkippingConfig { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestTimeSkippingConfig? TimeSkippingConfig { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_timeSkippingConfig TimeSkippingConfig { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestTimeSkippingConfig TimeSkippingConfig { get; set; }
 #endif
         /// <summary>Metadata on the workflow if it is started. This is carried over to the WorkflowExecutionInfo for use by user interfaces to display the fixed as-of-start summary and details of the workflow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_userMetadata? UserMetadata { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestUserMetadata? UserMetadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_userMetadata UserMetadata { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestUserMetadata UserMetadata { get; set; }
 #endif
         /// <summary>If set, takes precedence over the Versioning Behavior sent by the SDK on Workflow Task completion. To unset the override after the workflow is running, use UpdateWorkflowExecutionOptions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_versioningOverride? VersioningOverride { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestVersioningOverride? VersioningOverride { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_versioningOverride VersioningOverride { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestVersioningOverride VersioningOverride { get; set; }
 #endif
         /// <summary>Total workflow execution timeout including retries and continue as new</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -175,9 +175,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public string WorkflowId { get; set; }
 #endif
         /// <summary>Defines how to resolve a workflow id conflict with a *running* workflow. The default policy is WORKFLOW_ID_CONFLICT_POLICY_USE_EXISTING. Note that WORKFLOW_ID_CONFLICT_POLICY_FAIL is an invalid option. See `workflow_id_reuse_policy` for handling a workflow id duplication with a *closed* workflow.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_workflowIdConflictPolicy? WorkflowIdConflictPolicy { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestWorkflowIdConflictPolicy? WorkflowIdConflictPolicy { get; set; }
         /// <summary>Defines whether to allow re-using the workflow id from a previously *closed* workflow. The default policy is WORKFLOW_ID_REUSE_POLICY_ALLOW_DUPLICATE. See `workflow_id_reuse_policy` for handling a workflow id duplication with a *running* workflow.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_workflowIdReusePolicy? WorkflowIdReusePolicy { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestWorkflowIdReusePolicy? WorkflowIdReusePolicy { get; set; }
         /// <summary>Timeout of a single workflow run</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -239,24 +239,24 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "cronSchedule", n => { CronSchedule = n.GetStringValue(); } },
                 { "header", n => { Header = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Header>(global::Soenneker.Temporal.OpenApiClient.Models.Header.CreateFromDiscriminatorValue); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
-                { "input", n => { Input = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_input>(global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_input.CreateFromDiscriminatorValue); } },
+                { "input", n => { Input = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestInput>(global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestInput.CreateFromDiscriminatorValue); } },
                 { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.Link>(global::Soenneker.Temporal.OpenApiClient.Models.Link.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "memo", n => { Memo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Memo>(global::Soenneker.Temporal.OpenApiClient.Models.Memo.CreateFromDiscriminatorValue); } },
                 { "namespace", n => { Namespace = n.GetStringValue(); } },
-                { "priority", n => { Priority = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_priority>(global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_priority.CreateFromDiscriminatorValue); } },
+                { "priority", n => { Priority = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestPriority>(global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestPriority.CreateFromDiscriminatorValue); } },
                 { "requestId", n => { RequestId = n.GetStringValue(); } },
-                { "retryPolicy", n => { RetryPolicy = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_retryPolicy>(global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_retryPolicy.CreateFromDiscriminatorValue); } },
+                { "retryPolicy", n => { RetryPolicy = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestRetryPolicy>(global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestRetryPolicy.CreateFromDiscriminatorValue); } },
                 { "searchAttributes", n => { SearchAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes.CreateFromDiscriminatorValue); } },
-                { "signalInput", n => { SignalInput = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_signalInput>(global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_signalInput.CreateFromDiscriminatorValue); } },
+                { "signalInput", n => { SignalInput = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestSignalInput>(global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestSignalInput.CreateFromDiscriminatorValue); } },
                 { "signalName", n => { SignalName = n.GetStringValue(); } },
-                { "taskQueue", n => { TaskQueue = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_taskQueue>(global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_taskQueue.CreateFromDiscriminatorValue); } },
-                { "timeSkippingConfig", n => { TimeSkippingConfig = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_timeSkippingConfig>(global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_timeSkippingConfig.CreateFromDiscriminatorValue); } },
-                { "userMetadata", n => { UserMetadata = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_userMetadata>(global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_userMetadata.CreateFromDiscriminatorValue); } },
-                { "versioningOverride", n => { VersioningOverride = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_versioningOverride>(global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_versioningOverride.CreateFromDiscriminatorValue); } },
+                { "taskQueue", n => { TaskQueue = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestTaskQueue>(global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestTaskQueue.CreateFromDiscriminatorValue); } },
+                { "timeSkippingConfig", n => { TimeSkippingConfig = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestTimeSkippingConfig>(global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestTimeSkippingConfig.CreateFromDiscriminatorValue); } },
+                { "userMetadata", n => { UserMetadata = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestUserMetadata>(global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestUserMetadata.CreateFromDiscriminatorValue); } },
+                { "versioningOverride", n => { VersioningOverride = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestVersioningOverride>(global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestVersioningOverride.CreateFromDiscriminatorValue); } },
                 { "workflowExecutionTimeout", n => { WorkflowExecutionTimeout = n.GetStringValue(); } },
                 { "workflowId", n => { WorkflowId = n.GetStringValue(); } },
-                { "workflowIdConflictPolicy", n => { WorkflowIdConflictPolicy = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_workflowIdConflictPolicy>(); } },
-                { "workflowIdReusePolicy", n => { WorkflowIdReusePolicy = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_workflowIdReusePolicy>(); } },
+                { "workflowIdConflictPolicy", n => { WorkflowIdConflictPolicy = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestWorkflowIdConflictPolicy>(); } },
+                { "workflowIdReusePolicy", n => { WorkflowIdReusePolicy = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestWorkflowIdReusePolicy>(); } },
                 { "workflowRunTimeout", n => { WorkflowRunTimeout = n.GetStringValue(); } },
                 { "workflowStartDelay", n => { WorkflowStartDelay = n.GetStringValue(); } },
                 { "workflowTaskTimeout", n => { WorkflowTaskTimeout = n.GetStringValue(); } },
@@ -274,24 +274,24 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("cronSchedule", CronSchedule);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Header>("header", Header);
             writer.WriteStringValue("identity", Identity);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_input>("input", Input);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestInput>("input", Input);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.Link>("links", Links);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Memo>("memo", Memo);
             writer.WriteStringValue("namespace", Namespace);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_priority>("priority", Priority);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestPriority>("priority", Priority);
             writer.WriteStringValue("requestId", RequestId);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_retryPolicy>("retryPolicy", RetryPolicy);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestRetryPolicy>("retryPolicy", RetryPolicy);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes>("searchAttributes", SearchAttributes);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_signalInput>("signalInput", SignalInput);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestSignalInput>("signalInput", SignalInput);
             writer.WriteStringValue("signalName", SignalName);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_taskQueue>("taskQueue", TaskQueue);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_timeSkippingConfig>("timeSkippingConfig", TimeSkippingConfig);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_userMetadata>("userMetadata", UserMetadata);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_versioningOverride>("versioningOverride", VersioningOverride);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestTaskQueue>("taskQueue", TaskQueue);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestTimeSkippingConfig>("timeSkippingConfig", TimeSkippingConfig);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestUserMetadata>("userMetadata", UserMetadata);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestVersioningOverride>("versioningOverride", VersioningOverride);
             writer.WriteStringValue("workflowExecutionTimeout", WorkflowExecutionTimeout);
             writer.WriteStringValue("workflowId", WorkflowId);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_workflowIdConflictPolicy>("workflowIdConflictPolicy", WorkflowIdConflictPolicy);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequest_workflowIdReusePolicy>("workflowIdReusePolicy", WorkflowIdReusePolicy);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestWorkflowIdConflictPolicy>("workflowIdConflictPolicy", WorkflowIdConflictPolicy);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestWorkflowIdReusePolicy>("workflowIdReusePolicy", WorkflowIdReusePolicy);
             writer.WriteStringValue("workflowRunTimeout", WorkflowRunTimeout);
             writer.WriteStringValue("workflowStartDelay", WorkflowStartDelay);
             writer.WriteStringValue("workflowTaskTimeout", WorkflowTaskTimeout);

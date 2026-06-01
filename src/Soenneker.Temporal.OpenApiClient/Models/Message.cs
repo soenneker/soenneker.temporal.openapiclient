@@ -18,10 +18,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The opaque data carried by this message. The protocol type can be extracted from the package name of the message carried inside the Any.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Message_body? Body { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.MessageBody? Body { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Message_body Body { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.MessageBody Body { get; set; }
 #endif
         /// <summary>The commandIndex property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -80,7 +80,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "body", n => { Body = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Message_body>(global::Soenneker.Temporal.OpenApiClient.Models.Message_body.CreateFromDiscriminatorValue); } },
+                { "body", n => { Body = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.MessageBody>(global::Soenneker.Temporal.OpenApiClient.Models.MessageBody.CreateFromDiscriminatorValue); } },
                 { "commandIndex", n => { CommandIndex = n.GetStringValue(); } },
                 { "eventId", n => { EventId = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
@@ -94,7 +94,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Message_body>("body", Body);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.MessageBody>("body", Body);
             writer.WriteStringValue("commandIndex", CommandIndex);
             writer.WriteStringValue("eventId", EventId);
             writer.WriteStringValue("id", Id);

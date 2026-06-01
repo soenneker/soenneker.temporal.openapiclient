@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.ActivitiesDeprecated
 {
     /// <summary>
-    /// Builds and executes requests for operations under \namespaces\{namespace}\activities-deprecated
+    /// Builds and executes requests for operations under \namespaces\{namespaceValue}\activities-deprecated
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ActivitiesDeprecatedRequestBuilder : BaseRequestBuilder
@@ -43,7 +43,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.ActivitiesDeprecated
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ActivitiesDeprecatedRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespace}/activities-deprecated", pathParameters)
+        public ActivitiesDeprecatedRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/activities-deprecated", pathParameters)
         {
         }
         /// <summary>
@@ -51,7 +51,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.ActivitiesDeprecated
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ActivitiesDeprecatedRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespace}/activities-deprecated", rawUrl)
+        public ActivitiesDeprecatedRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/activities-deprecated", rawUrl)
         {
         }
     }

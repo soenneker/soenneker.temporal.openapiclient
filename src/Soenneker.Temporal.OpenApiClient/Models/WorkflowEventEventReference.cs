@@ -24,7 +24,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public string EventId { get; set; }
 #endif
         /// <summary>The eventType property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowEventEventReference_eventType? EventType { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowEventEventReferenceEventType? EventType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkflowEventEventReference"/> and sets the default values.
         /// </summary>
@@ -51,7 +51,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "eventId", n => { EventId = n.GetStringValue(); } },
-                { "eventType", n => { EventType = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowEventEventReference_eventType>(); } },
+                { "eventType", n => { EventType = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowEventEventReferenceEventType>(); } },
             };
         }
         /// <summary>
@@ -62,7 +62,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("eventId", EventId);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowEventEventReference_eventType>("eventType", EventType);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowEventEventReferenceEventType>("eventType", EventType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

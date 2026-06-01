@@ -57,10 +57,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Alternative way to supply `message` and `stack_trace` and possibly other attributes, used for encryption of errors originating in user code which might contain sensitive information. The `encoded_attributes` Payload could represent any serializable object, e.g. JSON object or a `Failure` proto message. SDK authors: - The SDK should provide a default `encodeFailureAttributes` and `decodeFailureAttributes` implementation that:   - Uses a JSON object to represent `{ message, stack_trace }`.   - Overwrites the original message with &quot;Encoded failure&quot; to indicate that more information could be extracted.   - Overwrites the original stack_trace with an empty string.   - The resulting JSON object is converted to Payload using the default PayloadConverter and should be processed     by the user-provided PayloadCodec - If there&apos;s demand, we could allow overriding the default SDK implementation to encode other opaque Failure attributes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Failure_encodedAttributes? EncodedAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.FailureEncodedAttributes? EncodedAttributes { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Failure_encodedAttributes EncodedAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.FailureEncodedAttributes EncodedAttributes { get; set; }
 #endif
         /// <summary>The message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -164,7 +164,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "canceledFailureInfo", n => { CanceledFailureInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CanceledFailureInfo>(global::Soenneker.Temporal.OpenApiClient.Models.CanceledFailureInfo.CreateFromDiscriminatorValue); } },
                 { "cause", n => { Cause = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Failure>(global::Soenneker.Temporal.OpenApiClient.Models.Failure.CreateFromDiscriminatorValue); } },
                 { "childWorkflowExecutionFailureInfo", n => { ChildWorkflowExecutionFailureInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionFailureInfo>(global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionFailureInfo.CreateFromDiscriminatorValue); } },
-                { "encodedAttributes", n => { EncodedAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Failure_encodedAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.Failure_encodedAttributes.CreateFromDiscriminatorValue); } },
+                { "encodedAttributes", n => { EncodedAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.FailureEncodedAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.FailureEncodedAttributes.CreateFromDiscriminatorValue); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "nexusHandlerFailureInfo", n => { NexusHandlerFailureInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusHandlerFailureInfo>(global::Soenneker.Temporal.OpenApiClient.Models.NexusHandlerFailureInfo.CreateFromDiscriminatorValue); } },
                 { "nexusOperationExecutionFailureInfo", n => { NexusOperationExecutionFailureInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationFailureInfo>(global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationFailureInfo.CreateFromDiscriminatorValue); } },
@@ -188,7 +188,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CanceledFailureInfo>("canceledFailureInfo", CanceledFailureInfo);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Failure>("cause", Cause);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionFailureInfo>("childWorkflowExecutionFailureInfo", ChildWorkflowExecutionFailureInfo);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Failure_encodedAttributes>("encodedAttributes", EncodedAttributes);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.FailureEncodedAttributes>("encodedAttributes", EncodedAttributes);
             writer.WriteStringValue("message", Message);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusHandlerFailureInfo>("nexusHandlerFailureInfo", NexusHandlerFailureInfo);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationFailureInfo>("nexusOperationExecutionFailureInfo", NexusOperationExecutionFailureInfo);

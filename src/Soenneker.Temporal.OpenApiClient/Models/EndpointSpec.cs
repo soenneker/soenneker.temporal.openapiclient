@@ -18,10 +18,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Markdown description serialized as a single JSON string. If the Payload is encrypted, the UI and CLI may decrypt with the configured codec server endpoint. By default, the server enforces a limit of 20,000 bytes for this entire payload.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.EndpointSpec_description? Description { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.EndpointSpecDescription? Description { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.EndpointSpec_description Description { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.EndpointSpecDescription Description { get; set; }
 #endif
         /// <summary>Endpoint name, unique for this cluster. Must match `[a-zA-Z_][a-zA-Z0-9_]*`. Renaming an endpoint breaks all workflow callers that reference this endpoint, causing operations to fail.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -34,10 +34,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Target to route requests to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.EndpointSpec_target? Target { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.EndpointSpecTarget? Target { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.EndpointSpec_target Target { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.EndpointSpecTarget Target { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.EndpointSpec"/> and sets the default values.
@@ -64,9 +64,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "description", n => { Description = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.EndpointSpec_description>(global::Soenneker.Temporal.OpenApiClient.Models.EndpointSpec_description.CreateFromDiscriminatorValue); } },
+                { "description", n => { Description = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.EndpointSpecDescription>(global::Soenneker.Temporal.OpenApiClient.Models.EndpointSpecDescription.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "target", n => { Target = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.EndpointSpec_target>(global::Soenneker.Temporal.OpenApiClient.Models.EndpointSpec_target.CreateFromDiscriminatorValue); } },
+                { "target", n => { Target = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.EndpointSpecTarget>(global::Soenneker.Temporal.OpenApiClient.Models.EndpointSpecTarget.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -76,9 +76,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.EndpointSpec_description>("description", Description);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.EndpointSpecDescription>("description", Description);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.EndpointSpec_target>("target", Target);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.EndpointSpecTarget>("target", Target);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

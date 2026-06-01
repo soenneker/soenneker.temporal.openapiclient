@@ -17,10 +17,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Only populated if report_task_queue_config is set to true.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponse_config? Config { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseConfig? Config { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponse_config Config { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseConfig Config { get; set; }
 #endif
         /// <summary>The effectiveRateLimit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -41,42 +41,42 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Statistics for the task queue. Only set if `report_stats` is set on the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponse_stats? Stats { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseStats? Stats { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponse_stats Stats { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseStats Stats { get; set; }
 #endif
         /// <summary>&quot;Task queue stats breakdown by priority key. Only contains actively used priority keys. Only set if `report_stats` is set on the request. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: \&quot;by\&quot; is used to clarify the keys and values. --)&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponse_statsByPriorityKey? StatsByPriorityKey { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseStatsByPriorityKeyProperty? StatsByPriorityKey { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponse_statsByPriorityKey StatsByPriorityKey { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseStatsByPriorityKeyProperty StatsByPriorityKey { get; set; }
 #endif
         /// <summary>Deprecated. Status of the task queue. Only populated when `include_task_queue_status` is set to true in the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponse_taskQueueStatus? TaskQueueStatus { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseTaskQueueStatus? TaskQueueStatus { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponse_taskQueueStatus TaskQueueStatus { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseTaskQueueStatus TaskQueueStatus { get; set; }
 #endif
         /// <summary>&quot;Specifies which Worker Deployment Version(s) Server routes this Task Queue&apos;s tasks to. When not present, it means the tasks are routed to Unversioned workers (workers with UNVERSIONED or unspecified WorkerVersioningMode.) Task Queue Versioning info is updated indirectly by calling SetWorkerDeploymentCurrentVersion and SetWorkerDeploymentRampingVersion on Worker Deployments. Note: This information is not relevant to Pinned workflow executions and their activities as they are always routed to their Pinned Deployment Version. However, new workflow executions are typically not Pinned until they complete their first task (unless they are started with a Pinned VersioningOverride or are Child Workflows of a Pinned parent).&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponse_versioningInfo? VersioningInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseVersioningInfo? VersioningInfo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponse_versioningInfo VersioningInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseVersioningInfo VersioningInfo { get; set; }
 #endif
         /// <summary>Deprecated. Only returned in ENHANCED mode. This map contains Task Queue information for each Build ID. Empty string as key value means unversioned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponse_versionsInfo? VersionsInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseVersionsInfoProperty? VersionsInfo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponse_versionsInfo VersionsInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseVersionsInfoProperty VersionsInfo { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponse"/> and sets the default values.
@@ -103,14 +103,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "config", n => { Config = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponse_config>(global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponse_config.CreateFromDiscriminatorValue); } },
+                { "config", n => { Config = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseConfig>(global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseConfig.CreateFromDiscriminatorValue); } },
                 { "effectiveRateLimit", n => { EffectiveRateLimit = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseEffectiveRateLimit>(global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseEffectiveRateLimit.CreateFromDiscriminatorValue); } },
                 { "pollers", n => { Pollers = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.PollerInfo>(global::Soenneker.Temporal.OpenApiClient.Models.PollerInfo.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "stats", n => { Stats = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponse_stats>(global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponse_stats.CreateFromDiscriminatorValue); } },
-                { "statsByPriorityKey", n => { StatsByPriorityKey = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponse_statsByPriorityKey>(global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponse_statsByPriorityKey.CreateFromDiscriminatorValue); } },
-                { "taskQueueStatus", n => { TaskQueueStatus = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponse_taskQueueStatus>(global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponse_taskQueueStatus.CreateFromDiscriminatorValue); } },
-                { "versioningInfo", n => { VersioningInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponse_versioningInfo>(global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponse_versioningInfo.CreateFromDiscriminatorValue); } },
-                { "versionsInfo", n => { VersionsInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponse_versionsInfo>(global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponse_versionsInfo.CreateFromDiscriminatorValue); } },
+                { "stats", n => { Stats = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseStats>(global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseStats.CreateFromDiscriminatorValue); } },
+                { "statsByPriorityKey", n => { StatsByPriorityKey = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseStatsByPriorityKeyProperty>(global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseStatsByPriorityKeyProperty.CreateFromDiscriminatorValue); } },
+                { "taskQueueStatus", n => { TaskQueueStatus = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseTaskQueueStatus>(global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseTaskQueueStatus.CreateFromDiscriminatorValue); } },
+                { "versioningInfo", n => { VersioningInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseVersioningInfo>(global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseVersioningInfo.CreateFromDiscriminatorValue); } },
+                { "versionsInfo", n => { VersionsInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseVersionsInfoProperty>(global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseVersionsInfoProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -120,14 +120,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponse_config>("config", Config);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseConfig>("config", Config);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseEffectiveRateLimit>("effectiveRateLimit", EffectiveRateLimit);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.PollerInfo>("pollers", Pollers);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponse_stats>("stats", Stats);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponse_statsByPriorityKey>("statsByPriorityKey", StatsByPriorityKey);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponse_taskQueueStatus>("taskQueueStatus", TaskQueueStatus);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponse_versioningInfo>("versioningInfo", VersioningInfo);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponse_versionsInfo>("versionsInfo", VersionsInfo);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseStats>("stats", Stats);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseStatsByPriorityKeyProperty>("statsByPriorityKey", StatsByPriorityKey);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseTaskQueueStatus>("taskQueueStatus", TaskQueueStatus);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseVersioningInfo>("versioningInfo", VersioningInfo);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseVersionsInfoProperty>("versionsInfo", VersionsInfo);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

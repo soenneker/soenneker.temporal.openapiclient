@@ -18,18 +18,18 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Optional. Contains the new worker compute configuration for the Worker Deployment. Used for worker scale management.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentVersionRequest_computeConfig? ComputeConfig { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentVersionRequestComputeConfig? ComputeConfig { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentVersionRequest_computeConfig ComputeConfig { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentVersionRequestComputeConfig ComputeConfig { get; set; }
 #endif
         /// <summary>Required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentVersionRequest_deploymentVersion? DeploymentVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentVersionRequestDeploymentVersion? DeploymentVersion { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentVersionRequest_deploymentVersion DeploymentVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentVersionRequestDeploymentVersion DeploymentVersion { get; set; }
 #endif
         /// <summary>Optional. The identity of the client who initiated this request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -80,8 +80,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "computeConfig", n => { ComputeConfig = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentVersionRequest_computeConfig>(global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentVersionRequest_computeConfig.CreateFromDiscriminatorValue); } },
-                { "deploymentVersion", n => { DeploymentVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentVersionRequest_deploymentVersion>(global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentVersionRequest_deploymentVersion.CreateFromDiscriminatorValue); } },
+                { "computeConfig", n => { ComputeConfig = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentVersionRequestComputeConfig>(global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentVersionRequestComputeConfig.CreateFromDiscriminatorValue); } },
+                { "deploymentVersion", n => { DeploymentVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentVersionRequestDeploymentVersion>(global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentVersionRequestDeploymentVersion.CreateFromDiscriminatorValue); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
                 { "namespace", n => { Namespace = n.GetStringValue(); } },
                 { "requestId", n => { RequestId = n.GetStringValue(); } },
@@ -94,8 +94,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentVersionRequest_computeConfig>("computeConfig", ComputeConfig);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentVersionRequest_deploymentVersion>("deploymentVersion", DeploymentVersion);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentVersionRequestComputeConfig>("computeConfig", ComputeConfig);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentVersionRequestDeploymentVersion>("deploymentVersion", DeploymentVersion);
             writer.WriteStringValue("identity", Identity);
             writer.WriteStringValue("namespace", Namespace);
             writer.WriteStringValue("requestId", RequestId);

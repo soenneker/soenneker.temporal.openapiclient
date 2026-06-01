@@ -17,20 +17,20 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>activity was paused by the manual intervention</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPauseInfo_manual? Manual { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPauseInfoManual? Manual { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPauseInfo_manual Manual { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPauseInfoManual Manual { get; set; }
 #endif
         /// <summary>The time when the activity was paused.</summary>
         public DateTimeOffset? PauseTime { get; set; }
         /// <summary>activity was paused by the rule</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPauseInfo_rule? Rule { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPauseInfoRule? Rule { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPauseInfo_rule Rule { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPauseInfoRule Rule { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPauseInfo"/> and sets the default values.
@@ -57,9 +57,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "manual", n => { Manual = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPauseInfo_manual>(global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPauseInfo_manual.CreateFromDiscriminatorValue); } },
+                { "manual", n => { Manual = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPauseInfoManual>(global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPauseInfoManual.CreateFromDiscriminatorValue); } },
                 { "pauseTime", n => { PauseTime = n.GetDateTimeOffsetValue(); } },
-                { "rule", n => { Rule = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPauseInfo_rule>(global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPauseInfo_rule.CreateFromDiscriminatorValue); } },
+                { "rule", n => { Rule = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPauseInfoRule>(global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPauseInfoRule.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -69,9 +69,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPauseInfo_manual>("manual", Manual);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPauseInfoManual>("manual", Manual);
             writer.WriteDateTimeOffsetValue("pauseTime", PauseTime);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPauseInfo_rule>("rule", Rule);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPauseInfoRule>("rule", Rule);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

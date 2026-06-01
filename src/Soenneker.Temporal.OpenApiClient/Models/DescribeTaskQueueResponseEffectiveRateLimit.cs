@@ -15,7 +15,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>&quot;Source of the RateLimit Configuration,which can be one of the following values: - SOURCE_API: The rate limit that is set via the TaskQueueConfig api. - SOURCE_WORKER: The rate limit is the value set using the workerOptions in TaskQueueActivitiesPerSecond. - SOURCE_SYSTEM: The rate limit is the default value set by the system&quot;</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseEffectiveRateLimit_rateLimitSource? RateLimitSource { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseEffectiveRateLimitRateLimitSource? RateLimitSource { get; set; }
         /// <summary>The effective rate limit for the task queue.</summary>
         public float? RequestsPerSecond { get; set; }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "rateLimitSource", n => { RateLimitSource = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseEffectiveRateLimit_rateLimitSource>(); } },
+                { "rateLimitSource", n => { RateLimitSource = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseEffectiveRateLimitRateLimitSource>(); } },
                 { "requestsPerSecond", n => { RequestsPerSecond = n.GetFloatValue(); } },
             };
         }
@@ -54,7 +54,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseEffectiveRateLimit_rateLimitSource>("rateLimitSource", RateLimitSource);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseEffectiveRateLimitRateLimitSource>("rateLimitSource", RateLimitSource);
             writer.WriteFloatValue("requestsPerSecond", RequestsPerSecond);
             writer.WriteAdditionalData(AdditionalData);
         }

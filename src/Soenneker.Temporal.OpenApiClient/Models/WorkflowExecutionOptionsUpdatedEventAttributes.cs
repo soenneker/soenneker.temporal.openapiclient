@@ -41,28 +41,28 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Priority override upserted in this event. Represents the full priority; not just partial fields. Ignored if nil.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsUpdatedEventAttributes_priority? Priority { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsUpdatedEventAttributesPriority? Priority { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsUpdatedEventAttributes_priority Priority { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsUpdatedEventAttributesPriority Priority { get; set; }
 #endif
         /// <summary>If set, the time-skipping configuration was changed. Contains the full updated configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsUpdatedEventAttributes_timeSkippingConfig? TimeSkippingConfig { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsUpdatedEventAttributesTimeSkippingConfig? TimeSkippingConfig { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsUpdatedEventAttributes_timeSkippingConfig TimeSkippingConfig { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsUpdatedEventAttributesTimeSkippingConfig TimeSkippingConfig { get; set; }
 #endif
         /// <summary>Versioning override removed in this event.</summary>
         public bool? UnsetVersioningOverride { get; set; }
         /// <summary>Versioning override upserted in this event. Ignored if nil or if unset_versioning_override is true.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsUpdatedEventAttributes_versioningOverride? VersioningOverride { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsUpdatedEventAttributesVersioningOverride? VersioningOverride { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsUpdatedEventAttributes_versioningOverride VersioningOverride { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsUpdatedEventAttributesVersioningOverride VersioningOverride { get; set; }
 #endif
         /// <summary>Updates to workflow updates options.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -100,10 +100,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "attachedCompletionCallbacks", n => { AttachedCompletionCallbacks = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.Callback>(global::Soenneker.Temporal.OpenApiClient.Models.Callback.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "attachedRequestId", n => { AttachedRequestId = n.GetStringValue(); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
-                { "priority", n => { Priority = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsUpdatedEventAttributes_priority>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsUpdatedEventAttributes_priority.CreateFromDiscriminatorValue); } },
-                { "timeSkippingConfig", n => { TimeSkippingConfig = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsUpdatedEventAttributes_timeSkippingConfig>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsUpdatedEventAttributes_timeSkippingConfig.CreateFromDiscriminatorValue); } },
+                { "priority", n => { Priority = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsUpdatedEventAttributesPriority>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsUpdatedEventAttributesPriority.CreateFromDiscriminatorValue); } },
+                { "timeSkippingConfig", n => { TimeSkippingConfig = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsUpdatedEventAttributesTimeSkippingConfig>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsUpdatedEventAttributesTimeSkippingConfig.CreateFromDiscriminatorValue); } },
                 { "unsetVersioningOverride", n => { UnsetVersioningOverride = n.GetBoolValue(); } },
-                { "versioningOverride", n => { VersioningOverride = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsUpdatedEventAttributes_versioningOverride>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsUpdatedEventAttributes_versioningOverride.CreateFromDiscriminatorValue); } },
+                { "versioningOverride", n => { VersioningOverride = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsUpdatedEventAttributesVersioningOverride>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsUpdatedEventAttributesVersioningOverride.CreateFromDiscriminatorValue); } },
                 { "workflowUpdateOptions", n => { WorkflowUpdateOptions = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsUpdatedEventAttributesWorkflowUpdateOptionsUpdate>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsUpdatedEventAttributesWorkflowUpdateOptionsUpdate.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -117,10 +117,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.Callback>("attachedCompletionCallbacks", AttachedCompletionCallbacks);
             writer.WriteStringValue("attachedRequestId", AttachedRequestId);
             writer.WriteStringValue("identity", Identity);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsUpdatedEventAttributes_priority>("priority", Priority);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsUpdatedEventAttributes_timeSkippingConfig>("timeSkippingConfig", TimeSkippingConfig);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsUpdatedEventAttributesPriority>("priority", Priority);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsUpdatedEventAttributesTimeSkippingConfig>("timeSkippingConfig", TimeSkippingConfig);
             writer.WriteBoolValue("unsetVersioningOverride", UnsetVersioningOverride);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsUpdatedEventAttributes_versioningOverride>("versioningOverride", VersioningOverride);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsUpdatedEventAttributesVersioningOverride>("versioningOverride", VersioningOverride);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsUpdatedEventAttributesWorkflowUpdateOptionsUpdate>("workflowUpdateOptions", WorkflowUpdateOptions);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.ActivitiesDeprecated.Reset
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v1\namespaces\{namespace}\activities-deprecated\reset
+    /// Builds and executes requests for operations under \api\v1\namespaces\{namespaceValue}\activities-deprecated\reset
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ResetRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.ActivitiesDepr
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ResetRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespace}/activities-deprecated/reset", pathParameters)
+        public ResetRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespaceValue}/activities-deprecated/reset", pathParameters)
         {
         }
         /// <summary>
@@ -30,24 +30,24 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.ActivitiesDepr
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ResetRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespace}/activities-deprecated/reset", rawUrl)
+        public ResetRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespaceValue}/activities-deprecated/reset", rawUrl)
         {
         }
         /// <summary>
         /// &quot;ResetActivity resets the execution of an activity specified by its ID or type. If there are multiple pending activities of the provided type - all of them will be reset. Resetting an activity means: * number of attempts will be reset to 0. * activity timeouts will be reset. * if the activity is waiting for retry, and it is not paused or &apos;keep_paused&apos; is not provided:    it will be scheduled immediately (* see &apos;jitter&apos; flag), Flags: &apos;jitter&apos;: the activity will be scheduled at a random time within the jitter duration. If the activity currently paused it will be unpaused, unless &apos;keep_paused&apos; flag is provided. &apos;reset_heartbeats&apos;: the activity heartbeat timer and heartbeats will be reset. &apos;keep_paused&apos;: if the activity is paused, it will remain paused. Returns a `NotFound` error if there is no pending activity with the provided ID or type. This API will be deprecated soon and replaced with a newer ResetActivityExecution that is better named and structured to work well for standalone activities.&quot;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.ActivitiesDeprecated.Reset.ResetPostResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Models.ResetActivity200Response"/></returns>
         /// <param name="body">&quot;NOTE: keep in sync with temporal.api.batch.v1.BatchOperationResetActivities Deprecated. Use `ResetActivityExecutionRequest`.&quot;</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Temporal.OpenApiClient.Models.Status">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.ActivitiesDeprecated.Reset.ResetPostResponse?> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.ResetActivityRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.ResetActivity200Response?> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.ResetActivityRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.ActivitiesDeprecated.Reset.ResetPostResponse> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.ResetActivityRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.ResetActivity200Response> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.ResetActivityRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -56,7 +56,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.ActivitiesDepr
             {
                 { "XXX", global::Soenneker.Temporal.OpenApiClient.Models.Status.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.ActivitiesDeprecated.Reset.ResetPostResponse>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.ActivitiesDeprecated.Reset.ResetPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Models.ResetActivity200Response>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Models.ResetActivity200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &quot;ResetActivity resets the execution of an activity specified by its ID or type. If there are multiple pending activities of the provided type - all of them will be reset. Resetting an activity means: * number of attempts will be reset to 0. * activity timeouts will be reset. * if the activity is waiting for retry, and it is not paused or &apos;keep_paused&apos; is not provided:    it will be scheduled immediately (* see &apos;jitter&apos; flag), Flags: &apos;jitter&apos;: the activity will be scheduled at a random time within the jitter duration. If the activity currently paused it will be unpaused, unless &apos;keep_paused&apos; flag is provided. &apos;reset_heartbeats&apos;: the activity heartbeat timer and heartbeats will be reset. &apos;keep_paused&apos;: if the activity is paused, it will remain paused. Returns a `NotFound` error if there is no pending activity with the provided ID or type. This API will be deprecated soon and replaced with a newer ResetActivityExecution that is better named and structured to work well for standalone activities.&quot;

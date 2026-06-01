@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Activities.Item.Cancel
 {
     /// <summary>
-    /// Builds and executes requests for operations under \namespaces\{namespace}\activities\{activityId}\cancel
+    /// Builds and executes requests for operations under \namespaces\{namespaceValue}\activities\{activityId}\cancel
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CancelRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Activities.Item.Cance
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CancelRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespace}/activities/{activityId}/cancel", pathParameters)
+        public CancelRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/activities/{activityId}/cancel", pathParameters)
         {
         }
         /// <summary>
@@ -30,24 +30,24 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Activities.Item.Cance
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CancelRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespace}/activities/{activityId}/cancel", rawUrl)
+        public CancelRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/activities/{activityId}/cancel", rawUrl)
         {
         }
         /// <summary>
         /// &quot;RequestCancelActivityExecution requests cancellation of an activity execution. Cancellation is cooperative: this call records the request, but the activity must detect and acknowledge it for the activity to reach CANCELED status. The cancellation signal is delivered via `cancel_requested` in the heartbeat response; SDKs surface this via language-idiomatic mechanisms (context cancellation, exceptions, abort signals).&quot;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Activities.Item.Cancel.CancelPostResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelActivityExecution2200Response"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Temporal.OpenApiClient.Models.Status">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Activities.Item.Cancel.CancelPostResponse?> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelActivityExecutionRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelActivityExecution2200Response?> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelActivityExecutionRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Activities.Item.Cancel.CancelPostResponse> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelActivityExecutionRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelActivityExecution2200Response> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelActivityExecutionRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -56,7 +56,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Activities.Item.Cance
             {
                 { "XXX", global::Soenneker.Temporal.OpenApiClient.Models.Status.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Activities.Item.Cancel.CancelPostResponse>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Activities.Item.Cancel.CancelPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelActivityExecution2200Response>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelActivityExecution2200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &quot;RequestCancelActivityExecution requests cancellation of an activity execution. Cancellation is cooperative: this call records the request, but the activity must detect and acknowledge it for the activity to reach CANCELED status. The cancellation signal is delivered via `cancel_requested` in the heartbeat response; SDKs surface this via language-idiomatic mechanisms (context cancellation, exceptions, abort signals).&quot;

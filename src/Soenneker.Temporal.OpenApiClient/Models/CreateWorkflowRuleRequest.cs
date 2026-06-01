@@ -51,10 +51,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The rule specification .</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkflowRuleRequest_spec? Spec { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkflowRuleRequestSpec? Spec { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkflowRuleRequest_spec Spec { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkflowRuleRequestSpec Spec { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkflowRuleRequest"/> and sets the default values.
@@ -86,7 +86,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "identity", n => { Identity = n.GetStringValue(); } },
                 { "namespace", n => { Namespace = n.GetStringValue(); } },
                 { "requestId", n => { RequestId = n.GetStringValue(); } },
-                { "spec", n => { Spec = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkflowRuleRequest_spec>(global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkflowRuleRequest_spec.CreateFromDiscriminatorValue); } },
+                { "spec", n => { Spec = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkflowRuleRequestSpec>(global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkflowRuleRequestSpec.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -101,7 +101,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("identity", Identity);
             writer.WriteStringValue("namespace", Namespace);
             writer.WriteStringValue("requestId", RequestId);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkflowRuleRequest_spec>("spec", Spec);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkflowRuleRequestSpec>("spec", Spec);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

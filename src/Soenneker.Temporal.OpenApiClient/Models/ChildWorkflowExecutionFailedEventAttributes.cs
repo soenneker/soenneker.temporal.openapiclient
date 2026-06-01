@@ -47,7 +47,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public string NamespaceId { get; set; }
 #endif
         /// <summary>The retryState property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionFailedEventAttributes_retryState? RetryState { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionFailedEventAttributesRetryState? RetryState { get; set; }
         /// <summary>Id of the `CHILD_WORKFLOW_EXECUTION_STARTED` event which this event corresponds to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -101,7 +101,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "initiatedEventId", n => { InitiatedEventId = n.GetStringValue(); } },
                 { "namespace", n => { Namespace = n.GetStringValue(); } },
                 { "namespaceId", n => { NamespaceId = n.GetStringValue(); } },
-                { "retryState", n => { RetryState = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionFailedEventAttributes_retryState>(); } },
+                { "retryState", n => { RetryState = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionFailedEventAttributesRetryState>(); } },
                 { "startedEventId", n => { StartedEventId = n.GetStringValue(); } },
                 { "workflowExecution", n => { WorkflowExecution = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution.CreateFromDiscriminatorValue); } },
                 { "workflowType", n => { WorkflowType = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowType>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowType.CreateFromDiscriminatorValue); } },
@@ -118,7 +118,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("initiatedEventId", InitiatedEventId);
             writer.WriteStringValue("namespace", Namespace);
             writer.WriteStringValue("namespaceId", NamespaceId);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionFailedEventAttributes_retryState>("retryState", RetryState);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionFailedEventAttributesRetryState>("retryState", RetryState);
             writer.WriteStringValue("startedEventId", StartedEventId);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution>("workflowExecution", WorkflowExecution);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowType>("workflowType", WorkflowType);

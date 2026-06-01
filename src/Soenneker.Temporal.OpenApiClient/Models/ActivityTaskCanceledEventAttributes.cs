@@ -17,10 +17,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Additional information that the activity reported upon confirming cancellation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributes_details? Details { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributesDetails? Details { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributes_details Details { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributesDetails Details { get; set; }
 #endif
         /// <summary>id of the worker who canceled this activity</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -57,10 +57,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Version info of the worker who processed this workflow task. Deprecated. This field should be cleaned up when versioning-2 API is removed. [cleanup-experimental-wv]</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributes_workerVersion? WorkerVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributesWorkerVersion? WorkerVersion { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributes_workerVersion WorkerVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributesWorkerVersion WorkerVersion { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributes"/> and sets the default values.
@@ -87,12 +87,12 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "details", n => { Details = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributes_details>(global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributes_details.CreateFromDiscriminatorValue); } },
+                { "details", n => { Details = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributesDetails>(global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributesDetails.CreateFromDiscriminatorValue); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
                 { "latestCancelRequestedEventId", n => { LatestCancelRequestedEventId = n.GetStringValue(); } },
                 { "scheduledEventId", n => { ScheduledEventId = n.GetStringValue(); } },
                 { "startedEventId", n => { StartedEventId = n.GetStringValue(); } },
-                { "workerVersion", n => { WorkerVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributes_workerVersion>(global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributes_workerVersion.CreateFromDiscriminatorValue); } },
+                { "workerVersion", n => { WorkerVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributesWorkerVersion>(global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributesWorkerVersion.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -102,12 +102,12 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributes_details>("details", Details);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributesDetails>("details", Details);
             writer.WriteStringValue("identity", Identity);
             writer.WriteStringValue("latestCancelRequestedEventId", LatestCancelRequestedEventId);
             writer.WriteStringValue("scheduledEventId", ScheduledEventId);
             writer.WriteStringValue("startedEventId", StartedEventId);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributes_workerVersion>("workerVersion", WorkerVersion);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributesWorkerVersion>("workerVersion", WorkerVersion);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -17,18 +17,18 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>When signal origin is a workflow execution, this field is set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributes_externalWorkflowExecution? ExternalWorkflowExecution { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributesExternalWorkflowExecution? ExternalWorkflowExecution { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributes_externalWorkflowExecution ExternalWorkflowExecution { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributesExternalWorkflowExecution ExternalWorkflowExecution { get; set; }
 #endif
         /// <summary>Headers that were passed by the sender of the signal and copied by temporal server into the workflow task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributes_header? Header { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributesHeader? Header { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributes_header Header { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributesHeader Header { get; set; }
 #endif
         /// <summary>id of the worker/client who sent this signal</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -41,10 +41,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Will be deserialized and provided as argument(s) to the signal handler</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributes_input? Input { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributesInput? Input { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributes_input Input { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributesInput Input { get; set; }
 #endif
         /// <summary>The request ID of the Signal request, used by the server to attach this to the correct Event ID when generating link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -89,10 +89,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "externalWorkflowExecution", n => { ExternalWorkflowExecution = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributes_externalWorkflowExecution>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributes_externalWorkflowExecution.CreateFromDiscriminatorValue); } },
-                { "header", n => { Header = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributes_header>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributes_header.CreateFromDiscriminatorValue); } },
+                { "externalWorkflowExecution", n => { ExternalWorkflowExecution = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributesExternalWorkflowExecution>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributesExternalWorkflowExecution.CreateFromDiscriminatorValue); } },
+                { "header", n => { Header = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributesHeader>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributesHeader.CreateFromDiscriminatorValue); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
-                { "input", n => { Input = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributes_input>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributes_input.CreateFromDiscriminatorValue); } },
+                { "input", n => { Input = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributesInput>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributesInput.CreateFromDiscriminatorValue); } },
                 { "requestId", n => { RequestId = n.GetStringValue(); } },
                 { "signalName", n => { SignalName = n.GetStringValue(); } },
                 { "skipGenerateWorkflowTask", n => { SkipGenerateWorkflowTask = n.GetBoolValue(); } },
@@ -105,10 +105,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributes_externalWorkflowExecution>("externalWorkflowExecution", ExternalWorkflowExecution);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributes_header>("header", Header);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributesExternalWorkflowExecution>("externalWorkflowExecution", ExternalWorkflowExecution);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributesHeader>("header", Header);
             writer.WriteStringValue("identity", Identity);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributes_input>("input", Input);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributesInput>("input", Input);
             writer.WriteStringValue("requestId", RequestId);
             writer.WriteStringValue("signalName", SignalName);
             writer.WriteBoolValue("skipGenerateWorkflowTask", SkipGenerateWorkflowTask);

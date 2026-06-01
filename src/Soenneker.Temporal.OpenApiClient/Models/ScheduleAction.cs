@@ -17,10 +17,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>All fields of NewWorkflowExecutionInfo are valid except for: - workflow_id_reuse_policy - cron_schedule The workflow id of the started workflow may not match this exactly, it may have a timestamp appended for uniqueness.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ScheduleAction_startWorkflow? StartWorkflow { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionStartWorkflow? StartWorkflow { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ScheduleAction_startWorkflow StartWorkflow { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionStartWorkflow StartWorkflow { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.ScheduleAction"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "startWorkflow", n => { StartWorkflow = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleAction_startWorkflow>(global::Soenneker.Temporal.OpenApiClient.Models.ScheduleAction_startWorkflow.CreateFromDiscriminatorValue); } },
+                { "startWorkflow", n => { StartWorkflow = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionStartWorkflow>(global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionStartWorkflow.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleAction_startWorkflow>("startWorkflow", StartWorkflow);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionStartWorkflow>("startWorkflow", StartWorkflow);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

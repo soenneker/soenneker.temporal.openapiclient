@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Deployments.Item.Item.Reachability
 {
     /// <summary>
-    /// Builds and executes requests for operations under \namespaces\{namespace}\deployments\{deployment.series_name}\{deployment.build_id}\reachability
+    /// Builds and executes requests for operations under \namespaces\{namespaceValue}\deployments\{deploymentSeriesName}\{deploymentBuildId}\reachability
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ReachabilityRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Deployments.Item.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ReachabilityRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespace}/deployments/{deployment%2Eseries_name}/{deployment%2Ebuild_id}/reachability{?deployment%2EbuildId*,deployment%2EseriesName*}", pathParameters)
+        public ReachabilityRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/deployments/{deploymentSeriesName}/{deploymentBuildId}/reachability{?deployment%2EbuildId*,deployment%2EseriesName*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Deployments.Item.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ReachabilityRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespace}/deployments/{deployment%2Eseries_name}/{deployment%2Ebuild_id}/reachability{?deployment%2EbuildId*,deployment%2EseriesName*}", rawUrl)
+        public ReachabilityRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/deployments/{deploymentSeriesName}/{deploymentBuildId}/reachability{?deployment%2EbuildId*,deployment%2EseriesName*}", rawUrl)
         {
         }
         /// <summary>

@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.History
 {
     /// <summary>
-    /// Builds and executes requests for operations under \namespaces\{namespace}\workflows\{executionWorkflow_-id}\history
+    /// Builds and executes requests for operations under \namespaces\{namespaceValue}\workflows\{executionWorkflow-id}\history
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class HistoryRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Histor
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public HistoryRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespace}/workflows/{executionWorkflow_%2Did}/history{?execution%2ErunId*,execution%2EworkflowId*,historyEventFilterType*,maximumPageSize*,nextPageToken*,skipArchival*,waitNewEvent*}", pathParameters)
+        public HistoryRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/workflows/{executionWorkflow%2Did}/history{?execution%2ErunId*,execution%2EworkflowId*,historyEventFilterType*,maximumPageSize*,nextPageToken*,skipArchival*,waitNewEvent*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Histor
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public HistoryRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespace}/workflows/{executionWorkflow_%2Did}/history{?execution%2ErunId*,execution%2EworkflowId*,historyEventFilterType*,maximumPageSize*,nextPageToken*,skipArchival*,waitNewEvent*}", rawUrl)
+        public HistoryRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/workflows/{executionWorkflow%2Did}/history{?execution%2ErunId*,execution%2EworkflowId*,historyEventFilterType*,maximumPageSize*,nextPageToken*,skipArchival*,waitNewEvent*}", rawUrl)
         {
         }
         /// <summary>
@@ -110,7 +110,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Histor
 #endif
             /// <summary>&quot;Filter returned events such that they match the specified filter type. Default: HISTORY_EVENT_FILTER_TYPE_ALL_EVENT.&quot;</summary>
             [QueryParameter("historyEventFilterType")]
-            public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.History.GetHistoryEventFilterTypeQueryParameterType? HistoryEventFilterType { get; set; }
+            public global::Soenneker.Temporal.OpenApiClient.Models.GetWorkflowExecutionHistory2HistoryEventFilterTypeParameter? HistoryEventFilterType { get; set; }
             [QueryParameter("maximumPageSize")]
             public int? MaximumPageSize { get; set; }
             /// <summary>If a `GetWorkflowExecutionHistoryResponse` or a `PollWorkflowTaskQueueResponse` had one of these, it should be passed here to fetch the next page.</summary>

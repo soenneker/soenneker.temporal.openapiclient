@@ -59,20 +59,20 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The reason(s) that suggest_continue_as_new is true, if it is. Unset if suggest_continue_as_new is false.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskStartedEventAttributes_suggestContinueAsNewReasons?>? SuggestContinueAsNewReasons { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskStartedEventAttributesSuggestContinueAsNewReasonsItem?>? SuggestContinueAsNewReasons { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskStartedEventAttributes_suggestContinueAsNewReasons?> SuggestContinueAsNewReasons { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskStartedEventAttributesSuggestContinueAsNewReasonsItem?> SuggestContinueAsNewReasons { get; set; }
 #endif
         /// <summary>True if Workflow&apos;s Target Worker Deployment Version is different from its Pinned Version and the workflow is Pinned. Experimental.</summary>
         public bool? TargetWorkerDeploymentVersionChanged { get; set; }
         /// <summary>Version info of the worker to whom this task was dispatched. Deprecated. This field should be cleaned up when versioning-2 API is removed. [cleanup-experimental-wv]</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskStartedEventAttributes_workerVersion? WorkerVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskStartedEventAttributesWorkerVersion? WorkerVersion { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskStartedEventAttributes_workerVersion WorkerVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskStartedEventAttributesWorkerVersion WorkerVersion { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskStartedEventAttributes"/> and sets the default values.
@@ -105,9 +105,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "requestId", n => { RequestId = n.GetStringValue(); } },
                 { "scheduledEventId", n => { ScheduledEventId = n.GetStringValue(); } },
                 { "suggestContinueAsNew", n => { SuggestContinueAsNew = n.GetBoolValue(); } },
-                { "suggestContinueAsNewReasons", n => { SuggestContinueAsNewReasons = n.GetCollectionOfEnumValues<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskStartedEventAttributes_suggestContinueAsNewReasons>()?.AsList(); } },
+                { "suggestContinueAsNewReasons", n => { SuggestContinueAsNewReasons = n.GetCollectionOfEnumValues<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskStartedEventAttributesSuggestContinueAsNewReasonsItem>()?.AsList(); } },
                 { "targetWorkerDeploymentVersionChanged", n => { TargetWorkerDeploymentVersionChanged = n.GetBoolValue(); } },
-                { "workerVersion", n => { WorkerVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskStartedEventAttributes_workerVersion>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskStartedEventAttributes_workerVersion.CreateFromDiscriminatorValue); } },
+                { "workerVersion", n => { WorkerVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskStartedEventAttributesWorkerVersion>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskStartedEventAttributesWorkerVersion.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -123,9 +123,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("requestId", RequestId);
             writer.WriteStringValue("scheduledEventId", ScheduledEventId);
             writer.WriteBoolValue("suggestContinueAsNew", SuggestContinueAsNew);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskStartedEventAttributes_suggestContinueAsNewReasons>("suggestContinueAsNewReasons", SuggestContinueAsNewReasons);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskStartedEventAttributesSuggestContinueAsNewReasonsItem>("suggestContinueAsNewReasons", SuggestContinueAsNewReasons);
             writer.WriteBoolValue("targetWorkerDeploymentVersionChanged", TargetWorkerDeploymentVersionChanged);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskStartedEventAttributes_workerVersion>("workerVersion", WorkerVersion);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskStartedEventAttributesWorkerVersion>("workerVersion", WorkerVersion);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -18,10 +18,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Task reachability for a worker in a single task queue. See the TaskReachability docstring for information about each enum variant. If reachability is empty, this worker is considered unreachable in this task queue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueReachability_reachability?>? Reachability { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueReachabilityReachabilityItem?>? Reachability { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueReachability_reachability?> Reachability { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueReachabilityReachabilityItem?> Reachability { get; set; }
 #endif
         /// <summary>The taskQueue property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -56,7 +56,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "reachability", n => { Reachability = n.GetCollectionOfEnumValues<global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueReachability_reachability>()?.AsList(); } },
+                { "reachability", n => { Reachability = n.GetCollectionOfEnumValues<global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueReachabilityReachabilityItem>()?.AsList(); } },
                 { "taskQueue", n => { TaskQueue = n.GetStringValue(); } },
             };
         }
@@ -67,7 +67,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueReachability_reachability>("reachability", Reachability);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueReachabilityReachabilityItem>("reachability", Reachability);
             writer.WriteStringValue("taskQueue", TaskQueue);
             writer.WriteAdditionalData(AdditionalData);
         }

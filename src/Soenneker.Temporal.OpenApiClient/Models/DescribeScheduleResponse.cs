@@ -25,26 +25,26 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Extra schedule state info.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponse_info? Info { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponseInfo? Info { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponse_info Info { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponseInfo Info { get; set; }
 #endif
         /// <summary>The memo and search attributes that the schedule was created with.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponse_memo? Memo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponseMemo? Memo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponse_memo Memo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponseMemo Memo { get; set; }
 #endif
         /// <summary>The complete current schedule details. This may not match the schedule as created because: - some types of schedule specs may get compiled into others (e.g.   CronString into StructuredCalendarSpec) - some unspecified fields may be replaced by defaults - some fields in the state are modified automatically - the schedule may have been modified by UpdateSchedule or PatchSchedule</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponse_schedule? Schedule { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponseSchedule? Schedule { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponse_schedule Schedule { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponseSchedule Schedule { get; set; }
 #endif
         /// <summary>A user-defined set of *indexed* fields that are used/exposed when listing/searching workflows. The payload is not serialized in a user-defined way.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -80,9 +80,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "conflictToken", n => { ConflictToken = n.GetStringValue(); } },
-                { "info", n => { Info = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponse_info>(global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponse_info.CreateFromDiscriminatorValue); } },
-                { "memo", n => { Memo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponse_memo>(global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponse_memo.CreateFromDiscriminatorValue); } },
-                { "schedule", n => { Schedule = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponse_schedule>(global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponse_schedule.CreateFromDiscriminatorValue); } },
+                { "info", n => { Info = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponseInfo>(global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponseInfo.CreateFromDiscriminatorValue); } },
+                { "memo", n => { Memo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponseMemo>(global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponseMemo.CreateFromDiscriminatorValue); } },
+                { "schedule", n => { Schedule = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponseSchedule>(global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponseSchedule.CreateFromDiscriminatorValue); } },
                 { "searchAttributes", n => { SearchAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes.CreateFromDiscriminatorValue); } },
             };
         }
@@ -94,9 +94,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("conflictToken", ConflictToken);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponse_info>("info", Info);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponse_memo>("memo", Memo);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponse_schedule>("schedule", Schedule);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponseInfo>("info", Info);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponseMemo>("memo", Memo);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponseSchedule>("schedule", Schedule);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes>("searchAttributes", SearchAttributes);
             writer.WriteAdditionalData(AdditionalData);
         }

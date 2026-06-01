@@ -52,10 +52,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>During a previous run of this workflow, the server may have notified the SDK that the Target Worker Deployment Version changed, but the SDK declined to upgrade (e.g., by continuing-as-new with PINNED behavior). This field records the target version that was declined. This is a wrapper message to distinguish &quot;never declined&quot; (nil wrapper) from &quot;declined an unversioned target&quot; (non-nil wrapper with nil deployment_version). Used internally by the server during continue-as-new and retry. Should not be read or interpreted by SDKs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_declinedTargetVersionUpgrade? DeclinedTargetVersionUpgrade { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesDeclinedTargetVersionUpgrade? DeclinedTargetVersionUpgrade { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_declinedTargetVersionUpgrade DeclinedTargetVersionUpgrade { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesDeclinedTargetVersionUpgrade DeclinedTargetVersionUpgrade { get; set; }
 #endif
         /// <summary>A boolean indicating whether the SDK has asked to eagerly execute the first workflow task for this workflow and eager execution was accepted by the server. Only populated by server with version &gt;= 1.29.0.</summary>
         public bool? EagerExecutionAccepted { get; set; }
@@ -94,10 +94,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>&quot;If present, the new workflow begins with AutoUpgrade behavior. Before dispatching the first workflow task, this field is set to the deployment version on which the parent/ previous run was operating. This inheritance only happens when the task queues belong to the same deployment version. The first workflow task will then be dispatched to either this inherited deployment version, or the current deployment version of the task queue&apos;s Deployment. After the first workflow task, the effective behavior depends on worker-sent values in subsequent workflow tasks. Inheritance rules:   - ContinueAsNew and child workflows: inherit AutoUpgrade behavior and deployment version   - Cron: never inherits   - Retry: inherits only if the retried run is effectively AutoUpgrade at the time of     retry, and inherited AutoUpgrade behavior when it started (i.e. it is a child of an     AutoUpgrade parent or ContinueAsNew of an AutoUpgrade run, running on the same     deployment as the parent/previous run) Additional notes: - This field is mutually exclusive with `inherited_pinned_version`. - `versioning_override`, if present, overrides this field during routing decisions. - SDK implementations do not interact with this field and is only used internally by   the server to ensure task routing correctness.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_inheritedAutoUpgradeInfo? InheritedAutoUpgradeInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesInheritedAutoUpgradeInfo? InheritedAutoUpgradeInfo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_inheritedAutoUpgradeInfo InheritedAutoUpgradeInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesInheritedAutoUpgradeInfo InheritedAutoUpgradeInfo { get; set; }
 #endif
         /// <summary>When present, this execution is assigned to the build ID of its parent or previous execution. Deprecated. This field should be cleaned up when versioning-2 API is removed. [cleanup-experimental-wv]</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -110,10 +110,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>&quot;If present, the new workflow should start on this version with pinned base behavior. Child of pinned parent will inherit the parent&apos;s version if the Child&apos;s Task Queue belongs to that version. A new run initiated by workflow ContinueAsNew of pinned run, will inherit the previous run&apos;s version if the new run&apos;s Task Queue belongs to that version. A new run initiated by workflow Cron will never inherit. A new run initiated by workflow Retry will only inherit if the retried run is effectively pinned at the time of retry, and the retried run inherited a pinned version when it started (ie. it is a child of a pinned parent, or a CaN of a pinned run, and is running on a Task Queue in the inherited version). Pinned override is inherited if Task Queue of new run is compatible with the override version. Override is inherited separately and takes precedence over inherited base version. Note: This field is mutually exclusive with inherited_auto_upgrade_info. Additionaly, versioning_override, if present, overrides this field during routing decisions.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_inheritedPinnedVersion? InheritedPinnedVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesInheritedPinnedVersion? InheritedPinnedVersion { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_inheritedPinnedVersion InheritedPinnedVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesInheritedPinnedVersion InheritedPinnedVersion { get; set; }
 #endif
         /// <summary>The time skipped by the previous execution that started this workflow. It can happen in cases of child workflows and continue-as-new workflows.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -124,14 +124,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public string InitialSkippedDuration { get; set; }
 #endif
         /// <summary>The initiator property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_initiator? Initiator { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesInitiator? Initiator { get; set; }
         /// <summary>SDK will deserialize this and provide it as arguments to the workflow function</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_input? Input { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesInput? Input { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_input Input { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesInput Input { get; set; }
 #endif
         /// <summary>See `Payload`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -184,10 +184,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Contains information about parent workflow execution that initiated the child workflow these attributes belong to. If the workflow these attributes belong to is not a child workflow of any other execution, this field will not be populated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_parentWorkflowExecution? ParentWorkflowExecution { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesParentWorkflowExecution? ParentWorkflowExecution { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_parentWorkflowExecution ParentWorkflowExecution { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesParentWorkflowExecution ParentWorkflowExecution { get; set; }
 #endif
         /// <summary>If this workflow is a child, the namespace our parent lives in. SDKs and UI tools should use `parent_workflow_namespace` field but server must use `parent_workflow_namespace_id` only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -216,10 +216,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Priority metadata</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_priority? Priority { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesPriority? Priority { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_priority Priority { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesPriority Priority { get; set; }
 #endif
         /// <summary>How retries ought to be handled, usable by both workflows and activities</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -232,10 +232,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>&quot;Contains information about the root workflow execution. The root workflow execution is defined as follows:   1. A workflow without parent workflow is its own root workflow.   2. A workflow that has a parent workflow has the same root workflow as its parent workflow. When the workflow is its own root workflow, then root_workflow_execution is nil. Note: workflows continued as new or reseted may or may not have parents, check examples below. Examples:   Scenario 1: Workflow W1 starts child workflow W2, and W2 starts child workflow W3.     - The root workflow of all three workflows is W1.     - W1 has root_workflow_execution set to nil.     - W2 and W3 have root_workflow_execution set to W1.   Scenario 2: Workflow W1 starts child workflow W2, and W2 continued as new W3.     - The root workflow of all three workflows is W1.     - W1 has root_workflow_execution set to nil.     - W2 and W3 have root_workflow_execution set to W1.   Scenario 3: Workflow W1 continued as new W2.     - The root workflow of W1 is W1 and the root workflow of W2 is W2.     - W1 and W2 have root_workflow_execution set to nil.   Scenario 4: Workflow W1 starts child workflow W2, and W2 is reseted, creating W3     - The root workflow of all three workflows is W1.     - W1 has root_workflow_execution set to nil.     - W2 and W3 have root_workflow_execution set to W1.   Scenario 5: Workflow W1 is reseted, creating W2.     - The root workflow of W1 is W1 and the root workflow of W2 is W2.     - W1 and W2 have root_workflow_execution set to nil.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_rootWorkflowExecution? RootWorkflowExecution { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesRootWorkflowExecution? RootWorkflowExecution { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_rootWorkflowExecution RootWorkflowExecution { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesRootWorkflowExecution RootWorkflowExecution { get; set; }
 #endif
         /// <summary>A user-defined set of *indexed* fields that are used/exposed when listing/searching workflows. The payload is not serialized in a user-defined way.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -248,10 +248,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>If this workflow intends to use anything other than the current overall default version for the queue, then we include it here. Deprecated. [cleanup-experimental-wv]</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_sourceVersionStamp? SourceVersionStamp { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesSourceVersionStamp? SourceVersionStamp { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_sourceVersionStamp SourceVersionStamp { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesSourceVersionStamp SourceVersionStamp { get; set; }
 #endif
         /// <summary>See https://docs.temporal.io/docs/concepts/task-queues/</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -264,18 +264,18 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Initial time-skipping configuration for this workflow execution, recorded at start time. This may have been set explicitly via the start workflow request, or propagated from a parent/previous execution. The configuration may be updated after start via UpdateWorkflowExecutionOptions, which will be reflected in the WorkflowExecutionOptionsUpdatedEvent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_timeSkippingConfig? TimeSkippingConfig { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesTimeSkippingConfig? TimeSkippingConfig { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_timeSkippingConfig TimeSkippingConfig { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesTimeSkippingConfig TimeSkippingConfig { get; set; }
 #endif
         /// <summary>Versioning override applied to this workflow when it was started. Children, crons, retries, and continue-as-new will inherit source run&apos;s override if pinned and if the new workflow&apos;s Task Queue belongs to the override version.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_versioningOverride? VersioningOverride { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesVersioningOverride? VersioningOverride { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_versioningOverride VersioningOverride { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesVersioningOverride VersioningOverride { get; set; }
 #endif
         /// <summary>The absolute time at which the workflow will be timed out. This is passed without change to the next run/retry of a workflow.</summary>
         public DateTimeOffset? WorkflowExecutionExpirationTime { get; set; }
@@ -349,36 +349,36 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "continuedExecutionRunId", n => { ContinuedExecutionRunId = n.GetStringValue(); } },
                 { "continuedFailure", n => { ContinuedFailure = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Failure>(global::Soenneker.Temporal.OpenApiClient.Models.Failure.CreateFromDiscriminatorValue); } },
                 { "cronSchedule", n => { CronSchedule = n.GetStringValue(); } },
-                { "declinedTargetVersionUpgrade", n => { DeclinedTargetVersionUpgrade = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_declinedTargetVersionUpgrade>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_declinedTargetVersionUpgrade.CreateFromDiscriminatorValue); } },
+                { "declinedTargetVersionUpgrade", n => { DeclinedTargetVersionUpgrade = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesDeclinedTargetVersionUpgrade>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesDeclinedTargetVersionUpgrade.CreateFromDiscriminatorValue); } },
                 { "eagerExecutionAccepted", n => { EagerExecutionAccepted = n.GetBoolValue(); } },
                 { "firstExecutionRunId", n => { FirstExecutionRunId = n.GetStringValue(); } },
                 { "firstWorkflowTaskBackoff", n => { FirstWorkflowTaskBackoff = n.GetStringValue(); } },
                 { "header", n => { Header = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Header>(global::Soenneker.Temporal.OpenApiClient.Models.Header.CreateFromDiscriminatorValue); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
-                { "inheritedAutoUpgradeInfo", n => { InheritedAutoUpgradeInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_inheritedAutoUpgradeInfo>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_inheritedAutoUpgradeInfo.CreateFromDiscriminatorValue); } },
+                { "inheritedAutoUpgradeInfo", n => { InheritedAutoUpgradeInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesInheritedAutoUpgradeInfo>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesInheritedAutoUpgradeInfo.CreateFromDiscriminatorValue); } },
                 { "inheritedBuildId", n => { InheritedBuildId = n.GetStringValue(); } },
-                { "inheritedPinnedVersion", n => { InheritedPinnedVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_inheritedPinnedVersion>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_inheritedPinnedVersion.CreateFromDiscriminatorValue); } },
+                { "inheritedPinnedVersion", n => { InheritedPinnedVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesInheritedPinnedVersion>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesInheritedPinnedVersion.CreateFromDiscriminatorValue); } },
                 { "initialSkippedDuration", n => { InitialSkippedDuration = n.GetStringValue(); } },
-                { "initiator", n => { Initiator = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_initiator>(); } },
-                { "input", n => { Input = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_input>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_input.CreateFromDiscriminatorValue); } },
+                { "initiator", n => { Initiator = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesInitiator>(); } },
+                { "input", n => { Input = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesInput>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesInput.CreateFromDiscriminatorValue); } },
                 { "lastCompletionResult", n => { LastCompletionResult = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>(global::Soenneker.Temporal.OpenApiClient.Models.Payloads.CreateFromDiscriminatorValue); } },
                 { "memo", n => { Memo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Memo>(global::Soenneker.Temporal.OpenApiClient.Models.Memo.CreateFromDiscriminatorValue); } },
                 { "originalExecutionRunId", n => { OriginalExecutionRunId = n.GetStringValue(); } },
                 { "parentInitiatedEventId", n => { ParentInitiatedEventId = n.GetStringValue(); } },
                 { "parentInitiatedEventVersion", n => { ParentInitiatedEventVersion = n.GetStringValue(); } },
                 { "parentPinnedWorkerDeploymentVersion", n => { ParentPinnedWorkerDeploymentVersion = n.GetStringValue(); } },
-                { "parentWorkflowExecution", n => { ParentWorkflowExecution = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_parentWorkflowExecution>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_parentWorkflowExecution.CreateFromDiscriminatorValue); } },
+                { "parentWorkflowExecution", n => { ParentWorkflowExecution = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesParentWorkflowExecution>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesParentWorkflowExecution.CreateFromDiscriminatorValue); } },
                 { "parentWorkflowNamespace", n => { ParentWorkflowNamespace = n.GetStringValue(); } },
                 { "parentWorkflowNamespaceId", n => { ParentWorkflowNamespaceId = n.GetStringValue(); } },
                 { "prevAutoResetPoints", n => { PrevAutoResetPoints = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ResetPoints>(global::Soenneker.Temporal.OpenApiClient.Models.ResetPoints.CreateFromDiscriminatorValue); } },
-                { "priority", n => { Priority = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_priority>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_priority.CreateFromDiscriminatorValue); } },
+                { "priority", n => { Priority = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesPriority>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesPriority.CreateFromDiscriminatorValue); } },
                 { "retryPolicy", n => { RetryPolicy = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RetryPolicy>(global::Soenneker.Temporal.OpenApiClient.Models.RetryPolicy.CreateFromDiscriminatorValue); } },
-                { "rootWorkflowExecution", n => { RootWorkflowExecution = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_rootWorkflowExecution>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_rootWorkflowExecution.CreateFromDiscriminatorValue); } },
+                { "rootWorkflowExecution", n => { RootWorkflowExecution = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesRootWorkflowExecution>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesRootWorkflowExecution.CreateFromDiscriminatorValue); } },
                 { "searchAttributes", n => { SearchAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes.CreateFromDiscriminatorValue); } },
-                { "sourceVersionStamp", n => { SourceVersionStamp = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_sourceVersionStamp>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_sourceVersionStamp.CreateFromDiscriminatorValue); } },
+                { "sourceVersionStamp", n => { SourceVersionStamp = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesSourceVersionStamp>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesSourceVersionStamp.CreateFromDiscriminatorValue); } },
                 { "taskQueue", n => { TaskQueue = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TaskQueue>(global::Soenneker.Temporal.OpenApiClient.Models.TaskQueue.CreateFromDiscriminatorValue); } },
-                { "timeSkippingConfig", n => { TimeSkippingConfig = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_timeSkippingConfig>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_timeSkippingConfig.CreateFromDiscriminatorValue); } },
-                { "versioningOverride", n => { VersioningOverride = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_versioningOverride>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_versioningOverride.CreateFromDiscriminatorValue); } },
+                { "timeSkippingConfig", n => { TimeSkippingConfig = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesTimeSkippingConfig>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesTimeSkippingConfig.CreateFromDiscriminatorValue); } },
+                { "versioningOverride", n => { VersioningOverride = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesVersioningOverride>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesVersioningOverride.CreateFromDiscriminatorValue); } },
                 { "workflowExecutionExpirationTime", n => { WorkflowExecutionExpirationTime = n.GetDateTimeOffsetValue(); } },
                 { "workflowExecutionTimeout", n => { WorkflowExecutionTimeout = n.GetStringValue(); } },
                 { "workflowId", n => { WorkflowId = n.GetStringValue(); } },
@@ -399,36 +399,36 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("continuedExecutionRunId", ContinuedExecutionRunId);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Failure>("continuedFailure", ContinuedFailure);
             writer.WriteStringValue("cronSchedule", CronSchedule);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_declinedTargetVersionUpgrade>("declinedTargetVersionUpgrade", DeclinedTargetVersionUpgrade);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesDeclinedTargetVersionUpgrade>("declinedTargetVersionUpgrade", DeclinedTargetVersionUpgrade);
             writer.WriteBoolValue("eagerExecutionAccepted", EagerExecutionAccepted);
             writer.WriteStringValue("firstExecutionRunId", FirstExecutionRunId);
             writer.WriteStringValue("firstWorkflowTaskBackoff", FirstWorkflowTaskBackoff);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Header>("header", Header);
             writer.WriteStringValue("identity", Identity);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_inheritedAutoUpgradeInfo>("inheritedAutoUpgradeInfo", InheritedAutoUpgradeInfo);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesInheritedAutoUpgradeInfo>("inheritedAutoUpgradeInfo", InheritedAutoUpgradeInfo);
             writer.WriteStringValue("inheritedBuildId", InheritedBuildId);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_inheritedPinnedVersion>("inheritedPinnedVersion", InheritedPinnedVersion);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesInheritedPinnedVersion>("inheritedPinnedVersion", InheritedPinnedVersion);
             writer.WriteStringValue("initialSkippedDuration", InitialSkippedDuration);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_initiator>("initiator", Initiator);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_input>("input", Input);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesInitiator>("initiator", Initiator);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesInput>("input", Input);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>("lastCompletionResult", LastCompletionResult);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Memo>("memo", Memo);
             writer.WriteStringValue("originalExecutionRunId", OriginalExecutionRunId);
             writer.WriteStringValue("parentInitiatedEventId", ParentInitiatedEventId);
             writer.WriteStringValue("parentInitiatedEventVersion", ParentInitiatedEventVersion);
             writer.WriteStringValue("parentPinnedWorkerDeploymentVersion", ParentPinnedWorkerDeploymentVersion);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_parentWorkflowExecution>("parentWorkflowExecution", ParentWorkflowExecution);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesParentWorkflowExecution>("parentWorkflowExecution", ParentWorkflowExecution);
             writer.WriteStringValue("parentWorkflowNamespace", ParentWorkflowNamespace);
             writer.WriteStringValue("parentWorkflowNamespaceId", ParentWorkflowNamespaceId);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ResetPoints>("prevAutoResetPoints", PrevAutoResetPoints);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_priority>("priority", Priority);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesPriority>("priority", Priority);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RetryPolicy>("retryPolicy", RetryPolicy);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_rootWorkflowExecution>("rootWorkflowExecution", RootWorkflowExecution);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesRootWorkflowExecution>("rootWorkflowExecution", RootWorkflowExecution);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes>("searchAttributes", SearchAttributes);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_sourceVersionStamp>("sourceVersionStamp", SourceVersionStamp);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesSourceVersionStamp>("sourceVersionStamp", SourceVersionStamp);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TaskQueue>("taskQueue", TaskQueue);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_timeSkippingConfig>("timeSkippingConfig", TimeSkippingConfig);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes_versioningOverride>("versioningOverride", VersioningOverride);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesTimeSkippingConfig>("timeSkippingConfig", TimeSkippingConfig);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesVersioningOverride>("versioningOverride", VersioningOverride);
             writer.WriteDateTimeOffsetValue("workflowExecutionExpirationTime", WorkflowExecutionExpirationTime);
             writer.WriteStringValue("workflowExecutionTimeout", WorkflowExecutionTimeout);
             writer.WriteStringValue("workflowId", WorkflowId);

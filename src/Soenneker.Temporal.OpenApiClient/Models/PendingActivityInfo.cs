@@ -23,10 +23,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Current activity options. May be different from the one used to start the activity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfo_activityOptions? ActivityOptions { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoActivityOptions? ActivityOptions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfo_activityOptions ActivityOptions { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoActivityOptions ActivityOptions { get; set; }
 #endif
         /// <summary>Represents the identifier used by a activity author to define the activity. Typically, the name of a function. This is sometimes referred to as the activity&apos;s &quot;name&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -63,18 +63,18 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The deployment this activity was dispatched to most recently. Present only if the activity was dispatched to a versioned worker. Deprecated. Use `last_deployment_version`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfo_lastDeployment? LastDeployment { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoLastDeployment? LastDeployment { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfo_lastDeployment LastDeployment { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoLastDeployment LastDeployment { get; set; }
 #endif
         /// <summary>The Worker Deployment Version this activity was dispatched to most recently. If nil, the activity has not yet been dispatched or was last dispatched to an unversioned worker.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfo_lastDeploymentVersion? LastDeploymentVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoLastDeploymentVersion? LastDeploymentVersion { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfo_lastDeploymentVersion LastDeploymentVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoLastDeploymentVersion LastDeploymentVersion { get; set; }
 #endif
         /// <summary>The lastFailure property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -115,10 +115,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Deprecated. The version stamp of the worker to whom this activity was most recently dispatched This field should be cleaned up when versioning-2 API is removed. [cleanup-experimental-wv]</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfo_lastWorkerVersionStamp? LastWorkerVersionStamp { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoLastWorkerVersionStamp? LastWorkerVersionStamp { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfo_lastWorkerVersionStamp LastWorkerVersionStamp { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoLastWorkerVersionStamp LastWorkerVersionStamp { get; set; }
 #endif
         /// <summary>The maximumAttempts property</summary>
         public int? MaximumAttempts { get; set; }
@@ -137,15 +137,15 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Priority metadata. If this message is not present, or any fields are not present, they inherit the values from the workflow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfo_priority? Priority { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPriority? Priority { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfo_priority Priority { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPriority Priority { get; set; }
 #endif
         /// <summary>The scheduledTime property</summary>
         public DateTimeOffset? ScheduledTime { get; set; }
         /// <summary>The state property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfo_state? State { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoState? State { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfo"/> and sets the default values.
         /// </summary>
@@ -172,29 +172,29 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "activityId", n => { ActivityId = n.GetStringValue(); } },
-                { "activityOptions", n => { ActivityOptions = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfo_activityOptions>(global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfo_activityOptions.CreateFromDiscriminatorValue); } },
+                { "activityOptions", n => { ActivityOptions = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoActivityOptions>(global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoActivityOptions.CreateFromDiscriminatorValue); } },
                 { "activityType", n => { ActivityType = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityType>(global::Soenneker.Temporal.OpenApiClient.Models.ActivityType.CreateFromDiscriminatorValue); } },
                 { "attempt", n => { Attempt = n.GetIntValue(); } },
                 { "currentRetryInterval", n => { CurrentRetryInterval = n.GetStringValue(); } },
                 { "expirationTime", n => { ExpirationTime = n.GetDateTimeOffsetValue(); } },
                 { "heartbeatDetails", n => { HeartbeatDetails = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>(global::Soenneker.Temporal.OpenApiClient.Models.Payloads.CreateFromDiscriminatorValue); } },
                 { "lastAttemptCompleteTime", n => { LastAttemptCompleteTime = n.GetDateTimeOffsetValue(); } },
-                { "lastDeployment", n => { LastDeployment = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfo_lastDeployment>(global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfo_lastDeployment.CreateFromDiscriminatorValue); } },
-                { "lastDeploymentVersion", n => { LastDeploymentVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfo_lastDeploymentVersion>(global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfo_lastDeploymentVersion.CreateFromDiscriminatorValue); } },
+                { "lastDeployment", n => { LastDeployment = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoLastDeployment>(global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoLastDeployment.CreateFromDiscriminatorValue); } },
+                { "lastDeploymentVersion", n => { LastDeploymentVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoLastDeploymentVersion>(global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoLastDeploymentVersion.CreateFromDiscriminatorValue); } },
                 { "lastFailure", n => { LastFailure = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Failure>(global::Soenneker.Temporal.OpenApiClient.Models.Failure.CreateFromDiscriminatorValue); } },
                 { "lastHeartbeatTime", n => { LastHeartbeatTime = n.GetDateTimeOffsetValue(); } },
                 { "lastIndependentlyAssignedBuildId", n => { LastIndependentlyAssignedBuildId = n.GetStringValue(); } },
                 { "lastStartedTime", n => { LastStartedTime = n.GetDateTimeOffsetValue(); } },
                 { "lastWorkerDeploymentVersion", n => { LastWorkerDeploymentVersion = n.GetStringValue(); } },
                 { "lastWorkerIdentity", n => { LastWorkerIdentity = n.GetStringValue(); } },
-                { "lastWorkerVersionStamp", n => { LastWorkerVersionStamp = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfo_lastWorkerVersionStamp>(global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfo_lastWorkerVersionStamp.CreateFromDiscriminatorValue); } },
+                { "lastWorkerVersionStamp", n => { LastWorkerVersionStamp = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoLastWorkerVersionStamp>(global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoLastWorkerVersionStamp.CreateFromDiscriminatorValue); } },
                 { "maximumAttempts", n => { MaximumAttempts = n.GetIntValue(); } },
                 { "nextAttemptScheduleTime", n => { NextAttemptScheduleTime = n.GetDateTimeOffsetValue(); } },
                 { "pauseInfo", n => { PauseInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPauseInfo>(global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPauseInfo.CreateFromDiscriminatorValue); } },
                 { "paused", n => { Paused = n.GetBoolValue(); } },
-                { "priority", n => { Priority = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfo_priority>(global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfo_priority.CreateFromDiscriminatorValue); } },
+                { "priority", n => { Priority = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPriority>(global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPriority.CreateFromDiscriminatorValue); } },
                 { "scheduledTime", n => { ScheduledTime = n.GetDateTimeOffsetValue(); } },
-                { "state", n => { State = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfo_state>(); } },
+                { "state", n => { State = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoState>(); } },
             };
         }
         /// <summary>
@@ -205,29 +205,29 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("activityId", ActivityId);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfo_activityOptions>("activityOptions", ActivityOptions);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoActivityOptions>("activityOptions", ActivityOptions);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityType>("activityType", ActivityType);
             writer.WriteIntValue("attempt", Attempt);
             writer.WriteStringValue("currentRetryInterval", CurrentRetryInterval);
             writer.WriteDateTimeOffsetValue("expirationTime", ExpirationTime);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>("heartbeatDetails", HeartbeatDetails);
             writer.WriteDateTimeOffsetValue("lastAttemptCompleteTime", LastAttemptCompleteTime);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfo_lastDeployment>("lastDeployment", LastDeployment);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfo_lastDeploymentVersion>("lastDeploymentVersion", LastDeploymentVersion);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoLastDeployment>("lastDeployment", LastDeployment);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoLastDeploymentVersion>("lastDeploymentVersion", LastDeploymentVersion);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Failure>("lastFailure", LastFailure);
             writer.WriteDateTimeOffsetValue("lastHeartbeatTime", LastHeartbeatTime);
             writer.WriteStringValue("lastIndependentlyAssignedBuildId", LastIndependentlyAssignedBuildId);
             writer.WriteDateTimeOffsetValue("lastStartedTime", LastStartedTime);
             writer.WriteStringValue("lastWorkerDeploymentVersion", LastWorkerDeploymentVersion);
             writer.WriteStringValue("lastWorkerIdentity", LastWorkerIdentity);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfo_lastWorkerVersionStamp>("lastWorkerVersionStamp", LastWorkerVersionStamp);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoLastWorkerVersionStamp>("lastWorkerVersionStamp", LastWorkerVersionStamp);
             writer.WriteIntValue("maximumAttempts", MaximumAttempts);
             writer.WriteDateTimeOffsetValue("nextAttemptScheduleTime", NextAttemptScheduleTime);
             writer.WriteBoolValue("paused", Paused);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPauseInfo>("pauseInfo", PauseInfo);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfo_priority>("priority", Priority);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPriority>("priority", Priority);
             writer.WriteDateTimeOffsetValue("scheduledTime", ScheduledTime);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfo_state>("state", State);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoState>("state", State);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

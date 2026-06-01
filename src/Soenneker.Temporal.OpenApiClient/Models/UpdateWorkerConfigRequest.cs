@@ -49,10 +49,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Defines which workers should receive this command.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerConfigRequest_selector? Selector { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerConfigRequestSelector? Selector { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerConfigRequest_selector Selector { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerConfigRequestSelector Selector { get; set; }
 #endif
         /// <summary>Controls which fields from `worker_config` will be applied</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -65,10 +65,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Partial updates are accepted and controlled by update_mask. The worker configuration to set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerConfigRequest_workerConfig? WorkerConfig { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerConfigRequestWorkerConfig? WorkerConfig { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerConfigRequest_workerConfig WorkerConfig { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerConfigRequestWorkerConfig WorkerConfig { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerConfigRequest"/> and sets the default values.
@@ -99,9 +99,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "namespace", n => { Namespace = n.GetStringValue(); } },
                 { "reason", n => { Reason = n.GetStringValue(); } },
                 { "resourceId", n => { ResourceId = n.GetStringValue(); } },
-                { "selector", n => { Selector = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerConfigRequest_selector>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerConfigRequest_selector.CreateFromDiscriminatorValue); } },
+                { "selector", n => { Selector = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerConfigRequestSelector>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerConfigRequestSelector.CreateFromDiscriminatorValue); } },
                 { "updateMask", n => { UpdateMask = n.GetStringValue(); } },
-                { "workerConfig", n => { WorkerConfig = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerConfigRequest_workerConfig>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerConfigRequest_workerConfig.CreateFromDiscriminatorValue); } },
+                { "workerConfig", n => { WorkerConfig = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerConfigRequestWorkerConfig>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerConfigRequestWorkerConfig.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -115,9 +115,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("namespace", Namespace);
             writer.WriteStringValue("reason", Reason);
             writer.WriteStringValue("resourceId", ResourceId);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerConfigRequest_selector>("selector", Selector);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerConfigRequestSelector>("selector", Selector);
             writer.WriteStringValue("updateMask", UpdateMask);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerConfigRequest_workerConfig>("workerConfig", WorkerConfig);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerConfigRequestWorkerConfig>("workerConfig", WorkerConfig);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

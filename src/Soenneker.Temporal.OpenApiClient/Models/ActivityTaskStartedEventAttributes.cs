@@ -35,10 +35,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Will be set to the most recent failure details, if this task has previously failed and then been retried.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributes_lastFailure? LastFailure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributesLastFailure? LastFailure { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributes_lastFailure LastFailure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributesLastFailure LastFailure { get; set; }
 #endif
         /// <summary>This field is populated from the RecordActivityTaskStartedRequest. Matching service would set the request_id on the RecordActivityTaskStartedRequest to a new UUID. This is useful in case a RecordActivityTaskStarted call succeed but matching doesn&apos;t get that response, so matching could retry and history service would return success if the request_id matches. In that case, matching will continue to deliver the task to worker. Without this field, history service would return AlreadyStarted error, and matching would drop the task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -59,10 +59,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Version info of the worker to whom this task was dispatched. Deprecated. This field should be cleaned up when versioning-2 API is removed. [cleanup-experimental-wv]</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributes_workerVersion? WorkerVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributesWorkerVersion? WorkerVersion { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributes_workerVersion WorkerVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributesWorkerVersion WorkerVersion { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributes"/> and sets the default values.
@@ -92,10 +92,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "attempt", n => { Attempt = n.GetIntValue(); } },
                 { "buildIdRedirectCounter", n => { BuildIdRedirectCounter = n.GetStringValue(); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
-                { "lastFailure", n => { LastFailure = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributes_lastFailure>(global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributes_lastFailure.CreateFromDiscriminatorValue); } },
+                { "lastFailure", n => { LastFailure = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributesLastFailure>(global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributesLastFailure.CreateFromDiscriminatorValue); } },
                 { "requestId", n => { RequestId = n.GetStringValue(); } },
                 { "scheduledEventId", n => { ScheduledEventId = n.GetStringValue(); } },
-                { "workerVersion", n => { WorkerVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributes_workerVersion>(global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributes_workerVersion.CreateFromDiscriminatorValue); } },
+                { "workerVersion", n => { WorkerVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributesWorkerVersion>(global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributesWorkerVersion.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -108,10 +108,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteIntValue("attempt", Attempt);
             writer.WriteStringValue("buildIdRedirectCounter", BuildIdRedirectCounter);
             writer.WriteStringValue("identity", Identity);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributes_lastFailure>("lastFailure", LastFailure);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributesLastFailure>("lastFailure", LastFailure);
             writer.WriteStringValue("requestId", RequestId);
             writer.WriteStringValue("scheduledEventId", ScheduledEventId);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributes_workerVersion>("workerVersion", WorkerVersion);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributesWorkerVersion>("workerVersion", WorkerVersion);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

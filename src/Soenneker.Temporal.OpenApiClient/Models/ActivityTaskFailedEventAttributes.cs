@@ -17,10 +17,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Failure details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskFailedEventAttributes_failure? Failure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskFailedEventAttributesFailure? Failure { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskFailedEventAttributes_failure Failure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskFailedEventAttributesFailure Failure { get; set; }
 #endif
         /// <summary>id of the worker that failed this task</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -31,7 +31,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public string Identity { get; set; }
 #endif
         /// <summary>The retryState property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskFailedEventAttributes_retryState? RetryState { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskFailedEventAttributesRetryState? RetryState { get; set; }
         /// <summary>The id of the `ACTIVITY_TASK_SCHEDULED` event this failure corresponds to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -51,10 +51,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Version info of the worker who processed this workflow task. Deprecated. This field should be cleaned up when versioning-2 API is removed. [cleanup-experimental-wv]</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskFailedEventAttributes_workerVersion? WorkerVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskFailedEventAttributesWorkerVersion? WorkerVersion { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskFailedEventAttributes_workerVersion WorkerVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskFailedEventAttributesWorkerVersion WorkerVersion { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskFailedEventAttributes"/> and sets the default values.
@@ -81,12 +81,12 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "failure", n => { Failure = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskFailedEventAttributes_failure>(global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskFailedEventAttributes_failure.CreateFromDiscriminatorValue); } },
+                { "failure", n => { Failure = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskFailedEventAttributesFailure>(global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskFailedEventAttributesFailure.CreateFromDiscriminatorValue); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
-                { "retryState", n => { RetryState = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskFailedEventAttributes_retryState>(); } },
+                { "retryState", n => { RetryState = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskFailedEventAttributesRetryState>(); } },
                 { "scheduledEventId", n => { ScheduledEventId = n.GetStringValue(); } },
                 { "startedEventId", n => { StartedEventId = n.GetStringValue(); } },
-                { "workerVersion", n => { WorkerVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskFailedEventAttributes_workerVersion>(global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskFailedEventAttributes_workerVersion.CreateFromDiscriminatorValue); } },
+                { "workerVersion", n => { WorkerVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskFailedEventAttributesWorkerVersion>(global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskFailedEventAttributesWorkerVersion.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -96,12 +96,12 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskFailedEventAttributes_failure>("failure", Failure);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskFailedEventAttributesFailure>("failure", Failure);
             writer.WriteStringValue("identity", Identity);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskFailedEventAttributes_retryState>("retryState", RetryState);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskFailedEventAttributesRetryState>("retryState", RetryState);
             writer.WriteStringValue("scheduledEventId", ScheduledEventId);
             writer.WriteStringValue("startedEventId", StartedEventId);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskFailedEventAttributes_workerVersion>("workerVersion", WorkerVersion);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskFailedEventAttributesWorkerVersion>("workerVersion", WorkerVersion);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

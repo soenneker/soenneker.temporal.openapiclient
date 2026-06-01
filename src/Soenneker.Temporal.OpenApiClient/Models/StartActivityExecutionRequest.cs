@@ -23,10 +23,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The type of the activity, a string that corresponds to a registered activity on a worker.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_activityType? ActivityType { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestActivityType? ActivityType { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_activityType ActivityType { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestActivityType ActivityType { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -41,10 +41,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Header for context propagation and tracing purposes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_header? Header { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestHeader? Header { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_header Header { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestHeader Header { get; set; }
 #endif
         /// <summary>Maximum permitted time between successful worker heartbeats.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public string HeartbeatTimeout { get; set; }
 #endif
         /// <summary>Defines how to resolve an activity id conflict with a *running* activity. The default policy is ACTIVITY_ID_CONFLICT_POLICY_FAIL.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_idConflictPolicy? IdConflictPolicy { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestIdConflictPolicy? IdConflictPolicy { get; set; }
         /// <summary>The identity of the client who initiated this request</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -65,14 +65,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public string Identity { get; set; }
 #endif
         /// <summary>Defines whether to allow re-using the activity id from a previously *closed* activity. The default policy is ACTIVITY_ID_REUSE_POLICY_ALLOW_DUPLICATE.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_idReusePolicy? IdReusePolicy { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestIdReusePolicy? IdReusePolicy { get; set; }
         /// <summary>Serialized arguments to the activity. These are passed as arguments to the activity function.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_input? Input { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestInput? Input { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_input Input { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestInput Input { get; set; }
 #endif
         /// <summary>Links to be associated with the activity. Callbacks may also have associated links; links already included with a callback should not be duplicated here.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -93,18 +93,18 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Options for handling conflicts when using ACTIVITY_ID_CONFLICT_POLICY_USE_EXISTING.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_onConflictOptions? OnConflictOptions { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestOnConflictOptions? OnConflictOptions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_onConflictOptions OnConflictOptions { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestOnConflictOptions OnConflictOptions { get; set; }
 #endif
         /// <summary>Priority metadata.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_priority? Priority { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestPriority? Priority { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_priority Priority { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestPriority Priority { get; set; }
 #endif
         /// <summary>A unique identifier for this start request. Typically UUIDv4.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -117,10 +117,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The retry policy for the activity. Will never exceed `schedule_to_close_timeout`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_retryPolicy? RetryPolicy { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestRetryPolicy? RetryPolicy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_retryPolicy RetryPolicy { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestRetryPolicy RetryPolicy { get; set; }
 #endif
         /// <summary>&quot;Indicates how long the caller is willing to wait for an activity completion. Limits how long retries will be attempted. Either this or `start_to_close_timeout` must be specified. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: \&quot;to\&quot; is used to indicate interval. --)&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -141,10 +141,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Search attributes for indexing.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_searchAttributes? SearchAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestSearchAttributes? SearchAttributes { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_searchAttributes SearchAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestSearchAttributes SearchAttributes { get; set; }
 #endif
         /// <summary>Time to wait before dispatching the first activity task. This delay is not applied to retry attempts.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -165,18 +165,18 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Task queue to schedule this activity on.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_taskQueue? TaskQueue { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestTaskQueue? TaskQueue { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_taskQueue TaskQueue { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestTaskQueue TaskQueue { get; set; }
 #endif
         /// <summary>Metadata for use by user interfaces to display the fixed as-of-start summary and details of the activity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_userMetadata? UserMetadata { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestUserMetadata? UserMetadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_userMetadata UserMetadata { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestUserMetadata UserMetadata { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest"/> and sets the default values.
@@ -204,27 +204,27 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "activityId", n => { ActivityId = n.GetStringValue(); } },
-                { "activityType", n => { ActivityType = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_activityType>(global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_activityType.CreateFromDiscriminatorValue); } },
+                { "activityType", n => { ActivityType = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestActivityType>(global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestActivityType.CreateFromDiscriminatorValue); } },
                 { "completionCallbacks", n => { CompletionCallbacks = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.Callback>(global::Soenneker.Temporal.OpenApiClient.Models.Callback.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "header", n => { Header = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_header>(global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_header.CreateFromDiscriminatorValue); } },
+                { "header", n => { Header = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestHeader>(global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestHeader.CreateFromDiscriminatorValue); } },
                 { "heartbeatTimeout", n => { HeartbeatTimeout = n.GetStringValue(); } },
-                { "idConflictPolicy", n => { IdConflictPolicy = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_idConflictPolicy>(); } },
-                { "idReusePolicy", n => { IdReusePolicy = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_idReusePolicy>(); } },
+                { "idConflictPolicy", n => { IdConflictPolicy = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestIdConflictPolicy>(); } },
+                { "idReusePolicy", n => { IdReusePolicy = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestIdReusePolicy>(); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
-                { "input", n => { Input = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_input>(global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_input.CreateFromDiscriminatorValue); } },
+                { "input", n => { Input = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestInput>(global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestInput.CreateFromDiscriminatorValue); } },
                 { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.Link>(global::Soenneker.Temporal.OpenApiClient.Models.Link.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "namespace", n => { Namespace = n.GetStringValue(); } },
-                { "onConflictOptions", n => { OnConflictOptions = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_onConflictOptions>(global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_onConflictOptions.CreateFromDiscriminatorValue); } },
-                { "priority", n => { Priority = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_priority>(global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_priority.CreateFromDiscriminatorValue); } },
+                { "onConflictOptions", n => { OnConflictOptions = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestOnConflictOptions>(global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestOnConflictOptions.CreateFromDiscriminatorValue); } },
+                { "priority", n => { Priority = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestPriority>(global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestPriority.CreateFromDiscriminatorValue); } },
                 { "requestId", n => { RequestId = n.GetStringValue(); } },
-                { "retryPolicy", n => { RetryPolicy = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_retryPolicy>(global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_retryPolicy.CreateFromDiscriminatorValue); } },
+                { "retryPolicy", n => { RetryPolicy = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestRetryPolicy>(global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestRetryPolicy.CreateFromDiscriminatorValue); } },
                 { "scheduleToCloseTimeout", n => { ScheduleToCloseTimeout = n.GetStringValue(); } },
                 { "scheduleToStartTimeout", n => { ScheduleToStartTimeout = n.GetStringValue(); } },
-                { "searchAttributes", n => { SearchAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_searchAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_searchAttributes.CreateFromDiscriminatorValue); } },
+                { "searchAttributes", n => { SearchAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestSearchAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestSearchAttributes.CreateFromDiscriminatorValue); } },
                 { "startDelay", n => { StartDelay = n.GetStringValue(); } },
                 { "startToCloseTimeout", n => { StartToCloseTimeout = n.GetStringValue(); } },
-                { "taskQueue", n => { TaskQueue = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_taskQueue>(global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_taskQueue.CreateFromDiscriminatorValue); } },
-                { "userMetadata", n => { UserMetadata = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_userMetadata>(global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_userMetadata.CreateFromDiscriminatorValue); } },
+                { "taskQueue", n => { TaskQueue = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestTaskQueue>(global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestTaskQueue.CreateFromDiscriminatorValue); } },
+                { "userMetadata", n => { UserMetadata = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestUserMetadata>(global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestUserMetadata.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -235,27 +235,27 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("activityId", ActivityId);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_activityType>("activityType", ActivityType);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestActivityType>("activityType", ActivityType);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.Callback>("completionCallbacks", CompletionCallbacks);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_header>("header", Header);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestHeader>("header", Header);
             writer.WriteStringValue("heartbeatTimeout", HeartbeatTimeout);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_idConflictPolicy>("idConflictPolicy", IdConflictPolicy);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestIdConflictPolicy>("idConflictPolicy", IdConflictPolicy);
             writer.WriteStringValue("identity", Identity);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_idReusePolicy>("idReusePolicy", IdReusePolicy);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_input>("input", Input);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestIdReusePolicy>("idReusePolicy", IdReusePolicy);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestInput>("input", Input);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.Link>("links", Links);
             writer.WriteStringValue("namespace", Namespace);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_onConflictOptions>("onConflictOptions", OnConflictOptions);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_priority>("priority", Priority);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestOnConflictOptions>("onConflictOptions", OnConflictOptions);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestPriority>("priority", Priority);
             writer.WriteStringValue("requestId", RequestId);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_retryPolicy>("retryPolicy", RetryPolicy);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestRetryPolicy>("retryPolicy", RetryPolicy);
             writer.WriteStringValue("scheduleToCloseTimeout", ScheduleToCloseTimeout);
             writer.WriteStringValue("scheduleToStartTimeout", ScheduleToStartTimeout);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_searchAttributes>("searchAttributes", SearchAttributes);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestSearchAttributes>("searchAttributes", SearchAttributes);
             writer.WriteStringValue("startDelay", StartDelay);
             writer.WriteStringValue("startToCloseTimeout", StartToCloseTimeout);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_taskQueue>("taskQueue", TaskQueue);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest_userMetadata>("userMetadata", UserMetadata);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestTaskQueue>("taskQueue", TaskQueue);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestUserMetadata>("userMetadata", UserMetadata);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

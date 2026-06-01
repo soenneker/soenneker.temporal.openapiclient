@@ -17,10 +17,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>A key-value map for any customized purpose. If data already exists on the namespace, this will merge with the existing key values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateNamespaceInfo_data? Data { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateNamespaceInfoDataProperty? Data { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateNamespaceInfo_data Data { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateNamespaceInfoDataProperty Data { get; set; }
 #endif
         /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -39,7 +39,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public string OwnerEmail { get; set; }
 #endif
         /// <summary>New namespace state, server will reject if transition is not allowed. Allowed transitions are:  Registered -&gt; [ Deleted | Deprecated | Handover ]  Handover -&gt; [ Registered ] Default is NAMESPACE_STATE_UNSPECIFIED which is do not change state.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateNamespaceInfo_state? State { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateNamespaceInfoState? State { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.UpdateNamespaceInfo"/> and sets the default values.
         /// </summary>
@@ -65,10 +65,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateNamespaceInfo_data>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateNamespaceInfo_data.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateNamespaceInfoDataProperty>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateNamespaceInfoDataProperty.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "ownerEmail", n => { OwnerEmail = n.GetStringValue(); } },
-                { "state", n => { State = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateNamespaceInfo_state>(); } },
+                { "state", n => { State = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateNamespaceInfoState>(); } },
             };
         }
         /// <summary>
@@ -78,10 +78,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateNamespaceInfo_data>("data", Data);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateNamespaceInfoDataProperty>("data", Data);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("ownerEmail", OwnerEmail);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateNamespaceInfo_state>("state", State);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateNamespaceInfoState>("state", State);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

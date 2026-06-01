@@ -25,10 +25,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Deprecated. If a workflow&apos;s retry policy would cause a new run to start when the current one has failed, this field would be populated with that failure. Now (when supported by server and sdk) the final event will be `WORKFLOW_EXECUTION_FAILED` with `new_execution_run_id` set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionContinuedAsNewEventAttributes_failure? Failure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionContinuedAsNewEventAttributesFailure? Failure { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionContinuedAsNewEventAttributes_failure Failure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionContinuedAsNewEventAttributesFailure Failure { get; set; }
 #endif
         /// <summary>Contains metadata that can be attached to a variety of requests, like starting a workflow, and can be propagated between, for example, workflows and activities.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -41,9 +41,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>If this is set, the new execution inherits the Build ID of the current execution. Otherwise, the assignment rules will be used to independently assign a Build ID to the new execution. Deprecated. Only considered for versioning v0.2.</summary>
         public bool? InheritBuildId { get; set; }
         /// <summary>Experimental. Optionally decide the versioning behavior that the first task of the new run should use. For example, choose to AutoUpgrade on continue-as-new instead of inheriting the pinned version of the previous run.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionContinuedAsNewEventAttributes_initialVersioningBehavior? InitialVersioningBehavior { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionContinuedAsNewEventAttributesInitialVersioningBehavior? InitialVersioningBehavior { get; set; }
         /// <summary>The initiator property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionContinuedAsNewEventAttributes_initiator? Initiator { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionContinuedAsNewEventAttributesInitiator? Initiator { get; set; }
         /// <summary>See `Payload`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -55,10 +55,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The result from the most recent completed run of this workflow. The SDK surfaces this to the new run via APIs such as `GetLastCompletionResult`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionContinuedAsNewEventAttributes_lastCompletionResult? LastCompletionResult { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionContinuedAsNewEventAttributesLastCompletionResult? LastCompletionResult { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionContinuedAsNewEventAttributes_lastCompletionResult LastCompletionResult { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionContinuedAsNewEventAttributesLastCompletionResult LastCompletionResult { get; set; }
 #endif
         /// <summary>A user-defined set of *unindexed* fields that are exposed when listing/searching workflows</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -150,13 +150,13 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "backoffStartInterval", n => { BackoffStartInterval = n.GetStringValue(); } },
-                { "failure", n => { Failure = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionContinuedAsNewEventAttributes_failure>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionContinuedAsNewEventAttributes_failure.CreateFromDiscriminatorValue); } },
+                { "failure", n => { Failure = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionContinuedAsNewEventAttributesFailure>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionContinuedAsNewEventAttributesFailure.CreateFromDiscriminatorValue); } },
                 { "header", n => { Header = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Header>(global::Soenneker.Temporal.OpenApiClient.Models.Header.CreateFromDiscriminatorValue); } },
                 { "inheritBuildId", n => { InheritBuildId = n.GetBoolValue(); } },
-                { "initialVersioningBehavior", n => { InitialVersioningBehavior = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionContinuedAsNewEventAttributes_initialVersioningBehavior>(); } },
-                { "initiator", n => { Initiator = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionContinuedAsNewEventAttributes_initiator>(); } },
+                { "initialVersioningBehavior", n => { InitialVersioningBehavior = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionContinuedAsNewEventAttributesInitialVersioningBehavior>(); } },
+                { "initiator", n => { Initiator = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionContinuedAsNewEventAttributesInitiator>(); } },
                 { "input", n => { Input = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>(global::Soenneker.Temporal.OpenApiClient.Models.Payloads.CreateFromDiscriminatorValue); } },
-                { "lastCompletionResult", n => { LastCompletionResult = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionContinuedAsNewEventAttributes_lastCompletionResult>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionContinuedAsNewEventAttributes_lastCompletionResult.CreateFromDiscriminatorValue); } },
+                { "lastCompletionResult", n => { LastCompletionResult = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionContinuedAsNewEventAttributesLastCompletionResult>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionContinuedAsNewEventAttributesLastCompletionResult.CreateFromDiscriminatorValue); } },
                 { "memo", n => { Memo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Memo>(global::Soenneker.Temporal.OpenApiClient.Models.Memo.CreateFromDiscriminatorValue); } },
                 { "newExecutionRunId", n => { NewExecutionRunId = n.GetStringValue(); } },
                 { "searchAttributes", n => { SearchAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes.CreateFromDiscriminatorValue); } },
@@ -175,13 +175,13 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("backoffStartInterval", BackoffStartInterval);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionContinuedAsNewEventAttributes_failure>("failure", Failure);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionContinuedAsNewEventAttributesFailure>("failure", Failure);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Header>("header", Header);
             writer.WriteBoolValue("inheritBuildId", InheritBuildId);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionContinuedAsNewEventAttributes_initialVersioningBehavior>("initialVersioningBehavior", InitialVersioningBehavior);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionContinuedAsNewEventAttributes_initiator>("initiator", Initiator);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionContinuedAsNewEventAttributesInitialVersioningBehavior>("initialVersioningBehavior", InitialVersioningBehavior);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionContinuedAsNewEventAttributesInitiator>("initiator", Initiator);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>("input", Input);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionContinuedAsNewEventAttributes_lastCompletionResult>("lastCompletionResult", LastCompletionResult);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionContinuedAsNewEventAttributesLastCompletionResult>("lastCompletionResult", LastCompletionResult);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Memo>("memo", Memo);
             writer.WriteStringValue("newExecutionRunId", NewExecutionRunId);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes>("searchAttributes", SearchAttributes);

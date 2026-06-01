@@ -23,7 +23,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public string InitiatedId { get; set; }
 #endif
         /// <summary>&quot;Default: PARENT_CLOSE_POLICY_TERMINATE.&quot;</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.PendingChildExecutionInfo_parentClosePolicy? ParentClosePolicy { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PendingChildExecutionInfoParentClosePolicy? ParentClosePolicy { get; set; }
         /// <summary>The runId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -74,7 +74,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "initiatedId", n => { InitiatedId = n.GetStringValue(); } },
-                { "parentClosePolicy", n => { ParentClosePolicy = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingChildExecutionInfo_parentClosePolicy>(); } },
+                { "parentClosePolicy", n => { ParentClosePolicy = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingChildExecutionInfoParentClosePolicy>(); } },
                 { "runId", n => { RunId = n.GetStringValue(); } },
                 { "workflowId", n => { WorkflowId = n.GetStringValue(); } },
                 { "workflowTypeName", n => { WorkflowTypeName = n.GetStringValue(); } },
@@ -88,7 +88,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("initiatedId", InitiatedId);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingChildExecutionInfo_parentClosePolicy>("parentClosePolicy", ParentClosePolicy);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingChildExecutionInfoParentClosePolicy>("parentClosePolicy", ParentClosePolicy);
             writer.WriteStringValue("runId", RunId);
             writer.WriteStringValue("workflowId", WorkflowId);
             writer.WriteStringValue("workflowTypeName", WorkflowTypeName);

@@ -17,10 +17,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Worker deployment options that SDK sent to server.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.PollerInfo_deploymentOptions? DeploymentOptions { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PollerInfoDeploymentOptions? DeploymentOptions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.PollerInfo_deploymentOptions DeploymentOptions { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PollerInfoDeploymentOptions DeploymentOptions { get; set; }
 #endif
         /// <summary>The identity property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -37,10 +37,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>If a worker has opted into the worker versioning feature while polling, its capabilities will appear here. Deprecated. Replaced by deployment_options.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.PollerInfo_workerVersionCapabilities? WorkerVersionCapabilities { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PollerInfoWorkerVersionCapabilities? WorkerVersionCapabilities { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.PollerInfo_workerVersionCapabilities WorkerVersionCapabilities { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PollerInfoWorkerVersionCapabilities WorkerVersionCapabilities { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.PollerInfo"/> and sets the default values.
@@ -67,11 +67,11 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "deploymentOptions", n => { DeploymentOptions = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PollerInfo_deploymentOptions>(global::Soenneker.Temporal.OpenApiClient.Models.PollerInfo_deploymentOptions.CreateFromDiscriminatorValue); } },
+                { "deploymentOptions", n => { DeploymentOptions = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PollerInfoDeploymentOptions>(global::Soenneker.Temporal.OpenApiClient.Models.PollerInfoDeploymentOptions.CreateFromDiscriminatorValue); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
                 { "lastAccessTime", n => { LastAccessTime = n.GetDateTimeOffsetValue(); } },
                 { "ratePerSecond", n => { RatePerSecond = n.GetDoubleValue(); } },
-                { "workerVersionCapabilities", n => { WorkerVersionCapabilities = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PollerInfo_workerVersionCapabilities>(global::Soenneker.Temporal.OpenApiClient.Models.PollerInfo_workerVersionCapabilities.CreateFromDiscriminatorValue); } },
+                { "workerVersionCapabilities", n => { WorkerVersionCapabilities = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PollerInfoWorkerVersionCapabilities>(global::Soenneker.Temporal.OpenApiClient.Models.PollerInfoWorkerVersionCapabilities.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -81,11 +81,11 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PollerInfo_deploymentOptions>("deploymentOptions", DeploymentOptions);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PollerInfoDeploymentOptions>("deploymentOptions", DeploymentOptions);
             writer.WriteStringValue("identity", Identity);
             writer.WriteDateTimeOffsetValue("lastAccessTime", LastAccessTime);
             writer.WriteDoubleValue("ratePerSecond", RatePerSecond);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PollerInfo_workerVersionCapabilities>("workerVersionCapabilities", WorkerVersionCapabilities);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PollerInfoWorkerVersionCapabilities>("workerVersionCapabilities", WorkerVersionCapabilities);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

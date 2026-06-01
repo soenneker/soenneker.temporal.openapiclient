@@ -15,7 +15,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The status property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.QueryRejected_status? Status { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.QueryRejectedStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.QueryRejected"/> and sets the default values.
         /// </summary>
@@ -41,7 +41,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.QueryRejected_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.QueryRejectedStatus>(); } },
             };
         }
         /// <summary>
@@ -51,7 +51,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.QueryRejected_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.QueryRejectedStatus>("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -74,7 +74,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Worker start time. It can be used to determine worker uptime. (current time - start time)</summary>
         public DateTimeOffset? StartTime { get; set; }
         /// <summary>Worker status. Defined by SDK.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerListInfo_status? Status { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerListInfoStatus? Status { get; set; }
         /// <summary>Task queue this worker is polling for tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -140,7 +140,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "sdkName", n => { SdkName = n.GetStringValue(); } },
                 { "sdkVersion", n => { SdkVersion = n.GetStringValue(); } },
                 { "startTime", n => { StartTime = n.GetDateTimeOffsetValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerListInfo_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerListInfoStatus>(); } },
                 { "taskQueue", n => { TaskQueue = n.GetStringValue(); } },
                 { "workerGroupingKey", n => { WorkerGroupingKey = n.GetStringValue(); } },
                 { "workerIdentity", n => { WorkerIdentity = n.GetStringValue(); } },
@@ -162,7 +162,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("sdkName", SdkName);
             writer.WriteStringValue("sdkVersion", SdkVersion);
             writer.WriteDateTimeOffsetValue("startTime", StartTime);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerListInfo_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerListInfoStatus>("status", Status);
             writer.WriteStringValue("taskQueue", TaskQueue);
             writer.WriteStringValue("workerGroupingKey", WorkerGroupingKey);
             writer.WriteStringValue("workerIdentity", WorkerIdentity);

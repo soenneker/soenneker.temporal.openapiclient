@@ -15,7 +15,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The category property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.ApplicationFailureInfo_category? Category { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ApplicationFailureInfoCategory? Category { get; set; }
         /// <summary>See `Payload`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -67,7 +67,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "category", n => { Category = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.ApplicationFailureInfo_category>(); } },
+                { "category", n => { Category = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.ApplicationFailureInfoCategory>(); } },
                 { "details", n => { Details = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>(global::Soenneker.Temporal.OpenApiClient.Models.Payloads.CreateFromDiscriminatorValue); } },
                 { "nextRetryDelay", n => { NextRetryDelay = n.GetStringValue(); } },
                 { "nonRetryable", n => { NonRetryable = n.GetBoolValue(); } },
@@ -81,7 +81,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.ApplicationFailureInfo_category>("category", Category);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.ApplicationFailureInfoCategory>("category", Category);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>("details", Details);
             writer.WriteStringValue("nextRetryDelay", NextRetryDelay);
             writer.WriteBoolValue("nonRetryable", NonRetryable);

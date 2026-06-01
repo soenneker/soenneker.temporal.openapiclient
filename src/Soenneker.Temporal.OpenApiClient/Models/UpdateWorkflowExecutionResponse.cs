@@ -17,28 +17,28 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Link to the update event. May be null if the update has not yet been accepted.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponse_link? Link { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseLink? Link { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponse_link Link { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseLink Link { get; set; }
 #endif
         /// <summary>The outcome of the Update if and only if the Workflow Update has completed. If this response is being returned before the Update has completed then this field will not be set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponse_outcome? Outcome { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseOutcome? Outcome { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponse_outcome Outcome { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseOutcome Outcome { get; set; }
 #endif
         /// <summary>The most advanced lifecycle stage that the Update is known to have reached, where lifecycle stages are ordered UPDATE_WORKFLOW_EXECUTION_LIFECYCLE_STAGE_UNSPECIFIED &lt; UPDATE_WORKFLOW_EXECUTION_LIFECYCLE_STAGE_ADMITTED &lt; UPDATE_WORKFLOW_EXECUTION_LIFECYCLE_STAGE_ACCEPTED &lt; UPDATE_WORKFLOW_EXECUTION_LIFECYCLE_STAGE_COMPLETED. UNSPECIFIED will be returned if and only if the server&apos;s maximum wait time was reached before the Update reached the stage specified in the request WaitPolicy, and before the context deadline expired; clients may may then retry the call as needed.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponse_stage? Stage { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseStage? Stage { get; set; }
         /// <summary>Enough information for subsequent poll calls if needed. Never null.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponse_updateRef? UpdateRef { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseUpdateRef? UpdateRef { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponse_updateRef UpdateRef { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseUpdateRef UpdateRef { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponse"/> and sets the default values.
@@ -65,10 +65,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "link", n => { Link = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponse_link>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponse_link.CreateFromDiscriminatorValue); } },
-                { "outcome", n => { Outcome = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponse_outcome>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponse_outcome.CreateFromDiscriminatorValue); } },
-                { "stage", n => { Stage = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponse_stage>(); } },
-                { "updateRef", n => { UpdateRef = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponse_updateRef>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponse_updateRef.CreateFromDiscriminatorValue); } },
+                { "link", n => { Link = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseLink>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseLink.CreateFromDiscriminatorValue); } },
+                { "outcome", n => { Outcome = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseOutcome>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseOutcome.CreateFromDiscriminatorValue); } },
+                { "stage", n => { Stage = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseStage>(); } },
+                { "updateRef", n => { UpdateRef = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseUpdateRef>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseUpdateRef.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -78,10 +78,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponse_link>("link", Link);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponse_outcome>("outcome", Outcome);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponse_stage>("stage", Stage);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponse_updateRef>("updateRef", UpdateRef);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseLink>("link", Link);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseOutcome>("outcome", Outcome);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseStage>("stage", Stage);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseUpdateRef>("updateRef", UpdateRef);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

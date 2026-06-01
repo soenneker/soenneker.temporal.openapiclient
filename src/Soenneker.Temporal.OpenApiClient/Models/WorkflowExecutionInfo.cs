@@ -110,10 +110,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>If set, the most recent worker version stamp that appeared in a workflow task completion Deprecated. This field should be cleaned up when versioning-2 API is removed. [cleanup-experimental-wv]</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfo_mostRecentWorkerVersionStamp? MostRecentWorkerVersionStamp { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoMostRecentWorkerVersionStamp? MostRecentWorkerVersionStamp { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfo_mostRecentWorkerVersionStamp MostRecentWorkerVersionStamp { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoMostRecentWorkerVersionStamp MostRecentWorkerVersionStamp { get; set; }
 #endif
         /// <summary>Identifies a specific workflow within a namespace. Practically speaking, because run_id is a uuid, a workflow execution is globally unique. Note that many commands allow specifying an empty run id as a way of saying &quot;target the latest run of the workflow&quot;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -134,18 +134,18 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Priority metadata</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfo_priority? Priority { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoPriority? Priority { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfo_priority Priority { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoPriority Priority { get; set; }
 #endif
         /// <summary>&quot;Contains information about the root workflow execution. The root workflow execution is defined as follows: 1. A workflow without parent workflow is its own root workflow. 2. A workflow that has a parent workflow has the same root workflow as its parent workflow. Note: workflows continued as new or reseted may or may not have parents, check examples below. Examples:   Scenario 1: Workflow W1 starts child workflow W2, and W2 starts child workflow W3.     - The root workflow of all three workflows is W1.   Scenario 2: Workflow W1 starts child workflow W2, and W2 continued as new W3.     - The root workflow of all three workflows is W1.   Scenario 3: Workflow W1 continued as new W2.     - The root workflow of W1 is W1 and the root workflow of W2 is W2.   Scenario 4: Workflow W1 starts child workflow W2, and W2 is reseted, creating W3     - The root workflow of all three workflows is W1.   Scenario 5: Workflow W1 is reseted, creating W2.     - The root workflow of W1 is W1 and the root workflow of W2 is W2.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfo_rootExecution? RootExecution { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoRootExecution? RootExecution { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfo_rootExecution RootExecution { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoRootExecution RootExecution { get; set; }
 #endif
         /// <summary>A user-defined set of *indexed* fields that are used/exposed when listing/searching workflows. The payload is not serialized in a user-defined way.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -166,7 +166,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public string StateTransitionCount { get; set; }
 #endif
         /// <summary>The status property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfo_status? Status { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoStatus? Status { get; set; }
         /// <summary>The taskQueue property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -186,10 +186,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Absent value means the workflow execution is not versioned. When present, the execution might be versioned or unversioned, depending on `versioning_info.behavior` and `versioning_info.versioning_override`. Experimental. Versioning info is experimental and might change in the future.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfo_versioningInfo? VersioningInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoVersioningInfo? VersioningInfo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfo_versioningInfo VersioningInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoVersioningInfo VersioningInfo { get; set; }
 #endif
         /// <summary>The name of Worker Deployment that completed the most recent workflow task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -237,18 +237,18 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "historySizeBytes", n => { HistorySizeBytes = n.GetStringValue(); } },
                 { "inheritedBuildId", n => { InheritedBuildId = n.GetStringValue(); } },
                 { "memo", n => { Memo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Memo>(global::Soenneker.Temporal.OpenApiClient.Models.Memo.CreateFromDiscriminatorValue); } },
-                { "mostRecentWorkerVersionStamp", n => { MostRecentWorkerVersionStamp = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfo_mostRecentWorkerVersionStamp>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfo_mostRecentWorkerVersionStamp.CreateFromDiscriminatorValue); } },
+                { "mostRecentWorkerVersionStamp", n => { MostRecentWorkerVersionStamp = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoMostRecentWorkerVersionStamp>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoMostRecentWorkerVersionStamp.CreateFromDiscriminatorValue); } },
                 { "parentExecution", n => { ParentExecution = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution.CreateFromDiscriminatorValue); } },
                 { "parentNamespaceId", n => { ParentNamespaceId = n.GetStringValue(); } },
-                { "priority", n => { Priority = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfo_priority>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfo_priority.CreateFromDiscriminatorValue); } },
-                { "rootExecution", n => { RootExecution = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfo_rootExecution>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfo_rootExecution.CreateFromDiscriminatorValue); } },
+                { "priority", n => { Priority = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoPriority>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoPriority.CreateFromDiscriminatorValue); } },
+                { "rootExecution", n => { RootExecution = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoRootExecution>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoRootExecution.CreateFromDiscriminatorValue); } },
                 { "searchAttributes", n => { SearchAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes.CreateFromDiscriminatorValue); } },
                 { "startTime", n => { StartTime = n.GetDateTimeOffsetValue(); } },
                 { "stateTransitionCount", n => { StateTransitionCount = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfo_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoStatus>(); } },
                 { "taskQueue", n => { TaskQueue = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowType>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowType.CreateFromDiscriminatorValue); } },
-                { "versioningInfo", n => { VersioningInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfo_versioningInfo>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfo_versioningInfo.CreateFromDiscriminatorValue); } },
+                { "versioningInfo", n => { VersioningInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoVersioningInfo>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoVersioningInfo.CreateFromDiscriminatorValue); } },
                 { "workerDeploymentName", n => { WorkerDeploymentName = n.GetStringValue(); } },
             };
         }
@@ -272,18 +272,18 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("historySizeBytes", HistorySizeBytes);
             writer.WriteStringValue("inheritedBuildId", InheritedBuildId);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Memo>("memo", Memo);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfo_mostRecentWorkerVersionStamp>("mostRecentWorkerVersionStamp", MostRecentWorkerVersionStamp);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoMostRecentWorkerVersionStamp>("mostRecentWorkerVersionStamp", MostRecentWorkerVersionStamp);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution>("parentExecution", ParentExecution);
             writer.WriteStringValue("parentNamespaceId", ParentNamespaceId);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfo_priority>("priority", Priority);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfo_rootExecution>("rootExecution", RootExecution);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoPriority>("priority", Priority);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoRootExecution>("rootExecution", RootExecution);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes>("searchAttributes", SearchAttributes);
             writer.WriteDateTimeOffsetValue("startTime", StartTime);
             writer.WriteStringValue("stateTransitionCount", StateTransitionCount);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfo_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoStatus>("status", Status);
             writer.WriteStringValue("taskQueue", TaskQueue);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowType>("type", Type);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfo_versioningInfo>("versioningInfo", VersioningInfo);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoVersioningInfo>("versioningInfo", VersioningInfo);
             writer.WriteStringValue("workerDeploymentName", WorkerDeploymentName);
             writer.WriteAdditionalData(AdditionalData);
         }

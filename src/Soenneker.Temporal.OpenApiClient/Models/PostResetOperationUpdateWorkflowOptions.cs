@@ -26,10 +26,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Update Workflow options that were originally specified via StartWorkflowExecution. Partial updates are accepted and controlled by update_mask.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptions_workflowExecutionOptions? WorkflowExecutionOptions { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptionsWorkflowExecutionOptions? WorkflowExecutionOptions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptions_workflowExecutionOptions WorkflowExecutionOptions { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptionsWorkflowExecutionOptions WorkflowExecutionOptions { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptions"/> and sets the default values.
@@ -57,7 +57,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "updateMask", n => { UpdateMask = n.GetStringValue(); } },
-                { "workflowExecutionOptions", n => { WorkflowExecutionOptions = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptions_workflowExecutionOptions>(global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptions_workflowExecutionOptions.CreateFromDiscriminatorValue); } },
+                { "workflowExecutionOptions", n => { WorkflowExecutionOptions = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptionsWorkflowExecutionOptions>(global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptionsWorkflowExecutionOptions.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -68,7 +68,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("updateMask", UpdateMask);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptions_workflowExecutionOptions>("workflowExecutionOptions", WorkflowExecutionOptions);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptionsWorkflowExecutionOptions>("workflowExecutionOptions", WorkflowExecutionOptions);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

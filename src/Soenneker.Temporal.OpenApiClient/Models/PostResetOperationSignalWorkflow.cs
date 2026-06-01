@@ -18,18 +18,18 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Headers that are passed with the signal to the processing workflow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationSignalWorkflow_header? Header { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationSignalWorkflowHeader? Header { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationSignalWorkflow_header Header { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationSignalWorkflowHeader Header { get; set; }
 #endif
         /// <summary>Serialized value(s) to provide with the signal.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationSignalWorkflow_input? Input { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationSignalWorkflowInput? Input { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationSignalWorkflow_input Input { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationSignalWorkflowInput Input { get; set; }
 #endif
         /// <summary>Links to be associated with the WorkflowExecutionSignaled event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -72,8 +72,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "header", n => { Header = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationSignalWorkflow_header>(global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationSignalWorkflow_header.CreateFromDiscriminatorValue); } },
-                { "input", n => { Input = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationSignalWorkflow_input>(global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationSignalWorkflow_input.CreateFromDiscriminatorValue); } },
+                { "header", n => { Header = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationSignalWorkflowHeader>(global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationSignalWorkflowHeader.CreateFromDiscriminatorValue); } },
+                { "input", n => { Input = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationSignalWorkflowInput>(global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationSignalWorkflowInput.CreateFromDiscriminatorValue); } },
                 { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.Link>(global::Soenneker.Temporal.OpenApiClient.Models.Link.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "signalName", n => { SignalName = n.GetStringValue(); } },
             };
@@ -85,8 +85,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationSignalWorkflow_header>("header", Header);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationSignalWorkflow_input>("input", Input);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationSignalWorkflowHeader>("header", Header);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationSignalWorkflowInput>("input", Input);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.Link>("links", Links);
             writer.WriteStringValue("signalName", SignalName);
             writer.WriteAdditionalData(AdditionalData);

@@ -25,10 +25,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Created rule.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkflowRuleResponse_rule? Rule { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkflowRuleResponseRule? Rule { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkflowRuleResponse_rule Rule { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkflowRuleResponseRule Rule { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkflowRuleResponse"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "jobId", n => { JobId = n.GetStringValue(); } },
-                { "rule", n => { Rule = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkflowRuleResponse_rule>(global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkflowRuleResponse_rule.CreateFromDiscriminatorValue); } },
+                { "rule", n => { Rule = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkflowRuleResponseRule>(global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkflowRuleResponseRule.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("jobId", JobId);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkflowRuleResponse_rule>("rule", Rule);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkflowRuleResponseRule>("rule", Rule);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

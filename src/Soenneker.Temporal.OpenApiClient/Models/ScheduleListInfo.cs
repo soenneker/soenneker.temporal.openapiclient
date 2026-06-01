@@ -44,10 +44,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>&quot;From spec: Some fields are dropped from this copy of spec: timezone_data&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ScheduleListInfo_spec? Spec { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ScheduleListInfoSpec? Spec { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ScheduleListInfo_spec Spec { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ScheduleListInfoSpec Spec { get; set; }
 #endif
         /// <summary>Size of the schedule&apos;s internal state (including payloads) in bytes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -60,10 +60,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>&quot;From action: Action is a oneof field, but we need to encode this in JSON and oneof fields don&apos;t work well with JSON. If action is start_workflow, this is set:&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ScheduleListInfo_workflowType? WorkflowType { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ScheduleListInfoWorkflowType? WorkflowType { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ScheduleListInfo_workflowType WorkflowType { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ScheduleListInfoWorkflowType WorkflowType { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.ScheduleListInfo"/> and sets the default values.
@@ -94,9 +94,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "notes", n => { Notes = n.GetStringValue(); } },
                 { "paused", n => { Paused = n.GetBoolValue(); } },
                 { "recentActions", n => { RecentActions = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResult>(global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResult.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "spec", n => { Spec = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleListInfo_spec>(global::Soenneker.Temporal.OpenApiClient.Models.ScheduleListInfo_spec.CreateFromDiscriminatorValue); } },
+                { "spec", n => { Spec = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleListInfoSpec>(global::Soenneker.Temporal.OpenApiClient.Models.ScheduleListInfoSpec.CreateFromDiscriminatorValue); } },
                 { "stateSizeBytes", n => { StateSizeBytes = n.GetStringValue(); } },
-                { "workflowType", n => { WorkflowType = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleListInfo_workflowType>(global::Soenneker.Temporal.OpenApiClient.Models.ScheduleListInfo_workflowType.CreateFromDiscriminatorValue); } },
+                { "workflowType", n => { WorkflowType = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleListInfoWorkflowType>(global::Soenneker.Temporal.OpenApiClient.Models.ScheduleListInfoWorkflowType.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -110,9 +110,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("notes", Notes);
             writer.WriteBoolValue("paused", Paused);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResult>("recentActions", RecentActions);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleListInfo_spec>("spec", Spec);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleListInfoSpec>("spec", Spec);
             writer.WriteStringValue("stateSizeBytes", StateSizeBytes);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleListInfo_workflowType>("workflowType", WorkflowType);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleListInfoWorkflowType>("workflowType", WorkflowType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

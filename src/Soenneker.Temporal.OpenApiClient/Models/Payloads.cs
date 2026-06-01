@@ -18,10 +18,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The payloads property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.Payloads_payloads>? PayloadsProp { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.PayloadsPayloadsItem>? PayloadsProp { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.Payloads_payloads> PayloadsProp { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.PayloadsPayloadsItem> PayloadsProp { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.Payloads"/> and sets the default values.
@@ -48,7 +48,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "payloads", n => { PayloadsProp = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.Payloads_payloads>(global::Soenneker.Temporal.OpenApiClient.Models.Payloads_payloads.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "payloads", n => { PayloadsProp = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.PayloadsPayloadsItem>(global::Soenneker.Temporal.OpenApiClient.Models.PayloadsPayloadsItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -58,7 +58,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.Payloads_payloads>("payloads", PayloadsProp);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.PayloadsPayloadsItem>("payloads", PayloadsProp);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

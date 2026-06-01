@@ -30,10 +30,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The last attempt&apos;s failure, if any.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionCancellationInfo_lastAttemptFailure? LastAttemptFailure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionCancellationInfoLastAttemptFailure? LastAttemptFailure { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionCancellationInfo_lastAttemptFailure LastAttemptFailure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionCancellationInfoLastAttemptFailure LastAttemptFailure { get; set; }
 #endif
         /// <summary>The time when the next attempt is scheduled.</summary>
         public DateTimeOffset? NextAttemptScheduleTime { get; set; }
@@ -48,7 +48,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The time when cancellation was requested.</summary>
         public DateTimeOffset? RequestedTime { get; set; }
         /// <summary>The state property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionCancellationInfo_state? State { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionCancellationInfoState? State { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionCancellationInfo"/> and sets the default values.
         /// </summary>
@@ -77,11 +77,11 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "attempt", n => { Attempt = n.GetIntValue(); } },
                 { "blockedReason", n => { BlockedReason = n.GetStringValue(); } },
                 { "lastAttemptCompleteTime", n => { LastAttemptCompleteTime = n.GetDateTimeOffsetValue(); } },
-                { "lastAttemptFailure", n => { LastAttemptFailure = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionCancellationInfo_lastAttemptFailure>(global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionCancellationInfo_lastAttemptFailure.CreateFromDiscriminatorValue); } },
+                { "lastAttemptFailure", n => { LastAttemptFailure = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionCancellationInfoLastAttemptFailure>(global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionCancellationInfoLastAttemptFailure.CreateFromDiscriminatorValue); } },
                 { "nextAttemptScheduleTime", n => { NextAttemptScheduleTime = n.GetDateTimeOffsetValue(); } },
                 { "reason", n => { Reason = n.GetStringValue(); } },
                 { "requestedTime", n => { RequestedTime = n.GetDateTimeOffsetValue(); } },
-                { "state", n => { State = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionCancellationInfo_state>(); } },
+                { "state", n => { State = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionCancellationInfoState>(); } },
             };
         }
         /// <summary>
@@ -94,11 +94,11 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteIntValue("attempt", Attempt);
             writer.WriteStringValue("blockedReason", BlockedReason);
             writer.WriteDateTimeOffsetValue("lastAttemptCompleteTime", LastAttemptCompleteTime);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionCancellationInfo_lastAttemptFailure>("lastAttemptFailure", LastAttemptFailure);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionCancellationInfoLastAttemptFailure>("lastAttemptFailure", LastAttemptFailure);
             writer.WriteDateTimeOffsetValue("nextAttemptScheduleTime", NextAttemptScheduleTime);
             writer.WriteStringValue("reason", Reason);
             writer.WriteDateTimeOffsetValue("requestedTime", RequestedTime);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionCancellationInfo_state>("state", State);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionCancellationInfoState>("state", State);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

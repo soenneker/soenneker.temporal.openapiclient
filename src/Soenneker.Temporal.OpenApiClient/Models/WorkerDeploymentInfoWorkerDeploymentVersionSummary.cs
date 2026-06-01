@@ -29,21 +29,21 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummary_deploymentVersion? DeploymentVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummaryDeploymentVersion? DeploymentVersion { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummary_deploymentVersion DeploymentVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummaryDeploymentVersion DeploymentVersion { get; set; }
 #endif
         /// <summary>Information about workflow drainage to help the user determine when it is safe to decommission a Version. Not present while version is current or ramping</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummary_drainageInfo? DrainageInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummaryDrainageInfo? DrainageInfo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummary_drainageInfo DrainageInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummaryDrainageInfo DrainageInfo { get; set; }
 #endif
         /// <summary>Deprecated. Use `drainage_info` instead.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummary_drainageStatus? DrainageStatus { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummaryDrainageStatus? DrainageStatus { get; set; }
         /// <summary>Timestamp when this version first became current or ramping.</summary>
         public DateTimeOffset? FirstActivationTime { get; set; }
         /// <summary>Timestamp when this version last became current. Can be used to determine whether a version has ever been Current.</summary>
@@ -55,7 +55,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Last time `current_since_time`, `ramping_since_time, or `ramp_percentage` of this version changed.</summary>
         public DateTimeOffset? RoutingUpdateTime { get; set; }
         /// <summary>The status of the Worker Deployment Version.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummary_status? Status { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummaryStatus? Status { get; set; }
         /// <summary>Deprecated. Use `deployment_version`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -92,15 +92,15 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "computeConfig", n => { ComputeConfig = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ComputeConfigSummary>(global::Soenneker.Temporal.OpenApiClient.Models.ComputeConfigSummary.CreateFromDiscriminatorValue); } },
                 { "createTime", n => { CreateTime = n.GetDateTimeOffsetValue(); } },
                 { "currentSinceTime", n => { CurrentSinceTime = n.GetDateTimeOffsetValue(); } },
-                { "deploymentVersion", n => { DeploymentVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummary_deploymentVersion>(global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummary_deploymentVersion.CreateFromDiscriminatorValue); } },
-                { "drainageInfo", n => { DrainageInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummary_drainageInfo>(global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummary_drainageInfo.CreateFromDiscriminatorValue); } },
-                { "drainageStatus", n => { DrainageStatus = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummary_drainageStatus>(); } },
+                { "deploymentVersion", n => { DeploymentVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummaryDeploymentVersion>(global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummaryDeploymentVersion.CreateFromDiscriminatorValue); } },
+                { "drainageInfo", n => { DrainageInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummaryDrainageInfo>(global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummaryDrainageInfo.CreateFromDiscriminatorValue); } },
+                { "drainageStatus", n => { DrainageStatus = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummaryDrainageStatus>(); } },
                 { "firstActivationTime", n => { FirstActivationTime = n.GetDateTimeOffsetValue(); } },
                 { "lastCurrentTime", n => { LastCurrentTime = n.GetDateTimeOffsetValue(); } },
                 { "lastDeactivationTime", n => { LastDeactivationTime = n.GetDateTimeOffsetValue(); } },
                 { "rampingSinceTime", n => { RampingSinceTime = n.GetDateTimeOffsetValue(); } },
                 { "routingUpdateTime", n => { RoutingUpdateTime = n.GetDateTimeOffsetValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummary_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummaryStatus>(); } },
                 { "version", n => { Version = n.GetStringValue(); } },
             };
         }
@@ -114,15 +114,15 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ComputeConfigSummary>("computeConfig", ComputeConfig);
             writer.WriteDateTimeOffsetValue("createTime", CreateTime);
             writer.WriteDateTimeOffsetValue("currentSinceTime", CurrentSinceTime);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummary_deploymentVersion>("deploymentVersion", DeploymentVersion);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummary_drainageInfo>("drainageInfo", DrainageInfo);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummary_drainageStatus>("drainageStatus", DrainageStatus);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummaryDeploymentVersion>("deploymentVersion", DeploymentVersion);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummaryDrainageInfo>("drainageInfo", DrainageInfo);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummaryDrainageStatus>("drainageStatus", DrainageStatus);
             writer.WriteDateTimeOffsetValue("firstActivationTime", FirstActivationTime);
             writer.WriteDateTimeOffsetValue("lastCurrentTime", LastCurrentTime);
             writer.WriteDateTimeOffsetValue("lastDeactivationTime", LastDeactivationTime);
             writer.WriteDateTimeOffsetValue("rampingSinceTime", RampingSinceTime);
             writer.WriteDateTimeOffsetValue("routingUpdateTime", RoutingUpdateTime);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummary_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummaryStatus>("status", Status);
             writer.WriteStringValue("version", Version);
             writer.WriteAdditionalData(AdditionalData);
         }

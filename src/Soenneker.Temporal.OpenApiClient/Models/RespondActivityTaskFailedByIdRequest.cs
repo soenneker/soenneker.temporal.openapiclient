@@ -25,10 +25,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Detailed failure information</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskFailedByIdRequest_failure? Failure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskFailedByIdRequestFailure? Failure { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskFailedByIdRequest_failure Failure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskFailedByIdRequestFailure Failure { get; set; }
 #endif
         /// <summary>The identity of the worker/client</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -41,10 +41,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Additional details to be stored as last activity heartbeat</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskFailedByIdRequest_lastHeartbeatDetails? LastHeartbeatDetails { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskFailedByIdRequestLastHeartbeatDetails? LastHeartbeatDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskFailedByIdRequest_lastHeartbeatDetails LastHeartbeatDetails { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskFailedByIdRequestLastHeartbeatDetails LastHeartbeatDetails { get; set; }
 #endif
         /// <summary>Namespace of the workflow which scheduled this activity</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -104,9 +104,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "activityId", n => { ActivityId = n.GetStringValue(); } },
-                { "failure", n => { Failure = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskFailedByIdRequest_failure>(global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskFailedByIdRequest_failure.CreateFromDiscriminatorValue); } },
+                { "failure", n => { Failure = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskFailedByIdRequestFailure>(global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskFailedByIdRequestFailure.CreateFromDiscriminatorValue); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
-                { "lastHeartbeatDetails", n => { LastHeartbeatDetails = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskFailedByIdRequest_lastHeartbeatDetails>(global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskFailedByIdRequest_lastHeartbeatDetails.CreateFromDiscriminatorValue); } },
+                { "lastHeartbeatDetails", n => { LastHeartbeatDetails = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskFailedByIdRequestLastHeartbeatDetails>(global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskFailedByIdRequestLastHeartbeatDetails.CreateFromDiscriminatorValue); } },
                 { "namespace", n => { Namespace = n.GetStringValue(); } },
                 { "resourceId", n => { ResourceId = n.GetStringValue(); } },
                 { "runId", n => { RunId = n.GetStringValue(); } },
@@ -121,9 +121,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("activityId", ActivityId);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskFailedByIdRequest_failure>("failure", Failure);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskFailedByIdRequestFailure>("failure", Failure);
             writer.WriteStringValue("identity", Identity);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskFailedByIdRequest_lastHeartbeatDetails>("lastHeartbeatDetails", LastHeartbeatDetails);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskFailedByIdRequestLastHeartbeatDetails>("lastHeartbeatDetails", LastHeartbeatDetails);
             writer.WriteStringValue("namespace", Namespace);
             writer.WriteStringValue("resourceId", ResourceId);
             writer.WriteStringValue("runId", RunId);

@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Activities.Item.Unpause
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v1\namespaces\{namespace}\workflows\{executionWorkflow_-id}\activities\{activityId}\unpause
+    /// Builds and executes requests for operations under \api\v1\namespaces\{namespaceValue}\workflows\{executionWorkflow-id}\activities\{activityId}\unpause
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UnpauseRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public UnpauseRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespace}/workflows/{executionWorkflow_%2Did}/activities/{activityId}/unpause", pathParameters)
+        public UnpauseRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespaceValue}/workflows/{executionWorkflow%2Did}/activities/{activityId}/unpause", pathParameters)
         {
         }
         /// <summary>
@@ -30,24 +30,24 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public UnpauseRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespace}/workflows/{executionWorkflow_%2Did}/activities/{activityId}/unpause", rawUrl)
+        public UnpauseRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespaceValue}/workflows/{executionWorkflow%2Did}/activities/{activityId}/unpause", rawUrl)
         {
         }
         /// <summary>
         /// UnpauseActivityExecution unpauses the execution of an activity specified by its ID. This API can be used to target a workflow activity or a standalone activity. If activity is not paused, this call will have no effect. If the activity was paused while waiting for retry, it will be scheduled immediately (* see &apos;jitter&apos; flag). Once the activity is unpaused, all timeout timers will be regenerated. Returns a `NotFound` error if there is no pending activity with the provided ID
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Activities.Item.Unpause.UnpausePostResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Models.UnpauseActivityExecution2200Response"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Temporal.OpenApiClient.Models.Status">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Activities.Item.Unpause.UnpausePostResponse?> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.UnpauseActivityExecutionRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.UnpauseActivityExecution2200Response?> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.UnpauseActivityExecutionRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Activities.Item.Unpause.UnpausePostResponse> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.UnpauseActivityExecutionRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.UnpauseActivityExecution2200Response> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.UnpauseActivityExecutionRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -56,7 +56,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item
             {
                 { "XXX", global::Soenneker.Temporal.OpenApiClient.Models.Status.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Activities.Item.Unpause.UnpausePostResponse>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Activities.Item.Unpause.UnpausePostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Models.UnpauseActivityExecution2200Response>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Models.UnpauseActivityExecution2200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// UnpauseActivityExecution unpauses the execution of an activity specified by its ID. This API can be used to target a workflow activity or a standalone activity. If activity is not paused, this call will have no effect. If the activity was paused while waiting for retry, it will be scheduled immediately (* see &apos;jitter&apos; flag). Once the activity is unpaused, all timeout timers will be regenerated. Returns a `NotFound` error if there is no pending activity with the provided ID

@@ -31,7 +31,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public List<global::Soenneker.Temporal.OpenApiClient.Models.ClusterReplicationConfig> Clusters { get; set; }
 #endif
         /// <summary>The state property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceReplicationConfig_state? State { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceReplicationConfigState? State { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.NamespaceReplicationConfig"/> and sets the default values.
         /// </summary>
@@ -59,7 +59,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             {
                 { "activeClusterName", n => { ActiveClusterName = n.GetStringValue(); } },
                 { "clusters", n => { Clusters = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.ClusterReplicationConfig>(global::Soenneker.Temporal.OpenApiClient.Models.ClusterReplicationConfig.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "state", n => { State = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceReplicationConfig_state>(); } },
+                { "state", n => { State = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceReplicationConfigState>(); } },
             };
         }
         /// <summary>
@@ -71,7 +71,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("activeClusterName", ActiveClusterName);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.ClusterReplicationConfig>("clusters", Clusters);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceReplicationConfig_state>("state", State);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceReplicationConfigState>("state", State);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

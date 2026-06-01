@@ -62,10 +62,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Worker host information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeat_hostInfo? HostInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeatHostInfo? HostInfo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeat_hostInfo HostInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeatHostInfo HostInfo { get; set; }
 #endif
         /// <summary>The localActivitySlotsInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -118,7 +118,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Worker start time. It can be used to determine worker uptime. (current time - start time)</summary>
         public DateTimeOffset? StartTime { get; set; }
         /// <summary>Worker status. Defined by SDK.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeat_status? Status { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeatStatus? Status { get; set; }
         /// <summary>Task queue this worker is polling for tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -203,7 +203,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "drivers", n => { Drivers = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.StorageDriverInfo>(global::Soenneker.Temporal.OpenApiClient.Models.StorageDriverInfo.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "elapsedSinceLastHeartbeat", n => { ElapsedSinceLastHeartbeat = n.GetStringValue(); } },
                 { "heartbeatTime", n => { HeartbeatTime = n.GetDateTimeOffsetValue(); } },
-                { "hostInfo", n => { HostInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeat_hostInfo>(global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeat_hostInfo.CreateFromDiscriminatorValue); } },
+                { "hostInfo", n => { HostInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeatHostInfo>(global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeatHostInfo.CreateFromDiscriminatorValue); } },
                 { "localActivitySlotsInfo", n => { LocalActivitySlotsInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo>(global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo.CreateFromDiscriminatorValue); } },
                 { "nexusPollerInfo", n => { NexusPollerInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerPollerInfo>(global::Soenneker.Temporal.OpenApiClient.Models.WorkerPollerInfo.CreateFromDiscriminatorValue); } },
                 { "nexusTaskSlotsInfo", n => { NexusTaskSlotsInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo>(global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo.CreateFromDiscriminatorValue); } },
@@ -211,7 +211,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "sdkName", n => { SdkName = n.GetStringValue(); } },
                 { "sdkVersion", n => { SdkVersion = n.GetStringValue(); } },
                 { "startTime", n => { StartTime = n.GetDateTimeOffsetValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeat_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeatStatus>(); } },
                 { "taskQueue", n => { TaskQueue = n.GetStringValue(); } },
                 { "totalStickyCacheHit", n => { TotalStickyCacheHit = n.GetIntValue(); } },
                 { "totalStickyCacheMiss", n => { TotalStickyCacheMiss = n.GetIntValue(); } },
@@ -236,7 +236,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.StorageDriverInfo>("drivers", Drivers);
             writer.WriteStringValue("elapsedSinceLastHeartbeat", ElapsedSinceLastHeartbeat);
             writer.WriteDateTimeOffsetValue("heartbeatTime", HeartbeatTime);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeat_hostInfo>("hostInfo", HostInfo);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeatHostInfo>("hostInfo", HostInfo);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo>("localActivitySlotsInfo", LocalActivitySlotsInfo);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerPollerInfo>("nexusPollerInfo", NexusPollerInfo);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo>("nexusTaskSlotsInfo", NexusTaskSlotsInfo);
@@ -244,7 +244,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("sdkName", SdkName);
             writer.WriteStringValue("sdkVersion", SdkVersion);
             writer.WriteDateTimeOffsetValue("startTime", StartTime);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeat_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeatStatus>("status", Status);
             writer.WriteStringValue("taskQueue", TaskQueue);
             writer.WriteIntValue("totalStickyCacheHit", TotalStickyCacheHit);
             writer.WriteIntValue("totalStickyCacheMiss", TotalStickyCacheMiss);

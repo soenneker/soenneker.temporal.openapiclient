@@ -68,10 +68,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Key is client name i.e &quot;temporal-go&quot;, &quot;temporal-java&quot;, or &quot;temporal-cli&quot;. Value is ranges of supported versions of this client i.e &quot;&gt;1.1.1 &lt;=1.4.0 || ^5.0.0&quot;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.GetClusterInfoResponse_supportedClients? SupportedClients { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.GetClusterInfoResponseSupportedClientsProperty? SupportedClients { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.GetClusterInfoResponse_supportedClients SupportedClients { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.GetClusterInfoResponseSupportedClientsProperty SupportedClients { get; set; }
 #endif
         /// <summary>VersionInfo contains details about current and recommended release versions as well as alerts and upgrade instructions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -121,7 +121,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "initialFailoverVersion", n => { InitialFailoverVersion = n.GetStringValue(); } },
                 { "persistenceStore", n => { PersistenceStore = n.GetStringValue(); } },
                 { "serverVersion", n => { ServerVersion = n.GetStringValue(); } },
-                { "supportedClients", n => { SupportedClients = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.GetClusterInfoResponse_supportedClients>(global::Soenneker.Temporal.OpenApiClient.Models.GetClusterInfoResponse_supportedClients.CreateFromDiscriminatorValue); } },
+                { "supportedClients", n => { SupportedClients = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.GetClusterInfoResponseSupportedClientsProperty>(global::Soenneker.Temporal.OpenApiClient.Models.GetClusterInfoResponseSupportedClientsProperty.CreateFromDiscriminatorValue); } },
                 { "versionInfo", n => { VersionInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.VersionInfo>(global::Soenneker.Temporal.OpenApiClient.Models.VersionInfo.CreateFromDiscriminatorValue); } },
                 { "visibilityStore", n => { VisibilityStore = n.GetStringValue(); } },
             };
@@ -140,7 +140,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("initialFailoverVersion", InitialFailoverVersion);
             writer.WriteStringValue("persistenceStore", PersistenceStore);
             writer.WriteStringValue("serverVersion", ServerVersion);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.GetClusterInfoResponse_supportedClients>("supportedClients", SupportedClients);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.GetClusterInfoResponseSupportedClientsProperty>("supportedClients", SupportedClients);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.VersionInfo>("versionInfo", VersionInfo);
             writer.WriteStringValue("visibilityStore", VisibilityStore);
             writer.WriteAdditionalData(AdditionalData);

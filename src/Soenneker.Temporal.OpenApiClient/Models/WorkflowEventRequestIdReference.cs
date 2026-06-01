@@ -16,7 +16,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The eventType property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowEventRequestIdReference_eventType? EventType { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowEventRequestIdReferenceEventType? EventType { get; set; }
         /// <summary>The requestId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -50,7 +50,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "eventType", n => { EventType = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowEventRequestIdReference_eventType>(); } },
+                { "eventType", n => { EventType = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowEventRequestIdReferenceEventType>(); } },
                 { "requestId", n => { RequestId = n.GetStringValue(); } },
             };
         }
@@ -61,7 +61,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowEventRequestIdReference_eventType>("eventType", EventType);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowEventRequestIdReferenceEventType>("eventType", EventType);
             writer.WriteStringValue("requestId", RequestId);
             writer.WriteAdditionalData(AdditionalData);
         }

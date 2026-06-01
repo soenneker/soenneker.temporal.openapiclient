@@ -42,17 +42,17 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Nexus.Endpoints.Item
         /// <summary>
         /// Delete an incoming Nexus service by ID.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Api.V1.Nexus.Endpoints.Item.EndpointsDeleteResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Models.DeleteNexusEndpoint200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Temporal.OpenApiClient.Models.Status">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Api.V1.Nexus.Endpoints.Item.EndpointsDeleteResponse?> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Temporal.OpenApiClient.Api.V1.Nexus.Endpoints.Item.EndpointsItemRequestBuilder.EndpointsItemRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.DeleteNexusEndpoint200Response?> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Temporal.OpenApiClient.Api.V1.Nexus.Endpoints.Item.EndpointsItemRequestBuilder.EndpointsItemRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Api.V1.Nexus.Endpoints.Item.EndpointsDeleteResponse> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Temporal.OpenApiClient.Api.V1.Nexus.Endpoints.Item.EndpointsItemRequestBuilder.EndpointsItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.DeleteNexusEndpoint200Response> DeleteAsync(Action<RequestConfiguration<global::Soenneker.Temporal.OpenApiClient.Api.V1.Nexus.Endpoints.Item.EndpointsItemRequestBuilder.EndpointsItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -60,7 +60,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Nexus.Endpoints.Item
             {
                 { "XXX", global::Soenneker.Temporal.OpenApiClient.Models.Status.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Api.V1.Nexus.Endpoints.Item.EndpointsDeleteResponse>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Api.V1.Nexus.Endpoints.Item.EndpointsDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Models.DeleteNexusEndpoint200Response>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Models.DeleteNexusEndpoint200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get a registered Nexus endpoint by ID. The returned version can be used for optimistic updates.

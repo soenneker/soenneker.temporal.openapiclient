@@ -23,7 +23,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public string Data { get; set; }
 #endif
         /// <summary>The encodingType property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.DataBlob_encodingType? EncodingType { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DataBlobEncodingType? EncodingType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.DataBlob"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "data", n => { Data = n.GetStringValue(); } },
-                { "encodingType", n => { EncodingType = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.DataBlob_encodingType>(); } },
+                { "encodingType", n => { EncodingType = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.DataBlobEncodingType>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("data", Data);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.DataBlob_encodingType>("encodingType", EncodingType);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.DataBlobEncodingType>("encodingType", EncodingType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

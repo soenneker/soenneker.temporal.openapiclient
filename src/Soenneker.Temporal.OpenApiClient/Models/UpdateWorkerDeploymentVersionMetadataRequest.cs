@@ -18,10 +18,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionMetadataRequest_deploymentVersion? DeploymentVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionMetadataRequestDeploymentVersion? DeploymentVersion { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionMetadataRequest_deploymentVersion DeploymentVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionMetadataRequestDeploymentVersion DeploymentVersion { get; set; }
 #endif
         /// <summary>Optional. The identity of the client who initiated this request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -50,10 +50,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The upsertEntries property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionMetadataRequest_upsertEntries? UpsertEntries { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionMetadataRequestUpsertEntriesProperty? UpsertEntries { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionMetadataRequest_upsertEntries UpsertEntries { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionMetadataRequestUpsertEntriesProperty UpsertEntries { get; set; }
 #endif
         /// <summary>Deprecated. Use `deployment_version`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -88,11 +88,11 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "deploymentVersion", n => { DeploymentVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionMetadataRequest_deploymentVersion>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionMetadataRequest_deploymentVersion.CreateFromDiscriminatorValue); } },
+                { "deploymentVersion", n => { DeploymentVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionMetadataRequestDeploymentVersion>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionMetadataRequestDeploymentVersion.CreateFromDiscriminatorValue); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
                 { "namespace", n => { Namespace = n.GetStringValue(); } },
                 { "removeEntries", n => { RemoveEntries = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "upsertEntries", n => { UpsertEntries = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionMetadataRequest_upsertEntries>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionMetadataRequest_upsertEntries.CreateFromDiscriminatorValue); } },
+                { "upsertEntries", n => { UpsertEntries = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionMetadataRequestUpsertEntriesProperty>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionMetadataRequestUpsertEntriesProperty.CreateFromDiscriminatorValue); } },
                 { "version", n => { Version = n.GetStringValue(); } },
             };
         }
@@ -103,11 +103,11 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionMetadataRequest_deploymentVersion>("deploymentVersion", DeploymentVersion);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionMetadataRequestDeploymentVersion>("deploymentVersion", DeploymentVersion);
             writer.WriteStringValue("identity", Identity);
             writer.WriteStringValue("namespace", Namespace);
             writer.WriteCollectionOfPrimitiveValues<string>("removeEntries", RemoveEntries);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionMetadataRequest_upsertEntries>("upsertEntries", UpsertEntries);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionMetadataRequestUpsertEntriesProperty>("upsertEntries", UpsertEntries);
             writer.WriteStringValue("version", Version);
             writer.WriteAdditionalData(AdditionalData);
         }

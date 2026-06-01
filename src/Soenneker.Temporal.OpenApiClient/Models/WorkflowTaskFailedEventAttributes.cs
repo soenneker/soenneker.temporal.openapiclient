@@ -31,14 +31,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public string BinaryChecksum { get; set; }
 #endif
         /// <summary>The cause property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributes_cause? Cause { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributesCause? Cause { get; set; }
         /// <summary>The failure details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributes_failure? Failure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributesFailure? Failure { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributes_failure Failure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributesFailure Failure { get; set; }
 #endif
         /// <summary>Version of the event where the history branch was forked. Used by multi-cluster replication during resets to identify the correct history branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -83,10 +83,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Version info of the worker who processed this workflow task. If present, the `build_id` field within is also used as `binary_checksum`, which may be omitted in that case (it may also be populated to preserve compatibility). Deprecated. This field should be cleaned up when versioning-2 API is removed. [cleanup-experimental-wv]</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributes_workerVersion? WorkerVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributesWorkerVersion? WorkerVersion { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributes_workerVersion WorkerVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributesWorkerVersion WorkerVersion { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributes"/> and sets the default values.
@@ -115,14 +115,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             {
                 { "baseRunId", n => { BaseRunId = n.GetStringValue(); } },
                 { "binaryChecksum", n => { BinaryChecksum = n.GetStringValue(); } },
-                { "cause", n => { Cause = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributes_cause>(); } },
-                { "failure", n => { Failure = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributes_failure>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributes_failure.CreateFromDiscriminatorValue); } },
+                { "cause", n => { Cause = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributesCause>(); } },
+                { "failure", n => { Failure = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributesFailure>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributesFailure.CreateFromDiscriminatorValue); } },
                 { "forkEventVersion", n => { ForkEventVersion = n.GetStringValue(); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
                 { "newRunId", n => { NewRunId = n.GetStringValue(); } },
                 { "scheduledEventId", n => { ScheduledEventId = n.GetStringValue(); } },
                 { "startedEventId", n => { StartedEventId = n.GetStringValue(); } },
-                { "workerVersion", n => { WorkerVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributes_workerVersion>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributes_workerVersion.CreateFromDiscriminatorValue); } },
+                { "workerVersion", n => { WorkerVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributesWorkerVersion>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributesWorkerVersion.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -134,14 +134,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("baseRunId", BaseRunId);
             writer.WriteStringValue("binaryChecksum", BinaryChecksum);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributes_cause>("cause", Cause);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributes_failure>("failure", Failure);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributesCause>("cause", Cause);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributesFailure>("failure", Failure);
             writer.WriteStringValue("forkEventVersion", ForkEventVersion);
             writer.WriteStringValue("identity", Identity);
             writer.WriteStringValue("newRunId", NewRunId);
             writer.WriteStringValue("scheduledEventId", ScheduledEventId);
             writer.WriteStringValue("startedEventId", StartedEventId);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributes_workerVersion>("workerVersion", WorkerVersion);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributesWorkerVersion>("workerVersion", WorkerVersion);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

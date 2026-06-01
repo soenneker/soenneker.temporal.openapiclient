@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Activities.Item.Pause
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v1\namespaces\{namespace}\activities\{activityId}\pause
+    /// Builds and executes requests for operations under \api\v1\namespaces\{namespaceValue}\activities\{activityId}\pause
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PauseRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Activities.Ite
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PauseRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespace}/activities/{activityId}/pause", pathParameters)
+        public PauseRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespaceValue}/activities/{activityId}/pause", pathParameters)
         {
         }
         /// <summary>
@@ -30,24 +30,24 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Activities.Ite
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PauseRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespace}/activities/{activityId}/pause", rawUrl)
+        public PauseRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespaceValue}/activities/{activityId}/pause", rawUrl)
         {
         }
         /// <summary>
         /// PauseActivityExecution pauses the execution of an activity specified by its ID. This API can be used to target a workflow activity or a standalone activity Pausing an activity means: - If the activity is currently waiting for a retry or is running and subsequently fails,   it will not be rescheduled until it is unpaused. - If the activity is already paused, calling this method will have no effect. - If the activity is running and finishes successfully, the activity will be completed. - If the activity is running and finishes with failure:   * if there is no retry left - the activity will be completed.   * if there are more retries left - the activity will be paused. For long-running activities: - activities in paused state will send a cancellation with &quot;activity_paused&quot; set to &apos;true&apos; in response to &apos;RecordActivityTaskHeartbeat&apos;. Returns a `NotFound` error if there is no pending activity with the provided ID
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Activities.Item.Pause.PausePostResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Models.PauseActivityExecution200Response"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Temporal.OpenApiClient.Models.Status">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Activities.Item.Pause.PausePostResponse?> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.PauseActivityExecutionRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.PauseActivityExecution200Response?> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.PauseActivityExecutionRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Activities.Item.Pause.PausePostResponse> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.PauseActivityExecutionRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.PauseActivityExecution200Response> PostAsync(global::Soenneker.Temporal.OpenApiClient.Models.PauseActivityExecutionRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -56,7 +56,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Activities.Ite
             {
                 { "XXX", global::Soenneker.Temporal.OpenApiClient.Models.Status.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Activities.Item.Pause.PausePostResponse>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Activities.Item.Pause.PausePostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Models.PauseActivityExecution200Response>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Models.PauseActivityExecution200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// PauseActivityExecution pauses the execution of an activity specified by its ID. This API can be used to target a workflow activity or a standalone activity Pausing an activity means: - If the activity is currently waiting for a retry or is running and subsequently fails,   it will not be rescheduled until it is unpaused. - If the activity is already paused, calling this method will have no effect. - If the activity is running and finishes successfully, the activity will be completed. - If the activity is running and finishes with failure:   * if there is no retry left - the activity will be completed.   * if there are more retries left - the activity will be paused. For long-running activities: - activities in paused state will send a cancellation with &quot;activity_paused&quot; set to &apos;true&apos; in response to &apos;RecordActivityTaskHeartbeat&apos;. Returns a `NotFound` error if there is no pending activity with the provided ID

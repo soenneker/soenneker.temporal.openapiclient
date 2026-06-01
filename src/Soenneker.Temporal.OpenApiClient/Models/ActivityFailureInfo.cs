@@ -39,7 +39,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public string Identity { get; set; }
 #endif
         /// <summary>The retryState property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityFailureInfo_retryState? RetryState { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityFailureInfoRetryState? RetryState { get; set; }
         /// <summary>The scheduledEventId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -84,7 +84,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "activityId", n => { ActivityId = n.GetStringValue(); } },
                 { "activityType", n => { ActivityType = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityType>(global::Soenneker.Temporal.OpenApiClient.Models.ActivityType.CreateFromDiscriminatorValue); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
-                { "retryState", n => { RetryState = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityFailureInfo_retryState>(); } },
+                { "retryState", n => { RetryState = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityFailureInfoRetryState>(); } },
                 { "scheduledEventId", n => { ScheduledEventId = n.GetStringValue(); } },
                 { "startedEventId", n => { StartedEventId = n.GetStringValue(); } },
             };
@@ -99,7 +99,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("activityId", ActivityId);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityType>("activityType", ActivityType);
             writer.WriteStringValue("identity", Identity);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityFailureInfo_retryState>("retryState", RetryState);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityFailureInfoRetryState>("retryState", RetryState);
             writer.WriteStringValue("scheduledEventId", ScheduledEventId);
             writer.WriteStringValue("startedEventId", StartedEventId);
             writer.WriteAdditionalData(AdditionalData);

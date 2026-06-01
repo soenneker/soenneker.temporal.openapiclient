@@ -23,7 +23,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public string Endpoint { get; set; }
 #endif
         /// <summary>Defines how to resolve an operation id conflict with a *running* operation. The default policy is NEXUS_OPERATION_ID_CONFLICT_POLICY_FAIL.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_idConflictPolicy? IdConflictPolicy { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequestIdConflictPolicy? IdConflictPolicy { get; set; }
         /// <summary>The identity of the client who initiated this request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -33,14 +33,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public string Identity { get; set; }
 #endif
         /// <summary>Defines whether to allow re-using the operation id from a previously *closed* operation. The default policy is NEXUS_OPERATION_ID_REUSE_POLICY_ALLOW_DUPLICATE.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_idReusePolicy? IdReusePolicy { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequestIdReusePolicy? IdReusePolicy { get; set; }
         /// <summary>Serialized input to the operation. Passed as the request payload.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_input? Input { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequestInput? Input { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_input Input { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequestInput Input { get; set; }
 #endif
         /// <summary>The namespace property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -53,10 +53,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Header to attach to the Nexus request. Users are responsible for encrypting sensitive data in this header as it is stored in workflow history and transmitted to external services as-is. This is useful for propagating tracing information. Note these headers are not the same as Temporal headers on internal activities and child workflows, these are transmitted to Nexus operations that may be external and are not traditional payloads.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_nexusHeader? NexusHeader { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequestNexusHeaderProperty? NexusHeader { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_nexusHeader NexusHeader { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequestNexusHeaderProperty NexusHeader { get; set; }
 #endif
         /// <summary>Operation name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -101,10 +101,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Search attributes for indexing.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_searchAttributes? SearchAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequestSearchAttributes? SearchAttributes { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_searchAttributes SearchAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequestSearchAttributes SearchAttributes { get; set; }
 #endif
         /// <summary>Service name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -125,10 +125,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Metadata for use by user interfaces to display the fixed as-of-start summary and details of the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_userMetadata? UserMetadata { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequestUserMetadata? UserMetadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_userMetadata UserMetadata { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequestUserMetadata UserMetadata { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest"/> and sets the default values.
@@ -156,21 +156,21 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "endpoint", n => { Endpoint = n.GetStringValue(); } },
-                { "idConflictPolicy", n => { IdConflictPolicy = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_idConflictPolicy>(); } },
-                { "idReusePolicy", n => { IdReusePolicy = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_idReusePolicy>(); } },
+                { "idConflictPolicy", n => { IdConflictPolicy = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequestIdConflictPolicy>(); } },
+                { "idReusePolicy", n => { IdReusePolicy = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequestIdReusePolicy>(); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
-                { "input", n => { Input = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_input>(global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_input.CreateFromDiscriminatorValue); } },
+                { "input", n => { Input = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequestInput>(global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequestInput.CreateFromDiscriminatorValue); } },
                 { "namespace", n => { Namespace = n.GetStringValue(); } },
-                { "nexusHeader", n => { NexusHeader = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_nexusHeader>(global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_nexusHeader.CreateFromDiscriminatorValue); } },
+                { "nexusHeader", n => { NexusHeader = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequestNexusHeaderProperty>(global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequestNexusHeaderProperty.CreateFromDiscriminatorValue); } },
                 { "operation", n => { Operation = n.GetStringValue(); } },
                 { "operationId", n => { OperationId = n.GetStringValue(); } },
                 { "requestId", n => { RequestId = n.GetStringValue(); } },
                 { "scheduleToCloseTimeout", n => { ScheduleToCloseTimeout = n.GetStringValue(); } },
                 { "scheduleToStartTimeout", n => { ScheduleToStartTimeout = n.GetStringValue(); } },
-                { "searchAttributes", n => { SearchAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_searchAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_searchAttributes.CreateFromDiscriminatorValue); } },
+                { "searchAttributes", n => { SearchAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequestSearchAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequestSearchAttributes.CreateFromDiscriminatorValue); } },
                 { "service", n => { Service = n.GetStringValue(); } },
                 { "startToCloseTimeout", n => { StartToCloseTimeout = n.GetStringValue(); } },
-                { "userMetadata", n => { UserMetadata = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_userMetadata>(global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_userMetadata.CreateFromDiscriminatorValue); } },
+                { "userMetadata", n => { UserMetadata = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequestUserMetadata>(global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequestUserMetadata.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -181,21 +181,21 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("endpoint", Endpoint);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_idConflictPolicy>("idConflictPolicy", IdConflictPolicy);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequestIdConflictPolicy>("idConflictPolicy", IdConflictPolicy);
             writer.WriteStringValue("identity", Identity);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_idReusePolicy>("idReusePolicy", IdReusePolicy);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_input>("input", Input);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequestIdReusePolicy>("idReusePolicy", IdReusePolicy);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequestInput>("input", Input);
             writer.WriteStringValue("namespace", Namespace);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_nexusHeader>("nexusHeader", NexusHeader);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequestNexusHeaderProperty>("nexusHeader", NexusHeader);
             writer.WriteStringValue("operation", Operation);
             writer.WriteStringValue("operationId", OperationId);
             writer.WriteStringValue("requestId", RequestId);
             writer.WriteStringValue("scheduleToCloseTimeout", ScheduleToCloseTimeout);
             writer.WriteStringValue("scheduleToStartTimeout", ScheduleToStartTimeout);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_searchAttributes>("searchAttributes", SearchAttributes);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequestSearchAttributes>("searchAttributes", SearchAttributes);
             writer.WriteStringValue("service", Service);
             writer.WriteStringValue("startToCloseTimeout", StartToCloseTimeout);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequest_userMetadata>("userMetadata", UserMetadata);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequestUserMetadata>("userMetadata", UserMetadata);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

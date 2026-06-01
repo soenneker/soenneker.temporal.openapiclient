@@ -17,18 +17,18 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>When `request_eager_execution` is set on the `StartWorkflowExecutionRequest`, the server - if supported - will return the first workflow task to be eagerly executed. The caller is expected to have a worker available to process the task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponse_eagerWorkflowTask? EagerWorkflowTask { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseEagerWorkflowTask? EagerWorkflowTask { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponse_eagerWorkflowTask EagerWorkflowTask { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseEagerWorkflowTask EagerWorkflowTask { get; set; }
 #endif
         /// <summary>Link to the workflow event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponse_link? Link { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseLink? Link { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponse_link Link { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseLink Link { get; set; }
 #endif
         /// <summary>The run id of the workflow that was started - or used (via WorkflowIdConflictPolicy USE_EXISTING).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -41,7 +41,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>If true, a new workflow was started.</summary>
         public bool? Started { get; set; }
         /// <summary>Current execution status of the workflow. Typically remains WORKFLOW_EXECUTION_STATUS_RUNNING unless a de-dupe occurs or in specific scenarios handled within the ExecuteMultiOperation (refer to its docs).</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponse_status? Status { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponse"/> and sets the default values.
         /// </summary>
@@ -67,11 +67,11 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "eagerWorkflowTask", n => { EagerWorkflowTask = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponse_eagerWorkflowTask>(global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponse_eagerWorkflowTask.CreateFromDiscriminatorValue); } },
-                { "link", n => { Link = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponse_link>(global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponse_link.CreateFromDiscriminatorValue); } },
+                { "eagerWorkflowTask", n => { EagerWorkflowTask = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseEagerWorkflowTask>(global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseEagerWorkflowTask.CreateFromDiscriminatorValue); } },
+                { "link", n => { Link = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseLink>(global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseLink.CreateFromDiscriminatorValue); } },
                 { "runId", n => { RunId = n.GetStringValue(); } },
                 { "started", n => { Started = n.GetBoolValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponse_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseStatus>(); } },
             };
         }
         /// <summary>
@@ -81,11 +81,11 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponse_eagerWorkflowTask>("eagerWorkflowTask", EagerWorkflowTask);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponse_link>("link", Link);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseEagerWorkflowTask>("eagerWorkflowTask", EagerWorkflowTask);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseLink>("link", Link);
             writer.WriteStringValue("runId", RunId);
             writer.WriteBoolValue("started", Started);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponse_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseStatus>("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

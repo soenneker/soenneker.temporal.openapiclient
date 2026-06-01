@@ -17,7 +17,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The endTime property</summary>
         public DateTimeOffset? EndTime { get; set; }
         /// <summary>If set, override overlap policy for this request.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.BackfillRequest_overlapPolicy? OverlapPolicy { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BackfillRequestOverlapPolicy? OverlapPolicy { get; set; }
         /// <summary>Time range to evaluate schedule in. Currently, this time range is exclusive on start_time and inclusive on end_time. (This is admittedly counterintuitive and it may change in the future, so to be safe, use a start time strictly before a scheduled time.) Also note that an action nominally scheduled in the interval but with jitter that pushes it after end_time will not be included.</summary>
         public DateTimeOffset? StartTime { get; set; }
         /// <summary>
@@ -46,7 +46,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "endTime", n => { EndTime = n.GetDateTimeOffsetValue(); } },
-                { "overlapPolicy", n => { OverlapPolicy = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.BackfillRequest_overlapPolicy>(); } },
+                { "overlapPolicy", n => { OverlapPolicy = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.BackfillRequestOverlapPolicy>(); } },
                 { "startTime", n => { StartTime = n.GetDateTimeOffsetValue(); } },
             };
         }
@@ -58,7 +58,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("endTime", EndTime);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.BackfillRequest_overlapPolicy>("overlapPolicy", OverlapPolicy);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.BackfillRequestOverlapPolicy>("overlapPolicy", OverlapPolicy);
             writer.WriteDateTimeOffsetValue("startTime", StartTime);
             writer.WriteAdditionalData(AdditionalData);
         }

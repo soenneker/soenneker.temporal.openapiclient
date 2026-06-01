@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.NexusOperations
 {
     /// <summary>
-    /// Builds and executes requests for operations under \namespaces\{namespace}\nexus-operations
+    /// Builds and executes requests for operations under \namespaces\{namespaceValue}\nexus-operations
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class NexusOperationsRequestBuilder : BaseRequestBuilder
@@ -35,7 +35,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.NexusOperations
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public NexusOperationsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespace}/nexus-operations{?nextPageToken*,pageSize*,query*}", pathParameters)
+        public NexusOperationsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/nexus-operations{?nextPageToken*,pageSize*,query*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.NexusOperations
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public NexusOperationsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespace}/nexus-operations{?nextPageToken*,pageSize*,query*}", rawUrl)
+        public NexusOperationsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/nexus-operations{?nextPageToken*,pageSize*,query*}", rawUrl)
         {
         }
         /// <summary>

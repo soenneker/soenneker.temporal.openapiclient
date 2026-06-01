@@ -26,10 +26,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Headers that are passed with the signal to the processing workflow. These can include things like auth or tracing tokens.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWorkflowExecutionRequest_header? Header { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWorkflowExecutionRequestHeader? Header { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWorkflowExecutionRequest_header Header { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWorkflowExecutionRequestHeader Header { get; set; }
 #endif
         /// <summary>The identity of the worker/client</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -42,10 +42,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Serialized value(s) to provide with the signal</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWorkflowExecutionRequest_input? Input { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWorkflowExecutionRequestInput? Input { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWorkflowExecutionRequest_input Input { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWorkflowExecutionRequestInput Input { get; set; }
 #endif
         /// <summary>Links to be associated with the WorkflowExecutionSignaled event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -113,9 +113,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "control", n => { Control = n.GetStringValue(); } },
-                { "header", n => { Header = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWorkflowExecutionRequest_header>(global::Soenneker.Temporal.OpenApiClient.Models.SignalWorkflowExecutionRequest_header.CreateFromDiscriminatorValue); } },
+                { "header", n => { Header = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWorkflowExecutionRequestHeader>(global::Soenneker.Temporal.OpenApiClient.Models.SignalWorkflowExecutionRequestHeader.CreateFromDiscriminatorValue); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
-                { "input", n => { Input = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWorkflowExecutionRequest_input>(global::Soenneker.Temporal.OpenApiClient.Models.SignalWorkflowExecutionRequest_input.CreateFromDiscriminatorValue); } },
+                { "input", n => { Input = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWorkflowExecutionRequestInput>(global::Soenneker.Temporal.OpenApiClient.Models.SignalWorkflowExecutionRequestInput.CreateFromDiscriminatorValue); } },
                 { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.Link>(global::Soenneker.Temporal.OpenApiClient.Models.Link.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "namespace", n => { Namespace = n.GetStringValue(); } },
                 { "requestId", n => { RequestId = n.GetStringValue(); } },
@@ -131,9 +131,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("control", Control);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWorkflowExecutionRequest_header>("header", Header);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWorkflowExecutionRequestHeader>("header", Header);
             writer.WriteStringValue("identity", Identity);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWorkflowExecutionRequest_input>("input", Input);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWorkflowExecutionRequestInput>("input", Input);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.Link>("links", Links);
             writer.WriteStringValue("namespace", Namespace);
             writer.WriteStringValue("requestId", RequestId);

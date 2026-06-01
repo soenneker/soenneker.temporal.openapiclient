@@ -21,13 +21,13 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>&quot;If action was start_workflow:&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResult_startWorkflowResult? StartWorkflowResult { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResultStartWorkflowResult? StartWorkflowResult { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResult_startWorkflowResult StartWorkflowResult { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResultStartWorkflowResult StartWorkflowResult { get; set; }
 #endif
         /// <summary>If the action was start_workflow, this field will reflect an eventually-consistent view of the started workflow&apos;s status.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResult_startWorkflowStatus? StartWorkflowStatus { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResultStartWorkflowStatus? StartWorkflowStatus { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResult"/> and sets the default values.
         /// </summary>
@@ -55,8 +55,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             {
                 { "actualTime", n => { ActualTime = n.GetDateTimeOffsetValue(); } },
                 { "scheduleTime", n => { ScheduleTime = n.GetDateTimeOffsetValue(); } },
-                { "startWorkflowResult", n => { StartWorkflowResult = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResult_startWorkflowResult>(global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResult_startWorkflowResult.CreateFromDiscriminatorValue); } },
-                { "startWorkflowStatus", n => { StartWorkflowStatus = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResult_startWorkflowStatus>(); } },
+                { "startWorkflowResult", n => { StartWorkflowResult = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResultStartWorkflowResult>(global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResultStartWorkflowResult.CreateFromDiscriminatorValue); } },
+                { "startWorkflowStatus", n => { StartWorkflowStatus = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResultStartWorkflowStatus>(); } },
             };
         }
         /// <summary>
@@ -68,8 +68,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("actualTime", ActualTime);
             writer.WriteDateTimeOffsetValue("scheduleTime", ScheduleTime);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResult_startWorkflowResult>("startWorkflowResult", StartWorkflowResult);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResult_startWorkflowStatus>("startWorkflowStatus", StartWorkflowStatus);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResultStartWorkflowResult>("startWorkflowResult", StartWorkflowResult);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResultStartWorkflowStatus>("startWorkflowStatus", StartWorkflowStatus);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -17,10 +17,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The binaries property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.BadBinaries_binaries? Binaries { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BadBinariesBinariesProperty? Binaries { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.BadBinaries_binaries Binaries { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BadBinariesBinariesProperty Binaries { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.BadBinaries"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "binaries", n => { Binaries = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.BadBinaries_binaries>(global::Soenneker.Temporal.OpenApiClient.Models.BadBinaries_binaries.CreateFromDiscriminatorValue); } },
+                { "binaries", n => { Binaries = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.BadBinariesBinariesProperty>(global::Soenneker.Temporal.OpenApiClient.Models.BadBinariesBinariesProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.BadBinaries_binaries>("binaries", Binaries);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.BadBinariesBinariesProperty>("binaries", Binaries);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

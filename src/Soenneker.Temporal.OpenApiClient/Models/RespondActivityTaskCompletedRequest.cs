@@ -17,18 +17,18 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Deployment info of the worker that completed this task. Must be present if user has set `WorkerDeploymentOptions` regardless of versioning being enabled or not. Deprecated. Replaced with `deployment_options`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequest_deployment? Deployment { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestDeployment? Deployment { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequest_deployment Deployment { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestDeployment Deployment { get; set; }
 #endif
         /// <summary>Worker deployment options that user has set in the worker.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequest_deploymentOptions? DeploymentOptions { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestDeploymentOptions? DeploymentOptions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequest_deploymentOptions DeploymentOptions { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestDeploymentOptions DeploymentOptions { get; set; }
 #endif
         /// <summary>The identity of the worker/client</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -57,10 +57,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The result of successfully executing the activity</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequest_result? Result { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestResult? Result { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequest_result Result { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestResult Result { get; set; }
 #endif
         /// <summary>The task token as received in `PollActivityTaskQueueResponse`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -73,10 +73,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Version info of the worker who processed this task. This message&apos;s `build_id` field should always be set by SDKs. Workers opting into versioning will also set the `use_versioning` field to true. See message docstrings for more. Deprecated. Use `deployment_options` instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequest_workerVersion? WorkerVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestWorkerVersion? WorkerVersion { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequest_workerVersion WorkerVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestWorkerVersion WorkerVersion { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequest"/> and sets the default values.
@@ -103,14 +103,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "deployment", n => { Deployment = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequest_deployment>(global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequest_deployment.CreateFromDiscriminatorValue); } },
-                { "deploymentOptions", n => { DeploymentOptions = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequest_deploymentOptions>(global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequest_deploymentOptions.CreateFromDiscriminatorValue); } },
+                { "deployment", n => { Deployment = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestDeployment>(global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestDeployment.CreateFromDiscriminatorValue); } },
+                { "deploymentOptions", n => { DeploymentOptions = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestDeploymentOptions>(global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestDeploymentOptions.CreateFromDiscriminatorValue); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
                 { "namespace", n => { Namespace = n.GetStringValue(); } },
                 { "resourceId", n => { ResourceId = n.GetStringValue(); } },
-                { "result", n => { Result = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequest_result>(global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequest_result.CreateFromDiscriminatorValue); } },
+                { "result", n => { Result = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestResult>(global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestResult.CreateFromDiscriminatorValue); } },
                 { "taskToken", n => { TaskToken = n.GetStringValue(); } },
-                { "workerVersion", n => { WorkerVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequest_workerVersion>(global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequest_workerVersion.CreateFromDiscriminatorValue); } },
+                { "workerVersion", n => { WorkerVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestWorkerVersion>(global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestWorkerVersion.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -120,14 +120,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequest_deployment>("deployment", Deployment);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequest_deploymentOptions>("deploymentOptions", DeploymentOptions);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestDeployment>("deployment", Deployment);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestDeploymentOptions>("deploymentOptions", DeploymentOptions);
             writer.WriteStringValue("identity", Identity);
             writer.WriteStringValue("namespace", Namespace);
             writer.WriteStringValue("resourceId", ResourceId);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequest_result>("result", Result);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestResult>("result", Result);
             writer.WriteStringValue("taskToken", TaskToken);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequest_workerVersion>("workerVersion", WorkerVersion);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestWorkerVersion>("workerVersion", WorkerVersion);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

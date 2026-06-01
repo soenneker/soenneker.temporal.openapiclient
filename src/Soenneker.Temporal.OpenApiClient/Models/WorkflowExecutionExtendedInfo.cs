@@ -26,18 +26,18 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Information about the workflow execution pause operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfo_pauseInfo? PauseInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfoPauseInfo? PauseInfo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfo_pauseInfo PauseInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfoPauseInfo PauseInfo { get; set; }
 #endif
         /// <summary>&quot;Request ID information (eg: history event information associated with the request ID). Note: It only contains request IDs from StartWorkflowExecution requests, including indirect calls (eg: if SignalWithStartWorkflowExecution starts a new workflow, then the request ID is used in the StartWorkflowExecution request).&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfo_requestIdInfos? RequestIdInfos { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfoRequestIdInfosProperty? RequestIdInfos { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfo_requestIdInfos RequestIdInfos { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfoRequestIdInfosProperty RequestIdInfos { get; set; }
 #endif
         /// <summary>Reset Run ID points to the new run when this execution is reset. If the execution is reset multiple times, it points to the latest run.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -78,8 +78,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "executionExpirationTime", n => { ExecutionExpirationTime = n.GetDateTimeOffsetValue(); } },
                 { "lastResetTime", n => { LastResetTime = n.GetDateTimeOffsetValue(); } },
                 { "originalStartTime", n => { OriginalStartTime = n.GetDateTimeOffsetValue(); } },
-                { "pauseInfo", n => { PauseInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfo_pauseInfo>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfo_pauseInfo.CreateFromDiscriminatorValue); } },
-                { "requestIdInfos", n => { RequestIdInfos = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfo_requestIdInfos>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfo_requestIdInfos.CreateFromDiscriminatorValue); } },
+                { "pauseInfo", n => { PauseInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfoPauseInfo>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfoPauseInfo.CreateFromDiscriminatorValue); } },
+                { "requestIdInfos", n => { RequestIdInfos = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfoRequestIdInfosProperty>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfoRequestIdInfosProperty.CreateFromDiscriminatorValue); } },
                 { "resetRunId", n => { ResetRunId = n.GetStringValue(); } },
                 { "runExpirationTime", n => { RunExpirationTime = n.GetDateTimeOffsetValue(); } },
             };
@@ -95,8 +95,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("executionExpirationTime", ExecutionExpirationTime);
             writer.WriteDateTimeOffsetValue("lastResetTime", LastResetTime);
             writer.WriteDateTimeOffsetValue("originalStartTime", OriginalStartTime);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfo_pauseInfo>("pauseInfo", PauseInfo);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfo_requestIdInfos>("requestIdInfos", RequestIdInfos);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfoPauseInfo>("pauseInfo", PauseInfo);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfoRequestIdInfosProperty>("requestIdInfos", RequestIdInfos);
             writer.WriteStringValue("resetRunId", ResetRunId);
             writer.WriteDateTimeOffsetValue("runExpirationTime", RunExpirationTime);
             writer.WriteAdditionalData(AdditionalData);

@@ -39,7 +39,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQuery Query { get; set; }
 #endif
         /// <summary>&quot;QueryRejectCondition can used to reject the query if workflow state does not satisfy condition. Default: QUERY_REJECT_CONDITION_NONE.&quot;</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.QueryWorkflowRequest_queryRejectCondition? QueryRejectCondition { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.QueryWorkflowRequestQueryRejectCondition? QueryRejectCondition { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.QueryWorkflowRequest"/> and sets the default values.
         /// </summary>
@@ -68,7 +68,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "execution", n => { Execution = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution.CreateFromDiscriminatorValue); } },
                 { "namespace", n => { Namespace = n.GetStringValue(); } },
                 { "query", n => { Query = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQuery>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQuery.CreateFromDiscriminatorValue); } },
-                { "queryRejectCondition", n => { QueryRejectCondition = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.QueryWorkflowRequest_queryRejectCondition>(); } },
+                { "queryRejectCondition", n => { QueryRejectCondition = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.QueryWorkflowRequestQueryRejectCondition>(); } },
             };
         }
         /// <summary>
@@ -81,7 +81,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution>("execution", Execution);
             writer.WriteStringValue("namespace", Namespace);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQuery>("query", Query);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.QueryWorkflowRequest_queryRejectCondition>("queryRejectCondition", QueryRejectCondition);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.QueryWorkflowRequestQueryRejectCondition>("queryRejectCondition", QueryRejectCondition);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

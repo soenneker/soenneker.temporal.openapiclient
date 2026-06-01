@@ -26,10 +26,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Serialized result of the Nexus operation. The response of the Nexus handler. Delivered either via a completion callback or as a response to a synchronous operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCompletedEventAttributes_result? Result { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCompletedEventAttributesResult? Result { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCompletedEventAttributes_result Result { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCompletedEventAttributesResult Result { get; set; }
 #endif
         /// <summary>The ID of the `NEXUS_OPERATION_SCHEDULED` event. Uniquely identifies this operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -65,7 +65,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "requestId", n => { RequestId = n.GetStringValue(); } },
-                { "result", n => { Result = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCompletedEventAttributes_result>(global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCompletedEventAttributes_result.CreateFromDiscriminatorValue); } },
+                { "result", n => { Result = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCompletedEventAttributesResult>(global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCompletedEventAttributesResult.CreateFromDiscriminatorValue); } },
                 { "scheduledEventId", n => { ScheduledEventId = n.GetStringValue(); } },
             };
         }
@@ -77,7 +77,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("requestId", RequestId);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCompletedEventAttributes_result>("result", Result);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCompletedEventAttributesResult>("result", Result);
             writer.WriteStringValue("scheduledEventId", ScheduledEventId);
             writer.WriteAdditionalData(AdditionalData);
         }

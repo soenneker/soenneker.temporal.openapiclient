@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.WorkerDeployments.Item.SetCurrentVersion
 {
     /// <summary>
-    /// Builds and executes requests for operations under \namespaces\{namespace}\worker-deployments\{deploymentName}\set-current-version
+    /// Builds and executes requests for operations under \namespaces\{namespaceValue}\worker-deployments\{deploymentName}\set-current-version
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SetCurrentVersionRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.WorkerDeployments.Ite
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SetCurrentVersionRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespace}/worker-deployments/{deploymentName}/set-current-version", pathParameters)
+        public SetCurrentVersionRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/worker-deployments/{deploymentName}/set-current-version", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.WorkerDeployments.Ite
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SetCurrentVersionRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespace}/worker-deployments/{deploymentName}/set-current-version", rawUrl)
+        public SetCurrentVersionRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/worker-deployments/{deploymentName}/set-current-version", rawUrl)
         {
         }
         /// <summary>

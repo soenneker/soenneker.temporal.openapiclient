@@ -26,7 +26,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Reachability level might come from server cache. This timestamp specifies when the value was actually calculated.</summary>
         public DateTimeOffset? LastUpdateTime { get; set; }
         /// <summary>The reachability property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.GetDeploymentReachabilityResponse_reachability? Reachability { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.GetDeploymentReachabilityResponseReachability? Reachability { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.GetDeploymentReachabilityResponse"/> and sets the default values.
         /// </summary>
@@ -54,7 +54,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             {
                 { "deploymentInfo", n => { DeploymentInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfo>(global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfo.CreateFromDiscriminatorValue); } },
                 { "lastUpdateTime", n => { LastUpdateTime = n.GetDateTimeOffsetValue(); } },
-                { "reachability", n => { Reachability = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.GetDeploymentReachabilityResponse_reachability>(); } },
+                { "reachability", n => { Reachability = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.GetDeploymentReachabilityResponseReachability>(); } },
             };
         }
         /// <summary>
@@ -66,7 +66,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfo>("deploymentInfo", DeploymentInfo);
             writer.WriteDateTimeOffsetValue("lastUpdateTime", LastUpdateTime);
-            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.GetDeploymentReachabilityResponse_reachability>("reachability", Reachability);
+            writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.GetDeploymentReachabilityResponseReachability>("reachability", Reachability);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

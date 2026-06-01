@@ -42,18 +42,18 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>&quot;The target Workflow Id and (optionally) a specific Run Id thereof. (-- api-linter: core::0203::optional=disabled     aip.dev/not-precedent: false positive triggered by the word \&quot;optional\&quot; --)&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionOptionsRequest_workflowExecution? WorkflowExecution { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionOptionsRequestWorkflowExecution? WorkflowExecution { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionOptionsRequest_workflowExecution WorkflowExecution { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionOptionsRequestWorkflowExecution WorkflowExecution { get; set; }
 #endif
         /// <summary>Workflow Execution options. Partial updates are accepted and controlled by update_mask.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionOptionsRequest_workflowExecutionOptions? WorkflowExecutionOptions { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionOptionsRequestWorkflowExecutionOptions? WorkflowExecutionOptions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionOptionsRequest_workflowExecutionOptions WorkflowExecutionOptions { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionOptionsRequestWorkflowExecutionOptions WorkflowExecutionOptions { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionOptionsRequest"/> and sets the default values.
@@ -83,8 +83,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "identity", n => { Identity = n.GetStringValue(); } },
                 { "namespace", n => { Namespace = n.GetStringValue(); } },
                 { "updateMask", n => { UpdateMask = n.GetStringValue(); } },
-                { "workflowExecution", n => { WorkflowExecution = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionOptionsRequest_workflowExecution>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionOptionsRequest_workflowExecution.CreateFromDiscriminatorValue); } },
-                { "workflowExecutionOptions", n => { WorkflowExecutionOptions = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionOptionsRequest_workflowExecutionOptions>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionOptionsRequest_workflowExecutionOptions.CreateFromDiscriminatorValue); } },
+                { "workflowExecution", n => { WorkflowExecution = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionOptionsRequestWorkflowExecution>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionOptionsRequestWorkflowExecution.CreateFromDiscriminatorValue); } },
+                { "workflowExecutionOptions", n => { WorkflowExecutionOptions = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionOptionsRequestWorkflowExecutionOptions>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionOptionsRequestWorkflowExecutionOptions.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -97,8 +97,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("identity", Identity);
             writer.WriteStringValue("namespace", Namespace);
             writer.WriteStringValue("updateMask", UpdateMask);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionOptionsRequest_workflowExecution>("workflowExecution", WorkflowExecution);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionOptionsRequest_workflowExecutionOptions>("workflowExecutionOptions", WorkflowExecutionOptions);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionOptionsRequestWorkflowExecution>("workflowExecution", WorkflowExecution);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionOptionsRequestWorkflowExecutionOptions>("workflowExecutionOptions", WorkflowExecutionOptions);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

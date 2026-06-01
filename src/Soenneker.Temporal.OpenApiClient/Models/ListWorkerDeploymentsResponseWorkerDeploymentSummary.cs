@@ -20,18 +20,18 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Summary of the current version of the Worker Deployment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummary_currentVersionSummary? CurrentVersionSummary { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummaryCurrentVersionSummary? CurrentVersionSummary { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummary_currentVersionSummary CurrentVersionSummary { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummaryCurrentVersionSummary CurrentVersionSummary { get; set; }
 #endif
         /// <summary>Summary of the version that was added most recently in the Worker Deployment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummary_latestVersionSummary? LatestVersionSummary { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummaryLatestVersionSummary? LatestVersionSummary { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummary_latestVersionSummary LatestVersionSummary { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummaryLatestVersionSummary LatestVersionSummary { get; set; }
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -44,10 +44,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Summary of the ramping version of the Worker Deployment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummary_rampingVersionSummary? RampingVersionSummary { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummaryRampingVersionSummary? RampingVersionSummary { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummary_rampingVersionSummary RampingVersionSummary { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummaryRampingVersionSummary RampingVersionSummary { get; set; }
 #endif
         /// <summary>The routingConfig property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -83,10 +83,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "createTime", n => { CreateTime = n.GetDateTimeOffsetValue(); } },
-                { "currentVersionSummary", n => { CurrentVersionSummary = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummary_currentVersionSummary>(global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummary_currentVersionSummary.CreateFromDiscriminatorValue); } },
-                { "latestVersionSummary", n => { LatestVersionSummary = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummary_latestVersionSummary>(global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummary_latestVersionSummary.CreateFromDiscriminatorValue); } },
+                { "currentVersionSummary", n => { CurrentVersionSummary = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummaryCurrentVersionSummary>(global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummaryCurrentVersionSummary.CreateFromDiscriminatorValue); } },
+                { "latestVersionSummary", n => { LatestVersionSummary = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummaryLatestVersionSummary>(global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummaryLatestVersionSummary.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "rampingVersionSummary", n => { RampingVersionSummary = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummary_rampingVersionSummary>(global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummary_rampingVersionSummary.CreateFromDiscriminatorValue); } },
+                { "rampingVersionSummary", n => { RampingVersionSummary = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummaryRampingVersionSummary>(global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummaryRampingVersionSummary.CreateFromDiscriminatorValue); } },
                 { "routingConfig", n => { RoutingConfig = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RoutingConfig>(global::Soenneker.Temporal.OpenApiClient.Models.RoutingConfig.CreateFromDiscriminatorValue); } },
             };
         }
@@ -98,10 +98,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("createTime", CreateTime);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummary_currentVersionSummary>("currentVersionSummary", CurrentVersionSummary);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummary_latestVersionSummary>("latestVersionSummary", LatestVersionSummary);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummaryCurrentVersionSummary>("currentVersionSummary", CurrentVersionSummary);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummaryLatestVersionSummary>("latestVersionSummary", LatestVersionSummary);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummary_rampingVersionSummary>("rampingVersionSummary", RampingVersionSummary);
+            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummaryRampingVersionSummary>("rampingVersionSummary", RampingVersionSummary);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RoutingConfig>("routingConfig", RoutingConfig);
             writer.WriteAdditionalData(AdditionalData);
         }

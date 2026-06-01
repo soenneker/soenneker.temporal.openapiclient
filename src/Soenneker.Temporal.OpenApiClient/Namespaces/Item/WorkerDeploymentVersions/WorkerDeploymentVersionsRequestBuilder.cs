@@ -10,21 +10,21 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.WorkerDeploymentVersions
 {
     /// <summary>
-    /// Builds and executes requests for operations under \namespaces\{namespace}\worker-deployment-versions
+    /// Builds and executes requests for operations under \namespaces\{namespaceValue}\worker-deployment-versions
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WorkerDeploymentVersionsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Temporal.OpenApiClient.namespaces.item.workerDeploymentVersions.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.WorkerDeploymentVersions.Item.Deployment_versionDeployment_nameItemRequestBuilder"/></returns>
-        public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.WorkerDeploymentVersions.Item.Deployment_versionDeployment_nameItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.WorkerDeploymentVersions.Item.WithDeploymentVersionDeploymentNameItemRequestBuilder"/></returns>
+        public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.WorkerDeploymentVersions.Item.WithDeploymentVersionDeploymentNameItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("deployment_version%2Edeployment_name", position);
-                return new global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.WorkerDeploymentVersions.Item.Deployment_versionDeployment_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("deploymentVersionDeploymentName", position);
+                return new global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.WorkerDeploymentVersions.Item.WithDeploymentVersionDeploymentNameItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -32,7 +32,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.WorkerDeploymentVersi
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WorkerDeploymentVersionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespace}/worker-deployment-versions", pathParameters)
+        public WorkerDeploymentVersionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/worker-deployment-versions", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.WorkerDeploymentVersi
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WorkerDeploymentVersionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespace}/worker-deployment-versions", rawUrl)
+        public WorkerDeploymentVersionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/worker-deployment-versions", rawUrl)
         {
         }
     }
