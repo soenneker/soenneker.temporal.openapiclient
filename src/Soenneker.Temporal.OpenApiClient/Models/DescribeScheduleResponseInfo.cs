@@ -89,14 +89,6 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public List<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution> RunningWorkflows { get; set; }
 #endif
-        /// <summary>Size of the schedule&apos;s internal state (including payloads) in bytes.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? StateSizeBytes { get; set; }
-#nullable restore
-#else
-        public string StateSizeBytes { get; set; }
-#endif
         /// <summary>The updateTime property</summary>
         public DateTimeOffset? UpdateTime { get; set; }
         /// <summary>
@@ -134,7 +126,6 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "overlapSkipped", n => { OverlapSkipped = n.GetStringValue(); } },
                 { "recentActions", n => { RecentActions = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResult>(global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResult.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "runningWorkflows", n => { RunningWorkflows = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "stateSizeBytes", n => { StateSizeBytes = n.GetStringValue(); } },
                 { "updateTime", n => { UpdateTime = n.GetDateTimeOffsetValue(); } },
             };
         }
@@ -155,7 +146,6 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("overlapSkipped", OverlapSkipped);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResult>("recentActions", RecentActions);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution>("runningWorkflows", RunningWorkflows);
-            writer.WriteStringValue("stateSizeBytes", StateSizeBytes);
             writer.WriteDateTimeOffsetValue("updateTime", UpdateTime);
             writer.WriteAdditionalData(AdditionalData);
         }

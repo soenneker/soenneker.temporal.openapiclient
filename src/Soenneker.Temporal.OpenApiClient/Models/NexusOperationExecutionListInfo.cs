@@ -75,14 +75,6 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string Service { get; set; }
 #endif
-        /// <summary>Updated once on scheduled and once on terminal status.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? StateSizeBytes { get; set; }
-#nullable restore
-#else
-        public string StateSizeBytes { get; set; }
-#endif
         /// <summary>Updated on terminal status.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -127,7 +119,6 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "scheduleTime", n => { ScheduleTime = n.GetDateTimeOffsetValue(); } },
                 { "searchAttributes", n => { SearchAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionListInfoSearchAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionListInfoSearchAttributes.CreateFromDiscriminatorValue); } },
                 { "service", n => { Service = n.GetStringValue(); } },
-                { "stateSizeBytes", n => { StateSizeBytes = n.GetStringValue(); } },
                 { "stateTransitionCount", n => { StateTransitionCount = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionListInfoStatus>(); } },
             };
@@ -148,7 +139,6 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("scheduleTime", ScheduleTime);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionListInfoSearchAttributes>("searchAttributes", SearchAttributes);
             writer.WriteStringValue("service", Service);
-            writer.WriteStringValue("stateSizeBytes", StateSizeBytes);
             writer.WriteStringValue("stateTransitionCount", StateTransitionCount);
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionListInfoStatus>("status", Status);
             writer.WriteAdditionalData(AdditionalData);

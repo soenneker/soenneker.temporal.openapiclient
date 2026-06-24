@@ -14,14 +14,6 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Link to the update event. May be null if the update has not yet been accepted.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseLink? Link { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseLink Link { get; set; }
-#endif
         /// <summary>The outcome of the Update if and only if the Workflow Update has completed. If this response is being returned before the Update has completed then this field will not be set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -65,7 +57,6 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "link", n => { Link = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseLink>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseLink.CreateFromDiscriminatorValue); } },
                 { "outcome", n => { Outcome = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseOutcome>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseOutcome.CreateFromDiscriminatorValue); } },
                 { "stage", n => { Stage = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseStage>(); } },
                 { "updateRef", n => { UpdateRef = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseUpdateRef>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseUpdateRef.CreateFromDiscriminatorValue); } },
@@ -78,7 +69,6 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseLink>("link", Link);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseOutcome>("outcome", Outcome);
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseStage>("stage", Stage);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseUpdateRef>("updateRef", UpdateRef);

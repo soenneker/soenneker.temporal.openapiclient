@@ -169,22 +169,6 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string ScheduleToStartTimeout { get; set; }
 #endif
-        /// <summary>The name of the SDK of the worker that most recently picked up an attempt of this activity. Overwritten on each new attempt. Empty if unknown.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? SdkName { get; set; }
-#nullable restore
-#else
-        public string SdkName { get; set; }
-#endif
-        /// <summary>The version of the SDK of the worker that most recently picked up an attempt of this activity. Overwritten on each new attempt. Empty if unknown.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? SdkVersion { get; set; }
-#nullable restore
-#else
-        public string SdkVersion { get; set; }
-#endif
         /// <summary>A user-defined set of *indexed* fields that are used/exposed when listing/searching workflows. The payload is not serialized in a user-defined way.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -294,8 +278,6 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "scheduleTime", n => { ScheduleTime = n.GetDateTimeOffsetValue(); } },
                 { "scheduleToCloseTimeout", n => { ScheduleToCloseTimeout = n.GetStringValue(); } },
                 { "scheduleToStartTimeout", n => { ScheduleToStartTimeout = n.GetStringValue(); } },
-                { "sdkName", n => { SdkName = n.GetStringValue(); } },
-                { "sdkVersion", n => { SdkVersion = n.GetStringValue(); } },
                 { "searchAttributes", n => { SearchAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes.CreateFromDiscriminatorValue); } },
                 { "startToCloseTimeout", n => { StartToCloseTimeout = n.GetStringValue(); } },
                 { "stateSizeBytes", n => { StateSizeBytes = n.GetStringValue(); } },
@@ -339,8 +321,6 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("scheduleTime", ScheduleTime);
             writer.WriteStringValue("scheduleToCloseTimeout", ScheduleToCloseTimeout);
             writer.WriteStringValue("scheduleToStartTimeout", ScheduleToStartTimeout);
-            writer.WriteStringValue("sdkName", SdkName);
-            writer.WriteStringValue("sdkVersion", SdkVersion);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes>("searchAttributes", SearchAttributes);
             writer.WriteStringValue("startToCloseTimeout", StartToCloseTimeout);
             writer.WriteStringValue("stateSizeBytes", StateSizeBytes);

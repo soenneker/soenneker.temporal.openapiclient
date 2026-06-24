@@ -173,14 +173,6 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #endif
         /// <summary>More detailed breakdown of NEXUS_OPERATION_EXECUTION_STATUS_RUNNING.</summary>
         public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionInfoState? State { get; set; }
-        /// <summary>Updated once on scheduled and once on terminal status.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? StateSizeBytes { get; set; }
-#nullable restore
-#else
-        public string StateSizeBytes { get; set; }
-#endif
         /// <summary>Incremented each time the operation&apos;s state is mutated in persistence.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -249,7 +241,6 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "service", n => { Service = n.GetStringValue(); } },
                 { "startToCloseTimeout", n => { StartToCloseTimeout = n.GetStringValue(); } },
                 { "state", n => { State = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionInfoState>(); } },
-                { "stateSizeBytes", n => { StateSizeBytes = n.GetStringValue(); } },
                 { "stateTransitionCount", n => { StateTransitionCount = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionInfoStatus>(); } },
                 { "userMetadata", n => { UserMetadata = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionInfoUserMetadata>(global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionInfoUserMetadata.CreateFromDiscriminatorValue); } },
@@ -287,7 +278,6 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("service", Service);
             writer.WriteStringValue("startToCloseTimeout", StartToCloseTimeout);
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionInfoState>("state", State);
-            writer.WriteStringValue("stateSizeBytes", StateSizeBytes);
             writer.WriteStringValue("stateTransitionCount", StateTransitionCount);
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionInfoStatus>("status", Status);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionInfoUserMetadata>("userMetadata", UserMetadata);

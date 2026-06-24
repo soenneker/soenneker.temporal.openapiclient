@@ -15,14 +15,6 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Callbacks to be called by the server when this update reaches a terminal state.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.Callback>? CompletionCallbacks { get; set; }
-#nullable restore
-#else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.Callback> CompletionCallbacks { get; set; }
-#endif
         /// <summary>The input property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -31,14 +23,6 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public global::Soenneker.Temporal.OpenApiClient.Models.Input Input { get; set; }
 #endif
-        /// <summary>Links to be associated with this update.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.Link>? Links { get; set; }
-#nullable restore
-#else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.Link> Links { get; set; }
-#endif
         /// <summary>Metadata about a Workflow Update.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -46,14 +30,6 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Temporal.OpenApiClient.Models.Meta Meta { get; set; }
-#endif
-        /// <summary>The request ID of the request.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? RequestId { get; set; }
-#nullable restore
-#else
-        public string RequestId { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionRequestRequest"/> and sets the default values.
@@ -80,11 +56,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "completionCallbacks", n => { CompletionCallbacks = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.Callback>(global::Soenneker.Temporal.OpenApiClient.Models.Callback.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "input", n => { Input = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Input>(global::Soenneker.Temporal.OpenApiClient.Models.Input.CreateFromDiscriminatorValue); } },
-                { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.Link>(global::Soenneker.Temporal.OpenApiClient.Models.Link.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Meta>(global::Soenneker.Temporal.OpenApiClient.Models.Meta.CreateFromDiscriminatorValue); } },
-                { "requestId", n => { RequestId = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -94,11 +67,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.Callback>("completionCallbacks", CompletionCallbacks);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Input>("input", Input);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.Link>("links", Links);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Meta>("meta", Meta);
-            writer.WriteStringValue("requestId", RequestId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

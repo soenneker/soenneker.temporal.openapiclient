@@ -3120,7 +3120,7 @@
         "tags": [
           "WorkflowService"
         ],
-        "description": "Deprecated. Use \u0060GetWorkerVersioningRules\u0060.\n Will be removed in server version v1.32.0.\n Fetches the worker build id versioning sets for a task queue.",
+        "description": "Deprecated. Use \u0060GetWorkerVersioningRules\u0060.\n Fetches the worker build id versioning sets for a task queue.",
         "operationId": "GetWorkerBuildIdCompatibility",
         "parameters": [
           {
@@ -3179,7 +3179,7 @@
         "tags": [
           "WorkflowService"
         ],
-        "description": "Fetches the Build ID assignment and redirect rules for a Task Queue.\n Will be removed in server version v1.32.0.",
+        "description": "\u0022Fetches the Build ID assignment and redirect rules for a Task Queue.\n WARNING: Worker Versioning is not yet stable and the API and behavior may change incompatibly.\u0022",
         "operationId": "GetWorkerVersioningRules",
         "parameters": [
           {
@@ -4276,7 +4276,7 @@
         "tags": [
           "WorkflowService"
         ],
-        "description": "Deprecated. Use \u0060DescribeTaskQueue\u0060.\n Will be removed in server version v1.32.0.\n\n Fetches task reachability to determine whether a worker may be retired.\n The request may specify task queues to query for or let the server fetch all task queues mapped to the given\n build IDs.\n\n When requesting a large number of task queues or all task queues associated with the given build ids in a\n namespace, all task queues will be listed in the response but some of them may not contain reachability\n information due to a server enforced limit. When reaching the limit, task queues that reachability information\n could not be retrieved for will be marked with a single TASK_REACHABILITY_UNSPECIFIED entry. The caller may issue\n another call to get the reachability for those task queues.\n\n Open source users can adjust this limit by setting the server\u0027s dynamic config value for\n \u0060limit.reachabilityTaskQueueScan\u0060 with the caveat that this call can strain the visibility store.",
+        "description": "Deprecated. Use \u0060DescribeTaskQueue\u0060.\n\n Fetches task reachability to determine whether a worker may be retired.\n The request may specify task queues to query for or let the server fetch all task queues mapped to the given\n build IDs.\n\n When requesting a large number of task queues or all task queues associated with the given build ids in a\n namespace, all task queues will be listed in the response but some of them may not contain reachability\n information due to a server enforced limit. When reaching the limit, task queues that reachability information\n could not be retrieved for will be marked with a single TASK_REACHABILITY_UNSPECIFIED entry. The caller may issue\n another call to get the reachability for those task queues.\n\n Open source users can adjust this limit by setting the server\u0027s dynamic config value for\n \u0060limit.reachabilityTaskQueueScan\u0060 with the caveat that this call can strain the visibility store.",
         "operationId": "GetWorkerTaskReachability",
         "parameters": [
           {
@@ -10127,7 +10127,7 @@
         "tags": [
           "WorkflowService"
         ],
-        "description": "Deprecated. Use \u0060GetWorkerVersioningRules\u0060.\n Will be removed in server version v1.32.0.\n Fetches the worker build id versioning sets for a task queue.",
+        "description": "Deprecated. Use \u0060GetWorkerVersioningRules\u0060.\n Fetches the worker build id versioning sets for a task queue.",
         "operationId": "GetWorkerBuildIdCompatibility2",
         "parameters": [
           {
@@ -10186,7 +10186,7 @@
         "tags": [
           "WorkflowService"
         ],
-        "description": "Fetches the Build ID assignment and redirect rules for a Task Queue.\n Will be removed in server version v1.32.0.",
+        "description": "\u0022Fetches the Build ID assignment and redirect rules for a Task Queue.\n WARNING: Worker Versioning is not yet stable and the API and behavior may change incompatibly.\u0022",
         "operationId": "GetWorkerVersioningRules2",
         "parameters": [
           {
@@ -11233,7 +11233,7 @@
         "tags": [
           "WorkflowService"
         ],
-        "description": "Deprecated. Use \u0060DescribeTaskQueue\u0060.\n Will be removed in server version v1.32.0.\n\n Fetches task reachability to determine whether a worker may be retired.\n The request may specify task queues to query for or let the server fetch all task queues mapped to the given\n build IDs.\n\n When requesting a large number of task queues or all task queues associated with the given build ids in a\n namespace, all task queues will be listed in the response but some of them may not contain reachability\n information due to a server enforced limit. When reaching the limit, task queues that reachability information\n could not be retrieved for will be marked with a single TASK_REACHABILITY_UNSPECIFIED entry. The caller may issue\n another call to get the reachability for those task queues.\n\n Open source users can adjust this limit by setting the server\u0027s dynamic config value for\n \u0060limit.reachabilityTaskQueueScan\u0060 with the caveat that this call can strain the visibility store.",
+        "description": "Deprecated. Use \u0060DescribeTaskQueue\u0060.\n\n Fetches task reachability to determine whether a worker may be retired.\n The request may specify task queues to query for or let the server fetch all task queues mapped to the given\n build IDs.\n\n When requesting a large number of task queues or all task queues associated with the given build ids in a\n namespace, all task queues will be listed in the response but some of them may not contain reachability\n information due to a server enforced limit. When reaching the limit, task queues that reachability information\n could not be retrieved for will be marked with a single TASK_REACHABILITY_UNSPECIFIED entry. The caller may issue\n another call to get the reachability for those task queues.\n\n Open source users can adjust this limit by setting the server\u0027s dynamic config value for\n \u0060limit.reachabilityTaskQueueScan\u0060 with the caveat that this call can strain the visibility store.",
         "operationId": "GetWorkerTaskReachability2",
         "parameters": [
           {
@@ -13589,14 +13589,6 @@
           "totalHeartbeatCount": {
             "type": "string",
             "description": "Total number of heartbeats recorded across all attempts of this activity, including retries."
-          },
-          "sdkName": {
-            "type": "string",
-            "description": "The name of the SDK of the worker that most recently picked up an attempt of this activity.\n Overwritten on each new attempt. Empty if unknown."
-          },
-          "sdkVersion": {
-            "type": "string",
-            "description": "The version of the SDK of the worker that most recently picked up an attempt of this activity.\n Overwritten on each new attempt. Empty if unknown."
           }
         },
         "description": "Information about a standalone activity."
@@ -15239,13 +15231,6 @@
               "$ref": "#/components/schemas/FailoverStatus"
             },
             "description": "Contains the historical state of failover_versions for the cluster, truncated to contain only the last N\n states to ensure that the list does not grow unbounded."
-          },
-          "pollerGroupInfos": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/PollerGroupInfo"
-            },
-            "description": "The initial info that client should use for poller group assignment. This information is\n updated through poll response. Client is supposed to use the info received in the latest\n poll response."
           }
         }
       },
@@ -16199,9 +16184,6 @@
           },
           "nexusOperation": {
             "$ref": "#/components/schemas/LinkNexusOperation"
-          },
-          "workflow": {
-            "$ref": "#/components/schemas/LinkWorkflow"
           }
         },
         "description": "Link can be associated with history events. It might contain information about an external entity\n related to the history event. For example, workflow A makes a Nexus call that starts workflow B:\n in this case, a history event in workflow A could contain a Link to the workflow started event in\n workflow B, and vice-versa."
@@ -16244,24 +16226,6 @@
           }
         },
         "description": "A link to a standalone Nexus operation."
-      },
-      "LinkWorkflow": {
-        "type": "object",
-        "properties": {
-          "namespace": {
-            "type": "string"
-          },
-          "workflowId": {
-            "type": "string"
-          },
-          "runId": {
-            "type": "string"
-          },
-          "reason": {
-            "type": "string"
-          }
-        },
-        "description": "A link to a workflow execution. This is a more general version of WorkflowEvent that doesn\u0027t specify a \n particular event within the workflow, useful when you want to link to a workflow but there is no particular event to link to,\n such as a Query or a Rejected Update."
       },
       "LinkWorkflowEvent": {
         "type": "object",
@@ -16710,14 +16674,6 @@
           "workerCommands": {
             "type": "boolean",
             "description": "True if the namespace supports worker commands (server-to-worker communication via control queues)."
-          },
-          "standaloneNexusOperation": {
-            "type": "boolean",
-            "description": "True if the namespace supports standalone Nexus operations."
-          },
-          "workflowUpdateCallbacks": {
-            "type": "boolean",
-            "description": "True if the namespace supports attaching callbacks on workflow updates"
           }
         },
         "description": "Namespace capability details. Should contain what features are enabled in a namespace."
@@ -17104,10 +17060,6 @@
           "identity": {
             "type": "string",
             "description": "The identity of the client who started this operation."
-          },
-          "stateSizeBytes": {
-            "type": "string",
-            "description": "Updated once on scheduled and once on terminal status."
           }
         },
         "description": "Full current state of a standalone Nexus operation, as of the time of the request."
@@ -17159,10 +17111,6 @@
             "pattern": "^-?(?:0|[1-9][0-9]{0,11})(?:\\.[0-9]{1,9})?s$",
             "type": "string",
             "description": "The difference between close time and scheduled time.\n This field is only populated if the operation is closed."
-          },
-          "stateSizeBytes": {
-            "type": "string",
-            "description": "Updated once on scheduled and once on terminal status."
           }
         },
         "description": "Limited Nexus operation information returned in the list response.\n When adding fields here, ensure that it is also present in NexusOperationExecutionInfo (note that it may already be present in\n NexusOperationExecutionInfo but not at the top-level)."
@@ -18294,24 +18242,6 @@
           },
           "input": {
             "$ref": "#/components/schemas/Input"
-          },
-          "requestId": {
-            "type": "string",
-            "description": "The request ID of the request."
-          },
-          "completionCallbacks": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Callback"
-            },
-            "description": "Callbacks to be called by the server when this update reaches a terminal state."
-          },
-          "links": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Link"
-            },
-            "description": "Links to be associated with this update."
           }
         },
         "description": "The client request that triggers a Workflow Update."
@@ -19142,10 +19072,6 @@
           "invalidScheduleError": {
             "type": "string",
             "description": "Deprecated."
-          },
-          "stateSizeBytes": {
-            "type": "string",
-            "description": "Size of the schedule\u0027s internal state (including payloads) in bytes."
           }
         }
       },
@@ -19196,10 +19122,6 @@
               "type": "string",
               "format": "date-time"
             }
-          },
-          "stateSizeBytes": {
-            "type": "string",
-            "description": "Size of the schedule\u0027s internal state (including payloads) in bytes."
           }
         },
         "description": "ScheduleListInfo is an abbreviated set of values from Schedule and ScheduleInfo\n that\u0027s returned in ListSchedules."
@@ -21417,9 +21339,6 @@
           },
           "stage": {
             "$ref": "#/components/schemas/UpdateWorkflowExecutionResponseStage"
-          },
-          "link": {
-            "$ref": "#/components/schemas/UpdateWorkflowExecutionResponseLink"
           }
         }
       },
@@ -22494,33 +22413,6 @@
           },
           "timeSkippingConfig": {
             "$ref": "#/components/schemas/WorkflowExecutionOptionsUpdatedEventAttributesTimeSkippingConfig"
-          },
-          "workflowUpdateOptions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/WorkflowExecutionOptionsUpdatedEventAttributesWorkflowUpdateOptionsUpdate"
-            },
-            "description": "Updates to workflow updates options."
-          }
-        }
-      },
-      "WorkflowExecutionOptionsUpdatedEventAttributesWorkflowUpdateOptionsUpdate": {
-        "type": "object",
-        "properties": {
-          "updateId": {
-            "type": "string",
-            "description": "The ID of the workflow update this update options update corresponds to."
-          },
-          "attachedRequestId": {
-            "type": "string",
-            "description": "Request ID attached to the running workflow update so that subsequent requests with same\n request ID will be deduped"
-          },
-          "attachedCompletionCallbacks": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Callback"
-            },
-            "description": "Completion callbacks attached to the running workflow update."
           }
         }
       },
@@ -24443,14 +24335,6 @@
           "totalHeartbeatCount": {
             "type": "string",
             "description": "Total number of heartbeats recorded across all attempts of this activity, including retries."
-          },
-          "sdkName": {
-            "type": "string",
-            "description": "The name of the SDK of the worker that most recently picked up an attempt of this activity.\n Overwritten on each new attempt. Empty if unknown."
-          },
-          "sdkVersion": {
-            "type": "string",
-            "description": "The version of the SDK of the worker that most recently picked up an attempt of this activity.\n Overwritten on each new attempt. Empty if unknown."
           }
         },
         "description": "Information about the activity execution."
@@ -24598,10 +24482,6 @@
           "identity": {
             "type": "string",
             "description": "The identity of the client who started this operation."
-          },
-          "stateSizeBytes": {
-            "type": "string",
-            "description": "Updated once on scheduled and once on terminal status."
           }
         },
         "description": "Information about the operation."
@@ -24753,10 +24633,6 @@
           "invalidScheduleError": {
             "type": "string",
             "description": "Deprecated."
-          },
-          "stateSizeBytes": {
-            "type": "string",
-            "description": "Size of the schedule\u0027s internal state (including payloads) in bytes."
           }
         },
         "description": "Extra schedule state info."
@@ -25379,14 +25255,6 @@
           "workerCommands": {
             "type": "boolean",
             "description": "True if the namespace supports worker commands (server-to-worker communication via control queues)."
-          },
-          "standaloneNexusOperation": {
-            "type": "boolean",
-            "description": "True if the namespace supports standalone Nexus operations."
-          },
-          "workflowUpdateCallbacks": {
-            "type": "boolean",
-            "description": "True if the namespace supports attaching callbacks on workflow updates"
           }
         },
         "description": "All capabilities the namespace supports."
@@ -27105,9 +26973,6 @@
           },
           "nexusOperation": {
             "$ref": "#/components/schemas/LinkNexusOperation"
-          },
-          "workflow": {
-            "$ref": "#/components/schemas/LinkWorkflow"
           }
         },
         "description": "Link to be associated with the WorkflowExecutionSignaled event.\n Added on the response to propagate the backlink.\n Available from Temporal server 1.31 and up."
@@ -27147,9 +27012,6 @@
           },
           "nexusOperation": {
             "$ref": "#/components/schemas/LinkNexusOperation"
-          },
-          "workflow": {
-            "$ref": "#/components/schemas/LinkWorkflow"
           }
         },
         "description": "Link to be associated with the WorkflowExecutionSignaled event.\n Added on the response to propagate the backlink.\n Available from Temporal server 1.31 and up."
@@ -27306,9 +27168,6 @@
           },
           "nexusOperation": {
             "$ref": "#/components/schemas/LinkNexusOperation"
-          },
-          "workflow": {
-            "$ref": "#/components/schemas/LinkWorkflow"
           }
         },
         "description": "Link to the started activity."
@@ -27687,9 +27546,6 @@
           },
           "nexusOperation": {
             "$ref": "#/components/schemas/LinkNexusOperation"
-          },
-          "workflow": {
-            "$ref": "#/components/schemas/LinkWorkflow"
           }
         },
         "description": "Link to the workflow event."
@@ -28217,24 +28073,6 @@
           },
           "input": {
             "$ref": "#/components/schemas/Input"
-          },
-          "requestId": {
-            "type": "string",
-            "description": "The request ID of the request."
-          },
-          "completionCallbacks": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Callback"
-            },
-            "description": "Callbacks to be called by the server when this update reaches a terminal state."
-          },
-          "links": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Link"
-            },
-            "description": "Links to be associated with this update."
           }
         },
         "description": "The request information that will be delivered all the way down to the\n Workflow Execution."
@@ -28262,27 +28100,6 @@
           }
         },
         "description": "The outcome of the Update if and only if the Workflow Update\n has completed. If this response is being returned before the Update has\n completed then this field will not be set."
-      },
-      "UpdateWorkflowExecutionResponseLink": {
-        "type": "object",
-        "properties": {
-          "workflowEvent": {
-            "$ref": "#/components/schemas/LinkWorkflowEvent"
-          },
-          "batchJob": {
-            "$ref": "#/components/schemas/LinkBatchJob"
-          },
-          "activity": {
-            "$ref": "#/components/schemas/LinkActivity"
-          },
-          "nexusOperation": {
-            "$ref": "#/components/schemas/LinkNexusOperation"
-          },
-          "workflow": {
-            "$ref": "#/components/schemas/LinkWorkflow"
-          }
-        },
-        "description": "Link to the update event. May be null if the update has not yet been accepted."
       },
       "UserMetadataSummary": {
         "type": "object",
@@ -29033,24 +28850,6 @@
           },
           "input": {
             "$ref": "#/components/schemas/Input"
-          },
-          "requestId": {
-            "type": "string",
-            "description": "The request ID of the request."
-          },
-          "completionCallbacks": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Callback"
-            },
-            "description": "Callbacks to be called by the server when this update reaches a terminal state."
-          },
-          "links": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Link"
-            },
-            "description": "Links to be associated with this update."
           }
         },
         "description": "The message payload of the original request message that initiated this\n update."
@@ -29063,24 +28862,6 @@
           },
           "input": {
             "$ref": "#/components/schemas/Input"
-          },
-          "requestId": {
-            "type": "string",
-            "description": "The request ID of the request."
-          },
-          "completionCallbacks": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Callback"
-            },
-            "description": "Callbacks to be called by the server when this update reaches a terminal state."
-          },
-          "links": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Link"
-            },
-            "description": "Links to be associated with this update."
           }
         },
         "description": "The update request associated with this event."
@@ -29119,24 +28900,6 @@
           },
           "input": {
             "$ref": "#/components/schemas/Input"
-          },
-          "requestId": {
-            "type": "string",
-            "description": "The request ID of the request."
-          },
-          "completionCallbacks": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Callback"
-            },
-            "description": "Callbacks to be called by the server when this update reaches a terminal state."
-          },
-          "links": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Link"
-            },
-            "description": "Links to be associated with this update."
           }
         },
         "description": "The message payload of the original request message that initiated this\n update."
