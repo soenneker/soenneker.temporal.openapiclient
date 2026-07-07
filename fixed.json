@@ -23977,22 +23977,10 @@
       },
       "ComputeProviderDetails": {
         "type": "object",
-        "allOf": [
-          {
-            "type": "object",
-            "description": "\u0022Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined.\u0022"
-          }
-        ],
         "description": "Contains provider-specific instructions and configuration.\n For server-implemented providers, use the SDK\u0027s default content\n converter to ensure the server can understand it.\n For remote-implemented providers, you might use your own content\n converters according to what the remote endpoints understand."
       },
       "ComputeScalerDetails": {
         "type": "object",
-        "allOf": [
-          {
-            "type": "object",
-            "description": "\u0022Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined.\u0022"
-          }
-        ],
         "description": "Contains scaler-specific instructions and configuration.\n For server-implemented scalers, use the SDK\u0027s default data\n converter to ensure the server can understand it.\n For remote-implemented scalers, you might use your own data\n converters according to what the remote endpoints understand."
       },
       "CreateNexusEndpointRequestSpec": {
@@ -24488,22 +24476,10 @@
       },
       "DescribeNexusOperationExecutionResponseInput": {
         "type": "object",
-        "allOf": [
-          {
-            "type": "object",
-            "description": "\u0022Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined.\u0022"
-          }
-        ],
         "description": "Serialized operation input, passed as the request payload.\n Only set if include_input was true in the request."
       },
       "DescribeNexusOperationExecutionResponseResult": {
         "type": "object",
-        "allOf": [
-          {
-            "type": "object",
-            "description": "\u0022Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined.\u0022"
-          }
-        ],
         "description": "The result if the operation completed successfully."
       },
       "DescribeNexusOperationExecutionResponseFailure": {
@@ -24803,12 +24779,6 @@
       },
       "EndpointSpecDescription": {
         "type": "object",
-        "allOf": [
-          {
-            "type": "object",
-            "description": "\u0022Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined.\u0022"
-          }
-        ],
         "description": "Markdown description serialized as a single JSON string.\n If the Payload is encrypted, the UI and CLI may decrypt with the configured codec server endpoint.\n By default, the server enforces a limit of 20,000 bytes for this entire payload."
       },
       "EndpointSpecTarget": {
@@ -24825,12 +24795,6 @@
       },
       "FailureEncodedAttributes": {
         "type": "object",
-        "allOf": [
-          {
-            "type": "object",
-            "description": "\u0022Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined.\u0022"
-          }
-        ],
         "description": "Alternative way to supply \u0060message\u0060 and \u0060stack_trace\u0060 and possibly other attributes, used for encryption of\n errors originating in user code which might contain sensitive information.\n The \u0060encoded_attributes\u0060 Payload could represent any serializable object, e.g. JSON object or a \u0060Failure\u0060 proto\n message.\n\n SDK authors:\n - The SDK should provide a default \u0060encodeFailureAttributes\u0060 and \u0060decodeFailureAttributes\u0060 implementation that:\n   - Uses a JSON object to represent \u0060{ message, stack_trace }\u0060.\n   - Overwrites the original message with \u0022Encoded failure\u0022 to indicate that more information could be extracted.\n   - Overwrites the original stack_trace with an empty string.\n   - The resulting JSON object is converted to Payload using the default PayloadConverter and should be processed\n     by the user-provided PayloadCodec\n\n - If there\u0027s demand, we could allow overriding the default SDK implementation to encode other opaque Failure attributes."
       },
       "FetchWorkerConfigRequestSelector": {
@@ -25531,12 +25495,6 @@
       },
       "NexusOperationCompletedEventAttributesResult": {
         "type": "object",
-        "allOf": [
-          {
-            "type": "object",
-            "description": "\u0022Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined.\u0022"
-          }
-        ],
         "description": "Serialized result of the Nexus operation. The response of the Nexus handler.\n Delivered either via a completion callback or as a response to a synchronous operation."
       },
       "NexusOperationExecutionCancellationInfoLastAttemptFailure": {
@@ -25718,12 +25676,6 @@
       },
       "NexusOperationScheduledEventAttributesInput": {
         "type": "object",
-        "allOf": [
-          {
-            "type": "object",
-            "description": "\u0022Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined.\u0022"
-          }
-        ],
         "description": "Input for the operation. The server converts this into Nexus request content and the appropriate content headers\n internally when sending the StartOperation request. On the handler side, if it is also backed by Temporal, the\n content is transformed back to the original Payload stored in this event."
       },
       "NexusOperationTimedOutEventAttributesFailure": {
@@ -25973,12 +25925,6 @@
       },
       "PollNexusOperationExecutionResponseResult": {
         "type": "object",
-        "allOf": [
-          {
-            "type": "object",
-            "description": "\u0022Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined.\u0022"
-          }
-        ],
         "description": "The result if the operation completed successfully."
       },
       "PollNexusOperationExecutionResponseFailure": {
@@ -27214,12 +27160,6 @@
       },
       "StartNexusOperationExecutionRequestInput": {
         "type": "object",
-        "allOf": [
-          {
-            "type": "object",
-            "description": "\u0022Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined.\u0022"
-          }
-        ],
         "description": "Serialized input to the operation. Passed as the request payload."
       },
       "StartNexusOperationExecutionRequestSearchAttributes": {
@@ -28103,22 +28043,10 @@
       },
       "UserMetadataSummary": {
         "type": "object",
-        "allOf": [
-          {
-            "type": "object",
-            "description": "\u0022Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined.\u0022"
-          }
-        ],
         "description": "Short-form text that provides a summary. This payload should be a \u0022json/plain\u0022-encoded payload\n that is a single JSON string for use in user interfaces. User interface formatting may not\n apply to this text when used in \u0022title\u0022 situations. The payload data section is limited to 400\n bytes by default."
       },
       "UserMetadataDetails": {
         "type": "object",
-        "allOf": [
-          {
-            "type": "object",
-            "description": "\u0022Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined.\u0022"
-          }
-        ],
         "description": "Long-form text that provides details. This payload should be a \u0022json/plain\u0022-encoded payload\n that is a single JSON string for use in user interfaces. User interface formatting may apply to\n this text in common use. The payload data section is limited to 20000 bytes by default."
       },
       "ValidateWorkerDeploymentVersionComputeConfigRequestDeploymentVersion": {
