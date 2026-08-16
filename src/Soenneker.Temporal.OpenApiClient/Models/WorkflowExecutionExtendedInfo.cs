@@ -31,7 +31,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfoPauseInfo PauseInfo { get; set; }
 #endif
-        /// <summary>&quot;Request ID information (eg: history event information associated with the request ID). Note: It only contains request IDs from StartWorkflowExecution requests, including indirect calls (eg: if SignalWithStartWorkflowExecution starts a new workflow, then the request ID is used in the StartWorkflowExecution request).&quot;</summary>
+        /// <summary>Request ID information (eg: history event information associated with the request ID). Note: It only contains request IDs from StartWorkflowExecution requests, including indirect calls (eg: if SignalWithStartWorkflowExecution starts a new workflow, then the request ID is used in the StartWorkflowExecution request).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfoRequestIdInfosProperty? RequestIdInfos { get; set; }

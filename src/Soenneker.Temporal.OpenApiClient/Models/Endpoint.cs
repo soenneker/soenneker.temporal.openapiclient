@@ -15,7 +15,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;The date and time when the endpoint was created. (-- api-linter: core::0142::time-field-names=disabled     aip.dev/not-precedent: Not following linter rules. --)&quot;</summary>
+        /// <summary>The date and time when the endpoint was created. (-- api-linter: core::0142::time-field-names=disabled     aip.dev/not-precedent: Not following linter rules. --)</summary>
         public DateTimeOffset? CreatedTime { get; set; }
         /// <summary>Unique server-generated endpoint ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -25,7 +25,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>&quot;The date and time when the endpoint was last modified. Will not be set if the endpoint has never been modified. (-- api-linter: core::0142::time-field-names=disabled     aip.dev/not-precedent: Not following linter rules. --)&quot;</summary>
+        /// <summary>The date and time when the endpoint was last modified. Will not be set if the endpoint has never been modified. (-- api-linter: core::0142::time-field-names=disabled     aip.dev/not-precedent: Not following linter rules. --)</summary>
         public DateTimeOffset? LastModifiedTime { get; set; }
         /// <summary>Spec for the endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

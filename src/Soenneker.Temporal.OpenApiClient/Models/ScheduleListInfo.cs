@@ -23,7 +23,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public List<DateTimeOffset?> FutureActionTimes { get; set; }
 #endif
-        /// <summary>&quot;From state:&quot;</summary>
+        /// <summary>From state:</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Notes { get; set; }
@@ -33,7 +33,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #endif
         /// <summary>The paused property</summary>
         public bool? Paused { get; set; }
-        /// <summary>&quot;From info (maybe fewer entries):&quot;</summary>
+        /// <summary>From info (maybe fewer entries):</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResult>? RecentActions { get; set; }
@@ -41,7 +41,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public List<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResult> RecentActions { get; set; }
 #endif
-        /// <summary>&quot;From spec: Some fields are dropped from this copy of spec: timezone_data&quot;</summary>
+        /// <summary>From spec: Some fields are dropped from this copy of spec: timezone_data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Temporal.OpenApiClient.Models.ScheduleListInfoSpec? Spec { get; set; }
@@ -49,7 +49,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public global::Soenneker.Temporal.OpenApiClient.Models.ScheduleListInfoSpec Spec { get; set; }
 #endif
-        /// <summary>&quot;From action: Action is a oneof field, but we need to encode this in JSON and oneof fields don&apos;t work well with JSON. If action is start_workflow, this is set:&quot;</summary>
+        /// <summary>From action: Action is a oneof field, but we need to encode this in JSON and oneof fields don&apos;t work well with JSON. If action is start_workflow, this is set:</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Temporal.OpenApiClient.Models.ScheduleListInfoWorkflowType? WorkflowType { get; set; }

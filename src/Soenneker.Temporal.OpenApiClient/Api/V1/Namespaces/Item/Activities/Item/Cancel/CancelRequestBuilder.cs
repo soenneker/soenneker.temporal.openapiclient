@@ -34,7 +34,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Activities.Ite
         {
         }
         /// <summary>
-        /// &quot;RequestCancelActivityExecution requests cancellation of an activity execution. Cancellation is cooperative: this call records the request, but the activity must detect and acknowledge it for the activity to reach CANCELED status. The cancellation signal is delivered via `cancel_requested` in the heartbeat response; SDKs surface this via language-idiomatic mechanisms (context cancellation, exceptions, abort signals).&quot;
+        /// RequestCancelActivityExecution requests cancellation of an activity execution. Cancellation is cooperative: this call records the request, but the activity must detect and acknowledge it for the activity to reach CANCELED status. The cancellation signal is delivered via `cancel_requested` in the heartbeat response; SDKs surface this via language-idiomatic mechanisms (context cancellation, exceptions, abort signals).
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelActivityExecution200Response"/></returns>
         /// <param name="body">The request body</param>
@@ -59,7 +59,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Activities.Ite
             return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelActivityExecution200Response>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelActivityExecution200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;RequestCancelActivityExecution requests cancellation of an activity execution. Cancellation is cooperative: this call records the request, but the activity must detect and acknowledge it for the activity to reach CANCELED status. The cancellation signal is delivered via `cancel_requested` in the heartbeat response; SDKs surface this via language-idiomatic mechanisms (context cancellation, exceptions, abort signals).&quot;
+        /// RequestCancelActivityExecution requests cancellation of an activity execution. Cancellation is cooperative: this call records the request, but the activity must detect and acknowledge it for the activity to reach CANCELED status. The cancellation signal is delivered via `cancel_requested` in the heartbeat response; SDKs surface this via language-idiomatic mechanisms (context cancellation, exceptions, abort signals).
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

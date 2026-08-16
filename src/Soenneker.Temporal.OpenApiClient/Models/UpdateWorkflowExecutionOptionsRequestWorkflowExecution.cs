@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;The target Workflow Id and (optionally) a specific Run Id thereof. (-- api-linter: core::0203::optional=disabled     aip.dev/not-precedent: false positive triggered by the word \&quot;optional\&quot; --)&quot;
+    /// The target Workflow Id and (optionally) a specific Run Id thereof. (-- api-linter: core::0203::optional=disabled     aip.dev/not-precedent: false positive triggered by the word &quot;optional&quot; --)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpdateWorkflowExecutionOptionsRequestWorkflowExecution : IAdditionalDataHolder, IParsable

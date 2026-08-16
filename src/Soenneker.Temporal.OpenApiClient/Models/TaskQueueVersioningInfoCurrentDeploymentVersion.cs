@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Specifies which Deployment Version should receive new workflow executions and tasks of existing unversioned or AutoUpgrade workflows. Nil value represents all the unversioned workers (those with `UNVERSIONED` (or unspecified) `WorkerVersioningMode`.) Note: Current Version is overridden by the Ramping Version for a portion of traffic when ramp percentage is non-zero (see `ramping_deployment_version` and `ramping_version_percentage`).&quot;
+    /// Specifies which Deployment Version should receive new workflow executions and tasks of existing unversioned or AutoUpgrade workflows. Nil value represents all the unversioned workers (those with `UNVERSIONED` (or unspecified) `WorkerVersioningMode`.) Note: Current Version is overridden by the Ramping Version for a portion of traffic when ramp percentage is non-zero (see `ramping_deployment_version` and `ramping_version_percentage`).
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TaskQueueVersioningInfoCurrentDeploymentVersion : IAdditionalDataHolder, IParsable

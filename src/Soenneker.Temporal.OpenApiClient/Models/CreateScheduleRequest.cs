@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;(-- api-linter: core::0203::optional=disabled     aip.dev/not-precedent: field_behavior annotation not available in our gogo fork --)&quot;
+    /// (-- api-linter: core::0203::optional=disabled     aip.dev/not-precedent: field_behavior annotation not available in our gogo fork --)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CreateScheduleRequest : IAdditionalDataHolder, IParsable

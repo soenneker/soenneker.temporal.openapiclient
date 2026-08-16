@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Represents some binary (byte array) data (ex: activity input parameters or workflow result) with metadata which describes this binary data (format, encoding, encryption, etc). Serialization of the data may be user-defined.&quot;
+    /// Represents some binary (byte array) data (ex: activity input parameters or workflow result) with metadata which describes this binary data (format, encoding, encryption, etc). Serialization of the data may be user-defined.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CountNexusOperationExecutionsResponseAggregationGroupGroupValuesItem : IAdditionalDataHolder, IParsable

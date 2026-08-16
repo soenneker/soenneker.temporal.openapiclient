@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;NOTE: keep in sync with temporal.api.batch.v1.BatchOperationResetActivities Deprecated. Use `ResetActivityExecutionRequest`.&quot;
+    /// NOTE: keep in sync with temporal.api.batch.v1.BatchOperationResetActivities Deprecated. Use `ResetActivityExecutionRequest`.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ResetActivityRequest : IAdditionalDataHolder, IParsable

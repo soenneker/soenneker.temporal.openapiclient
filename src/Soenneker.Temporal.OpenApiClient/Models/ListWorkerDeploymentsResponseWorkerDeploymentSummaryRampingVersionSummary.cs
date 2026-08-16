@@ -25,7 +25,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #endif
         /// <summary>The createTime property</summary>
         public DateTimeOffset? CreateTime { get; set; }
-        /// <summary>&quot;Unset if not current. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &apos;Since&apos; captures the field semantics despite being a preposition. --)&quot;</summary>
+        /// <summary>Unset if not current. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &apos;Since&apos; captures the field semantics despite being a preposition. --)</summary>
         public DateTimeOffset? CurrentSinceTime { get; set; }
         /// <summary>Required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -51,7 +51,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public DateTimeOffset? LastCurrentTime { get; set; }
         /// <summary>Timestamp when this version last stopped being current or ramping. Cleared if the version becomes current or ramping again.</summary>
         public DateTimeOffset? LastDeactivationTime { get; set; }
-        /// <summary>&quot;Unset if not ramping. Updated when the version first starts ramping, not on each ramp change. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &apos;Since&apos; captures the field semantics despite being a preposition. --)&quot;</summary>
+        /// <summary>Unset if not ramping. Updated when the version first starts ramping, not on each ramp change. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &apos;Since&apos; captures the field semantics despite being a preposition. --)</summary>
         public DateTimeOffset? RampingSinceTime { get; set; }
         /// <summary>Last time `current_since_time`, `ramping_since_time, or `ramp_percentage` of this version changed.</summary>
         public DateTimeOffset? RoutingUpdateTime { get; set; }

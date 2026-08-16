@@ -34,7 +34,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item
         {
         }
         /// <summary>
-        /// &quot;Note: This is an experimental API and the behavior may change in a future release. UnpauseWorkflowExecution unpauses a previously paused workflow execution specified in the request. Unpausing a workflow execution results in - The workflow execution status changes to `RUNNING` and a new WORKFLOW_EXECUTION_UNPAUSED event is added to the history - Workflow tasks and activity tasks are resumed.&quot;
+        /// Note: This is an experimental API and the behavior may change in a future release. UnpauseWorkflowExecution unpauses a previously paused workflow execution specified in the request. Unpausing a workflow execution results in - The workflow execution status changes to `RUNNING` and a new WORKFLOW_EXECUTION_UNPAUSED event is added to the history - Workflow tasks and activity tasks are resumed.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Models.UnpauseWorkflowExecution200Response"/></returns>
         /// <param name="body">The request body</param>
@@ -59,7 +59,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Models.UnpauseWorkflowExecution200Response>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Models.UnpauseWorkflowExecution200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Note: This is an experimental API and the behavior may change in a future release. UnpauseWorkflowExecution unpauses a previously paused workflow execution specified in the request. Unpausing a workflow execution results in - The workflow execution status changes to `RUNNING` and a new WORKFLOW_EXECUTION_UNPAUSED event is added to the history - Workflow tasks and activity tasks are resumed.&quot;
+        /// Note: This is an experimental API and the behavior may change in a future release. UnpauseWorkflowExecution unpauses a previously paused workflow execution specified in the request. Unpausing a workflow execution results in - The workflow execution status changes to `RUNNING` and a new WORKFLOW_EXECUTION_UNPAUSED event is added to the history - Workflow tasks and activity tasks are resumed.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

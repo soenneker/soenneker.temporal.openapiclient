@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
-    /// <summary>&quot;Default: PARENT_CLOSE_POLICY_TERMINATE.&quot;</summary>
+    /// <summary>Default: PARENT_CLOSE_POLICY_TERMINATE.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PendingChildExecutionInfoParentClosePolicy
     {

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Serialized result of workflow failure (ex: An exception thrown, or error returned)&quot;
+    /// Serialized result of workflow failure (ex: An exception thrown, or error returned)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WorkflowExecutionFailedEventAttributesFailure : IAdditionalDataHolder, IParsable

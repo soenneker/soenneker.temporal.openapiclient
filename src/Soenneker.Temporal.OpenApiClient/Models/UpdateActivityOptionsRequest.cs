@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;NOTE: keep in sync with temporal.api.batch.v1.BatchOperationUpdateActivityOptions Deprecated. Use `UpdateActivityExecutionOptionsRequest`.&quot;
+    /// NOTE: keep in sync with temporal.api.batch.v1.BatchOperationUpdateActivityOptions Deprecated. Use `UpdateActivityExecutionOptionsRequest`.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpdateActivityOptionsRequest : IAdditionalDataHolder, IParsable

@@ -22,7 +22,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string InitiatedId { get; set; }
 #endif
-        /// <summary>&quot;Default: PARENT_CLOSE_POLICY_TERMINATE.&quot;</summary>
+        /// <summary>Default: PARENT_CLOSE_POLICY_TERMINATE.</summary>
         public global::Soenneker.Temporal.OpenApiClient.Models.PendingChildExecutionInfoParentClosePolicy? ParentClosePolicy { get; set; }
         /// <summary>The runId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -39,7 +39,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string UpdateMask { get; set; }
 #endif
-        /// <summary>&quot;The target Workflow Id and (optionally) a specific Run Id thereof. (-- api-linter: core::0203::optional=disabled     aip.dev/not-precedent: false positive triggered by the word \&quot;optional\&quot; --)&quot;</summary>
+        /// <summary>The target Workflow Id and (optionally) a specific Run Id thereof. (-- api-linter: core::0203::optional=disabled     aip.dev/not-precedent: false positive triggered by the word &quot;optional&quot; --)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionOptionsRequestWorkflowExecution? WorkflowExecution { get; set; }

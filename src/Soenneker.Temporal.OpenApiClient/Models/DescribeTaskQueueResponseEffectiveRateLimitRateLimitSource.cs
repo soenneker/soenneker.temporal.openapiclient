@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
-    /// <summary>&quot;Source of the RateLimit Configuration,which can be one of the following values: - SOURCE_API: The rate limit that is set via the TaskQueueConfig api. - SOURCE_WORKER: The rate limit is the value set using the workerOptions in TaskQueueActivitiesPerSecond. - SOURCE_SYSTEM: The rate limit is the default value set by the system&quot;</summary>
+    /// <summary>Source of the RateLimit Configuration,which can be one of the following values: - SOURCE_API: The rate limit that is set via the TaskQueueConfig api. - SOURCE_WORKER: The rate limit is the value set using the workerOptions in TaskQueueActivitiesPerSecond. - SOURCE_SYSTEM: The rate limit is the default value set by the system</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum DescribeTaskQueueResponseEffectiveRateLimitRateLimitSource
     {

@@ -64,7 +64,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestUpdateFairnessKeyRateLimitDefault UpdateFairnessKeyRateLimitDefault { get; set; }
 #endif
-        /// <summary>&quot;Update to queue-wide rate limit. If not set, this configuration is unchanged. NOTE: A limit set by the worker is overriden; and restored again when reset. If the `rate_limit` field in the `RateLimitUpdate` is missing, remove the existing rate limit.&quot;</summary>
+        /// <summary>Update to queue-wide rate limit. If not set, this configuration is unchanged. NOTE: A limit set by the worker is overriden; and restored again when reset. If the `rate_limit` field in the `RateLimitUpdate` is missing, remove the existing rate limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestUpdateQueueRateLimit? UpdateQueueRateLimit { get; set; }

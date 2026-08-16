@@ -16,7 +16,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Starting at 1, how many attempts there have been to complete this task</summary>
         public int? Attempt { get; set; }
-        /// <summary>&quot;How long the worker has to process this task once receiving it before it times out (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: \&quot;to\&quot; is used to indicate interval. --)&quot;</summary>
+        /// <summary>How long the worker has to process this task once receiving it before it times out (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;to&quot; is used to indicate interval. --)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? StartToCloseTimeout { get; set; }

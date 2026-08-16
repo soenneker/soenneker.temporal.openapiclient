@@ -22,7 +22,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string Identity { get; set; }
 #endif
-        /// <summary>&quot;Serialized results of the activity. IE: The return value of the activity function&quot;</summary>
+        /// <summary>Serialized results of the activity. IE: The return value of the activity function</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCompletedEventAttributesResult? Result { get; set; }

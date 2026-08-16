@@ -14,7 +14,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Serialized result of workflow failure (ex: An exception thrown, or error returned)&quot;</summary>
+        /// <summary>Serialized result of workflow failure (ex: An exception thrown, or error returned)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionFailedEventAttributesFailure? Failure { get; set; }

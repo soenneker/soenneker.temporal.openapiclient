@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Schedule search attributes to be updated. Do not set this field if you do not want to update the search attributes. A non-null empty object will set the search attributes to an empty map. Note: you cannot only update the search attributes with `UpdateScheduleRequest`, you must also set the `schedule` field; otherwise, it will unset the schedule.&quot;
+    /// Schedule search attributes to be updated. Do not set this field if you do not want to update the search attributes. A non-null empty object will set the search attributes to an empty map. Note: you cannot only update the search attributes with `UpdateScheduleRequest`, you must also set the `schedule` field; otherwise, it will unset the schedule.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpdateScheduleRequestSearchAttributes : IAdditionalDataHolder, IParsable

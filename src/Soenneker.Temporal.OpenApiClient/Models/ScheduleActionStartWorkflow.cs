@@ -111,7 +111,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string WorkflowId { get; set; }
 #endif
-        /// <summary>&quot;Default: WORKFLOW_ID_REUSE_POLICY_ALLOW_DUPLICATE.&quot;</summary>
+        /// <summary>Default: WORKFLOW_ID_REUSE_POLICY_ALLOW_DUPLICATE.</summary>
         public global::Soenneker.Temporal.OpenApiClient.Models.NewWorkflowExecutionInfoWorkflowIdReusePolicy? WorkflowIdReusePolicy { get; set; }
         /// <summary>Timeout of a single workflow run.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

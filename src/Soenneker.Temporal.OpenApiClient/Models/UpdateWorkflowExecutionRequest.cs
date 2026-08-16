@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;(-- api-linter: core::0134=disabled     aip.dev/not-precedent: Update RPCs don&apos;t follow Google API format. --)&quot;
+    /// (-- api-linter: core::0134=disabled     aip.dev/not-precedent: Update RPCs don&apos;t follow Google API format. --)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpdateWorkflowExecutionRequest : IAdditionalDataHolder, IParsable
@@ -39,7 +39,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionRequestRequest Request { get; set; }
 #endif
-        /// <summary>&quot;Specifies client&apos;s intent to wait for Update results. NOTE: This field works together with API call timeout which is limited by server timeout (maximum wait time). If server timeout is expired before user specified timeout, API call returns even if specified stage is not reached. Actual reached stage will be included in the response.&quot;</summary>
+        /// <summary>Specifies client&apos;s intent to wait for Update results. NOTE: This field works together with API call timeout which is limited by server timeout (maximum wait time). If server timeout is expired before user specified timeout, API call returns even if specified stage is not reached. Actual reached stage will be included in the response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionRequestWaitPolicy? WaitPolicy { get; set; }
@@ -47,7 +47,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionRequestWaitPolicy WaitPolicy { get; set; }
 #endif
-        /// <summary>&quot;The target Workflow Id and (optionally) a specific Run Id thereof. (-- api-linter: core::0203::optional=disabled     aip.dev/not-precedent: false positive triggered by the word \&quot;optional\&quot; --)&quot;</summary>
+        /// <summary>The target Workflow Id and (optionally) a specific Run Id thereof. (-- api-linter: core::0203::optional=disabled     aip.dev/not-precedent: false positive triggered by the word &quot;optional&quot; --)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionRequestWorkflowExecution? WorkflowExecution { get; set; }

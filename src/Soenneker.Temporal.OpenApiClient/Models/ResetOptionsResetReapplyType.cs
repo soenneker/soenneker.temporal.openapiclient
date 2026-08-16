@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
-    /// <summary>&quot;Deprecated. Use `options`. Default: RESET_REAPPLY_TYPE_SIGNAL&quot;</summary>
+    /// <summary>Deprecated. Use `options`. Default: RESET_REAPPLY_TYPE_SIGNAL</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum ResetOptionsResetReapplyType
     {

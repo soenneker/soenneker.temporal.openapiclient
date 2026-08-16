@@ -25,7 +25,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #endif
         /// <summary>The createTime property</summary>
         public DateTimeOffset? CreateTime { get; set; }
-        /// <summary>&quot;(-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &apos;Since&apos; captures the field semantics despite being a preposition. --) Unset if not current.&quot;</summary>
+        /// <summary>(-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &apos;Since&apos; captures the field semantics despite being a preposition. --) Unset if not current.</summary>
         public DateTimeOffset? CurrentSinceTime { get; set; }
         /// <summary>Deprecated. User deployment_version.deployment_name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -73,9 +73,9 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersionInfoMetadata Metadata { get; set; }
 #endif
-        /// <summary>&quot;(-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &apos;Since&apos; captures the field semantics despite being a preposition. --) Unset if not ramping. Updated when the version first starts ramping, not on each ramp change.&quot;</summary>
+        /// <summary>(-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &apos;Since&apos; captures the field semantics despite being a preposition. --) Unset if not ramping. Updated when the version first starts ramping, not on each ramp change.</summary>
         public DateTimeOffset? RampingSinceTime { get; set; }
-        /// <summary>&quot;Range: [0, 100]. Must be zero if the version is not ramping (i.e. `ramping_since_time` is nil). Can be in the range [0, 100] if the version is ramping.&quot;</summary>
+        /// <summary>Range: [0, 100]. Must be zero if the version is not ramping (i.e. `ramping_since_time` is nil). Can be in the range [0, 100] if the version is ramping.</summary>
         public float? RampPercentage { get; set; }
         /// <summary>Last time `current_since_time`, `ramping_since_time, or `ramp_percentage` of this version changed.</summary>
         public DateTimeOffset? RoutingChangedTime { get; set; }

@@ -8,14 +8,14 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Specifies which Worker Deployment Version(s) Server routes this Task Queue&apos;s tasks to. When not present, it means the tasks are routed to Unversioned workers (workers with UNVERSIONED or unspecified WorkerVersioningMode.) Task Queue Versioning info is updated indirectly by calling SetWorkerDeploymentCurrentVersion and SetWorkerDeploymentRampingVersion on Worker Deployments. Note: This information is not relevant to Pinned workflow executions and their activities as they are always routed to their Pinned Deployment Version. However, new workflow executions are typically not Pinned until they complete their first task (unless they are started with a Pinned VersioningOverride or are Child Workflows of a Pinned parent).&quot;
+    /// Specifies which Worker Deployment Version(s) Server routes this Task Queue&apos;s tasks to. When not present, it means the tasks are routed to Unversioned workers (workers with UNVERSIONED or unspecified WorkerVersioningMode.) Task Queue Versioning info is updated indirectly by calling SetWorkerDeploymentCurrentVersion and SetWorkerDeploymentRampingVersion on Worker Deployments. Note: This information is not relevant to Pinned workflow executions and their activities as they are always routed to their Pinned Deployment Version. However, new workflow executions are typically not Pinned until they complete their first task (unless they are started with a Pinned VersioningOverride or are Child Workflows of a Pinned parent).
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DescribeTaskQueueResponseVersioningInfo : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Specifies which Deployment Version should receive new workflow executions and tasks of existing unversioned or AutoUpgrade workflows. Nil value represents all the unversioned workers (those with `UNVERSIONED` (or unspecified) `WorkerVersioningMode`.) Note: Current Version is overridden by the Ramping Version for a portion of traffic when ramp percentage is non-zero (see `ramping_deployment_version` and `ramping_version_percentage`).&quot;</summary>
+        /// <summary>Specifies which Deployment Version should receive new workflow executions and tasks of existing unversioned or AutoUpgrade workflows. Nil value represents all the unversioned workers (those with `UNVERSIONED` (or unspecified) `WorkerVersioningMode`.) Note: Current Version is overridden by the Ramping Version for a portion of traffic when ramp percentage is non-zero (see `ramping_deployment_version` and `ramping_version_percentage`).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueVersioningInfoCurrentDeploymentVersion? CurrentDeploymentVersion { get; set; }
@@ -47,7 +47,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string RampingVersion { get; set; }
 #endif
-        /// <summary>&quot;Percentage of tasks that are routed to the Ramping Version instead of the Current Version. Valid range: [0, 100]. A 100% value means the Ramping Version is receiving full traffic but not yet \&quot;promoted\&quot; to be the Current Version, likely due to pending validations. A 0% value means the Ramping Version is receiving no traffic.&quot;</summary>
+        /// <summary>Percentage of tasks that are routed to the Ramping Version instead of the Current Version. Valid range: [0, 100]. A 100% value means the Ramping Version is receiving full traffic but not yet &quot;promoted&quot; to be the Current Version, likely due to pending validations. A 0% value means the Ramping Version is receiving no traffic.</summary>
         public float? RampingVersionPercentage { get; set; }
         /// <summary>Last time versioning information of this Task Queue changed.</summary>
         public DateTimeOffset? UpdateTime { get; set; }

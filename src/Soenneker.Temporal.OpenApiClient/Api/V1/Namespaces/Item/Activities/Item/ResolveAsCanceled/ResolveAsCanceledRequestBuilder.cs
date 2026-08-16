@@ -34,7 +34,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Activities.Ite
         {
         }
         /// <summary>
-        /// &quot;See `RespondActivityTaskCanceled`. This version allows clients to record failures by namespace/workflow id/activity id instead of task token. (-- api-linter: core::0136::prepositions=disabled     aip.dev/not-precedent: \&quot;By\&quot; is used to indicate request type. --)&quot;
+        /// See `RespondActivityTaskCanceled`. This version allows clients to record failures by namespace/workflow id/activity id instead of task token. (-- api-linter: core::0136::prepositions=disabled     aip.dev/not-precedent: &quot;By&quot; is used to indicate request type. --)
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCanceledById200Response"/></returns>
         /// <param name="body">The request body</param>
@@ -59,7 +59,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Activities.Ite
             return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCanceledById200Response>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCanceledById200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;See `RespondActivityTaskCanceled`. This version allows clients to record failures by namespace/workflow id/activity id instead of task token. (-- api-linter: core::0136::prepositions=disabled     aip.dev/not-precedent: \&quot;By\&quot; is used to indicate request type. --)&quot;
+        /// See `RespondActivityTaskCanceled`. This version allows clients to record failures by namespace/workflow id/activity id instead of task token. (-- api-linter: core::0136::prepositions=disabled     aip.dev/not-precedent: &quot;By&quot; is used to indicate request type. --)
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

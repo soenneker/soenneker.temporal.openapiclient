@@ -30,7 +30,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponseVersionTaskQueueStats Stats { get; set; }
 #endif
-        /// <summary>&quot;Task queue stats breakdown by priority key. Only contains actively used priority keys. Only set if `report_task_queue_stats` is set to true in the request. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: \&quot;by\&quot; is used to clarify the key. --)&quot;</summary>
+        /// <summary>Task queue stats breakdown by priority key. Only contains actively used priority keys. Only set if `report_task_queue_stats` is set to true in the request. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;by&quot; is used to clarify the key. --)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponseVersionTaskQueueStatsByPriorityKeyProperty? StatsByPriorityKey { get; set; }

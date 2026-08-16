@@ -15,7 +15,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Default: TASK_QUEUE_KIND_NORMAL.&quot;</summary>
+        /// <summary>Default: TASK_QUEUE_KIND_NORMAL.</summary>
         public global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueKind? Kind { get; set; }
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

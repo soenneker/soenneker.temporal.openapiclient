@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;(-- api-linter: core::0146::any=disabled     aip.dev/not-precedent: We want runtime extensibility for the body field --)&quot;
+    /// (-- api-linter: core::0146::any=disabled     aip.dev/not-precedent: We want runtime extensibility for the body field --)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Message : IAdditionalDataHolder, IParsable

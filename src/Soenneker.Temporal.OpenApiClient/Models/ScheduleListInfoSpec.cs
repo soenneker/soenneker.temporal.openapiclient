@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;From spec: Some fields are dropped from this copy of spec: timezone_data&quot;
+    /// From spec: Some fields are dropped from this copy of spec: timezone_data
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ScheduleListInfoSpec : IAdditionalDataHolder, IParsable
@@ -23,7 +23,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public List<global::Soenneker.Temporal.OpenApiClient.Models.CalendarSpec> Calendar { get; set; }
 #endif
-        /// <summary>&quot;cron_string holds a traditional cron specification as a string. It accepts 5, 6, or 7 fields, separated by spaces, and interprets them the same way as CalendarSpec. 5 fields:         minute, hour, day_of_month, month, day_of_week 6 fields:         minute, hour, day_of_month, month, day_of_week, year 7 fields: second, minute, hour, day_of_month, month, day_of_week, year If year is not given, it defaults to *. If second is not given, it defaults to 0. Shorthands @yearly, @monthly, @weekly, @daily, and @hourly are also accepted instead of the 5-7 time fields. Optionally, the string can be preceded by CRON_TZ=&lt;timezone name&gt; or TZ=&lt;timezone name&gt;, which will get copied to timezone_name. (There must not also be a timezone_name present.) Optionally \&quot;#\&quot; followed by a comment can appear at the end of the string. Note that the special case that some cron implementations have for treating day_of_month and day_of_week as \&quot;or\&quot; instead of \&quot;and\&quot; when both are set is not implemented. @every &lt;interval&gt;[/&lt;phase&gt;] is accepted and gets compiled into an IntervalSpec instead. &lt;interval&gt; and &lt;phase&gt; should be a decimal integer with a unit suffix s, m, h, or d.&quot;</summary>
+        /// <summary>cron_string holds a traditional cron specification as a string. It accepts 5, 6, or 7 fields, separated by spaces, and interprets them the same way as CalendarSpec. 5 fields:         minute, hour, day_of_month, month, day_of_week 6 fields:         minute, hour, day_of_month, month, day_of_week, year 7 fields: second, minute, hour, day_of_month, month, day_of_week, year If year is not given, it defaults to *. If second is not given, it defaults to 0. Shorthands @yearly, @monthly, @weekly, @daily, and @hourly are also accepted instead of the 5-7 time fields. Optionally, the string can be preceded by CRON_TZ=&lt;timezone name&gt; or TZ=&lt;timezone name&gt;, which will get copied to timezone_name. (There must not also be a timezone_name present.) Optionally &quot;#&quot; followed by a comment can appear at the end of the string. Note that the special case that some cron implementations have for treating day_of_month and day_of_week as &quot;or&quot; instead of &quot;and&quot; when both are set is not implemented. @every &lt;interval&gt;[/&lt;phase&gt;] is accepted and gets compiled into an IntervalSpec instead. &lt;interval&gt; and &lt;phase&gt; should be a decimal integer with a unit suffix s, m, h, or d.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? CronString { get; set; }
@@ -57,7 +57,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public List<global::Soenneker.Temporal.OpenApiClient.Models.IntervalSpec> Interval { get; set; }
 #endif
-        /// <summary>&quot;All timestamps will be incremented by a random value from 0 to this amount of jitter. Default: 0&quot;</summary>
+        /// <summary>All timestamps will be incremented by a random value from 0 to this amount of jitter. Default: 0</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Jitter { get; set; }
@@ -83,7 +83,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string TimezoneData { get; set; }
 #endif
-        /// <summary>&quot;Time zone to interpret all calendar-based specs in. If unset, defaults to UTC. We recommend using UTC for your application if at all possible, to avoid various surprising properties of time zones. Time zones may be provided by name, corresponding to names in the IANA time zone database (see https://www.iana.org/time-zones). The definition will be loaded by the Temporal server from the environment it runs in. If your application requires more control over the time zone definition used, it may pass in a complete definition in the form of a TZif file from the time zone database. If present, this will be used instead of loading anything from the environment. You are then responsible for updating timezone_data when the definition changes. Calendar spec matching is based on literal matching of the clock time with no special handling of DST: if you write a calendar spec that fires at 2:30am and specify a time zone that follows DST, that action will not be triggered on the day that has no 2:30am. Similarly, an action that fires at 1:30am will be triggered twice on the day that has two 1:30s. Also note that no actions are taken on leap-seconds (e.g. 23:59:60 UTC).&quot;</summary>
+        /// <summary>Time zone to interpret all calendar-based specs in. If unset, defaults to UTC. We recommend using UTC for your application if at all possible, to avoid various surprising properties of time zones. Time zones may be provided by name, corresponding to names in the IANA time zone database (see https://www.iana.org/time-zones). The definition will be loaded by the Temporal server from the environment it runs in. If your application requires more control over the time zone definition used, it may pass in a complete definition in the form of a TZif file from the time zone database. If present, this will be used instead of loading anything from the environment. You are then responsible for updating timezone_data when the definition changes. Calendar spec matching is based on literal matching of the clock time with no special handling of DST: if you write a calendar spec that fires at 2:30am and specify a time zone that follows DST, that action will not be triggered on the day that has no 2:30am. Similarly, an action that fires at 1:30am will be triggered twice on the day that has two 1:30s. Also note that no actions are taken on leap-seconds (e.g. 23:59:60 UTC).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TimezoneName { get; set; }

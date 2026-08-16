@@ -87,7 +87,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #endif
         /// <summary>The time when the operation was scheduled.</summary>
         public DateTimeOffset? ScheduledTime { get; set; }
-        /// <summary>&quot;Schedule-to-close timeout for this operation. This is the only timeout settable by a workflow. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: \&quot;to\&quot; is used to indicate interval. --)&quot;</summary>
+        /// <summary>Schedule-to-close timeout for this operation. This is the only timeout settable by a workflow. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;to&quot; is used to indicate interval. --)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ScheduleToCloseTimeout { get; set; }
@@ -95,7 +95,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string ScheduleToCloseTimeout { get; set; }
 #endif
-        /// <summary>&quot;Schedule-to-start timeout for this operation. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: \&quot;to\&quot; is used to indicate interval. --)&quot;</summary>
+        /// <summary>Schedule-to-start timeout for this operation. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;to&quot; is used to indicate interval. --)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ScheduleToStartTimeout { get; set; }
@@ -111,7 +111,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string Service { get; set; }
 #endif
-        /// <summary>&quot;Start-to-close timeout for this operation. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: \&quot;to\&quot; is used to indicate interval. --)&quot;</summary>
+        /// <summary>Start-to-close timeout for this operation. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;to&quot; is used to indicate interval. --)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? StartToCloseTimeout { get; set; }

@@ -108,7 +108,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item
             [QueryParameter("execution%2EworkflowId")]
             public string ExecutionWorkflowId { get; set; }
 #endif
-            /// <summary>&quot;Filter returned events such that they match the specified filter type. Default: HISTORY_EVENT_FILTER_TYPE_ALL_EVENT.&quot;</summary>
+            /// <summary>Filter returned events such that they match the specified filter type. Default: HISTORY_EVENT_FILTER_TYPE_ALL_EVENT.</summary>
             [QueryParameter("historyEventFilterType")]
             public global::Soenneker.Temporal.OpenApiClient.Models.GetWorkflowExecutionHistoryHistoryEventFilterTypeParameter? HistoryEventFilterType { get; set; }
             [QueryParameter("maximumPageSize")]

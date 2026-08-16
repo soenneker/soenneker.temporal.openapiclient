@@ -34,7 +34,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Activi
         {
         }
         /// <summary>
-        /// &quot;See `RespondActivityTaskCompleted`. This version allows clients to record completions by namespace/workflow id/activity id instead of task token. (-- api-linter: core::0136::prepositions=disabled     aip.dev/not-precedent: \&quot;By\&quot; is used to indicate request type. --)&quot;
+        /// See `RespondActivityTaskCompleted`. This version allows clients to record completions by namespace/workflow id/activity id instead of task token. (-- api-linter: core::0136::prepositions=disabled     aip.dev/not-precedent: &quot;By&quot; is used to indicate request type. --)
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedById4200Response"/></returns>
         /// <param name="body">The request body</param>
@@ -59,7 +59,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Activi
             return await RequestAdapter.SendAsync<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedById4200Response>(requestInfo, global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedById4200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;See `RespondActivityTaskCompleted`. This version allows clients to record completions by namespace/workflow id/activity id instead of task token. (-- api-linter: core::0136::prepositions=disabled     aip.dev/not-precedent: \&quot;By\&quot; is used to indicate request type. --)&quot;
+        /// See `RespondActivityTaskCompleted`. This version allows clients to record completions by namespace/workflow id/activity id instead of task token. (-- api-linter: core::0136::prepositions=disabled     aip.dev/not-precedent: &quot;By&quot; is used to indicate request type. --)
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

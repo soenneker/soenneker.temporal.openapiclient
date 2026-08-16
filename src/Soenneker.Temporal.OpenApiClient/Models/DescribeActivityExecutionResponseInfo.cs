@@ -153,7 +153,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public global::Soenneker.Temporal.OpenApiClient.Models.ActivityExecutionInfoRunState? RunState { get; set; }
         /// <summary>Time the activity was originally scheduled via a StartActivityExecution request.</summary>
         public DateTimeOffset? ScheduleTime { get; set; }
-        /// <summary>&quot;Indicates how long the caller is willing to wait for an activity completion. Limits how long retries will be attempted. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: \&quot;to\&quot; is used to indicate interval. --)&quot;</summary>
+        /// <summary>Indicates how long the caller is willing to wait for an activity completion. Limits how long retries will be attempted. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;to&quot; is used to indicate interval. --)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ScheduleToCloseTimeout { get; set; }
@@ -161,7 +161,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string ScheduleToCloseTimeout { get; set; }
 #endif
-        /// <summary>&quot;Limits time an activity task can stay in a task queue before a worker picks it up. This timeout is always non retryable, as all a retry would achieve is to put it back into the same queue. Defaults to `schedule_to_close_timeout`. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: \&quot;to\&quot; is used to indicate interval. --)&quot;</summary>
+        /// <summary>Limits time an activity task can stay in a task queue before a worker picks it up. This timeout is always non retryable, as all a retry would achieve is to put it back into the same queue. Defaults to `schedule_to_close_timeout`. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;to&quot; is used to indicate interval. --)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ScheduleToStartTimeout { get; set; }
@@ -177,7 +177,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes SearchAttributes { get; set; }
 #endif
-        /// <summary>&quot;Maximum time a single activity attempt is allowed to execute after being picked up by a worker. This timeout is always retryable. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: \&quot;to\&quot; is used to indicate interval. --)&quot;</summary>
+        /// <summary>Maximum time a single activity attempt is allowed to execute after being picked up by a worker. This timeout is always retryable. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;to&quot; is used to indicate interval. --)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? StartToCloseTimeout { get; set; }

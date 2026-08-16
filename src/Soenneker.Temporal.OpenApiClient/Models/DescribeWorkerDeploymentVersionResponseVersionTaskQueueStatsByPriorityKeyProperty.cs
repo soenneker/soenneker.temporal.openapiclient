@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Task queue stats breakdown by priority key. Only contains actively used priority keys. Only set if `report_task_queue_stats` is set to true in the request. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: \&quot;by\&quot; is used to clarify the key. --)&quot;
+    /// Task queue stats breakdown by priority key. Only contains actively used priority keys. Only set if `report_task_queue_stats` is set to true in the request. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;by&quot; is used to clarify the key. --)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DescribeWorkerDeploymentVersionResponseVersionTaskQueueStatsByPriorityKeyProperty : IAdditionalDataHolder, IParsable

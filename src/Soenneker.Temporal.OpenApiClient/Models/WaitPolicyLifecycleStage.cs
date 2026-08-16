@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
-    /// <summary>&quot;Indicates the Update lifecycle stage that the Update must reach before API call is returned. NOTE: This field works together with API call timeout which is limited by server timeout (maximum wait time). If server timeout is expired before user specified timeout, API call returns even if specified stage is not reached.&quot;</summary>
+    /// <summary>Indicates the Update lifecycle stage that the Update must reach before API call is returned. NOTE: This field works together with API call timeout which is limited by server timeout (maximum wait time). If server timeout is expired before user specified timeout, API call returns even if specified stage is not reached.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum WaitPolicyLifecycleStage
     {

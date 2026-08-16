@@ -26,7 +26,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public bool? KeepOriginalWorkflowId { get; set; }
         /// <summary>Policy for overlaps. Note that this can be changed after a schedule has taken some actions, and some changes might produce unintuitive results. In general, the later policy overrides the earlier policy.</summary>
         public global::Soenneker.Temporal.OpenApiClient.Models.SchedulePoliciesOverlapPolicy? OverlapPolicy { get; set; }
-        /// <summary>&quot;If true, and a workflow run fails or times out, turn on \&quot;paused\&quot;. This applies after retry policies: the full chain of retries must fail to trigger a pause here.&quot;</summary>
+        /// <summary>If true, and a workflow run fails or times out, turn on &quot;paused&quot;. This applies after retry policies: the full chain of retries must fail to trigger a pause here.</summary>
         public bool? PauseOnFailure { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.SchedulePolicies"/> and sets the default values.

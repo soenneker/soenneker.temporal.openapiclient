@@ -150,7 +150,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class NamespacesRequestBuilderGetQueryParameters 
         {
-            /// <summary>&quot;By default namespaces in NAMESPACE_STATE_DELETED state are not included. Setting include_deleted to true will include deleted namespaces. Note: Namespace is in NAMESPACE_STATE_DELETED state when it was deleted from the system but associated data is not deleted yet.&quot;</summary>
+            /// <summary>By default namespaces in NAMESPACE_STATE_DELETED state are not included. Setting include_deleted to true will include deleted namespaces. Note: Namespace is in NAMESPACE_STATE_DELETED state when it was deleted from the system but associated data is not deleted yet.</summary>
             [QueryParameter("namespaceFilter%2EincludeDeleted")]
             public bool? NamespaceFilterIncludeDeleted { get; set; }
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

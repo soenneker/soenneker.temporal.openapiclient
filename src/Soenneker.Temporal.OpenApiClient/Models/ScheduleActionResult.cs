@@ -18,7 +18,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Time that the action was taken (according to the schedule, including jitter).</summary>
         public DateTimeOffset? ScheduleTime { get; set; }
-        /// <summary>&quot;If action was start_workflow:&quot;</summary>
+        /// <summary>If action was start_workflow:</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResultStartWorkflowResult? StartWorkflowResult { get; set; }

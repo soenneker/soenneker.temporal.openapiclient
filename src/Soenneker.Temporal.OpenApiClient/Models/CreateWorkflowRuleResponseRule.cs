@@ -15,7 +15,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Identity of the actor that created the rule (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: It is better reflect the intent this way, we will also have updated_by. --) (-- api-linter: core::0142::time-field-names=disabled     aip.dev/not-precedent: Same as above. All other options sounds clumsy --)&quot;</summary>
+        /// <summary>Identity of the actor that created the rule (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: It is better reflect the intent this way, we will also have updated_by. --) (-- api-linter: core::0142::time-field-names=disabled     aip.dev/not-precedent: Same as above. All other options sounds clumsy --)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CreatedByIdentity { get; set; }

@@ -38,7 +38,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public global::Soenneker.Temporal.OpenApiClient.Models.Header Header { get; set; }
 #endif
-        /// <summary>&quot;Workers use this to identify the \&quot;types\&quot; of various markers. Ex: Local activity, side effect.&quot;</summary>
+        /// <summary>Workers use this to identify the &quot;types&quot; of various markers. Ex: Local activity, side effect.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MarkerName { get; set; }

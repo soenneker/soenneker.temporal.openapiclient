@@ -63,7 +63,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string RequestId { get; set; }
 #endif
-        /// <summary>&quot;Schedule-to-close timeout for this operation. Indicates how long the caller is willing to wait for operation completion. Calls are retried internally by the server. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: \&quot;to\&quot; is used to indicate interval. --) (-- api-linter: core::0142::time-field-names=disabled     aip.dev/not-precedent: \&quot;timeout\&quot; is an acceptable suffix for duration fields in this API. --)&quot;</summary>
+        /// <summary>Schedule-to-close timeout for this operation. Indicates how long the caller is willing to wait for operation completion. Calls are retried internally by the server. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;to&quot; is used to indicate interval. --) (-- api-linter: core::0142::time-field-names=disabled     aip.dev/not-precedent: &quot;timeout&quot; is an acceptable suffix for duration fields in this API. --)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ScheduleToCloseTimeout { get; set; }
@@ -71,7 +71,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string ScheduleToCloseTimeout { get; set; }
 #endif
-        /// <summary>&quot;Schedule-to-start timeout for this operation. See ScheduleNexusOperationCommandAttributes.schedule_to_start_timeout for details. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: \&quot;to\&quot; is used to indicate interval. --)&quot;</summary>
+        /// <summary>Schedule-to-start timeout for this operation. See ScheduleNexusOperationCommandAttributes.schedule_to_start_timeout for details. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;to&quot; is used to indicate interval. --)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ScheduleToStartTimeout { get; set; }
@@ -87,7 +87,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string Service { get; set; }
 #endif
-        /// <summary>&quot;Start-to-close timeout for this operation. See ScheduleNexusOperationCommandAttributes.start_to_close_timeout for details. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: \&quot;to\&quot; is used to indicate interval. --)&quot;</summary>
+        /// <summary>Start-to-close timeout for this operation. See ScheduleNexusOperationCommandAttributes.start_to_close_timeout for details. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;to&quot; is used to indicate interval. --)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? StartToCloseTimeout { get; set; }

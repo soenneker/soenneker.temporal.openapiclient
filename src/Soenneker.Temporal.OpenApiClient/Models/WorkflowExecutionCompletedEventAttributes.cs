@@ -22,7 +22,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string NewExecutionRunId { get; set; }
 #endif
-        /// <summary>&quot;Serialized result of workflow completion (ie: The return value of the workflow function)&quot;</summary>
+        /// <summary>Serialized result of workflow completion (ie: The return value of the workflow function)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionCompletedEventAttributesResult? Result { get; set; }

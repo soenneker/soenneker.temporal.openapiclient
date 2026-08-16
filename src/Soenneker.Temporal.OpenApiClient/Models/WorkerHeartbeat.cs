@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Worker info message, contains information about the worker and its current state. All information is provided by the worker itself. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: Removing those words make names less clear. --)&quot;
+    /// Worker info message, contains information about the worker and its current state. All information is provided by the worker itself. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: Removing those words make names less clear. --)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WorkerHeartbeat : IAdditionalDataHolder, IParsable

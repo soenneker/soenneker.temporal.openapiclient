@@ -62,7 +62,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public List<global::Soenneker.Temporal.OpenApiClient.Models.ResetWorkflowExecutionRequestResetReapplyExcludeTypesItem?> ResetReapplyExcludeTypes { get; set; }
 #endif
-        /// <summary>&quot;Deprecated. Use `options`. Default: RESET_REAPPLY_TYPE_SIGNAL&quot;</summary>
+        /// <summary>Deprecated. Use `options`. Default: RESET_REAPPLY_TYPE_SIGNAL</summary>
         public global::Soenneker.Temporal.OpenApiClient.Models.ResetWorkflowExecutionRequestResetReapplyType? ResetReapplyType { get; set; }
         /// <summary>The workflow to reset. If this contains a run ID then the workflow will be reset back to the provided event ID in that run. Otherwise it will be reset to the provided event ID in the current run. In all cases the current run will be terminated and a new run started.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

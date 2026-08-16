@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
-    /// <summary>&quot;Experimental. If this workflow is the result of a continue-as-new, this field is set to the initial_versioning_behavior specified in that command. Only used for the initial task of this run and the initial task of any retries of this run. Not passed to children or to future continue-as-new. Note: In the first release of Upgrade-on-CaN, when the only ContinueAsNewVersioningBehavior was AutoUpgrade, a non-empty InheritedAutoUpgradeInfo meant that the workflow should start as AutoUpgrade. So for compatibility with history events generated during that time, know that an UNSPECIFIED value here is equivalent to AutoUpgrade value if the InheritedAutoUpgradeInfo is non-empty.&quot;</summary>
+    /// <summary>Experimental. If this workflow is the result of a continue-as-new, this field is set to the initial_versioning_behavior specified in that command. Only used for the initial task of this run and the initial task of any retries of this run. Not passed to children or to future continue-as-new. Note: In the first release of Upgrade-on-CaN, when the only ContinueAsNewVersioningBehavior was AutoUpgrade, a non-empty InheritedAutoUpgradeInfo meant that the workflow should start as AutoUpgrade. So for compatibility with history events generated during that time, know that an UNSPECIFIED value here is equivalent to AutoUpgrade value if the InheritedAutoUpgradeInfo is non-empty.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum InheritedAutoUpgradeInfoContinueAsNewInitialVersioningBehavior
     {

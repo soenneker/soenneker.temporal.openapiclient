@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;BatchOperationUpdateActivityOptions sends an update-activity-options requests in a batch. NOTE: keep in sync with temporal.api.workflowservice.v1.UpdateActivityRequest&quot;
+    /// BatchOperationUpdateActivityOptions sends an update-activity-options requests in a batch. NOTE: keep in sync with temporal.api.workflowservice.v1.UpdateActivityRequest
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BatchOperationUpdateActivityOptions : IAdditionalDataHolder, IParsable

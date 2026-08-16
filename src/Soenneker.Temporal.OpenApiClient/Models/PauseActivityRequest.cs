@@ -63,7 +63,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string RequestId { get; set; }
 #endif
-        /// <summary>&quot;Pause all running activities of this type. Note: Experimental - the behavior of pause by activity type might change in a future release.&quot;</summary>
+        /// <summary>Pause all running activities of this type. Note: Experimental - the behavior of pause by activity type might change in a future release.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }

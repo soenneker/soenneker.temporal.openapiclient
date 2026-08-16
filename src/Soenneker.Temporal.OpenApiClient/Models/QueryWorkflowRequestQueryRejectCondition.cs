@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
-    /// <summary>&quot;QueryRejectCondition can used to reject the query if workflow state does not satisfy condition. Default: QUERY_REJECT_CONDITION_NONE.&quot;</summary>
+    /// <summary>QueryRejectCondition can used to reject the query if workflow state does not satisfy condition. Default: QUERY_REJECT_CONDITION_NONE.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum QueryWorkflowRequestQueryRejectCondition
     {

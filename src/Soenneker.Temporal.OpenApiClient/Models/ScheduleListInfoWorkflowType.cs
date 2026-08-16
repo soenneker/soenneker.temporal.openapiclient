@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;From action: Action is a oneof field, but we need to encode this in JSON and oneof fields don&apos;t work well with JSON. If action is start_workflow, this is set:&quot;
+    /// From action: Action is a oneof field, but we need to encode this in JSON and oneof fields don&apos;t work well with JSON. If action is start_workflow, this is set:
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ScheduleListInfoWorkflowType : IAdditionalDataHolder, IParsable

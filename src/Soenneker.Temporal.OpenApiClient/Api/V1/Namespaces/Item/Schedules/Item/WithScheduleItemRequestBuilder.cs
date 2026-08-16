@@ -101,7 +101,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Schedules.Item
         /// Creates a new schedule.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Models.CreateScheduleResponse"/></returns>
-        /// <param name="body">&quot;(-- api-linter: core::0203::optional=disabled     aip.dev/not-precedent: field_behavior annotation not available in our gogo fork --)&quot;</param>
+        /// <param name="body">(-- api-linter: core::0203::optional=disabled     aip.dev/not-precedent: field_behavior annotation not available in our gogo fork --)</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Temporal.OpenApiClient.Models.Status">When receiving a 4XX or 5XX status code</exception>
@@ -164,7 +164,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Schedules.Item
         /// Creates a new schedule.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
-        /// <param name="body">&quot;(-- api-linter: core::0203::optional=disabled     aip.dev/not-precedent: field_behavior annotation not available in our gogo fork --)&quot;</param>
+        /// <param name="body">(-- api-linter: core::0203::optional=disabled     aip.dev/not-precedent: field_behavior annotation not available in our gogo fork --)</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

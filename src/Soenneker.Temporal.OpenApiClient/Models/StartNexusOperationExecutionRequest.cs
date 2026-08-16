@@ -82,7 +82,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string RequestId { get; set; }
 #endif
-        /// <summary>&quot;Schedule-to-close timeout for this operation. Indicates how long the caller is willing to wait for operation completion. Calls are retried internally by the server. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: \&quot;to\&quot; is used to indicate interval. --)&quot;</summary>
+        /// <summary>Schedule-to-close timeout for this operation. Indicates how long the caller is willing to wait for operation completion. Calls are retried internally by the server. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;to&quot; is used to indicate interval. --)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ScheduleToCloseTimeout { get; set; }
@@ -90,7 +90,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string ScheduleToCloseTimeout { get; set; }
 #endif
-        /// <summary>&quot;Schedule-to-start timeout for this operation. Indicates how long the caller is willing to wait for the operation to be started (or completed if synchronous) by the handler. If not set or zero, no schedule-to-start timeout is enforced. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: \&quot;to\&quot; is used to indicate interval. --)&quot;</summary>
+        /// <summary>Schedule-to-start timeout for this operation. Indicates how long the caller is willing to wait for the operation to be started (or completed if synchronous) by the handler. If not set or zero, no schedule-to-start timeout is enforced. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;to&quot; is used to indicate interval. --)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ScheduleToStartTimeout { get; set; }
@@ -114,7 +114,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string Service { get; set; }
 #endif
-        /// <summary>&quot;Start-to-close timeout for this operation. Indicates how long the caller is willing to wait for an asynchronous operation to complete after it has been started. Synchronous operations ignore this timeout. If not set or zero, no start-to-close timeout is enforced. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: \&quot;to\&quot; is used to indicate interval. --)&quot;</summary>
+        /// <summary>Start-to-close timeout for this operation. Indicates how long the caller is willing to wait for an asynchronous operation to complete after it has been started. Synchronous operations ignore this timeout. If not set or zero, no start-to-close timeout is enforced. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;to&quot; is used to indicate interval. --)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? StartToCloseTimeout { get; set; }

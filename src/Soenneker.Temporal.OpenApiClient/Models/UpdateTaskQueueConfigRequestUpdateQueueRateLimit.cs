@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Update to queue-wide rate limit. If not set, this configuration is unchanged. NOTE: A limit set by the worker is overriden; and restored again when reset. If the `rate_limit` field in the `RateLimitUpdate` is missing, remove the existing rate limit.&quot;
+    /// Update to queue-wide rate limit. If not set, this configuration is unchanged. NOTE: A limit set by the worker is overriden; and restored again when reset. If the `rate_limit` field in the `RateLimitUpdate` is missing, remove the existing rate limit.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpdateTaskQueueConfigRequestUpdateQueueRateLimit : IAdditionalDataHolder, IParsable

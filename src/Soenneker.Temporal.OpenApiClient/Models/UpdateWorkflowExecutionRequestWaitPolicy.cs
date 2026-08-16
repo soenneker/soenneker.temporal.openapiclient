@@ -8,14 +8,14 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Specifies client&apos;s intent to wait for Update results. NOTE: This field works together with API call timeout which is limited by server timeout (maximum wait time). If server timeout is expired before user specified timeout, API call returns even if specified stage is not reached. Actual reached stage will be included in the response.&quot;
+    /// Specifies client&apos;s intent to wait for Update results. NOTE: This field works together with API call timeout which is limited by server timeout (maximum wait time). If server timeout is expired before user specified timeout, API call returns even if specified stage is not reached. Actual reached stage will be included in the response.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpdateWorkflowExecutionRequestWaitPolicy : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Indicates the Update lifecycle stage that the Update must reach before API call is returned. NOTE: This field works together with API call timeout which is limited by server timeout (maximum wait time). If server timeout is expired before user specified timeout, API call returns even if specified stage is not reached.&quot;</summary>
+        /// <summary>Indicates the Update lifecycle stage that the Update must reach before API call is returned. NOTE: This field works together with API call timeout which is limited by server timeout (maximum wait time). If server timeout is expired before user specified timeout, API call returns even if specified stage is not reached.</summary>
         public global::Soenneker.Temporal.OpenApiClient.Models.WaitPolicyLifecycleStage? LifecycleStage { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionRequestWaitPolicy"/> and sets the default values.

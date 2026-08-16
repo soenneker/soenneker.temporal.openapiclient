@@ -46,7 +46,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public string Namespace { get; set; }
 #endif
-        /// <summary>&quot;Note: Rule ID and expiration date are not used in the trigger request.&quot;</summary>
+        /// <summary>Note: Rule ID and expiration date are not used in the trigger request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Temporal.OpenApiClient.Models.TriggerWorkflowRuleRequestSpec? Spec { get; set; }

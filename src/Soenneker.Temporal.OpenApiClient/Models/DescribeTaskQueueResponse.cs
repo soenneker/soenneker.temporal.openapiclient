@@ -46,7 +46,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseStats Stats { get; set; }
 #endif
-        /// <summary>&quot;Task queue stats breakdown by priority key. Only contains actively used priority keys. Only set if `report_stats` is set on the request. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: \&quot;by\&quot; is used to clarify the keys and values. --)&quot;</summary>
+        /// <summary>Task queue stats breakdown by priority key. Only contains actively used priority keys. Only set if `report_stats` is set on the request. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;by&quot; is used to clarify the keys and values. --)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseStatsByPriorityKeyProperty? StatsByPriorityKey { get; set; }
@@ -62,7 +62,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseTaskQueueStatus TaskQueueStatus { get; set; }
 #endif
-        /// <summary>&quot;Specifies which Worker Deployment Version(s) Server routes this Task Queue&apos;s tasks to. When not present, it means the tasks are routed to Unversioned workers (workers with UNVERSIONED or unspecified WorkerVersioningMode.) Task Queue Versioning info is updated indirectly by calling SetWorkerDeploymentCurrentVersion and SetWorkerDeploymentRampingVersion on Worker Deployments. Note: This information is not relevant to Pinned workflow executions and their activities as they are always routed to their Pinned Deployment Version. However, new workflow executions are typically not Pinned until they complete their first task (unless they are started with a Pinned VersioningOverride or are Child Workflows of a Pinned parent).&quot;</summary>
+        /// <summary>Specifies which Worker Deployment Version(s) Server routes this Task Queue&apos;s tasks to. When not present, it means the tasks are routed to Unversioned workers (workers with UNVERSIONED or unspecified WorkerVersioningMode.) Task Queue Versioning info is updated indirectly by calling SetWorkerDeploymentCurrentVersion and SetWorkerDeploymentRampingVersion on Worker Deployments. Note: This information is not relevant to Pinned workflow executions and their activities as they are always routed to their Pinned Deployment Version. However, new workflow executions are typically not Pinned until they complete their first task (unless they are started with a Pinned VersioningOverride or are Child Workflows of a Pinned parent).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseVersioningInfo? VersioningInfo { get; set; }

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Note: Rule ID and expiration date are not used in the trigger request.&quot;
+    /// Note: Rule ID and expiration date are not used in the trigger request.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TriggerWorkflowRuleRequestSpec : IAdditionalDataHolder, IParsable

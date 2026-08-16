@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Serialized results of the activity. IE: The return value of the activity function&quot;
+    /// Serialized results of the activity. IE: The return value of the activity function
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ActivityTaskCompletedEventAttributesResult : IAdditionalDataHolder, IParsable

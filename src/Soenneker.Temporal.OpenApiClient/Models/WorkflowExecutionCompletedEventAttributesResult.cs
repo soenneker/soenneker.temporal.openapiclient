@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Serialized result of workflow completion (ie: The return value of the workflow function)&quot;
+    /// Serialized result of workflow completion (ie: The return value of the workflow function)
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WorkflowExecutionCompletedEventAttributesResult : IAdditionalDataHolder, IParsable

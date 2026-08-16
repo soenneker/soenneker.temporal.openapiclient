@@ -33,7 +33,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 #else
         public List<global::Soenneker.Temporal.OpenApiClient.Models.ResetOptionsResetReapplyExcludeTypesItem?> ResetReapplyExcludeTypes { get; set; }
 #endif
-        /// <summary>&quot;Deprecated. Use `options`. Default: RESET_REAPPLY_TYPE_SIGNAL&quot;</summary>
+        /// <summary>Deprecated. Use `options`. Default: RESET_REAPPLY_TYPE_SIGNAL</summary>
         public global::Soenneker.Temporal.OpenApiClient.Models.ResetOptionsResetReapplyType? ResetReapplyType { get; set; }
         /// <summary>The id of a specific `WORKFLOW_TASK_COMPLETED`,`WORKFLOW_TASK_TIMED_OUT`, `WORKFLOW_TASK_FAILED`, or `WORKFLOW_TASK_STARTED` event to reset to. Note that this option doesn&apos;t make sense when used as part of a batch request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

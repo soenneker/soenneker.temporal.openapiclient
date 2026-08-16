@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;If action was start_workflow:&quot;
+    /// If action was start_workflow:
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ScheduleActionResultStartWorkflowResult : IAdditionalDataHolder, IParsable
