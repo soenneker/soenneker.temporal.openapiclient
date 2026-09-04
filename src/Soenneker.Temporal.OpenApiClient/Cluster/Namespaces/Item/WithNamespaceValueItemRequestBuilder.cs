@@ -104,12 +104,16 @@ namespace Soenneker.Temporal.OpenApiClient.Cluster.Namespaces.Item
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("id")]
             public string? Id { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("id")]
             public string Id { get; set; }
+            #pragma warning restore CS1591
 #endif
             /// <summary>If true, the server may serve the response from an eventually-consistent source instead of reading through to persistence. Defaults to false, which preserves read-after-write consistency. SDKs should set this when fetching namespace capabilities on worker/client startup.</summary>
             [QueryParameter("weakConsistency")]

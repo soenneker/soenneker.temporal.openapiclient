@@ -170,8 +170,10 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Nexus.Endpoints
             [QueryParameter("nextPageToken")]
             public string NextPageToken { get; set; }
 #endif
+            #pragma warning disable CS1591
             [QueryParameter("pageSize")]
             public int? PageSize { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

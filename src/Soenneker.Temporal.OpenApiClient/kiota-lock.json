@@ -2,7 +2,7 @@
   "descriptionHash": "B1741370B40E4FBD053E61E5E01801637C7D47D70271E3452D01D1FF3C9F3DEC264F681DACF15AF1EFFDB4436498C975FE198D87437D1AF99A49715F753AD675",
   "descriptionLocation": "../../fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.34.1",
+  "kiotaVersion": "1.35.0",
   "clientClassName": "TemporalOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Temporal.OpenApiClient",

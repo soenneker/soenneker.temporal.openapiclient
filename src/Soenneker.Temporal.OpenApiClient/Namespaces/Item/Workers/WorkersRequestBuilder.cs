@@ -119,15 +119,21 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workers
             public bool? IncludeSystemWorkers { get; set; }
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("nextPageToken")]
             public string? NextPageToken { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("nextPageToken")]
             public string NextPageToken { get; set; }
+            #pragma warning restore CS1591
 #endif
+            #pragma warning disable CS1591
             [QueryParameter("pageSize")]
             public int? PageSize { get; set; }
+            #pragma warning restore CS1591
             /// <summary>`query` in ListWorkers is used to filter workers based on worker attributes. Supported attributes:* WorkerInstanceKey* WorkerIdentity* HostName* TaskQueue* DeploymentName* BuildId* SdkName* SdkVersion* StartTime* Status</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

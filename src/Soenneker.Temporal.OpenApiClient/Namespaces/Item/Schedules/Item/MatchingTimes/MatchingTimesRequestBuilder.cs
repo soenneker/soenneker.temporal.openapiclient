@@ -90,8 +90,10 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Schedules.Item.Matchi
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class MatchingTimesRequestBuilderGetQueryParameters 
         {
+            #pragma warning disable CS1591
             [QueryParameter("endTime")]
             public DateTimeOffset? EndTime { get; set; }
+            #pragma warning restore CS1591
             /// <summary>Time range to query.</summary>
             [QueryParameter("startTime")]
             public DateTimeOffset? StartTime { get; set; }

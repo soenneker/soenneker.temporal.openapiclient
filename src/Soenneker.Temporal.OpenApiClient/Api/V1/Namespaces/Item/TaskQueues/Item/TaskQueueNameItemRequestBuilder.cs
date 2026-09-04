@@ -131,12 +131,16 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Ite
             public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueTaskQueueKindParameter? TaskQueueKind { get; set; }
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("taskQueue%2Ename")]
             public string? TaskQueueName { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("taskQueue%2Ename")]
             public string TaskQueueName { get; set; }
+            #pragma warning restore CS1591
 #endif
             /// <summary>Iff kind == TASK_QUEUE_KIND_STICKY, then this field contains the name of the normal task queue that the sticky worker is running on.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -92,27 +92,37 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Histor
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("execution%2ErunId")]
             public string? ExecutionRunId { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("execution%2ErunId")]
             public string ExecutionRunId { get; set; }
+            #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("execution%2EworkflowId")]
             public string? ExecutionWorkflowId { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("execution%2EworkflowId")]
             public string ExecutionWorkflowId { get; set; }
+            #pragma warning restore CS1591
 #endif
             /// <summary>Filter returned events such that they match the specified filter type. Default: HISTORY_EVENT_FILTER_TYPE_ALL_EVENT.</summary>
             [QueryParameter("historyEventFilterType")]
             public global::Soenneker.Temporal.OpenApiClient.Models.GetWorkflowExecutionHistory2HistoryEventFilterTypeParameter? HistoryEventFilterType { get; set; }
+            #pragma warning disable CS1591
             [QueryParameter("maximumPageSize")]
             public int? MaximumPageSize { get; set; }
+            #pragma warning restore CS1591
             /// <summary>If a `GetWorkflowExecutionHistoryResponse` or a `PollWorkflowTaskQueueResponse` had one of these, it should be passed here to fetch the next page.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -123,8 +133,10 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Histor
             [QueryParameter("nextPageToken")]
             public string NextPageToken { get; set; }
 #endif
+            #pragma warning disable CS1591
             [QueryParameter("skipArchival")]
             public bool? SkipArchival { get; set; }
+            #pragma warning restore CS1591
             /// <summary>If set to true, the RPC call will not resolve until there is a new event which matches the `history_event_filter_type`, or a timeout is hit.</summary>
             [QueryParameter("waitNewEvent")]
             public bool? WaitNewEvent { get; set; }
