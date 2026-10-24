@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Activities.Item.Complete
 {
     /// <summary>
-    /// Builds and executes requests for operations under \namespaces\{namespaceValue}\workflows\{executionWorkflow-id}\activities\{activityId}\complete
+    /// Builds and executes requests for operations under \namespaces\{namespaceValue}\workflows\{executionWorkflowId}\activities\{activityId}\complete
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CompleteRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Activi
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CompleteRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/workflows/{executionWorkflow%2Did}/activities/{activityId}/complete", pathParameters)
+        public CompleteRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/activities/{activityId}/complete", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Activi
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CompleteRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/workflows/{executionWorkflow%2Did}/activities/{activityId}/complete", rawUrl)
+        public CompleteRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/activities/{activityId}/complete", rawUrl)
         {
         }
         /// <summary>

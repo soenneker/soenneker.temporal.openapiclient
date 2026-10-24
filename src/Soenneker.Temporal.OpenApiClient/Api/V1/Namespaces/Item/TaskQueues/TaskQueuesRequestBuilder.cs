@@ -17,14 +17,14 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues
     {
         /// <summary>Gets an item from the Soenneker.Temporal.OpenApiClient.api.v1.namespaces.item.taskQueues.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Item.TaskQueueNameItemRequestBuilder"/></returns>
-        public global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Item.TaskQueueNameItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Item.WithTaskQueueItemRequestBuilder"/></returns>
+        public global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Item.WithTaskQueueItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("taskQueueName%2Did", position);
-                return new global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Item.TaskQueueNameItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("taskQueue", position);
+                return new global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Item.WithTaskQueueItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

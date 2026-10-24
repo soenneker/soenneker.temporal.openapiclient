@@ -20,14 +20,14 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows
     {
         /// <summary>Gets an item from the Soenneker.Temporal.OpenApiClient.namespaces.item.workflows.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.ExecutionWorkflowItemRequestBuilder"/></returns>
-        public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.ExecutionWorkflowItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.WithExecutionWorkflowItemRequestBuilder"/></returns>
+        public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.WithExecutionWorkflowItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("executionWorkflow%2Did", position);
-                return new global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.ExecutionWorkflowItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("executionWorkflowId", position);
+                return new global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.WithExecutionWorkflowItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

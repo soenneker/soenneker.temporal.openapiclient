@@ -3253,7 +3253,7 @@
         }
       }
     },
-    "/api/v1/namespaces/{namespaceValue}/task-queues/{taskQueueName}": {
+    "/api/v1/namespaces/{namespaceValue}/task-queues/{taskQueue}": {
       "get": {
         "tags": [
           "WorkflowService"
@@ -3270,7 +3270,7 @@
             }
           },
           {
-            "name": "taskQueueName",
+            "name": "taskQueue",
             "in": "path",
             "required": true,
             "schema": {
@@ -5397,7 +5397,7 @@
         }
       }
     },
-    "/api/v1/namespaces/{namespaceValue}/workflows/{workflowId}/activities/{activityId}/complete": {
+    "/api/v1/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/activities/{activityId}/complete": {
       "post": {
         "tags": [
           "WorkflowService"
@@ -5415,7 +5415,7 @@
             }
           },
           {
-            "name": "workflowId",
+            "name": "executionWorkflowId",
             "in": "path",
             "description": "Id of the workflow which scheduled this activity, leave empty to target a standalone activity",
             "required": true,
@@ -5467,7 +5467,7 @@
         }
       }
     },
-    "/api/v1/namespaces/{namespaceValue}/workflows/{workflowId}/activities/{activityId}/fail": {
+    "/api/v1/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/activities/{activityId}/fail": {
       "post": {
         "tags": [
           "WorkflowService"
@@ -5485,7 +5485,7 @@
             }
           },
           {
-            "name": "workflowId",
+            "name": "executionWorkflowId",
             "in": "path",
             "description": "Id of the workflow which scheduled this activity, leave empty to target a standalone activity",
             "required": true,
@@ -5537,7 +5537,7 @@
         }
       }
     },
-    "/api/v1/namespaces/{namespaceValue}/workflows/{workflowId}/activities/{activityId}/heartbeat": {
+    "/api/v1/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/activities/{activityId}/heartbeat": {
       "post": {
         "tags": [
           "WorkflowService"
@@ -5555,7 +5555,7 @@
             }
           },
           {
-            "name": "workflowId",
+            "name": "executionWorkflowId",
             "in": "path",
             "description": "Id of the workflow which scheduled this activity, leave empty to target a standalone activity",
             "required": true,
@@ -5607,7 +5607,7 @@
         }
       }
     },
-    "/api/v1/namespaces/{namespaceValue}/workflows/{workflowId}/activities/{activityId}/pause": {
+    "/api/v1/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/activities/{activityId}/pause": {
       "post": {
         "tags": [
           "WorkflowService"
@@ -5625,7 +5625,7 @@
             }
           },
           {
-            "name": "workflowId",
+            "name": "executionWorkflowId",
             "in": "path",
             "description": "If provided, pause a workflow activity (or activities) for the given workflow ID.\n If empty, targets a standalone activity.",
             "required": true,
@@ -5677,7 +5677,7 @@
         }
       }
     },
-    "/api/v1/namespaces/{namespaceValue}/workflows/{workflowId}/activities/{activityId}/reset": {
+    "/api/v1/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/activities/{activityId}/reset": {
       "post": {
         "tags": [
           "WorkflowService"
@@ -5695,7 +5695,7 @@
             }
           },
           {
-            "name": "workflowId",
+            "name": "executionWorkflowId",
             "in": "path",
             "description": "If provided, targets a workflow activity for the given workflow ID.\n If empty, targets a standalone activity.",
             "required": true,
@@ -5747,7 +5747,7 @@
         }
       }
     },
-    "/api/v1/namespaces/{namespaceValue}/workflows/{workflowId}/activities/{activityId}/resolve-as-canceled": {
+    "/api/v1/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/activities/{activityId}/resolve-as-canceled": {
       "post": {
         "tags": [
           "WorkflowService"
@@ -5765,7 +5765,7 @@
             }
           },
           {
-            "name": "workflowId",
+            "name": "executionWorkflowId",
             "in": "path",
             "description": "Id of the workflow which scheduled this activity, leave empty to target a standalone activity",
             "required": true,
@@ -5817,7 +5817,7 @@
         }
       }
     },
-    "/api/v1/namespaces/{namespaceValue}/workflows/{workflowId}/activities/{activityId}/unpause": {
+    "/api/v1/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/activities/{activityId}/unpause": {
       "post": {
         "tags": [
           "WorkflowService"
@@ -5835,7 +5835,7 @@
             }
           },
           {
-            "name": "workflowId",
+            "name": "executionWorkflowId",
             "in": "path",
             "description": "If provided, targets a workflow activity for the given workflow ID.\n If empty, targets a standalone activity.",
             "required": true,
@@ -5887,7 +5887,7 @@
         }
       }
     },
-    "/api/v1/namespaces/{namespaceValue}/workflows/{workflowId}/activities/{activityId}/update-options": {
+    "/api/v1/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/activities/{activityId}/update-options": {
       "post": {
         "tags": [
           "WorkflowService"
@@ -5905,7 +5905,7 @@
             }
           },
           {
-            "name": "workflowId",
+            "name": "executionWorkflowId",
             "in": "path",
             "description": "If provided, targets a workflow activity for the given workflow ID.\n If empty, targets a standalone activity.",
             "required": true,
@@ -5957,7 +5957,7 @@
         }
       }
     },
-    "/api/v1/namespaces/{namespaceValue}/workflows/{workflowId}/pause": {
+    "/api/v1/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/pause": {
       "post": {
         "tags": [
           "WorkflowService"
@@ -5975,7 +5975,7 @@
             }
           },
           {
-            "name": "workflowId",
+            "name": "executionWorkflowId",
             "in": "path",
             "description": "ID of the workflow execution to be paused. Required.",
             "required": true,
@@ -6018,7 +6018,7 @@
         }
       }
     },
-    "/api/v1/namespaces/{namespaceValue}/workflows/{workflowId}/signal-with-start/{signalName}": {
+    "/api/v1/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/signal-with-start/{signalName}": {
       "post": {
         "tags": [
           "WorkflowService"
@@ -6035,7 +6035,7 @@
             }
           },
           {
-            "name": "workflowId",
+            "name": "executionWorkflowId",
             "in": "path",
             "required": true,
             "schema": {
@@ -6086,7 +6086,7 @@
         }
       }
     },
-    "/api/v1/namespaces/{namespaceValue}/workflows/{workflowId}/unpause": {
+    "/api/v1/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/unpause": {
       "post": {
         "tags": [
           "WorkflowService"
@@ -6104,7 +6104,7 @@
             }
           },
           {
-            "name": "workflowId",
+            "name": "executionWorkflowId",
             "in": "path",
             "description": "ID of the workflow execution to be paused. Required.",
             "required": true,
@@ -6147,7 +6147,7 @@
         }
       }
     },
-    "/api/v1/namespaces/{namespaceValue}/workflows/{workflowExecutionWorkflowId}/cancel": {
+    "/api/v1/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/cancel": {
       "post": {
         "tags": [
           "WorkflowService"
@@ -6164,7 +6164,7 @@
             }
           },
           {
-            "name": "workflowExecutionWorkflowId",
+            "name": "executionWorkflowId",
             "in": "path",
             "required": true,
             "schema": {
@@ -6206,7 +6206,7 @@
         }
       }
     },
-    "/api/v1/namespaces/{namespaceValue}/workflows/{workflowExecutionWorkflowId}/reset": {
+    "/api/v1/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/reset": {
       "post": {
         "tags": [
           "WorkflowService"
@@ -6223,7 +6223,7 @@
             }
           },
           {
-            "name": "workflowExecutionWorkflowId",
+            "name": "executionWorkflowId",
             "in": "path",
             "required": true,
             "schema": {
@@ -6265,7 +6265,7 @@
         }
       }
     },
-    "/api/v1/namespaces/{namespaceValue}/workflows/{workflowExecutionWorkflowId}/signal/{signalName}": {
+    "/api/v1/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/signal/{signalName}": {
       "post": {
         "tags": [
           "WorkflowService"
@@ -6282,7 +6282,7 @@
             }
           },
           {
-            "name": "workflowExecutionWorkflowId",
+            "name": "executionWorkflowId",
             "in": "path",
             "required": true,
             "schema": {
@@ -6333,7 +6333,7 @@
         }
       }
     },
-    "/api/v1/namespaces/{namespaceValue}/workflows/{workflowExecutionWorkflowId}/terminate": {
+    "/api/v1/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/terminate": {
       "post": {
         "tags": [
           "WorkflowService"
@@ -6350,7 +6350,7 @@
             }
           },
           {
-            "name": "workflowExecutionWorkflowId",
+            "name": "executionWorkflowId",
             "in": "path",
             "required": true,
             "schema": {
@@ -6392,7 +6392,7 @@
         }
       }
     },
-    "/api/v1/namespaces/{namespaceValue}/workflows/{workflowExecutionWorkflowId}/update-options": {
+    "/api/v1/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/update-options": {
       "post": {
         "tags": [
           "WorkflowService"
@@ -6410,7 +6410,7 @@
             }
           },
           {
-            "name": "workflowExecutionWorkflowId",
+            "name": "executionWorkflowId",
             "in": "path",
             "required": true,
             "schema": {
@@ -6452,7 +6452,7 @@
         }
       }
     },
-    "/api/v1/namespaces/{namespaceValue}/workflows/{workflowExecutionWorkflowId}/update/{requestInputName}": {
+    "/api/v1/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/update/{requestInputName}": {
       "post": {
         "tags": [
           "WorkflowService"
@@ -6470,7 +6470,7 @@
             }
           },
           {
-            "name": "workflowExecutionWorkflowId",
+            "name": "executionWorkflowId",
             "in": "path",
             "required": true,
             "schema": {
@@ -10328,7 +10328,7 @@
         }
       }
     },
-    "/namespaces/{namespaceValue}/task-queues/{taskQueueName}": {
+    "/namespaces/{namespaceValue}/task-queues/{taskQueue}": {
       "get": {
         "tags": [
           "WorkflowService"
@@ -10345,7 +10345,7 @@
             }
           },
           {
-            "name": "taskQueueName",
+            "name": "taskQueue",
             "in": "path",
             "required": true,
             "schema": {
@@ -12421,7 +12421,7 @@
         }
       }
     },
-    "/namespaces/{namespaceValue}/workflows/{workflowId}/activities/{activityId}/complete": {
+    "/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/activities/{activityId}/complete": {
       "post": {
         "tags": [
           "WorkflowService"
@@ -12439,7 +12439,7 @@
             }
           },
           {
-            "name": "workflowId",
+            "name": "executionWorkflowId",
             "in": "path",
             "description": "Id of the workflow which scheduled this activity, leave empty to target a standalone activity",
             "required": true,
@@ -12491,7 +12491,7 @@
         }
       }
     },
-    "/namespaces/{namespaceValue}/workflows/{workflowId}/activities/{activityId}/fail": {
+    "/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/activities/{activityId}/fail": {
       "post": {
         "tags": [
           "WorkflowService"
@@ -12509,7 +12509,7 @@
             }
           },
           {
-            "name": "workflowId",
+            "name": "executionWorkflowId",
             "in": "path",
             "description": "Id of the workflow which scheduled this activity, leave empty to target a standalone activity",
             "required": true,
@@ -12561,7 +12561,7 @@
         }
       }
     },
-    "/namespaces/{namespaceValue}/workflows/{workflowId}/activities/{activityId}/heartbeat": {
+    "/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/activities/{activityId}/heartbeat": {
       "post": {
         "tags": [
           "WorkflowService"
@@ -12579,7 +12579,7 @@
             }
           },
           {
-            "name": "workflowId",
+            "name": "executionWorkflowId",
             "in": "path",
             "description": "Id of the workflow which scheduled this activity, leave empty to target a standalone activity",
             "required": true,
@@ -12631,7 +12631,7 @@
         }
       }
     },
-    "/namespaces/{namespaceValue}/workflows/{workflowId}/activities/{activityId}/pause": {
+    "/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/activities/{activityId}/pause": {
       "post": {
         "tags": [
           "WorkflowService"
@@ -12649,7 +12649,7 @@
             }
           },
           {
-            "name": "workflowId",
+            "name": "executionWorkflowId",
             "in": "path",
             "description": "If provided, pause a workflow activity (or activities) for the given workflow ID.\n If empty, targets a standalone activity.",
             "required": true,
@@ -12701,7 +12701,7 @@
         }
       }
     },
-    "/namespaces/{namespaceValue}/workflows/{workflowId}/activities/{activityId}/reset": {
+    "/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/activities/{activityId}/reset": {
       "post": {
         "tags": [
           "WorkflowService"
@@ -12719,7 +12719,7 @@
             }
           },
           {
-            "name": "workflowId",
+            "name": "executionWorkflowId",
             "in": "path",
             "description": "If provided, targets a workflow activity for the given workflow ID.\n If empty, targets a standalone activity.",
             "required": true,
@@ -12771,7 +12771,7 @@
         }
       }
     },
-    "/namespaces/{namespaceValue}/workflows/{workflowId}/activities/{activityId}/resolve-as-canceled": {
+    "/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/activities/{activityId}/resolve-as-canceled": {
       "post": {
         "tags": [
           "WorkflowService"
@@ -12789,7 +12789,7 @@
             }
           },
           {
-            "name": "workflowId",
+            "name": "executionWorkflowId",
             "in": "path",
             "description": "Id of the workflow which scheduled this activity, leave empty to target a standalone activity",
             "required": true,
@@ -12841,7 +12841,7 @@
         }
       }
     },
-    "/namespaces/{namespaceValue}/workflows/{workflowId}/activities/{activityId}/unpause": {
+    "/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/activities/{activityId}/unpause": {
       "post": {
         "tags": [
           "WorkflowService"
@@ -12859,7 +12859,7 @@
             }
           },
           {
-            "name": "workflowId",
+            "name": "executionWorkflowId",
             "in": "path",
             "description": "If provided, targets a workflow activity for the given workflow ID.\n If empty, targets a standalone activity.",
             "required": true,
@@ -12911,7 +12911,7 @@
         }
       }
     },
-    "/namespaces/{namespaceValue}/workflows/{workflowId}/activities/{activityId}/update-options": {
+    "/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/activities/{activityId}/update-options": {
       "post": {
         "tags": [
           "WorkflowService"
@@ -12929,7 +12929,7 @@
             }
           },
           {
-            "name": "workflowId",
+            "name": "executionWorkflowId",
             "in": "path",
             "description": "If provided, targets a workflow activity for the given workflow ID.\n If empty, targets a standalone activity.",
             "required": true,
@@ -12981,7 +12981,7 @@
         }
       }
     },
-    "/namespaces/{namespaceValue}/workflows/{workflowId}/pause": {
+    "/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/pause": {
       "post": {
         "tags": [
           "WorkflowService"
@@ -12999,7 +12999,7 @@
             }
           },
           {
-            "name": "workflowId",
+            "name": "executionWorkflowId",
             "in": "path",
             "description": "ID of the workflow execution to be paused. Required.",
             "required": true,
@@ -13042,7 +13042,7 @@
         }
       }
     },
-    "/namespaces/{namespaceValue}/workflows/{workflowId}/signal-with-start/{signalName}": {
+    "/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/signal-with-start/{signalName}": {
       "post": {
         "tags": [
           "WorkflowService"
@@ -13059,7 +13059,7 @@
             }
           },
           {
-            "name": "workflowId",
+            "name": "executionWorkflowId",
             "in": "path",
             "required": true,
             "schema": {
@@ -13110,7 +13110,7 @@
         }
       }
     },
-    "/namespaces/{namespaceValue}/workflows/{workflowId}/unpause": {
+    "/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/unpause": {
       "post": {
         "tags": [
           "WorkflowService"
@@ -13128,7 +13128,7 @@
             }
           },
           {
-            "name": "workflowId",
+            "name": "executionWorkflowId",
             "in": "path",
             "description": "ID of the workflow execution to be paused. Required.",
             "required": true,
@@ -13171,7 +13171,7 @@
         }
       }
     },
-    "/namespaces/{namespaceValue}/workflows/{workflowExecutionWorkflowId}/cancel": {
+    "/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/cancel": {
       "post": {
         "tags": [
           "WorkflowService"
@@ -13188,7 +13188,7 @@
             }
           },
           {
-            "name": "workflowExecutionWorkflowId",
+            "name": "executionWorkflowId",
             "in": "path",
             "required": true,
             "schema": {
@@ -13230,7 +13230,7 @@
         }
       }
     },
-    "/namespaces/{namespaceValue}/workflows/{workflowExecutionWorkflowId}/reset": {
+    "/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/reset": {
       "post": {
         "tags": [
           "WorkflowService"
@@ -13247,7 +13247,7 @@
             }
           },
           {
-            "name": "workflowExecutionWorkflowId",
+            "name": "executionWorkflowId",
             "in": "path",
             "required": true,
             "schema": {
@@ -13289,7 +13289,7 @@
         }
       }
     },
-    "/namespaces/{namespaceValue}/workflows/{workflowExecutionWorkflowId}/signal/{signalName}": {
+    "/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/signal/{signalName}": {
       "post": {
         "tags": [
           "WorkflowService"
@@ -13306,7 +13306,7 @@
             }
           },
           {
-            "name": "workflowExecutionWorkflowId",
+            "name": "executionWorkflowId",
             "in": "path",
             "required": true,
             "schema": {
@@ -13357,7 +13357,7 @@
         }
       }
     },
-    "/namespaces/{namespaceValue}/workflows/{workflowExecutionWorkflowId}/terminate": {
+    "/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/terminate": {
       "post": {
         "tags": [
           "WorkflowService"
@@ -13374,7 +13374,7 @@
             }
           },
           {
-            "name": "workflowExecutionWorkflowId",
+            "name": "executionWorkflowId",
             "in": "path",
             "required": true,
             "schema": {
@@ -13416,7 +13416,7 @@
         }
       }
     },
-    "/namespaces/{namespaceValue}/workflows/{workflowExecutionWorkflowId}/update-options": {
+    "/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/update-options": {
       "post": {
         "tags": [
           "WorkflowService"
@@ -13434,7 +13434,7 @@
             }
           },
           {
-            "name": "workflowExecutionWorkflowId",
+            "name": "executionWorkflowId",
             "in": "path",
             "required": true,
             "schema": {
@@ -13476,7 +13476,7 @@
         }
       }
     },
-    "/namespaces/{namespaceValue}/workflows/{workflowExecutionWorkflowId}/update/{requestInputName}": {
+    "/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/update/{requestInputName}": {
       "post": {
         "tags": [
           "WorkflowService"
@@ -13494,7 +13494,7 @@
             }
           },
           {
-            "name": "workflowExecutionWorkflowId",
+            "name": "executionWorkflowId",
             "in": "path",
             "required": true,
             "schema": {
@@ -14865,7 +14865,7 @@
           "groupValues": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CountActivityExecutionsResponseAggregationGroupGroupValuesItem"
+              "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
             }
           },
           "count": {
@@ -14895,7 +14895,7 @@
           "groupValues": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CountNexusOperationExecutionsResponseAggregationGroupGroupValuesItem"
+              "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
             }
           },
           "count": {
@@ -14925,7 +14925,7 @@
           "groupValues": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CountSchedulesResponseAggregationGroupGroupValuesItem"
+              "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
             }
           },
           "count": {
@@ -14955,7 +14955,7 @@
           "groupValues": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CountWorkflowExecutionsResponseAggregationGroupGroupValuesItem"
+              "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
             }
           },
           "count": {
@@ -17581,7 +17581,6 @@
         "description": "Response to a successful PauseWorkflowExecution request."
       },
       "PayloadValue": {
-        "type": "object",
         "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
       },
       "PayloadExternalPayloadDetails": {
@@ -17600,7 +17599,7 @@
           "payloads": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/PayloadsPayloadsItem"
+              "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
             }
           }
         },
@@ -23321,7 +23320,7 @@
           "payloads": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/PayloadsPayloadsItem"
+              "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
             }
           }
         },
@@ -23449,7 +23448,7 @@
           "payloads": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/PayloadsPayloadsItem"
+              "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
             }
           }
         },
@@ -23599,7 +23598,7 @@
           "payloads": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/PayloadsPayloadsItem"
+              "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
             }
           }
         },
@@ -23625,7 +23624,7 @@
           "payloads": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/PayloadsPayloadsItem"
+              "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
             }
           }
         },
@@ -23916,7 +23915,7 @@
           "payloads": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/PayloadsPayloadsItem"
+              "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
             }
           }
         },
@@ -23937,7 +23936,7 @@
           "payloads": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/PayloadsPayloadsItem"
+              "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
             }
           }
         },
@@ -24106,11 +24105,9 @@
         "description": "Informs a worker lifecycle controller *when* and *how often* to perform\n certain worker lifecycle actions like starting a serverless worker."
       },
       "ComputeProviderDetails": {
-        "type": "object",
         "description": "Contains provider-specific instructions and configuration.\n For server-implemented providers, use the SDK\u0027s default content\n converter to ensure the server can understand it.\n For remote-implemented providers, you might use your own content\n converters according to what the remote endpoints understand."
       },
       "ComputeScalerDetails": {
-        "type": "object",
         "description": "Contains scaler-specific instructions and configuration.\n For server-implemented scalers, use the SDK\u0027s default data\n converter to ensure the server can understand it.\n For remote-implemented scalers, you might use your own data\n converters according to what the remote endpoints understand."
       },
       "CreateNexusEndpointRequestSpec": {
@@ -24463,7 +24460,7 @@
           "payloads": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/PayloadsPayloadsItem"
+              "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
             }
           }
         },
@@ -24605,11 +24602,9 @@
         "description": "Information about the operation."
       },
       "DescribeNexusOperationExecutionResponseInput": {
-        "type": "object",
         "description": "Serialized operation input, passed as the request payload.\n Only set if include_input was true in the request."
       },
       "DescribeNexusOperationExecutionResponseResult": {
-        "type": "object",
         "description": "The result if the operation completed successfully."
       },
       "DescribeNexusOperationExecutionResponseFailure": {
@@ -24908,7 +24903,6 @@
         "description": "Spec for the endpoint."
       },
       "EndpointSpecDescription": {
-        "type": "object",
         "description": "Markdown description serialized as a single JSON string.\n If the Payload is encrypted, the UI and CLI may decrypt with the configured codec server endpoint.\n By default, the server enforces a limit of 20,000 bytes for this entire payload."
       },
       "EndpointSpecTarget": {
@@ -24924,7 +24918,6 @@
         "description": "Target to route requests to."
       },
       "FailureEncodedAttributes": {
-        "type": "object",
         "description": "Alternative way to supply \u0060message\u0060 and \u0060stack_trace\u0060 and possibly other attributes, used for encryption of\n errors originating in user code which might contain sensitive information.\n The \u0060encoded_attributes\u0060 Payload could represent any serializable object, e.g. JSON object or a \u0060Failure\u0060 proto\n message.\n\n SDK authors:\n - The SDK should provide a default \u0060encodeFailureAttributes\u0060 and \u0060decodeFailureAttributes\u0060 implementation that:\n   - Uses a JSON object to represent \u0060{ message, stack_trace }\u0060.\n   - Overwrites the original message with \u0022Encoded failure\u0022 to indicate that more information could be extracted.\n   - Overwrites the original stack_trace with an empty string.\n   - The resulting JSON object is converted to Payload using the default PayloadConverter and should be processed\n     by the user-provided PayloadCodec\n\n - If there\u0027s demand, we could allow overriding the default SDK implementation to encode other opaque Failure attributes."
       },
       "FetchWorkerConfigRequestSelector": {
@@ -25062,7 +25055,7 @@
           "payloads": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/PayloadsPayloadsItem"
+              "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
             }
           }
         },
@@ -25373,7 +25366,7 @@
           "payloads": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/PayloadsPayloadsItem"
+              "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
             }
           }
         },
@@ -25624,7 +25617,6 @@
         "description": "The last attempt\u0027s failure, if any."
       },
       "NexusOperationCompletedEventAttributesResult": {
-        "type": "object",
         "description": "Serialized result of the Nexus operation. The response of the Nexus handler.\n Delivered either via a completion callback or as a response to a synchronous operation."
       },
       "NexusOperationExecutionCancellationInfoLastAttemptFailure": {
@@ -25805,7 +25797,6 @@
         "description": "Failure details. A NexusOperationFailureInfo wrapping an ApplicationFailureInfo."
       },
       "NexusOperationScheduledEventAttributesInput": {
-        "type": "object",
         "description": "Input for the operation. The server converts this into Nexus request content and the appropriate content headers\n internally when sending the StartOperation request. On the handler side, if it is also backed by Temporal, the\n content is transformed back to the original Payload stored in this event."
       },
       "NexusOperationTimedOutEventAttributesFailure": {
@@ -26054,7 +26045,6 @@
         "description": "The last attempt\u0027s failure, if any."
       },
       "PollNexusOperationExecutionResponseResult": {
-        "type": "object",
         "description": "The result if the operation completed successfully."
       },
       "PollNexusOperationExecutionResponseFailure": {
@@ -26205,7 +26195,7 @@
           "payloads": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/PayloadsPayloadsItem"
+              "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
             }
           }
         },
@@ -26241,7 +26231,7 @@
           "payloads": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/PayloadsPayloadsItem"
+              "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
             }
           }
         },
@@ -26253,7 +26243,7 @@
           "payloads": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/PayloadsPayloadsItem"
+              "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
             }
           }
         },
@@ -26289,7 +26279,7 @@
           "payloads": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/PayloadsPayloadsItem"
+              "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
             }
           }
         },
@@ -26318,7 +26308,7 @@
           "payloads": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/PayloadsPayloadsItem"
+              "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
             }
           }
         },
@@ -26375,7 +26365,7 @@
           "payloads": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/PayloadsPayloadsItem"
+              "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
             }
           }
         },
@@ -26387,7 +26377,7 @@
           "payloads": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/PayloadsPayloadsItem"
+              "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
             }
           }
         },
@@ -26496,7 +26486,7 @@
           "payloads": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/PayloadsPayloadsItem"
+              "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
             }
           }
         },
@@ -26560,7 +26550,7 @@
           "payloads": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/PayloadsPayloadsItem"
+              "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
             }
           }
         },
@@ -26881,7 +26871,7 @@
           "payloads": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/PayloadsPayloadsItem"
+              "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
             }
           }
         },
@@ -26909,7 +26899,7 @@
           "payloads": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/PayloadsPayloadsItem"
+              "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
             }
           }
         },
@@ -26921,7 +26911,7 @@
           "payloads": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/PayloadsPayloadsItem"
+              "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
             }
           }
         },
@@ -27059,7 +27049,7 @@
           "payloads": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/PayloadsPayloadsItem"
+              "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
             }
           }
         },
@@ -27156,7 +27146,7 @@
           "payloads": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/PayloadsPayloadsItem"
+              "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
             }
           }
         },
@@ -27289,7 +27279,6 @@
         "description": "The propagated time-skipping configuration for the child workflow."
       },
       "StartNexusOperationExecutionRequestInput": {
-        "type": "object",
         "description": "Serialized input to the operation. Passed as the request payload."
       },
       "StartNexusOperationExecutionRequestSearchAttributes": {
@@ -27319,7 +27308,7 @@
           "payloads": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/PayloadsPayloadsItem"
+              "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
             }
           }
         },
@@ -27678,7 +27667,7 @@
           "payloads": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/PayloadsPayloadsItem"
+              "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
             }
           }
         },
@@ -28172,11 +28161,9 @@
         "description": "The outcome of the Update if and only if the Workflow Update\n has completed. If this response is being returned before the Update has\n completed then this field will not be set."
       },
       "UserMetadataSummary": {
-        "type": "object",
         "description": "Short-form text that provides a summary. This payload should be a \u0022json/plain\u0022-encoded payload\n that is a single JSON string for use in user interfaces. User interface formatting may not\n apply to this text when used in \u0022title\u0022 situations. The payload data section is limited to 400\n bytes by default."
       },
       "UserMetadataDetails": {
-        "type": "object",
         "description": "Long-form text that provides details. This payload should be a \u0022json/plain\u0022-encoded payload\n that is a single JSON string for use in user interfaces. User interface formatting may apply to\n this text in common use. The payload data section is limited to 20000 bytes by default."
       },
       "ValidateWorkerDeploymentVersionComputeConfigRequestDeploymentVersion": {
@@ -28351,7 +28338,7 @@
           "payloads": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/PayloadsPayloadsItem"
+              "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
             }
           }
         },
@@ -28427,7 +28414,7 @@
           "payloads": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/PayloadsPayloadsItem"
+              "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
             }
           }
         },
@@ -28717,7 +28704,7 @@
           "payloads": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/PayloadsPayloadsItem"
+              "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
             }
           }
         },
@@ -28762,7 +28749,7 @@
           "payloads": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/PayloadsPayloadsItem"
+              "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
             }
           }
         },
@@ -29111,7 +29098,7 @@
           "payloads": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/PayloadsPayloadsItem"
+              "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
             }
           }
         },
@@ -29363,7 +29350,7 @@
       "DeploymentInfoMetadata": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/DeploymentInfoMetadataAdditionalProperties"
+          "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
         },
         "description": "A user-defined set of key-values. Can be updated as part of write operations to the\n deployment, such as \u0060SetCurrentDeployment\u0060."
       },
@@ -29398,7 +29385,7 @@
       "HeaderFields": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/HeaderFieldsAdditionalProperties"
+          "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
         }
       },
       "ListSearchAttributesResponseCustomAttributes": {
@@ -29432,7 +29419,7 @@
       "MemoFields": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/MemoFieldsAdditionalProperties"
+          "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
         }
       },
       "NamespaceConfigCustomSearchAttributeAliases": {
@@ -29480,7 +29467,7 @@
       "SearchAttributesIndexedFields": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/SearchAttributesIndexedFieldsAdditionalProperties"
+          "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
         }
       },
       "StartNexusOperationExecutionRequestNexusHeader": {
@@ -29508,7 +29495,7 @@
       "UpdateDeploymentMetadataUpsertEntries": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/UpdateDeploymentMetadataUpsertEntriesAdditionalProperties"
+          "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
         }
       },
       "UpdateNamespaceInfoData": {
@@ -29536,7 +29523,7 @@
       "UpdateWorkerDeploymentVersionMetadataRequestUpsertEntries": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/UpdateWorkerDeploymentVersionMetadataRequestUpsertEntriesAdditionalProperties"
+          "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
         }
       },
       "ValidateWorkerDeploymentVersionComputeConfigRequestComputeConfigScalingGroups": {
@@ -29549,7 +29536,7 @@
       "VersionMetadataEntries": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/VersionMetadataEntriesAdditionalProperties"
+          "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
         },
         "description": "Arbitrary key-values."
       },
@@ -29822,26 +29809,10 @@
           "$ref": "#/components/schemas/ComputeConfigScalingGroupSummary"
         }
       },
-      "CountActivityExecutionsResponseAggregationGroupGroupValuesItem": {
-        "type": "object",
-        "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
-      },
-      "CountNexusOperationExecutionsResponseAggregationGroupGroupValuesItem": {
-        "type": "object",
-        "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
-      },
-      "CountSchedulesResponseAggregationGroupGroupValuesItem": {
-        "type": "object",
-        "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
-      },
-      "CountWorkflowExecutionsResponseAggregationGroupGroupValuesItem": {
-        "type": "object",
-        "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
-      },
       "DeploymentInfoMetadataProperty": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/DeploymentInfoMetadataPropertyAdditionalProperties"
+          "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
         },
         "description": "A user-defined set of key-values. Can be updated as part of write operations to the\n deployment, such as \u0060SetCurrentDeployment\u0060."
       },
@@ -29876,20 +29847,20 @@
       "HeaderFieldsProperty": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/HeaderFieldsPropertyAdditionalProperties"
+          "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
         }
       },
       "ListSearchAttributesResponseCustomAttributesProperty": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/ListSearchAttributesResponseCustomAttributesAdditionalProperties"
+          "$ref": "#/components/schemas/ListSearchAttributesResponseCustomAttributesPropertyAdditionalProperties"
         },
         "description": "Mapping between custom (user-registered) search attribute name to its IndexedValueType."
       },
       "ListSearchAttributesResponseSystemAttributesProperty": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/ListSearchAttributesResponseSystemAttributesAdditionalProperties"
+          "$ref": "#/components/schemas/ListSearchAttributesResponseSystemAttributesPropertyAdditionalProperties"
         },
         "description": "Mapping between system (predefined) search attribute name to its IndexedValueType."
       },
@@ -29910,7 +29881,7 @@
       "MemoFieldsProperty": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/MemoFieldsPropertyAdditionalProperties"
+          "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
         }
       },
       "NamespaceConfigCustomSearchAttributeAliasesProperty": {
@@ -29941,10 +29912,6 @@
         },
         "description": "Header to attach to the Nexus request. Note these headers are not the same as Temporal headers on internal\n activities and child workflows, these are transmitted to Nexus operations that may be external and are not\n traditional payloads."
       },
-      "PayloadsPayloadsItem": {
-        "type": "object",
-        "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
-      },
       "PollWorkflowTaskQueueResponseQueriesProperty": {
         "type": "object",
         "additionalProperties": {
@@ -29962,7 +29929,7 @@
       "SearchAttributesIndexedFieldsProperty": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/SearchAttributesIndexedFieldsPropertyAdditionalProperties"
+          "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
         }
       },
       "StartNexusOperationExecutionRequestNexusHeaderProperty": {
@@ -29990,7 +29957,7 @@
       "UpdateDeploymentMetadataUpsertEntriesProperty": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/UpdateDeploymentMetadataUpsertEntriesPropertyAdditionalProperties"
+          "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
         }
       },
       "UpdateNamespaceInfoDataProperty": {
@@ -30018,7 +29985,7 @@
       "UpdateWorkerDeploymentVersionMetadataRequestUpsertEntriesProperty": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/UpdateWorkerDeploymentVersionMetadataRequestUpsertEntriesPropertyAdditionalProperties"
+          "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
         }
       },
       "ValidateWorkerDeploymentVersionComputeConfigRequestComputeConfigScalingGroupsProperty": {
@@ -30031,7 +29998,7 @@
       "VersionMetadataEntriesProperty": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/VersionMetadataEntriesPropertyAdditionalProperties"
+          "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
         },
         "description": "Arbitrary key-values."
       },
@@ -30048,19 +30015,19 @@
       "ActivityExecutionListInfoSearchAttributesIndexedFields": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/SearchAttributesIndexedFieldsPropertyAdditionalProperties"
+          "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
         }
       },
       "BatchOperationSignalHeaderFields": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/HeaderFieldsPropertyAdditionalProperties"
+          "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
         }
       },
       "CreateScheduleRequestMemoFields": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/MemoFieldsPropertyAdditionalProperties"
+          "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
         }
       },
       "CreateWorkerDeploymentVersionRequestComputeConfigScalingGroups": {
@@ -30080,7 +30047,7 @@
       "DescribeScheduleResponseMemoFields": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/MemoFieldsPropertyAdditionalProperties"
+          "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
         }
       },
       "DescribeTaskQueueResponseConfigFairnessWeightOverrides": {
@@ -30094,56 +30061,56 @@
       "InputHeaderFields": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/HeaderFieldsPropertyAdditionalProperties"
+          "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
         }
       },
       "NexusOperationExecutionListInfoSearchAttributesIndexedFields": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/SearchAttributesIndexedFieldsPropertyAdditionalProperties"
+          "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
         }
       },
       "PostResetOperationSignalWorkflowHeaderFields": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/HeaderFieldsPropertyAdditionalProperties"
+          "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
         }
       },
       "SetCurrentDeploymentRequestUpdateMetadataUpsertEntries": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/UpdateDeploymentMetadataUpsertEntriesPropertyAdditionalProperties"
+          "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
         }
       },
       "SetCurrentDeploymentResponsePreviousDeploymentInfoMetadata": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/DeploymentInfoMetadataPropertyAdditionalProperties"
+          "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
         },
         "description": "A user-defined set of key-values. Can be updated as part of write operations to the\n deployment, such as \u0060SetCurrentDeployment\u0060."
       },
       "SignalWorkflowExecutionRequestHeaderFields": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/HeaderFieldsPropertyAdditionalProperties"
+          "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
         }
       },
       "StartActivityExecutionRequestSearchAttributesIndexedFields": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/SearchAttributesIndexedFieldsPropertyAdditionalProperties"
+          "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
         }
       },
       "StartActivityExecutionRequestHeaderFields": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/HeaderFieldsPropertyAdditionalProperties"
+          "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
         }
       },
       "StartNexusOperationExecutionRequestSearchAttributesIndexedFields": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/SearchAttributesIndexedFieldsPropertyAdditionalProperties"
+          "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
         }
       },
       "StartWorkflowExecutionResponseEagerWorkflowTaskQueries": {
@@ -30156,26 +30123,26 @@
       "UpdateScheduleRequestSearchAttributesIndexedFields": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/SearchAttributesIndexedFieldsPropertyAdditionalProperties"
+          "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
         }
       },
       "UpdateScheduleRequestMemoFields": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/MemoFieldsPropertyAdditionalProperties"
+          "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
         }
       },
       "UpdateWorkerDeploymentVersionMetadataResponseMetadataEntries": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/VersionMetadataEntriesPropertyAdditionalProperties"
+          "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
         },
         "description": "Arbitrary key-values."
       },
       "WorkerDeploymentVersionInfoMetadataEntries": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/VersionMetadataEntriesPropertyAdditionalProperties"
+          "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
         },
         "description": "Arbitrary key-values."
       },
@@ -30189,82 +30156,26 @@
       "WorkflowExecutionSignaledEventAttributesHeaderFields": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/HeaderFieldsPropertyAdditionalProperties"
+          "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
         }
       },
       "WorkflowPropertiesModifiedEventAttributesUpsertedMemoFields": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/MemoFieldsPropertyAdditionalProperties"
+          "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
         }
       },
       "WorkflowPropertiesModifiedExternallyEventAttributesUpsertedMemoFields": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/MemoFieldsPropertyAdditionalProperties"
+          "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
         }
       },
       "WorkflowQueryHeaderFields": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/HeaderFieldsPropertyAdditionalProperties"
+          "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
         }
-      },
-      "DeploymentInfoMetadataAdditionalProperties": {
-        "type": "object",
-        "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
-      },
-      "HeaderFieldsAdditionalProperties": {
-        "type": "object",
-        "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
-      },
-      "MemoFieldsAdditionalProperties": {
-        "type": "object",
-        "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
-      },
-      "SearchAttributesIndexedFieldsAdditionalProperties": {
-        "type": "object",
-        "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
-      },
-      "UpdateDeploymentMetadataUpsertEntriesAdditionalProperties": {
-        "type": "object",
-        "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
-      },
-      "UpdateWorkerDeploymentVersionMetadataRequestUpsertEntriesAdditionalProperties": {
-        "type": "object",
-        "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
-      },
-      "VersionMetadataEntriesAdditionalProperties": {
-        "type": "object",
-        "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
-      },
-      "DeploymentInfoMetadataPropertyAdditionalProperties": {
-        "type": "object",
-        "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
-      },
-      "HeaderFieldsPropertyAdditionalProperties": {
-        "type": "object",
-        "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
-      },
-      "MemoFieldsPropertyAdditionalProperties": {
-        "type": "object",
-        "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
-      },
-      "SearchAttributesIndexedFieldsPropertyAdditionalProperties": {
-        "type": "object",
-        "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
-      },
-      "UpdateDeploymentMetadataUpsertEntriesPropertyAdditionalProperties": {
-        "type": "object",
-        "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
-      },
-      "UpdateWorkerDeploymentVersionMetadataRequestUpsertEntriesPropertyAdditionalProperties": {
-        "type": "object",
-        "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
-      },
-      "VersionMetadataEntriesPropertyAdditionalProperties": {
-        "type": "object",
-        "description": "Represents some binary (byte array) data (ex: activity input parameters or workflow result) with\n metadata which describes this binary data (format, encoding, encryption, etc). Serialization\n of the data may be user-defined."
       },
       "ActivityExecutionInfoStatus": {
         "enum": [
@@ -30277,7 +30188,6 @@
           "ACTIVITY_EXECUTION_STATUS_TIMED_OUT"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "A general status for this activity, indicates whether it is currently running or in one of the terminal statuses.",
         "format": "enum",
         "x-ms-enum": {
@@ -30325,7 +30235,6 @@
           "PENDING_ACTIVITY_STATE_PAUSE_REQUESTED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "More detailed breakdown of ACTIVITY_EXECUTION_STATUS_RUNNING.",
         "format": "enum",
         "x-ms-enum": {
@@ -30370,7 +30279,6 @@
           "ACTIVITY_EXECUTION_STATUS_TIMED_OUT"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Only scheduled and terminal statuses appear here. More detailed information in PendingActivityInfo but not\n available in the list response.",
         "format": "enum",
         "x-ms-enum": {
@@ -30420,7 +30328,6 @@
           "RETRY_STATE_CANCEL_REQUESTED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "ActivityFailureInfoRetryState",
@@ -30473,7 +30380,6 @@
           "RETRY_STATE_CANCEL_REQUESTED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "ActivityTaskFailedEventAttributesRetryState",
@@ -30526,7 +30432,6 @@
           "RETRY_STATE_CANCEL_REQUESTED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "ActivityTaskTimedOutEventAttributesRetryState",
@@ -30575,7 +30480,6 @@
           "SEVERITY_LOW"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "AlertSeverity",
@@ -30606,7 +30510,6 @@
           "APPLICATION_ERROR_CATEGORY_BENIGN"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "ApplicationFailureInfoCategory",
@@ -30634,7 +30537,6 @@
           "SCHEDULE_OVERLAP_POLICY_ALLOW_ALL"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "If set, override overlap policy for this request.",
         "format": "enum",
         "x-ms-enum": {
@@ -30680,7 +30582,6 @@
           "BATCH_OPERATION_STATE_FAILED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Batch operation state",
         "format": "enum",
         "x-ms-enum": {
@@ -30713,7 +30614,6 @@
           "RESET_TYPE_LAST_WORKFLOW_TASK"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Deprecated. Use \u0060options\u0060.",
         "format": "enum",
         "x-ms-enum": {
@@ -30743,7 +30643,6 @@
           "RESET_REAPPLY_TYPE_ALL_ELIGIBLE"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Deprecated. Use \u0060options\u0060.",
         "format": "enum",
         "x-ms-enum": {
@@ -30780,7 +30679,6 @@
           "CALLBACK_STATE_BLOCKED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The current state of the callback.",
         "format": "enum",
         "x-ms-enum": {
@@ -30830,7 +30728,6 @@
           "RETRY_STATE_CANCEL_REQUESTED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "ChildWorkflowExecutionFailedEventAttributesRetryState",
@@ -30883,7 +30780,6 @@
           "RETRY_STATE_CANCEL_REQUESTED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "ChildWorkflowExecutionFailureInfoRetryState",
@@ -30936,7 +30832,6 @@
           "RETRY_STATE_CANCEL_REQUESTED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "ChildWorkflowExecutionTimedOutEventAttributesRetryState",
@@ -30985,7 +30880,6 @@
           "TASK_QUEUE_TYPE_NEXUS"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "ComputeConfigScalingGroupTaskQueueTypesItem",
@@ -31018,7 +30912,6 @@
           "TASK_QUEUE_TYPE_NEXUS"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "ComputeConfigScalingGroupSummaryTaskQueueTypesItem",
@@ -31050,7 +30943,6 @@
           "ENCODING_TYPE_JSON"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "DataBlobEncodingType",
@@ -31079,7 +30971,6 @@
           "TASK_QUEUE_TYPE_NEXUS"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "DeploymentInfoTaskQueueInfoType",
@@ -31118,7 +31009,6 @@
           "BATCH_OPERATION_TYPE_RESET_ACTIVITY"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Batch operation type",
         "format": "enum",
         "x-ms-enum": {
@@ -31176,7 +31066,6 @@
           "BATCH_OPERATION_STATE_FAILED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Batch operation state",
         "format": "enum",
         "x-ms-enum": {
@@ -31210,7 +31099,6 @@
           "RATE_LIMIT_SOURCE_SYSTEM"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Source of the RateLimit Configuration,which can be one of the following values:\n - SOURCE_API: The rate limit that is set via the TaskQueueConfig api.\n - SOURCE_WORKER: The rate limit is the value set using the workerOptions in TaskQueueActivitiesPerSecond.\n - SOURCE_SYSTEM: The rate limit is the default value set by the system",
         "format": "enum",
         "x-ms-enum": {
@@ -31244,7 +31132,6 @@
           "TASK_QUEUE_TYPE_NEXUS"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "DescribeWorkerDeploymentVersionResponseVersionTaskQueueType",
@@ -31277,7 +31164,6 @@
           "DEPLOYMENT_REACHABILITY_UNREACHABLE"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "GetDeploymentReachabilityResponseReachability",
@@ -31367,7 +31253,6 @@
           "EVENT_TYPE_WORKFLOW_EXECUTION_TIME_SKIPPING_TRANSITIONED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "HistoryEventEventType",
@@ -31627,7 +31512,6 @@
           "CONTINUE_AS_NEW_VERSIONING_BEHAVIOR_USE_RAMPING_VERSION"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Experimental.\n If this workflow is the result of a continue-as-new, this field is set to the initial_versioning_behavior\n specified in that command.\n Only used for the initial task of this run and the initial task of any retries of this run.\n Not passed to children or to future continue-as-new.\n\n Note: In the first release of Upgrade-on-CaN, when the only ContinueAsNewVersioningBehavior was AutoUpgrade,\n a non-empty InheritedAutoUpgradeInfo meant that the workflow should start as AutoUpgrade. So for compatibility\n with history events generated during that time, know that an UNSPECIFIED value here is equivalent to AutoUpgrade\n value if the InheritedAutoUpgradeInfo is non-empty.",
         "format": "enum",
         "x-ms-enum": {
@@ -31656,7 +31540,6 @@
           "ARCHIVAL_STATE_ENABLED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "If unspecified (ARCHIVAL_STATE_UNSPECIFIED) then default server configuration is used.",
         "format": "enum",
         "x-ms-enum": {
@@ -31685,7 +31568,6 @@
           "ARCHIVAL_STATE_ENABLED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "If unspecified (ARCHIVAL_STATE_UNSPECIFIED) then default server configuration is used.",
         "format": "enum",
         "x-ms-enum": {
@@ -31715,7 +31597,6 @@
           "NAMESPACE_STATE_DELETED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "NamespaceInfoState",
@@ -31747,7 +31628,6 @@
           "REPLICATION_STATE_HANDOVER"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "NamespaceReplicationConfigState",
@@ -31777,7 +31657,6 @@
           "WORKFLOW_ID_REUSE_POLICY_TERMINATE_IF_RUNNING"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Default: WORKFLOW_ID_REUSE_POLICY_ALLOW_DUPLICATE.",
         "format": "enum",
         "x-ms-enum": {
@@ -31814,7 +31693,6 @@
           "NEXUS_HANDLER_ERROR_RETRY_BEHAVIOR_NON_RETRYABLE"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Retry behavior, defaults to the retry behavior of the error type as defined in the spec.",
         "format": "enum",
         "x-ms-enum": {
@@ -31847,7 +31725,6 @@
           "NEXUS_OPERATION_CANCELLATION_STATE_BLOCKED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "NexusOperationCancellationInfoState",
@@ -31895,7 +31772,6 @@
           "NEXUS_OPERATION_CANCELLATION_STATE_BLOCKED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "NexusOperationExecutionCancellationInfoState",
@@ -31943,7 +31819,6 @@
           "NEXUS_OPERATION_EXECUTION_STATUS_TIMED_OUT"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "A general status for this operation, indicates whether it is currently running or in one of the terminal statuses.\n Updated once when the operation is originally scheduled, and again when it reaches a terminal status.",
         "format": "enum",
         "x-ms-enum": {
@@ -31990,7 +31865,6 @@
           "PENDING_NEXUS_OPERATION_STATE_BLOCKED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "More detailed breakdown of NEXUS_OPERATION_EXECUTION_STATUS_RUNNING.",
         "format": "enum",
         "x-ms-enum": {
@@ -32031,7 +31905,6 @@
           "NEXUS_OPERATION_EXECUTION_STATUS_TIMED_OUT"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The status is updated once, when the operation is originally scheduled, and again when the operation reaches a terminal status.",
         "format": "enum",
         "x-ms-enum": {
@@ -32079,7 +31952,6 @@
           "PENDING_ACTIVITY_STATE_PAUSE_REQUESTED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "PendingActivityInfoState",
@@ -32120,7 +31992,6 @@
           "PARENT_CLOSE_POLICY_REQUEST_CANCEL"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Default: PARENT_CLOSE_POLICY_TERMINATE.",
         "format": "enum",
         "x-ms-enum": {
@@ -32155,7 +32026,6 @@
           "PENDING_NEXUS_OPERATION_STATE_BLOCKED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "PendingNexusOperationInfoState",
@@ -32191,7 +32061,6 @@
           "PENDING_WORKFLOW_TASK_STATE_STARTED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "PendingWorkflowTaskInfoState",
@@ -32219,7 +32088,6 @@
           "NEXUS_OPERATION_WAIT_STAGE_CLOSED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The current stage of the operation. May be more advanced than the stage requested in the poll.",
         "format": "enum",
         "x-ms-enum": {
@@ -32254,7 +32122,6 @@
           "WORKFLOW_EXECUTION_STATUS_PAUSED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "QueryRejectedStatus",
@@ -32307,7 +32174,6 @@
           "QUERY_REJECT_CONDITION_NOT_COMPLETED_CLEANLY"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "QueryRejectCondition can used to reject the query if workflow state does not satisfy condition.\n Default: QUERY_REJECT_CONDITION_NONE.",
         "format": "enum",
         "x-ms-enum": {
@@ -32340,7 +32206,6 @@
           "ARCHIVAL_STATE_ENABLED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "If unspecified (ARCHIVAL_STATE_UNSPECIFIED) then default server configuration is used.",
         "format": "enum",
         "x-ms-enum": {
@@ -32369,7 +32234,6 @@
           "ARCHIVAL_STATE_ENABLED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "If unspecified (ARCHIVAL_STATE_UNSPECIFIED) then default server configuration is used.",
         "format": "enum",
         "x-ms-enum": {
@@ -32398,7 +32262,6 @@
           "CANCEL_EXTERNAL_WORKFLOW_EXECUTION_FAILED_CAUSE_NAMESPACE_NOT_FOUND"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "RequestCancelExternalWorkflowExecutionFailedEventAttributesCause",
@@ -32484,7 +32347,6 @@
           "EVENT_TYPE_WORKFLOW_EXECUTION_TIME_SKIPPING_TRANSITIONED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The event type of the history event generated by the request.",
         "format": "enum",
         "x-ms-enum": {
@@ -32746,7 +32608,6 @@
           "RESET_REAPPLY_TYPE_ALL_ELIGIBLE"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Deprecated. Use \u0060options\u0060.\n Default: RESET_REAPPLY_TYPE_SIGNAL",
         "format": "enum",
         "x-ms-enum": {
@@ -32781,7 +32642,6 @@
           "RESET_REAPPLY_EXCLUDE_TYPE_CANCEL_REQUEST"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "ResetOptionsResetReapplyExcludeTypesItem",
@@ -32818,7 +32678,6 @@
           "RESET_REAPPLY_TYPE_ALL_ELIGIBLE"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Deprecated. Use \u0060options\u0060.\n Default: RESET_REAPPLY_TYPE_SIGNAL",
         "format": "enum",
         "x-ms-enum": {
@@ -32853,7 +32712,6 @@
           "RESET_REAPPLY_EXCLUDE_TYPE_CANCEL_REQUEST"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "ResetWorkflowExecutionRequestResetReapplyExcludeTypesItem",
@@ -32895,7 +32753,6 @@
           "WORKFLOW_EXECUTION_STATUS_PAUSED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "If the action was start_workflow, this field will reflect an\n eventually-consistent view of the started workflow\u0027s status.",
         "format": "enum",
         "x-ms-enum": {
@@ -32952,7 +32809,6 @@
           "SCHEDULE_OVERLAP_POLICY_ALLOW_ALL"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Policy for overlaps.\n Note that this can be changed after a schedule has taken some actions,\n and some changes might produce unintuitive results. In general, the later\n policy overrides the earlier policy.",
         "format": "enum",
         "x-ms-enum": {
@@ -32998,7 +32854,6 @@
           "SIGNAL_EXTERNAL_WORKFLOW_EXECUTION_FAILED_CAUSE_SIGNAL_COUNT_LIMIT_EXCEEDED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "SignalExternalWorkflowExecutionFailedEventAttributesCause",
@@ -33032,7 +32887,6 @@
           "WORKFLOW_ID_REUSE_POLICY_TERMINATE_IF_RUNNING"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Defines whether to allow re-using the workflow id from a previously *closed* workflow.\n The default policy is WORKFLOW_ID_REUSE_POLICY_ALLOW_DUPLICATE.\n\n See \u0060workflow_id_reuse_policy\u0060 for handling a workflow id duplication with a *running* workflow.",
         "format": "enum",
         "x-ms-enum": {
@@ -33070,7 +32924,6 @@
           "WORKFLOW_ID_CONFLICT_POLICY_TERMINATE_EXISTING"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Defines how to resolve a workflow id conflict with a *running* workflow.\n The default policy is WORKFLOW_ID_CONFLICT_POLICY_USE_EXISTING.\n Note that WORKFLOW_ID_CONFLICT_POLICY_FAIL is an invalid option.\n\n See \u0060workflow_id_reuse_policy\u0060 for handling a workflow id duplication with a *closed* workflow.",
         "format": "enum",
         "x-ms-enum": {
@@ -33104,7 +32957,6 @@
           "ACTIVITY_ID_REUSE_POLICY_REJECT_DUPLICATE"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Defines whether to allow re-using the activity id from a previously *closed* activity.\n The default policy is ACTIVITY_ID_REUSE_POLICY_ALLOW_DUPLICATE.",
         "format": "enum",
         "x-ms-enum": {
@@ -33137,7 +32989,6 @@
           "ACTIVITY_ID_CONFLICT_POLICY_USE_EXISTING"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Defines how to resolve an activity id conflict with a *running* activity.\n The default policy is ACTIVITY_ID_CONFLICT_POLICY_FAIL.",
         "format": "enum",
         "x-ms-enum": {
@@ -33166,7 +33017,6 @@
           "START_CHILD_WORKFLOW_EXECUTION_FAILED_CAUSE_NAMESPACE_NOT_FOUND"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "StartChildWorkflowExecutionFailedEventAttributesCause",
@@ -33195,7 +33045,6 @@
           "PARENT_CLOSE_POLICY_REQUEST_CANCEL"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Default: PARENT_CLOSE_POLICY_TERMINATE.",
         "format": "enum",
         "x-ms-enum": {
@@ -33230,7 +33079,6 @@
           "WORKFLOW_ID_REUSE_POLICY_TERMINATE_IF_RUNNING"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Default: WORKFLOW_ID_REUSE_POLICY_ALLOW_DUPLICATE.",
         "format": "enum",
         "x-ms-enum": {
@@ -33268,7 +33116,6 @@
           "NEXUS_OPERATION_ID_REUSE_POLICY_REJECT_DUPLICATE"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Defines whether to allow re-using the operation id from a previously *closed* operation.\n The default policy is NEXUS_OPERATION_ID_REUSE_POLICY_ALLOW_DUPLICATE.",
         "format": "enum",
         "x-ms-enum": {
@@ -33301,7 +33148,6 @@
           "NEXUS_OPERATION_ID_CONFLICT_POLICY_USE_EXISTING"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Defines how to resolve an operation id conflict with a *running* operation.\n The default policy is NEXUS_OPERATION_ID_CONFLICT_POLICY_FAIL.",
         "format": "enum",
         "x-ms-enum": {
@@ -33332,7 +33178,6 @@
           "WORKFLOW_ID_REUSE_POLICY_TERMINATE_IF_RUNNING"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Defines whether to allow re-using the workflow id from a previously *closed* workflow.\n The default policy is WORKFLOW_ID_REUSE_POLICY_ALLOW_DUPLICATE.\n\n See \u0060workflow_id_conflict_policy\u0060 for handling a workflow id duplication with a *running* workflow.",
         "format": "enum",
         "x-ms-enum": {
@@ -33370,7 +33215,6 @@
           "WORKFLOW_ID_CONFLICT_POLICY_TERMINATE_EXISTING"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Defines how to resolve a workflow id conflict with a *running* workflow.\n The default policy is WORKFLOW_ID_CONFLICT_POLICY_FAIL.\n\n See \u0060workflow_id_reuse_policy\u0060 for handling a workflow id duplication with a *closed* workflow.",
         "format": "enum",
         "x-ms-enum": {
@@ -33409,7 +33253,6 @@
           "WORKFLOW_EXECUTION_STATUS_PAUSED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Current execution status of the workflow. Typically remains WORKFLOW_EXECUTION_STATUS_RUNNING\n unless a de-dupe occurs or in specific scenarios handled within the ExecuteMultiOperation (refer to its docs).",
         "format": "enum",
         "x-ms-enum": {
@@ -33463,7 +33306,6 @@
           "TASK_QUEUE_KIND_WORKER_COMMANDS"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Default: TASK_QUEUE_KIND_NORMAL.",
         "format": "enum",
         "x-ms-enum": {
@@ -33498,7 +33340,6 @@
           "TASK_REACHABILITY_CLOSED_WORKFLOWS"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "TaskQueueReachabilityReachabilityItem",
@@ -33535,7 +33376,6 @@
           "BUILD_ID_TASK_REACHABILITY_UNREACHABLE"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Task Reachability is eventually consistent; there may be a delay until it converges to the most\n accurate value but it is designed in a way to take the more conservative side until it converges.\n For example REACHABLE is more conservative than CLOSED_WORKFLOWS_ONLY.\n\n Note: future activities who inherit their workflow\u0027s Build ID but not its Task Queue will not be\n accounted for reachability as server cannot know if they\u0027ll happen as they do not use\n assignment rules of their Task Queue. Same goes for Child Workflows or Continue-As-New Workflows\n who inherit the parent/previous workflow\u0027s Build ID but not its Task Queue. In those cases, make\n sure to query reachability for the parent/previous workflow\u0027s Task Queue as well.",
         "format": "enum",
         "x-ms-enum": {
@@ -33570,7 +33410,6 @@
           "TIMEOUT_TYPE_HEARTBEAT"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "TimeoutFailureInfoTimeoutType",
@@ -33610,7 +33449,6 @@
           "SCHEDULE_OVERLAP_POLICY_ALLOW_ALL"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "If set, override overlap policy for this one request.",
         "format": "enum",
         "x-ms-enum": {
@@ -33656,7 +33494,6 @@
           "NAMESPACE_STATE_DELETED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "New namespace state, server will reject if transition is not allowed.\n Allowed transitions are:\n  Registered -\u003E [ Deleted | Deprecated | Handover ]\n  Handover -\u003E [ Registered ]\n Default is NAMESPACE_STATE_UNSPECIFIED which is do not change state.",
         "format": "enum",
         "x-ms-enum": {
@@ -33690,7 +33527,6 @@
           "TASK_QUEUE_TYPE_NEXUS"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "UpdateTaskQueueConfigRequestTaskQueueType",
@@ -33723,7 +33559,6 @@
           "UPDATE_WORKFLOW_EXECUTION_LIFECYCLE_STAGE_COMPLETED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The most advanced lifecycle stage that the Update is known to have\n reached, where lifecycle stages are ordered\n UPDATE_WORKFLOW_EXECUTION_LIFECYCLE_STAGE_UNSPECIFIED \u003C\n UPDATE_WORKFLOW_EXECUTION_LIFECYCLE_STAGE_ADMITTED \u003C\n UPDATE_WORKFLOW_EXECUTION_LIFECYCLE_STAGE_ACCEPTED \u003C\n UPDATE_WORKFLOW_EXECUTION_LIFECYCLE_STAGE_COMPLETED.\n UNSPECIFIED will be returned if and only if the server\u0027s maximum wait\n time was reached before the Update reached the stage specified in the\n request WaitPolicy, and before the context deadline expired; clients may\n may then retry the call as needed.",
         "format": "enum",
         "x-ms-enum": {
@@ -33756,7 +33591,6 @@
           "VERSION_DRAINAGE_STATUS_DRAINED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Set to DRAINING when the version first stops accepting new executions (is no longer current or ramping).\n Set to DRAINED when no more open pinned workflows exist on this version.",
         "format": "enum",
         "x-ms-enum": {
@@ -33785,7 +33619,6 @@
           "VERSIONING_BEHAVIOR_AUTO_UPGRADE"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Required.\n Deprecated. Use \u0060override\u0060.",
         "format": "enum",
         "x-ms-enum": {
@@ -33813,7 +33646,6 @@
           "PINNED_OVERRIDE_BEHAVIOR_PINNED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Defaults to PINNED_OVERRIDE_BEHAVIOR_UNSPECIFIED.\n See \u0060PinnedOverrideBehavior\u0060 for details.",
         "format": "enum",
         "x-ms-enum": {
@@ -33839,7 +33671,6 @@
           "UPDATE_WORKFLOW_EXECUTION_LIFECYCLE_STAGE_COMPLETED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Indicates the Update lifecycle stage that the Update must reach before\n API call is returned.\n NOTE: This field works together with API call timeout which is limited by\n server timeout (maximum wait time). If server timeout is expired before\n user specified timeout, API call returns even if specified stage is not reached.",
         "format": "enum",
         "x-ms-enum": {
@@ -33872,7 +33703,6 @@
           "ROUTING_CONFIG_UPDATE_STATE_COMPLETED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Indicates whether the routing_config has been fully propagated to all\n relevant task queues and their partitions.",
         "format": "enum",
         "x-ms-enum": {
@@ -33905,7 +33735,6 @@
           "WORKER_DEPLOYMENT_VERSION_STATUS_CREATED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The status of the Worker Deployment Version.",
         "format": "enum",
         "x-ms-enum": {
@@ -33950,7 +33779,6 @@
           "VERSION_DRAINAGE_STATUS_DRAINED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Deprecated. Use \u0060drainage_info\u0060 instead.",
         "format": "enum",
         "x-ms-enum": {
@@ -33979,7 +33807,6 @@
           "WORKER_VERSIONING_MODE_VERSIONED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Required. Versioning Mode for this worker. Must be the same for all workers with the\n same \u0060deployment_name\u0060 and \u0060build_id\u0060 combination, across all Task Queues.\n When \u0060worker_versioning_mode==VERSIONED\u0060, the worker will be part of a Deployment Version.",
         "format": "enum",
         "x-ms-enum": {
@@ -34012,7 +33839,6 @@
           "WORKER_DEPLOYMENT_VERSION_STATUS_CREATED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The status of the Worker Deployment Version.",
         "format": "enum",
         "x-ms-enum": {
@@ -34058,7 +33884,6 @@
           "TASK_QUEUE_TYPE_NEXUS"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "WorkerDeploymentVersionInfoVersionTaskQueueInfoType",
@@ -34091,7 +33916,6 @@
           "WORKER_STATUS_SHUTDOWN"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Worker status. Defined by SDK.",
         "format": "enum",
         "x-ms-enum": {
@@ -34125,7 +33949,6 @@
           "WORKER_STATUS_SHUTDOWN"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Worker status. Defined by SDK.",
         "format": "enum",
         "x-ms-enum": {
@@ -34216,7 +34039,6 @@
           "EVENT_TYPE_WORKFLOW_EXECUTION_TIME_SKIPPING_TRANSITIONED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "WorkflowEventEventReferenceEventType",
@@ -34534,7 +34356,6 @@
           "EVENT_TYPE_WORKFLOW_EXECUTION_TIME_SKIPPING_TRANSITIONED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "WorkflowEventRequestIdReferenceEventType",
@@ -34795,7 +34616,6 @@
           "CONTINUE_AS_NEW_INITIATOR_CRON_SCHEDULE"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "WorkflowExecutionContinuedAsNewEventAttributesInitiator",
@@ -34827,7 +34647,6 @@
           "CONTINUE_AS_NEW_VERSIONING_BEHAVIOR_USE_RAMPING_VERSION"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Experimental. Optionally decide the versioning behavior that the first task of the new run should use.\n For example, choose to AutoUpgrade on continue-as-new instead of inheriting the pinned version\n of the previous run.",
         "format": "enum",
         "x-ms-enum": {
@@ -34861,7 +34680,6 @@
           "RETRY_STATE_CANCEL_REQUESTED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "WorkflowExecutionFailedEventAttributesRetryState",
@@ -34915,7 +34733,6 @@
           "WORKFLOW_EXECUTION_STATUS_PAUSED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "WorkflowExecutionInfoStatus",
@@ -34968,7 +34785,6 @@
           "CONTINUE_AS_NEW_INITIATOR_CRON_SCHEDULE"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "WorkflowExecutionStartedEventAttributesInitiator",
@@ -35005,7 +34821,6 @@
           "RETRY_STATE_CANCEL_REQUESTED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "WorkflowExecutionTimedOutEventAttributesRetryState",
@@ -35052,7 +34867,6 @@
           "UPDATE_ADMITTED_EVENT_ORIGIN_REAPPLY"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "An explanation of why this event was written to history.",
         "format": "enum",
         "x-ms-enum": {
@@ -35077,7 +34891,6 @@
           "VERSIONING_BEHAVIOR_AUTO_UPGRADE"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Versioning behavior determines how the server should treat this execution when workers are\n upgraded. When present it means this workflow execution is versioned; UNSPECIFIED means\n unversioned. See the comments in \u0060VersioningBehavior\u0060 enum for more info about different\n behaviors.\n\n Child workflows or CaN executions **inherit** their parent/previous run\u0027s effective Versioning \n Behavior and Version (except when the new execution runs on a task queue not belonging to the \n same deployment version as the parent/previous run\u0027s task queue). The first workflow task will\n be dispatched according to the inherited behavior (or to the current version of the task-queue\u0027s \n deployment in the case of AutoUpgrade.) After completion of their first workflow task the \n Deployment Version and Behavior of the execution will update according to configuration on the worker.\n \n Note that \u0060behavior\u0060 is overridden by \u0060versioning_override\u0060 if the latter is present.",
         "format": "enum",
         "x-ms-enum": {
@@ -35106,7 +34919,6 @@
           "CONTINUE_AS_NEW_VERSIONING_BEHAVIOR_USE_RAMPING_VERSION"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Experimental.\n If this workflow is the result of a continue-as-new, this field is set to the initial_versioning_behavior\n specified in that command.\n Only used for the initial task of this run and the initial task of any retries of this run.\n Not passed to children or to future continue-as-new.\n\n Note: In the first release of Upgrade-on-CaN, when the only ContinueAsNewVersioningBehavior was AutoUpgrade,\n a non-empty InheritedAutoUpgradeInfo meant that the workflow should start as AutoUpgrade. So for compatibility\n with ContinueAsNew history commands generated during that time, know that an UNSPECIFIED value here is equivalent\n to ContinueAsNewVersioningBehaviorAutoUpgrade if the behavior of the workflow is AutoUpgrade.",
         "format": "enum",
         "x-ms-enum": {
@@ -35135,7 +34947,6 @@
           "VERSIONING_BEHAVIOR_AUTO_UPGRADE"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Versioning behavior sent by the worker that completed this task for this particular workflow\n execution. UNSPECIFIED means the task was completed by an unversioned worker. This value\n updates workflow execution\u0027s \u0060versioning_info.behavior\u0060.",
         "format": "enum",
         "x-ms-enum": {
@@ -35199,7 +35010,6 @@
           "WORKFLOW_TASK_FAILED_CAUSE_PAYLOADS_TOO_LARGE"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "WorkflowTaskFailedEventAttributesCause",
@@ -35368,7 +35178,6 @@
           "SUGGEST_CONTINUE_AS_NEW_REASON_TOO_MANY_UPDATES"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "WorkflowTaskStartedEventAttributesSuggestContinueAsNewReasonsItem",
@@ -35402,7 +35211,6 @@
           "TIMEOUT_TYPE_HEARTBEAT"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "WorkflowTaskTimedOutEventAttributesTimeoutType",
@@ -35443,7 +35251,6 @@
           "INDEXED_VALUE_TYPE_KEYWORD_LIST"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "ListSearchAttributesResponseCustomAttributesAdditionalProperties",
@@ -35496,10 +35303,113 @@
           "INDEXED_VALUE_TYPE_KEYWORD_LIST"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "ListSearchAttributesResponseSystemAttributesAdditionalProperties",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "INDEXED_VALUE_TYPE_UNSPECIFIED",
+              "name": "IndexedValueTypeUnspecified"
+            },
+            {
+              "value": "INDEXED_VALUE_TYPE_TEXT",
+              "name": "IndexedValueTypeText"
+            },
+            {
+              "value": "INDEXED_VALUE_TYPE_KEYWORD",
+              "name": "IndexedValueTypeKeyword"
+            },
+            {
+              "value": "INDEXED_VALUE_TYPE_INT",
+              "name": "IndexedValueTypeInt"
+            },
+            {
+              "value": "INDEXED_VALUE_TYPE_DOUBLE",
+              "name": "IndexedValueTypeDouble"
+            },
+            {
+              "value": "INDEXED_VALUE_TYPE_BOOL",
+              "name": "IndexedValueTypeBool"
+            },
+            {
+              "value": "INDEXED_VALUE_TYPE_DATETIME",
+              "name": "IndexedValueTypeDatetime"
+            },
+            {
+              "value": "INDEXED_VALUE_TYPE_KEYWORD_LIST",
+              "name": "IndexedValueTypeKeywordList"
+            }
+          ]
+        }
+      },
+      "ListSearchAttributesResponseCustomAttributesPropertyAdditionalProperties": {
+        "enum": [
+          "INDEXED_VALUE_TYPE_UNSPECIFIED",
+          "INDEXED_VALUE_TYPE_TEXT",
+          "INDEXED_VALUE_TYPE_KEYWORD",
+          "INDEXED_VALUE_TYPE_INT",
+          "INDEXED_VALUE_TYPE_DOUBLE",
+          "INDEXED_VALUE_TYPE_BOOL",
+          "INDEXED_VALUE_TYPE_DATETIME",
+          "INDEXED_VALUE_TYPE_KEYWORD_LIST"
+        ],
+        "type": "string",
+        "format": "enum",
+        "x-ms-enum": {
+          "name": "ListSearchAttributesResponseCustomAttributesPropertyAdditionalProperties",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "INDEXED_VALUE_TYPE_UNSPECIFIED",
+              "name": "IndexedValueTypeUnspecified"
+            },
+            {
+              "value": "INDEXED_VALUE_TYPE_TEXT",
+              "name": "IndexedValueTypeText"
+            },
+            {
+              "value": "INDEXED_VALUE_TYPE_KEYWORD",
+              "name": "IndexedValueTypeKeyword"
+            },
+            {
+              "value": "INDEXED_VALUE_TYPE_INT",
+              "name": "IndexedValueTypeInt"
+            },
+            {
+              "value": "INDEXED_VALUE_TYPE_DOUBLE",
+              "name": "IndexedValueTypeDouble"
+            },
+            {
+              "value": "INDEXED_VALUE_TYPE_BOOL",
+              "name": "IndexedValueTypeBool"
+            },
+            {
+              "value": "INDEXED_VALUE_TYPE_DATETIME",
+              "name": "IndexedValueTypeDatetime"
+            },
+            {
+              "value": "INDEXED_VALUE_TYPE_KEYWORD_LIST",
+              "name": "IndexedValueTypeKeywordList"
+            }
+          ]
+        }
+      },
+      "ListSearchAttributesResponseSystemAttributesPropertyAdditionalProperties": {
+        "enum": [
+          "INDEXED_VALUE_TYPE_UNSPECIFIED",
+          "INDEXED_VALUE_TYPE_TEXT",
+          "INDEXED_VALUE_TYPE_KEYWORD",
+          "INDEXED_VALUE_TYPE_INT",
+          "INDEXED_VALUE_TYPE_DOUBLE",
+          "INDEXED_VALUE_TYPE_BOOL",
+          "INDEXED_VALUE_TYPE_DATETIME",
+          "INDEXED_VALUE_TYPE_KEYWORD_LIST"
+        ],
+        "type": "string",
+        "format": "enum",
+        "x-ms-enum": {
+          "name": "ListSearchAttributesResponseSystemAttributesPropertyAdditionalProperties",
           "modelAsString": false,
           "values": [
             {
@@ -35544,7 +35454,6 @@
           "NEXUS_OPERATION_WAIT_STAGE_CLOSED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "PollNexusOperationExecutionWaitStageParameter",
@@ -35573,7 +35482,6 @@
           "TASK_QUEUE_KIND_WORKER_COMMANDS"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "DescribeTaskQueueTaskQueueKindParameter",
@@ -35606,7 +35514,6 @@
           "TASK_QUEUE_TYPE_NEXUS"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "DescribeTaskQueueTaskQueueTypeParameter",
@@ -35637,7 +35544,6 @@
           "DESCRIBE_TASK_QUEUE_MODE_ENHANCED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "DescribeTaskQueueApiModeParameter",
@@ -35662,7 +35568,6 @@
           "TASK_QUEUE_TYPE_NEXUS"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "DescribeTaskQueueTaskQueueTypesParameterItem",
@@ -35696,7 +35601,6 @@
           "TASK_REACHABILITY_CLOSED_WORKFLOWS"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "GetWorkerTaskReachabilityReachabilityParameter",
@@ -35732,7 +35636,6 @@
           "HISTORY_EVENT_FILTER_TYPE_CLOSE_EVENT"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "GetWorkflowExecutionHistoryHistoryEventFilterTypeParameter",
@@ -35760,7 +35663,6 @@
           "NEXUS_OPERATION_WAIT_STAGE_CLOSED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "PollNexusOperationExecution2WaitStageParameter",
@@ -35789,7 +35691,6 @@
           "TASK_QUEUE_KIND_WORKER_COMMANDS"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "DescribeTaskQueue2TaskQueueKindParameter",
@@ -35822,7 +35723,6 @@
           "TASK_QUEUE_TYPE_NEXUS"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "DescribeTaskQueue2TaskQueueTypeParameter",
@@ -35853,7 +35753,6 @@
           "DESCRIBE_TASK_QUEUE_MODE_ENHANCED"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "DescribeTaskQueue2ApiModeParameter",
@@ -35878,7 +35777,6 @@
           "TASK_QUEUE_TYPE_NEXUS"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "DescribeTaskQueue2TaskQueueTypesParameterItem",
@@ -35912,7 +35810,6 @@
           "TASK_REACHABILITY_CLOSED_WORKFLOWS"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "GetWorkerTaskReachability2ReachabilityParameter",
@@ -35948,7 +35845,6 @@
           "HISTORY_EVENT_FILTER_TYPE_CLOSE_EVENT"
         ],
         "type": "string",
-        "additionalProperties": false,
         "format": "enum",
         "x-ms-enum": {
           "name": "GetWorkflowExecutionHistory2HistoryEventFilterTypeParameter",

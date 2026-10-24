@@ -3,118 +3,118 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Activities;
+using Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Cancel;
+using Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.History;
+using Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.HistoryReverse;
+using Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Pause;
+using Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Query;
+using Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Reset;
+using Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Signal;
+using Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.SignalWithStart;
+using Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Terminate;
+using Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.TriggerRule;
+using Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Unpause;
+using Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Update;
+using Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.UpdateOptions;
 using Soenneker.Temporal.OpenApiClient.Models;
-using Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Activities;
-using Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Cancel;
-using Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.History;
-using Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.HistoryReverse;
-using Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Pause;
-using Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Query;
-using Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Reset;
-using Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Signal;
-using Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.SignalWithStart;
-using Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Terminate;
-using Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.TriggerRule;
-using Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Unpause;
-using Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Update;
-using Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.UpdateOptions;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using System.Threading;
 using System;
-namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item
+namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \namespaces\{namespaceValue}\workflows\{executionWorkflow-id}
+    /// Builds and executes requests for operations under \api\v1\namespaces\{namespaceValue}\workflows\{executionWorkflowId}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ExecutionWorkflowItemRequestBuilder : BaseRequestBuilder
+    public partial class WithExecutionWorkflowItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The activities property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Activities.ActivitiesRequestBuilder Activities
+        public global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Activities.ActivitiesRequestBuilder Activities
         {
-            get => new global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Activities.ActivitiesRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Activities.ActivitiesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The cancel property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Cancel.CancelRequestBuilder Cancel
+        public global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Cancel.CancelRequestBuilder Cancel
         {
-            get => new global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Cancel.CancelRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Cancel.CancelRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The history property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.History.HistoryRequestBuilder History
+        public global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.History.HistoryRequestBuilder History
         {
-            get => new global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.History.HistoryRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.History.HistoryRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The historyReverse property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.HistoryReverse.HistoryReverseRequestBuilder HistoryReverse
+        public global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.HistoryReverse.HistoryReverseRequestBuilder HistoryReverse
         {
-            get => new global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.HistoryReverse.HistoryReverseRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.HistoryReverse.HistoryReverseRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The pause property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Pause.PauseRequestBuilder Pause
+        public global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Pause.PauseRequestBuilder Pause
         {
-            get => new global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Pause.PauseRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Pause.PauseRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The query property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Query.QueryRequestBuilder Query
+        public global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Query.QueryRequestBuilder Query
         {
-            get => new global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Query.QueryRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Query.QueryRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The reset property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Reset.ResetRequestBuilder Reset
+        public global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Reset.ResetRequestBuilder Reset
         {
-            get => new global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Reset.ResetRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Reset.ResetRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The signal property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Signal.SignalRequestBuilder Signal
+        public global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Signal.SignalRequestBuilder Signal
         {
-            get => new global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Signal.SignalRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Signal.SignalRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The signalWithStart property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.SignalWithStart.SignalWithStartRequestBuilder SignalWithStart
+        public global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.SignalWithStart.SignalWithStartRequestBuilder SignalWithStart
         {
-            get => new global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.SignalWithStart.SignalWithStartRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.SignalWithStart.SignalWithStartRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The terminate property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Terminate.TerminateRequestBuilder Terminate
+        public global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Terminate.TerminateRequestBuilder Terminate
         {
-            get => new global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Terminate.TerminateRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Terminate.TerminateRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The triggerRule property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.TriggerRule.TriggerRuleRequestBuilder TriggerRule
+        public global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.TriggerRule.TriggerRuleRequestBuilder TriggerRule
         {
-            get => new global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.TriggerRule.TriggerRuleRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.TriggerRule.TriggerRuleRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The unpause property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Unpause.UnpauseRequestBuilder Unpause
+        public global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Unpause.UnpauseRequestBuilder Unpause
         {
-            get => new global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Unpause.UnpauseRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Unpause.UnpauseRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The update property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Update.UpdateRequestBuilder Update
+        public global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Update.UpdateRequestBuilder Update
         {
-            get => new global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Update.UpdateRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Update.UpdateRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The updateOptions property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.UpdateOptions.UpdateOptionsRequestBuilder UpdateOptions
+        public global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.UpdateOptions.UpdateOptionsRequestBuilder UpdateOptions
         {
-            get => new global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.UpdateOptions.UpdateOptionsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.UpdateOptions.UpdateOptionsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.ExecutionWorkflowItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.WithExecutionWorkflowItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ExecutionWorkflowItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/workflows/{executionWorkflow%2Did}{?execution%2ErunId*,execution%2EworkflowId*}", pathParameters)
+        public WithExecutionWorkflowItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespaceValue}/workflows/{executionWorkflowId}{?execution%2ErunId*,execution%2EworkflowId*}", pathParameters)
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.ExecutionWorkflowItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.WithExecutionWorkflowItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ExecutionWorkflowItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/workflows/{executionWorkflow%2Did}{?execution%2ErunId*,execution%2EworkflowId*}", rawUrl)
+        public WithExecutionWorkflowItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespaceValue}/workflows/{executionWorkflowId}{?execution%2ErunId*,execution%2EworkflowId*}", rawUrl)
         {
         }
         /// <summary>
@@ -126,11 +126,11 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item
         /// <exception cref="global::Soenneker.Temporal.OpenApiClient.Models.Status">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkflowExecutionResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.ExecutionWorkflowItemRequestBuilder.ExecutionWorkflowItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkflowExecutionResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.WithExecutionWorkflowItemRequestBuilder.WithExecutionWorkflowItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkflowExecutionResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.ExecutionWorkflowItemRequestBuilder.ExecutionWorkflowItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkflowExecutionResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.WithExecutionWorkflowItemRequestBuilder.WithExecutionWorkflowItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -172,11 +172,11 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.ExecutionWorkflowItemRequestBuilder.ExecutionWorkflowItemRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.WithExecutionWorkflowItemRequestBuilder.WithExecutionWorkflowItemRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.ExecutionWorkflowItemRequestBuilder.ExecutionWorkflowItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.WithExecutionWorkflowItemRequestBuilder.WithExecutionWorkflowItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
@@ -209,17 +209,17 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.ExecutionWorkflowItemRequestBuilder"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.WithExecutionWorkflowItemRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.ExecutionWorkflowItemRequestBuilder WithUrl(string rawUrl)
+        public global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.WithExecutionWorkflowItemRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.ExecutionWorkflowItemRequestBuilder(rawUrl, RequestAdapter);
+            return new global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.WithExecutionWorkflowItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// DescribeWorkflowExecution returns information about the specified workflow execution.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ExecutionWorkflowItemRequestBuilderGetQueryParameters 
+        public partial class WithExecutionWorkflowItemRequestBuilderGetQueryParameters 
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

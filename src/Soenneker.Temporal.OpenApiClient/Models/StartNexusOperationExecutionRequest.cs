@@ -37,10 +37,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Serialized input to the operation. Passed as the request payload.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequestInput? Input { get; set; }
+        public UntypedNode? Input { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequestInput Input { get; set; }
+        public UntypedNode Input { get; set; }
 #endif
         /// <summary>The namespace property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -159,7 +159,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "idConflictPolicy", n => { IdConflictPolicy = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequestIdConflictPolicy>(); } },
                 { "idReusePolicy", n => { IdReusePolicy = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequestIdReusePolicy>(); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },
-                { "input", n => { Input = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequestInput>(global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequestInput.CreateFromDiscriminatorValue); } },
+                { "input", n => { Input = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "namespace", n => { Namespace = n.GetStringValue(); } },
                 { "nexusHeader", n => { NexusHeader = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequestNexusHeaderProperty>(global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequestNexusHeaderProperty.CreateFromDiscriminatorValue); } },
                 { "operation", n => { Operation = n.GetStringValue(); } },
@@ -184,7 +184,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequestIdConflictPolicy>("idConflictPolicy", IdConflictPolicy);
             writer.WriteStringValue("identity", Identity);
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequestIdReusePolicy>("idReusePolicy", IdReusePolicy);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequestInput>("input", Input);
+            writer.WriteObjectValue<UntypedNode>("input", Input);
             writer.WriteStringValue("namespace", Namespace);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequestNexusHeaderProperty>("nexusHeader", NexusHeader);
             writer.WriteStringValue("operation", Operation);

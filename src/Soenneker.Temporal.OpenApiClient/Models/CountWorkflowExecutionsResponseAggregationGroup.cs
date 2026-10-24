@@ -25,10 +25,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The groupValues property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.CountWorkflowExecutionsResponseAggregationGroupGroupValuesItem>? GroupValues { get; set; }
+        public UntypedNode? GroupValues { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.CountWorkflowExecutionsResponseAggregationGroupGroupValuesItem> GroupValues { get; set; }
+        public UntypedNode GroupValues { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.CountWorkflowExecutionsResponseAggregationGroup"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "count", n => { Count = n.GetStringValue(); } },
-                { "groupValues", n => { GroupValues = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.CountWorkflowExecutionsResponseAggregationGroupGroupValuesItem>(global::Soenneker.Temporal.OpenApiClient.Models.CountWorkflowExecutionsResponseAggregationGroupGroupValuesItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "groupValues", n => { GroupValues = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("count", Count);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.CountWorkflowExecutionsResponseAggregationGroupGroupValuesItem>("groupValues", GroupValues);
+            writer.WriteObjectValue<UntypedNode>("groupValues", GroupValues);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

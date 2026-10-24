@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Activities.Item.ResolveAsCanceled
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v1\namespaces\{namespaceValue}\workflows\{executionWorkflow-id}\activities\{activityId}\resolve-as-canceled
+    /// Builds and executes requests for operations under \api\v1\namespaces\{namespaceValue}\workflows\{executionWorkflowId}\activities\{activityId}\resolve-as-canceled
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ResolveAsCanceledRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ResolveAsCanceledRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespaceValue}/workflows/{executionWorkflow%2Did}/activities/{activityId}/resolve-as-canceled", pathParameters)
+        public ResolveAsCanceledRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/activities/{activityId}/resolve-as-canceled", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ResolveAsCanceledRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespaceValue}/workflows/{executionWorkflow%2Did}/activities/{activityId}/resolve-as-canceled", rawUrl)
+        public ResolveAsCanceledRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/activities/{activityId}/resolve-as-canceled", rawUrl)
         {
         }
         /// <summary>

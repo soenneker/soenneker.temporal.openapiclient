@@ -10,7 +10,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Update
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v1\namespaces\{namespaceValue}\workflows\{executionWorkflow-id}\update
+    /// Builds and executes requests for operations under \api\v1\namespaces\{namespaceValue}\workflows\{executionWorkflowId}\update
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpdateRequestBuilder : BaseRequestBuilder
@@ -32,7 +32,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public UpdateRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespaceValue}/workflows/{executionWorkflow%2Did}/update", pathParameters)
+        public UpdateRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/update", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public UpdateRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespaceValue}/workflows/{executionWorkflow%2Did}/update", rawUrl)
+        public UpdateRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/update", rawUrl)
         {
         }
     }

@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item.Terminate
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v1\namespaces\{namespaceValue}\workflows\{executionWorkflow-id}\terminate
+    /// Builds and executes requests for operations under \api\v1\namespaces\{namespaceValue}\workflows\{executionWorkflowId}\terminate
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TerminateRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TerminateRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespaceValue}/workflows/{executionWorkflow%2Did}/terminate", pathParameters)
+        public TerminateRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/terminate", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.Workflows.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TerminateRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespaceValue}/workflows/{executionWorkflow%2Did}/terminate", rawUrl)
+        public TerminateRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/terminate", rawUrl)
         {
         }
         /// <summary>

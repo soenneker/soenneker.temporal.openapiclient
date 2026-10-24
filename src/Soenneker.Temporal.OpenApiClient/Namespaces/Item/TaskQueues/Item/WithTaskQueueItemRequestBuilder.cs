@@ -3,52 +3,52 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
-using Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Item.UpdateConfig;
-using Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Item.WorkerBuildIdCompatibility;
-using Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Item.WorkerVersioningRules;
 using Soenneker.Temporal.OpenApiClient.Models;
+using Soenneker.Temporal.OpenApiClient.Namespaces.Item.TaskQueues.Item.UpdateConfig;
+using Soenneker.Temporal.OpenApiClient.Namespaces.Item.TaskQueues.Item.WorkerBuildIdCompatibility;
+using Soenneker.Temporal.OpenApiClient.Namespaces.Item.TaskQueues.Item.WorkerVersioningRules;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using System.Threading;
 using System;
-namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Item
+namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.TaskQueues.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\v1\namespaces\{namespaceValue}\task-queues\{taskQueueName-id}
+    /// Builds and executes requests for operations under \namespaces\{namespaceValue}\task-queues\{taskQueue}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class TaskQueueNameItemRequestBuilder : BaseRequestBuilder
+    public partial class WithTaskQueueItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The updateConfig property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Item.UpdateConfig.UpdateConfigRequestBuilder UpdateConfig
+        public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.TaskQueues.Item.UpdateConfig.UpdateConfigRequestBuilder UpdateConfig
         {
-            get => new global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Item.UpdateConfig.UpdateConfigRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.TaskQueues.Item.UpdateConfig.UpdateConfigRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The workerBuildIdCompatibility property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Item.WorkerBuildIdCompatibility.WorkerBuildIdCompatibilityRequestBuilder WorkerBuildIdCompatibility
+        public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.TaskQueues.Item.WorkerBuildIdCompatibility.WorkerBuildIdCompatibilityRequestBuilder WorkerBuildIdCompatibility
         {
-            get => new global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Item.WorkerBuildIdCompatibility.WorkerBuildIdCompatibilityRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.TaskQueues.Item.WorkerBuildIdCompatibility.WorkerBuildIdCompatibilityRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The workerVersioningRules property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Item.WorkerVersioningRules.WorkerVersioningRulesRequestBuilder WorkerVersioningRules
+        public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.TaskQueues.Item.WorkerVersioningRules.WorkerVersioningRulesRequestBuilder WorkerVersioningRules
         {
-            get => new global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Item.WorkerVersioningRules.WorkerVersioningRulesRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.TaskQueues.Item.WorkerVersioningRules.WorkerVersioningRulesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Item.TaskQueueNameItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.TaskQueues.Item.WithTaskQueueItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TaskQueueNameItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespaceValue}/task-queues/{taskQueueName%2Did}{?apiMode*,includeTaskQueueStatus*,reportConfig*,reportPollers*,reportStats*,reportTaskReachability*,taskQueue%2Ekind*,taskQueue%2Ename*,taskQueue%2EnormalName*,taskQueueType*,taskQueueTypes*,versions%2EallActive*,versions%2EbuildIds*,versions%2Eunversioned*}", pathParameters)
+        public WithTaskQueueItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/task-queues/{taskQueue}{?apiMode*,includeTaskQueueStatus*,reportConfig*,reportPollers*,reportStats*,reportTaskReachability*,taskQueue%2Ekind*,taskQueue%2Ename*,taskQueue%2EnormalName*,taskQueueType*,taskQueueTypes*,versions%2EallActive*,versions%2EbuildIds*,versions%2Eunversioned*}", pathParameters)
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Item.TaskQueueNameItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.TaskQueues.Item.WithTaskQueueItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TaskQueueNameItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v1/namespaces/{namespaceValue}/task-queues/{taskQueueName%2Did}{?apiMode*,includeTaskQueueStatus*,reportConfig*,reportPollers*,reportStats*,reportTaskReachability*,taskQueue%2Ekind*,taskQueue%2Ename*,taskQueue%2EnormalName*,taskQueueType*,taskQueueTypes*,versions%2EallActive*,versions%2EbuildIds*,versions%2Eunversioned*}", rawUrl)
+        public WithTaskQueueItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/task-queues/{taskQueue}{?apiMode*,includeTaskQueueStatus*,reportConfig*,reportPollers*,reportStats*,reportTaskReachability*,taskQueue%2Ekind*,taskQueue%2Ename*,taskQueue%2EnormalName*,taskQueueType*,taskQueueTypes*,versions%2EallActive*,versions%2EbuildIds*,versions%2Eunversioned*}", rawUrl)
         {
         }
         /// <summary>
@@ -60,11 +60,11 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Ite
         /// <exception cref="global::Soenneker.Temporal.OpenApiClient.Models.Status">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Item.TaskQueueNameItemRequestBuilder.TaskQueueNameItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.TaskQueues.Item.WithTaskQueueItemRequestBuilder.WithTaskQueueItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Item.TaskQueueNameItemRequestBuilder.TaskQueueNameItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.TaskQueues.Item.WithTaskQueueItemRequestBuilder.WithTaskQueueItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -81,11 +81,11 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Ite
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Item.TaskQueueNameItemRequestBuilder.TaskQueueNameItemRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.TaskQueues.Item.WithTaskQueueItemRequestBuilder.WithTaskQueueItemRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Item.TaskQueueNameItemRequestBuilder.TaskQueueNameItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.TaskQueues.Item.WithTaskQueueItemRequestBuilder.WithTaskQueueItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
@@ -96,21 +96,21 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Ite
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Item.TaskQueueNameItemRequestBuilder"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.TaskQueues.Item.WithTaskQueueItemRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Item.TaskQueueNameItemRequestBuilder WithUrl(string rawUrl)
+        public global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.TaskQueues.Item.WithTaskQueueItemRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Item.TaskQueueNameItemRequestBuilder(rawUrl, RequestAdapter);
+            return new global::Soenneker.Temporal.OpenApiClient.Namespaces.Item.TaskQueues.Item.WithTaskQueueItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
         /// DescribeTaskQueue returns the following information about the target task queue, broken down by Build ID:   - List of pollers   - Workflow Reachability status   - Backlog info for Workflow and/or Activity tasks
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class TaskQueueNameItemRequestBuilderGetQueryParameters 
+        public partial class WithTaskQueueItemRequestBuilderGetQueryParameters 
         {
             /// <summary>Deprecated. ENHANCED mode is also being deprecated. Select the API mode to use for this request: DEFAULT mode (if unset) or ENHANCED mode. Consult the documentation for each field to understand which mode it is supported in.</summary>
             [QueryParameter("apiMode")]
-            public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueApiModeParameter? ApiMode { get; set; }
+            public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueue2ApiModeParameter? ApiMode { get; set; }
             /// <summary>Deprecated, use `report_stats` instead. If true, the task queue status will be included in the response.</summary>
             [QueryParameter("includeTaskQueueStatus")]
             public bool? IncludeTaskQueueStatus { get; set; }
@@ -128,7 +128,7 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Ite
             public bool? ReportTaskReachability { get; set; }
             /// <summary>Default: TASK_QUEUE_KIND_NORMAL.</summary>
             [QueryParameter("taskQueue%2Ekind")]
-            public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueTaskQueueKindParameter? TaskQueueKind { get; set; }
+            public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueue2TaskQueueKindParameter? TaskQueueKind { get; set; }
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             #pragma warning disable CS1591
@@ -154,16 +154,16 @@ namespace Soenneker.Temporal.OpenApiClient.Api.V1.Namespaces.Item.TaskQueues.Ite
 #endif
             /// <summary>If unspecified (TASK_QUEUE_TYPE_UNSPECIFIED), then default value (TASK_QUEUE_TYPE_WORKFLOW) will be used. Only supported in default mode (use `task_queue_types` in ENHANCED mode instead).</summary>
             [QueryParameter("taskQueueType")]
-            public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueTaskQueueTypeParameter? TaskQueueType { get; set; }
+            public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueue2TaskQueueTypeParameter? TaskQueueType { get; set; }
             /// <summary>Deprecated (as part of the ENHANCED mode deprecation). Task queue types to report info about. If not specified, all types are considered.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("taskQueueTypes")]
-            public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueTaskQueueTypesParameterItem[]? TaskQueueTypes { get; set; }
+            public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueue2TaskQueueTypesParameterItem[]? TaskQueueTypes { get; set; }
 #nullable restore
 #else
             [QueryParameter("taskQueueTypes")]
-            public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueTaskQueueTypesParameterItem[] TaskQueueTypes { get; set; }
+            public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueue2TaskQueueTypesParameterItem[] TaskQueueTypes { get; set; }
 #endif
             /// <summary>Include all active versions. A version is considered active if, in the last few minutes, it has had new tasks or polls, or it has been the subject of certain task queue API calls.</summary>
             [QueryParameter("versions%2EallActive")]

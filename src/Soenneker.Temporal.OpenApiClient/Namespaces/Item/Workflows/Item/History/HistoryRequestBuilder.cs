@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.History
 {
     /// <summary>
-    /// Builds and executes requests for operations under \namespaces\{namespaceValue}\workflows\{executionWorkflow-id}\history
+    /// Builds and executes requests for operations under \namespaces\{namespaceValue}\workflows\{executionWorkflowId}\history
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class HistoryRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Histor
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public HistoryRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/workflows/{executionWorkflow%2Did}/history{?execution%2ErunId*,execution%2EworkflowId*,historyEventFilterType*,maximumPageSize*,nextPageToken*,skipArchival*,waitNewEvent*}", pathParameters)
+        public HistoryRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/history{?execution%2ErunId*,execution%2EworkflowId*,historyEventFilterType*,maximumPageSize*,nextPageToken*,skipArchival*,waitNewEvent*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Histor
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public HistoryRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/workflows/{executionWorkflow%2Did}/history{?execution%2ErunId*,execution%2EworkflowId*,historyEventFilterType*,maximumPageSize*,nextPageToken*,skipArchival*,waitNewEvent*}", rawUrl)
+        public HistoryRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/history{?execution%2ErunId*,execution%2EworkflowId*,historyEventFilterType*,maximumPageSize*,nextPageToken*,skipArchival*,waitNewEvent*}", rawUrl)
         {
         }
         /// <summary>

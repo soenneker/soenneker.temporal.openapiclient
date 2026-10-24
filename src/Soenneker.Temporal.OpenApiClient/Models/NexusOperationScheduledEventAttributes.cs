@@ -34,10 +34,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Input for the operation. The server converts this into Nexus request content and the appropriate content headers internally when sending the StartOperation request. On the handler side, if it is also backed by Temporal, the content is transformed back to the original Payload stored in this event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationScheduledEventAttributesInput? Input { get; set; }
+        public UntypedNode? Input { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationScheduledEventAttributesInput Input { get; set; }
+        public UntypedNode Input { get; set; }
 #endif
         /// <summary>Header to attach to the Nexus request. Note these headers are not the same as Temporal headers on internal activities and child workflows, these are transmitted to Nexus operations that may be external and are not traditional payloads.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -130,7 +130,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             {
                 { "endpoint", n => { Endpoint = n.GetStringValue(); } },
                 { "endpointId", n => { EndpointId = n.GetStringValue(); } },
-                { "input", n => { Input = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationScheduledEventAttributesInput>(global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationScheduledEventAttributesInput.CreateFromDiscriminatorValue); } },
+                { "input", n => { Input = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "nexusHeader", n => { NexusHeader = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationScheduledEventAttributesNexusHeaderProperty>(global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationScheduledEventAttributesNexusHeaderProperty.CreateFromDiscriminatorValue); } },
                 { "operation", n => { Operation = n.GetStringValue(); } },
                 { "requestId", n => { RequestId = n.GetStringValue(); } },
@@ -150,7 +150,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("endpoint", Endpoint);
             writer.WriteStringValue("endpointId", EndpointId);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationScheduledEventAttributesInput>("input", Input);
+            writer.WriteObjectValue<UntypedNode>("input", Input);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationScheduledEventAttributesNexusHeaderProperty>("nexusHeader", NexusHeader);
             writer.WriteStringValue("operation", Operation);
             writer.WriteStringValue("requestId", RequestId);

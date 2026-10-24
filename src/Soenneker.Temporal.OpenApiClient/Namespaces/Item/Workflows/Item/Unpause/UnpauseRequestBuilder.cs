@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Unpause
 {
     /// <summary>
-    /// Builds and executes requests for operations under \namespaces\{namespaceValue}\workflows\{executionWorkflow-id}\unpause
+    /// Builds and executes requests for operations under \namespaces\{namespaceValue}\workflows\{executionWorkflowId}\unpause
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UnpauseRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Unpaus
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public UnpauseRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/workflows/{executionWorkflow%2Did}/unpause", pathParameters)
+        public UnpauseRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/unpause", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Temporal.OpenApiClient.Namespaces.Item.Workflows.Item.Unpaus
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public UnpauseRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/workflows/{executionWorkflow%2Did}/unpause", rawUrl)
+        public UnpauseRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/namespaces/{namespaceValue}/workflows/{executionWorkflowId}/unpause", rawUrl)
         {
         }
         /// <summary>

@@ -33,10 +33,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The result if the operation completed successfully.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.PollNexusOperationExecutionResponseResult? Result { get; set; }
+        public UntypedNode? Result { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.PollNexusOperationExecutionResponseResult Result { get; set; }
+        public UntypedNode Result { get; set; }
 #endif
         /// <summary>The run ID of the operation, useful when run_id was not specified in the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -75,7 +75,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             {
                 { "failure", n => { Failure = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PollNexusOperationExecutionResponseFailure>(global::Soenneker.Temporal.OpenApiClient.Models.PollNexusOperationExecutionResponseFailure.CreateFromDiscriminatorValue); } },
                 { "operationToken", n => { OperationToken = n.GetStringValue(); } },
-                { "result", n => { Result = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PollNexusOperationExecutionResponseResult>(global::Soenneker.Temporal.OpenApiClient.Models.PollNexusOperationExecutionResponseResult.CreateFromDiscriminatorValue); } },
+                { "result", n => { Result = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "runId", n => { RunId = n.GetStringValue(); } },
                 { "waitStage", n => { WaitStage = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.PollNexusOperationExecutionResponseWaitStage>(); } },
             };
@@ -89,7 +89,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PollNexusOperationExecutionResponseFailure>("failure", Failure);
             writer.WriteStringValue("operationToken", OperationToken);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PollNexusOperationExecutionResponseResult>("result", Result);
+            writer.WriteObjectValue<UntypedNode>("result", Result);
             writer.WriteStringValue("runId", RunId);
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.PollNexusOperationExecutionResponseWaitStage>("waitStage", WaitStage);
             writer.WriteAdditionalData(AdditionalData);

@@ -18,18 +18,18 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Long-form text that provides details. This payload should be a &quot;json/plain&quot;-encoded payload that is a single JSON string for use in user interfaces. User interface formatting may apply to this text in common use. The payload data section is limited to 20000 bytes by default.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.UserMetadataDetails? Details { get; set; }
+        public UntypedNode? Details { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.UserMetadataDetails Details { get; set; }
+        public UntypedNode Details { get; set; }
 #endif
         /// <summary>Short-form text that provides a summary. This payload should be a &quot;json/plain&quot;-encoded payload that is a single JSON string for use in user interfaces. User interface formatting may not apply to this text when used in &quot;title&quot; situations. The payload data section is limited to 400 bytes by default.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.UserMetadataSummary? Summary { get; set; }
+        public UntypedNode? Summary { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.UserMetadataSummary Summary { get; set; }
+        public UntypedNode Summary { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionRequestUserMetadata"/> and sets the default values.
@@ -56,8 +56,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "details", n => { Details = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UserMetadataDetails>(global::Soenneker.Temporal.OpenApiClient.Models.UserMetadataDetails.CreateFromDiscriminatorValue); } },
-                { "summary", n => { Summary = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UserMetadataSummary>(global::Soenneker.Temporal.OpenApiClient.Models.UserMetadataSummary.CreateFromDiscriminatorValue); } },
+                { "details", n => { Details = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "summary", n => { Summary = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,8 +67,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UserMetadataDetails>("details", Details);
-            writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UserMetadataSummary>("summary", Summary);
+            writer.WriteObjectValue<UntypedNode>("details", Details);
+            writer.WriteObjectValue<UntypedNode>("summary", Summary);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
