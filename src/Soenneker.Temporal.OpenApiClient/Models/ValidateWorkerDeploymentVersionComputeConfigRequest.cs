@@ -12,48 +12,70 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ValidateWorkerDeploymentVersionComputeConfigRequest : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("computeConfigScalingGroups") is { } nullNodeComputeConfigScalingGroups && nullNodeComputeConfigScalingGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ComputeConfigScalingGroups = null;
+            if (parseNode.GetChildNode("deploymentVersion") is { } nullNodeDeploymentVersion && nullNodeDeploymentVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeploymentVersion = null;
+            if (parseNode.GetChildNode("identity") is { } nullNodeIdentity && nullNodeIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Identity = null;
+            if (parseNode.GetChildNode("namespace") is { } nullNodeNamespace && nullNodeNamespace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Namespace = null;
+            if (parseNode.GetChildNode("removeComputeConfigScalingGroups") is { } nullNodeRemoveComputeConfigScalingGroups && nullNodeRemoveComputeConfigScalingGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RemoveComputeConfigScalingGroups = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Optional. Contains the compute config scaling groups to add or update for the Worker Deployment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ValidateWorkerDeploymentVersionComputeConfigRequestComputeConfigScalingGroupsProperty? ComputeConfigScalingGroups { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ValidateWorkerDeploymentVersionComputeConfigRequestComputeConfigScalingGroupsProperty? ComputeConfigScalingGroups { get => _explicitNullValueComputeConfigScalingGroups; set { _explicitNullValueComputeConfigScalingGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("computeConfigScalingGroups"); else _explicitNullProperties?.Remove("computeConfigScalingGroups"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ValidateWorkerDeploymentVersionComputeConfigRequestComputeConfigScalingGroupsProperty? _explicitNullValueComputeConfigScalingGroups = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ValidateWorkerDeploymentVersionComputeConfigRequestComputeConfigScalingGroupsProperty ComputeConfigScalingGroups { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ValidateWorkerDeploymentVersionComputeConfigRequestComputeConfigScalingGroupsProperty ComputeConfigScalingGroups { get => _explicitNullValueComputeConfigScalingGroups; set { _explicitNullValueComputeConfigScalingGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("computeConfigScalingGroups"); else _explicitNullProperties?.Remove("computeConfigScalingGroups"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ValidateWorkerDeploymentVersionComputeConfigRequestComputeConfigScalingGroupsProperty _explicitNullValueComputeConfigScalingGroups = default!;
 #endif
         /// <summary>Required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ValidateWorkerDeploymentVersionComputeConfigRequestDeploymentVersion? DeploymentVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ValidateWorkerDeploymentVersionComputeConfigRequestDeploymentVersion? DeploymentVersion { get => _explicitNullValueDeploymentVersion; set { _explicitNullValueDeploymentVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploymentVersion"); else _explicitNullProperties?.Remove("deploymentVersion"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ValidateWorkerDeploymentVersionComputeConfigRequestDeploymentVersion? _explicitNullValueDeploymentVersion = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ValidateWorkerDeploymentVersionComputeConfigRequestDeploymentVersion DeploymentVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ValidateWorkerDeploymentVersionComputeConfigRequestDeploymentVersion DeploymentVersion { get => _explicitNullValueDeploymentVersion; set { _explicitNullValueDeploymentVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploymentVersion"); else _explicitNullProperties?.Remove("deploymentVersion"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ValidateWorkerDeploymentVersionComputeConfigRequestDeploymentVersion _explicitNullValueDeploymentVersion = default!;
 #endif
         /// <summary>Optional. The identity of the client who initiated this request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Identity { get; set; }
+        public string? Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity"); else _explicitNullProperties?.Remove("identity"); } }
+        private string? _explicitNullValueIdentity = default!;
 #nullable restore
 #else
-        public string Identity { get; set; }
+        public string Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity"); else _explicitNullProperties?.Remove("identity"); } }
+        private string _explicitNullValueIdentity = default!;
 #endif
         /// <summary>The namespace property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Namespace { get; set; }
+        public string? Namespace { get => _explicitNullValueNamespace; set { _explicitNullValueNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace"); else _explicitNullProperties?.Remove("namespace"); } }
+        private string? _explicitNullValueNamespace = default!;
 #nullable restore
 #else
-        public string Namespace { get; set; }
+        public string Namespace { get => _explicitNullValueNamespace; set { _explicitNullValueNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace"); else _explicitNullProperties?.Remove("namespace"); } }
+        private string _explicitNullValueNamespace = default!;
 #endif
         /// <summary>Optional. Contains the compute config scaling groups to remove from the Worker Deployment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? RemoveComputeConfigScalingGroups { get; set; }
+        public List<string>? RemoveComputeConfigScalingGroups { get => _explicitNullValueRemoveComputeConfigScalingGroups; set { _explicitNullValueRemoveComputeConfigScalingGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("removeComputeConfigScalingGroups"); else _explicitNullProperties?.Remove("removeComputeConfigScalingGroups"); } }
+        private List<string>? _explicitNullValueRemoveComputeConfigScalingGroups = default!;
 #nullable restore
 #else
-        public List<string> RemoveComputeConfigScalingGroups { get; set; }
+        public List<string> RemoveComputeConfigScalingGroups { get => _explicitNullValueRemoveComputeConfigScalingGroups; set { _explicitNullValueRemoveComputeConfigScalingGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("removeComputeConfigScalingGroups"); else _explicitNullProperties?.Remove("removeComputeConfigScalingGroups"); } }
+        private List<string> _explicitNullValueRemoveComputeConfigScalingGroups = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.ValidateWorkerDeploymentVersionComputeConfigRequest"/> and sets the default values.
@@ -70,7 +92,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.ValidateWorkerDeploymentVersionComputeConfigRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.ValidateWorkerDeploymentVersionComputeConfigRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.ValidateWorkerDeploymentVersionComputeConfigRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -99,6 +121,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("identity", Identity);
             writer.WriteStringValue("namespace", Namespace);
             writer.WriteCollectionOfPrimitiveValues<string>("removeComputeConfigScalingGroups", RemoveComputeConfigScalingGroups);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

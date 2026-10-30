@@ -12,40 +12,59 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BatchOperationSignal : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("header") is { } nullNodeHeader && nullNodeHeader.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Header = null;
+            if (parseNode.GetChildNode("identity") is { } nullNodeIdentity && nullNodeIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Identity = null;
+            if (parseNode.GetChildNode("input") is { } nullNodeInput && nullNodeInput.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Input = null;
+            if (parseNode.GetChildNode("signal") is { } nullNodeSignal && nullNodeSignal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Signal = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Headers that are passed with the signal to the processing workflow. These can include things like auth or tracing tokens.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationSignalHeader? Header { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationSignalHeader? Header { get => _explicitNullValueHeader; set { _explicitNullValueHeader = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("header"); else _explicitNullProperties?.Remove("header"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationSignalHeader? _explicitNullValueHeader = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationSignalHeader Header { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationSignalHeader Header { get => _explicitNullValueHeader; set { _explicitNullValueHeader = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("header"); else _explicitNullProperties?.Remove("header"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationSignalHeader _explicitNullValueHeader = default!;
 #endif
         /// <summary>The identity of the worker/client</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Identity { get; set; }
+        public string? Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity"); else _explicitNullProperties?.Remove("identity"); } }
+        private string? _explicitNullValueIdentity = default!;
 #nullable restore
 #else
-        public string Identity { get; set; }
+        public string Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity"); else _explicitNullProperties?.Remove("identity"); } }
+        private string _explicitNullValueIdentity = default!;
 #endif
         /// <summary>Serialized value(s) to provide with the signal</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationSignalInput? Input { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationSignalInput? Input { get => _explicitNullValueInput; set { _explicitNullValueInput = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("input"); else _explicitNullProperties?.Remove("input"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationSignalInput? _explicitNullValueInput = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationSignalInput Input { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationSignalInput Input { get => _explicitNullValueInput; set { _explicitNullValueInput = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("input"); else _explicitNullProperties?.Remove("input"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationSignalInput _explicitNullValueInput = default!;
 #endif
         /// <summary>The workflow author-defined name of the signal to send to the workflow</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Signal { get; set; }
+        public string? Signal { get => _explicitNullValueSignal; set { _explicitNullValueSignal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signal"); else _explicitNullProperties?.Remove("signal"); } }
+        private string? _explicitNullValueSignal = default!;
 #nullable restore
 #else
-        public string Signal { get; set; }
+        public string Signal { get => _explicitNullValueSignal; set { _explicitNullValueSignal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signal"); else _explicitNullProperties?.Remove("signal"); } }
+        private string _explicitNullValueSignal = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationSignal"/> and sets the default values.
@@ -62,7 +81,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationSignal CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationSignal();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationSignal(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,6 +108,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("identity", Identity);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationSignalInput>("input", Input);
             writer.WriteStringValue("signal", Signal);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

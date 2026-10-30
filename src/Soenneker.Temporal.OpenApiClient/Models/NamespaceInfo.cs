@@ -11,69 +11,101 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class NamespaceInfo : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("capabilities") is { } nullNodeCapabilities && nullNodeCapabilities.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Capabilities = null;
+            if (parseNode.GetChildNode("data") is { } nullNodeData && nullNodeData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Data = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("limits") is { } nullNodeLimits && nullNodeLimits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Limits = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("ownerEmail") is { } nullNodeOwnerEmail && nullNodeOwnerEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OwnerEmail = null;
+            if (parseNode.GetChildNode("state") is { } nullNodeState && nullNodeState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) State = null;
+            if (parseNode.GetChildNode("supportsSchedules") is { } nullNodeSupportsSchedules && nullNodeSupportsSchedules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportsSchedules = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>All capabilities the namespace supports.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoCapabilitiesComposed? Capabilities { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoCapabilitiesComposed? Capabilities { get => _explicitNullValueCapabilities; set { _explicitNullValueCapabilities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capabilities"); else _explicitNullProperties?.Remove("capabilities"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoCapabilitiesComposed? _explicitNullValueCapabilities = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoCapabilitiesComposed Capabilities { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoCapabilitiesComposed Capabilities { get => _explicitNullValueCapabilities; set { _explicitNullValueCapabilities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capabilities"); else _explicitNullProperties?.Remove("capabilities"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoCapabilitiesComposed _explicitNullValueCapabilities = default!;
 #endif
         /// <summary>A key-value map for any customized purpose.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoDataProperty? Data { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoDataProperty? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoDataProperty? _explicitNullValueData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoDataProperty Data { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoDataProperty Data { get => _explicitNullValueData; set { _explicitNullValueData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoDataProperty _explicitNullValueData = default!;
 #endif
         /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>Namespace configured limits</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoLimitsComposed? Limits { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoLimitsComposed? Limits { get => _explicitNullValueLimits; set { _explicitNullValueLimits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("limits"); else _explicitNullProperties?.Remove("limits"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoLimitsComposed? _explicitNullValueLimits = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoLimitsComposed Limits { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoLimitsComposed Limits { get => _explicitNullValueLimits; set { _explicitNullValueLimits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("limits"); else _explicitNullProperties?.Remove("limits"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoLimitsComposed _explicitNullValueLimits = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The ownerEmail property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OwnerEmail { get; set; }
+        public string? OwnerEmail { get => _explicitNullValueOwnerEmail; set { _explicitNullValueOwnerEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownerEmail"); else _explicitNullProperties?.Remove("ownerEmail"); } }
+        private string? _explicitNullValueOwnerEmail = default!;
 #nullable restore
 #else
-        public string OwnerEmail { get; set; }
+        public string OwnerEmail { get => _explicitNullValueOwnerEmail; set { _explicitNullValueOwnerEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownerEmail"); else _explicitNullProperties?.Remove("ownerEmail"); } }
+        private string _explicitNullValueOwnerEmail = default!;
 #endif
         /// <summary>The state property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoState? State { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoState? State { get => _explicitNullValueState; set { _explicitNullValueState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state"); else _explicitNullProperties?.Remove("state"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoState? _explicitNullValueState = default!;
         /// <summary>Whether scheduled workflows are supported on this namespace. This is only needed temporarily while the feature is experimental, so we can give it a high tag.</summary>
-        public bool? SupportsSchedules { get; set; }
+        public bool? SupportsSchedules { get => _explicitNullValueSupportsSchedules; set { _explicitNullValueSupportsSchedules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supportsSchedules"); else _explicitNullProperties?.Remove("supportsSchedules"); } }
+        private bool? _explicitNullValueSupportsSchedules = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo"/> and sets the default values.
         /// </summary>
@@ -89,7 +121,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -126,6 +158,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("ownerEmail", OwnerEmail);
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoState>("state", State);
             writer.WriteBoolValue("supportsSchedules", SupportsSchedules);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

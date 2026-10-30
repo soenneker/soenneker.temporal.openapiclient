@@ -12,134 +12,192 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class StartWorkflowExecutionResponseEagerWorkflowTask : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("attempt") is { } nullNodeAttempt && nullNodeAttempt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attempt = null;
+            if (parseNode.GetChildNode("backlogCountHint") is { } nullNodeBacklogCountHint && nullNodeBacklogCountHint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BacklogCountHint = null;
+            if (parseNode.GetChildNode("history") is { } nullNodeHistory && nullNodeHistory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) History = null;
+            if (parseNode.GetChildNode("messages") is { } nullNodeMessages && nullNodeMessages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Messages = null;
+            if (parseNode.GetChildNode("nextPageToken") is { } nullNodeNextPageToken && nullNodeNextPageToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextPageToken = null;
+            if (parseNode.GetChildNode("pollerGroupId") is { } nullNodePollerGroupId && nullNodePollerGroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PollerGroupId = null;
+            if (parseNode.GetChildNode("pollerGroupInfos") is { } nullNodePollerGroupInfos && nullNodePollerGroupInfos.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PollerGroupInfos = null;
+            if (parseNode.GetChildNode("pollerScalingDecision") is { } nullNodePollerScalingDecision && nullNodePollerScalingDecision.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PollerScalingDecision = null;
+            if (parseNode.GetChildNode("previousStartedEventId") is { } nullNodePreviousStartedEventId && nullNodePreviousStartedEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreviousStartedEventId = null;
+            if (parseNode.GetChildNode("queries") is { } nullNodeQueries && nullNodeQueries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Queries = null;
+            if (parseNode.GetChildNode("query") is { } nullNodeQuery && nullNodeQuery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Query = null;
+            if (parseNode.GetChildNode("scheduledTime") is { } nullNodeScheduledTime && nullNodeScheduledTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduledTime = null;
+            if (parseNode.GetChildNode("startedEventId") is { } nullNodeStartedEventId && nullNodeStartedEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartedEventId = null;
+            if (parseNode.GetChildNode("startedTime") is { } nullNodeStartedTime && nullNodeStartedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartedTime = null;
+            if (parseNode.GetChildNode("taskToken") is { } nullNodeTaskToken && nullNodeTaskToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskToken = null;
+            if (parseNode.GetChildNode("workflowExecution") is { } nullNodeWorkflowExecution && nullNodeWorkflowExecution.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowExecution = null;
+            if (parseNode.GetChildNode("workflowExecutionTaskQueue") is { } nullNodeWorkflowExecutionTaskQueue && nullNodeWorkflowExecutionTaskQueue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowExecutionTaskQueue = null;
+            if (parseNode.GetChildNode("workflowType") is { } nullNodeWorkflowType && nullNodeWorkflowType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Starting at 1, the number of attempts to complete this task by any worker.</summary>
-        public int? Attempt { get; set; }
+        public int? Attempt { get => _explicitNullValueAttempt; set { _explicitNullValueAttempt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attempt"); else _explicitNullProperties?.Remove("attempt"); } }
+        private int? _explicitNullValueAttempt = default!;
         /// <summary>A hint that there are more tasks already present in this task queue partition. Can be used to prioritize draining a sticky queue. Specifically, the returned number is the number of tasks remaining in the in-memory buffer for this partition, which is currently capped at 1000. Because sticky queues only have one partition, this number is more useful when draining them. Normal queues, typically having more than one partition, will return a number representing only some portion of the overall backlog. Subsequent RPCs may not hit the same partition as this call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BacklogCountHint { get; set; }
+        public string? BacklogCountHint { get => _explicitNullValueBacklogCountHint; set { _explicitNullValueBacklogCountHint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("backlogCountHint"); else _explicitNullProperties?.Remove("backlogCountHint"); } }
+        private string? _explicitNullValueBacklogCountHint = default!;
 #nullable restore
 #else
-        public string BacklogCountHint { get; set; }
+        public string BacklogCountHint { get => _explicitNullValueBacklogCountHint; set { _explicitNullValueBacklogCountHint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("backlogCountHint"); else _explicitNullProperties?.Remove("backlogCountHint"); } }
+        private string _explicitNullValueBacklogCountHint = default!;
 #endif
         /// <summary>The history for this workflow, which will either be complete or partial. Partial histories are sent to workers who have signaled that they are using a sticky queue when completing a workflow task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.PollWorkflowTaskQueueResponseHistory? History { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PollWorkflowTaskQueueResponseHistory? History { get => _explicitNullValueHistory; set { _explicitNullValueHistory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("history"); else _explicitNullProperties?.Remove("history"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.PollWorkflowTaskQueueResponseHistory? _explicitNullValueHistory = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.PollWorkflowTaskQueueResponseHistory History { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PollWorkflowTaskQueueResponseHistory History { get => _explicitNullValueHistory; set { _explicitNullValueHistory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("history"); else _explicitNullProperties?.Remove("history"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.PollWorkflowTaskQueueResponseHistory _explicitNullValueHistory = default!;
 #endif
         /// <summary>Protocol messages piggybacking on a WFT as a transport</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.Message>? Messages { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.Message>? Messages { get => _explicitNullValueMessages; set { _explicitNullValueMessages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messages"); else _explicitNullProperties?.Remove("messages"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.Message>? _explicitNullValueMessages = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.Message> Messages { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.Message> Messages { get => _explicitNullValueMessages; set { _explicitNullValueMessages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messages"); else _explicitNullProperties?.Remove("messages"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.Message> _explicitNullValueMessages = default!;
 #endif
         /// <summary>Will be set if there are more history events than were included in this response. Such events should be fetched via `GetWorkflowExecutionHistory`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NextPageToken { get; set; }
+        public string? NextPageToken { get => _explicitNullValueNextPageToken; set { _explicitNullValueNextPageToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nextPageToken"); else _explicitNullProperties?.Remove("nextPageToken"); } }
+        private string? _explicitNullValueNextPageToken = default!;
 #nullable restore
 #else
-        public string NextPageToken { get; set; }
+        public string NextPageToken { get => _explicitNullValueNextPageToken; set { _explicitNullValueNextPageToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nextPageToken"); else _explicitNullProperties?.Remove("nextPageToken"); } }
+        private string _explicitNullValueNextPageToken = default!;
 #endif
         /// <summary>This poller group ID identifies the owner of the workflow task awaiting for query response. Corresponding RespondQueryTaskCompleted should pass this value for proper routing.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PollerGroupId { get; set; }
+        public string? PollerGroupId { get => _explicitNullValuePollerGroupId; set { _explicitNullValuePollerGroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pollerGroupId"); else _explicitNullProperties?.Remove("pollerGroupId"); } }
+        private string? _explicitNullValuePollerGroupId = default!;
 #nullable restore
 #else
-        public string PollerGroupId { get; set; }
+        public string PollerGroupId { get => _explicitNullValuePollerGroupId; set { _explicitNullValuePollerGroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pollerGroupId"); else _explicitNullProperties?.Remove("pollerGroupId"); } }
+        private string _explicitNullValuePollerGroupId = default!;
 #endif
         /// <summary>The weighted list of poller groups IDs that client should use for future polls to this task queue. Client is expected to:   1. Maintain minimum number of pollers no less than the number of groups.   2. Try to assign the next poll to a group without any pending polls,   3. If every group has some pending polls, assign the next poll to a group randomly     according to the weights.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.PollerGroupInfo>? PollerGroupInfos { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.PollerGroupInfo>? PollerGroupInfos { get => _explicitNullValuePollerGroupInfos; set { _explicitNullValuePollerGroupInfos = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pollerGroupInfos"); else _explicitNullProperties?.Remove("pollerGroupInfos"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.PollerGroupInfo>? _explicitNullValuePollerGroupInfos = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.PollerGroupInfo> PollerGroupInfos { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.PollerGroupInfo> PollerGroupInfos { get => _explicitNullValuePollerGroupInfos; set { _explicitNullValuePollerGroupInfos = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pollerGroupInfos"); else _explicitNullProperties?.Remove("pollerGroupInfos"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.PollerGroupInfo> _explicitNullValuePollerGroupInfos = default!;
 #endif
         /// <summary>Server-advised information the SDK may use to adjust its poller count.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.PollWorkflowTaskQueueResponsePollerScalingDecision? PollerScalingDecision { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PollWorkflowTaskQueueResponsePollerScalingDecision? PollerScalingDecision { get => _explicitNullValuePollerScalingDecision; set { _explicitNullValuePollerScalingDecision = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pollerScalingDecision"); else _explicitNullProperties?.Remove("pollerScalingDecision"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.PollWorkflowTaskQueueResponsePollerScalingDecision? _explicitNullValuePollerScalingDecision = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.PollWorkflowTaskQueueResponsePollerScalingDecision PollerScalingDecision { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PollWorkflowTaskQueueResponsePollerScalingDecision PollerScalingDecision { get => _explicitNullValuePollerScalingDecision; set { _explicitNullValuePollerScalingDecision = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pollerScalingDecision"); else _explicitNullProperties?.Remove("pollerScalingDecision"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.PollWorkflowTaskQueueResponsePollerScalingDecision _explicitNullValuePollerScalingDecision = default!;
 #endif
         /// <summary>The last workflow task started event which was processed by some worker for this execution. Will be zero if no task has ever started.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PreviousStartedEventId { get; set; }
+        public string? PreviousStartedEventId { get => _explicitNullValuePreviousStartedEventId; set { _explicitNullValuePreviousStartedEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previousStartedEventId"); else _explicitNullProperties?.Remove("previousStartedEventId"); } }
+        private string? _explicitNullValuePreviousStartedEventId = default!;
 #nullable restore
 #else
-        public string PreviousStartedEventId { get; set; }
+        public string PreviousStartedEventId { get => _explicitNullValuePreviousStartedEventId; set { _explicitNullValuePreviousStartedEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previousStartedEventId"); else _explicitNullProperties?.Remove("previousStartedEventId"); } }
+        private string _explicitNullValuePreviousStartedEventId = default!;
 #endif
         /// <summary>Queries that should be executed after applying the history in this task. Responses should be attached to `RespondWorkflowTaskCompletedRequest::query_results`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseEagerWorkflowTaskQueries? Queries { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseEagerWorkflowTaskQueries? Queries { get => _explicitNullValueQueries; set { _explicitNullValueQueries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queries"); else _explicitNullProperties?.Remove("queries"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseEagerWorkflowTaskQueries? _explicitNullValueQueries = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseEagerWorkflowTaskQueries Queries { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseEagerWorkflowTaskQueries Queries { get => _explicitNullValueQueries; set { _explicitNullValueQueries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queries"); else _explicitNullProperties?.Remove("queries"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseEagerWorkflowTaskQueries _explicitNullValueQueries = default!;
 #endif
         /// <summary>Legacy queries appear in this field. The query must be responded to via `RespondQueryTaskCompleted`. If the workflow is already closed (queries are permitted on closed workflows) then the `history` field will be populated with the entire history. It may also be populated if this task originates on a non-sticky queue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.PollWorkflowTaskQueueResponseQuery? Query { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PollWorkflowTaskQueueResponseQuery? Query { get => _explicitNullValueQuery; set { _explicitNullValueQuery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("query"); else _explicitNullProperties?.Remove("query"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.PollWorkflowTaskQueueResponseQuery? _explicitNullValueQuery = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.PollWorkflowTaskQueueResponseQuery Query { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PollWorkflowTaskQueueResponseQuery Query { get => _explicitNullValueQuery; set { _explicitNullValueQuery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("query"); else _explicitNullProperties?.Remove("query"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.PollWorkflowTaskQueueResponseQuery _explicitNullValueQuery = default!;
 #endif
         /// <summary>When this task was scheduled by the server</summary>
-        public DateTimeOffset? ScheduledTime { get; set; }
+        public DateTimeOffset? ScheduledTime { get => _explicitNullValueScheduledTime; set { _explicitNullValueScheduledTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduledTime"); else _explicitNullProperties?.Remove("scheduledTime"); } }
+        private DateTimeOffset? _explicitNullValueScheduledTime = default!;
         /// <summary>The id of the most recent workflow task started event, which will have been generated as a result of this poll request being served. Will be zero if the task does not contain any events which would advance history (no new WFT started). Currently this can happen for queries.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartedEventId { get; set; }
+        public string? StartedEventId { get => _explicitNullValueStartedEventId; set { _explicitNullValueStartedEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startedEventId"); else _explicitNullProperties?.Remove("startedEventId"); } }
+        private string? _explicitNullValueStartedEventId = default!;
 #nullable restore
 #else
-        public string StartedEventId { get; set; }
+        public string StartedEventId { get => _explicitNullValueStartedEventId; set { _explicitNullValueStartedEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startedEventId"); else _explicitNullProperties?.Remove("startedEventId"); } }
+        private string _explicitNullValueStartedEventId = default!;
 #endif
         /// <summary>When the current workflow task started event was generated, meaning the current attempt.</summary>
-        public DateTimeOffset? StartedTime { get; set; }
+        public DateTimeOffset? StartedTime { get => _explicitNullValueStartedTime; set { _explicitNullValueStartedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startedTime"); else _explicitNullProperties?.Remove("startedTime"); } }
+        private DateTimeOffset? _explicitNullValueStartedTime = default!;
         /// <summary>A unique identifier for this task</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TaskToken { get; set; }
+        public string? TaskToken { get => _explicitNullValueTaskToken; set { _explicitNullValueTaskToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taskToken"); else _explicitNullProperties?.Remove("taskToken"); } }
+        private string? _explicitNullValueTaskToken = default!;
 #nullable restore
 #else
-        public string TaskToken { get; set; }
+        public string TaskToken { get => _explicitNullValueTaskToken; set { _explicitNullValueTaskToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taskToken"); else _explicitNullProperties?.Remove("taskToken"); } }
+        private string _explicitNullValueTaskToken = default!;
 #endif
         /// <summary>Identifies a specific workflow within a namespace. Practically speaking, because run_id is a uuid, a workflow execution is globally unique. Note that many commands allow specifying an empty run id as a way of saying &quot;target the latest run of the workflow&quot;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution? WorkflowExecution { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution? WorkflowExecution { get => _explicitNullValueWorkflowExecution; set { _explicitNullValueWorkflowExecution = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecution"); else _explicitNullProperties?.Remove("workflowExecution"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution? _explicitNullValueWorkflowExecution = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution WorkflowExecution { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution WorkflowExecution { get => _explicitNullValueWorkflowExecution; set { _explicitNullValueWorkflowExecution = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecution"); else _explicitNullProperties?.Remove("workflowExecution"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution _explicitNullValueWorkflowExecution = default!;
 #endif
         /// <summary>The task queue this task originated from, which will always be the original non-sticky name for the queue, even if this response came from polling a sticky queue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.PollWorkflowTaskQueueResponseWorkflowExecutionTaskQueue? WorkflowExecutionTaskQueue { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PollWorkflowTaskQueueResponseWorkflowExecutionTaskQueue? WorkflowExecutionTaskQueue { get => _explicitNullValueWorkflowExecutionTaskQueue; set { _explicitNullValueWorkflowExecutionTaskQueue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionTaskQueue"); else _explicitNullProperties?.Remove("workflowExecutionTaskQueue"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.PollWorkflowTaskQueueResponseWorkflowExecutionTaskQueue? _explicitNullValueWorkflowExecutionTaskQueue = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.PollWorkflowTaskQueueResponseWorkflowExecutionTaskQueue WorkflowExecutionTaskQueue { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PollWorkflowTaskQueueResponseWorkflowExecutionTaskQueue WorkflowExecutionTaskQueue { get => _explicitNullValueWorkflowExecutionTaskQueue; set { _explicitNullValueWorkflowExecutionTaskQueue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionTaskQueue"); else _explicitNullProperties?.Remove("workflowExecutionTaskQueue"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.PollWorkflowTaskQueueResponseWorkflowExecutionTaskQueue _explicitNullValueWorkflowExecutionTaskQueue = default!;
 #endif
         /// <summary>Represents the identifier used by a workflow author to define the workflow. Typically, the name of a function. This is sometimes referred to as the workflow&apos;s &quot;name&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowType? WorkflowType { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowType? WorkflowType { get => _explicitNullValueWorkflowType; set { _explicitNullValueWorkflowType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowType"); else _explicitNullProperties?.Remove("workflowType"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowType? _explicitNullValueWorkflowType = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowType WorkflowType { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowType WorkflowType { get => _explicitNullValueWorkflowType; set { _explicitNullValueWorkflowType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowType"); else _explicitNullProperties?.Remove("workflowType"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowType _explicitNullValueWorkflowType = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseEagerWorkflowTask"/> and sets the default values.
@@ -156,7 +214,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseEagerWorkflowTask CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseEagerWorkflowTask();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseEagerWorkflowTask(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -211,6 +269,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution>("workflowExecution", WorkflowExecution);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PollWorkflowTaskQueueResponseWorkflowExecutionTaskQueue>("workflowExecutionTaskQueue", WorkflowExecutionTaskQueue);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowType>("workflowType", WorkflowType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

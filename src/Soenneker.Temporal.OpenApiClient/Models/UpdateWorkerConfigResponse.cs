@@ -11,16 +11,26 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class UpdateWorkerConfigResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("workerConfig") is { } nullNodeWorkerConfig && nullNodeWorkerConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerConfig = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The worker configuration. Will be returned if the command was sent to a single worker.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerConfigResponseWorkerConfig? WorkerConfig { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerConfigResponseWorkerConfig? WorkerConfig { get => _explicitNullValueWorkerConfig; set { _explicitNullValueWorkerConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerConfig"); else _explicitNullProperties?.Remove("workerConfig"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerConfigResponseWorkerConfig? _explicitNullValueWorkerConfig = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerConfigResponseWorkerConfig WorkerConfig { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerConfigResponseWorkerConfig WorkerConfig { get => _explicitNullValueWorkerConfig; set { _explicitNullValueWorkerConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerConfig"); else _explicitNullProperties?.Remove("workerConfig"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerConfigResponseWorkerConfig _explicitNullValueWorkerConfig = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerConfigResponse"/> and sets the default values.
@@ -37,7 +47,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerConfigResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerConfigResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerConfigResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,6 +68,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerConfigResponseWorkerConfig>("workerConfig", WorkerConfig);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

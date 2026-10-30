@@ -11,52 +11,78 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class NamespaceConfig : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("badBinaries") is { } nullNodeBadBinaries && nullNodeBadBinaries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BadBinaries = null;
+            if (parseNode.GetChildNode("customSearchAttributeAliases") is { } nullNodeCustomSearchAttributeAliases && nullNodeCustomSearchAttributeAliases.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomSearchAttributeAliases = null;
+            if (parseNode.GetChildNode("historyArchivalState") is { } nullNodeHistoryArchivalState && nullNodeHistoryArchivalState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HistoryArchivalState = null;
+            if (parseNode.GetChildNode("historyArchivalUri") is { } nullNodeHistoryArchivalUri && nullNodeHistoryArchivalUri.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HistoryArchivalUri = null;
+            if (parseNode.GetChildNode("visibilityArchivalState") is { } nullNodeVisibilityArchivalState && nullNodeVisibilityArchivalState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VisibilityArchivalState = null;
+            if (parseNode.GetChildNode("visibilityArchivalUri") is { } nullNodeVisibilityArchivalUri && nullNodeVisibilityArchivalUri.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VisibilityArchivalUri = null;
+            if (parseNode.GetChildNode("workflowExecutionRetentionTtl") is { } nullNodeWorkflowExecutionRetentionTtl && nullNodeWorkflowExecutionRetentionTtl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowExecutionRetentionTtl = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The badBinaries property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.BadBinaries? BadBinaries { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BadBinaries? BadBinaries { get => _explicitNullValueBadBinaries; set { _explicitNullValueBadBinaries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("badBinaries"); else _explicitNullProperties?.Remove("badBinaries"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.BadBinaries? _explicitNullValueBadBinaries = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.BadBinaries BadBinaries { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BadBinaries BadBinaries { get => _explicitNullValueBadBinaries; set { _explicitNullValueBadBinaries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("badBinaries"); else _explicitNullProperties?.Remove("badBinaries"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.BadBinaries _explicitNullValueBadBinaries = default!;
 #endif
         /// <summary>Map from field name to alias.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceConfigCustomSearchAttributeAliasesProperty? CustomSearchAttributeAliases { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceConfigCustomSearchAttributeAliasesProperty? CustomSearchAttributeAliases { get => _explicitNullValueCustomSearchAttributeAliases; set { _explicitNullValueCustomSearchAttributeAliases = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customSearchAttributeAliases"); else _explicitNullProperties?.Remove("customSearchAttributeAliases"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NamespaceConfigCustomSearchAttributeAliasesProperty? _explicitNullValueCustomSearchAttributeAliases = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceConfigCustomSearchAttributeAliasesProperty CustomSearchAttributeAliases { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceConfigCustomSearchAttributeAliasesProperty CustomSearchAttributeAliases { get => _explicitNullValueCustomSearchAttributeAliases; set { _explicitNullValueCustomSearchAttributeAliases = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customSearchAttributeAliases"); else _explicitNullProperties?.Remove("customSearchAttributeAliases"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NamespaceConfigCustomSearchAttributeAliasesProperty _explicitNullValueCustomSearchAttributeAliases = default!;
 #endif
         /// <summary>If unspecified (ARCHIVAL_STATE_UNSPECIFIED) then default server configuration is used.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceConfigHistoryArchivalState? HistoryArchivalState { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceConfigHistoryArchivalState? HistoryArchivalState { get => _explicitNullValueHistoryArchivalState; set { _explicitNullValueHistoryArchivalState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("historyArchivalState"); else _explicitNullProperties?.Remove("historyArchivalState"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NamespaceConfigHistoryArchivalState? _explicitNullValueHistoryArchivalState = default!;
         /// <summary>The historyArchivalUri property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HistoryArchivalUri { get; set; }
+        public string? HistoryArchivalUri { get => _explicitNullValueHistoryArchivalUri; set { _explicitNullValueHistoryArchivalUri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("historyArchivalUri"); else _explicitNullProperties?.Remove("historyArchivalUri"); } }
+        private string? _explicitNullValueHistoryArchivalUri = default!;
 #nullable restore
 #else
-        public string HistoryArchivalUri { get; set; }
+        public string HistoryArchivalUri { get => _explicitNullValueHistoryArchivalUri; set { _explicitNullValueHistoryArchivalUri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("historyArchivalUri"); else _explicitNullProperties?.Remove("historyArchivalUri"); } }
+        private string _explicitNullValueHistoryArchivalUri = default!;
 #endif
         /// <summary>If unspecified (ARCHIVAL_STATE_UNSPECIFIED) then default server configuration is used.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceConfigVisibilityArchivalState? VisibilityArchivalState { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceConfigVisibilityArchivalState? VisibilityArchivalState { get => _explicitNullValueVisibilityArchivalState; set { _explicitNullValueVisibilityArchivalState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visibilityArchivalState"); else _explicitNullProperties?.Remove("visibilityArchivalState"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NamespaceConfigVisibilityArchivalState? _explicitNullValueVisibilityArchivalState = default!;
         /// <summary>The visibilityArchivalUri property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VisibilityArchivalUri { get; set; }
+        public string? VisibilityArchivalUri { get => _explicitNullValueVisibilityArchivalUri; set { _explicitNullValueVisibilityArchivalUri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visibilityArchivalUri"); else _explicitNullProperties?.Remove("visibilityArchivalUri"); } }
+        private string? _explicitNullValueVisibilityArchivalUri = default!;
 #nullable restore
 #else
-        public string VisibilityArchivalUri { get; set; }
+        public string VisibilityArchivalUri { get => _explicitNullValueVisibilityArchivalUri; set { _explicitNullValueVisibilityArchivalUri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visibilityArchivalUri"); else _explicitNullProperties?.Remove("visibilityArchivalUri"); } }
+        private string _explicitNullValueVisibilityArchivalUri = default!;
 #endif
         /// <summary>The workflowExecutionRetentionTtl property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkflowExecutionRetentionTtl { get; set; }
+        public string? WorkflowExecutionRetentionTtl { get => _explicitNullValueWorkflowExecutionRetentionTtl; set { _explicitNullValueWorkflowExecutionRetentionTtl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionRetentionTtl"); else _explicitNullProperties?.Remove("workflowExecutionRetentionTtl"); } }
+        private string? _explicitNullValueWorkflowExecutionRetentionTtl = default!;
 #nullable restore
 #else
-        public string WorkflowExecutionRetentionTtl { get; set; }
+        public string WorkflowExecutionRetentionTtl { get => _explicitNullValueWorkflowExecutionRetentionTtl; set { _explicitNullValueWorkflowExecutionRetentionTtl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionRetentionTtl"); else _explicitNullProperties?.Remove("workflowExecutionRetentionTtl"); } }
+        private string _explicitNullValueWorkflowExecutionRetentionTtl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.NamespaceConfig"/> and sets the default values.
@@ -73,7 +99,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.NamespaceConfig CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.NamespaceConfig();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.NamespaceConfig(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -106,6 +132,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceConfigVisibilityArchivalState>("visibilityArchivalState", VisibilityArchivalState);
             writer.WriteStringValue("visibilityArchivalUri", VisibilityArchivalUri);
             writer.WriteStringValue("workflowExecutionRetentionTtl", WorkflowExecutionRetentionTtl);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

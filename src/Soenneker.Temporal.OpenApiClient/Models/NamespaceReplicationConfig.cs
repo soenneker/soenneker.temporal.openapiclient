@@ -11,27 +11,42 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class NamespaceReplicationConfig : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("activeClusterName") is { } nullNodeActiveClusterName && nullNodeActiveClusterName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActiveClusterName = null;
+            if (parseNode.GetChildNode("clusters") is { } nullNodeClusters && nullNodeClusters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Clusters = null;
+            if (parseNode.GetChildNode("state") is { } nullNodeState && nullNodeState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) State = null;
+        }
+
         /// <summary>The activeClusterName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ActiveClusterName { get; set; }
+        public string? ActiveClusterName { get => _explicitNullValueActiveClusterName; set { _explicitNullValueActiveClusterName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activeClusterName"); else _explicitNullProperties?.Remove("activeClusterName"); } }
+        private string? _explicitNullValueActiveClusterName = default!;
 #nullable restore
 #else
-        public string ActiveClusterName { get; set; }
+        public string ActiveClusterName { get => _explicitNullValueActiveClusterName; set { _explicitNullValueActiveClusterName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activeClusterName"); else _explicitNullProperties?.Remove("activeClusterName"); } }
+        private string _explicitNullValueActiveClusterName = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The clusters property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.ClusterReplicationConfig>? Clusters { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.ClusterReplicationConfig>? Clusters { get => _explicitNullValueClusters; set { _explicitNullValueClusters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clusters"); else _explicitNullProperties?.Remove("clusters"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.ClusterReplicationConfig>? _explicitNullValueClusters = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.ClusterReplicationConfig> Clusters { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.ClusterReplicationConfig> Clusters { get => _explicitNullValueClusters; set { _explicitNullValueClusters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clusters"); else _explicitNullProperties?.Remove("clusters"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.ClusterReplicationConfig> _explicitNullValueClusters = default!;
 #endif
         /// <summary>The state property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceReplicationConfigState? State { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceReplicationConfigState? State { get => _explicitNullValueState; set { _explicitNullValueState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state"); else _explicitNullProperties?.Remove("state"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NamespaceReplicationConfigState? _explicitNullValueState = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.NamespaceReplicationConfig"/> and sets the default values.
         /// </summary>
@@ -47,7 +62,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.NamespaceReplicationConfig CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.NamespaceReplicationConfig();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.NamespaceReplicationConfig(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,6 +87,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("activeClusterName", ActiveClusterName);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.ClusterReplicationConfig>("clusters", Clusters);
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceReplicationConfigState>("state", State);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

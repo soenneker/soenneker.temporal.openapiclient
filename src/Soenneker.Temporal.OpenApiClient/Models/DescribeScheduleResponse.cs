@@ -11,48 +11,70 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class DescribeScheduleResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("conflictToken") is { } nullNodeConflictToken && nullNodeConflictToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConflictToken = null;
+            if (parseNode.GetChildNode("info") is { } nullNodeInfo && nullNodeInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Info = null;
+            if (parseNode.GetChildNode("memo") is { } nullNodeMemo && nullNodeMemo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Memo = null;
+            if (parseNode.GetChildNode("schedule") is { } nullNodeSchedule && nullNodeSchedule.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Schedule = null;
+            if (parseNode.GetChildNode("searchAttributes") is { } nullNodeSearchAttributes && nullNodeSearchAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SearchAttributes = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>This value can be passed back to UpdateSchedule to ensure that the schedule was not modified between a Describe and an Update, which could lead to lost updates and other confusion.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConflictToken { get; set; }
+        public string? ConflictToken { get => _explicitNullValueConflictToken; set { _explicitNullValueConflictToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conflictToken"); else _explicitNullProperties?.Remove("conflictToken"); } }
+        private string? _explicitNullValueConflictToken = default!;
 #nullable restore
 #else
-        public string ConflictToken { get; set; }
+        public string ConflictToken { get => _explicitNullValueConflictToken; set { _explicitNullValueConflictToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conflictToken"); else _explicitNullProperties?.Remove("conflictToken"); } }
+        private string _explicitNullValueConflictToken = default!;
 #endif
         /// <summary>Extra schedule state info.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponseInfo? Info { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponseInfo? Info { get => _explicitNullValueInfo; set { _explicitNullValueInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("info"); else _explicitNullProperties?.Remove("info"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponseInfo? _explicitNullValueInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponseInfo Info { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponseInfo Info { get => _explicitNullValueInfo; set { _explicitNullValueInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("info"); else _explicitNullProperties?.Remove("info"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponseInfo _explicitNullValueInfo = default!;
 #endif
         /// <summary>The memo and search attributes that the schedule was created with.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponseMemo? Memo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponseMemo? Memo { get => _explicitNullValueMemo; set { _explicitNullValueMemo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("memo"); else _explicitNullProperties?.Remove("memo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponseMemo? _explicitNullValueMemo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponseMemo Memo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponseMemo Memo { get => _explicitNullValueMemo; set { _explicitNullValueMemo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("memo"); else _explicitNullProperties?.Remove("memo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponseMemo _explicitNullValueMemo = default!;
 #endif
         /// <summary>The complete current schedule details. This may not match the schedule as created because: - some types of schedule specs may get compiled into others (e.g.   CronString into StructuredCalendarSpec) - some unspecified fields may be replaced by defaults - some fields in the state are modified automatically - the schedule may have been modified by UpdateSchedule or PatchSchedule</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponseSchedule? Schedule { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponseSchedule? Schedule { get => _explicitNullValueSchedule; set { _explicitNullValueSchedule = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schedule"); else _explicitNullProperties?.Remove("schedule"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponseSchedule? _explicitNullValueSchedule = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponseSchedule Schedule { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponseSchedule Schedule { get => _explicitNullValueSchedule; set { _explicitNullValueSchedule = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schedule"); else _explicitNullProperties?.Remove("schedule"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponseSchedule _explicitNullValueSchedule = default!;
 #endif
         /// <summary>A user-defined set of *indexed* fields that are used/exposed when listing/searching workflows. The payload is not serialized in a user-defined way.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes? SearchAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes? SearchAttributes { get => _explicitNullValueSearchAttributes; set { _explicitNullValueSearchAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("searchAttributes"); else _explicitNullProperties?.Remove("searchAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes? _explicitNullValueSearchAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes SearchAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes SearchAttributes { get => _explicitNullValueSearchAttributes; set { _explicitNullValueSearchAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("searchAttributes"); else _explicitNullProperties?.Remove("searchAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes _explicitNullValueSearchAttributes = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponse"/> and sets the default values.
@@ -69,7 +91,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -98,6 +120,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponseMemo>("memo", Memo);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponseSchedule>("schedule", Schedule);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes>("searchAttributes", SearchAttributes);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

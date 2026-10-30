@@ -12,62 +12,93 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SetWorkerDeploymentRampingVersionRequest : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("allowNoPollers") is { } nullNodeAllowNoPollers && nullNodeAllowNoPollers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowNoPollers = null;
+            if (parseNode.GetChildNode("buildId") is { } nullNodeBuildId && nullNodeBuildId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuildId = null;
+            if (parseNode.GetChildNode("conflictToken") is { } nullNodeConflictToken && nullNodeConflictToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConflictToken = null;
+            if (parseNode.GetChildNode("deploymentName") is { } nullNodeDeploymentName && nullNodeDeploymentName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeploymentName = null;
+            if (parseNode.GetChildNode("identity") is { } nullNodeIdentity && nullNodeIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Identity = null;
+            if (parseNode.GetChildNode("ignoreMissingTaskQueues") is { } nullNodeIgnoreMissingTaskQueues && nullNodeIgnoreMissingTaskQueues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IgnoreMissingTaskQueues = null;
+            if (parseNode.GetChildNode("namespace") is { } nullNodeNamespace && nullNodeNamespace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Namespace = null;
+            if (parseNode.GetChildNode("percentage") is { } nullNodePercentage && nullNodePercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Percentage = null;
+            if (parseNode.GetChildNode("version") is { } nullNodeVersion && nullNodeVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Version = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Optional. By default this request will be rejected if no pollers have been seen for the proposed Current Version, in order to protect users from routing tasks to pollers that do not exist, leading to possible timeouts. Pass `true` here to bypass this protection.</summary>
-        public bool? AllowNoPollers { get; set; }
+        public bool? AllowNoPollers { get => _explicitNullValueAllowNoPollers; set { _explicitNullValueAllowNoPollers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowNoPollers"); else _explicitNullProperties?.Remove("allowNoPollers"); } }
+        private bool? _explicitNullValueAllowNoPollers = default!;
         /// <summary>The build id of the Version that you want to ramp traffic to. Pass an empty value to set the Ramping Version to nil. A nil Ramping Version represents all the unversioned workers (those with `UNVERSIONED` (or unspecified) `WorkerVersioningMode`.)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BuildId { get; set; }
+        public string? BuildId { get => _explicitNullValueBuildId; set { _explicitNullValueBuildId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buildId"); else _explicitNullProperties?.Remove("buildId"); } }
+        private string? _explicitNullValueBuildId = default!;
 #nullable restore
 #else
-        public string BuildId { get; set; }
+        public string BuildId { get => _explicitNullValueBuildId; set { _explicitNullValueBuildId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buildId"); else _explicitNullProperties?.Remove("buildId"); } }
+        private string _explicitNullValueBuildId = default!;
 #endif
         /// <summary>Optional. This can be the value of conflict_token from a Describe, or another Worker Deployment API. Passing a non-nil conflict token will cause this request to fail if the Deployment&apos;s configuration has been modified between the API call that generated the token and this one.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConflictToken { get; set; }
+        public string? ConflictToken { get => _explicitNullValueConflictToken; set { _explicitNullValueConflictToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conflictToken"); else _explicitNullProperties?.Remove("conflictToken"); } }
+        private string? _explicitNullValueConflictToken = default!;
 #nullable restore
 #else
-        public string ConflictToken { get; set; }
+        public string ConflictToken { get => _explicitNullValueConflictToken; set { _explicitNullValueConflictToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conflictToken"); else _explicitNullProperties?.Remove("conflictToken"); } }
+        private string _explicitNullValueConflictToken = default!;
 #endif
         /// <summary>The deploymentName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DeploymentName { get; set; }
+        public string? DeploymentName { get => _explicitNullValueDeploymentName; set { _explicitNullValueDeploymentName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploymentName"); else _explicitNullProperties?.Remove("deploymentName"); } }
+        private string? _explicitNullValueDeploymentName = default!;
 #nullable restore
 #else
-        public string DeploymentName { get; set; }
+        public string DeploymentName { get => _explicitNullValueDeploymentName; set { _explicitNullValueDeploymentName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploymentName"); else _explicitNullProperties?.Remove("deploymentName"); } }
+        private string _explicitNullValueDeploymentName = default!;
 #endif
         /// <summary>Optional. The identity of the client who initiated this request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Identity { get; set; }
+        public string? Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity"); else _explicitNullProperties?.Remove("identity"); } }
+        private string? _explicitNullValueIdentity = default!;
 #nullable restore
 #else
-        public string Identity { get; set; }
+        public string Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity"); else _explicitNullProperties?.Remove("identity"); } }
+        private string _explicitNullValueIdentity = default!;
 #endif
         /// <summary>Optional. By default this request would be rejected if not all the expected Task Queues are being polled by the new Version, to protect against accidental removal of Task Queues, or worker health issues. Pass `true` here to bypass this protection. The set of expected Task Queues equals to all the Task Queues ever polled from the existing Current Version of the Deployment, with the following exclusions:   - Task Queues that are not used anymore (inferred by having empty backlog and a task     add_rate of 0.)   - Task Queues that are moved to another Worker Deployment (inferred by the Task Queue     having a different Current Version than the Current Version of this deployment.) WARNING: Do not set this flag unless you are sure that the missing task queue poller are not needed. If the request is unexpectedly rejected due to missing pollers, then that means the pollers have not reached to the server yet. Only set this if you expect those pollers to never arrive. Note: this check only happens when the ramping version is about to change, not every time that the percentage changes. Also note that the check is against the deployment&apos;s Current Version, not the previous Ramping Version.</summary>
-        public bool? IgnoreMissingTaskQueues { get; set; }
+        public bool? IgnoreMissingTaskQueues { get => _explicitNullValueIgnoreMissingTaskQueues; set { _explicitNullValueIgnoreMissingTaskQueues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ignoreMissingTaskQueues"); else _explicitNullProperties?.Remove("ignoreMissingTaskQueues"); } }
+        private bool? _explicitNullValueIgnoreMissingTaskQueues = default!;
         /// <summary>The namespace property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Namespace { get; set; }
+        public string? Namespace { get => _explicitNullValueNamespace; set { _explicitNullValueNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace"); else _explicitNullProperties?.Remove("namespace"); } }
+        private string? _explicitNullValueNamespace = default!;
 #nullable restore
 #else
-        public string Namespace { get; set; }
+        public string Namespace { get => _explicitNullValueNamespace; set { _explicitNullValueNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace"); else _explicitNullProperties?.Remove("namespace"); } }
+        private string _explicitNullValueNamespace = default!;
 #endif
         /// <summary>Ramp percentage to set. Valid range: [0,100].</summary>
-        public float? Percentage { get; set; }
+        public float? Percentage { get => _explicitNullValuePercentage; set { _explicitNullValuePercentage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("percentage"); else _explicitNullProperties?.Remove("percentage"); } }
+        private float? _explicitNullValuePercentage = default!;
         /// <summary>Deprecated. Use `build_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Version { get; set; }
+        public string? Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version"); else _explicitNullProperties?.Remove("version"); } }
+        private string? _explicitNullValueVersion = default!;
 #nullable restore
 #else
-        public string Version { get; set; }
+        public string Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version"); else _explicitNullProperties?.Remove("version"); } }
+        private string _explicitNullValueVersion = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.SetWorkerDeploymentRampingVersionRequest"/> and sets the default values.
@@ -84,7 +115,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.SetWorkerDeploymentRampingVersionRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.SetWorkerDeploymentRampingVersionRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.SetWorkerDeploymentRampingVersionRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -121,6 +152,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("namespace", Namespace);
             writer.WriteFloatValue("percentage", Percentage);
             writer.WriteStringValue("version", Version);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

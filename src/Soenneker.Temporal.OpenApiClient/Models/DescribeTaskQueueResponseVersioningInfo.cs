@@ -12,45 +12,68 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DescribeTaskQueueResponseVersioningInfo : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("currentDeploymentVersion") is { } nullNodeCurrentDeploymentVersion && nullNodeCurrentDeploymentVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentDeploymentVersion = null;
+            if (parseNode.GetChildNode("currentVersion") is { } nullNodeCurrentVersion && nullNodeCurrentVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentVersion = null;
+            if (parseNode.GetChildNode("rampingDeploymentVersion") is { } nullNodeRampingDeploymentVersion && nullNodeRampingDeploymentVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RampingDeploymentVersion = null;
+            if (parseNode.GetChildNode("rampingVersion") is { } nullNodeRampingVersion && nullNodeRampingVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RampingVersion = null;
+            if (parseNode.GetChildNode("rampingVersionPercentage") is { } nullNodeRampingVersionPercentage && nullNodeRampingVersionPercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RampingVersionPercentage = null;
+            if (parseNode.GetChildNode("updateTime") is { } nullNodeUpdateTime && nullNodeUpdateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateTime = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Specifies which Deployment Version should receive new workflow executions and tasks of existing unversioned or AutoUpgrade workflows. Nil value represents all the unversioned workers (those with `UNVERSIONED` (or unspecified) `WorkerVersioningMode`.) Note: Current Version is overridden by the Ramping Version for a portion of traffic when ramp percentage is non-zero (see `ramping_deployment_version` and `ramping_version_percentage`).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueVersioningInfoCurrentDeploymentVersion? CurrentDeploymentVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueVersioningInfoCurrentDeploymentVersion? CurrentDeploymentVersion { get => _explicitNullValueCurrentDeploymentVersion; set { _explicitNullValueCurrentDeploymentVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currentDeploymentVersion"); else _explicitNullProperties?.Remove("currentDeploymentVersion"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueVersioningInfoCurrentDeploymentVersion? _explicitNullValueCurrentDeploymentVersion = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueVersioningInfoCurrentDeploymentVersion CurrentDeploymentVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueVersioningInfoCurrentDeploymentVersion CurrentDeploymentVersion { get => _explicitNullValueCurrentDeploymentVersion; set { _explicitNullValueCurrentDeploymentVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currentDeploymentVersion"); else _explicitNullProperties?.Remove("currentDeploymentVersion"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueVersioningInfoCurrentDeploymentVersion _explicitNullValueCurrentDeploymentVersion = default!;
 #endif
         /// <summary>Deprecated. Use `current_deployment_version`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CurrentVersion { get; set; }
+        public string? CurrentVersion { get => _explicitNullValueCurrentVersion; set { _explicitNullValueCurrentVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currentVersion"); else _explicitNullProperties?.Remove("currentVersion"); } }
+        private string? _explicitNullValueCurrentVersion = default!;
 #nullable restore
 #else
-        public string CurrentVersion { get; set; }
+        public string CurrentVersion { get => _explicitNullValueCurrentVersion; set { _explicitNullValueCurrentVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currentVersion"); else _explicitNullProperties?.Remove("currentVersion"); } }
+        private string _explicitNullValueCurrentVersion = default!;
 #endif
         /// <summary>When ramp percentage is non-zero, that portion of traffic is shifted from the Current Version to the Ramping Version. Must always be different from `current_deployment_version` unless both are nil. Nil value represents all the unversioned workers (those with `UNVERSIONED` (or unspecified) `WorkerVersioningMode`.) Note that it is possible to ramp from one Version to another Version, or from unversioned workers to a particular Version, or from a particular Version to unversioned workers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueVersioningInfoRampingDeploymentVersion? RampingDeploymentVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueVersioningInfoRampingDeploymentVersion? RampingDeploymentVersion { get => _explicitNullValueRampingDeploymentVersion; set { _explicitNullValueRampingDeploymentVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rampingDeploymentVersion"); else _explicitNullProperties?.Remove("rampingDeploymentVersion"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueVersioningInfoRampingDeploymentVersion? _explicitNullValueRampingDeploymentVersion = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueVersioningInfoRampingDeploymentVersion RampingDeploymentVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueVersioningInfoRampingDeploymentVersion RampingDeploymentVersion { get => _explicitNullValueRampingDeploymentVersion; set { _explicitNullValueRampingDeploymentVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rampingDeploymentVersion"); else _explicitNullProperties?.Remove("rampingDeploymentVersion"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueVersioningInfoRampingDeploymentVersion _explicitNullValueRampingDeploymentVersion = default!;
 #endif
         /// <summary>Deprecated. Use `ramping_deployment_version`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RampingVersion { get; set; }
+        public string? RampingVersion { get => _explicitNullValueRampingVersion; set { _explicitNullValueRampingVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rampingVersion"); else _explicitNullProperties?.Remove("rampingVersion"); } }
+        private string? _explicitNullValueRampingVersion = default!;
 #nullable restore
 #else
-        public string RampingVersion { get; set; }
+        public string RampingVersion { get => _explicitNullValueRampingVersion; set { _explicitNullValueRampingVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rampingVersion"); else _explicitNullProperties?.Remove("rampingVersion"); } }
+        private string _explicitNullValueRampingVersion = default!;
 #endif
         /// <summary>Percentage of tasks that are routed to the Ramping Version instead of the Current Version. Valid range: [0, 100]. A 100% value means the Ramping Version is receiving full traffic but not yet &quot;promoted&quot; to be the Current Version, likely due to pending validations. A 0% value means the Ramping Version is receiving no traffic.</summary>
-        public float? RampingVersionPercentage { get; set; }
+        public float? RampingVersionPercentage { get => _explicitNullValueRampingVersionPercentage; set { _explicitNullValueRampingVersionPercentage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rampingVersionPercentage"); else _explicitNullProperties?.Remove("rampingVersionPercentage"); } }
+        private float? _explicitNullValueRampingVersionPercentage = default!;
         /// <summary>Last time versioning information of this Task Queue changed.</summary>
-        public DateTimeOffset? UpdateTime { get; set; }
+        public DateTimeOffset? UpdateTime { get => _explicitNullValueUpdateTime; set { _explicitNullValueUpdateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateTime"); else _explicitNullProperties?.Remove("updateTime"); } }
+        private DateTimeOffset? _explicitNullValueUpdateTime = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseVersioningInfo"/> and sets the default values.
         /// </summary>
@@ -66,7 +89,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseVersioningInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseVersioningInfo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseVersioningInfo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -97,6 +120,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("rampingVersion", RampingVersion);
             writer.WriteFloatValue("rampingVersionPercentage", RampingVersionPercentage);
             writer.WriteDateTimeOffsetValue("updateTime", UpdateTime);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

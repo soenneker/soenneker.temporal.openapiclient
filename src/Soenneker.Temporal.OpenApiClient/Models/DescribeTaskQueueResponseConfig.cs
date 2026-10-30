@@ -12,32 +12,48 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DescribeTaskQueueResponseConfig : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("fairnessKeysRateLimitDefault") is { } nullNodeFairnessKeysRateLimitDefault && nullNodeFairnessKeysRateLimitDefault.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FairnessKeysRateLimitDefault = null;
+            if (parseNode.GetChildNode("fairnessWeightOverrides") is { } nullNodeFairnessWeightOverrides && nullNodeFairnessWeightOverrides.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FairnessWeightOverrides = null;
+            if (parseNode.GetChildNode("queueRateLimit") is { } nullNodeQueueRateLimit && nullNodeQueueRateLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QueueRateLimit = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>If set, each individual fairness key will be limited to this rate, scaled by the weight of the fairness key.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueConfigFairnessKeysRateLimitDefault? FairnessKeysRateLimitDefault { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueConfigFairnessKeysRateLimitDefault? FairnessKeysRateLimitDefault { get => _explicitNullValueFairnessKeysRateLimitDefault; set { _explicitNullValueFairnessKeysRateLimitDefault = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fairnessKeysRateLimitDefault"); else _explicitNullProperties?.Remove("fairnessKeysRateLimitDefault"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueConfigFairnessKeysRateLimitDefault? _explicitNullValueFairnessKeysRateLimitDefault = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueConfigFairnessKeysRateLimitDefault FairnessKeysRateLimitDefault { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueConfigFairnessKeysRateLimitDefault FairnessKeysRateLimitDefault { get => _explicitNullValueFairnessKeysRateLimitDefault; set { _explicitNullValueFairnessKeysRateLimitDefault = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fairnessKeysRateLimitDefault"); else _explicitNullProperties?.Remove("fairnessKeysRateLimitDefault"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueConfigFairnessKeysRateLimitDefault _explicitNullValueFairnessKeysRateLimitDefault = default!;
 #endif
         /// <summary>If set, overrides the fairness weights for the corresponding fairness keys.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseConfigFairnessWeightOverrides? FairnessWeightOverrides { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseConfigFairnessWeightOverrides? FairnessWeightOverrides { get => _explicitNullValueFairnessWeightOverrides; set { _explicitNullValueFairnessWeightOverrides = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fairnessWeightOverrides"); else _explicitNullProperties?.Remove("fairnessWeightOverrides"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseConfigFairnessWeightOverrides? _explicitNullValueFairnessWeightOverrides = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseConfigFairnessWeightOverrides FairnessWeightOverrides { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseConfigFairnessWeightOverrides FairnessWeightOverrides { get => _explicitNullValueFairnessWeightOverrides; set { _explicitNullValueFairnessWeightOverrides = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fairnessWeightOverrides"); else _explicitNullProperties?.Remove("fairnessWeightOverrides"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseConfigFairnessWeightOverrides _explicitNullValueFairnessWeightOverrides = default!;
 #endif
         /// <summary>Unless modified, this is the system-defined rate limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueConfigQueueRateLimit? QueueRateLimit { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueConfigQueueRateLimit? QueueRateLimit { get => _explicitNullValueQueueRateLimit; set { _explicitNullValueQueueRateLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queueRateLimit"); else _explicitNullProperties?.Remove("queueRateLimit"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueConfigQueueRateLimit? _explicitNullValueQueueRateLimit = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueConfigQueueRateLimit QueueRateLimit { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueConfigQueueRateLimit QueueRateLimit { get => _explicitNullValueQueueRateLimit; set { _explicitNullValueQueueRateLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queueRateLimit"); else _explicitNullProperties?.Remove("queueRateLimit"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueConfigQueueRateLimit _explicitNullValueQueueRateLimit = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseConfig"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseConfig CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseConfig();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseConfig(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueConfigFairnessKeysRateLimitDefault>("fairnessKeysRateLimitDefault", FairnessKeysRateLimitDefault);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseConfigFairnessWeightOverrides>("fairnessWeightOverrides", FairnessWeightOverrides);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TaskQueueConfigQueueRateLimit>("queueRateLimit", QueueRateLimit);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

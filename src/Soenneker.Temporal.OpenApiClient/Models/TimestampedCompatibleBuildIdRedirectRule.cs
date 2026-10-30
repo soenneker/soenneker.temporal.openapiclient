@@ -11,18 +11,30 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TimestampedCompatibleBuildIdRedirectRule : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("createTime") is { } nullNodeCreateTime && nullNodeCreateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateTime = null;
+            if (parseNode.GetChildNode("rule") is { } nullNodeRule && nullNodeRule.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rule = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The createTime property</summary>
-        public DateTimeOffset? CreateTime { get; set; }
+        public DateTimeOffset? CreateTime { get => _explicitNullValueCreateTime; set { _explicitNullValueCreateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createTime"); else _explicitNullProperties?.Remove("createTime"); } }
+        private DateTimeOffset? _explicitNullValueCreateTime = default!;
         /// <summary>These rules apply to tasks assigned to a particular Build ID (`source_build_id`) to redirect them to another *compatible* Build ID (`target_build_id`). It is user&apos;s responsibility to ensure that the target Build ID is compatible with the source Build ID (e.g. by using the Patching API). Most deployments are not expected to need these rules, however following situations can greatly benefit from redirects:  - Need to move long-running Workflow Executions from an old Build ID to a    newer one.  - Need to hotfix some broken or stuck Workflow Executions. In steady state, redirect rules are beneficial when dealing with old Executions ran on now-decommissioned Build IDs:  - To redirecting the Workflow Queries to the current (compatible) Build ID.  - To be able to Reset an old Execution so it can run on the current    (compatible) Build ID. Redirect rules can be chained.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.CompatibleBuildIdRedirectRule? Rule { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CompatibleBuildIdRedirectRule? Rule { get => _explicitNullValueRule; set { _explicitNullValueRule = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rule"); else _explicitNullProperties?.Remove("rule"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.CompatibleBuildIdRedirectRule? _explicitNullValueRule = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.CompatibleBuildIdRedirectRule Rule { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CompatibleBuildIdRedirectRule Rule { get => _explicitNullValueRule; set { _explicitNullValueRule = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rule"); else _explicitNullProperties?.Remove("rule"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.CompatibleBuildIdRedirectRule _explicitNullValueRule = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.TimestampedCompatibleBuildIdRedirectRule"/> and sets the default values.
@@ -39,7 +51,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.TimestampedCompatibleBuildIdRedirectRule CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.TimestampedCompatibleBuildIdRedirectRule();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.TimestampedCompatibleBuildIdRedirectRule(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -62,6 +74,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("createTime", CreateTime);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CompatibleBuildIdRedirectRule>("rule", Rule);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

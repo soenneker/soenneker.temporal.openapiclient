@@ -11,48 +11,70 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class WorkflowExecutionConfig : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("defaultWorkflowTaskTimeout") is { } nullNodeDefaultWorkflowTaskTimeout && nullNodeDefaultWorkflowTaskTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultWorkflowTaskTimeout = null;
+            if (parseNode.GetChildNode("taskQueue") is { } nullNodeTaskQueue && nullNodeTaskQueue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskQueue = null;
+            if (parseNode.GetChildNode("userMetadata") is { } nullNodeUserMetadata && nullNodeUserMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserMetadata = null;
+            if (parseNode.GetChildNode("workflowExecutionTimeout") is { } nullNodeWorkflowExecutionTimeout && nullNodeWorkflowExecutionTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowExecutionTimeout = null;
+            if (parseNode.GetChildNode("workflowRunTimeout") is { } nullNodeWorkflowRunTimeout && nullNodeWorkflowRunTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowRunTimeout = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The defaultWorkflowTaskTimeout property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultWorkflowTaskTimeout { get; set; }
+        public string? DefaultWorkflowTaskTimeout { get => _explicitNullValueDefaultWorkflowTaskTimeout; set { _explicitNullValueDefaultWorkflowTaskTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultWorkflowTaskTimeout"); else _explicitNullProperties?.Remove("defaultWorkflowTaskTimeout"); } }
+        private string? _explicitNullValueDefaultWorkflowTaskTimeout = default!;
 #nullable restore
 #else
-        public string DefaultWorkflowTaskTimeout { get; set; }
+        public string DefaultWorkflowTaskTimeout { get => _explicitNullValueDefaultWorkflowTaskTimeout; set { _explicitNullValueDefaultWorkflowTaskTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultWorkflowTaskTimeout"); else _explicitNullProperties?.Remove("defaultWorkflowTaskTimeout"); } }
+        private string _explicitNullValueDefaultWorkflowTaskTimeout = default!;
 #endif
         /// <summary>See https://docs.temporal.io/docs/concepts/task-queues/</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.TaskQueue? TaskQueue { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.TaskQueue? TaskQueue { get => _explicitNullValueTaskQueue; set { _explicitNullValueTaskQueue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taskQueue"); else _explicitNullProperties?.Remove("taskQueue"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.TaskQueue? _explicitNullValueTaskQueue = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.TaskQueue TaskQueue { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.TaskQueue TaskQueue { get => _explicitNullValueTaskQueue; set { _explicitNullValueTaskQueue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taskQueue"); else _explicitNullProperties?.Remove("taskQueue"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.TaskQueue _explicitNullValueTaskQueue = default!;
 #endif
         /// <summary>User metadata provided on start workflow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionConfigUserMetadata? UserMetadata { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionConfigUserMetadata? UserMetadata { get => _explicitNullValueUserMetadata; set { _explicitNullValueUserMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userMetadata"); else _explicitNullProperties?.Remove("userMetadata"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionConfigUserMetadata? _explicitNullValueUserMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionConfigUserMetadata UserMetadata { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionConfigUserMetadata UserMetadata { get => _explicitNullValueUserMetadata; set { _explicitNullValueUserMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userMetadata"); else _explicitNullProperties?.Remove("userMetadata"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionConfigUserMetadata _explicitNullValueUserMetadata = default!;
 #endif
         /// <summary>The workflowExecutionTimeout property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkflowExecutionTimeout { get; set; }
+        public string? WorkflowExecutionTimeout { get => _explicitNullValueWorkflowExecutionTimeout; set { _explicitNullValueWorkflowExecutionTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionTimeout"); else _explicitNullProperties?.Remove("workflowExecutionTimeout"); } }
+        private string? _explicitNullValueWorkflowExecutionTimeout = default!;
 #nullable restore
 #else
-        public string WorkflowExecutionTimeout { get; set; }
+        public string WorkflowExecutionTimeout { get => _explicitNullValueWorkflowExecutionTimeout; set { _explicitNullValueWorkflowExecutionTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionTimeout"); else _explicitNullProperties?.Remove("workflowExecutionTimeout"); } }
+        private string _explicitNullValueWorkflowExecutionTimeout = default!;
 #endif
         /// <summary>The workflowRunTimeout property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkflowRunTimeout { get; set; }
+        public string? WorkflowRunTimeout { get => _explicitNullValueWorkflowRunTimeout; set { _explicitNullValueWorkflowRunTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowRunTimeout"); else _explicitNullProperties?.Remove("workflowRunTimeout"); } }
+        private string? _explicitNullValueWorkflowRunTimeout = default!;
 #nullable restore
 #else
-        public string WorkflowRunTimeout { get; set; }
+        public string WorkflowRunTimeout { get => _explicitNullValueWorkflowRunTimeout; set { _explicitNullValueWorkflowRunTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowRunTimeout"); else _explicitNullProperties?.Remove("workflowRunTimeout"); } }
+        private string _explicitNullValueWorkflowRunTimeout = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionConfig"/> and sets the default values.
@@ -69,7 +91,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionConfig CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionConfig();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionConfig(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -98,6 +120,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionConfigUserMetadata>("userMetadata", UserMetadata);
             writer.WriteStringValue("workflowExecutionTimeout", WorkflowExecutionTimeout);
             writer.WriteStringValue("workflowRunTimeout", WorkflowRunTimeout);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

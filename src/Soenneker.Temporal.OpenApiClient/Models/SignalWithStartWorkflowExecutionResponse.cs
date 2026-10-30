@@ -11,27 +11,42 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SignalWithStartWorkflowExecutionResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("runId") is { } nullNodeRunId && nullNodeRunId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RunId = null;
+            if (parseNode.GetChildNode("signalLink") is { } nullNodeSignalLink && nullNodeSignalLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignalLink = null;
+            if (parseNode.GetChildNode("started") is { } nullNodeStarted && nullNodeStarted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Started = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The run id of the workflow that was started - or just signaled, if it was already running.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RunId { get; set; }
+        public string? RunId { get => _explicitNullValueRunId; set { _explicitNullValueRunId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runId"); else _explicitNullProperties?.Remove("runId"); } }
+        private string? _explicitNullValueRunId = default!;
 #nullable restore
 #else
-        public string RunId { get; set; }
+        public string RunId { get => _explicitNullValueRunId; set { _explicitNullValueRunId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runId"); else _explicitNullProperties?.Remove("runId"); } }
+        private string _explicitNullValueRunId = default!;
 #endif
         /// <summary>Link to be associated with the WorkflowExecutionSignaled event. Added on the response to propagate the backlink. Available from Temporal server 1.31 and up.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionResponseSignalLink? SignalLink { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionResponseSignalLink? SignalLink { get => _explicitNullValueSignalLink; set { _explicitNullValueSignalLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signalLink"); else _explicitNullProperties?.Remove("signalLink"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionResponseSignalLink? _explicitNullValueSignalLink = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionResponseSignalLink SignalLink { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionResponseSignalLink SignalLink { get => _explicitNullValueSignalLink; set { _explicitNullValueSignalLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signalLink"); else _explicitNullProperties?.Remove("signalLink"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionResponseSignalLink _explicitNullValueSignalLink = default!;
 #endif
         /// <summary>If true, a new workflow was started.</summary>
-        public bool? Started { get; set; }
+        public bool? Started { get => _explicitNullValueStarted; set { _explicitNullValueStarted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("started"); else _explicitNullProperties?.Remove("started"); } }
+        private bool? _explicitNullValueStarted = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionResponse"/> and sets the default values.
         /// </summary>
@@ -47,7 +62,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,6 +87,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("runId", RunId);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SignalWithStartWorkflowExecutionResponseSignalLink>("signalLink", SignalLink);
             writer.WriteBoolValue("started", Started);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

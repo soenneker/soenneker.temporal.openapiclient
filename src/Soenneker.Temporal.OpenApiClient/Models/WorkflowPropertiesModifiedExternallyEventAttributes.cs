@@ -12,48 +12,70 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WorkflowPropertiesModifiedExternallyEventAttributes : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("newTaskQueue") is { } nullNodeNewTaskQueue && nullNodeNewTaskQueue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewTaskQueue = null;
+            if (parseNode.GetChildNode("newWorkflowExecutionTimeout") is { } nullNodeNewWorkflowExecutionTimeout && nullNodeNewWorkflowExecutionTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewWorkflowExecutionTimeout = null;
+            if (parseNode.GetChildNode("newWorkflowRunTimeout") is { } nullNodeNewWorkflowRunTimeout && nullNodeNewWorkflowRunTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewWorkflowRunTimeout = null;
+            if (parseNode.GetChildNode("newWorkflowTaskTimeout") is { } nullNodeNewWorkflowTaskTimeout && nullNodeNewWorkflowTaskTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewWorkflowTaskTimeout = null;
+            if (parseNode.GetChildNode("upsertedMemo") is { } nullNodeUpsertedMemo && nullNodeUpsertedMemo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpsertedMemo = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Not used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NewTaskQueue { get; set; }
+        public string? NewTaskQueue { get => _explicitNullValueNewTaskQueue; set { _explicitNullValueNewTaskQueue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newTaskQueue"); else _explicitNullProperties?.Remove("newTaskQueue"); } }
+        private string? _explicitNullValueNewTaskQueue = default!;
 #nullable restore
 #else
-        public string NewTaskQueue { get; set; }
+        public string NewTaskQueue { get => _explicitNullValueNewTaskQueue; set { _explicitNullValueNewTaskQueue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newTaskQueue"); else _explicitNullProperties?.Remove("newTaskQueue"); } }
+        private string _explicitNullValueNewTaskQueue = default!;
 #endif
         /// <summary>Not used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NewWorkflowExecutionTimeout { get; set; }
+        public string? NewWorkflowExecutionTimeout { get => _explicitNullValueNewWorkflowExecutionTimeout; set { _explicitNullValueNewWorkflowExecutionTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newWorkflowExecutionTimeout"); else _explicitNullProperties?.Remove("newWorkflowExecutionTimeout"); } }
+        private string? _explicitNullValueNewWorkflowExecutionTimeout = default!;
 #nullable restore
 #else
-        public string NewWorkflowExecutionTimeout { get; set; }
+        public string NewWorkflowExecutionTimeout { get => _explicitNullValueNewWorkflowExecutionTimeout; set { _explicitNullValueNewWorkflowExecutionTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newWorkflowExecutionTimeout"); else _explicitNullProperties?.Remove("newWorkflowExecutionTimeout"); } }
+        private string _explicitNullValueNewWorkflowExecutionTimeout = default!;
 #endif
         /// <summary>Not used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NewWorkflowRunTimeout { get; set; }
+        public string? NewWorkflowRunTimeout { get => _explicitNullValueNewWorkflowRunTimeout; set { _explicitNullValueNewWorkflowRunTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newWorkflowRunTimeout"); else _explicitNullProperties?.Remove("newWorkflowRunTimeout"); } }
+        private string? _explicitNullValueNewWorkflowRunTimeout = default!;
 #nullable restore
 #else
-        public string NewWorkflowRunTimeout { get; set; }
+        public string NewWorkflowRunTimeout { get => _explicitNullValueNewWorkflowRunTimeout; set { _explicitNullValueNewWorkflowRunTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newWorkflowRunTimeout"); else _explicitNullProperties?.Remove("newWorkflowRunTimeout"); } }
+        private string _explicitNullValueNewWorkflowRunTimeout = default!;
 #endif
         /// <summary>Not used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NewWorkflowTaskTimeout { get; set; }
+        public string? NewWorkflowTaskTimeout { get => _explicitNullValueNewWorkflowTaskTimeout; set { _explicitNullValueNewWorkflowTaskTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newWorkflowTaskTimeout"); else _explicitNullProperties?.Remove("newWorkflowTaskTimeout"); } }
+        private string? _explicitNullValueNewWorkflowTaskTimeout = default!;
 #nullable restore
 #else
-        public string NewWorkflowTaskTimeout { get; set; }
+        public string NewWorkflowTaskTimeout { get => _explicitNullValueNewWorkflowTaskTimeout; set { _explicitNullValueNewWorkflowTaskTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newWorkflowTaskTimeout"); else _explicitNullProperties?.Remove("newWorkflowTaskTimeout"); } }
+        private string _explicitNullValueNewWorkflowTaskTimeout = default!;
 #endif
         /// <summary>Not used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowPropertiesModifiedExternallyEventAttributesUpsertedMemo? UpsertedMemo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowPropertiesModifiedExternallyEventAttributesUpsertedMemo? UpsertedMemo { get => _explicitNullValueUpsertedMemo; set { _explicitNullValueUpsertedMemo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upsertedMemo"); else _explicitNullProperties?.Remove("upsertedMemo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowPropertiesModifiedExternallyEventAttributesUpsertedMemo? _explicitNullValueUpsertedMemo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowPropertiesModifiedExternallyEventAttributesUpsertedMemo UpsertedMemo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowPropertiesModifiedExternallyEventAttributesUpsertedMemo UpsertedMemo { get => _explicitNullValueUpsertedMemo; set { _explicitNullValueUpsertedMemo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upsertedMemo"); else _explicitNullProperties?.Remove("upsertedMemo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowPropertiesModifiedExternallyEventAttributesUpsertedMemo _explicitNullValueUpsertedMemo = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkflowPropertiesModifiedExternallyEventAttributes"/> and sets the default values.
@@ -70,7 +92,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.WorkflowPropertiesModifiedExternallyEventAttributes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.WorkflowPropertiesModifiedExternallyEventAttributes();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.WorkflowPropertiesModifiedExternallyEventAttributes(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -99,6 +121,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("newWorkflowRunTimeout", NewWorkflowRunTimeout);
             writer.WriteStringValue("newWorkflowTaskTimeout", NewWorkflowTaskTimeout);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowPropertiesModifiedExternallyEventAttributesUpsertedMemo>("upsertedMemo", UpsertedMemo);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

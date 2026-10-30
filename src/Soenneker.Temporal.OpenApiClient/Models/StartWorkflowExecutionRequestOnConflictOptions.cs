@@ -12,15 +12,28 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class StartWorkflowExecutionRequestOnConflictOptions : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("attachCompletionCallbacks") is { } nullNodeAttachCompletionCallbacks && nullNodeAttachCompletionCallbacks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AttachCompletionCallbacks = null;
+            if (parseNode.GetChildNode("attachLinks") is { } nullNodeAttachLinks && nullNodeAttachLinks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AttachLinks = null;
+            if (parseNode.GetChildNode("attachRequestId") is { } nullNodeAttachRequestId && nullNodeAttachRequestId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AttachRequestId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Attaches the completion callbacks to the running execution.</summary>
-        public bool? AttachCompletionCallbacks { get; set; }
+        public bool? AttachCompletionCallbacks { get => _explicitNullValueAttachCompletionCallbacks; set { _explicitNullValueAttachCompletionCallbacks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachCompletionCallbacks"); else _explicitNullProperties?.Remove("attachCompletionCallbacks"); } }
+        private bool? _explicitNullValueAttachCompletionCallbacks = default!;
         /// <summary>Attaches the links to the running execution.</summary>
-        public bool? AttachLinks { get; set; }
+        public bool? AttachLinks { get => _explicitNullValueAttachLinks; set { _explicitNullValueAttachLinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachLinks"); else _explicitNullProperties?.Remove("attachLinks"); } }
+        private bool? _explicitNullValueAttachLinks = default!;
         /// <summary>Attaches the request ID to the running execution.</summary>
-        public bool? AttachRequestId { get; set; }
+        public bool? AttachRequestId { get => _explicitNullValueAttachRequestId; set { _explicitNullValueAttachRequestId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachRequestId"); else _explicitNullProperties?.Remove("attachRequestId"); } }
+        private bool? _explicitNullValueAttachRequestId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionRequestOnConflictOptions"/> and sets the default values.
         /// </summary>
@@ -36,7 +49,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionRequestOnConflictOptions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionRequestOnConflictOptions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionRequestOnConflictOptions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -61,6 +74,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteBoolValue("attachCompletionCallbacks", AttachCompletionCallbacks);
             writer.WriteBoolValue("attachLinks", AttachLinks);
             writer.WriteBoolValue("attachRequestId", AttachRequestId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

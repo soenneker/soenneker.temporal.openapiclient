@@ -11,56 +11,81 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ActivityTaskCanceledEventAttributes : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("details") is { } nullNodeDetails && nullNodeDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Details = null;
+            if (parseNode.GetChildNode("identity") is { } nullNodeIdentity && nullNodeIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Identity = null;
+            if (parseNode.GetChildNode("latestCancelRequestedEventId") is { } nullNodeLatestCancelRequestedEventId && nullNodeLatestCancelRequestedEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LatestCancelRequestedEventId = null;
+            if (parseNode.GetChildNode("scheduledEventId") is { } nullNodeScheduledEventId && nullNodeScheduledEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduledEventId = null;
+            if (parseNode.GetChildNode("startedEventId") is { } nullNodeStartedEventId && nullNodeStartedEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartedEventId = null;
+            if (parseNode.GetChildNode("workerVersion") is { } nullNodeWorkerVersion && nullNodeWorkerVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerVersion = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Additional information that the activity reported upon confirming cancellation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributesDetails? Details { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributesDetails? Details { get => _explicitNullValueDetails; set { _explicitNullValueDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("details"); else _explicitNullProperties?.Remove("details"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributesDetails? _explicitNullValueDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributesDetails Details { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributesDetails Details { get => _explicitNullValueDetails; set { _explicitNullValueDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("details"); else _explicitNullProperties?.Remove("details"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributesDetails _explicitNullValueDetails = default!;
 #endif
         /// <summary>id of the worker who canceled this activity</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Identity { get; set; }
+        public string? Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity"); else _explicitNullProperties?.Remove("identity"); } }
+        private string? _explicitNullValueIdentity = default!;
 #nullable restore
 #else
-        public string Identity { get; set; }
+        public string Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity"); else _explicitNullProperties?.Remove("identity"); } }
+        private string _explicitNullValueIdentity = default!;
 #endif
         /// <summary>id of the most recent `ACTIVITY_TASK_CANCEL_REQUESTED` event which refers to the same activity</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LatestCancelRequestedEventId { get; set; }
+        public string? LatestCancelRequestedEventId { get => _explicitNullValueLatestCancelRequestedEventId; set { _explicitNullValueLatestCancelRequestedEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("latestCancelRequestedEventId"); else _explicitNullProperties?.Remove("latestCancelRequestedEventId"); } }
+        private string? _explicitNullValueLatestCancelRequestedEventId = default!;
 #nullable restore
 #else
-        public string LatestCancelRequestedEventId { get; set; }
+        public string LatestCancelRequestedEventId { get => _explicitNullValueLatestCancelRequestedEventId; set { _explicitNullValueLatestCancelRequestedEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("latestCancelRequestedEventId"); else _explicitNullProperties?.Remove("latestCancelRequestedEventId"); } }
+        private string _explicitNullValueLatestCancelRequestedEventId = default!;
 #endif
         /// <summary>The id of the `ACTIVITY_TASK_SCHEDULED` event this cancel confirmation corresponds to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ScheduledEventId { get; set; }
+        public string? ScheduledEventId { get => _explicitNullValueScheduledEventId; set { _explicitNullValueScheduledEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduledEventId"); else _explicitNullProperties?.Remove("scheduledEventId"); } }
+        private string? _explicitNullValueScheduledEventId = default!;
 #nullable restore
 #else
-        public string ScheduledEventId { get; set; }
+        public string ScheduledEventId { get => _explicitNullValueScheduledEventId; set { _explicitNullValueScheduledEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduledEventId"); else _explicitNullProperties?.Remove("scheduledEventId"); } }
+        private string _explicitNullValueScheduledEventId = default!;
 #endif
         /// <summary>The id of the `ACTIVITY_TASK_STARTED` event this cancel confirmation corresponds to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartedEventId { get; set; }
+        public string? StartedEventId { get => _explicitNullValueStartedEventId; set { _explicitNullValueStartedEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startedEventId"); else _explicitNullProperties?.Remove("startedEventId"); } }
+        private string? _explicitNullValueStartedEventId = default!;
 #nullable restore
 #else
-        public string StartedEventId { get; set; }
+        public string StartedEventId { get => _explicitNullValueStartedEventId; set { _explicitNullValueStartedEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startedEventId"); else _explicitNullProperties?.Remove("startedEventId"); } }
+        private string _explicitNullValueStartedEventId = default!;
 #endif
         /// <summary>Version info of the worker who processed this workflow task. Deprecated. This field should be cleaned up when versioning-2 API is removed. [cleanup-experimental-wv]</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributesWorkerVersion? WorkerVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributesWorkerVersion? WorkerVersion { get => _explicitNullValueWorkerVersion; set { _explicitNullValueWorkerVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerVersion"); else _explicitNullProperties?.Remove("workerVersion"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributesWorkerVersion? _explicitNullValueWorkerVersion = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributesWorkerVersion WorkerVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributesWorkerVersion WorkerVersion { get => _explicitNullValueWorkerVersion; set { _explicitNullValueWorkerVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerVersion"); else _explicitNullProperties?.Remove("workerVersion"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributesWorkerVersion _explicitNullValueWorkerVersion = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributes"/> and sets the default values.
@@ -77,7 +102,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributes();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributes(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -108,6 +133,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("scheduledEventId", ScheduledEventId);
             writer.WriteStringValue("startedEventId", StartedEventId);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributesWorkerVersion>("workerVersion", WorkerVersion);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

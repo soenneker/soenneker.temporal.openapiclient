@@ -11,50 +11,74 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ActivityFailureInfo : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("activityId") is { } nullNodeActivityId && nullNodeActivityId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActivityId = null;
+            if (parseNode.GetChildNode("activityType") is { } nullNodeActivityType && nullNodeActivityType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActivityType = null;
+            if (parseNode.GetChildNode("identity") is { } nullNodeIdentity && nullNodeIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Identity = null;
+            if (parseNode.GetChildNode("retryState") is { } nullNodeRetryState && nullNodeRetryState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RetryState = null;
+            if (parseNode.GetChildNode("scheduledEventId") is { } nullNodeScheduledEventId && nullNodeScheduledEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduledEventId = null;
+            if (parseNode.GetChildNode("startedEventId") is { } nullNodeStartedEventId && nullNodeStartedEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartedEventId = null;
+        }
+
         /// <summary>The activityId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ActivityId { get; set; }
+        public string? ActivityId { get => _explicitNullValueActivityId; set { _explicitNullValueActivityId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityId"); else _explicitNullProperties?.Remove("activityId"); } }
+        private string? _explicitNullValueActivityId = default!;
 #nullable restore
 #else
-        public string ActivityId { get; set; }
+        public string ActivityId { get => _explicitNullValueActivityId; set { _explicitNullValueActivityId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityId"); else _explicitNullProperties?.Remove("activityId"); } }
+        private string _explicitNullValueActivityId = default!;
 #endif
         /// <summary>Represents the identifier used by a activity author to define the activity. Typically, the name of a function. This is sometimes referred to as the activity&apos;s &quot;name&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityType? ActivityType { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityType? ActivityType { get => _explicitNullValueActivityType; set { _explicitNullValueActivityType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityType"); else _explicitNullProperties?.Remove("activityType"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ActivityType? _explicitNullValueActivityType = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityType ActivityType { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityType ActivityType { get => _explicitNullValueActivityType; set { _explicitNullValueActivityType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityType"); else _explicitNullProperties?.Remove("activityType"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ActivityType _explicitNullValueActivityType = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The identity property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Identity { get; set; }
+        public string? Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity"); else _explicitNullProperties?.Remove("identity"); } }
+        private string? _explicitNullValueIdentity = default!;
 #nullable restore
 #else
-        public string Identity { get; set; }
+        public string Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity"); else _explicitNullProperties?.Remove("identity"); } }
+        private string _explicitNullValueIdentity = default!;
 #endif
         /// <summary>The retryState property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityFailureInfoRetryState? RetryState { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityFailureInfoRetryState? RetryState { get => _explicitNullValueRetryState; set { _explicitNullValueRetryState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("retryState"); else _explicitNullProperties?.Remove("retryState"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ActivityFailureInfoRetryState? _explicitNullValueRetryState = default!;
         /// <summary>The scheduledEventId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ScheduledEventId { get; set; }
+        public string? ScheduledEventId { get => _explicitNullValueScheduledEventId; set { _explicitNullValueScheduledEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduledEventId"); else _explicitNullProperties?.Remove("scheduledEventId"); } }
+        private string? _explicitNullValueScheduledEventId = default!;
 #nullable restore
 #else
-        public string ScheduledEventId { get; set; }
+        public string ScheduledEventId { get => _explicitNullValueScheduledEventId; set { _explicitNullValueScheduledEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduledEventId"); else _explicitNullProperties?.Remove("scheduledEventId"); } }
+        private string _explicitNullValueScheduledEventId = default!;
 #endif
         /// <summary>The startedEventId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartedEventId { get; set; }
+        public string? StartedEventId { get => _explicitNullValueStartedEventId; set { _explicitNullValueStartedEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startedEventId"); else _explicitNullProperties?.Remove("startedEventId"); } }
+        private string? _explicitNullValueStartedEventId = default!;
 #nullable restore
 #else
-        public string StartedEventId { get; set; }
+        public string StartedEventId { get => _explicitNullValueStartedEventId; set { _explicitNullValueStartedEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startedEventId"); else _explicitNullProperties?.Remove("startedEventId"); } }
+        private string _explicitNullValueStartedEventId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.ActivityFailureInfo"/> and sets the default values.
@@ -71,7 +95,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.ActivityFailureInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.ActivityFailureInfo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.ActivityFailureInfo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -102,6 +126,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityFailureInfoRetryState>("retryState", RetryState);
             writer.WriteStringValue("scheduledEventId", ScheduledEventId);
             writer.WriteStringValue("startedEventId", StartedEventId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

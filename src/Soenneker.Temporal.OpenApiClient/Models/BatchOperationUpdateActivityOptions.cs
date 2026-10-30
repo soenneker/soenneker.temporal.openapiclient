@@ -12,44 +12,67 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BatchOperationUpdateActivityOptions : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("activityOptions") is { } nullNodeActivityOptions && nullNodeActivityOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActivityOptions = null;
+            if (parseNode.GetChildNode("identity") is { } nullNodeIdentity && nullNodeIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Identity = null;
+            if (parseNode.GetChildNode("matchAll") is { } nullNodeMatchAll && nullNodeMatchAll.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MatchAll = null;
+            if (parseNode.GetChildNode("restoreOriginal") is { } nullNodeRestoreOriginal && nullNodeRestoreOriginal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RestoreOriginal = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("updateMask") is { } nullNodeUpdateMask && nullNodeUpdateMask.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateMask = null;
+        }
+
         /// <summary>Update Activity options. Partial updates are accepted and controlled by update_mask.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationUpdateActivityOptionsActivityOptions? ActivityOptions { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationUpdateActivityOptionsActivityOptions? ActivityOptions { get => _explicitNullValueActivityOptions; set { _explicitNullValueActivityOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityOptions"); else _explicitNullProperties?.Remove("activityOptions"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationUpdateActivityOptionsActivityOptions? _explicitNullValueActivityOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationUpdateActivityOptionsActivityOptions ActivityOptions { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationUpdateActivityOptionsActivityOptions ActivityOptions { get => _explicitNullValueActivityOptions; set { _explicitNullValueActivityOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityOptions"); else _explicitNullProperties?.Remove("activityOptions"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationUpdateActivityOptionsActivityOptions _explicitNullValueActivityOptions = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The identity of the worker/client.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Identity { get; set; }
+        public string? Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity"); else _explicitNullProperties?.Remove("identity"); } }
+        private string? _explicitNullValueIdentity = default!;
 #nullable restore
 #else
-        public string Identity { get; set; }
+        public string Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity"); else _explicitNullProperties?.Remove("identity"); } }
+        private string _explicitNullValueIdentity = default!;
 #endif
         /// <summary>The matchAll property</summary>
-        public bool? MatchAll { get; set; }
+        public bool? MatchAll { get => _explicitNullValueMatchAll; set { _explicitNullValueMatchAll = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("matchAll"); else _explicitNullProperties?.Remove("matchAll"); } }
+        private bool? _explicitNullValueMatchAll = default!;
         /// <summary>If set, the activity options will be restored to the default. Default options are then options activity was created with. They are part of the first ActivityTaskScheduled event. This flag cannot be combined with any other option; if you supply restore_original together with other options, the request will be rejected.</summary>
-        public bool? RestoreOriginal { get; set; }
+        public bool? RestoreOriginal { get => _explicitNullValueRestoreOriginal; set { _explicitNullValueRestoreOriginal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("restoreOriginal"); else _explicitNullProperties?.Remove("restoreOriginal"); } }
+        private bool? _explicitNullValueRestoreOriginal = default!;
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get; set; }
+        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public string Type { get; set; }
+        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string _explicitNullValueType = default!;
 #endif
         /// <summary>Controls which fields from `activity_options` will be applied</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UpdateMask { get; set; }
+        public string? UpdateMask { get => _explicitNullValueUpdateMask; set { _explicitNullValueUpdateMask = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateMask"); else _explicitNullProperties?.Remove("updateMask"); } }
+        private string? _explicitNullValueUpdateMask = default!;
 #nullable restore
 #else
-        public string UpdateMask { get; set; }
+        public string UpdateMask { get => _explicitNullValueUpdateMask; set { _explicitNullValueUpdateMask = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateMask"); else _explicitNullProperties?.Remove("updateMask"); } }
+        private string _explicitNullValueUpdateMask = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationUpdateActivityOptions"/> and sets the default values.
@@ -66,7 +89,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationUpdateActivityOptions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationUpdateActivityOptions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationUpdateActivityOptions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -97,6 +120,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteBoolValue("restoreOriginal", RestoreOriginal);
             writer.WriteStringValue("type", Type);
             writer.WriteStringValue("updateMask", UpdateMask);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

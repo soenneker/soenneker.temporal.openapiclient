@@ -12,27 +12,42 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PollerInfoWorkerVersionCapabilities : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("buildId") is { } nullNodeBuildId && nullNodeBuildId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuildId = null;
+            if (parseNode.GetChildNode("deploymentSeriesName") is { } nullNodeDeploymentSeriesName && nullNodeDeploymentSeriesName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeploymentSeriesName = null;
+            if (parseNode.GetChildNode("useVersioning") is { } nullNodeUseVersioning && nullNodeUseVersioning.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseVersioning = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An opaque whole-worker identifier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BuildId { get; set; }
+        public string? BuildId { get => _explicitNullValueBuildId; set { _explicitNullValueBuildId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buildId"); else _explicitNullProperties?.Remove("buildId"); } }
+        private string? _explicitNullValueBuildId = default!;
 #nullable restore
 #else
-        public string BuildId { get; set; }
+        public string BuildId { get => _explicitNullValueBuildId; set { _explicitNullValueBuildId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buildId"); else _explicitNullProperties?.Remove("buildId"); } }
+        private string _explicitNullValueBuildId = default!;
 #endif
         /// <summary>Must be sent if user has set a deployment series name (versioning-3).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DeploymentSeriesName { get; set; }
+        public string? DeploymentSeriesName { get => _explicitNullValueDeploymentSeriesName; set { _explicitNullValueDeploymentSeriesName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploymentSeriesName"); else _explicitNullProperties?.Remove("deploymentSeriesName"); } }
+        private string? _explicitNullValueDeploymentSeriesName = default!;
 #nullable restore
 #else
-        public string DeploymentSeriesName { get; set; }
+        public string DeploymentSeriesName { get => _explicitNullValueDeploymentSeriesName; set { _explicitNullValueDeploymentSeriesName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploymentSeriesName"); else _explicitNullProperties?.Remove("deploymentSeriesName"); } }
+        private string _explicitNullValueDeploymentSeriesName = default!;
 #endif
         /// <summary>If set, the worker is opting in to worker versioning, and wishes to only receive appropriate tasks.</summary>
-        public bool? UseVersioning { get; set; }
+        public bool? UseVersioning { get => _explicitNullValueUseVersioning; set { _explicitNullValueUseVersioning = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("useVersioning"); else _explicitNullProperties?.Remove("useVersioning"); } }
+        private bool? _explicitNullValueUseVersioning = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.PollerInfoWorkerVersionCapabilities"/> and sets the default values.
         /// </summary>
@@ -48,7 +63,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.PollerInfoWorkerVersionCapabilities CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.PollerInfoWorkerVersionCapabilities();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.PollerInfoWorkerVersionCapabilities(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -73,6 +88,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("buildId", BuildId);
             writer.WriteStringValue("deploymentSeriesName", DeploymentSeriesName);
             writer.WriteBoolValue("useVersioning", UseVersioning);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

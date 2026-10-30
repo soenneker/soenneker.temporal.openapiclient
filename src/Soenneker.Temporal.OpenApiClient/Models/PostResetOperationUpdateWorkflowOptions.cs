@@ -12,24 +12,37 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostResetOperationUpdateWorkflowOptions : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("updateMask") is { } nullNodeUpdateMask && nullNodeUpdateMask.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateMask = null;
+            if (parseNode.GetChildNode("workflowExecutionOptions") is { } nullNodeWorkflowExecutionOptions && nullNodeWorkflowExecutionOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowExecutionOptions = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Controls which fields from `workflow_execution_options` will be applied. To unset a field, set it to null and use the update mask to indicate that it should be mutated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UpdateMask { get; set; }
+        public string? UpdateMask { get => _explicitNullValueUpdateMask; set { _explicitNullValueUpdateMask = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateMask"); else _explicitNullProperties?.Remove("updateMask"); } }
+        private string? _explicitNullValueUpdateMask = default!;
 #nullable restore
 #else
-        public string UpdateMask { get; set; }
+        public string UpdateMask { get => _explicitNullValueUpdateMask; set { _explicitNullValueUpdateMask = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateMask"); else _explicitNullProperties?.Remove("updateMask"); } }
+        private string _explicitNullValueUpdateMask = default!;
 #endif
         /// <summary>Update Workflow options that were originally specified via StartWorkflowExecution. Partial updates are accepted and controlled by update_mask.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptionsWorkflowExecutionOptions? WorkflowExecutionOptions { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptionsWorkflowExecutionOptions? WorkflowExecutionOptions { get => _explicitNullValueWorkflowExecutionOptions; set { _explicitNullValueWorkflowExecutionOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionOptions"); else _explicitNullProperties?.Remove("workflowExecutionOptions"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptionsWorkflowExecutionOptions? _explicitNullValueWorkflowExecutionOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptionsWorkflowExecutionOptions WorkflowExecutionOptions { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptionsWorkflowExecutionOptions WorkflowExecutionOptions { get => _explicitNullValueWorkflowExecutionOptions; set { _explicitNullValueWorkflowExecutionOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionOptions"); else _explicitNullProperties?.Remove("workflowExecutionOptions"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptionsWorkflowExecutionOptions _explicitNullValueWorkflowExecutionOptions = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptions"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("updateMask", UpdateMask);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptionsWorkflowExecutionOptions>("workflowExecutionOptions", WorkflowExecutionOptions);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

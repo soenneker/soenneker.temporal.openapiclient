@@ -11,24 +11,37 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SetWorkerDeploymentManagerResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("conflictToken") is { } nullNodeConflictToken && nullNodeConflictToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConflictToken = null;
+            if (parseNode.GetChildNode("previousManagerIdentity") is { } nullNodePreviousManagerIdentity && nullNodePreviousManagerIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreviousManagerIdentity = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>This value is returned so that it can be optionally passed to APIs that write to the Worker Deployment state to ensure that the state did not change between this API call and a future write.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConflictToken { get; set; }
+        public string? ConflictToken { get => _explicitNullValueConflictToken; set { _explicitNullValueConflictToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conflictToken"); else _explicitNullProperties?.Remove("conflictToken"); } }
+        private string? _explicitNullValueConflictToken = default!;
 #nullable restore
 #else
-        public string ConflictToken { get; set; }
+        public string ConflictToken { get => _explicitNullValueConflictToken; set { _explicitNullValueConflictToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conflictToken"); else _explicitNullProperties?.Remove("conflictToken"); } }
+        private string _explicitNullValueConflictToken = default!;
 #endif
         /// <summary>What the `manager_identity` field was before this change. Deprecated in favor of idempotency of the API. Use `DescribeWorkerDeployment` to get the manager identity before calling this API. By passing the `conflict_token` got from the `DescribeWorkerDeployment` call to this API you can ensure there is no interfering changes between the two calls.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PreviousManagerIdentity { get; set; }
+        public string? PreviousManagerIdentity { get => _explicitNullValuePreviousManagerIdentity; set { _explicitNullValuePreviousManagerIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previousManagerIdentity"); else _explicitNullProperties?.Remove("previousManagerIdentity"); } }
+        private string? _explicitNullValuePreviousManagerIdentity = default!;
 #nullable restore
 #else
-        public string PreviousManagerIdentity { get; set; }
+        public string PreviousManagerIdentity { get => _explicitNullValuePreviousManagerIdentity; set { _explicitNullValuePreviousManagerIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previousManagerIdentity"); else _explicitNullProperties?.Remove("previousManagerIdentity"); } }
+        private string _explicitNullValuePreviousManagerIdentity = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.SetWorkerDeploymentManagerResponse"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.SetWorkerDeploymentManagerResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.SetWorkerDeploymentManagerResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.SetWorkerDeploymentManagerResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("conflictToken", ConflictToken);
             writer.WriteStringValue("previousManagerIdentity", PreviousManagerIdentity);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

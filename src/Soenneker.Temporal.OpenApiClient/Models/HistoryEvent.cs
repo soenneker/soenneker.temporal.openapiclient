@@ -12,542 +12,753 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class HistoryEvent : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("activityPropertiesModifiedExternallyEventAttributes") is { } nullNodeActivityPropertiesModifiedExternallyEventAttributes && nullNodeActivityPropertiesModifiedExternallyEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActivityPropertiesModifiedExternallyEventAttributes = null;
+            if (parseNode.GetChildNode("activityTaskCanceledEventAttributes") is { } nullNodeActivityTaskCanceledEventAttributes && nullNodeActivityTaskCanceledEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActivityTaskCanceledEventAttributes = null;
+            if (parseNode.GetChildNode("activityTaskCancelRequestedEventAttributes") is { } nullNodeActivityTaskCancelRequestedEventAttributes && nullNodeActivityTaskCancelRequestedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActivityTaskCancelRequestedEventAttributes = null;
+            if (parseNode.GetChildNode("activityTaskCompletedEventAttributes") is { } nullNodeActivityTaskCompletedEventAttributes && nullNodeActivityTaskCompletedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActivityTaskCompletedEventAttributes = null;
+            if (parseNode.GetChildNode("activityTaskFailedEventAttributes") is { } nullNodeActivityTaskFailedEventAttributes && nullNodeActivityTaskFailedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActivityTaskFailedEventAttributes = null;
+            if (parseNode.GetChildNode("activityTaskScheduledEventAttributes") is { } nullNodeActivityTaskScheduledEventAttributes && nullNodeActivityTaskScheduledEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActivityTaskScheduledEventAttributes = null;
+            if (parseNode.GetChildNode("activityTaskStartedEventAttributes") is { } nullNodeActivityTaskStartedEventAttributes && nullNodeActivityTaskStartedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActivityTaskStartedEventAttributes = null;
+            if (parseNode.GetChildNode("activityTaskTimedOutEventAttributes") is { } nullNodeActivityTaskTimedOutEventAttributes && nullNodeActivityTaskTimedOutEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActivityTaskTimedOutEventAttributes = null;
+            if (parseNode.GetChildNode("childWorkflowExecutionCanceledEventAttributes") is { } nullNodeChildWorkflowExecutionCanceledEventAttributes && nullNodeChildWorkflowExecutionCanceledEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChildWorkflowExecutionCanceledEventAttributes = null;
+            if (parseNode.GetChildNode("childWorkflowExecutionCompletedEventAttributes") is { } nullNodeChildWorkflowExecutionCompletedEventAttributes && nullNodeChildWorkflowExecutionCompletedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChildWorkflowExecutionCompletedEventAttributes = null;
+            if (parseNode.GetChildNode("childWorkflowExecutionFailedEventAttributes") is { } nullNodeChildWorkflowExecutionFailedEventAttributes && nullNodeChildWorkflowExecutionFailedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChildWorkflowExecutionFailedEventAttributes = null;
+            if (parseNode.GetChildNode("childWorkflowExecutionStartedEventAttributes") is { } nullNodeChildWorkflowExecutionStartedEventAttributes && nullNodeChildWorkflowExecutionStartedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChildWorkflowExecutionStartedEventAttributes = null;
+            if (parseNode.GetChildNode("childWorkflowExecutionTerminatedEventAttributes") is { } nullNodeChildWorkflowExecutionTerminatedEventAttributes && nullNodeChildWorkflowExecutionTerminatedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChildWorkflowExecutionTerminatedEventAttributes = null;
+            if (parseNode.GetChildNode("childWorkflowExecutionTimedOutEventAttributes") is { } nullNodeChildWorkflowExecutionTimedOutEventAttributes && nullNodeChildWorkflowExecutionTimedOutEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChildWorkflowExecutionTimedOutEventAttributes = null;
+            if (parseNode.GetChildNode("eventId") is { } nullNodeEventId && nullNodeEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventId = null;
+            if (parseNode.GetChildNode("eventTime") is { } nullNodeEventTime && nullNodeEventTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventTime = null;
+            if (parseNode.GetChildNode("eventType") is { } nullNodeEventType && nullNodeEventType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventType = null;
+            if (parseNode.GetChildNode("externalWorkflowExecutionCancelRequestedEventAttributes") is { } nullNodeExternalWorkflowExecutionCancelRequestedEventAttributes && nullNodeExternalWorkflowExecutionCancelRequestedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalWorkflowExecutionCancelRequestedEventAttributes = null;
+            if (parseNode.GetChildNode("externalWorkflowExecutionSignaledEventAttributes") is { } nullNodeExternalWorkflowExecutionSignaledEventAttributes && nullNodeExternalWorkflowExecutionSignaledEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalWorkflowExecutionSignaledEventAttributes = null;
+            if (parseNode.GetChildNode("links") is { } nullNodeLinks && nullNodeLinks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Links = null;
+            if (parseNode.GetChildNode("markerRecordedEventAttributes") is { } nullNodeMarkerRecordedEventAttributes && nullNodeMarkerRecordedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MarkerRecordedEventAttributes = null;
+            if (parseNode.GetChildNode("nexusOperationCanceledEventAttributes") is { } nullNodeNexusOperationCanceledEventAttributes && nullNodeNexusOperationCanceledEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NexusOperationCanceledEventAttributes = null;
+            if (parseNode.GetChildNode("nexusOperationCancelRequestCompletedEventAttributes") is { } nullNodeNexusOperationCancelRequestCompletedEventAttributes && nullNodeNexusOperationCancelRequestCompletedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NexusOperationCancelRequestCompletedEventAttributes = null;
+            if (parseNode.GetChildNode("nexusOperationCancelRequestedEventAttributes") is { } nullNodeNexusOperationCancelRequestedEventAttributes && nullNodeNexusOperationCancelRequestedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NexusOperationCancelRequestedEventAttributes = null;
+            if (parseNode.GetChildNode("nexusOperationCancelRequestFailedEventAttributes") is { } nullNodeNexusOperationCancelRequestFailedEventAttributes && nullNodeNexusOperationCancelRequestFailedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NexusOperationCancelRequestFailedEventAttributes = null;
+            if (parseNode.GetChildNode("nexusOperationCompletedEventAttributes") is { } nullNodeNexusOperationCompletedEventAttributes && nullNodeNexusOperationCompletedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NexusOperationCompletedEventAttributes = null;
+            if (parseNode.GetChildNode("nexusOperationFailedEventAttributes") is { } nullNodeNexusOperationFailedEventAttributes && nullNodeNexusOperationFailedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NexusOperationFailedEventAttributes = null;
+            if (parseNode.GetChildNode("nexusOperationScheduledEventAttributes") is { } nullNodeNexusOperationScheduledEventAttributes && nullNodeNexusOperationScheduledEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NexusOperationScheduledEventAttributes = null;
+            if (parseNode.GetChildNode("nexusOperationStartedEventAttributes") is { } nullNodeNexusOperationStartedEventAttributes && nullNodeNexusOperationStartedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NexusOperationStartedEventAttributes = null;
+            if (parseNode.GetChildNode("nexusOperationTimedOutEventAttributes") is { } nullNodeNexusOperationTimedOutEventAttributes && nullNodeNexusOperationTimedOutEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NexusOperationTimedOutEventAttributes = null;
+            if (parseNode.GetChildNode("principal") is { } nullNodePrincipal && nullNodePrincipal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Principal = null;
+            if (parseNode.GetChildNode("requestCancelExternalWorkflowExecutionFailedEventAttributes") is { } nullNodeRequestCancelExternalWorkflowExecutionFailedEventAttributes && nullNodeRequestCancelExternalWorkflowExecutionFailedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestCancelExternalWorkflowExecutionFailedEventAttributes = null;
+            if (parseNode.GetChildNode("requestCancelExternalWorkflowExecutionInitiatedEventAttributes") is { } nullNodeRequestCancelExternalWorkflowExecutionInitiatedEventAttributes && nullNodeRequestCancelExternalWorkflowExecutionInitiatedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestCancelExternalWorkflowExecutionInitiatedEventAttributes = null;
+            if (parseNode.GetChildNode("signalExternalWorkflowExecutionFailedEventAttributes") is { } nullNodeSignalExternalWorkflowExecutionFailedEventAttributes && nullNodeSignalExternalWorkflowExecutionFailedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignalExternalWorkflowExecutionFailedEventAttributes = null;
+            if (parseNode.GetChildNode("signalExternalWorkflowExecutionInitiatedEventAttributes") is { } nullNodeSignalExternalWorkflowExecutionInitiatedEventAttributes && nullNodeSignalExternalWorkflowExecutionInitiatedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignalExternalWorkflowExecutionInitiatedEventAttributes = null;
+            if (parseNode.GetChildNode("startChildWorkflowExecutionFailedEventAttributes") is { } nullNodeStartChildWorkflowExecutionFailedEventAttributes && nullNodeStartChildWorkflowExecutionFailedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartChildWorkflowExecutionFailedEventAttributes = null;
+            if (parseNode.GetChildNode("startChildWorkflowExecutionInitiatedEventAttributes") is { } nullNodeStartChildWorkflowExecutionInitiatedEventAttributes && nullNodeStartChildWorkflowExecutionInitiatedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartChildWorkflowExecutionInitiatedEventAttributes = null;
+            if (parseNode.GetChildNode("taskId") is { } nullNodeTaskId && nullNodeTaskId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskId = null;
+            if (parseNode.GetChildNode("timerCanceledEventAttributes") is { } nullNodeTimerCanceledEventAttributes && nullNodeTimerCanceledEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimerCanceledEventAttributes = null;
+            if (parseNode.GetChildNode("timerFiredEventAttributes") is { } nullNodeTimerFiredEventAttributes && nullNodeTimerFiredEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimerFiredEventAttributes = null;
+            if (parseNode.GetChildNode("timerStartedEventAttributes") is { } nullNodeTimerStartedEventAttributes && nullNodeTimerStartedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimerStartedEventAttributes = null;
+            if (parseNode.GetChildNode("upsertWorkflowSearchAttributesEventAttributes") is { } nullNodeUpsertWorkflowSearchAttributesEventAttributes && nullNodeUpsertWorkflowSearchAttributesEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpsertWorkflowSearchAttributesEventAttributes = null;
+            if (parseNode.GetChildNode("userMetadata") is { } nullNodeUserMetadata && nullNodeUserMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserMetadata = null;
+            if (parseNode.GetChildNode("version") is { } nullNodeVersion && nullNodeVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Version = null;
+            if (parseNode.GetChildNode("workerMayIgnore") is { } nullNodeWorkerMayIgnore && nullNodeWorkerMayIgnore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerMayIgnore = null;
+            if (parseNode.GetChildNode("workflowExecutionCanceledEventAttributes") is { } nullNodeWorkflowExecutionCanceledEventAttributes && nullNodeWorkflowExecutionCanceledEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowExecutionCanceledEventAttributes = null;
+            if (parseNode.GetChildNode("workflowExecutionCancelRequestedEventAttributes") is { } nullNodeWorkflowExecutionCancelRequestedEventAttributes && nullNodeWorkflowExecutionCancelRequestedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowExecutionCancelRequestedEventAttributes = null;
+            if (parseNode.GetChildNode("workflowExecutionCompletedEventAttributes") is { } nullNodeWorkflowExecutionCompletedEventAttributes && nullNodeWorkflowExecutionCompletedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowExecutionCompletedEventAttributes = null;
+            if (parseNode.GetChildNode("workflowExecutionContinuedAsNewEventAttributes") is { } nullNodeWorkflowExecutionContinuedAsNewEventAttributes && nullNodeWorkflowExecutionContinuedAsNewEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowExecutionContinuedAsNewEventAttributes = null;
+            if (parseNode.GetChildNode("workflowExecutionFailedEventAttributes") is { } nullNodeWorkflowExecutionFailedEventAttributes && nullNodeWorkflowExecutionFailedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowExecutionFailedEventAttributes = null;
+            if (parseNode.GetChildNode("workflowExecutionOptionsUpdatedEventAttributes") is { } nullNodeWorkflowExecutionOptionsUpdatedEventAttributes && nullNodeWorkflowExecutionOptionsUpdatedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowExecutionOptionsUpdatedEventAttributes = null;
+            if (parseNode.GetChildNode("workflowExecutionPausedEventAttributes") is { } nullNodeWorkflowExecutionPausedEventAttributes && nullNodeWorkflowExecutionPausedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowExecutionPausedEventAttributes = null;
+            if (parseNode.GetChildNode("workflowExecutionSignaledEventAttributes") is { } nullNodeWorkflowExecutionSignaledEventAttributes && nullNodeWorkflowExecutionSignaledEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowExecutionSignaledEventAttributes = null;
+            if (parseNode.GetChildNode("workflowExecutionStartedEventAttributes") is { } nullNodeWorkflowExecutionStartedEventAttributes && nullNodeWorkflowExecutionStartedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowExecutionStartedEventAttributes = null;
+            if (parseNode.GetChildNode("workflowExecutionTerminatedEventAttributes") is { } nullNodeWorkflowExecutionTerminatedEventAttributes && nullNodeWorkflowExecutionTerminatedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowExecutionTerminatedEventAttributes = null;
+            if (parseNode.GetChildNode("workflowExecutionTimedOutEventAttributes") is { } nullNodeWorkflowExecutionTimedOutEventAttributes && nullNodeWorkflowExecutionTimedOutEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowExecutionTimedOutEventAttributes = null;
+            if (parseNode.GetChildNode("workflowExecutionTimeSkippingTransitionedEventAttributes") is { } nullNodeWorkflowExecutionTimeSkippingTransitionedEventAttributes && nullNodeWorkflowExecutionTimeSkippingTransitionedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowExecutionTimeSkippingTransitionedEventAttributes = null;
+            if (parseNode.GetChildNode("workflowExecutionUnpausedEventAttributes") is { } nullNodeWorkflowExecutionUnpausedEventAttributes && nullNodeWorkflowExecutionUnpausedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowExecutionUnpausedEventAttributes = null;
+            if (parseNode.GetChildNode("workflowExecutionUpdateAcceptedEventAttributes") is { } nullNodeWorkflowExecutionUpdateAcceptedEventAttributes && nullNodeWorkflowExecutionUpdateAcceptedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowExecutionUpdateAcceptedEventAttributes = null;
+            if (parseNode.GetChildNode("workflowExecutionUpdateAdmittedEventAttributes") is { } nullNodeWorkflowExecutionUpdateAdmittedEventAttributes && nullNodeWorkflowExecutionUpdateAdmittedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowExecutionUpdateAdmittedEventAttributes = null;
+            if (parseNode.GetChildNode("workflowExecutionUpdateCompletedEventAttributes") is { } nullNodeWorkflowExecutionUpdateCompletedEventAttributes && nullNodeWorkflowExecutionUpdateCompletedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowExecutionUpdateCompletedEventAttributes = null;
+            if (parseNode.GetChildNode("workflowExecutionUpdateRejectedEventAttributes") is { } nullNodeWorkflowExecutionUpdateRejectedEventAttributes && nullNodeWorkflowExecutionUpdateRejectedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowExecutionUpdateRejectedEventAttributes = null;
+            if (parseNode.GetChildNode("workflowPropertiesModifiedEventAttributes") is { } nullNodeWorkflowPropertiesModifiedEventAttributes && nullNodeWorkflowPropertiesModifiedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowPropertiesModifiedEventAttributes = null;
+            if (parseNode.GetChildNode("workflowPropertiesModifiedExternallyEventAttributes") is { } nullNodeWorkflowPropertiesModifiedExternallyEventAttributes && nullNodeWorkflowPropertiesModifiedExternallyEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowPropertiesModifiedExternallyEventAttributes = null;
+            if (parseNode.GetChildNode("workflowTaskCompletedEventAttributes") is { } nullNodeWorkflowTaskCompletedEventAttributes && nullNodeWorkflowTaskCompletedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowTaskCompletedEventAttributes = null;
+            if (parseNode.GetChildNode("workflowTaskFailedEventAttributes") is { } nullNodeWorkflowTaskFailedEventAttributes && nullNodeWorkflowTaskFailedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowTaskFailedEventAttributes = null;
+            if (parseNode.GetChildNode("workflowTaskScheduledEventAttributes") is { } nullNodeWorkflowTaskScheduledEventAttributes && nullNodeWorkflowTaskScheduledEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowTaskScheduledEventAttributes = null;
+            if (parseNode.GetChildNode("workflowTaskStartedEventAttributes") is { } nullNodeWorkflowTaskStartedEventAttributes && nullNodeWorkflowTaskStartedEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowTaskStartedEventAttributes = null;
+            if (parseNode.GetChildNode("workflowTaskTimedOutEventAttributes") is { } nullNodeWorkflowTaskTimedOutEventAttributes && nullNodeWorkflowTaskTimedOutEventAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowTaskTimedOutEventAttributes = null;
+        }
+
         /// <summary>The activityPropertiesModifiedExternallyEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityPropertiesModifiedExternallyEventAttributes? ActivityPropertiesModifiedExternallyEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityPropertiesModifiedExternallyEventAttributes? ActivityPropertiesModifiedExternallyEventAttributes { get => _explicitNullValueActivityPropertiesModifiedExternallyEventAttributes; set { _explicitNullValueActivityPropertiesModifiedExternallyEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityPropertiesModifiedExternallyEventAttributes"); else _explicitNullProperties?.Remove("activityPropertiesModifiedExternallyEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ActivityPropertiesModifiedExternallyEventAttributes? _explicitNullValueActivityPropertiesModifiedExternallyEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityPropertiesModifiedExternallyEventAttributes ActivityPropertiesModifiedExternallyEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityPropertiesModifiedExternallyEventAttributes ActivityPropertiesModifiedExternallyEventAttributes { get => _explicitNullValueActivityPropertiesModifiedExternallyEventAttributes; set { _explicitNullValueActivityPropertiesModifiedExternallyEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityPropertiesModifiedExternallyEventAttributes"); else _explicitNullProperties?.Remove("activityPropertiesModifiedExternallyEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ActivityPropertiesModifiedExternallyEventAttributes _explicitNullValueActivityPropertiesModifiedExternallyEventAttributes = default!;
 #endif
         /// <summary>The activityTaskCanceledEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributes? ActivityTaskCanceledEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributes? ActivityTaskCanceledEventAttributes { get => _explicitNullValueActivityTaskCanceledEventAttributes; set { _explicitNullValueActivityTaskCanceledEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityTaskCanceledEventAttributes"); else _explicitNullProperties?.Remove("activityTaskCanceledEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributes? _explicitNullValueActivityTaskCanceledEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributes ActivityTaskCanceledEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributes ActivityTaskCanceledEventAttributes { get => _explicitNullValueActivityTaskCanceledEventAttributes; set { _explicitNullValueActivityTaskCanceledEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityTaskCanceledEventAttributes"); else _explicitNullProperties?.Remove("activityTaskCanceledEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCanceledEventAttributes _explicitNullValueActivityTaskCanceledEventAttributes = default!;
 #endif
         /// <summary>The activityTaskCancelRequestedEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCancelRequestedEventAttributes? ActivityTaskCancelRequestedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCancelRequestedEventAttributes? ActivityTaskCancelRequestedEventAttributes { get => _explicitNullValueActivityTaskCancelRequestedEventAttributes; set { _explicitNullValueActivityTaskCancelRequestedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityTaskCancelRequestedEventAttributes"); else _explicitNullProperties?.Remove("activityTaskCancelRequestedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCancelRequestedEventAttributes? _explicitNullValueActivityTaskCancelRequestedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCancelRequestedEventAttributes ActivityTaskCancelRequestedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCancelRequestedEventAttributes ActivityTaskCancelRequestedEventAttributes { get => _explicitNullValueActivityTaskCancelRequestedEventAttributes; set { _explicitNullValueActivityTaskCancelRequestedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityTaskCancelRequestedEventAttributes"); else _explicitNullProperties?.Remove("activityTaskCancelRequestedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCancelRequestedEventAttributes _explicitNullValueActivityTaskCancelRequestedEventAttributes = default!;
 #endif
         /// <summary>The activityTaskCompletedEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCompletedEventAttributes? ActivityTaskCompletedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCompletedEventAttributes? ActivityTaskCompletedEventAttributes { get => _explicitNullValueActivityTaskCompletedEventAttributes; set { _explicitNullValueActivityTaskCompletedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityTaskCompletedEventAttributes"); else _explicitNullProperties?.Remove("activityTaskCompletedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCompletedEventAttributes? _explicitNullValueActivityTaskCompletedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCompletedEventAttributes ActivityTaskCompletedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCompletedEventAttributes ActivityTaskCompletedEventAttributes { get => _explicitNullValueActivityTaskCompletedEventAttributes; set { _explicitNullValueActivityTaskCompletedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityTaskCompletedEventAttributes"); else _explicitNullProperties?.Remove("activityTaskCompletedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCompletedEventAttributes _explicitNullValueActivityTaskCompletedEventAttributes = default!;
 #endif
         /// <summary>The activityTaskFailedEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskFailedEventAttributes? ActivityTaskFailedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskFailedEventAttributes? ActivityTaskFailedEventAttributes { get => _explicitNullValueActivityTaskFailedEventAttributes; set { _explicitNullValueActivityTaskFailedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityTaskFailedEventAttributes"); else _explicitNullProperties?.Remove("activityTaskFailedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskFailedEventAttributes? _explicitNullValueActivityTaskFailedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskFailedEventAttributes ActivityTaskFailedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskFailedEventAttributes ActivityTaskFailedEventAttributes { get => _explicitNullValueActivityTaskFailedEventAttributes; set { _explicitNullValueActivityTaskFailedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityTaskFailedEventAttributes"); else _explicitNullProperties?.Remove("activityTaskFailedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskFailedEventAttributes _explicitNullValueActivityTaskFailedEventAttributes = default!;
 #endif
         /// <summary>The activityTaskScheduledEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskScheduledEventAttributes? ActivityTaskScheduledEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskScheduledEventAttributes? ActivityTaskScheduledEventAttributes { get => _explicitNullValueActivityTaskScheduledEventAttributes; set { _explicitNullValueActivityTaskScheduledEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityTaskScheduledEventAttributes"); else _explicitNullProperties?.Remove("activityTaskScheduledEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskScheduledEventAttributes? _explicitNullValueActivityTaskScheduledEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskScheduledEventAttributes ActivityTaskScheduledEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskScheduledEventAttributes ActivityTaskScheduledEventAttributes { get => _explicitNullValueActivityTaskScheduledEventAttributes; set { _explicitNullValueActivityTaskScheduledEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityTaskScheduledEventAttributes"); else _explicitNullProperties?.Remove("activityTaskScheduledEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskScheduledEventAttributes _explicitNullValueActivityTaskScheduledEventAttributes = default!;
 #endif
         /// <summary>The activityTaskStartedEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributes? ActivityTaskStartedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributes? ActivityTaskStartedEventAttributes { get => _explicitNullValueActivityTaskStartedEventAttributes; set { _explicitNullValueActivityTaskStartedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityTaskStartedEventAttributes"); else _explicitNullProperties?.Remove("activityTaskStartedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributes? _explicitNullValueActivityTaskStartedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributes ActivityTaskStartedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributes ActivityTaskStartedEventAttributes { get => _explicitNullValueActivityTaskStartedEventAttributes; set { _explicitNullValueActivityTaskStartedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityTaskStartedEventAttributes"); else _explicitNullProperties?.Remove("activityTaskStartedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributes _explicitNullValueActivityTaskStartedEventAttributes = default!;
 #endif
         /// <summary>The activityTaskTimedOutEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskTimedOutEventAttributes? ActivityTaskTimedOutEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskTimedOutEventAttributes? ActivityTaskTimedOutEventAttributes { get => _explicitNullValueActivityTaskTimedOutEventAttributes; set { _explicitNullValueActivityTaskTimedOutEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityTaskTimedOutEventAttributes"); else _explicitNullProperties?.Remove("activityTaskTimedOutEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskTimedOutEventAttributes? _explicitNullValueActivityTaskTimedOutEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskTimedOutEventAttributes ActivityTaskTimedOutEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskTimedOutEventAttributes ActivityTaskTimedOutEventAttributes { get => _explicitNullValueActivityTaskTimedOutEventAttributes; set { _explicitNullValueActivityTaskTimedOutEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityTaskTimedOutEventAttributes"); else _explicitNullProperties?.Remove("activityTaskTimedOutEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskTimedOutEventAttributes _explicitNullValueActivityTaskTimedOutEventAttributes = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The childWorkflowExecutionCanceledEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionCanceledEventAttributes? ChildWorkflowExecutionCanceledEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionCanceledEventAttributes? ChildWorkflowExecutionCanceledEventAttributes { get => _explicitNullValueChildWorkflowExecutionCanceledEventAttributes; set { _explicitNullValueChildWorkflowExecutionCanceledEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("childWorkflowExecutionCanceledEventAttributes"); else _explicitNullProperties?.Remove("childWorkflowExecutionCanceledEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionCanceledEventAttributes? _explicitNullValueChildWorkflowExecutionCanceledEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionCanceledEventAttributes ChildWorkflowExecutionCanceledEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionCanceledEventAttributes ChildWorkflowExecutionCanceledEventAttributes { get => _explicitNullValueChildWorkflowExecutionCanceledEventAttributes; set { _explicitNullValueChildWorkflowExecutionCanceledEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("childWorkflowExecutionCanceledEventAttributes"); else _explicitNullProperties?.Remove("childWorkflowExecutionCanceledEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionCanceledEventAttributes _explicitNullValueChildWorkflowExecutionCanceledEventAttributes = default!;
 #endif
         /// <summary>The childWorkflowExecutionCompletedEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionCompletedEventAttributes? ChildWorkflowExecutionCompletedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionCompletedEventAttributes? ChildWorkflowExecutionCompletedEventAttributes { get => _explicitNullValueChildWorkflowExecutionCompletedEventAttributes; set { _explicitNullValueChildWorkflowExecutionCompletedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("childWorkflowExecutionCompletedEventAttributes"); else _explicitNullProperties?.Remove("childWorkflowExecutionCompletedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionCompletedEventAttributes? _explicitNullValueChildWorkflowExecutionCompletedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionCompletedEventAttributes ChildWorkflowExecutionCompletedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionCompletedEventAttributes ChildWorkflowExecutionCompletedEventAttributes { get => _explicitNullValueChildWorkflowExecutionCompletedEventAttributes; set { _explicitNullValueChildWorkflowExecutionCompletedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("childWorkflowExecutionCompletedEventAttributes"); else _explicitNullProperties?.Remove("childWorkflowExecutionCompletedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionCompletedEventAttributes _explicitNullValueChildWorkflowExecutionCompletedEventAttributes = default!;
 #endif
         /// <summary>The childWorkflowExecutionFailedEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionFailedEventAttributes? ChildWorkflowExecutionFailedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionFailedEventAttributes? ChildWorkflowExecutionFailedEventAttributes { get => _explicitNullValueChildWorkflowExecutionFailedEventAttributes; set { _explicitNullValueChildWorkflowExecutionFailedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("childWorkflowExecutionFailedEventAttributes"); else _explicitNullProperties?.Remove("childWorkflowExecutionFailedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionFailedEventAttributes? _explicitNullValueChildWorkflowExecutionFailedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionFailedEventAttributes ChildWorkflowExecutionFailedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionFailedEventAttributes ChildWorkflowExecutionFailedEventAttributes { get => _explicitNullValueChildWorkflowExecutionFailedEventAttributes; set { _explicitNullValueChildWorkflowExecutionFailedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("childWorkflowExecutionFailedEventAttributes"); else _explicitNullProperties?.Remove("childWorkflowExecutionFailedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionFailedEventAttributes _explicitNullValueChildWorkflowExecutionFailedEventAttributes = default!;
 #endif
         /// <summary>The childWorkflowExecutionStartedEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionStartedEventAttributes? ChildWorkflowExecutionStartedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionStartedEventAttributes? ChildWorkflowExecutionStartedEventAttributes { get => _explicitNullValueChildWorkflowExecutionStartedEventAttributes; set { _explicitNullValueChildWorkflowExecutionStartedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("childWorkflowExecutionStartedEventAttributes"); else _explicitNullProperties?.Remove("childWorkflowExecutionStartedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionStartedEventAttributes? _explicitNullValueChildWorkflowExecutionStartedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionStartedEventAttributes ChildWorkflowExecutionStartedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionStartedEventAttributes ChildWorkflowExecutionStartedEventAttributes { get => _explicitNullValueChildWorkflowExecutionStartedEventAttributes; set { _explicitNullValueChildWorkflowExecutionStartedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("childWorkflowExecutionStartedEventAttributes"); else _explicitNullProperties?.Remove("childWorkflowExecutionStartedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionStartedEventAttributes _explicitNullValueChildWorkflowExecutionStartedEventAttributes = default!;
 #endif
         /// <summary>The childWorkflowExecutionTerminatedEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionTerminatedEventAttributes? ChildWorkflowExecutionTerminatedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionTerminatedEventAttributes? ChildWorkflowExecutionTerminatedEventAttributes { get => _explicitNullValueChildWorkflowExecutionTerminatedEventAttributes; set { _explicitNullValueChildWorkflowExecutionTerminatedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("childWorkflowExecutionTerminatedEventAttributes"); else _explicitNullProperties?.Remove("childWorkflowExecutionTerminatedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionTerminatedEventAttributes? _explicitNullValueChildWorkflowExecutionTerminatedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionTerminatedEventAttributes ChildWorkflowExecutionTerminatedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionTerminatedEventAttributes ChildWorkflowExecutionTerminatedEventAttributes { get => _explicitNullValueChildWorkflowExecutionTerminatedEventAttributes; set { _explicitNullValueChildWorkflowExecutionTerminatedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("childWorkflowExecutionTerminatedEventAttributes"); else _explicitNullProperties?.Remove("childWorkflowExecutionTerminatedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionTerminatedEventAttributes _explicitNullValueChildWorkflowExecutionTerminatedEventAttributes = default!;
 #endif
         /// <summary>The childWorkflowExecutionTimedOutEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionTimedOutEventAttributes? ChildWorkflowExecutionTimedOutEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionTimedOutEventAttributes? ChildWorkflowExecutionTimedOutEventAttributes { get => _explicitNullValueChildWorkflowExecutionTimedOutEventAttributes; set { _explicitNullValueChildWorkflowExecutionTimedOutEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("childWorkflowExecutionTimedOutEventAttributes"); else _explicitNullProperties?.Remove("childWorkflowExecutionTimedOutEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionTimedOutEventAttributes? _explicitNullValueChildWorkflowExecutionTimedOutEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionTimedOutEventAttributes ChildWorkflowExecutionTimedOutEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionTimedOutEventAttributes ChildWorkflowExecutionTimedOutEventAttributes { get => _explicitNullValueChildWorkflowExecutionTimedOutEventAttributes; set { _explicitNullValueChildWorkflowExecutionTimedOutEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("childWorkflowExecutionTimedOutEventAttributes"); else _explicitNullProperties?.Remove("childWorkflowExecutionTimedOutEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionTimedOutEventAttributes _explicitNullValueChildWorkflowExecutionTimedOutEventAttributes = default!;
 #endif
         /// <summary>Monotonically increasing event number, starts at 1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EventId { get; set; }
+        public string? EventId { get => _explicitNullValueEventId; set { _explicitNullValueEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventId"); else _explicitNullProperties?.Remove("eventId"); } }
+        private string? _explicitNullValueEventId = default!;
 #nullable restore
 #else
-        public string EventId { get; set; }
+        public string EventId { get => _explicitNullValueEventId; set { _explicitNullValueEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventId"); else _explicitNullProperties?.Remove("eventId"); } }
+        private string _explicitNullValueEventId = default!;
 #endif
         /// <summary>The eventTime property</summary>
-        public DateTimeOffset? EventTime { get; set; }
+        public DateTimeOffset? EventTime { get => _explicitNullValueEventTime; set { _explicitNullValueEventTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventTime"); else _explicitNullProperties?.Remove("eventTime"); } }
+        private DateTimeOffset? _explicitNullValueEventTime = default!;
         /// <summary>The eventType property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.HistoryEventEventType? EventType { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.HistoryEventEventType? EventType { get => _explicitNullValueEventType; set { _explicitNullValueEventType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventType"); else _explicitNullProperties?.Remove("eventType"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.HistoryEventEventType? _explicitNullValueEventType = default!;
         /// <summary>The externalWorkflowExecutionCancelRequestedEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ExternalWorkflowExecutionCancelRequestedEventAttributes? ExternalWorkflowExecutionCancelRequestedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ExternalWorkflowExecutionCancelRequestedEventAttributes? ExternalWorkflowExecutionCancelRequestedEventAttributes { get => _explicitNullValueExternalWorkflowExecutionCancelRequestedEventAttributes; set { _explicitNullValueExternalWorkflowExecutionCancelRequestedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalWorkflowExecutionCancelRequestedEventAttributes"); else _explicitNullProperties?.Remove("externalWorkflowExecutionCancelRequestedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ExternalWorkflowExecutionCancelRequestedEventAttributes? _explicitNullValueExternalWorkflowExecutionCancelRequestedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ExternalWorkflowExecutionCancelRequestedEventAttributes ExternalWorkflowExecutionCancelRequestedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ExternalWorkflowExecutionCancelRequestedEventAttributes ExternalWorkflowExecutionCancelRequestedEventAttributes { get => _explicitNullValueExternalWorkflowExecutionCancelRequestedEventAttributes; set { _explicitNullValueExternalWorkflowExecutionCancelRequestedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalWorkflowExecutionCancelRequestedEventAttributes"); else _explicitNullProperties?.Remove("externalWorkflowExecutionCancelRequestedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ExternalWorkflowExecutionCancelRequestedEventAttributes _explicitNullValueExternalWorkflowExecutionCancelRequestedEventAttributes = default!;
 #endif
         /// <summary>The externalWorkflowExecutionSignaledEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ExternalWorkflowExecutionSignaledEventAttributes? ExternalWorkflowExecutionSignaledEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ExternalWorkflowExecutionSignaledEventAttributes? ExternalWorkflowExecutionSignaledEventAttributes { get => _explicitNullValueExternalWorkflowExecutionSignaledEventAttributes; set { _explicitNullValueExternalWorkflowExecutionSignaledEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalWorkflowExecutionSignaledEventAttributes"); else _explicitNullProperties?.Remove("externalWorkflowExecutionSignaledEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ExternalWorkflowExecutionSignaledEventAttributes? _explicitNullValueExternalWorkflowExecutionSignaledEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ExternalWorkflowExecutionSignaledEventAttributes ExternalWorkflowExecutionSignaledEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ExternalWorkflowExecutionSignaledEventAttributes ExternalWorkflowExecutionSignaledEventAttributes { get => _explicitNullValueExternalWorkflowExecutionSignaledEventAttributes; set { _explicitNullValueExternalWorkflowExecutionSignaledEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalWorkflowExecutionSignaledEventAttributes"); else _explicitNullProperties?.Remove("externalWorkflowExecutionSignaledEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ExternalWorkflowExecutionSignaledEventAttributes _explicitNullValueExternalWorkflowExecutionSignaledEventAttributes = default!;
 #endif
         /// <summary>Links to related entities, such as the entity that started this event&apos;s workflow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.Link>? Links { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.Link>? Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.Link>? _explicitNullValueLinks = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.Link> Links { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.Link> Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.Link> _explicitNullValueLinks = default!;
 #endif
         /// <summary>The markerRecordedEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.MarkerRecordedEventAttributes? MarkerRecordedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.MarkerRecordedEventAttributes? MarkerRecordedEventAttributes { get => _explicitNullValueMarkerRecordedEventAttributes; set { _explicitNullValueMarkerRecordedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("markerRecordedEventAttributes"); else _explicitNullProperties?.Remove("markerRecordedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.MarkerRecordedEventAttributes? _explicitNullValueMarkerRecordedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.MarkerRecordedEventAttributes MarkerRecordedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.MarkerRecordedEventAttributes MarkerRecordedEventAttributes { get => _explicitNullValueMarkerRecordedEventAttributes; set { _explicitNullValueMarkerRecordedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("markerRecordedEventAttributes"); else _explicitNullProperties?.Remove("markerRecordedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.MarkerRecordedEventAttributes _explicitNullValueMarkerRecordedEventAttributes = default!;
 #endif
         /// <summary>Nexus operation completed as canceled. May or may not have been due to a cancellation request by the workflow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCanceledEventAttributes? NexusOperationCanceledEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCanceledEventAttributes? NexusOperationCanceledEventAttributes { get => _explicitNullValueNexusOperationCanceledEventAttributes; set { _explicitNullValueNexusOperationCanceledEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nexusOperationCanceledEventAttributes"); else _explicitNullProperties?.Remove("nexusOperationCanceledEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCanceledEventAttributes? _explicitNullValueNexusOperationCanceledEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCanceledEventAttributes NexusOperationCanceledEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCanceledEventAttributes NexusOperationCanceledEventAttributes { get => _explicitNullValueNexusOperationCanceledEventAttributes; set { _explicitNullValueNexusOperationCanceledEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nexusOperationCanceledEventAttributes"); else _explicitNullProperties?.Remove("nexusOperationCanceledEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCanceledEventAttributes _explicitNullValueNexusOperationCanceledEventAttributes = default!;
 #endif
         /// <summary>The nexusOperationCancelRequestCompletedEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCancelRequestCompletedEventAttributes? NexusOperationCancelRequestCompletedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCancelRequestCompletedEventAttributes? NexusOperationCancelRequestCompletedEventAttributes { get => _explicitNullValueNexusOperationCancelRequestCompletedEventAttributes; set { _explicitNullValueNexusOperationCancelRequestCompletedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nexusOperationCancelRequestCompletedEventAttributes"); else _explicitNullProperties?.Remove("nexusOperationCancelRequestCompletedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCancelRequestCompletedEventAttributes? _explicitNullValueNexusOperationCancelRequestCompletedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCancelRequestCompletedEventAttributes NexusOperationCancelRequestCompletedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCancelRequestCompletedEventAttributes NexusOperationCancelRequestCompletedEventAttributes { get => _explicitNullValueNexusOperationCancelRequestCompletedEventAttributes; set { _explicitNullValueNexusOperationCancelRequestCompletedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nexusOperationCancelRequestCompletedEventAttributes"); else _explicitNullProperties?.Remove("nexusOperationCancelRequestCompletedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCancelRequestCompletedEventAttributes _explicitNullValueNexusOperationCancelRequestCompletedEventAttributes = default!;
 #endif
         /// <summary>The nexusOperationCancelRequestedEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCancelRequestedEventAttributes? NexusOperationCancelRequestedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCancelRequestedEventAttributes? NexusOperationCancelRequestedEventAttributes { get => _explicitNullValueNexusOperationCancelRequestedEventAttributes; set { _explicitNullValueNexusOperationCancelRequestedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nexusOperationCancelRequestedEventAttributes"); else _explicitNullProperties?.Remove("nexusOperationCancelRequestedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCancelRequestedEventAttributes? _explicitNullValueNexusOperationCancelRequestedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCancelRequestedEventAttributes NexusOperationCancelRequestedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCancelRequestedEventAttributes NexusOperationCancelRequestedEventAttributes { get => _explicitNullValueNexusOperationCancelRequestedEventAttributes; set { _explicitNullValueNexusOperationCancelRequestedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nexusOperationCancelRequestedEventAttributes"); else _explicitNullProperties?.Remove("nexusOperationCancelRequestedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCancelRequestedEventAttributes _explicitNullValueNexusOperationCancelRequestedEventAttributes = default!;
 #endif
         /// <summary>The nexusOperationCancelRequestFailedEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCancelRequestFailedEventAttributes? NexusOperationCancelRequestFailedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCancelRequestFailedEventAttributes? NexusOperationCancelRequestFailedEventAttributes { get => _explicitNullValueNexusOperationCancelRequestFailedEventAttributes; set { _explicitNullValueNexusOperationCancelRequestFailedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nexusOperationCancelRequestFailedEventAttributes"); else _explicitNullProperties?.Remove("nexusOperationCancelRequestFailedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCancelRequestFailedEventAttributes? _explicitNullValueNexusOperationCancelRequestFailedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCancelRequestFailedEventAttributes NexusOperationCancelRequestFailedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCancelRequestFailedEventAttributes NexusOperationCancelRequestFailedEventAttributes { get => _explicitNullValueNexusOperationCancelRequestFailedEventAttributes; set { _explicitNullValueNexusOperationCancelRequestFailedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nexusOperationCancelRequestFailedEventAttributes"); else _explicitNullProperties?.Remove("nexusOperationCancelRequestFailedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCancelRequestFailedEventAttributes _explicitNullValueNexusOperationCancelRequestFailedEventAttributes = default!;
 #endif
         /// <summary>Nexus operation completed successfully.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCompletedEventAttributes? NexusOperationCompletedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCompletedEventAttributes? NexusOperationCompletedEventAttributes { get => _explicitNullValueNexusOperationCompletedEventAttributes; set { _explicitNullValueNexusOperationCompletedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nexusOperationCompletedEventAttributes"); else _explicitNullProperties?.Remove("nexusOperationCompletedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCompletedEventAttributes? _explicitNullValueNexusOperationCompletedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCompletedEventAttributes NexusOperationCompletedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCompletedEventAttributes NexusOperationCompletedEventAttributes { get => _explicitNullValueNexusOperationCompletedEventAttributes; set { _explicitNullValueNexusOperationCompletedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nexusOperationCompletedEventAttributes"); else _explicitNullProperties?.Remove("nexusOperationCompletedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationCompletedEventAttributes _explicitNullValueNexusOperationCompletedEventAttributes = default!;
 #endif
         /// <summary>Nexus operation failed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationFailedEventAttributes? NexusOperationFailedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationFailedEventAttributes? NexusOperationFailedEventAttributes { get => _explicitNullValueNexusOperationFailedEventAttributes; set { _explicitNullValueNexusOperationFailedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nexusOperationFailedEventAttributes"); else _explicitNullProperties?.Remove("nexusOperationFailedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationFailedEventAttributes? _explicitNullValueNexusOperationFailedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationFailedEventAttributes NexusOperationFailedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationFailedEventAttributes NexusOperationFailedEventAttributes { get => _explicitNullValueNexusOperationFailedEventAttributes; set { _explicitNullValueNexusOperationFailedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nexusOperationFailedEventAttributes"); else _explicitNullProperties?.Remove("nexusOperationFailedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationFailedEventAttributes _explicitNullValueNexusOperationFailedEventAttributes = default!;
 #endif
         /// <summary>Event marking that an operation was scheduled by a workflow via the ScheduleNexusOperation command.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationScheduledEventAttributes? NexusOperationScheduledEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationScheduledEventAttributes? NexusOperationScheduledEventAttributes { get => _explicitNullValueNexusOperationScheduledEventAttributes; set { _explicitNullValueNexusOperationScheduledEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nexusOperationScheduledEventAttributes"); else _explicitNullProperties?.Remove("nexusOperationScheduledEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationScheduledEventAttributes? _explicitNullValueNexusOperationScheduledEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationScheduledEventAttributes NexusOperationScheduledEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationScheduledEventAttributes NexusOperationScheduledEventAttributes { get => _explicitNullValueNexusOperationScheduledEventAttributes; set { _explicitNullValueNexusOperationScheduledEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nexusOperationScheduledEventAttributes"); else _explicitNullProperties?.Remove("nexusOperationScheduledEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationScheduledEventAttributes _explicitNullValueNexusOperationScheduledEventAttributes = default!;
 #endif
         /// <summary>Event marking an asynchronous operation was started by the responding Nexus handler. If the operation completes synchronously, this event is not generated. In rare situations, such as request timeouts, the service may fail to record the actual start time and will fabricate this event upon receiving the operation completion via callback.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationStartedEventAttributes? NexusOperationStartedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationStartedEventAttributes? NexusOperationStartedEventAttributes { get => _explicitNullValueNexusOperationStartedEventAttributes; set { _explicitNullValueNexusOperationStartedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nexusOperationStartedEventAttributes"); else _explicitNullProperties?.Remove("nexusOperationStartedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationStartedEventAttributes? _explicitNullValueNexusOperationStartedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationStartedEventAttributes NexusOperationStartedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationStartedEventAttributes NexusOperationStartedEventAttributes { get => _explicitNullValueNexusOperationStartedEventAttributes; set { _explicitNullValueNexusOperationStartedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nexusOperationStartedEventAttributes"); else _explicitNullProperties?.Remove("nexusOperationStartedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationStartedEventAttributes _explicitNullValueNexusOperationStartedEventAttributes = default!;
 #endif
         /// <summary>Nexus operation timed out.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationTimedOutEventAttributes? NexusOperationTimedOutEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationTimedOutEventAttributes? NexusOperationTimedOutEventAttributes { get => _explicitNullValueNexusOperationTimedOutEventAttributes; set { _explicitNullValueNexusOperationTimedOutEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nexusOperationTimedOutEventAttributes"); else _explicitNullProperties?.Remove("nexusOperationTimedOutEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationTimedOutEventAttributes? _explicitNullValueNexusOperationTimedOutEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationTimedOutEventAttributes NexusOperationTimedOutEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationTimedOutEventAttributes NexusOperationTimedOutEventAttributes { get => _explicitNullValueNexusOperationTimedOutEventAttributes; set { _explicitNullValueNexusOperationTimedOutEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nexusOperationTimedOutEventAttributes"); else _explicitNullProperties?.Remove("nexusOperationTimedOutEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationTimedOutEventAttributes _explicitNullValueNexusOperationTimedOutEventAttributes = default!;
 #endif
         /// <summary>Server-computed authenticated caller identity associated with this event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.HistoryEventPrincipal? Principal { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.HistoryEventPrincipal? Principal { get => _explicitNullValuePrincipal; set { _explicitNullValuePrincipal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("principal"); else _explicitNullProperties?.Remove("principal"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.HistoryEventPrincipal? _explicitNullValuePrincipal = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.HistoryEventPrincipal Principal { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.HistoryEventPrincipal Principal { get => _explicitNullValuePrincipal; set { _explicitNullValuePrincipal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("principal"); else _explicitNullProperties?.Remove("principal"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.HistoryEventPrincipal _explicitNullValuePrincipal = default!;
 #endif
         /// <summary>The requestCancelExternalWorkflowExecutionFailedEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelExternalWorkflowExecutionFailedEventAttributes? RequestCancelExternalWorkflowExecutionFailedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelExternalWorkflowExecutionFailedEventAttributes? RequestCancelExternalWorkflowExecutionFailedEventAttributes { get => _explicitNullValueRequestCancelExternalWorkflowExecutionFailedEventAttributes; set { _explicitNullValueRequestCancelExternalWorkflowExecutionFailedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestCancelExternalWorkflowExecutionFailedEventAttributes"); else _explicitNullProperties?.Remove("requestCancelExternalWorkflowExecutionFailedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelExternalWorkflowExecutionFailedEventAttributes? _explicitNullValueRequestCancelExternalWorkflowExecutionFailedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelExternalWorkflowExecutionFailedEventAttributes RequestCancelExternalWorkflowExecutionFailedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelExternalWorkflowExecutionFailedEventAttributes RequestCancelExternalWorkflowExecutionFailedEventAttributes { get => _explicitNullValueRequestCancelExternalWorkflowExecutionFailedEventAttributes; set { _explicitNullValueRequestCancelExternalWorkflowExecutionFailedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestCancelExternalWorkflowExecutionFailedEventAttributes"); else _explicitNullProperties?.Remove("requestCancelExternalWorkflowExecutionFailedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelExternalWorkflowExecutionFailedEventAttributes _explicitNullValueRequestCancelExternalWorkflowExecutionFailedEventAttributes = default!;
 #endif
         /// <summary>The requestCancelExternalWorkflowExecutionInitiatedEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelExternalWorkflowExecutionInitiatedEventAttributes? RequestCancelExternalWorkflowExecutionInitiatedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelExternalWorkflowExecutionInitiatedEventAttributes? RequestCancelExternalWorkflowExecutionInitiatedEventAttributes { get => _explicitNullValueRequestCancelExternalWorkflowExecutionInitiatedEventAttributes; set { _explicitNullValueRequestCancelExternalWorkflowExecutionInitiatedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestCancelExternalWorkflowExecutionInitiatedEventAttributes"); else _explicitNullProperties?.Remove("requestCancelExternalWorkflowExecutionInitiatedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelExternalWorkflowExecutionInitiatedEventAttributes? _explicitNullValueRequestCancelExternalWorkflowExecutionInitiatedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelExternalWorkflowExecutionInitiatedEventAttributes RequestCancelExternalWorkflowExecutionInitiatedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelExternalWorkflowExecutionInitiatedEventAttributes RequestCancelExternalWorkflowExecutionInitiatedEventAttributes { get => _explicitNullValueRequestCancelExternalWorkflowExecutionInitiatedEventAttributes; set { _explicitNullValueRequestCancelExternalWorkflowExecutionInitiatedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestCancelExternalWorkflowExecutionInitiatedEventAttributes"); else _explicitNullProperties?.Remove("requestCancelExternalWorkflowExecutionInitiatedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelExternalWorkflowExecutionInitiatedEventAttributes _explicitNullValueRequestCancelExternalWorkflowExecutionInitiatedEventAttributes = default!;
 #endif
         /// <summary>The signalExternalWorkflowExecutionFailedEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.SignalExternalWorkflowExecutionFailedEventAttributes? SignalExternalWorkflowExecutionFailedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SignalExternalWorkflowExecutionFailedEventAttributes? SignalExternalWorkflowExecutionFailedEventAttributes { get => _explicitNullValueSignalExternalWorkflowExecutionFailedEventAttributes; set { _explicitNullValueSignalExternalWorkflowExecutionFailedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signalExternalWorkflowExecutionFailedEventAttributes"); else _explicitNullProperties?.Remove("signalExternalWorkflowExecutionFailedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.SignalExternalWorkflowExecutionFailedEventAttributes? _explicitNullValueSignalExternalWorkflowExecutionFailedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.SignalExternalWorkflowExecutionFailedEventAttributes SignalExternalWorkflowExecutionFailedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SignalExternalWorkflowExecutionFailedEventAttributes SignalExternalWorkflowExecutionFailedEventAttributes { get => _explicitNullValueSignalExternalWorkflowExecutionFailedEventAttributes; set { _explicitNullValueSignalExternalWorkflowExecutionFailedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signalExternalWorkflowExecutionFailedEventAttributes"); else _explicitNullProperties?.Remove("signalExternalWorkflowExecutionFailedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.SignalExternalWorkflowExecutionFailedEventAttributes _explicitNullValueSignalExternalWorkflowExecutionFailedEventAttributes = default!;
 #endif
         /// <summary>The signalExternalWorkflowExecutionInitiatedEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.SignalExternalWorkflowExecutionInitiatedEventAttributes? SignalExternalWorkflowExecutionInitiatedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SignalExternalWorkflowExecutionInitiatedEventAttributes? SignalExternalWorkflowExecutionInitiatedEventAttributes { get => _explicitNullValueSignalExternalWorkflowExecutionInitiatedEventAttributes; set { _explicitNullValueSignalExternalWorkflowExecutionInitiatedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signalExternalWorkflowExecutionInitiatedEventAttributes"); else _explicitNullProperties?.Remove("signalExternalWorkflowExecutionInitiatedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.SignalExternalWorkflowExecutionInitiatedEventAttributes? _explicitNullValueSignalExternalWorkflowExecutionInitiatedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.SignalExternalWorkflowExecutionInitiatedEventAttributes SignalExternalWorkflowExecutionInitiatedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SignalExternalWorkflowExecutionInitiatedEventAttributes SignalExternalWorkflowExecutionInitiatedEventAttributes { get => _explicitNullValueSignalExternalWorkflowExecutionInitiatedEventAttributes; set { _explicitNullValueSignalExternalWorkflowExecutionInitiatedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signalExternalWorkflowExecutionInitiatedEventAttributes"); else _explicitNullProperties?.Remove("signalExternalWorkflowExecutionInitiatedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.SignalExternalWorkflowExecutionInitiatedEventAttributes _explicitNullValueSignalExternalWorkflowExecutionInitiatedEventAttributes = default!;
 #endif
         /// <summary>The startChildWorkflowExecutionFailedEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartChildWorkflowExecutionFailedEventAttributes? StartChildWorkflowExecutionFailedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartChildWorkflowExecutionFailedEventAttributes? StartChildWorkflowExecutionFailedEventAttributes { get => _explicitNullValueStartChildWorkflowExecutionFailedEventAttributes; set { _explicitNullValueStartChildWorkflowExecutionFailedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startChildWorkflowExecutionFailedEventAttributes"); else _explicitNullProperties?.Remove("startChildWorkflowExecutionFailedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.StartChildWorkflowExecutionFailedEventAttributes? _explicitNullValueStartChildWorkflowExecutionFailedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartChildWorkflowExecutionFailedEventAttributes StartChildWorkflowExecutionFailedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartChildWorkflowExecutionFailedEventAttributes StartChildWorkflowExecutionFailedEventAttributes { get => _explicitNullValueStartChildWorkflowExecutionFailedEventAttributes; set { _explicitNullValueStartChildWorkflowExecutionFailedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startChildWorkflowExecutionFailedEventAttributes"); else _explicitNullProperties?.Remove("startChildWorkflowExecutionFailedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.StartChildWorkflowExecutionFailedEventAttributes _explicitNullValueStartChildWorkflowExecutionFailedEventAttributes = default!;
 #endif
         /// <summary>The startChildWorkflowExecutionInitiatedEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartChildWorkflowExecutionInitiatedEventAttributes? StartChildWorkflowExecutionInitiatedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartChildWorkflowExecutionInitiatedEventAttributes? StartChildWorkflowExecutionInitiatedEventAttributes { get => _explicitNullValueStartChildWorkflowExecutionInitiatedEventAttributes; set { _explicitNullValueStartChildWorkflowExecutionInitiatedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startChildWorkflowExecutionInitiatedEventAttributes"); else _explicitNullProperties?.Remove("startChildWorkflowExecutionInitiatedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.StartChildWorkflowExecutionInitiatedEventAttributes? _explicitNullValueStartChildWorkflowExecutionInitiatedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartChildWorkflowExecutionInitiatedEventAttributes StartChildWorkflowExecutionInitiatedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartChildWorkflowExecutionInitiatedEventAttributes StartChildWorkflowExecutionInitiatedEventAttributes { get => _explicitNullValueStartChildWorkflowExecutionInitiatedEventAttributes; set { _explicitNullValueStartChildWorkflowExecutionInitiatedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startChildWorkflowExecutionInitiatedEventAttributes"); else _explicitNullProperties?.Remove("startChildWorkflowExecutionInitiatedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.StartChildWorkflowExecutionInitiatedEventAttributes _explicitNullValueStartChildWorkflowExecutionInitiatedEventAttributes = default!;
 #endif
         /// <summary>Identifier used by the service to order replication and transfer tasks associated with this event. SDKs generally ignore this field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TaskId { get; set; }
+        public string? TaskId { get => _explicitNullValueTaskId; set { _explicitNullValueTaskId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taskId"); else _explicitNullProperties?.Remove("taskId"); } }
+        private string? _explicitNullValueTaskId = default!;
 #nullable restore
 #else
-        public string TaskId { get; set; }
+        public string TaskId { get => _explicitNullValueTaskId; set { _explicitNullValueTaskId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taskId"); else _explicitNullProperties?.Remove("taskId"); } }
+        private string _explicitNullValueTaskId = default!;
 #endif
         /// <summary>The timerCanceledEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.TimerCanceledEventAttributes? TimerCanceledEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.TimerCanceledEventAttributes? TimerCanceledEventAttributes { get => _explicitNullValueTimerCanceledEventAttributes; set { _explicitNullValueTimerCanceledEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timerCanceledEventAttributes"); else _explicitNullProperties?.Remove("timerCanceledEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.TimerCanceledEventAttributes? _explicitNullValueTimerCanceledEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.TimerCanceledEventAttributes TimerCanceledEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.TimerCanceledEventAttributes TimerCanceledEventAttributes { get => _explicitNullValueTimerCanceledEventAttributes; set { _explicitNullValueTimerCanceledEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timerCanceledEventAttributes"); else _explicitNullProperties?.Remove("timerCanceledEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.TimerCanceledEventAttributes _explicitNullValueTimerCanceledEventAttributes = default!;
 #endif
         /// <summary>The timerFiredEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.TimerFiredEventAttributes? TimerFiredEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.TimerFiredEventAttributes? TimerFiredEventAttributes { get => _explicitNullValueTimerFiredEventAttributes; set { _explicitNullValueTimerFiredEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timerFiredEventAttributes"); else _explicitNullProperties?.Remove("timerFiredEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.TimerFiredEventAttributes? _explicitNullValueTimerFiredEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.TimerFiredEventAttributes TimerFiredEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.TimerFiredEventAttributes TimerFiredEventAttributes { get => _explicitNullValueTimerFiredEventAttributes; set { _explicitNullValueTimerFiredEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timerFiredEventAttributes"); else _explicitNullProperties?.Remove("timerFiredEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.TimerFiredEventAttributes _explicitNullValueTimerFiredEventAttributes = default!;
 #endif
         /// <summary>The timerStartedEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.TimerStartedEventAttributes? TimerStartedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.TimerStartedEventAttributes? TimerStartedEventAttributes { get => _explicitNullValueTimerStartedEventAttributes; set { _explicitNullValueTimerStartedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timerStartedEventAttributes"); else _explicitNullProperties?.Remove("timerStartedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.TimerStartedEventAttributes? _explicitNullValueTimerStartedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.TimerStartedEventAttributes TimerStartedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.TimerStartedEventAttributes TimerStartedEventAttributes { get => _explicitNullValueTimerStartedEventAttributes; set { _explicitNullValueTimerStartedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timerStartedEventAttributes"); else _explicitNullProperties?.Remove("timerStartedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.TimerStartedEventAttributes _explicitNullValueTimerStartedEventAttributes = default!;
 #endif
         /// <summary>The upsertWorkflowSearchAttributesEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpsertWorkflowSearchAttributesEventAttributes? UpsertWorkflowSearchAttributesEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpsertWorkflowSearchAttributesEventAttributes? UpsertWorkflowSearchAttributesEventAttributes { get => _explicitNullValueUpsertWorkflowSearchAttributesEventAttributes; set { _explicitNullValueUpsertWorkflowSearchAttributesEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upsertWorkflowSearchAttributesEventAttributes"); else _explicitNullProperties?.Remove("upsertWorkflowSearchAttributesEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.UpsertWorkflowSearchAttributesEventAttributes? _explicitNullValueUpsertWorkflowSearchAttributesEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpsertWorkflowSearchAttributesEventAttributes UpsertWorkflowSearchAttributesEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpsertWorkflowSearchAttributesEventAttributes UpsertWorkflowSearchAttributesEventAttributes { get => _explicitNullValueUpsertWorkflowSearchAttributesEventAttributes; set { _explicitNullValueUpsertWorkflowSearchAttributesEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upsertWorkflowSearchAttributesEventAttributes"); else _explicitNullProperties?.Remove("upsertWorkflowSearchAttributesEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.UpsertWorkflowSearchAttributesEventAttributes _explicitNullValueUpsertWorkflowSearchAttributesEventAttributes = default!;
 #endif
         /// <summary>Metadata on the event. This is often carried over from commands and client calls. Most events won&apos;t have this information, and how this information is used is dependent upon the interface that reads it. Current well-known uses:  * workflow_execution_started_event_attributes - summary and details from start workflow.  * timer_started_event_attributes - summary represents an identifier for the timer for use by    user interfaces.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.HistoryEventUserMetadata? UserMetadata { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.HistoryEventUserMetadata? UserMetadata { get => _explicitNullValueUserMetadata; set { _explicitNullValueUserMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userMetadata"); else _explicitNullProperties?.Remove("userMetadata"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.HistoryEventUserMetadata? _explicitNullValueUserMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.HistoryEventUserMetadata UserMetadata { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.HistoryEventUserMetadata UserMetadata { get => _explicitNullValueUserMetadata; set { _explicitNullValueUserMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userMetadata"); else _explicitNullProperties?.Remove("userMetadata"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.HistoryEventUserMetadata _explicitNullValueUserMetadata = default!;
 #endif
         /// <summary>Failover version of the event, used by the server for multi-cluster replication and history versioning. SDKs generally ignore this field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Version { get; set; }
+        public string? Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version"); else _explicitNullProperties?.Remove("version"); } }
+        private string? _explicitNullValueVersion = default!;
 #nullable restore
 #else
-        public string Version { get; set; }
+        public string Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version"); else _explicitNullProperties?.Remove("version"); } }
+        private string _explicitNullValueVersion = default!;
 #endif
         /// <summary>Set to true when the SDK may ignore the event as it does not impact workflow state or information in any way that the SDK need be concerned with. If an SDK encounters an event type which it does not understand, it must error unless this is true. If it is true, it&apos;s acceptable for the event type and/or attributes to be uninterpretable.</summary>
-        public bool? WorkerMayIgnore { get; set; }
+        public bool? WorkerMayIgnore { get => _explicitNullValueWorkerMayIgnore; set { _explicitNullValueWorkerMayIgnore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerMayIgnore"); else _explicitNullProperties?.Remove("workerMayIgnore"); } }
+        private bool? _explicitNullValueWorkerMayIgnore = default!;
         /// <summary>The workflowExecutionCanceledEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionCanceledEventAttributes? WorkflowExecutionCanceledEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionCanceledEventAttributes? WorkflowExecutionCanceledEventAttributes { get => _explicitNullValueWorkflowExecutionCanceledEventAttributes; set { _explicitNullValueWorkflowExecutionCanceledEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionCanceledEventAttributes"); else _explicitNullProperties?.Remove("workflowExecutionCanceledEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionCanceledEventAttributes? _explicitNullValueWorkflowExecutionCanceledEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionCanceledEventAttributes WorkflowExecutionCanceledEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionCanceledEventAttributes WorkflowExecutionCanceledEventAttributes { get => _explicitNullValueWorkflowExecutionCanceledEventAttributes; set { _explicitNullValueWorkflowExecutionCanceledEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionCanceledEventAttributes"); else _explicitNullProperties?.Remove("workflowExecutionCanceledEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionCanceledEventAttributes _explicitNullValueWorkflowExecutionCanceledEventAttributes = default!;
 #endif
         /// <summary>The workflowExecutionCancelRequestedEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionCancelRequestedEventAttributes? WorkflowExecutionCancelRequestedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionCancelRequestedEventAttributes? WorkflowExecutionCancelRequestedEventAttributes { get => _explicitNullValueWorkflowExecutionCancelRequestedEventAttributes; set { _explicitNullValueWorkflowExecutionCancelRequestedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionCancelRequestedEventAttributes"); else _explicitNullProperties?.Remove("workflowExecutionCancelRequestedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionCancelRequestedEventAttributes? _explicitNullValueWorkflowExecutionCancelRequestedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionCancelRequestedEventAttributes WorkflowExecutionCancelRequestedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionCancelRequestedEventAttributes WorkflowExecutionCancelRequestedEventAttributes { get => _explicitNullValueWorkflowExecutionCancelRequestedEventAttributes; set { _explicitNullValueWorkflowExecutionCancelRequestedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionCancelRequestedEventAttributes"); else _explicitNullProperties?.Remove("workflowExecutionCancelRequestedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionCancelRequestedEventAttributes _explicitNullValueWorkflowExecutionCancelRequestedEventAttributes = default!;
 #endif
         /// <summary>The workflowExecutionCompletedEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionCompletedEventAttributes? WorkflowExecutionCompletedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionCompletedEventAttributes? WorkflowExecutionCompletedEventAttributes { get => _explicitNullValueWorkflowExecutionCompletedEventAttributes; set { _explicitNullValueWorkflowExecutionCompletedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionCompletedEventAttributes"); else _explicitNullProperties?.Remove("workflowExecutionCompletedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionCompletedEventAttributes? _explicitNullValueWorkflowExecutionCompletedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionCompletedEventAttributes WorkflowExecutionCompletedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionCompletedEventAttributes WorkflowExecutionCompletedEventAttributes { get => _explicitNullValueWorkflowExecutionCompletedEventAttributes; set { _explicitNullValueWorkflowExecutionCompletedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionCompletedEventAttributes"); else _explicitNullProperties?.Remove("workflowExecutionCompletedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionCompletedEventAttributes _explicitNullValueWorkflowExecutionCompletedEventAttributes = default!;
 #endif
         /// <summary>The workflowExecutionContinuedAsNewEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionContinuedAsNewEventAttributes? WorkflowExecutionContinuedAsNewEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionContinuedAsNewEventAttributes? WorkflowExecutionContinuedAsNewEventAttributes { get => _explicitNullValueWorkflowExecutionContinuedAsNewEventAttributes; set { _explicitNullValueWorkflowExecutionContinuedAsNewEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionContinuedAsNewEventAttributes"); else _explicitNullProperties?.Remove("workflowExecutionContinuedAsNewEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionContinuedAsNewEventAttributes? _explicitNullValueWorkflowExecutionContinuedAsNewEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionContinuedAsNewEventAttributes WorkflowExecutionContinuedAsNewEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionContinuedAsNewEventAttributes WorkflowExecutionContinuedAsNewEventAttributes { get => _explicitNullValueWorkflowExecutionContinuedAsNewEventAttributes; set { _explicitNullValueWorkflowExecutionContinuedAsNewEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionContinuedAsNewEventAttributes"); else _explicitNullProperties?.Remove("workflowExecutionContinuedAsNewEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionContinuedAsNewEventAttributes _explicitNullValueWorkflowExecutionContinuedAsNewEventAttributes = default!;
 #endif
         /// <summary>The workflowExecutionFailedEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionFailedEventAttributes? WorkflowExecutionFailedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionFailedEventAttributes? WorkflowExecutionFailedEventAttributes { get => _explicitNullValueWorkflowExecutionFailedEventAttributes; set { _explicitNullValueWorkflowExecutionFailedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionFailedEventAttributes"); else _explicitNullProperties?.Remove("workflowExecutionFailedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionFailedEventAttributes? _explicitNullValueWorkflowExecutionFailedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionFailedEventAttributes WorkflowExecutionFailedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionFailedEventAttributes WorkflowExecutionFailedEventAttributes { get => _explicitNullValueWorkflowExecutionFailedEventAttributes; set { _explicitNullValueWorkflowExecutionFailedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionFailedEventAttributes"); else _explicitNullProperties?.Remove("workflowExecutionFailedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionFailedEventAttributes _explicitNullValueWorkflowExecutionFailedEventAttributes = default!;
 #endif
         /// <summary>The workflowExecutionOptionsUpdatedEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsUpdatedEventAttributes? WorkflowExecutionOptionsUpdatedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsUpdatedEventAttributes? WorkflowExecutionOptionsUpdatedEventAttributes { get => _explicitNullValueWorkflowExecutionOptionsUpdatedEventAttributes; set { _explicitNullValueWorkflowExecutionOptionsUpdatedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionOptionsUpdatedEventAttributes"); else _explicitNullProperties?.Remove("workflowExecutionOptionsUpdatedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsUpdatedEventAttributes? _explicitNullValueWorkflowExecutionOptionsUpdatedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsUpdatedEventAttributes WorkflowExecutionOptionsUpdatedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsUpdatedEventAttributes WorkflowExecutionOptionsUpdatedEventAttributes { get => _explicitNullValueWorkflowExecutionOptionsUpdatedEventAttributes; set { _explicitNullValueWorkflowExecutionOptionsUpdatedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionOptionsUpdatedEventAttributes"); else _explicitNullProperties?.Remove("workflowExecutionOptionsUpdatedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsUpdatedEventAttributes _explicitNullValueWorkflowExecutionOptionsUpdatedEventAttributes = default!;
 #endif
         /// <summary>Attributes for an event marking that a workflow execution was paused.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionPausedEventAttributes? WorkflowExecutionPausedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionPausedEventAttributes? WorkflowExecutionPausedEventAttributes { get => _explicitNullValueWorkflowExecutionPausedEventAttributes; set { _explicitNullValueWorkflowExecutionPausedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionPausedEventAttributes"); else _explicitNullProperties?.Remove("workflowExecutionPausedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionPausedEventAttributes? _explicitNullValueWorkflowExecutionPausedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionPausedEventAttributes WorkflowExecutionPausedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionPausedEventAttributes WorkflowExecutionPausedEventAttributes { get => _explicitNullValueWorkflowExecutionPausedEventAttributes; set { _explicitNullValueWorkflowExecutionPausedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionPausedEventAttributes"); else _explicitNullProperties?.Remove("workflowExecutionPausedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionPausedEventAttributes _explicitNullValueWorkflowExecutionPausedEventAttributes = default!;
 #endif
         /// <summary>The workflowExecutionSignaledEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributes? WorkflowExecutionSignaledEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributes? WorkflowExecutionSignaledEventAttributes { get => _explicitNullValueWorkflowExecutionSignaledEventAttributes; set { _explicitNullValueWorkflowExecutionSignaledEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionSignaledEventAttributes"); else _explicitNullProperties?.Remove("workflowExecutionSignaledEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributes? _explicitNullValueWorkflowExecutionSignaledEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributes WorkflowExecutionSignaledEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributes WorkflowExecutionSignaledEventAttributes { get => _explicitNullValueWorkflowExecutionSignaledEventAttributes; set { _explicitNullValueWorkflowExecutionSignaledEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionSignaledEventAttributes"); else _explicitNullProperties?.Remove("workflowExecutionSignaledEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionSignaledEventAttributes _explicitNullValueWorkflowExecutionSignaledEventAttributes = default!;
 #endif
         /// <summary>Always the first event in workflow history</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes? WorkflowExecutionStartedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes? WorkflowExecutionStartedEventAttributes { get => _explicitNullValueWorkflowExecutionStartedEventAttributes; set { _explicitNullValueWorkflowExecutionStartedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionStartedEventAttributes"); else _explicitNullProperties?.Remove("workflowExecutionStartedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes? _explicitNullValueWorkflowExecutionStartedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes WorkflowExecutionStartedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes WorkflowExecutionStartedEventAttributes { get => _explicitNullValueWorkflowExecutionStartedEventAttributes; set { _explicitNullValueWorkflowExecutionStartedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionStartedEventAttributes"); else _explicitNullProperties?.Remove("workflowExecutionStartedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributes _explicitNullValueWorkflowExecutionStartedEventAttributes = default!;
 #endif
         /// <summary>The workflowExecutionTerminatedEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTerminatedEventAttributes? WorkflowExecutionTerminatedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTerminatedEventAttributes? WorkflowExecutionTerminatedEventAttributes { get => _explicitNullValueWorkflowExecutionTerminatedEventAttributes; set { _explicitNullValueWorkflowExecutionTerminatedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionTerminatedEventAttributes"); else _explicitNullProperties?.Remove("workflowExecutionTerminatedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTerminatedEventAttributes? _explicitNullValueWorkflowExecutionTerminatedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTerminatedEventAttributes WorkflowExecutionTerminatedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTerminatedEventAttributes WorkflowExecutionTerminatedEventAttributes { get => _explicitNullValueWorkflowExecutionTerminatedEventAttributes; set { _explicitNullValueWorkflowExecutionTerminatedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionTerminatedEventAttributes"); else _explicitNullProperties?.Remove("workflowExecutionTerminatedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTerminatedEventAttributes _explicitNullValueWorkflowExecutionTerminatedEventAttributes = default!;
 #endif
         /// <summary>The workflowExecutionTimedOutEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTimedOutEventAttributes? WorkflowExecutionTimedOutEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTimedOutEventAttributes? WorkflowExecutionTimedOutEventAttributes { get => _explicitNullValueWorkflowExecutionTimedOutEventAttributes; set { _explicitNullValueWorkflowExecutionTimedOutEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionTimedOutEventAttributes"); else _explicitNullProperties?.Remove("workflowExecutionTimedOutEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTimedOutEventAttributes? _explicitNullValueWorkflowExecutionTimedOutEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTimedOutEventAttributes WorkflowExecutionTimedOutEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTimedOutEventAttributes WorkflowExecutionTimedOutEventAttributes { get => _explicitNullValueWorkflowExecutionTimedOutEventAttributes; set { _explicitNullValueWorkflowExecutionTimedOutEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionTimedOutEventAttributes"); else _explicitNullProperties?.Remove("workflowExecutionTimedOutEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTimedOutEventAttributes _explicitNullValueWorkflowExecutionTimedOutEventAttributes = default!;
 #endif
         /// <summary>Attributes for an event indicating that time skipping state changed for a workflow execution, either time was advanced or time skipping was disabled automatically due to a bound being reached. The worker_may_ignore field in HistoryEvent should always be set true for this event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTimeSkippingTransitionedEventAttributes? WorkflowExecutionTimeSkippingTransitionedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTimeSkippingTransitionedEventAttributes? WorkflowExecutionTimeSkippingTransitionedEventAttributes { get => _explicitNullValueWorkflowExecutionTimeSkippingTransitionedEventAttributes; set { _explicitNullValueWorkflowExecutionTimeSkippingTransitionedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionTimeSkippingTransitionedEventAttributes"); else _explicitNullProperties?.Remove("workflowExecutionTimeSkippingTransitionedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTimeSkippingTransitionedEventAttributes? _explicitNullValueWorkflowExecutionTimeSkippingTransitionedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTimeSkippingTransitionedEventAttributes WorkflowExecutionTimeSkippingTransitionedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTimeSkippingTransitionedEventAttributes WorkflowExecutionTimeSkippingTransitionedEventAttributes { get => _explicitNullValueWorkflowExecutionTimeSkippingTransitionedEventAttributes; set { _explicitNullValueWorkflowExecutionTimeSkippingTransitionedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionTimeSkippingTransitionedEventAttributes"); else _explicitNullProperties?.Remove("workflowExecutionTimeSkippingTransitionedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTimeSkippingTransitionedEventAttributes _explicitNullValueWorkflowExecutionTimeSkippingTransitionedEventAttributes = default!;
 #endif
         /// <summary>Attributes for an event marking that a workflow execution was unpaused.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUnpausedEventAttributes? WorkflowExecutionUnpausedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUnpausedEventAttributes? WorkflowExecutionUnpausedEventAttributes { get => _explicitNullValueWorkflowExecutionUnpausedEventAttributes; set { _explicitNullValueWorkflowExecutionUnpausedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionUnpausedEventAttributes"); else _explicitNullProperties?.Remove("workflowExecutionUnpausedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUnpausedEventAttributes? _explicitNullValueWorkflowExecutionUnpausedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUnpausedEventAttributes WorkflowExecutionUnpausedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUnpausedEventAttributes WorkflowExecutionUnpausedEventAttributes { get => _explicitNullValueWorkflowExecutionUnpausedEventAttributes; set { _explicitNullValueWorkflowExecutionUnpausedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionUnpausedEventAttributes"); else _explicitNullProperties?.Remove("workflowExecutionUnpausedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUnpausedEventAttributes _explicitNullValueWorkflowExecutionUnpausedEventAttributes = default!;
 #endif
         /// <summary>The workflowExecutionUpdateAcceptedEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAcceptedEventAttributes? WorkflowExecutionUpdateAcceptedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAcceptedEventAttributes? WorkflowExecutionUpdateAcceptedEventAttributes { get => _explicitNullValueWorkflowExecutionUpdateAcceptedEventAttributes; set { _explicitNullValueWorkflowExecutionUpdateAcceptedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionUpdateAcceptedEventAttributes"); else _explicitNullProperties?.Remove("workflowExecutionUpdateAcceptedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAcceptedEventAttributes? _explicitNullValueWorkflowExecutionUpdateAcceptedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAcceptedEventAttributes WorkflowExecutionUpdateAcceptedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAcceptedEventAttributes WorkflowExecutionUpdateAcceptedEventAttributes { get => _explicitNullValueWorkflowExecutionUpdateAcceptedEventAttributes; set { _explicitNullValueWorkflowExecutionUpdateAcceptedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionUpdateAcceptedEventAttributes"); else _explicitNullProperties?.Remove("workflowExecutionUpdateAcceptedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAcceptedEventAttributes _explicitNullValueWorkflowExecutionUpdateAcceptedEventAttributes = default!;
 #endif
         /// <summary>The workflowExecutionUpdateAdmittedEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAdmittedEventAttributes? WorkflowExecutionUpdateAdmittedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAdmittedEventAttributes? WorkflowExecutionUpdateAdmittedEventAttributes { get => _explicitNullValueWorkflowExecutionUpdateAdmittedEventAttributes; set { _explicitNullValueWorkflowExecutionUpdateAdmittedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionUpdateAdmittedEventAttributes"); else _explicitNullProperties?.Remove("workflowExecutionUpdateAdmittedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAdmittedEventAttributes? _explicitNullValueWorkflowExecutionUpdateAdmittedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAdmittedEventAttributes WorkflowExecutionUpdateAdmittedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAdmittedEventAttributes WorkflowExecutionUpdateAdmittedEventAttributes { get => _explicitNullValueWorkflowExecutionUpdateAdmittedEventAttributes; set { _explicitNullValueWorkflowExecutionUpdateAdmittedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionUpdateAdmittedEventAttributes"); else _explicitNullProperties?.Remove("workflowExecutionUpdateAdmittedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAdmittedEventAttributes _explicitNullValueWorkflowExecutionUpdateAdmittedEventAttributes = default!;
 #endif
         /// <summary>The workflowExecutionUpdateCompletedEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateCompletedEventAttributes? WorkflowExecutionUpdateCompletedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateCompletedEventAttributes? WorkflowExecutionUpdateCompletedEventAttributes { get => _explicitNullValueWorkflowExecutionUpdateCompletedEventAttributes; set { _explicitNullValueWorkflowExecutionUpdateCompletedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionUpdateCompletedEventAttributes"); else _explicitNullProperties?.Remove("workflowExecutionUpdateCompletedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateCompletedEventAttributes? _explicitNullValueWorkflowExecutionUpdateCompletedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateCompletedEventAttributes WorkflowExecutionUpdateCompletedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateCompletedEventAttributes WorkflowExecutionUpdateCompletedEventAttributes { get => _explicitNullValueWorkflowExecutionUpdateCompletedEventAttributes; set { _explicitNullValueWorkflowExecutionUpdateCompletedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionUpdateCompletedEventAttributes"); else _explicitNullProperties?.Remove("workflowExecutionUpdateCompletedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateCompletedEventAttributes _explicitNullValueWorkflowExecutionUpdateCompletedEventAttributes = default!;
 #endif
         /// <summary>The workflowExecutionUpdateRejectedEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateRejectedEventAttributes? WorkflowExecutionUpdateRejectedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateRejectedEventAttributes? WorkflowExecutionUpdateRejectedEventAttributes { get => _explicitNullValueWorkflowExecutionUpdateRejectedEventAttributes; set { _explicitNullValueWorkflowExecutionUpdateRejectedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionUpdateRejectedEventAttributes"); else _explicitNullProperties?.Remove("workflowExecutionUpdateRejectedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateRejectedEventAttributes? _explicitNullValueWorkflowExecutionUpdateRejectedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateRejectedEventAttributes WorkflowExecutionUpdateRejectedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateRejectedEventAttributes WorkflowExecutionUpdateRejectedEventAttributes { get => _explicitNullValueWorkflowExecutionUpdateRejectedEventAttributes; set { _explicitNullValueWorkflowExecutionUpdateRejectedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionUpdateRejectedEventAttributes"); else _explicitNullProperties?.Remove("workflowExecutionUpdateRejectedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateRejectedEventAttributes _explicitNullValueWorkflowExecutionUpdateRejectedEventAttributes = default!;
 #endif
         /// <summary>The workflowPropertiesModifiedEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowPropertiesModifiedEventAttributes? WorkflowPropertiesModifiedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowPropertiesModifiedEventAttributes? WorkflowPropertiesModifiedEventAttributes { get => _explicitNullValueWorkflowPropertiesModifiedEventAttributes; set { _explicitNullValueWorkflowPropertiesModifiedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowPropertiesModifiedEventAttributes"); else _explicitNullProperties?.Remove("workflowPropertiesModifiedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowPropertiesModifiedEventAttributes? _explicitNullValueWorkflowPropertiesModifiedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowPropertiesModifiedEventAttributes WorkflowPropertiesModifiedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowPropertiesModifiedEventAttributes WorkflowPropertiesModifiedEventAttributes { get => _explicitNullValueWorkflowPropertiesModifiedEventAttributes; set { _explicitNullValueWorkflowPropertiesModifiedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowPropertiesModifiedEventAttributes"); else _explicitNullProperties?.Remove("workflowPropertiesModifiedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowPropertiesModifiedEventAttributes _explicitNullValueWorkflowPropertiesModifiedEventAttributes = default!;
 #endif
         /// <summary>Not used anywhere. Use case is replaced by WorkflowExecutionOptionsUpdatedEventAttributes</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowPropertiesModifiedExternallyEventAttributes? WorkflowPropertiesModifiedExternallyEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowPropertiesModifiedExternallyEventAttributes? WorkflowPropertiesModifiedExternallyEventAttributes { get => _explicitNullValueWorkflowPropertiesModifiedExternallyEventAttributes; set { _explicitNullValueWorkflowPropertiesModifiedExternallyEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowPropertiesModifiedExternallyEventAttributes"); else _explicitNullProperties?.Remove("workflowPropertiesModifiedExternallyEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowPropertiesModifiedExternallyEventAttributes? _explicitNullValueWorkflowPropertiesModifiedExternallyEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowPropertiesModifiedExternallyEventAttributes WorkflowPropertiesModifiedExternallyEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowPropertiesModifiedExternallyEventAttributes WorkflowPropertiesModifiedExternallyEventAttributes { get => _explicitNullValueWorkflowPropertiesModifiedExternallyEventAttributes; set { _explicitNullValueWorkflowPropertiesModifiedExternallyEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowPropertiesModifiedExternallyEventAttributes"); else _explicitNullProperties?.Remove("workflowPropertiesModifiedExternallyEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowPropertiesModifiedExternallyEventAttributes _explicitNullValueWorkflowPropertiesModifiedExternallyEventAttributes = default!;
 #endif
         /// <summary>The workflowTaskCompletedEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributes? WorkflowTaskCompletedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributes? WorkflowTaskCompletedEventAttributes { get => _explicitNullValueWorkflowTaskCompletedEventAttributes; set { _explicitNullValueWorkflowTaskCompletedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowTaskCompletedEventAttributes"); else _explicitNullProperties?.Remove("workflowTaskCompletedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributes? _explicitNullValueWorkflowTaskCompletedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributes WorkflowTaskCompletedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributes WorkflowTaskCompletedEventAttributes { get => _explicitNullValueWorkflowTaskCompletedEventAttributes; set { _explicitNullValueWorkflowTaskCompletedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowTaskCompletedEventAttributes"); else _explicitNullProperties?.Remove("workflowTaskCompletedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributes _explicitNullValueWorkflowTaskCompletedEventAttributes = default!;
 #endif
         /// <summary>The workflowTaskFailedEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributes? WorkflowTaskFailedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributes? WorkflowTaskFailedEventAttributes { get => _explicitNullValueWorkflowTaskFailedEventAttributes; set { _explicitNullValueWorkflowTaskFailedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowTaskFailedEventAttributes"); else _explicitNullProperties?.Remove("workflowTaskFailedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributes? _explicitNullValueWorkflowTaskFailedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributes WorkflowTaskFailedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributes WorkflowTaskFailedEventAttributes { get => _explicitNullValueWorkflowTaskFailedEventAttributes; set { _explicitNullValueWorkflowTaskFailedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowTaskFailedEventAttributes"); else _explicitNullProperties?.Remove("workflowTaskFailedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributes _explicitNullValueWorkflowTaskFailedEventAttributes = default!;
 #endif
         /// <summary>The workflowTaskScheduledEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskScheduledEventAttributes? WorkflowTaskScheduledEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskScheduledEventAttributes? WorkflowTaskScheduledEventAttributes { get => _explicitNullValueWorkflowTaskScheduledEventAttributes; set { _explicitNullValueWorkflowTaskScheduledEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowTaskScheduledEventAttributes"); else _explicitNullProperties?.Remove("workflowTaskScheduledEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskScheduledEventAttributes? _explicitNullValueWorkflowTaskScheduledEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskScheduledEventAttributes WorkflowTaskScheduledEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskScheduledEventAttributes WorkflowTaskScheduledEventAttributes { get => _explicitNullValueWorkflowTaskScheduledEventAttributes; set { _explicitNullValueWorkflowTaskScheduledEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowTaskScheduledEventAttributes"); else _explicitNullProperties?.Remove("workflowTaskScheduledEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskScheduledEventAttributes _explicitNullValueWorkflowTaskScheduledEventAttributes = default!;
 #endif
         /// <summary>The workflowTaskStartedEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskStartedEventAttributes? WorkflowTaskStartedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskStartedEventAttributes? WorkflowTaskStartedEventAttributes { get => _explicitNullValueWorkflowTaskStartedEventAttributes; set { _explicitNullValueWorkflowTaskStartedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowTaskStartedEventAttributes"); else _explicitNullProperties?.Remove("workflowTaskStartedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskStartedEventAttributes? _explicitNullValueWorkflowTaskStartedEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskStartedEventAttributes WorkflowTaskStartedEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskStartedEventAttributes WorkflowTaskStartedEventAttributes { get => _explicitNullValueWorkflowTaskStartedEventAttributes; set { _explicitNullValueWorkflowTaskStartedEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowTaskStartedEventAttributes"); else _explicitNullProperties?.Remove("workflowTaskStartedEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskStartedEventAttributes _explicitNullValueWorkflowTaskStartedEventAttributes = default!;
 #endif
         /// <summary>The workflowTaskTimedOutEventAttributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskTimedOutEventAttributes? WorkflowTaskTimedOutEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskTimedOutEventAttributes? WorkflowTaskTimedOutEventAttributes { get => _explicitNullValueWorkflowTaskTimedOutEventAttributes; set { _explicitNullValueWorkflowTaskTimedOutEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowTaskTimedOutEventAttributes"); else _explicitNullProperties?.Remove("workflowTaskTimedOutEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskTimedOutEventAttributes? _explicitNullValueWorkflowTaskTimedOutEventAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskTimedOutEventAttributes WorkflowTaskTimedOutEventAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskTimedOutEventAttributes WorkflowTaskTimedOutEventAttributes { get => _explicitNullValueWorkflowTaskTimedOutEventAttributes; set { _explicitNullValueWorkflowTaskTimedOutEventAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowTaskTimedOutEventAttributes"); else _explicitNullProperties?.Remove("workflowTaskTimedOutEventAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskTimedOutEventAttributes _explicitNullValueWorkflowTaskTimedOutEventAttributes = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.HistoryEvent"/> and sets the default values.
@@ -564,7 +775,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.HistoryEvent CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.HistoryEvent();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.HistoryEvent(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -721,6 +932,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskScheduledEventAttributes>("workflowTaskScheduledEventAttributes", WorkflowTaskScheduledEventAttributes);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskStartedEventAttributes>("workflowTaskStartedEventAttributes", WorkflowTaskStartedEventAttributes);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskTimedOutEventAttributes>("workflowTaskTimedOutEventAttributes", WorkflowTaskTimedOutEventAttributes);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,18 +12,30 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class VersioningOverridePinned : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("behavior") is { } nullNodeBehavior && nullNodeBehavior.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Behavior = null;
+            if (parseNode.GetChildNode("version") is { } nullNodeVersion && nullNodeVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Version = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Defaults to PINNED_OVERRIDE_BEHAVIOR_UNSPECIFIED. See `PinnedOverrideBehavior` for details.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverridePinnedOverrideBehavior? Behavior { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverridePinnedOverrideBehavior? Behavior { get => _explicitNullValueBehavior; set { _explicitNullValueBehavior = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("behavior"); else _explicitNullProperties?.Remove("behavior"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverridePinnedOverrideBehavior? _explicitNullValueBehavior = default!;
         /// <summary>Specifies the Worker Deployment Version to pin this workflow to. Required if the target workflow is not already pinned to a version. If omitted and the target workflow is already pinned, the effective pinned version will be the existing pinned version. If omitted and the target workflow is not pinned, the override request will be rejected with a PreconditionFailed error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverridePinnedOverrideVersion? Version { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverridePinnedOverrideVersion? Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version"); else _explicitNullProperties?.Remove("version"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverridePinnedOverrideVersion? _explicitNullValueVersion = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverridePinnedOverrideVersion Version { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverridePinnedOverrideVersion Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version"); else _explicitNullProperties?.Remove("version"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverridePinnedOverrideVersion _explicitNullValueVersion = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverridePinned"/> and sets the default values.
@@ -40,7 +52,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverridePinned CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverridePinned();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverridePinned(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -63,6 +75,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverridePinnedOverrideBehavior>("behavior", Behavior);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverridePinnedOverrideVersion>("version", Version);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

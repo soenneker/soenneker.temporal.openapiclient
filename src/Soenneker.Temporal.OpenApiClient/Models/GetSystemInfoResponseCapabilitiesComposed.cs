@@ -12,33 +12,64 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GetSystemInfoResponseCapabilitiesComposed : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("activityFailureIncludeHeartbeat") is { } nullNodeActivityFailureIncludeHeartbeat && nullNodeActivityFailureIncludeHeartbeat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActivityFailureIncludeHeartbeat = null;
+            if (parseNode.GetChildNode("buildIdBasedVersioning") is { } nullNodeBuildIdBasedVersioning && nullNodeBuildIdBasedVersioning.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuildIdBasedVersioning = null;
+            if (parseNode.GetChildNode("countGroupByExecutionStatus") is { } nullNodeCountGroupByExecutionStatus && nullNodeCountGroupByExecutionStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CountGroupByExecutionStatus = null;
+            if (parseNode.GetChildNode("eagerWorkflowStart") is { } nullNodeEagerWorkflowStart && nullNodeEagerWorkflowStart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EagerWorkflowStart = null;
+            if (parseNode.GetChildNode("encodedFailureAttributes") is { } nullNodeEncodedFailureAttributes && nullNodeEncodedFailureAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EncodedFailureAttributes = null;
+            if (parseNode.GetChildNode("internalErrorDifferentiation") is { } nullNodeInternalErrorDifferentiation && nullNodeInternalErrorDifferentiation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InternalErrorDifferentiation = null;
+            if (parseNode.GetChildNode("nexus") is { } nullNodeNexus && nullNodeNexus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Nexus = null;
+            if (parseNode.GetChildNode("sdkMetadata") is { } nullNodeSdkMetadata && nullNodeSdkMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SdkMetadata = null;
+            if (parseNode.GetChildNode("serverScaledDeployments") is { } nullNodeServerScaledDeployments && nullNodeServerScaledDeployments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServerScaledDeployments = null;
+            if (parseNode.GetChildNode("signalAndQueryHeader") is { } nullNodeSignalAndQueryHeader && nullNodeSignalAndQueryHeader.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignalAndQueryHeader = null;
+            if (parseNode.GetChildNode("supportsSchedules") is { } nullNodeSupportsSchedules && nullNodeSupportsSchedules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportsSchedules = null;
+            if (parseNode.GetChildNode("upsertMemo") is { } nullNodeUpsertMemo && nullNodeUpsertMemo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpsertMemo = null;
+        }
+
         /// <summary>True if RespondActivityTaskFailed API supports including heartbeat details</summary>
-        public bool? ActivityFailureIncludeHeartbeat { get; set; }
+        public bool? ActivityFailureIncludeHeartbeat { get => _explicitNullValueActivityFailureIncludeHeartbeat; set { _explicitNullValueActivityFailureIncludeHeartbeat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityFailureIncludeHeartbeat"); else _explicitNullProperties?.Remove("activityFailureIncludeHeartbeat"); } }
+        private bool? _explicitNullValueActivityFailureIncludeHeartbeat = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>True if server supports dispatching Workflow and Activity tasks based on a worker&apos;s build_id (see: https://github.com/temporalio/proposals/blob/a123af3b559f43db16ea6dd31870bfb754c4dc5e/versioning/worker-versions.md)</summary>
-        public bool? BuildIdBasedVersioning { get; set; }
+        public bool? BuildIdBasedVersioning { get => _explicitNullValueBuildIdBasedVersioning; set { _explicitNullValueBuildIdBasedVersioning = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buildIdBasedVersioning"); else _explicitNullProperties?.Remove("buildIdBasedVersioning"); } }
+        private bool? _explicitNullValueBuildIdBasedVersioning = default!;
         /// <summary>True if the server supports count group by execution status</summary>
-        public bool? CountGroupByExecutionStatus { get; set; }
+        public bool? CountGroupByExecutionStatus { get => _explicitNullValueCountGroupByExecutionStatus; set { _explicitNullValueCountGroupByExecutionStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countGroupByExecutionStatus"); else _explicitNullProperties?.Remove("countGroupByExecutionStatus"); } }
+        private bool? _explicitNullValueCountGroupByExecutionStatus = default!;
         /// <summary>True if server supports eager workflow task dispatching for the StartWorkflowExecution API</summary>
-        public bool? EagerWorkflowStart { get; set; }
+        public bool? EagerWorkflowStart { get => _explicitNullValueEagerWorkflowStart; set { _explicitNullValueEagerWorkflowStart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eagerWorkflowStart"); else _explicitNullProperties?.Remove("eagerWorkflowStart"); } }
+        private bool? _explicitNullValueEagerWorkflowStart = default!;
         /// <summary>True if server uses protos that include temporal.api.failure.v1.Failure.encoded_attributes</summary>
-        public bool? EncodedFailureAttributes { get; set; }
+        public bool? EncodedFailureAttributes { get => _explicitNullValueEncodedFailureAttributes; set { _explicitNullValueEncodedFailureAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("encodedFailureAttributes"); else _explicitNullProperties?.Remove("encodedFailureAttributes"); } }
+        private bool? _explicitNullValueEncodedFailureAttributes = default!;
         /// <summary>True if internal errors are differentiated from other types of errors for purposes of retrying non-internal errors. When unset/false, clients retry all failures. When true, clients should only retry non-internal errors.</summary>
-        public bool? InternalErrorDifferentiation { get; set; }
+        public bool? InternalErrorDifferentiation { get => _explicitNullValueInternalErrorDifferentiation; set { _explicitNullValueInternalErrorDifferentiation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("internalErrorDifferentiation"); else _explicitNullProperties?.Remove("internalErrorDifferentiation"); } }
+        private bool? _explicitNullValueInternalErrorDifferentiation = default!;
         /// <summary>True if the server supports Nexus operations. This flag is dependent both on server version and for Nexus to be enabled via server configuration.</summary>
-        public bool? Nexus { get; set; }
+        public bool? Nexus { get => _explicitNullValueNexus; set { _explicitNullValueNexus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nexus"); else _explicitNullProperties?.Remove("nexus"); } }
+        private bool? _explicitNullValueNexus = default!;
         /// <summary>True if the server knows about the sdk metadata field on WFT completions and will record it in history</summary>
-        public bool? SdkMetadata { get; set; }
+        public bool? SdkMetadata { get => _explicitNullValueSdkMetadata; set { _explicitNullValueSdkMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sdkMetadata"); else _explicitNullProperties?.Remove("sdkMetadata"); } }
+        private bool? _explicitNullValueSdkMetadata = default!;
         /// <summary>True if the server supports server-scaled deployments. This flag is dependent both on server version and for server-scaled deployments to be enabled via server configuration.</summary>
-        public bool? ServerScaledDeployments { get; set; }
+        public bool? ServerScaledDeployments { get => _explicitNullValueServerScaledDeployments; set { _explicitNullValueServerScaledDeployments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serverScaledDeployments"); else _explicitNullProperties?.Remove("serverScaledDeployments"); } }
+        private bool? _explicitNullValueServerScaledDeployments = default!;
         /// <summary>True if signal and query headers are supported.</summary>
-        public bool? SignalAndQueryHeader { get; set; }
+        public bool? SignalAndQueryHeader { get => _explicitNullValueSignalAndQueryHeader; set { _explicitNullValueSignalAndQueryHeader = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signalAndQueryHeader"); else _explicitNullProperties?.Remove("signalAndQueryHeader"); } }
+        private bool? _explicitNullValueSignalAndQueryHeader = default!;
         /// <summary>Supports scheduled workflow features.</summary>
-        public bool? SupportsSchedules { get; set; }
+        public bool? SupportsSchedules { get => _explicitNullValueSupportsSchedules; set { _explicitNullValueSupportsSchedules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supportsSchedules"); else _explicitNullProperties?.Remove("supportsSchedules"); } }
+        private bool? _explicitNullValueSupportsSchedules = default!;
         /// <summary>True if server supports upserting workflow memo</summary>
-        public bool? UpsertMemo { get; set; }
+        public bool? UpsertMemo { get => _explicitNullValueUpsertMemo; set { _explicitNullValueUpsertMemo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upsertMemo"); else _explicitNullProperties?.Remove("upsertMemo"); } }
+        private bool? _explicitNullValueUpsertMemo = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.GetSystemInfoResponseCapabilitiesComposed"/> and sets the default values.
         /// </summary>
@@ -54,7 +85,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.GetSystemInfoResponseCapabilitiesComposed CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.GetSystemInfoResponseCapabilitiesComposed();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.GetSystemInfoResponseCapabilitiesComposed(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -97,6 +128,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteBoolValue("signalAndQueryHeader", SignalAndQueryHeader);
             writer.WriteBoolValue("supportsSchedules", SupportsSchedules);
             writer.WriteBoolValue("upsertMemo", UpsertMemo);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

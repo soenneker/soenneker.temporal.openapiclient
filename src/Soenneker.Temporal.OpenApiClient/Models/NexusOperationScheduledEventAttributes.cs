@@ -12,96 +12,136 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class NexusOperationScheduledEventAttributes : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("endpoint") is { } nullNodeEndpoint && nullNodeEndpoint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Endpoint = null;
+            if (parseNode.GetChildNode("endpointId") is { } nullNodeEndpointId && nullNodeEndpointId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndpointId = null;
+            if (parseNode.GetChildNode("input") is { } nullNodeInput && nullNodeInput.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Input = null;
+            if (parseNode.GetChildNode("nexusHeader") is { } nullNodeNexusHeader && nullNodeNexusHeader.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NexusHeader = null;
+            if (parseNode.GetChildNode("operation") is { } nullNodeOperation && nullNodeOperation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Operation = null;
+            if (parseNode.GetChildNode("requestId") is { } nullNodeRequestId && nullNodeRequestId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestId = null;
+            if (parseNode.GetChildNode("scheduleToCloseTimeout") is { } nullNodeScheduleToCloseTimeout && nullNodeScheduleToCloseTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduleToCloseTimeout = null;
+            if (parseNode.GetChildNode("scheduleToStartTimeout") is { } nullNodeScheduleToStartTimeout && nullNodeScheduleToStartTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduleToStartTimeout = null;
+            if (parseNode.GetChildNode("service") is { } nullNodeService && nullNodeService.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Service = null;
+            if (parseNode.GetChildNode("startToCloseTimeout") is { } nullNodeStartToCloseTimeout && nullNodeStartToCloseTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartToCloseTimeout = null;
+            if (parseNode.GetChildNode("workflowTaskCompletedEventId") is { } nullNodeWorkflowTaskCompletedEventId && nullNodeWorkflowTaskCompletedEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowTaskCompletedEventId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Endpoint name, must exist in the endpoint registry.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Endpoint { get; set; }
+        public string? Endpoint { get => _explicitNullValueEndpoint; set { _explicitNullValueEndpoint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpoint"); else _explicitNullProperties?.Remove("endpoint"); } }
+        private string? _explicitNullValueEndpoint = default!;
 #nullable restore
 #else
-        public string Endpoint { get; set; }
+        public string Endpoint { get => _explicitNullValueEndpoint; set { _explicitNullValueEndpoint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpoint"); else _explicitNullProperties?.Remove("endpoint"); } }
+        private string _explicitNullValueEndpoint = default!;
 #endif
         /// <summary>Endpoint ID as resolved in the endpoint registry at the time this event was generated. This is stored on the event and used internally by the server in case the endpoint is renamed from the time the event was originally scheduled.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EndpointId { get; set; }
+        public string? EndpointId { get => _explicitNullValueEndpointId; set { _explicitNullValueEndpointId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpointId"); else _explicitNullProperties?.Remove("endpointId"); } }
+        private string? _explicitNullValueEndpointId = default!;
 #nullable restore
 #else
-        public string EndpointId { get; set; }
+        public string EndpointId { get => _explicitNullValueEndpointId; set { _explicitNullValueEndpointId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpointId"); else _explicitNullProperties?.Remove("endpointId"); } }
+        private string _explicitNullValueEndpointId = default!;
 #endif
         /// <summary>Input for the operation. The server converts this into Nexus request content and the appropriate content headers internally when sending the StartOperation request. On the handler side, if it is also backed by Temporal, the content is transformed back to the original Payload stored in this event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Input { get; set; }
+        public UntypedNode? Input { get => _explicitNullValueInput; set { _explicitNullValueInput = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("input"); else _explicitNullProperties?.Remove("input"); } }
+        private UntypedNode? _explicitNullValueInput = default!;
 #nullable restore
 #else
-        public UntypedNode Input { get; set; }
+        public UntypedNode Input { get => _explicitNullValueInput; set { _explicitNullValueInput = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("input"); else _explicitNullProperties?.Remove("input"); } }
+        private UntypedNode _explicitNullValueInput = default!;
 #endif
         /// <summary>Header to attach to the Nexus request. Note these headers are not the same as Temporal headers on internal activities and child workflows, these are transmitted to Nexus operations that may be external and are not traditional payloads.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationScheduledEventAttributesNexusHeaderProperty? NexusHeader { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationScheduledEventAttributesNexusHeaderProperty? NexusHeader { get => _explicitNullValueNexusHeader; set { _explicitNullValueNexusHeader = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nexusHeader"); else _explicitNullProperties?.Remove("nexusHeader"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationScheduledEventAttributesNexusHeaderProperty? _explicitNullValueNexusHeader = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationScheduledEventAttributesNexusHeaderProperty NexusHeader { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationScheduledEventAttributesNexusHeaderProperty NexusHeader { get => _explicitNullValueNexusHeader; set { _explicitNullValueNexusHeader = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nexusHeader"); else _explicitNullProperties?.Remove("nexusHeader"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationScheduledEventAttributesNexusHeaderProperty _explicitNullValueNexusHeader = default!;
 #endif
         /// <summary>Operation name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Operation { get; set; }
+        public string? Operation { get => _explicitNullValueOperation; set { _explicitNullValueOperation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operation"); else _explicitNullProperties?.Remove("operation"); } }
+        private string? _explicitNullValueOperation = default!;
 #nullable restore
 #else
-        public string Operation { get; set; }
+        public string Operation { get => _explicitNullValueOperation; set { _explicitNullValueOperation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operation"); else _explicitNullProperties?.Remove("operation"); } }
+        private string _explicitNullValueOperation = default!;
 #endif
         /// <summary>A unique ID generated by the history service upon creation of this event. The ID will be transmitted with all nexus StartOperation requests and is used as an idempotentency key.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RequestId { get; set; }
+        public string? RequestId { get => _explicitNullValueRequestId; set { _explicitNullValueRequestId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestId"); else _explicitNullProperties?.Remove("requestId"); } }
+        private string? _explicitNullValueRequestId = default!;
 #nullable restore
 #else
-        public string RequestId { get; set; }
+        public string RequestId { get => _explicitNullValueRequestId; set { _explicitNullValueRequestId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestId"); else _explicitNullProperties?.Remove("requestId"); } }
+        private string _explicitNullValueRequestId = default!;
 #endif
         /// <summary>Schedule-to-close timeout for this operation. Indicates how long the caller is willing to wait for operation completion. Calls are retried internally by the server. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;to&quot; is used to indicate interval. --) (-- api-linter: core::0142::time-field-names=disabled     aip.dev/not-precedent: &quot;timeout&quot; is an acceptable suffix for duration fields in this API. --)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ScheduleToCloseTimeout { get; set; }
+        public string? ScheduleToCloseTimeout { get => _explicitNullValueScheduleToCloseTimeout; set { _explicitNullValueScheduleToCloseTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduleToCloseTimeout"); else _explicitNullProperties?.Remove("scheduleToCloseTimeout"); } }
+        private string? _explicitNullValueScheduleToCloseTimeout = default!;
 #nullable restore
 #else
-        public string ScheduleToCloseTimeout { get; set; }
+        public string ScheduleToCloseTimeout { get => _explicitNullValueScheduleToCloseTimeout; set { _explicitNullValueScheduleToCloseTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduleToCloseTimeout"); else _explicitNullProperties?.Remove("scheduleToCloseTimeout"); } }
+        private string _explicitNullValueScheduleToCloseTimeout = default!;
 #endif
         /// <summary>Schedule-to-start timeout for this operation. See ScheduleNexusOperationCommandAttributes.schedule_to_start_timeout for details. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;to&quot; is used to indicate interval. --)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ScheduleToStartTimeout { get; set; }
+        public string? ScheduleToStartTimeout { get => _explicitNullValueScheduleToStartTimeout; set { _explicitNullValueScheduleToStartTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduleToStartTimeout"); else _explicitNullProperties?.Remove("scheduleToStartTimeout"); } }
+        private string? _explicitNullValueScheduleToStartTimeout = default!;
 #nullable restore
 #else
-        public string ScheduleToStartTimeout { get; set; }
+        public string ScheduleToStartTimeout { get => _explicitNullValueScheduleToStartTimeout; set { _explicitNullValueScheduleToStartTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduleToStartTimeout"); else _explicitNullProperties?.Remove("scheduleToStartTimeout"); } }
+        private string _explicitNullValueScheduleToStartTimeout = default!;
 #endif
         /// <summary>Service name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Service { get; set; }
+        public string? Service { get => _explicitNullValueService; set { _explicitNullValueService = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service"); else _explicitNullProperties?.Remove("service"); } }
+        private string? _explicitNullValueService = default!;
 #nullable restore
 #else
-        public string Service { get; set; }
+        public string Service { get => _explicitNullValueService; set { _explicitNullValueService = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service"); else _explicitNullProperties?.Remove("service"); } }
+        private string _explicitNullValueService = default!;
 #endif
         /// <summary>Start-to-close timeout for this operation. See ScheduleNexusOperationCommandAttributes.start_to_close_timeout for details. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;to&quot; is used to indicate interval. --)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartToCloseTimeout { get; set; }
+        public string? StartToCloseTimeout { get => _explicitNullValueStartToCloseTimeout; set { _explicitNullValueStartToCloseTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startToCloseTimeout"); else _explicitNullProperties?.Remove("startToCloseTimeout"); } }
+        private string? _explicitNullValueStartToCloseTimeout = default!;
 #nullable restore
 #else
-        public string StartToCloseTimeout { get; set; }
+        public string StartToCloseTimeout { get => _explicitNullValueStartToCloseTimeout; set { _explicitNullValueStartToCloseTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startToCloseTimeout"); else _explicitNullProperties?.Remove("startToCloseTimeout"); } }
+        private string _explicitNullValueStartToCloseTimeout = default!;
 #endif
         /// <summary>The `WORKFLOW_TASK_COMPLETED` event that the corresponding ScheduleNexusOperation command was reported with.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkflowTaskCompletedEventId { get; set; }
+        public string? WorkflowTaskCompletedEventId { get => _explicitNullValueWorkflowTaskCompletedEventId; set { _explicitNullValueWorkflowTaskCompletedEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowTaskCompletedEventId"); else _explicitNullProperties?.Remove("workflowTaskCompletedEventId"); } }
+        private string? _explicitNullValueWorkflowTaskCompletedEventId = default!;
 #nullable restore
 #else
-        public string WorkflowTaskCompletedEventId { get; set; }
+        public string WorkflowTaskCompletedEventId { get => _explicitNullValueWorkflowTaskCompletedEventId; set { _explicitNullValueWorkflowTaskCompletedEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowTaskCompletedEventId"); else _explicitNullProperties?.Remove("workflowTaskCompletedEventId"); } }
+        private string _explicitNullValueWorkflowTaskCompletedEventId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationScheduledEventAttributes"/> and sets the default values.
@@ -118,7 +158,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationScheduledEventAttributes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationScheduledEventAttributes();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationScheduledEventAttributes(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -159,6 +199,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("service", Service);
             writer.WriteStringValue("startToCloseTimeout", StartToCloseTimeout);
             writer.WriteStringValue("workflowTaskCompletedEventId", WorkflowTaskCompletedEventId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

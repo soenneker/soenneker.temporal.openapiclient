@@ -12,18 +12,30 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FailoverStatus : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("failoverTime") is { } nullNodeFailoverTime && nullNodeFailoverTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailoverTime = null;
+            if (parseNode.GetChildNode("failoverVersion") is { } nullNodeFailoverVersion && nullNodeFailoverVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailoverVersion = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Timestamp when the Cluster switched to the following failover_version</summary>
-        public DateTimeOffset? FailoverTime { get; set; }
+        public DateTimeOffset? FailoverTime { get => _explicitNullValueFailoverTime; set { _explicitNullValueFailoverTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failoverTime"); else _explicitNullProperties?.Remove("failoverTime"); } }
+        private DateTimeOffset? _explicitNullValueFailoverTime = default!;
         /// <summary>The failoverVersion property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FailoverVersion { get; set; }
+        public string? FailoverVersion { get => _explicitNullValueFailoverVersion; set { _explicitNullValueFailoverVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failoverVersion"); else _explicitNullProperties?.Remove("failoverVersion"); } }
+        private string? _explicitNullValueFailoverVersion = default!;
 #nullable restore
 #else
-        public string FailoverVersion { get; set; }
+        public string FailoverVersion { get => _explicitNullValueFailoverVersion; set { _explicitNullValueFailoverVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failoverVersion"); else _explicitNullProperties?.Remove("failoverVersion"); } }
+        private string _explicitNullValueFailoverVersion = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.FailoverStatus"/> and sets the default values.
@@ -40,7 +52,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.FailoverStatus CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.FailoverStatus();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.FailoverStatus(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -63,6 +75,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("failoverTime", FailoverTime);
             writer.WriteStringValue("failoverVersion", FailoverVersion);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

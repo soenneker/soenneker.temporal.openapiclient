@@ -11,19 +11,36 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PendingWorkflowTaskInfo : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("attempt") is { } nullNodeAttempt && nullNodeAttempt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attempt = null;
+            if (parseNode.GetChildNode("originalScheduledTime") is { } nullNodeOriginalScheduledTime && nullNodeOriginalScheduledTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginalScheduledTime = null;
+            if (parseNode.GetChildNode("scheduledTime") is { } nullNodeScheduledTime && nullNodeScheduledTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduledTime = null;
+            if (parseNode.GetChildNode("startedTime") is { } nullNodeStartedTime && nullNodeStartedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartedTime = null;
+            if (parseNode.GetChildNode("state") is { } nullNodeState && nullNodeState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) State = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The attempt property</summary>
-        public int? Attempt { get; set; }
+        public int? Attempt { get => _explicitNullValueAttempt; set { _explicitNullValueAttempt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attempt"); else _explicitNullProperties?.Remove("attempt"); } }
+        private int? _explicitNullValueAttempt = default!;
         /// <summary>original_scheduled_time is the scheduled time of the first workflow task during workflow task heartbeat. Heartbeat workflow task is done by RespondWorkflowTaskComplete with ForceCreateNewWorkflowTask == true and no command In this case, OriginalScheduledTime won&apos;t change. Then when current time - original_scheduled_time exceeds some threshold, the workflow task will be forced timeout.</summary>
-        public DateTimeOffset? OriginalScheduledTime { get; set; }
+        public DateTimeOffset? OriginalScheduledTime { get => _explicitNullValueOriginalScheduledTime; set { _explicitNullValueOriginalScheduledTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originalScheduledTime"); else _explicitNullProperties?.Remove("originalScheduledTime"); } }
+        private DateTimeOffset? _explicitNullValueOriginalScheduledTime = default!;
         /// <summary>The scheduledTime property</summary>
-        public DateTimeOffset? ScheduledTime { get; set; }
+        public DateTimeOffset? ScheduledTime { get => _explicitNullValueScheduledTime; set { _explicitNullValueScheduledTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduledTime"); else _explicitNullProperties?.Remove("scheduledTime"); } }
+        private DateTimeOffset? _explicitNullValueScheduledTime = default!;
         /// <summary>The startedTime property</summary>
-        public DateTimeOffset? StartedTime { get; set; }
+        public DateTimeOffset? StartedTime { get => _explicitNullValueStartedTime; set { _explicitNullValueStartedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startedTime"); else _explicitNullProperties?.Remove("startedTime"); } }
+        private DateTimeOffset? _explicitNullValueStartedTime = default!;
         /// <summary>The state property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.PendingWorkflowTaskInfoState? State { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PendingWorkflowTaskInfoState? State { get => _explicitNullValueState; set { _explicitNullValueState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state"); else _explicitNullProperties?.Remove("state"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.PendingWorkflowTaskInfoState? _explicitNullValueState = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.PendingWorkflowTaskInfo"/> and sets the default values.
         /// </summary>
@@ -39,7 +56,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.PendingWorkflowTaskInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.PendingWorkflowTaskInfo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.PendingWorkflowTaskInfo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +85,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("scheduledTime", ScheduledTime);
             writer.WriteDateTimeOffsetValue("startedTime", StartedTime);
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingWorkflowTaskInfoState>("state", State);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

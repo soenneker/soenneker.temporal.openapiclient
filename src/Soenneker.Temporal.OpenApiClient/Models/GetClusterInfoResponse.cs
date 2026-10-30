@@ -12,82 +12,118 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GetClusterInfoResponse : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("clusterId") is { } nullNodeClusterId && nullNodeClusterId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClusterId = null;
+            if (parseNode.GetChildNode("clusterName") is { } nullNodeClusterName && nullNodeClusterName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClusterName = null;
+            if (parseNode.GetChildNode("failoverVersionIncrement") is { } nullNodeFailoverVersionIncrement && nullNodeFailoverVersionIncrement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailoverVersionIncrement = null;
+            if (parseNode.GetChildNode("historyShardCount") is { } nullNodeHistoryShardCount && nullNodeHistoryShardCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HistoryShardCount = null;
+            if (parseNode.GetChildNode("initialFailoverVersion") is { } nullNodeInitialFailoverVersion && nullNodeInitialFailoverVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InitialFailoverVersion = null;
+            if (parseNode.GetChildNode("persistenceStore") is { } nullNodePersistenceStore && nullNodePersistenceStore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PersistenceStore = null;
+            if (parseNode.GetChildNode("serverVersion") is { } nullNodeServerVersion && nullNodeServerVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServerVersion = null;
+            if (parseNode.GetChildNode("supportedClients") is { } nullNodeSupportedClients && nullNodeSupportedClients.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportedClients = null;
+            if (parseNode.GetChildNode("versionInfo") is { } nullNodeVersionInfo && nullNodeVersionInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VersionInfo = null;
+            if (parseNode.GetChildNode("visibilityStore") is { } nullNodeVisibilityStore && nullNodeVisibilityStore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VisibilityStore = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The clusterId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClusterId { get; set; }
+        public string? ClusterId { get => _explicitNullValueClusterId; set { _explicitNullValueClusterId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clusterId"); else _explicitNullProperties?.Remove("clusterId"); } }
+        private string? _explicitNullValueClusterId = default!;
 #nullable restore
 #else
-        public string ClusterId { get; set; }
+        public string ClusterId { get => _explicitNullValueClusterId; set { _explicitNullValueClusterId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clusterId"); else _explicitNullProperties?.Remove("clusterId"); } }
+        private string _explicitNullValueClusterId = default!;
 #endif
         /// <summary>The clusterName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClusterName { get; set; }
+        public string? ClusterName { get => _explicitNullValueClusterName; set { _explicitNullValueClusterName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clusterName"); else _explicitNullProperties?.Remove("clusterName"); } }
+        private string? _explicitNullValueClusterName = default!;
 #nullable restore
 #else
-        public string ClusterName { get; set; }
+        public string ClusterName { get => _explicitNullValueClusterName; set { _explicitNullValueClusterName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clusterName"); else _explicitNullProperties?.Remove("clusterName"); } }
+        private string _explicitNullValueClusterName = default!;
 #endif
         /// <summary>The failoverVersionIncrement property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FailoverVersionIncrement { get; set; }
+        public string? FailoverVersionIncrement { get => _explicitNullValueFailoverVersionIncrement; set { _explicitNullValueFailoverVersionIncrement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failoverVersionIncrement"); else _explicitNullProperties?.Remove("failoverVersionIncrement"); } }
+        private string? _explicitNullValueFailoverVersionIncrement = default!;
 #nullable restore
 #else
-        public string FailoverVersionIncrement { get; set; }
+        public string FailoverVersionIncrement { get => _explicitNullValueFailoverVersionIncrement; set { _explicitNullValueFailoverVersionIncrement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failoverVersionIncrement"); else _explicitNullProperties?.Remove("failoverVersionIncrement"); } }
+        private string _explicitNullValueFailoverVersionIncrement = default!;
 #endif
         /// <summary>The historyShardCount property</summary>
-        public int? HistoryShardCount { get; set; }
+        public int? HistoryShardCount { get => _explicitNullValueHistoryShardCount; set { _explicitNullValueHistoryShardCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("historyShardCount"); else _explicitNullProperties?.Remove("historyShardCount"); } }
+        private int? _explicitNullValueHistoryShardCount = default!;
         /// <summary>The initialFailoverVersion property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InitialFailoverVersion { get; set; }
+        public string? InitialFailoverVersion { get => _explicitNullValueInitialFailoverVersion; set { _explicitNullValueInitialFailoverVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initialFailoverVersion"); else _explicitNullProperties?.Remove("initialFailoverVersion"); } }
+        private string? _explicitNullValueInitialFailoverVersion = default!;
 #nullable restore
 #else
-        public string InitialFailoverVersion { get; set; }
+        public string InitialFailoverVersion { get => _explicitNullValueInitialFailoverVersion; set { _explicitNullValueInitialFailoverVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initialFailoverVersion"); else _explicitNullProperties?.Remove("initialFailoverVersion"); } }
+        private string _explicitNullValueInitialFailoverVersion = default!;
 #endif
         /// <summary>The persistenceStore property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PersistenceStore { get; set; }
+        public string? PersistenceStore { get => _explicitNullValuePersistenceStore; set { _explicitNullValuePersistenceStore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("persistenceStore"); else _explicitNullProperties?.Remove("persistenceStore"); } }
+        private string? _explicitNullValuePersistenceStore = default!;
 #nullable restore
 #else
-        public string PersistenceStore { get; set; }
+        public string PersistenceStore { get => _explicitNullValuePersistenceStore; set { _explicitNullValuePersistenceStore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("persistenceStore"); else _explicitNullProperties?.Remove("persistenceStore"); } }
+        private string _explicitNullValuePersistenceStore = default!;
 #endif
         /// <summary>The serverVersion property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ServerVersion { get; set; }
+        public string? ServerVersion { get => _explicitNullValueServerVersion; set { _explicitNullValueServerVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serverVersion"); else _explicitNullProperties?.Remove("serverVersion"); } }
+        private string? _explicitNullValueServerVersion = default!;
 #nullable restore
 #else
-        public string ServerVersion { get; set; }
+        public string ServerVersion { get => _explicitNullValueServerVersion; set { _explicitNullValueServerVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serverVersion"); else _explicitNullProperties?.Remove("serverVersion"); } }
+        private string _explicitNullValueServerVersion = default!;
 #endif
         /// <summary>Key is client name i.e &quot;temporal-go&quot;, &quot;temporal-java&quot;, or &quot;temporal-cli&quot;. Value is ranges of supported versions of this client i.e &quot;&gt;1.1.1 &lt;=1.4.0 || ^5.0.0&quot;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.GetClusterInfoResponseSupportedClientsProperty? SupportedClients { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.GetClusterInfoResponseSupportedClientsProperty? SupportedClients { get => _explicitNullValueSupportedClients; set { _explicitNullValueSupportedClients = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supportedClients"); else _explicitNullProperties?.Remove("supportedClients"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.GetClusterInfoResponseSupportedClientsProperty? _explicitNullValueSupportedClients = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.GetClusterInfoResponseSupportedClientsProperty SupportedClients { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.GetClusterInfoResponseSupportedClientsProperty SupportedClients { get => _explicitNullValueSupportedClients; set { _explicitNullValueSupportedClients = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supportedClients"); else _explicitNullProperties?.Remove("supportedClients"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.GetClusterInfoResponseSupportedClientsProperty _explicitNullValueSupportedClients = default!;
 #endif
         /// <summary>VersionInfo contains details about current and recommended release versions as well as alerts and upgrade instructions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.VersionInfo? VersionInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.VersionInfo? VersionInfo { get => _explicitNullValueVersionInfo; set { _explicitNullValueVersionInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("versionInfo"); else _explicitNullProperties?.Remove("versionInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.VersionInfo? _explicitNullValueVersionInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.VersionInfo VersionInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.VersionInfo VersionInfo { get => _explicitNullValueVersionInfo; set { _explicitNullValueVersionInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("versionInfo"); else _explicitNullProperties?.Remove("versionInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.VersionInfo _explicitNullValueVersionInfo = default!;
 #endif
         /// <summary>The visibilityStore property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VisibilityStore { get; set; }
+        public string? VisibilityStore { get => _explicitNullValueVisibilityStore; set { _explicitNullValueVisibilityStore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visibilityStore"); else _explicitNullProperties?.Remove("visibilityStore"); } }
+        private string? _explicitNullValueVisibilityStore = default!;
 #nullable restore
 #else
-        public string VisibilityStore { get; set; }
+        public string VisibilityStore { get => _explicitNullValueVisibilityStore; set { _explicitNullValueVisibilityStore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visibilityStore"); else _explicitNullProperties?.Remove("visibilityStore"); } }
+        private string _explicitNullValueVisibilityStore = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.GetClusterInfoResponse"/> and sets the default values.
@@ -104,7 +140,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.GetClusterInfoResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.GetClusterInfoResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.GetClusterInfoResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -143,6 +179,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.GetClusterInfoResponseSupportedClientsProperty>("supportedClients", SupportedClients);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.VersionInfo>("versionInfo", VersionInfo);
             writer.WriteStringValue("visibilityStore", VisibilityStore);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

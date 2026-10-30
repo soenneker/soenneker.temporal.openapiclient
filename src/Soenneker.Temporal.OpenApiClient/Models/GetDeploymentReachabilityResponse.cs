@@ -12,21 +12,35 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GetDeploymentReachabilityResponse : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("deploymentInfo") is { } nullNodeDeploymentInfo && nullNodeDeploymentInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeploymentInfo = null;
+            if (parseNode.GetChildNode("lastUpdateTime") is { } nullNodeLastUpdateTime && nullNodeLastUpdateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastUpdateTime = null;
+            if (parseNode.GetChildNode("reachability") is { } nullNodeReachability && nullNodeReachability.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reachability = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>`DeploymentInfo` holds information about a deployment. Deployment information is tracked automatically by server as soon as the first poll from that deployment reaches the server. There can be multiple task queue workers in a single deployment which are listed in this message. Deprecated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfo? DeploymentInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfo? DeploymentInfo { get => _explicitNullValueDeploymentInfo; set { _explicitNullValueDeploymentInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploymentInfo"); else _explicitNullProperties?.Remove("deploymentInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfo? _explicitNullValueDeploymentInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfo DeploymentInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfo DeploymentInfo { get => _explicitNullValueDeploymentInfo; set { _explicitNullValueDeploymentInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploymentInfo"); else _explicitNullProperties?.Remove("deploymentInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfo _explicitNullValueDeploymentInfo = default!;
 #endif
         /// <summary>Reachability level might come from server cache. This timestamp specifies when the value was actually calculated.</summary>
-        public DateTimeOffset? LastUpdateTime { get; set; }
+        public DateTimeOffset? LastUpdateTime { get => _explicitNullValueLastUpdateTime; set { _explicitNullValueLastUpdateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastUpdateTime"); else _explicitNullProperties?.Remove("lastUpdateTime"); } }
+        private DateTimeOffset? _explicitNullValueLastUpdateTime = default!;
         /// <summary>The reachability property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.GetDeploymentReachabilityResponseReachability? Reachability { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.GetDeploymentReachabilityResponseReachability? Reachability { get => _explicitNullValueReachability; set { _explicitNullValueReachability = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reachability"); else _explicitNullProperties?.Remove("reachability"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.GetDeploymentReachabilityResponseReachability? _explicitNullValueReachability = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.GetDeploymentReachabilityResponse"/> and sets the default values.
         /// </summary>
@@ -42,7 +56,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.GetDeploymentReachabilityResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.GetDeploymentReachabilityResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.GetDeploymentReachabilityResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -67,6 +81,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfo>("deploymentInfo", DeploymentInfo);
             writer.WriteDateTimeOffsetValue("lastUpdateTime", LastUpdateTime);
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.GetDeploymentReachabilityResponseReachability>("reachability", Reachability);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

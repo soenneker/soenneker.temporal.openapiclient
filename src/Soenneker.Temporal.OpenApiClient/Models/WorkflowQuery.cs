@@ -12,32 +12,48 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WorkflowQuery : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("header") is { } nullNodeHeader && nullNodeHeader.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Header = null;
+            if (parseNode.GetChildNode("queryArgs") is { } nullNodeQueryArgs && nullNodeQueryArgs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QueryArgs = null;
+            if (parseNode.GetChildNode("queryType") is { } nullNodeQueryType && nullNodeQueryType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QueryType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Headers that were passed by the caller of the query and copied by temporal server into the workflow task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQueryHeader? Header { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQueryHeader? Header { get => _explicitNullValueHeader; set { _explicitNullValueHeader = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("header"); else _explicitNullProperties?.Remove("header"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQueryHeader? _explicitNullValueHeader = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQueryHeader Header { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQueryHeader Header { get => _explicitNullValueHeader; set { _explicitNullValueHeader = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("header"); else _explicitNullProperties?.Remove("header"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQueryHeader _explicitNullValueHeader = default!;
 #endif
         /// <summary>Serialized arguments that will be provided to the query handler.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQueryQueryArgs? QueryArgs { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQueryQueryArgs? QueryArgs { get => _explicitNullValueQueryArgs; set { _explicitNullValueQueryArgs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queryArgs"); else _explicitNullProperties?.Remove("queryArgs"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQueryQueryArgs? _explicitNullValueQueryArgs = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQueryQueryArgs QueryArgs { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQueryQueryArgs QueryArgs { get => _explicitNullValueQueryArgs; set { _explicitNullValueQueryArgs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queryArgs"); else _explicitNullProperties?.Remove("queryArgs"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQueryQueryArgs _explicitNullValueQueryArgs = default!;
 #endif
         /// <summary>The workflow-author-defined identifier of the query. Typically a function name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? QueryType { get; set; }
+        public string? QueryType { get => _explicitNullValueQueryType; set { _explicitNullValueQueryType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queryType"); else _explicitNullProperties?.Remove("queryType"); } }
+        private string? _explicitNullValueQueryType = default!;
 #nullable restore
 #else
-        public string QueryType { get; set; }
+        public string QueryType { get => _explicitNullValueQueryType; set { _explicitNullValueQueryType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queryType"); else _explicitNullProperties?.Remove("queryType"); } }
+        private string _explicitNullValueQueryType = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQuery"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQuery CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQuery();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQuery(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQueryHeader>("header", Header);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowQueryQueryArgs>("queryArgs", QueryArgs);
             writer.WriteStringValue("queryType", QueryType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

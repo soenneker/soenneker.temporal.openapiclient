@@ -12,11 +12,20 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WorkflowTaskCompletedEventAttributesMeteringMetadata : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("nonfirstLocalActivityExecutionAttempts") is { } nullNodeNonfirstLocalActivityExecutionAttempts && nullNodeNonfirstLocalActivityExecutionAttempts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NonfirstLocalActivityExecutionAttempts = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Count of local activities which have begun an execution attempt during this workflow task, and whose first attempt occurred in some previous task. This is used for metering purposes, and does not affect workflow state. (-- api-linter: core::0141::forbidden-types=disabled     aip.dev/not-precedent: Negative values make no sense to represent. --)</summary>
-        public int? NonfirstLocalActivityExecutionAttempts { get; set; }
+        public int? NonfirstLocalActivityExecutionAttempts { get => _explicitNullValueNonfirstLocalActivityExecutionAttempts; set { _explicitNullValueNonfirstLocalActivityExecutionAttempts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nonfirstLocalActivityExecutionAttempts"); else _explicitNullProperties?.Remove("nonfirstLocalActivityExecutionAttempts"); } }
+        private int? _explicitNullValueNonfirstLocalActivityExecutionAttempts = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesMeteringMetadata"/> and sets the default values.
         /// </summary>
@@ -32,7 +41,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesMeteringMetadata CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesMeteringMetadata();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesMeteringMetadata(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -53,6 +62,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("nonfirstLocalActivityExecutionAttempts", NonfirstLocalActivityExecutionAttempts);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

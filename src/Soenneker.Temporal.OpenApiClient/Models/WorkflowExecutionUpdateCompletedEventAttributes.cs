@@ -11,32 +11,48 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class WorkflowExecutionUpdateCompletedEventAttributes : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("acceptedEventId") is { } nullNodeAcceptedEventId && nullNodeAcceptedEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcceptedEventId = null;
+            if (parseNode.GetChildNode("meta") is { } nullNodeMeta && nullNodeMeta.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Meta = null;
+            if (parseNode.GetChildNode("outcome") is { } nullNodeOutcome && nullNodeOutcome.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Outcome = null;
+        }
+
         /// <summary>The event ID indicating the acceptance of this update.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AcceptedEventId { get; set; }
+        public string? AcceptedEventId { get => _explicitNullValueAcceptedEventId; set { _explicitNullValueAcceptedEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acceptedEventId"); else _explicitNullProperties?.Remove("acceptedEventId"); } }
+        private string? _explicitNullValueAcceptedEventId = default!;
 #nullable restore
 #else
-        public string AcceptedEventId { get; set; }
+        public string AcceptedEventId { get => _explicitNullValueAcceptedEventId; set { _explicitNullValueAcceptedEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acceptedEventId"); else _explicitNullProperties?.Remove("acceptedEventId"); } }
+        private string _explicitNullValueAcceptedEventId = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The metadata about this update.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateCompletedEventAttributesMeta? Meta { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateCompletedEventAttributesMeta? Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateCompletedEventAttributesMeta? _explicitNullValueMeta = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateCompletedEventAttributesMeta Meta { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateCompletedEventAttributesMeta Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateCompletedEventAttributesMeta _explicitNullValueMeta = default!;
 #endif
         /// <summary>The outcome of executing the workflow update function.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateCompletedEventAttributesOutcome? Outcome { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateCompletedEventAttributesOutcome? Outcome { get => _explicitNullValueOutcome; set { _explicitNullValueOutcome = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outcome"); else _explicitNullProperties?.Remove("outcome"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateCompletedEventAttributesOutcome? _explicitNullValueOutcome = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateCompletedEventAttributesOutcome Outcome { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateCompletedEventAttributesOutcome Outcome { get => _explicitNullValueOutcome; set { _explicitNullValueOutcome = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outcome"); else _explicitNullProperties?.Remove("outcome"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateCompletedEventAttributesOutcome _explicitNullValueOutcome = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateCompletedEventAttributes"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateCompletedEventAttributes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateCompletedEventAttributes();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateCompletedEventAttributes(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("acceptedEventId", AcceptedEventId);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateCompletedEventAttributesMeta>("meta", Meta);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateCompletedEventAttributesOutcome>("outcome", Outcome);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

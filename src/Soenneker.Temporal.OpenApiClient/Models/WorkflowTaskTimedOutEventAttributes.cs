@@ -11,27 +11,42 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class WorkflowTaskTimedOutEventAttributes : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("scheduledEventId") is { } nullNodeScheduledEventId && nullNodeScheduledEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduledEventId = null;
+            if (parseNode.GetChildNode("startedEventId") is { } nullNodeStartedEventId && nullNodeStartedEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartedEventId = null;
+            if (parseNode.GetChildNode("timeoutType") is { } nullNodeTimeoutType && nullNodeTimeoutType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeoutType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The id of the `WORKFLOW_TASK_SCHEDULED` event this task corresponds to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ScheduledEventId { get; set; }
+        public string? ScheduledEventId { get => _explicitNullValueScheduledEventId; set { _explicitNullValueScheduledEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduledEventId"); else _explicitNullProperties?.Remove("scheduledEventId"); } }
+        private string? _explicitNullValueScheduledEventId = default!;
 #nullable restore
 #else
-        public string ScheduledEventId { get; set; }
+        public string ScheduledEventId { get => _explicitNullValueScheduledEventId; set { _explicitNullValueScheduledEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduledEventId"); else _explicitNullProperties?.Remove("scheduledEventId"); } }
+        private string _explicitNullValueScheduledEventId = default!;
 #endif
         /// <summary>The id of the `WORKFLOW_TASK_STARTED` event this task corresponds to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartedEventId { get; set; }
+        public string? StartedEventId { get => _explicitNullValueStartedEventId; set { _explicitNullValueStartedEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startedEventId"); else _explicitNullProperties?.Remove("startedEventId"); } }
+        private string? _explicitNullValueStartedEventId = default!;
 #nullable restore
 #else
-        public string StartedEventId { get; set; }
+        public string StartedEventId { get => _explicitNullValueStartedEventId; set { _explicitNullValueStartedEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startedEventId"); else _explicitNullProperties?.Remove("startedEventId"); } }
+        private string _explicitNullValueStartedEventId = default!;
 #endif
         /// <summary>The timeoutType property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskTimedOutEventAttributesTimeoutType? TimeoutType { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskTimedOutEventAttributesTimeoutType? TimeoutType { get => _explicitNullValueTimeoutType; set { _explicitNullValueTimeoutType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeoutType"); else _explicitNullProperties?.Remove("timeoutType"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskTimedOutEventAttributesTimeoutType? _explicitNullValueTimeoutType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskTimedOutEventAttributes"/> and sets the default values.
         /// </summary>
@@ -47,7 +62,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskTimedOutEventAttributes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskTimedOutEventAttributes();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskTimedOutEventAttributes(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,6 +87,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("scheduledEventId", ScheduledEventId);
             writer.WriteStringValue("startedEventId", StartedEventId);
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskTimedOutEventAttributesTimeoutType>("timeoutType", TimeoutType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

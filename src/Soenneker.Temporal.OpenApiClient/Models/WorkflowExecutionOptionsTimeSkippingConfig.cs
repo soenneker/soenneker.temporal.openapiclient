@@ -12,26 +12,41 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WorkflowExecutionOptionsTimeSkippingConfig : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
+            if (parseNode.GetChildNode("maxElapsedDuration") is { } nullNodeMaxElapsedDuration && nullNodeMaxElapsedDuration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxElapsedDuration = null;
+            if (parseNode.GetChildNode("maxSkippedDuration") is { } nullNodeMaxSkippedDuration && nullNodeMaxSkippedDuration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxSkippedDuration = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Enables or disables time skipping for this workflow execution.</summary>
-        public bool? Enabled { get; set; }
+        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
+        private bool? _explicitNullValueEnabled = default!;
         /// <summary>Maximum elapsed time since time skipping was enabled. This includes both skipped time and real time elapsing.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MaxElapsedDuration { get; set; }
+        public string? MaxElapsedDuration { get => _explicitNullValueMaxElapsedDuration; set { _explicitNullValueMaxElapsedDuration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxElapsedDuration"); else _explicitNullProperties?.Remove("maxElapsedDuration"); } }
+        private string? _explicitNullValueMaxElapsedDuration = default!;
 #nullable restore
 #else
-        public string MaxElapsedDuration { get; set; }
+        public string MaxElapsedDuration { get => _explicitNullValueMaxElapsedDuration; set { _explicitNullValueMaxElapsedDuration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxElapsedDuration"); else _explicitNullProperties?.Remove("maxElapsedDuration"); } }
+        private string _explicitNullValueMaxElapsedDuration = default!;
 #endif
         /// <summary>Maximum total virtual time that can be skipped.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MaxSkippedDuration { get; set; }
+        public string? MaxSkippedDuration { get => _explicitNullValueMaxSkippedDuration; set { _explicitNullValueMaxSkippedDuration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxSkippedDuration"); else _explicitNullProperties?.Remove("maxSkippedDuration"); } }
+        private string? _explicitNullValueMaxSkippedDuration = default!;
 #nullable restore
 #else
-        public string MaxSkippedDuration { get; set; }
+        public string MaxSkippedDuration { get => _explicitNullValueMaxSkippedDuration; set { _explicitNullValueMaxSkippedDuration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxSkippedDuration"); else _explicitNullProperties?.Remove("maxSkippedDuration"); } }
+        private string _explicitNullValueMaxSkippedDuration = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsTimeSkippingConfig"/> and sets the default values.
@@ -48,7 +63,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsTimeSkippingConfig CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsTimeSkippingConfig();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsTimeSkippingConfig(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -73,6 +88,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteBoolValue("enabled", Enabled);
             writer.WriteStringValue("maxElapsedDuration", MaxElapsedDuration);
             writer.WriteStringValue("maxSkippedDuration", MaxSkippedDuration);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

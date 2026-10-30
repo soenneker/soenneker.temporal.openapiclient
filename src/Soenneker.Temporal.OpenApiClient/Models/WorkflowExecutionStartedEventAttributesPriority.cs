@@ -12,21 +12,35 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WorkflowExecutionStartedEventAttributesPriority : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("fairnessKey") is { } nullNodeFairnessKey && nullNodeFairnessKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FairnessKey = null;
+            if (parseNode.GetChildNode("fairnessWeight") is { } nullNodeFairnessWeight && nullNodeFairnessWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FairnessWeight = null;
+            if (parseNode.GetChildNode("priorityKey") is { } nullNodePriorityKey && nullNodePriorityKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PriorityKey = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Fairness key is a short string that&apos;s used as a key for a fairness balancing mechanism. It may correspond to a tenant id, or to a fixed string like &quot;high&quot; or &quot;low&quot;. The default is the empty string. The fairness mechanism attempts to dispatch tasks for a given key in proportion to its weight. For example, using a thousand distinct tenant ids, each with a weight of 1.0 (the default) will result in each tenant getting a roughly equal share of task dispatch throughput. (Note: this does not imply equal share of worker capacity! Fairness decisions are made based on queue statistics, not current worker load.) As another example, using keys &quot;high&quot; and &quot;low&quot; with weight 9.0 and 1.0 respectively will prefer dispatching &quot;high&quot; tasks over &quot;low&quot; tasks at a 9:1 ratio, while allowing either key to use all worker capacity if the other is not present. All fairness mechanisms, including rate limits, are best-effort and probabilistic. The results may not match what a &quot;perfect&quot; algorithm with infinite resources would produce. The more unique keys are used, the less accurate the results will be. Fairness keys are limited to 64 bytes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FairnessKey { get; set; }
+        public string? FairnessKey { get => _explicitNullValueFairnessKey; set { _explicitNullValueFairnessKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fairnessKey"); else _explicitNullProperties?.Remove("fairnessKey"); } }
+        private string? _explicitNullValueFairnessKey = default!;
 #nullable restore
 #else
-        public string FairnessKey { get; set; }
+        public string FairnessKey { get => _explicitNullValueFairnessKey; set { _explicitNullValueFairnessKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fairnessKey"); else _explicitNullProperties?.Remove("fairnessKey"); } }
+        private string _explicitNullValueFairnessKey = default!;
 #endif
         /// <summary>Fairness weight for a task can come from multiple sources for flexibility. From highest to lowest precedence: 1. Weights for a small set of keys can be overridden in task queue    configuration with an API. 2. It can be attached to the workflow/activity in this field. 3. The default weight of 1.0 will be used. Weight values are clamped to the range [0.001, 1000].</summary>
-        public float? FairnessWeight { get; set; }
+        public float? FairnessWeight { get => _explicitNullValueFairnessWeight; set { _explicitNullValueFairnessWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fairnessWeight"); else _explicitNullProperties?.Remove("fairnessWeight"); } }
+        private float? _explicitNullValueFairnessWeight = default!;
         /// <summary>Priority key is a positive integer from 1 to n, where smaller integers correspond to higher priorities (tasks run sooner). In general, tasks in a queue should be processed in close to priority order, although small deviations are possible. The maximum priority value (minimum priority) is determined by server configuration, and defaults to 5. If priority is not present (or zero), then the effective priority will be the default priority, which is calculated by (min+max)/2. With the default max of 5, and min of 1, that comes out to 3.</summary>
-        public int? PriorityKey { get; set; }
+        public int? PriorityKey { get => _explicitNullValuePriorityKey; set { _explicitNullValuePriorityKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priorityKey"); else _explicitNullProperties?.Remove("priorityKey"); } }
+        private int? _explicitNullValuePriorityKey = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesPriority"/> and sets the default values.
         /// </summary>
@@ -42,7 +56,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesPriority CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesPriority();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesPriority(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -67,6 +81,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("fairnessKey", FairnessKey);
             writer.WriteFloatValue("fairnessWeight", FairnessWeight);
             writer.WriteIntValue("priorityKey", PriorityKey);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

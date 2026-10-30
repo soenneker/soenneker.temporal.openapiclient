@@ -12,64 +12,92 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpdateActivityExecutionOptionsRequestActivityOptions : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("heartbeatTimeout") is { } nullNodeHeartbeatTimeout && nullNodeHeartbeatTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HeartbeatTimeout = null;
+            if (parseNode.GetChildNode("priority") is { } nullNodePriority && nullNodePriority.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Priority = null;
+            if (parseNode.GetChildNode("retryPolicy") is { } nullNodeRetryPolicy && nullNodeRetryPolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RetryPolicy = null;
+            if (parseNode.GetChildNode("scheduleToCloseTimeout") is { } nullNodeScheduleToCloseTimeout && nullNodeScheduleToCloseTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduleToCloseTimeout = null;
+            if (parseNode.GetChildNode("scheduleToStartTimeout") is { } nullNodeScheduleToStartTimeout && nullNodeScheduleToStartTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduleToStartTimeout = null;
+            if (parseNode.GetChildNode("startToCloseTimeout") is { } nullNodeStartToCloseTimeout && nullNodeStartToCloseTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartToCloseTimeout = null;
+            if (parseNode.GetChildNode("taskQueue") is { } nullNodeTaskQueue && nullNodeTaskQueue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskQueue = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Maximum permitted time between successful worker heartbeats.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HeartbeatTimeout { get; set; }
+        public string? HeartbeatTimeout { get => _explicitNullValueHeartbeatTimeout; set { _explicitNullValueHeartbeatTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("heartbeatTimeout"); else _explicitNullProperties?.Remove("heartbeatTimeout"); } }
+        private string? _explicitNullValueHeartbeatTimeout = default!;
 #nullable restore
 #else
-        public string HeartbeatTimeout { get; set; }
+        public string HeartbeatTimeout { get => _explicitNullValueHeartbeatTimeout; set { _explicitNullValueHeartbeatTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("heartbeatTimeout"); else _explicitNullProperties?.Remove("heartbeatTimeout"); } }
+        private string _explicitNullValueHeartbeatTimeout = default!;
 #endif
         /// <summary>Priority metadata. If this message is not present, or any fields are not present, they inherit the values from the workflow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityOptionsPriority? Priority { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityOptionsPriority? Priority { get => _explicitNullValuePriority; set { _explicitNullValuePriority = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priority"); else _explicitNullProperties?.Remove("priority"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ActivityOptionsPriority? _explicitNullValuePriority = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityOptionsPriority Priority { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityOptionsPriority Priority { get => _explicitNullValuePriority; set { _explicitNullValuePriority = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priority"); else _explicitNullProperties?.Remove("priority"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ActivityOptionsPriority _explicitNullValuePriority = default!;
 #endif
         /// <summary>The retry policy for the activity. Will never exceed `schedule_to_close_timeout`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityOptionsRetryPolicy? RetryPolicy { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityOptionsRetryPolicy? RetryPolicy { get => _explicitNullValueRetryPolicy; set { _explicitNullValueRetryPolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("retryPolicy"); else _explicitNullProperties?.Remove("retryPolicy"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ActivityOptionsRetryPolicy? _explicitNullValueRetryPolicy = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityOptionsRetryPolicy RetryPolicy { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityOptionsRetryPolicy RetryPolicy { get => _explicitNullValueRetryPolicy; set { _explicitNullValueRetryPolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("retryPolicy"); else _explicitNullProperties?.Remove("retryPolicy"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ActivityOptionsRetryPolicy _explicitNullValueRetryPolicy = default!;
 #endif
         /// <summary>Indicates how long the caller is willing to wait for an activity completion. Limits how long retries will be attempted. Either this or `start_to_close_timeout` must be specified. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;to&quot; is used to indicate interval. --)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ScheduleToCloseTimeout { get; set; }
+        public string? ScheduleToCloseTimeout { get => _explicitNullValueScheduleToCloseTimeout; set { _explicitNullValueScheduleToCloseTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduleToCloseTimeout"); else _explicitNullProperties?.Remove("scheduleToCloseTimeout"); } }
+        private string? _explicitNullValueScheduleToCloseTimeout = default!;
 #nullable restore
 #else
-        public string ScheduleToCloseTimeout { get; set; }
+        public string ScheduleToCloseTimeout { get => _explicitNullValueScheduleToCloseTimeout; set { _explicitNullValueScheduleToCloseTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduleToCloseTimeout"); else _explicitNullProperties?.Remove("scheduleToCloseTimeout"); } }
+        private string _explicitNullValueScheduleToCloseTimeout = default!;
 #endif
         /// <summary>Limits time an activity task can stay in a task queue before a worker picks it up. This timeout is always non retryable, as all a retry would achieve is to put it back into the same queue. Defaults to `schedule_to_close_timeout` or workflow execution timeout if not specified. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;to&quot; is used to indicate interval. --)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ScheduleToStartTimeout { get; set; }
+        public string? ScheduleToStartTimeout { get => _explicitNullValueScheduleToStartTimeout; set { _explicitNullValueScheduleToStartTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduleToStartTimeout"); else _explicitNullProperties?.Remove("scheduleToStartTimeout"); } }
+        private string? _explicitNullValueScheduleToStartTimeout = default!;
 #nullable restore
 #else
-        public string ScheduleToStartTimeout { get; set; }
+        public string ScheduleToStartTimeout { get => _explicitNullValueScheduleToStartTimeout; set { _explicitNullValueScheduleToStartTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduleToStartTimeout"); else _explicitNullProperties?.Remove("scheduleToStartTimeout"); } }
+        private string _explicitNullValueScheduleToStartTimeout = default!;
 #endif
         /// <summary>Maximum time an activity is allowed to execute after being picked up by a worker. This timeout is always retryable. Either this or `schedule_to_close_timeout` must be specified. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;to&quot; is used to indicate interval. --)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartToCloseTimeout { get; set; }
+        public string? StartToCloseTimeout { get => _explicitNullValueStartToCloseTimeout; set { _explicitNullValueStartToCloseTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startToCloseTimeout"); else _explicitNullProperties?.Remove("startToCloseTimeout"); } }
+        private string? _explicitNullValueStartToCloseTimeout = default!;
 #nullable restore
 #else
-        public string StartToCloseTimeout { get; set; }
+        public string StartToCloseTimeout { get => _explicitNullValueStartToCloseTimeout; set { _explicitNullValueStartToCloseTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startToCloseTimeout"); else _explicitNullProperties?.Remove("startToCloseTimeout"); } }
+        private string _explicitNullValueStartToCloseTimeout = default!;
 #endif
         /// <summary>See https://docs.temporal.io/docs/concepts/task-queues/</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.TaskQueue? TaskQueue { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.TaskQueue? TaskQueue { get => _explicitNullValueTaskQueue; set { _explicitNullValueTaskQueue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taskQueue"); else _explicitNullProperties?.Remove("taskQueue"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.TaskQueue? _explicitNullValueTaskQueue = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.TaskQueue TaskQueue { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.TaskQueue TaskQueue { get => _explicitNullValueTaskQueue; set { _explicitNullValueTaskQueue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taskQueue"); else _explicitNullProperties?.Remove("taskQueue"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.TaskQueue _explicitNullValueTaskQueue = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.UpdateActivityExecutionOptionsRequestActivityOptions"/> and sets the default values.
@@ -86,7 +114,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.UpdateActivityExecutionOptionsRequestActivityOptions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.UpdateActivityExecutionOptionsRequestActivityOptions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.UpdateActivityExecutionOptionsRequestActivityOptions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -119,6 +147,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("scheduleToStartTimeout", ScheduleToStartTimeout);
             writer.WriteStringValue("startToCloseTimeout", StartToCloseTimeout);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TaskQueue>("taskQueue", TaskQueue);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,24 +12,37 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CompatibleBuildIdRedirectRule : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("sourceBuildId") is { } nullNodeSourceBuildId && nullNodeSourceBuildId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceBuildId = null;
+            if (parseNode.GetChildNode("targetBuildId") is { } nullNodeTargetBuildId && nullNodeTargetBuildId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetBuildId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The sourceBuildId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SourceBuildId { get; set; }
+        public string? SourceBuildId { get => _explicitNullValueSourceBuildId; set { _explicitNullValueSourceBuildId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceBuildId"); else _explicitNullProperties?.Remove("sourceBuildId"); } }
+        private string? _explicitNullValueSourceBuildId = default!;
 #nullable restore
 #else
-        public string SourceBuildId { get; set; }
+        public string SourceBuildId { get => _explicitNullValueSourceBuildId; set { _explicitNullValueSourceBuildId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceBuildId"); else _explicitNullProperties?.Remove("sourceBuildId"); } }
+        private string _explicitNullValueSourceBuildId = default!;
 #endif
         /// <summary>Target Build ID must be compatible with the Source Build ID; that is it must be able to process event histories made by the Source Build ID by using [Patching](https://docs.temporal.io/workflows#patching) or other means.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TargetBuildId { get; set; }
+        public string? TargetBuildId { get => _explicitNullValueTargetBuildId; set { _explicitNullValueTargetBuildId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetBuildId"); else _explicitNullProperties?.Remove("targetBuildId"); } }
+        private string? _explicitNullValueTargetBuildId = default!;
 #nullable restore
 #else
-        public string TargetBuildId { get; set; }
+        public string TargetBuildId { get => _explicitNullValueTargetBuildId; set { _explicitNullValueTargetBuildId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetBuildId"); else _explicitNullProperties?.Remove("targetBuildId"); } }
+        private string _explicitNullValueTargetBuildId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.CompatibleBuildIdRedirectRule"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.CompatibleBuildIdRedirectRule CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.CompatibleBuildIdRedirectRule();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.CompatibleBuildIdRedirectRule(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("sourceBuildId", SourceBuildId);
             writer.WriteStringValue("targetBuildId", TargetBuildId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

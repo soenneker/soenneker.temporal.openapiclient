@@ -11,58 +11,85 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class RequestCancelExternalWorkflowExecutionInitiatedEventAttributes : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("childWorkflowOnly") is { } nullNodeChildWorkflowOnly && nullNodeChildWorkflowOnly.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChildWorkflowOnly = null;
+            if (parseNode.GetChildNode("control") is { } nullNodeControl && nullNodeControl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Control = null;
+            if (parseNode.GetChildNode("namespace") is { } nullNodeNamespace && nullNodeNamespace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Namespace = null;
+            if (parseNode.GetChildNode("namespaceId") is { } nullNodeNamespaceId && nullNodeNamespaceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NamespaceId = null;
+            if (parseNode.GetChildNode("reason") is { } nullNodeReason && nullNodeReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reason = null;
+            if (parseNode.GetChildNode("workflowExecution") is { } nullNodeWorkflowExecution && nullNodeWorkflowExecution.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowExecution = null;
+            if (parseNode.GetChildNode("workflowTaskCompletedEventId") is { } nullNodeWorkflowTaskCompletedEventId && nullNodeWorkflowTaskCompletedEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowTaskCompletedEventId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Workers are expected to set this to true if the workflow they are requesting to cancel is a child of the workflow which issued the request</summary>
-        public bool? ChildWorkflowOnly { get; set; }
+        public bool? ChildWorkflowOnly { get => _explicitNullValueChildWorkflowOnly; set { _explicitNullValueChildWorkflowOnly = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("childWorkflowOnly"); else _explicitNullProperties?.Remove("childWorkflowOnly"); } }
+        private bool? _explicitNullValueChildWorkflowOnly = default!;
         /// <summary>Deprecated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Control { get; set; }
+        public string? Control { get => _explicitNullValueControl; set { _explicitNullValueControl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("control"); else _explicitNullProperties?.Remove("control"); } }
+        private string? _explicitNullValueControl = default!;
 #nullable restore
 #else
-        public string Control { get; set; }
+        public string Control { get => _explicitNullValueControl; set { _explicitNullValueControl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("control"); else _explicitNullProperties?.Remove("control"); } }
+        private string _explicitNullValueControl = default!;
 #endif
         /// <summary>The namespace the workflow to be cancelled lives in. SDKs and UI tools should use `namespace` field but server must use `namespace_id` only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Namespace { get; set; }
+        public string? Namespace { get => _explicitNullValueNamespace; set { _explicitNullValueNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace"); else _explicitNullProperties?.Remove("namespace"); } }
+        private string? _explicitNullValueNamespace = default!;
 #nullable restore
 #else
-        public string Namespace { get; set; }
+        public string Namespace { get => _explicitNullValueNamespace; set { _explicitNullValueNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace"); else _explicitNullProperties?.Remove("namespace"); } }
+        private string _explicitNullValueNamespace = default!;
 #endif
         /// <summary>The namespaceId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NamespaceId { get; set; }
+        public string? NamespaceId { get => _explicitNullValueNamespaceId; set { _explicitNullValueNamespaceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespaceId"); else _explicitNullProperties?.Remove("namespaceId"); } }
+        private string? _explicitNullValueNamespaceId = default!;
 #nullable restore
 #else
-        public string NamespaceId { get; set; }
+        public string NamespaceId { get => _explicitNullValueNamespaceId; set { _explicitNullValueNamespaceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespaceId"); else _explicitNullProperties?.Remove("namespaceId"); } }
+        private string _explicitNullValueNamespaceId = default!;
 #endif
         /// <summary>Reason for requesting the cancellation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Reason { get; set; }
+        public string? Reason { get => _explicitNullValueReason; set { _explicitNullValueReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason"); else _explicitNullProperties?.Remove("reason"); } }
+        private string? _explicitNullValueReason = default!;
 #nullable restore
 #else
-        public string Reason { get; set; }
+        public string Reason { get => _explicitNullValueReason; set { _explicitNullValueReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason"); else _explicitNullProperties?.Remove("reason"); } }
+        private string _explicitNullValueReason = default!;
 #endif
         /// <summary>Identifies a specific workflow within a namespace. Practically speaking, because run_id is a uuid, a workflow execution is globally unique. Note that many commands allow specifying an empty run id as a way of saying &quot;target the latest run of the workflow&quot;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution? WorkflowExecution { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution? WorkflowExecution { get => _explicitNullValueWorkflowExecution; set { _explicitNullValueWorkflowExecution = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecution"); else _explicitNullProperties?.Remove("workflowExecution"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution? _explicitNullValueWorkflowExecution = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution WorkflowExecution { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution WorkflowExecution { get => _explicitNullValueWorkflowExecution; set { _explicitNullValueWorkflowExecution = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecution"); else _explicitNullProperties?.Remove("workflowExecution"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution _explicitNullValueWorkflowExecution = default!;
 #endif
         /// <summary>The `WORKFLOW_TASK_COMPLETED` event which this command was reported with</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkflowTaskCompletedEventId { get; set; }
+        public string? WorkflowTaskCompletedEventId { get => _explicitNullValueWorkflowTaskCompletedEventId; set { _explicitNullValueWorkflowTaskCompletedEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowTaskCompletedEventId"); else _explicitNullProperties?.Remove("workflowTaskCompletedEventId"); } }
+        private string? _explicitNullValueWorkflowTaskCompletedEventId = default!;
 #nullable restore
 #else
-        public string WorkflowTaskCompletedEventId { get; set; }
+        public string WorkflowTaskCompletedEventId { get => _explicitNullValueWorkflowTaskCompletedEventId; set { _explicitNullValueWorkflowTaskCompletedEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowTaskCompletedEventId"); else _explicitNullProperties?.Remove("workflowTaskCompletedEventId"); } }
+        private string _explicitNullValueWorkflowTaskCompletedEventId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelExternalWorkflowExecutionInitiatedEventAttributes"/> and sets the default values.
@@ -79,7 +106,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelExternalWorkflowExecutionInitiatedEventAttributes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelExternalWorkflowExecutionInitiatedEventAttributes();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.RequestCancelExternalWorkflowExecutionInitiatedEventAttributes(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -112,6 +139,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("reason", Reason);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution>("workflowExecution", WorkflowExecution);
             writer.WriteStringValue("workflowTaskCompletedEventId", WorkflowTaskCompletedEventId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

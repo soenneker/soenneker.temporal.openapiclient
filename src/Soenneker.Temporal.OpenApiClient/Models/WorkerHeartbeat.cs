@@ -12,164 +12,237 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WorkerHeartbeat : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("activityPollerInfo") is { } nullNodeActivityPollerInfo && nullNodeActivityPollerInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActivityPollerInfo = null;
+            if (parseNode.GetChildNode("activityTaskSlotsInfo") is { } nullNodeActivityTaskSlotsInfo && nullNodeActivityTaskSlotsInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActivityTaskSlotsInfo = null;
+            if (parseNode.GetChildNode("currentStickyCacheSize") is { } nullNodeCurrentStickyCacheSize && nullNodeCurrentStickyCacheSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentStickyCacheSize = null;
+            if (parseNode.GetChildNode("deploymentVersion") is { } nullNodeDeploymentVersion && nullNodeDeploymentVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeploymentVersion = null;
+            if (parseNode.GetChildNode("drivers") is { } nullNodeDrivers && nullNodeDrivers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Drivers = null;
+            if (parseNode.GetChildNode("elapsedSinceLastHeartbeat") is { } nullNodeElapsedSinceLastHeartbeat && nullNodeElapsedSinceLastHeartbeat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ElapsedSinceLastHeartbeat = null;
+            if (parseNode.GetChildNode("heartbeatTime") is { } nullNodeHeartbeatTime && nullNodeHeartbeatTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HeartbeatTime = null;
+            if (parseNode.GetChildNode("hostInfo") is { } nullNodeHostInfo && nullNodeHostInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HostInfo = null;
+            if (parseNode.GetChildNode("localActivitySlotsInfo") is { } nullNodeLocalActivitySlotsInfo && nullNodeLocalActivitySlotsInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocalActivitySlotsInfo = null;
+            if (parseNode.GetChildNode("nexusPollerInfo") is { } nullNodeNexusPollerInfo && nullNodeNexusPollerInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NexusPollerInfo = null;
+            if (parseNode.GetChildNode("nexusTaskSlotsInfo") is { } nullNodeNexusTaskSlotsInfo && nullNodeNexusTaskSlotsInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NexusTaskSlotsInfo = null;
+            if (parseNode.GetChildNode("plugins") is { } nullNodePlugins && nullNodePlugins.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Plugins = null;
+            if (parseNode.GetChildNode("sdkName") is { } nullNodeSdkName && nullNodeSdkName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SdkName = null;
+            if (parseNode.GetChildNode("sdkVersion") is { } nullNodeSdkVersion && nullNodeSdkVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SdkVersion = null;
+            if (parseNode.GetChildNode("startTime") is { } nullNodeStartTime && nullNodeStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartTime = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("taskQueue") is { } nullNodeTaskQueue && nullNodeTaskQueue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskQueue = null;
+            if (parseNode.GetChildNode("totalStickyCacheHit") is { } nullNodeTotalStickyCacheHit && nullNodeTotalStickyCacheHit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalStickyCacheHit = null;
+            if (parseNode.GetChildNode("totalStickyCacheMiss") is { } nullNodeTotalStickyCacheMiss && nullNodeTotalStickyCacheMiss.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalStickyCacheMiss = null;
+            if (parseNode.GetChildNode("workerIdentity") is { } nullNodeWorkerIdentity && nullNodeWorkerIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerIdentity = null;
+            if (parseNode.GetChildNode("workerInstanceKey") is { } nullNodeWorkerInstanceKey && nullNodeWorkerInstanceKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerInstanceKey = null;
+            if (parseNode.GetChildNode("workflowPollerInfo") is { } nullNodeWorkflowPollerInfo && nullNodeWorkflowPollerInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowPollerInfo = null;
+            if (parseNode.GetChildNode("workflowStickyPollerInfo") is { } nullNodeWorkflowStickyPollerInfo && nullNodeWorkflowStickyPollerInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowStickyPollerInfo = null;
+            if (parseNode.GetChildNode("workflowTaskSlotsInfo") is { } nullNodeWorkflowTaskSlotsInfo && nullNodeWorkflowTaskSlotsInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowTaskSlotsInfo = null;
+        }
+
         /// <summary>The activityPollerInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerPollerInfo? ActivityPollerInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerPollerInfo? ActivityPollerInfo { get => _explicitNullValueActivityPollerInfo; set { _explicitNullValueActivityPollerInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityPollerInfo"); else _explicitNullProperties?.Remove("activityPollerInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkerPollerInfo? _explicitNullValueActivityPollerInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerPollerInfo ActivityPollerInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerPollerInfo ActivityPollerInfo { get => _explicitNullValueActivityPollerInfo; set { _explicitNullValueActivityPollerInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityPollerInfo"); else _explicitNullProperties?.Remove("activityPollerInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkerPollerInfo _explicitNullValueActivityPollerInfo = default!;
 #endif
         /// <summary>The activityTaskSlotsInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo? ActivityTaskSlotsInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo? ActivityTaskSlotsInfo { get => _explicitNullValueActivityTaskSlotsInfo; set { _explicitNullValueActivityTaskSlotsInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityTaskSlotsInfo"); else _explicitNullProperties?.Remove("activityTaskSlotsInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo? _explicitNullValueActivityTaskSlotsInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo ActivityTaskSlotsInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo ActivityTaskSlotsInfo { get => _explicitNullValueActivityTaskSlotsInfo; set { _explicitNullValueActivityTaskSlotsInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityTaskSlotsInfo"); else _explicitNullProperties?.Remove("activityTaskSlotsInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo _explicitNullValueActivityTaskSlotsInfo = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Current cache size, expressed in number of Workflow Executions.</summary>
-        public int? CurrentStickyCacheSize { get; set; }
+        public int? CurrentStickyCacheSize { get => _explicitNullValueCurrentStickyCacheSize; set { _explicitNullValueCurrentStickyCacheSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currentStickyCacheSize"); else _explicitNullProperties?.Remove("currentStickyCacheSize"); } }
+        private int? _explicitNullValueCurrentStickyCacheSize = default!;
         /// <summary>A Worker Deployment Version (Version, for short) represents a version of workers within a Worker Deployment. (see documentation of WorkerDeploymentVersionInfo) Version records are created in Temporal server automatically when their first poller arrives to the server. Experimental. Worker Deployment Versions are experimental and might significantly change in the future.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion? DeploymentVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion? DeploymentVersion { get => _explicitNullValueDeploymentVersion; set { _explicitNullValueDeploymentVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploymentVersion"); else _explicitNullProperties?.Remove("deploymentVersion"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion? _explicitNullValueDeploymentVersion = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion DeploymentVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion DeploymentVersion { get => _explicitNullValueDeploymentVersion; set { _explicitNullValueDeploymentVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploymentVersion"); else _explicitNullProperties?.Remove("deploymentVersion"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion _explicitNullValueDeploymentVersion = default!;
 #endif
         /// <summary>Storage drivers in use by this SDK.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.StorageDriverInfo>? Drivers { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.StorageDriverInfo>? Drivers { get => _explicitNullValueDrivers; set { _explicitNullValueDrivers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("drivers"); else _explicitNullProperties?.Remove("drivers"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.StorageDriverInfo>? _explicitNullValueDrivers = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.StorageDriverInfo> Drivers { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.StorageDriverInfo> Drivers { get => _explicitNullValueDrivers; set { _explicitNullValueDrivers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("drivers"); else _explicitNullProperties?.Remove("drivers"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.StorageDriverInfo> _explicitNullValueDrivers = default!;
 #endif
         /// <summary>Elapsed time since the last heartbeat from the worker.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ElapsedSinceLastHeartbeat { get; set; }
+        public string? ElapsedSinceLastHeartbeat { get => _explicitNullValueElapsedSinceLastHeartbeat; set { _explicitNullValueElapsedSinceLastHeartbeat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elapsedSinceLastHeartbeat"); else _explicitNullProperties?.Remove("elapsedSinceLastHeartbeat"); } }
+        private string? _explicitNullValueElapsedSinceLastHeartbeat = default!;
 #nullable restore
 #else
-        public string ElapsedSinceLastHeartbeat { get; set; }
+        public string ElapsedSinceLastHeartbeat { get => _explicitNullValueElapsedSinceLastHeartbeat; set { _explicitNullValueElapsedSinceLastHeartbeat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elapsedSinceLastHeartbeat"); else _explicitNullProperties?.Remove("elapsedSinceLastHeartbeat"); } }
+        private string _explicitNullValueElapsedSinceLastHeartbeat = default!;
 #endif
         /// <summary>Timestamp of this heartbeat, coming from the worker. Worker should set it to &quot;now&quot;. Note that this timestamp comes directly from the worker and is subject to workers&apos; clock skew.</summary>
-        public DateTimeOffset? HeartbeatTime { get; set; }
+        public DateTimeOffset? HeartbeatTime { get => _explicitNullValueHeartbeatTime; set { _explicitNullValueHeartbeatTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("heartbeatTime"); else _explicitNullProperties?.Remove("heartbeatTime"); } }
+        private DateTimeOffset? _explicitNullValueHeartbeatTime = default!;
         /// <summary>Worker host information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeatHostInfo? HostInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeatHostInfo? HostInfo { get => _explicitNullValueHostInfo; set { _explicitNullValueHostInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hostInfo"); else _explicitNullProperties?.Remove("hostInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeatHostInfo? _explicitNullValueHostInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeatHostInfo HostInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeatHostInfo HostInfo { get => _explicitNullValueHostInfo; set { _explicitNullValueHostInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hostInfo"); else _explicitNullProperties?.Remove("hostInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeatHostInfo _explicitNullValueHostInfo = default!;
 #endif
         /// <summary>The localActivitySlotsInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo? LocalActivitySlotsInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo? LocalActivitySlotsInfo { get => _explicitNullValueLocalActivitySlotsInfo; set { _explicitNullValueLocalActivitySlotsInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("localActivitySlotsInfo"); else _explicitNullProperties?.Remove("localActivitySlotsInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo? _explicitNullValueLocalActivitySlotsInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo LocalActivitySlotsInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo LocalActivitySlotsInfo { get => _explicitNullValueLocalActivitySlotsInfo; set { _explicitNullValueLocalActivitySlotsInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("localActivitySlotsInfo"); else _explicitNullProperties?.Remove("localActivitySlotsInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo _explicitNullValueLocalActivitySlotsInfo = default!;
 #endif
         /// <summary>The nexusPollerInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerPollerInfo? NexusPollerInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerPollerInfo? NexusPollerInfo { get => _explicitNullValueNexusPollerInfo; set { _explicitNullValueNexusPollerInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nexusPollerInfo"); else _explicitNullProperties?.Remove("nexusPollerInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkerPollerInfo? _explicitNullValueNexusPollerInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerPollerInfo NexusPollerInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerPollerInfo NexusPollerInfo { get => _explicitNullValueNexusPollerInfo; set { _explicitNullValueNexusPollerInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nexusPollerInfo"); else _explicitNullProperties?.Remove("nexusPollerInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkerPollerInfo _explicitNullValueNexusPollerInfo = default!;
 #endif
         /// <summary>The nexusTaskSlotsInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo? NexusTaskSlotsInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo? NexusTaskSlotsInfo { get => _explicitNullValueNexusTaskSlotsInfo; set { _explicitNullValueNexusTaskSlotsInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nexusTaskSlotsInfo"); else _explicitNullProperties?.Remove("nexusTaskSlotsInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo? _explicitNullValueNexusTaskSlotsInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo NexusTaskSlotsInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo NexusTaskSlotsInfo { get => _explicitNullValueNexusTaskSlotsInfo; set { _explicitNullValueNexusTaskSlotsInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nexusTaskSlotsInfo"); else _explicitNullProperties?.Remove("nexusTaskSlotsInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo _explicitNullValueNexusTaskSlotsInfo = default!;
 #endif
         /// <summary>Plugins currently in use by this SDK.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.PluginInfo>? Plugins { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.PluginInfo>? Plugins { get => _explicitNullValuePlugins; set { _explicitNullValuePlugins = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plugins"); else _explicitNullProperties?.Remove("plugins"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.PluginInfo>? _explicitNullValuePlugins = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.PluginInfo> Plugins { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.PluginInfo> Plugins { get => _explicitNullValuePlugins; set { _explicitNullValuePlugins = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plugins"); else _explicitNullProperties?.Remove("plugins"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.PluginInfo> _explicitNullValuePlugins = default!;
 #endif
         /// <summary>The sdkName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SdkName { get; set; }
+        public string? SdkName { get => _explicitNullValueSdkName; set { _explicitNullValueSdkName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sdkName"); else _explicitNullProperties?.Remove("sdkName"); } }
+        private string? _explicitNullValueSdkName = default!;
 #nullable restore
 #else
-        public string SdkName { get; set; }
+        public string SdkName { get => _explicitNullValueSdkName; set { _explicitNullValueSdkName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sdkName"); else _explicitNullProperties?.Remove("sdkName"); } }
+        private string _explicitNullValueSdkName = default!;
 #endif
         /// <summary>The sdkVersion property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SdkVersion { get; set; }
+        public string? SdkVersion { get => _explicitNullValueSdkVersion; set { _explicitNullValueSdkVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sdkVersion"); else _explicitNullProperties?.Remove("sdkVersion"); } }
+        private string? _explicitNullValueSdkVersion = default!;
 #nullable restore
 #else
-        public string SdkVersion { get; set; }
+        public string SdkVersion { get => _explicitNullValueSdkVersion; set { _explicitNullValueSdkVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sdkVersion"); else _explicitNullProperties?.Remove("sdkVersion"); } }
+        private string _explicitNullValueSdkVersion = default!;
 #endif
         /// <summary>Worker start time. It can be used to determine worker uptime. (current time - start time)</summary>
-        public DateTimeOffset? StartTime { get; set; }
+        public DateTimeOffset? StartTime { get => _explicitNullValueStartTime; set { _explicitNullValueStartTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startTime"); else _explicitNullProperties?.Remove("startTime"); } }
+        private DateTimeOffset? _explicitNullValueStartTime = default!;
         /// <summary>Worker status. Defined by SDK.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeatStatus? Status { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeatStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeatStatus? _explicitNullValueStatus = default!;
         /// <summary>Task queue this worker is polling for tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TaskQueue { get; set; }
+        public string? TaskQueue { get => _explicitNullValueTaskQueue; set { _explicitNullValueTaskQueue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taskQueue"); else _explicitNullProperties?.Remove("taskQueue"); } }
+        private string? _explicitNullValueTaskQueue = default!;
 #nullable restore
 #else
-        public string TaskQueue { get; set; }
+        public string TaskQueue { get => _explicitNullValueTaskQueue; set { _explicitNullValueTaskQueue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taskQueue"); else _explicitNullProperties?.Remove("taskQueue"); } }
+        private string _explicitNullValueTaskQueue = default!;
 #endif
         /// <summary>A Workflow Task found a cached Workflow Execution to run against.</summary>
-        public int? TotalStickyCacheHit { get; set; }
+        public int? TotalStickyCacheHit { get => _explicitNullValueTotalStickyCacheHit; set { _explicitNullValueTotalStickyCacheHit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalStickyCacheHit"); else _explicitNullProperties?.Remove("totalStickyCacheHit"); } }
+        private int? _explicitNullValueTotalStickyCacheHit = default!;
         /// <summary>A Workflow Task did not find a cached Workflow execution to run against.</summary>
-        public int? TotalStickyCacheMiss { get; set; }
+        public int? TotalStickyCacheMiss { get => _explicitNullValueTotalStickyCacheMiss; set { _explicitNullValueTotalStickyCacheMiss = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalStickyCacheMiss"); else _explicitNullProperties?.Remove("totalStickyCacheMiss"); } }
+        private int? _explicitNullValueTotalStickyCacheMiss = default!;
         /// <summary>Worker identity, set by the client, may not be unique. Usually host_name+(user group name)+process_id, but can be overwritten by the user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkerIdentity { get; set; }
+        public string? WorkerIdentity { get => _explicitNullValueWorkerIdentity; set { _explicitNullValueWorkerIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerIdentity"); else _explicitNullProperties?.Remove("workerIdentity"); } }
+        private string? _explicitNullValueWorkerIdentity = default!;
 #nullable restore
 #else
-        public string WorkerIdentity { get; set; }
+        public string WorkerIdentity { get => _explicitNullValueWorkerIdentity; set { _explicitNullValueWorkerIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerIdentity"); else _explicitNullProperties?.Remove("workerIdentity"); } }
+        private string _explicitNullValueWorkerIdentity = default!;
 #endif
         /// <summary>Worker identifier, should be unique for the namespace. It is distinct from worker identity, which is not necessarily namespace-unique.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkerInstanceKey { get; set; }
+        public string? WorkerInstanceKey { get => _explicitNullValueWorkerInstanceKey; set { _explicitNullValueWorkerInstanceKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerInstanceKey"); else _explicitNullProperties?.Remove("workerInstanceKey"); } }
+        private string? _explicitNullValueWorkerInstanceKey = default!;
 #nullable restore
 #else
-        public string WorkerInstanceKey { get; set; }
+        public string WorkerInstanceKey { get => _explicitNullValueWorkerInstanceKey; set { _explicitNullValueWorkerInstanceKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerInstanceKey"); else _explicitNullProperties?.Remove("workerInstanceKey"); } }
+        private string _explicitNullValueWorkerInstanceKey = default!;
 #endif
         /// <summary>The workflowPollerInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerPollerInfo? WorkflowPollerInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerPollerInfo? WorkflowPollerInfo { get => _explicitNullValueWorkflowPollerInfo; set { _explicitNullValueWorkflowPollerInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowPollerInfo"); else _explicitNullProperties?.Remove("workflowPollerInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkerPollerInfo? _explicitNullValueWorkflowPollerInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerPollerInfo WorkflowPollerInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerPollerInfo WorkflowPollerInfo { get => _explicitNullValueWorkflowPollerInfo; set { _explicitNullValueWorkflowPollerInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowPollerInfo"); else _explicitNullProperties?.Remove("workflowPollerInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkerPollerInfo _explicitNullValueWorkflowPollerInfo = default!;
 #endif
         /// <summary>The workflowStickyPollerInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerPollerInfo? WorkflowStickyPollerInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerPollerInfo? WorkflowStickyPollerInfo { get => _explicitNullValueWorkflowStickyPollerInfo; set { _explicitNullValueWorkflowStickyPollerInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowStickyPollerInfo"); else _explicitNullProperties?.Remove("workflowStickyPollerInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkerPollerInfo? _explicitNullValueWorkflowStickyPollerInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerPollerInfo WorkflowStickyPollerInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerPollerInfo WorkflowStickyPollerInfo { get => _explicitNullValueWorkflowStickyPollerInfo; set { _explicitNullValueWorkflowStickyPollerInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowStickyPollerInfo"); else _explicitNullProperties?.Remove("workflowStickyPollerInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkerPollerInfo _explicitNullValueWorkflowStickyPollerInfo = default!;
 #endif
         /// <summary>The workflowTaskSlotsInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo? WorkflowTaskSlotsInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo? WorkflowTaskSlotsInfo { get => _explicitNullValueWorkflowTaskSlotsInfo; set { _explicitNullValueWorkflowTaskSlotsInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowTaskSlotsInfo"); else _explicitNullProperties?.Remove("workflowTaskSlotsInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo? _explicitNullValueWorkflowTaskSlotsInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo WorkflowTaskSlotsInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo WorkflowTaskSlotsInfo { get => _explicitNullValueWorkflowTaskSlotsInfo; set { _explicitNullValueWorkflowTaskSlotsInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowTaskSlotsInfo"); else _explicitNullProperties?.Remove("workflowTaskSlotsInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo _explicitNullValueWorkflowTaskSlotsInfo = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeat"/> and sets the default values.
@@ -186,7 +259,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeat CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeat();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeat(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -253,6 +326,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerPollerInfo>("workflowPollerInfo", WorkflowPollerInfo);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerPollerInfo>("workflowStickyPollerInfo", WorkflowStickyPollerInfo);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo>("workflowTaskSlotsInfo", WorkflowTaskSlotsInfo);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

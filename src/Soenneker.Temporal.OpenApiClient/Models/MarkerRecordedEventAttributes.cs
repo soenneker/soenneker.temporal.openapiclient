@@ -11,48 +11,70 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class MarkerRecordedEventAttributes : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("details") is { } nullNodeDetails && nullNodeDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Details = null;
+            if (parseNode.GetChildNode("failure") is { } nullNodeFailure && nullNodeFailure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Failure = null;
+            if (parseNode.GetChildNode("header") is { } nullNodeHeader && nullNodeHeader.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Header = null;
+            if (parseNode.GetChildNode("markerName") is { } nullNodeMarkerName && nullNodeMarkerName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MarkerName = null;
+            if (parseNode.GetChildNode("workflowTaskCompletedEventId") is { } nullNodeWorkflowTaskCompletedEventId && nullNodeWorkflowTaskCompletedEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowTaskCompletedEventId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Serialized information recorded in the marker</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.MarkerRecordedEventAttributesDetailsProperty? Details { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.MarkerRecordedEventAttributesDetailsProperty? Details { get => _explicitNullValueDetails; set { _explicitNullValueDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("details"); else _explicitNullProperties?.Remove("details"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.MarkerRecordedEventAttributesDetailsProperty? _explicitNullValueDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.MarkerRecordedEventAttributesDetailsProperty Details { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.MarkerRecordedEventAttributesDetailsProperty Details { get => _explicitNullValueDetails; set { _explicitNullValueDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("details"); else _explicitNullProperties?.Remove("details"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.MarkerRecordedEventAttributesDetailsProperty _explicitNullValueDetails = default!;
 #endif
         /// <summary>Some uses of markers, like a local activity, could &quot;fail&quot;. If they did that is recorded here.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.MarkerRecordedEventAttributesFailure? Failure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.MarkerRecordedEventAttributesFailure? Failure { get => _explicitNullValueFailure; set { _explicitNullValueFailure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failure"); else _explicitNullProperties?.Remove("failure"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.MarkerRecordedEventAttributesFailure? _explicitNullValueFailure = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.MarkerRecordedEventAttributesFailure Failure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.MarkerRecordedEventAttributesFailure Failure { get => _explicitNullValueFailure; set { _explicitNullValueFailure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failure"); else _explicitNullProperties?.Remove("failure"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.MarkerRecordedEventAttributesFailure _explicitNullValueFailure = default!;
 #endif
         /// <summary>Contains metadata that can be attached to a variety of requests, like starting a workflow, and can be propagated between, for example, workflows and activities.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Header? Header { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.Header? Header { get => _explicitNullValueHeader; set { _explicitNullValueHeader = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("header"); else _explicitNullProperties?.Remove("header"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.Header? _explicitNullValueHeader = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Header Header { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.Header Header { get => _explicitNullValueHeader; set { _explicitNullValueHeader = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("header"); else _explicitNullProperties?.Remove("header"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.Header _explicitNullValueHeader = default!;
 #endif
         /// <summary>Workers use this to identify the &quot;types&quot; of various markers. Ex: Local activity, side effect.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MarkerName { get; set; }
+        public string? MarkerName { get => _explicitNullValueMarkerName; set { _explicitNullValueMarkerName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("markerName"); else _explicitNullProperties?.Remove("markerName"); } }
+        private string? _explicitNullValueMarkerName = default!;
 #nullable restore
 #else
-        public string MarkerName { get; set; }
+        public string MarkerName { get => _explicitNullValueMarkerName; set { _explicitNullValueMarkerName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("markerName"); else _explicitNullProperties?.Remove("markerName"); } }
+        private string _explicitNullValueMarkerName = default!;
 #endif
         /// <summary>The `WORKFLOW_TASK_COMPLETED` event which this command was reported with</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkflowTaskCompletedEventId { get; set; }
+        public string? WorkflowTaskCompletedEventId { get => _explicitNullValueWorkflowTaskCompletedEventId; set { _explicitNullValueWorkflowTaskCompletedEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowTaskCompletedEventId"); else _explicitNullProperties?.Remove("workflowTaskCompletedEventId"); } }
+        private string? _explicitNullValueWorkflowTaskCompletedEventId = default!;
 #nullable restore
 #else
-        public string WorkflowTaskCompletedEventId { get; set; }
+        public string WorkflowTaskCompletedEventId { get => _explicitNullValueWorkflowTaskCompletedEventId; set { _explicitNullValueWorkflowTaskCompletedEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowTaskCompletedEventId"); else _explicitNullProperties?.Remove("workflowTaskCompletedEventId"); } }
+        private string _explicitNullValueWorkflowTaskCompletedEventId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.MarkerRecordedEventAttributes"/> and sets the default values.
@@ -69,7 +91,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.MarkerRecordedEventAttributes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.MarkerRecordedEventAttributes();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.MarkerRecordedEventAttributes(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -98,6 +120,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Header>("header", Header);
             writer.WriteStringValue("markerName", MarkerName);
             writer.WriteStringValue("workflowTaskCompletedEventId", WorkflowTaskCompletedEventId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

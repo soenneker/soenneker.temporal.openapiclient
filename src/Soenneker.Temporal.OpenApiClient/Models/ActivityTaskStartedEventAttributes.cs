@@ -11,58 +11,85 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ActivityTaskStartedEventAttributes : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("attempt") is { } nullNodeAttempt && nullNodeAttempt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attempt = null;
+            if (parseNode.GetChildNode("buildIdRedirectCounter") is { } nullNodeBuildIdRedirectCounter && nullNodeBuildIdRedirectCounter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuildIdRedirectCounter = null;
+            if (parseNode.GetChildNode("identity") is { } nullNodeIdentity && nullNodeIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Identity = null;
+            if (parseNode.GetChildNode("lastFailure") is { } nullNodeLastFailure && nullNodeLastFailure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastFailure = null;
+            if (parseNode.GetChildNode("requestId") is { } nullNodeRequestId && nullNodeRequestId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestId = null;
+            if (parseNode.GetChildNode("scheduledEventId") is { } nullNodeScheduledEventId && nullNodeScheduledEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduledEventId = null;
+            if (parseNode.GetChildNode("workerVersion") is { } nullNodeWorkerVersion && nullNodeWorkerVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerVersion = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Starting at 1, the number of times this task has been attempted</summary>
-        public int? Attempt { get; set; }
+        public int? Attempt { get => _explicitNullValueAttempt; set { _explicitNullValueAttempt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attempt"); else _explicitNullProperties?.Remove("attempt"); } }
+        private int? _explicitNullValueAttempt = default!;
         /// <summary>Used by server internally to properly reapply build ID redirects to an execution when rebuilding it from events. Deprecated. This field should be cleaned up when versioning-2 API is removed. [cleanup-experimental-wv]</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BuildIdRedirectCounter { get; set; }
+        public string? BuildIdRedirectCounter { get => _explicitNullValueBuildIdRedirectCounter; set { _explicitNullValueBuildIdRedirectCounter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buildIdRedirectCounter"); else _explicitNullProperties?.Remove("buildIdRedirectCounter"); } }
+        private string? _explicitNullValueBuildIdRedirectCounter = default!;
 #nullable restore
 #else
-        public string BuildIdRedirectCounter { get; set; }
+        public string BuildIdRedirectCounter { get => _explicitNullValueBuildIdRedirectCounter; set { _explicitNullValueBuildIdRedirectCounter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buildIdRedirectCounter"); else _explicitNullProperties?.Remove("buildIdRedirectCounter"); } }
+        private string _explicitNullValueBuildIdRedirectCounter = default!;
 #endif
         /// <summary>id of the worker that picked up this task</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Identity { get; set; }
+        public string? Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity"); else _explicitNullProperties?.Remove("identity"); } }
+        private string? _explicitNullValueIdentity = default!;
 #nullable restore
 #else
-        public string Identity { get; set; }
+        public string Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity"); else _explicitNullProperties?.Remove("identity"); } }
+        private string _explicitNullValueIdentity = default!;
 #endif
         /// <summary>Will be set to the most recent failure details, if this task has previously failed and then been retried.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributesLastFailure? LastFailure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributesLastFailure? LastFailure { get => _explicitNullValueLastFailure; set { _explicitNullValueLastFailure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastFailure"); else _explicitNullProperties?.Remove("lastFailure"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributesLastFailure? _explicitNullValueLastFailure = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributesLastFailure LastFailure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributesLastFailure LastFailure { get => _explicitNullValueLastFailure; set { _explicitNullValueLastFailure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastFailure"); else _explicitNullProperties?.Remove("lastFailure"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributesLastFailure _explicitNullValueLastFailure = default!;
 #endif
         /// <summary>This field is populated from the RecordActivityTaskStartedRequest. Matching service would set the request_id on the RecordActivityTaskStartedRequest to a new UUID. This is useful in case a RecordActivityTaskStarted call succeed but matching doesn&apos;t get that response, so matching could retry and history service would return success if the request_id matches. In that case, matching will continue to deliver the task to worker. Without this field, history service would return AlreadyStarted error, and matching would drop the task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RequestId { get; set; }
+        public string? RequestId { get => _explicitNullValueRequestId; set { _explicitNullValueRequestId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestId"); else _explicitNullProperties?.Remove("requestId"); } }
+        private string? _explicitNullValueRequestId = default!;
 #nullable restore
 #else
-        public string RequestId { get; set; }
+        public string RequestId { get => _explicitNullValueRequestId; set { _explicitNullValueRequestId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestId"); else _explicitNullProperties?.Remove("requestId"); } }
+        private string _explicitNullValueRequestId = default!;
 #endif
         /// <summary>The id of the `ACTIVITY_TASK_SCHEDULED` event this task corresponds to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ScheduledEventId { get; set; }
+        public string? ScheduledEventId { get => _explicitNullValueScheduledEventId; set { _explicitNullValueScheduledEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduledEventId"); else _explicitNullProperties?.Remove("scheduledEventId"); } }
+        private string? _explicitNullValueScheduledEventId = default!;
 #nullable restore
 #else
-        public string ScheduledEventId { get; set; }
+        public string ScheduledEventId { get => _explicitNullValueScheduledEventId; set { _explicitNullValueScheduledEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduledEventId"); else _explicitNullProperties?.Remove("scheduledEventId"); } }
+        private string _explicitNullValueScheduledEventId = default!;
 #endif
         /// <summary>Version info of the worker to whom this task was dispatched. Deprecated. This field should be cleaned up when versioning-2 API is removed. [cleanup-experimental-wv]</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributesWorkerVersion? WorkerVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributesWorkerVersion? WorkerVersion { get => _explicitNullValueWorkerVersion; set { _explicitNullValueWorkerVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerVersion"); else _explicitNullProperties?.Remove("workerVersion"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributesWorkerVersion? _explicitNullValueWorkerVersion = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributesWorkerVersion WorkerVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributesWorkerVersion WorkerVersion { get => _explicitNullValueWorkerVersion; set { _explicitNullValueWorkerVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerVersion"); else _explicitNullProperties?.Remove("workerVersion"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributesWorkerVersion _explicitNullValueWorkerVersion = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributes"/> and sets the default values.
@@ -79,7 +106,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributes();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributes(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -112,6 +139,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("requestId", RequestId);
             writer.WriteStringValue("scheduledEventId", ScheduledEventId);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskStartedEventAttributesWorkerVersion>("workerVersion", WorkerVersion);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

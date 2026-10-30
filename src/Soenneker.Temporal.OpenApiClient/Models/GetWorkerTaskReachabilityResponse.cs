@@ -12,16 +12,26 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GetWorkerTaskReachabilityResponse : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("buildIdReachability") is { } nullNodeBuildIdReachability && nullNodeBuildIdReachability.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuildIdReachability = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Task reachability, broken down by build id and then task queue. When requesting a large number of task queues or all task queues associated with the given build ids in a namespace, all task queues will be listed in the response but some of them may not contain reachability information due to a server enforced limit. When reaching the limit, task queues that reachability information could not be retrieved for will be marked with a single TASK_REACHABILITY_UNSPECIFIED entry. The caller may issue another call to get the reachability for those task queues. Open source users can adjust this limit by setting the server&apos;s dynamic config value for `limit.reachabilityTaskQueueScan` with the caveat that this call can strain the visibility store.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.BuildIdReachability>? BuildIdReachability { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.BuildIdReachability>? BuildIdReachability { get => _explicitNullValueBuildIdReachability; set { _explicitNullValueBuildIdReachability = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buildIdReachability"); else _explicitNullProperties?.Remove("buildIdReachability"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.BuildIdReachability>? _explicitNullValueBuildIdReachability = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.BuildIdReachability> BuildIdReachability { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.BuildIdReachability> BuildIdReachability { get => _explicitNullValueBuildIdReachability; set { _explicitNullValueBuildIdReachability = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buildIdReachability"); else _explicitNullProperties?.Remove("buildIdReachability"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.BuildIdReachability> _explicitNullValueBuildIdReachability = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.GetWorkerTaskReachabilityResponse"/> and sets the default values.
@@ -38,7 +48,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.GetWorkerTaskReachabilityResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.GetWorkerTaskReachabilityResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.GetWorkerTaskReachabilityResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -59,6 +69,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.BuildIdReachability>("buildIdReachability", BuildIdReachability);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

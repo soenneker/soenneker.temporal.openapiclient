@@ -12,58 +12,95 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ListWorkerDeploymentsResponseWorkerDeploymentSummaryLatestVersionSummary : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("computeConfig") is { } nullNodeComputeConfig && nullNodeComputeConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ComputeConfig = null;
+            if (parseNode.GetChildNode("createTime") is { } nullNodeCreateTime && nullNodeCreateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateTime = null;
+            if (parseNode.GetChildNode("currentSinceTime") is { } nullNodeCurrentSinceTime && nullNodeCurrentSinceTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentSinceTime = null;
+            if (parseNode.GetChildNode("deploymentVersion") is { } nullNodeDeploymentVersion && nullNodeDeploymentVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeploymentVersion = null;
+            if (parseNode.GetChildNode("drainageInfo") is { } nullNodeDrainageInfo && nullNodeDrainageInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DrainageInfo = null;
+            if (parseNode.GetChildNode("drainageStatus") is { } nullNodeDrainageStatus && nullNodeDrainageStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DrainageStatus = null;
+            if (parseNode.GetChildNode("firstActivationTime") is { } nullNodeFirstActivationTime && nullNodeFirstActivationTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstActivationTime = null;
+            if (parseNode.GetChildNode("lastCurrentTime") is { } nullNodeLastCurrentTime && nullNodeLastCurrentTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastCurrentTime = null;
+            if (parseNode.GetChildNode("lastDeactivationTime") is { } nullNodeLastDeactivationTime && nullNodeLastDeactivationTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastDeactivationTime = null;
+            if (parseNode.GetChildNode("rampingSinceTime") is { } nullNodeRampingSinceTime && nullNodeRampingSinceTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RampingSinceTime = null;
+            if (parseNode.GetChildNode("routingUpdateTime") is { } nullNodeRoutingUpdateTime && nullNodeRoutingUpdateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoutingUpdateTime = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("version") is { } nullNodeVersion && nullNodeVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Version = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A subset of information in ComputeConfig optimized for list views.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ComputeConfigSummary? ComputeConfig { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ComputeConfigSummary? ComputeConfig { get => _explicitNullValueComputeConfig; set { _explicitNullValueComputeConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("computeConfig"); else _explicitNullProperties?.Remove("computeConfig"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ComputeConfigSummary? _explicitNullValueComputeConfig = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ComputeConfigSummary ComputeConfig { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ComputeConfigSummary ComputeConfig { get => _explicitNullValueComputeConfig; set { _explicitNullValueComputeConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("computeConfig"); else _explicitNullProperties?.Remove("computeConfig"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ComputeConfigSummary _explicitNullValueComputeConfig = default!;
 #endif
         /// <summary>The createTime property</summary>
-        public DateTimeOffset? CreateTime { get; set; }
+        public DateTimeOffset? CreateTime { get => _explicitNullValueCreateTime; set { _explicitNullValueCreateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createTime"); else _explicitNullProperties?.Remove("createTime"); } }
+        private DateTimeOffset? _explicitNullValueCreateTime = default!;
         /// <summary>Unset if not current. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &apos;Since&apos; captures the field semantics despite being a preposition. --)</summary>
-        public DateTimeOffset? CurrentSinceTime { get; set; }
+        public DateTimeOffset? CurrentSinceTime { get => _explicitNullValueCurrentSinceTime; set { _explicitNullValueCurrentSinceTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currentSinceTime"); else _explicitNullProperties?.Remove("currentSinceTime"); } }
+        private DateTimeOffset? _explicitNullValueCurrentSinceTime = default!;
         /// <summary>Required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummaryDeploymentVersion? DeploymentVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummaryDeploymentVersion? DeploymentVersion { get => _explicitNullValueDeploymentVersion; set { _explicitNullValueDeploymentVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploymentVersion"); else _explicitNullProperties?.Remove("deploymentVersion"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummaryDeploymentVersion? _explicitNullValueDeploymentVersion = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummaryDeploymentVersion DeploymentVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummaryDeploymentVersion DeploymentVersion { get => _explicitNullValueDeploymentVersion; set { _explicitNullValueDeploymentVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploymentVersion"); else _explicitNullProperties?.Remove("deploymentVersion"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummaryDeploymentVersion _explicitNullValueDeploymentVersion = default!;
 #endif
         /// <summary>Information about workflow drainage to help the user determine when it is safe to decommission a Version. Not present while version is current or ramping</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummaryDrainageInfo? DrainageInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummaryDrainageInfo? DrainageInfo { get => _explicitNullValueDrainageInfo; set { _explicitNullValueDrainageInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("drainageInfo"); else _explicitNullProperties?.Remove("drainageInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummaryDrainageInfo? _explicitNullValueDrainageInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummaryDrainageInfo DrainageInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummaryDrainageInfo DrainageInfo { get => _explicitNullValueDrainageInfo; set { _explicitNullValueDrainageInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("drainageInfo"); else _explicitNullProperties?.Remove("drainageInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummaryDrainageInfo _explicitNullValueDrainageInfo = default!;
 #endif
         /// <summary>Deprecated. Use `drainage_info` instead.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummaryDrainageStatus? DrainageStatus { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummaryDrainageStatus? DrainageStatus { get => _explicitNullValueDrainageStatus; set { _explicitNullValueDrainageStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("drainageStatus"); else _explicitNullProperties?.Remove("drainageStatus"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummaryDrainageStatus? _explicitNullValueDrainageStatus = default!;
         /// <summary>Timestamp when this version first became current or ramping.</summary>
-        public DateTimeOffset? FirstActivationTime { get; set; }
+        public DateTimeOffset? FirstActivationTime { get => _explicitNullValueFirstActivationTime; set { _explicitNullValueFirstActivationTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("firstActivationTime"); else _explicitNullProperties?.Remove("firstActivationTime"); } }
+        private DateTimeOffset? _explicitNullValueFirstActivationTime = default!;
         /// <summary>Timestamp when this version last became current. Can be used to determine whether a version has ever been Current.</summary>
-        public DateTimeOffset? LastCurrentTime { get; set; }
+        public DateTimeOffset? LastCurrentTime { get => _explicitNullValueLastCurrentTime; set { _explicitNullValueLastCurrentTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastCurrentTime"); else _explicitNullProperties?.Remove("lastCurrentTime"); } }
+        private DateTimeOffset? _explicitNullValueLastCurrentTime = default!;
         /// <summary>Timestamp when this version last stopped being current or ramping. Cleared if the version becomes current or ramping again.</summary>
-        public DateTimeOffset? LastDeactivationTime { get; set; }
+        public DateTimeOffset? LastDeactivationTime { get => _explicitNullValueLastDeactivationTime; set { _explicitNullValueLastDeactivationTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastDeactivationTime"); else _explicitNullProperties?.Remove("lastDeactivationTime"); } }
+        private DateTimeOffset? _explicitNullValueLastDeactivationTime = default!;
         /// <summary>Unset if not ramping. Updated when the version first starts ramping, not on each ramp change. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &apos;Since&apos; captures the field semantics despite being a preposition. --)</summary>
-        public DateTimeOffset? RampingSinceTime { get; set; }
+        public DateTimeOffset? RampingSinceTime { get => _explicitNullValueRampingSinceTime; set { _explicitNullValueRampingSinceTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rampingSinceTime"); else _explicitNullProperties?.Remove("rampingSinceTime"); } }
+        private DateTimeOffset? _explicitNullValueRampingSinceTime = default!;
         /// <summary>Last time `current_since_time`, `ramping_since_time, or `ramp_percentage` of this version changed.</summary>
-        public DateTimeOffset? RoutingUpdateTime { get; set; }
+        public DateTimeOffset? RoutingUpdateTime { get => _explicitNullValueRoutingUpdateTime; set { _explicitNullValueRoutingUpdateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("routingUpdateTime"); else _explicitNullProperties?.Remove("routingUpdateTime"); } }
+        private DateTimeOffset? _explicitNullValueRoutingUpdateTime = default!;
         /// <summary>The status of the Worker Deployment Version.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummaryStatus? Status { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummaryStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummaryStatus? _explicitNullValueStatus = default!;
         /// <summary>Deprecated. Use `deployment_version`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Version { get; set; }
+        public string? Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version"); else _explicitNullProperties?.Remove("version"); } }
+        private string? _explicitNullValueVersion = default!;
 #nullable restore
 #else
-        public string Version { get; set; }
+        public string Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version"); else _explicitNullProperties?.Remove("version"); } }
+        private string _explicitNullValueVersion = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummaryLatestVersionSummary"/> and sets the default values.
@@ -80,7 +117,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummaryLatestVersionSummary CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummaryLatestVersionSummary();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummaryLatestVersionSummary(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -125,6 +162,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("routingUpdateTime", RoutingUpdateTime);
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummaryStatus>("status", Status);
             writer.WriteStringValue("version", Version);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

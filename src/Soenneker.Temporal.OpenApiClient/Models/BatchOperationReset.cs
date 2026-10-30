@@ -12,37 +12,57 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BatchOperationReset : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("identity") is { } nullNodeIdentity && nullNodeIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Identity = null;
+            if (parseNode.GetChildNode("options") is { } nullNodeOptions && nullNodeOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Options = null;
+            if (parseNode.GetChildNode("postResetOperations") is { } nullNodePostResetOperations && nullNodePostResetOperations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostResetOperations = null;
+            if (parseNode.GetChildNode("resetReapplyType") is { } nullNodeResetReapplyType && nullNodeResetReapplyType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResetReapplyType = null;
+            if (parseNode.GetChildNode("resetType") is { } nullNodeResetType && nullNodeResetType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResetType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The identity of the worker/client.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Identity { get; set; }
+        public string? Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity"); else _explicitNullProperties?.Remove("identity"); } }
+        private string? _explicitNullValueIdentity = default!;
 #nullable restore
 #else
-        public string Identity { get; set; }
+        public string Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity"); else _explicitNullProperties?.Remove("identity"); } }
+        private string _explicitNullValueIdentity = default!;
 #endif
         /// <summary>Describes what to reset to and how. If set, `reset_type` and `reset_reapply_type` are ignored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationResetOptions? Options { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationResetOptions? Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationResetOptions? _explicitNullValueOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationResetOptions Options { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationResetOptions Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationResetOptions _explicitNullValueOptions = default!;
 #endif
         /// <summary>Operations to perform after the workflow has been reset. These operations will be applied to the *new* run of the workflow execution in the order they are provided. All operations are applied to the workflow before the first new workflow task is generated</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperation>? PostResetOperations { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperation>? PostResetOperations { get => _explicitNullValuePostResetOperations; set { _explicitNullValuePostResetOperations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postResetOperations"); else _explicitNullProperties?.Remove("postResetOperations"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperation>? _explicitNullValuePostResetOperations = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperation> PostResetOperations { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperation> PostResetOperations { get => _explicitNullValuePostResetOperations; set { _explicitNullValuePostResetOperations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postResetOperations"); else _explicitNullProperties?.Remove("postResetOperations"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperation> _explicitNullValuePostResetOperations = default!;
 #endif
         /// <summary>Deprecated. Use `options`.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationResetResetReapplyType? ResetReapplyType { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationResetResetReapplyType? ResetReapplyType { get => _explicitNullValueResetReapplyType; set { _explicitNullValueResetReapplyType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resetReapplyType"); else _explicitNullProperties?.Remove("resetReapplyType"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationResetResetReapplyType? _explicitNullValueResetReapplyType = default!;
         /// <summary>Deprecated. Use `options`.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationResetResetType? ResetType { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationResetResetType? ResetType { get => _explicitNullValueResetType; set { _explicitNullValueResetType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resetType"); else _explicitNullProperties?.Remove("resetType"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationResetResetType? _explicitNullValueResetType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationReset"/> and sets the default values.
         /// </summary>
@@ -58,7 +78,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationReset CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationReset();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationReset(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -87,6 +107,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperation>("postResetOperations", PostResetOperations);
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationResetResetReapplyType>("resetReapplyType", ResetReapplyType);
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationResetResetType>("resetType", ResetType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,72 +11,103 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class DescribeWorkflowExecutionResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("callbacks") is { } nullNodeCallbacks && nullNodeCallbacks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Callbacks = null;
+            if (parseNode.GetChildNode("executionConfig") is { } nullNodeExecutionConfig && nullNodeExecutionConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExecutionConfig = null;
+            if (parseNode.GetChildNode("pendingActivities") is { } nullNodePendingActivities && nullNodePendingActivities.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PendingActivities = null;
+            if (parseNode.GetChildNode("pendingChildren") is { } nullNodePendingChildren && nullNodePendingChildren.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PendingChildren = null;
+            if (parseNode.GetChildNode("pendingNexusOperations") is { } nullNodePendingNexusOperations && nullNodePendingNexusOperations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PendingNexusOperations = null;
+            if (parseNode.GetChildNode("pendingWorkflowTask") is { } nullNodePendingWorkflowTask && nullNodePendingWorkflowTask.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PendingWorkflowTask = null;
+            if (parseNode.GetChildNode("workflowExecutionInfo") is { } nullNodeWorkflowExecutionInfo && nullNodeWorkflowExecutionInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowExecutionInfo = null;
+            if (parseNode.GetChildNode("workflowExtendedInfo") is { } nullNodeWorkflowExtendedInfo && nullNodeWorkflowExtendedInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowExtendedInfo = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The callbacks property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo>? Callbacks { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo>? Callbacks { get => _explicitNullValueCallbacks; set { _explicitNullValueCallbacks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callbacks"); else _explicitNullProperties?.Remove("callbacks"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo>? _explicitNullValueCallbacks = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo> Callbacks { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo> Callbacks { get => _explicitNullValueCallbacks; set { _explicitNullValueCallbacks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callbacks"); else _explicitNullProperties?.Remove("callbacks"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo> _explicitNullValueCallbacks = default!;
 #endif
         /// <summary>The executionConfig property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionConfig? ExecutionConfig { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionConfig? ExecutionConfig { get => _explicitNullValueExecutionConfig; set { _explicitNullValueExecutionConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("executionConfig"); else _explicitNullProperties?.Remove("executionConfig"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionConfig? _explicitNullValueExecutionConfig = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionConfig ExecutionConfig { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionConfig ExecutionConfig { get => _explicitNullValueExecutionConfig; set { _explicitNullValueExecutionConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("executionConfig"); else _explicitNullProperties?.Remove("executionConfig"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionConfig _explicitNullValueExecutionConfig = default!;
 #endif
         /// <summary>The pendingActivities property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfo>? PendingActivities { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfo>? PendingActivities { get => _explicitNullValuePendingActivities; set { _explicitNullValuePendingActivities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pendingActivities"); else _explicitNullProperties?.Remove("pendingActivities"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfo>? _explicitNullValuePendingActivities = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfo> PendingActivities { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfo> PendingActivities { get => _explicitNullValuePendingActivities; set { _explicitNullValuePendingActivities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pendingActivities"); else _explicitNullProperties?.Remove("pendingActivities"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfo> _explicitNullValuePendingActivities = default!;
 #endif
         /// <summary>The pendingChildren property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.PendingChildExecutionInfo>? PendingChildren { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.PendingChildExecutionInfo>? PendingChildren { get => _explicitNullValuePendingChildren; set { _explicitNullValuePendingChildren = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pendingChildren"); else _explicitNullProperties?.Remove("pendingChildren"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.PendingChildExecutionInfo>? _explicitNullValuePendingChildren = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.PendingChildExecutionInfo> PendingChildren { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.PendingChildExecutionInfo> PendingChildren { get => _explicitNullValuePendingChildren; set { _explicitNullValuePendingChildren = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pendingChildren"); else _explicitNullProperties?.Remove("pendingChildren"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.PendingChildExecutionInfo> _explicitNullValuePendingChildren = default!;
 #endif
         /// <summary>The pendingNexusOperations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.PendingNexusOperationInfo>? PendingNexusOperations { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.PendingNexusOperationInfo>? PendingNexusOperations { get => _explicitNullValuePendingNexusOperations; set { _explicitNullValuePendingNexusOperations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pendingNexusOperations"); else _explicitNullProperties?.Remove("pendingNexusOperations"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.PendingNexusOperationInfo>? _explicitNullValuePendingNexusOperations = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.PendingNexusOperationInfo> PendingNexusOperations { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.PendingNexusOperationInfo> PendingNexusOperations { get => _explicitNullValuePendingNexusOperations; set { _explicitNullValuePendingNexusOperations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pendingNexusOperations"); else _explicitNullProperties?.Remove("pendingNexusOperations"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.PendingNexusOperationInfo> _explicitNullValuePendingNexusOperations = default!;
 #endif
         /// <summary>The pendingWorkflowTask property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.PendingWorkflowTaskInfo? PendingWorkflowTask { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PendingWorkflowTaskInfo? PendingWorkflowTask { get => _explicitNullValuePendingWorkflowTask; set { _explicitNullValuePendingWorkflowTask = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pendingWorkflowTask"); else _explicitNullProperties?.Remove("pendingWorkflowTask"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.PendingWorkflowTaskInfo? _explicitNullValuePendingWorkflowTask = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.PendingWorkflowTaskInfo PendingWorkflowTask { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PendingWorkflowTaskInfo PendingWorkflowTask { get => _explicitNullValuePendingWorkflowTask; set { _explicitNullValuePendingWorkflowTask = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pendingWorkflowTask"); else _explicitNullProperties?.Remove("pendingWorkflowTask"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.PendingWorkflowTaskInfo _explicitNullValuePendingWorkflowTask = default!;
 #endif
         /// <summary>Hold basic information about a workflow execution. This structure is a part of visibility, and thus contain a limited subset of information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfo? WorkflowExecutionInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfo? WorkflowExecutionInfo { get => _explicitNullValueWorkflowExecutionInfo; set { _explicitNullValueWorkflowExecutionInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionInfo"); else _explicitNullProperties?.Remove("workflowExecutionInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfo? _explicitNullValueWorkflowExecutionInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfo WorkflowExecutionInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfo WorkflowExecutionInfo { get => _explicitNullValueWorkflowExecutionInfo; set { _explicitNullValueWorkflowExecutionInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionInfo"); else _explicitNullProperties?.Remove("workflowExecutionInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfo _explicitNullValueWorkflowExecutionInfo = default!;
 #endif
         /// <summary>Holds all the extra information about workflow execution that is not part of Visibility.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfo? WorkflowExtendedInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfo? WorkflowExtendedInfo { get => _explicitNullValueWorkflowExtendedInfo; set { _explicitNullValueWorkflowExtendedInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExtendedInfo"); else _explicitNullProperties?.Remove("workflowExtendedInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfo? _explicitNullValueWorkflowExtendedInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfo WorkflowExtendedInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfo WorkflowExtendedInfo { get => _explicitNullValueWorkflowExtendedInfo; set { _explicitNullValueWorkflowExtendedInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExtendedInfo"); else _explicitNullProperties?.Remove("workflowExtendedInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfo _explicitNullValueWorkflowExtendedInfo = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkflowExecutionResponse"/> and sets the default values.
@@ -93,7 +124,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkflowExecutionResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkflowExecutionResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkflowExecutionResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -128,6 +159,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingWorkflowTaskInfo>("pendingWorkflowTask", PendingWorkflowTask);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfo>("workflowExecutionInfo", WorkflowExecutionInfo);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfo>("workflowExtendedInfo", WorkflowExtendedInfo);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

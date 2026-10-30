@@ -11,23 +11,39 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SchedulePolicies : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("catchupWindow") is { } nullNodeCatchupWindow && nullNodeCatchupWindow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CatchupWindow = null;
+            if (parseNode.GetChildNode("keepOriginalWorkflowId") is { } nullNodeKeepOriginalWorkflowId && nullNodeKeepOriginalWorkflowId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KeepOriginalWorkflowId = null;
+            if (parseNode.GetChildNode("overlapPolicy") is { } nullNodeOverlapPolicy && nullNodeOverlapPolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverlapPolicy = null;
+            if (parseNode.GetChildNode("pauseOnFailure") is { } nullNodePauseOnFailure && nullNodePauseOnFailure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PauseOnFailure = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Policy for catchups: If the Temporal server misses an action due to one or more components being down, and comes back up, the action will be run if the scheduled time is within this window from the current time. This value defaults to one year, and can&apos;t be less than 10 seconds.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CatchupWindow { get; set; }
+        public string? CatchupWindow { get => _explicitNullValueCatchupWindow; set { _explicitNullValueCatchupWindow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("catchupWindow"); else _explicitNullProperties?.Remove("catchupWindow"); } }
+        private string? _explicitNullValueCatchupWindow = default!;
 #nullable restore
 #else
-        public string CatchupWindow { get; set; }
+        public string CatchupWindow { get => _explicitNullValueCatchupWindow; set { _explicitNullValueCatchupWindow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("catchupWindow"); else _explicitNullProperties?.Remove("catchupWindow"); } }
+        private string _explicitNullValueCatchupWindow = default!;
 #endif
         /// <summary>If true, and the action would start a workflow, a timestamp will not be appended to the scheduled workflow id.</summary>
-        public bool? KeepOriginalWorkflowId { get; set; }
+        public bool? KeepOriginalWorkflowId { get => _explicitNullValueKeepOriginalWorkflowId; set { _explicitNullValueKeepOriginalWorkflowId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keepOriginalWorkflowId"); else _explicitNullProperties?.Remove("keepOriginalWorkflowId"); } }
+        private bool? _explicitNullValueKeepOriginalWorkflowId = default!;
         /// <summary>Policy for overlaps. Note that this can be changed after a schedule has taken some actions, and some changes might produce unintuitive results. In general, the later policy overrides the earlier policy.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.SchedulePoliciesOverlapPolicy? OverlapPolicy { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SchedulePoliciesOverlapPolicy? OverlapPolicy { get => _explicitNullValueOverlapPolicy; set { _explicitNullValueOverlapPolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overlapPolicy"); else _explicitNullProperties?.Remove("overlapPolicy"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.SchedulePoliciesOverlapPolicy? _explicitNullValueOverlapPolicy = default!;
         /// <summary>If true, and a workflow run fails or times out, turn on &quot;paused&quot;. This applies after retry policies: the full chain of retries must fail to trigger a pause here.</summary>
-        public bool? PauseOnFailure { get; set; }
+        public bool? PauseOnFailure { get => _explicitNullValuePauseOnFailure; set { _explicitNullValuePauseOnFailure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pauseOnFailure"); else _explicitNullProperties?.Remove("pauseOnFailure"); } }
+        private bool? _explicitNullValuePauseOnFailure = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.SchedulePolicies"/> and sets the default values.
         /// </summary>
@@ -43,7 +59,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.SchedulePolicies CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.SchedulePolicies();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.SchedulePolicies(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -70,6 +86,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteBoolValue("keepOriginalWorkflowId", KeepOriginalWorkflowId);
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.SchedulePoliciesOverlapPolicy>("overlapPolicy", OverlapPolicy);
             writer.WriteBoolValue("pauseOnFailure", PauseOnFailure);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

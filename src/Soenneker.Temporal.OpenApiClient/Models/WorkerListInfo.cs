@@ -12,100 +12,144 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WorkerListInfo : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("deploymentVersion") is { } nullNodeDeploymentVersion && nullNodeDeploymentVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeploymentVersion = null;
+            if (parseNode.GetChildNode("drivers") is { } nullNodeDrivers && nullNodeDrivers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Drivers = null;
+            if (parseNode.GetChildNode("hostName") is { } nullNodeHostName && nullNodeHostName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HostName = null;
+            if (parseNode.GetChildNode("plugins") is { } nullNodePlugins && nullNodePlugins.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Plugins = null;
+            if (parseNode.GetChildNode("processId") is { } nullNodeProcessId && nullNodeProcessId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProcessId = null;
+            if (parseNode.GetChildNode("sdkName") is { } nullNodeSdkName && nullNodeSdkName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SdkName = null;
+            if (parseNode.GetChildNode("sdkVersion") is { } nullNodeSdkVersion && nullNodeSdkVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SdkVersion = null;
+            if (parseNode.GetChildNode("startTime") is { } nullNodeStartTime && nullNodeStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartTime = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("taskQueue") is { } nullNodeTaskQueue && nullNodeTaskQueue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskQueue = null;
+            if (parseNode.GetChildNode("workerGroupingKey") is { } nullNodeWorkerGroupingKey && nullNodeWorkerGroupingKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerGroupingKey = null;
+            if (parseNode.GetChildNode("workerIdentity") is { } nullNodeWorkerIdentity && nullNodeWorkerIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerIdentity = null;
+            if (parseNode.GetChildNode("workerInstanceKey") is { } nullNodeWorkerInstanceKey && nullNodeWorkerInstanceKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerInstanceKey = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A Worker Deployment Version (Version, for short) represents a version of workers within a Worker Deployment. (see documentation of WorkerDeploymentVersionInfo) Version records are created in Temporal server automatically when their first poller arrives to the server. Experimental. Worker Deployment Versions are experimental and might significantly change in the future.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion? DeploymentVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion? DeploymentVersion { get => _explicitNullValueDeploymentVersion; set { _explicitNullValueDeploymentVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploymentVersion"); else _explicitNullProperties?.Remove("deploymentVersion"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion? _explicitNullValueDeploymentVersion = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion DeploymentVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion DeploymentVersion { get => _explicitNullValueDeploymentVersion; set { _explicitNullValueDeploymentVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploymentVersion"); else _explicitNullProperties?.Remove("deploymentVersion"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion _explicitNullValueDeploymentVersion = default!;
 #endif
         /// <summary>Storage drivers in use by this SDK.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.StorageDriverInfo>? Drivers { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.StorageDriverInfo>? Drivers { get => _explicitNullValueDrivers; set { _explicitNullValueDrivers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("drivers"); else _explicitNullProperties?.Remove("drivers"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.StorageDriverInfo>? _explicitNullValueDrivers = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.StorageDriverInfo> Drivers { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.StorageDriverInfo> Drivers { get => _explicitNullValueDrivers; set { _explicitNullValueDrivers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("drivers"); else _explicitNullProperties?.Remove("drivers"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.StorageDriverInfo> _explicitNullValueDrivers = default!;
 #endif
         /// <summary>Worker host identifier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HostName { get; set; }
+        public string? HostName { get => _explicitNullValueHostName; set { _explicitNullValueHostName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hostName"); else _explicitNullProperties?.Remove("hostName"); } }
+        private string? _explicitNullValueHostName = default!;
 #nullable restore
 #else
-        public string HostName { get; set; }
+        public string HostName { get => _explicitNullValueHostName; set { _explicitNullValueHostName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hostName"); else _explicitNullProperties?.Remove("hostName"); } }
+        private string _explicitNullValueHostName = default!;
 #endif
         /// <summary>Plugins currently in use by this SDK.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.PluginInfo>? Plugins { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.PluginInfo>? Plugins { get => _explicitNullValuePlugins; set { _explicitNullValuePlugins = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plugins"); else _explicitNullProperties?.Remove("plugins"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.PluginInfo>? _explicitNullValuePlugins = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.PluginInfo> Plugins { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.PluginInfo> Plugins { get => _explicitNullValuePlugins; set { _explicitNullValuePlugins = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plugins"); else _explicitNullProperties?.Remove("plugins"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.PluginInfo> _explicitNullValuePlugins = default!;
 #endif
         /// <summary>Worker process identifier. This id only needs to be unique within one host (so using e.g. a unix pid would be appropriate).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProcessId { get; set; }
+        public string? ProcessId { get => _explicitNullValueProcessId; set { _explicitNullValueProcessId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("processId"); else _explicitNullProperties?.Remove("processId"); } }
+        private string? _explicitNullValueProcessId = default!;
 #nullable restore
 #else
-        public string ProcessId { get; set; }
+        public string ProcessId { get => _explicitNullValueProcessId; set { _explicitNullValueProcessId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("processId"); else _explicitNullProperties?.Remove("processId"); } }
+        private string _explicitNullValueProcessId = default!;
 #endif
         /// <summary>The sdkName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SdkName { get; set; }
+        public string? SdkName { get => _explicitNullValueSdkName; set { _explicitNullValueSdkName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sdkName"); else _explicitNullProperties?.Remove("sdkName"); } }
+        private string? _explicitNullValueSdkName = default!;
 #nullable restore
 #else
-        public string SdkName { get; set; }
+        public string SdkName { get => _explicitNullValueSdkName; set { _explicitNullValueSdkName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sdkName"); else _explicitNullProperties?.Remove("sdkName"); } }
+        private string _explicitNullValueSdkName = default!;
 #endif
         /// <summary>The sdkVersion property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SdkVersion { get; set; }
+        public string? SdkVersion { get => _explicitNullValueSdkVersion; set { _explicitNullValueSdkVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sdkVersion"); else _explicitNullProperties?.Remove("sdkVersion"); } }
+        private string? _explicitNullValueSdkVersion = default!;
 #nullable restore
 #else
-        public string SdkVersion { get; set; }
+        public string SdkVersion { get => _explicitNullValueSdkVersion; set { _explicitNullValueSdkVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sdkVersion"); else _explicitNullProperties?.Remove("sdkVersion"); } }
+        private string _explicitNullValueSdkVersion = default!;
 #endif
         /// <summary>Worker start time. It can be used to determine worker uptime. (current time - start time)</summary>
-        public DateTimeOffset? StartTime { get; set; }
+        public DateTimeOffset? StartTime { get => _explicitNullValueStartTime; set { _explicitNullValueStartTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startTime"); else _explicitNullProperties?.Remove("startTime"); } }
+        private DateTimeOffset? _explicitNullValueStartTime = default!;
         /// <summary>Worker status. Defined by SDK.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerListInfoStatus? Status { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerListInfoStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkerListInfoStatus? _explicitNullValueStatus = default!;
         /// <summary>Task queue this worker is polling for tasks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TaskQueue { get; set; }
+        public string? TaskQueue { get => _explicitNullValueTaskQueue; set { _explicitNullValueTaskQueue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taskQueue"); else _explicitNullProperties?.Remove("taskQueue"); } }
+        private string? _explicitNullValueTaskQueue = default!;
 #nullable restore
 #else
-        public string TaskQueue { get; set; }
+        public string TaskQueue { get => _explicitNullValueTaskQueue; set { _explicitNullValueTaskQueue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taskQueue"); else _explicitNullProperties?.Remove("taskQueue"); } }
+        private string _explicitNullValueTaskQueue = default!;
 #endif
         /// <summary>Worker grouping identifier. A key to group workers that share the same client+namespace+process. This will be used to build the worker command nexus task queue name: &quot;temporal-sys/worker-commands/{worker_grouping_key}&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkerGroupingKey { get; set; }
+        public string? WorkerGroupingKey { get => _explicitNullValueWorkerGroupingKey; set { _explicitNullValueWorkerGroupingKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerGroupingKey"); else _explicitNullProperties?.Remove("workerGroupingKey"); } }
+        private string? _explicitNullValueWorkerGroupingKey = default!;
 #nullable restore
 #else
-        public string WorkerGroupingKey { get; set; }
+        public string WorkerGroupingKey { get => _explicitNullValueWorkerGroupingKey; set { _explicitNullValueWorkerGroupingKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerGroupingKey"); else _explicitNullProperties?.Remove("workerGroupingKey"); } }
+        private string _explicitNullValueWorkerGroupingKey = default!;
 #endif
         /// <summary>Worker identity, set by the client, may not be unique. Usually host_name+(user group name)+process_id, but can be overwritten by the user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkerIdentity { get; set; }
+        public string? WorkerIdentity { get => _explicitNullValueWorkerIdentity; set { _explicitNullValueWorkerIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerIdentity"); else _explicitNullProperties?.Remove("workerIdentity"); } }
+        private string? _explicitNullValueWorkerIdentity = default!;
 #nullable restore
 #else
-        public string WorkerIdentity { get; set; }
+        public string WorkerIdentity { get => _explicitNullValueWorkerIdentity; set { _explicitNullValueWorkerIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerIdentity"); else _explicitNullProperties?.Remove("workerIdentity"); } }
+        private string _explicitNullValueWorkerIdentity = default!;
 #endif
         /// <summary>Worker identifier, should be unique for the namespace. It is distinct from worker identity, which is not necessarily namespace-unique.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkerInstanceKey { get; set; }
+        public string? WorkerInstanceKey { get => _explicitNullValueWorkerInstanceKey; set { _explicitNullValueWorkerInstanceKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerInstanceKey"); else _explicitNullProperties?.Remove("workerInstanceKey"); } }
+        private string? _explicitNullValueWorkerInstanceKey = default!;
 #nullable restore
 #else
-        public string WorkerInstanceKey { get; set; }
+        public string WorkerInstanceKey { get => _explicitNullValueWorkerInstanceKey; set { _explicitNullValueWorkerInstanceKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerInstanceKey"); else _explicitNullProperties?.Remove("workerInstanceKey"); } }
+        private string _explicitNullValueWorkerInstanceKey = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkerListInfo"/> and sets the default values.
@@ -122,7 +166,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.WorkerListInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.WorkerListInfo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.WorkerListInfo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -167,6 +211,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("workerGroupingKey", WorkerGroupingKey);
             writer.WriteStringValue("workerIdentity", WorkerIdentity);
             writer.WriteStringValue("workerInstanceKey", WorkerInstanceKey);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

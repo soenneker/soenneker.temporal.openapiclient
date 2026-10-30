@@ -12,26 +12,41 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WorkflowExecutionStartedEventAttributesInheritedAutoUpgradeInfo : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("continueAsNewInitialVersioningBehavior") is { } nullNodeContinueAsNewInitialVersioningBehavior && nullNodeContinueAsNewInitialVersioningBehavior.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContinueAsNewInitialVersioningBehavior = null;
+            if (parseNode.GetChildNode("sourceDeploymentRevisionNumber") is { } nullNodeSourceDeploymentRevisionNumber && nullNodeSourceDeploymentRevisionNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceDeploymentRevisionNumber = null;
+            if (parseNode.GetChildNode("sourceDeploymentVersion") is { } nullNodeSourceDeploymentVersion && nullNodeSourceDeploymentVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceDeploymentVersion = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Experimental. If this workflow is the result of a continue-as-new, this field is set to the initial_versioning_behavior specified in that command. Only used for the initial task of this run and the initial task of any retries of this run. Not passed to children or to future continue-as-new. Note: In the first release of Upgrade-on-CaN, when the only ContinueAsNewVersioningBehavior was AutoUpgrade, a non-empty InheritedAutoUpgradeInfo meant that the workflow should start as AutoUpgrade. So for compatibility with history events generated during that time, know that an UNSPECIFIED value here is equivalent to AutoUpgrade value if the InheritedAutoUpgradeInfo is non-empty.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.InheritedAutoUpgradeInfoContinueAsNewInitialVersioningBehavior? ContinueAsNewInitialVersioningBehavior { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.InheritedAutoUpgradeInfoContinueAsNewInitialVersioningBehavior? ContinueAsNewInitialVersioningBehavior { get => _explicitNullValueContinueAsNewInitialVersioningBehavior; set { _explicitNullValueContinueAsNewInitialVersioningBehavior = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("continueAsNewInitialVersioningBehavior"); else _explicitNullProperties?.Remove("continueAsNewInitialVersioningBehavior"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.InheritedAutoUpgradeInfoContinueAsNewInitialVersioningBehavior? _explicitNullValueContinueAsNewInitialVersioningBehavior = default!;
         /// <summary>The revision number of the source deployment version of the parent/previous workflow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SourceDeploymentRevisionNumber { get; set; }
+        public string? SourceDeploymentRevisionNumber { get => _explicitNullValueSourceDeploymentRevisionNumber; set { _explicitNullValueSourceDeploymentRevisionNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceDeploymentRevisionNumber"); else _explicitNullProperties?.Remove("sourceDeploymentRevisionNumber"); } }
+        private string? _explicitNullValueSourceDeploymentRevisionNumber = default!;
 #nullable restore
 #else
-        public string SourceDeploymentRevisionNumber { get; set; }
+        public string SourceDeploymentRevisionNumber { get => _explicitNullValueSourceDeploymentRevisionNumber; set { _explicitNullValueSourceDeploymentRevisionNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceDeploymentRevisionNumber"); else _explicitNullProperties?.Remove("sourceDeploymentRevisionNumber"); } }
+        private string _explicitNullValueSourceDeploymentRevisionNumber = default!;
 #endif
         /// <summary>The source deployment version of the parent/previous workflow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.InheritedAutoUpgradeInfoSourceDeploymentVersion? SourceDeploymentVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.InheritedAutoUpgradeInfoSourceDeploymentVersion? SourceDeploymentVersion { get => _explicitNullValueSourceDeploymentVersion; set { _explicitNullValueSourceDeploymentVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceDeploymentVersion"); else _explicitNullProperties?.Remove("sourceDeploymentVersion"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.InheritedAutoUpgradeInfoSourceDeploymentVersion? _explicitNullValueSourceDeploymentVersion = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.InheritedAutoUpgradeInfoSourceDeploymentVersion SourceDeploymentVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.InheritedAutoUpgradeInfoSourceDeploymentVersion SourceDeploymentVersion { get => _explicitNullValueSourceDeploymentVersion; set { _explicitNullValueSourceDeploymentVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceDeploymentVersion"); else _explicitNullProperties?.Remove("sourceDeploymentVersion"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.InheritedAutoUpgradeInfoSourceDeploymentVersion _explicitNullValueSourceDeploymentVersion = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesInheritedAutoUpgradeInfo"/> and sets the default values.
@@ -48,7 +63,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesInheritedAutoUpgradeInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesInheritedAutoUpgradeInfo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionStartedEventAttributesInheritedAutoUpgradeInfo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -73,6 +88,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.InheritedAutoUpgradeInfoContinueAsNewInitialVersioningBehavior>("continueAsNewInitialVersioningBehavior", ContinueAsNewInitialVersioningBehavior);
             writer.WriteStringValue("sourceDeploymentRevisionNumber", SourceDeploymentRevisionNumber);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.InheritedAutoUpgradeInfoSourceDeploymentVersion>("sourceDeploymentVersion", SourceDeploymentVersion);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,29 +12,56 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class NamespaceInfoCapabilitiesComposed : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("asyncUpdate") is { } nullNodeAsyncUpdate && nullNodeAsyncUpdate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AsyncUpdate = null;
+            if (parseNode.GetChildNode("eagerWorkflowStart") is { } nullNodeEagerWorkflowStart && nullNodeEagerWorkflowStart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EagerWorkflowStart = null;
+            if (parseNode.GetChildNode("pollerAutoscaling") is { } nullNodePollerAutoscaling && nullNodePollerAutoscaling.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PollerAutoscaling = null;
+            if (parseNode.GetChildNode("reportedProblemsSearchAttribute") is { } nullNodeReportedProblemsSearchAttribute && nullNodeReportedProblemsSearchAttribute.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReportedProblemsSearchAttribute = null;
+            if (parseNode.GetChildNode("standaloneActivities") is { } nullNodeStandaloneActivities && nullNodeStandaloneActivities.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StandaloneActivities = null;
+            if (parseNode.GetChildNode("syncUpdate") is { } nullNodeSyncUpdate && nullNodeSyncUpdate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SyncUpdate = null;
+            if (parseNode.GetChildNode("workerCommands") is { } nullNodeWorkerCommands && nullNodeWorkerCommands.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerCommands = null;
+            if (parseNode.GetChildNode("workerHeartbeats") is { } nullNodeWorkerHeartbeats && nullNodeWorkerHeartbeats.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerHeartbeats = null;
+            if (parseNode.GetChildNode("workerPollCompleteOnShutdown") is { } nullNodeWorkerPollCompleteOnShutdown && nullNodeWorkerPollCompleteOnShutdown.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerPollCompleteOnShutdown = null;
+            if (parseNode.GetChildNode("workflowPause") is { } nullNodeWorkflowPause && nullNodeWorkflowPause.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowPause = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>True if the namespace supports async update</summary>
-        public bool? AsyncUpdate { get; set; }
+        public bool? AsyncUpdate { get => _explicitNullValueAsyncUpdate; set { _explicitNullValueAsyncUpdate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("asyncUpdate"); else _explicitNullProperties?.Remove("asyncUpdate"); } }
+        private bool? _explicitNullValueAsyncUpdate = default!;
         /// <summary>True if the namespace supports eager workflow start.</summary>
-        public bool? EagerWorkflowStart { get; set; }
+        public bool? EagerWorkflowStart { get => _explicitNullValueEagerWorkflowStart; set { _explicitNullValueEagerWorkflowStart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eagerWorkflowStart"); else _explicitNullProperties?.Remove("eagerWorkflowStart"); } }
+        private bool? _explicitNullValueEagerWorkflowStart = default!;
         /// <summary>True if the namespace supports poller autoscaling</summary>
-        public bool? PollerAutoscaling { get; set; }
+        public bool? PollerAutoscaling { get => _explicitNullValuePollerAutoscaling; set { _explicitNullValuePollerAutoscaling = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pollerAutoscaling"); else _explicitNullProperties?.Remove("pollerAutoscaling"); } }
+        private bool? _explicitNullValuePollerAutoscaling = default!;
         /// <summary>True if the namespace supports reported problems search attribute</summary>
-        public bool? ReportedProblemsSearchAttribute { get; set; }
+        public bool? ReportedProblemsSearchAttribute { get => _explicitNullValueReportedProblemsSearchAttribute; set { _explicitNullValueReportedProblemsSearchAttribute = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reportedProblemsSearchAttribute"); else _explicitNullProperties?.Remove("reportedProblemsSearchAttribute"); } }
+        private bool? _explicitNullValueReportedProblemsSearchAttribute = default!;
         /// <summary>True if the namespace supports standalone activities</summary>
-        public bool? StandaloneActivities { get; set; }
+        public bool? StandaloneActivities { get => _explicitNullValueStandaloneActivities; set { _explicitNullValueStandaloneActivities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("standaloneActivities"); else _explicitNullProperties?.Remove("standaloneActivities"); } }
+        private bool? _explicitNullValueStandaloneActivities = default!;
         /// <summary>True if the namespace supports sync update</summary>
-        public bool? SyncUpdate { get; set; }
+        public bool? SyncUpdate { get => _explicitNullValueSyncUpdate; set { _explicitNullValueSyncUpdate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("syncUpdate"); else _explicitNullProperties?.Remove("syncUpdate"); } }
+        private bool? _explicitNullValueSyncUpdate = default!;
         /// <summary>True if the namespace supports worker commands (server-to-worker communication via control queues).</summary>
-        public bool? WorkerCommands { get; set; }
+        public bool? WorkerCommands { get => _explicitNullValueWorkerCommands; set { _explicitNullValueWorkerCommands = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerCommands"); else _explicitNullProperties?.Remove("workerCommands"); } }
+        private bool? _explicitNullValueWorkerCommands = default!;
         /// <summary>True if the namespace supports worker heartbeats</summary>
-        public bool? WorkerHeartbeats { get; set; }
+        public bool? WorkerHeartbeats { get => _explicitNullValueWorkerHeartbeats; set { _explicitNullValueWorkerHeartbeats = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerHeartbeats"); else _explicitNullProperties?.Remove("workerHeartbeats"); } }
+        private bool? _explicitNullValueWorkerHeartbeats = default!;
         /// <summary>True if the namespace supports server-side completion of outstanding worker polls on shutdown. When enabled, the server will complete polls for workers that send WorkerInstanceKey in their poll requests and call ShutdownWorker with the same WorkerInstanceKey. The poll will return an empty response. When this flag is true, workers should allow polls to return gracefully rather than terminating any open polls on shutdown.</summary>
-        public bool? WorkerPollCompleteOnShutdown { get; set; }
+        public bool? WorkerPollCompleteOnShutdown { get => _explicitNullValueWorkerPollCompleteOnShutdown; set { _explicitNullValueWorkerPollCompleteOnShutdown = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerPollCompleteOnShutdown"); else _explicitNullProperties?.Remove("workerPollCompleteOnShutdown"); } }
+        private bool? _explicitNullValueWorkerPollCompleteOnShutdown = default!;
         /// <summary>True if the namespace supports pausing workflows</summary>
-        public bool? WorkflowPause { get; set; }
+        public bool? WorkflowPause { get => _explicitNullValueWorkflowPause; set { _explicitNullValueWorkflowPause = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowPause"); else _explicitNullProperties?.Remove("workflowPause"); } }
+        private bool? _explicitNullValueWorkflowPause = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoCapabilitiesComposed"/> and sets the default values.
         /// </summary>
@@ -50,7 +77,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoCapabilitiesComposed CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoCapabilitiesComposed();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoCapabilitiesComposed(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,6 +116,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteBoolValue("workerHeartbeats", WorkerHeartbeats);
             writer.WriteBoolValue("workerPollCompleteOnShutdown", WorkerPollCompleteOnShutdown);
             writer.WriteBoolValue("workflowPause", WorkflowPause);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

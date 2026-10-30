@@ -11,24 +11,37 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ActivityPropertiesModifiedExternallyEventAttributes : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("newRetryPolicy") is { } nullNodeNewRetryPolicy && nullNodeNewRetryPolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewRetryPolicy = null;
+            if (parseNode.GetChildNode("scheduledEventId") is { } nullNodeScheduledEventId && nullNodeScheduledEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduledEventId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>If set, update the retry policy of the activity, replacing it with the specified one. The number of attempts at the activity is preserved.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityPropertiesModifiedExternallyEventAttributesNewRetryPolicy? NewRetryPolicy { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityPropertiesModifiedExternallyEventAttributesNewRetryPolicy? NewRetryPolicy { get => _explicitNullValueNewRetryPolicy; set { _explicitNullValueNewRetryPolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newRetryPolicy"); else _explicitNullProperties?.Remove("newRetryPolicy"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ActivityPropertiesModifiedExternallyEventAttributesNewRetryPolicy? _explicitNullValueNewRetryPolicy = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityPropertiesModifiedExternallyEventAttributesNewRetryPolicy NewRetryPolicy { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityPropertiesModifiedExternallyEventAttributesNewRetryPolicy NewRetryPolicy { get => _explicitNullValueNewRetryPolicy; set { _explicitNullValueNewRetryPolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newRetryPolicy"); else _explicitNullProperties?.Remove("newRetryPolicy"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ActivityPropertiesModifiedExternallyEventAttributesNewRetryPolicy _explicitNullValueNewRetryPolicy = default!;
 #endif
         /// <summary>The id of the `ACTIVITY_TASK_SCHEDULED` event this modification corresponds to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ScheduledEventId { get; set; }
+        public string? ScheduledEventId { get => _explicitNullValueScheduledEventId; set { _explicitNullValueScheduledEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduledEventId"); else _explicitNullProperties?.Remove("scheduledEventId"); } }
+        private string? _explicitNullValueScheduledEventId = default!;
 #nullable restore
 #else
-        public string ScheduledEventId { get; set; }
+        public string ScheduledEventId { get => _explicitNullValueScheduledEventId; set { _explicitNullValueScheduledEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduledEventId"); else _explicitNullProperties?.Remove("scheduledEventId"); } }
+        private string _explicitNullValueScheduledEventId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.ActivityPropertiesModifiedExternallyEventAttributes"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.ActivityPropertiesModifiedExternallyEventAttributes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.ActivityPropertiesModifiedExternallyEventAttributes();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.ActivityPropertiesModifiedExternallyEventAttributes(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityPropertiesModifiedExternallyEventAttributesNewRetryPolicy>("newRetryPolicy", NewRetryPolicy);
             writer.WriteStringValue("scheduledEventId", ScheduledEventId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

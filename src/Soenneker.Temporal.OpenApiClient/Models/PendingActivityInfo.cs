@@ -11,141 +11,210 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PendingActivityInfo : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("activityId") is { } nullNodeActivityId && nullNodeActivityId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActivityId = null;
+            if (parseNode.GetChildNode("activityOptions") is { } nullNodeActivityOptions && nullNodeActivityOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActivityOptions = null;
+            if (parseNode.GetChildNode("activityType") is { } nullNodeActivityType && nullNodeActivityType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActivityType = null;
+            if (parseNode.GetChildNode("attempt") is { } nullNodeAttempt && nullNodeAttempt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attempt = null;
+            if (parseNode.GetChildNode("currentRetryInterval") is { } nullNodeCurrentRetryInterval && nullNodeCurrentRetryInterval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentRetryInterval = null;
+            if (parseNode.GetChildNode("expirationTime") is { } nullNodeExpirationTime && nullNodeExpirationTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpirationTime = null;
+            if (parseNode.GetChildNode("heartbeatDetails") is { } nullNodeHeartbeatDetails && nullNodeHeartbeatDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HeartbeatDetails = null;
+            if (parseNode.GetChildNode("lastAttemptCompleteTime") is { } nullNodeLastAttemptCompleteTime && nullNodeLastAttemptCompleteTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastAttemptCompleteTime = null;
+            if (parseNode.GetChildNode("lastDeployment") is { } nullNodeLastDeployment && nullNodeLastDeployment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastDeployment = null;
+            if (parseNode.GetChildNode("lastDeploymentVersion") is { } nullNodeLastDeploymentVersion && nullNodeLastDeploymentVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastDeploymentVersion = null;
+            if (parseNode.GetChildNode("lastFailure") is { } nullNodeLastFailure && nullNodeLastFailure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastFailure = null;
+            if (parseNode.GetChildNode("lastHeartbeatTime") is { } nullNodeLastHeartbeatTime && nullNodeLastHeartbeatTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastHeartbeatTime = null;
+            if (parseNode.GetChildNode("lastIndependentlyAssignedBuildId") is { } nullNodeLastIndependentlyAssignedBuildId && nullNodeLastIndependentlyAssignedBuildId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastIndependentlyAssignedBuildId = null;
+            if (parseNode.GetChildNode("lastStartedTime") is { } nullNodeLastStartedTime && nullNodeLastStartedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastStartedTime = null;
+            if (parseNode.GetChildNode("lastWorkerDeploymentVersion") is { } nullNodeLastWorkerDeploymentVersion && nullNodeLastWorkerDeploymentVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastWorkerDeploymentVersion = null;
+            if (parseNode.GetChildNode("lastWorkerIdentity") is { } nullNodeLastWorkerIdentity && nullNodeLastWorkerIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastWorkerIdentity = null;
+            if (parseNode.GetChildNode("lastWorkerVersionStamp") is { } nullNodeLastWorkerVersionStamp && nullNodeLastWorkerVersionStamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastWorkerVersionStamp = null;
+            if (parseNode.GetChildNode("maximumAttempts") is { } nullNodeMaximumAttempts && nullNodeMaximumAttempts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaximumAttempts = null;
+            if (parseNode.GetChildNode("nextAttemptScheduleTime") is { } nullNodeNextAttemptScheduleTime && nullNodeNextAttemptScheduleTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextAttemptScheduleTime = null;
+            if (parseNode.GetChildNode("paused") is { } nullNodePaused && nullNodePaused.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Paused = null;
+            if (parseNode.GetChildNode("pauseInfo") is { } nullNodePauseInfo && nullNodePauseInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PauseInfo = null;
+            if (parseNode.GetChildNode("priority") is { } nullNodePriority && nullNodePriority.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Priority = null;
+            if (parseNode.GetChildNode("scheduledTime") is { } nullNodeScheduledTime && nullNodeScheduledTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduledTime = null;
+            if (parseNode.GetChildNode("state") is { } nullNodeState && nullNodeState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) State = null;
+        }
+
         /// <summary>The activityId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ActivityId { get; set; }
+        public string? ActivityId { get => _explicitNullValueActivityId; set { _explicitNullValueActivityId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityId"); else _explicitNullProperties?.Remove("activityId"); } }
+        private string? _explicitNullValueActivityId = default!;
 #nullable restore
 #else
-        public string ActivityId { get; set; }
+        public string ActivityId { get => _explicitNullValueActivityId; set { _explicitNullValueActivityId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityId"); else _explicitNullProperties?.Remove("activityId"); } }
+        private string _explicitNullValueActivityId = default!;
 #endif
         /// <summary>Current activity options. May be different from the one used to start the activity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoActivityOptions? ActivityOptions { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoActivityOptions? ActivityOptions { get => _explicitNullValueActivityOptions; set { _explicitNullValueActivityOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityOptions"); else _explicitNullProperties?.Remove("activityOptions"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoActivityOptions? _explicitNullValueActivityOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoActivityOptions ActivityOptions { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoActivityOptions ActivityOptions { get => _explicitNullValueActivityOptions; set { _explicitNullValueActivityOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityOptions"); else _explicitNullProperties?.Remove("activityOptions"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoActivityOptions _explicitNullValueActivityOptions = default!;
 #endif
         /// <summary>Represents the identifier used by a activity author to define the activity. Typically, the name of a function. This is sometimes referred to as the activity&apos;s &quot;name&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityType? ActivityType { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityType? ActivityType { get => _explicitNullValueActivityType; set { _explicitNullValueActivityType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityType"); else _explicitNullProperties?.Remove("activityType"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ActivityType? _explicitNullValueActivityType = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityType ActivityType { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityType ActivityType { get => _explicitNullValueActivityType; set { _explicitNullValueActivityType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityType"); else _explicitNullProperties?.Remove("activityType"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ActivityType _explicitNullValueActivityType = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The attempt property</summary>
-        public int? Attempt { get; set; }
+        public int? Attempt { get => _explicitNullValueAttempt; set { _explicitNullValueAttempt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attempt"); else _explicitNullProperties?.Remove("attempt"); } }
+        private int? _explicitNullValueAttempt = default!;
         /// <summary>The time activity will wait until the next retry. If activity is currently running it will be next retry interval if activity failed. If activity is currently waiting it will be current retry interval. If there will be no retry it will be null.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CurrentRetryInterval { get; set; }
+        public string? CurrentRetryInterval { get => _explicitNullValueCurrentRetryInterval; set { _explicitNullValueCurrentRetryInterval = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currentRetryInterval"); else _explicitNullProperties?.Remove("currentRetryInterval"); } }
+        private string? _explicitNullValueCurrentRetryInterval = default!;
 #nullable restore
 #else
-        public string CurrentRetryInterval { get; set; }
+        public string CurrentRetryInterval { get => _explicitNullValueCurrentRetryInterval; set { _explicitNullValueCurrentRetryInterval = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currentRetryInterval"); else _explicitNullProperties?.Remove("currentRetryInterval"); } }
+        private string _explicitNullValueCurrentRetryInterval = default!;
 #endif
         /// <summary>The expirationTime property</summary>
-        public DateTimeOffset? ExpirationTime { get; set; }
+        public DateTimeOffset? ExpirationTime { get => _explicitNullValueExpirationTime; set { _explicitNullValueExpirationTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expirationTime"); else _explicitNullProperties?.Remove("expirationTime"); } }
+        private DateTimeOffset? _explicitNullValueExpirationTime = default!;
         /// <summary>See `Payload`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Payloads? HeartbeatDetails { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.Payloads? HeartbeatDetails { get => _explicitNullValueHeartbeatDetails; set { _explicitNullValueHeartbeatDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("heartbeatDetails"); else _explicitNullProperties?.Remove("heartbeatDetails"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.Payloads? _explicitNullValueHeartbeatDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Payloads HeartbeatDetails { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.Payloads HeartbeatDetails { get => _explicitNullValueHeartbeatDetails; set { _explicitNullValueHeartbeatDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("heartbeatDetails"); else _explicitNullProperties?.Remove("heartbeatDetails"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.Payloads _explicitNullValueHeartbeatDetails = default!;
 #endif
         /// <summary>The time when the last activity attempt was completed. If activity has not been completed yet then it will be null.</summary>
-        public DateTimeOffset? LastAttemptCompleteTime { get; set; }
+        public DateTimeOffset? LastAttemptCompleteTime { get => _explicitNullValueLastAttemptCompleteTime; set { _explicitNullValueLastAttemptCompleteTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastAttemptCompleteTime"); else _explicitNullProperties?.Remove("lastAttemptCompleteTime"); } }
+        private DateTimeOffset? _explicitNullValueLastAttemptCompleteTime = default!;
         /// <summary>The deployment this activity was dispatched to most recently. Present only if the activity was dispatched to a versioned worker. Deprecated. Use `last_deployment_version`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoLastDeployment? LastDeployment { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoLastDeployment? LastDeployment { get => _explicitNullValueLastDeployment; set { _explicitNullValueLastDeployment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastDeployment"); else _explicitNullProperties?.Remove("lastDeployment"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoLastDeployment? _explicitNullValueLastDeployment = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoLastDeployment LastDeployment { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoLastDeployment LastDeployment { get => _explicitNullValueLastDeployment; set { _explicitNullValueLastDeployment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastDeployment"); else _explicitNullProperties?.Remove("lastDeployment"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoLastDeployment _explicitNullValueLastDeployment = default!;
 #endif
         /// <summary>The Worker Deployment Version this activity was dispatched to most recently. If nil, the activity has not yet been dispatched or was last dispatched to an unversioned worker.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoLastDeploymentVersion? LastDeploymentVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoLastDeploymentVersion? LastDeploymentVersion { get => _explicitNullValueLastDeploymentVersion; set { _explicitNullValueLastDeploymentVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastDeploymentVersion"); else _explicitNullProperties?.Remove("lastDeploymentVersion"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoLastDeploymentVersion? _explicitNullValueLastDeploymentVersion = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoLastDeploymentVersion LastDeploymentVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoLastDeploymentVersion LastDeploymentVersion { get => _explicitNullValueLastDeploymentVersion; set { _explicitNullValueLastDeploymentVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastDeploymentVersion"); else _explicitNullProperties?.Remove("lastDeploymentVersion"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoLastDeploymentVersion _explicitNullValueLastDeploymentVersion = default!;
 #endif
         /// <summary>The lastFailure property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Failure? LastFailure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.Failure? LastFailure { get => _explicitNullValueLastFailure; set { _explicitNullValueLastFailure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastFailure"); else _explicitNullProperties?.Remove("lastFailure"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.Failure? _explicitNullValueLastFailure = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Failure LastFailure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.Failure LastFailure { get => _explicitNullValueLastFailure; set { _explicitNullValueLastFailure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastFailure"); else _explicitNullProperties?.Remove("lastFailure"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.Failure _explicitNullValueLastFailure = default!;
 #endif
         /// <summary>The lastHeartbeatTime property</summary>
-        public DateTimeOffset? LastHeartbeatTime { get; set; }
+        public DateTimeOffset? LastHeartbeatTime { get => _explicitNullValueLastHeartbeatTime; set { _explicitNullValueLastHeartbeatTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastHeartbeatTime"); else _explicitNullProperties?.Remove("lastHeartbeatTime"); } }
+        private DateTimeOffset? _explicitNullValueLastHeartbeatTime = default!;
         /// <summary>Deprecated. This means the activity is independently versioned and not bound to the build ID of its workflow. The activity will use the build id in this field instead. If the task fails and is scheduled again, the assigned build ID may change according to the latest versioning rules.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LastIndependentlyAssignedBuildId { get; set; }
+        public string? LastIndependentlyAssignedBuildId { get => _explicitNullValueLastIndependentlyAssignedBuildId; set { _explicitNullValueLastIndependentlyAssignedBuildId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastIndependentlyAssignedBuildId"); else _explicitNullProperties?.Remove("lastIndependentlyAssignedBuildId"); } }
+        private string? _explicitNullValueLastIndependentlyAssignedBuildId = default!;
 #nullable restore
 #else
-        public string LastIndependentlyAssignedBuildId { get; set; }
+        public string LastIndependentlyAssignedBuildId { get => _explicitNullValueLastIndependentlyAssignedBuildId; set { _explicitNullValueLastIndependentlyAssignedBuildId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastIndependentlyAssignedBuildId"); else _explicitNullProperties?.Remove("lastIndependentlyAssignedBuildId"); } }
+        private string _explicitNullValueLastIndependentlyAssignedBuildId = default!;
 #endif
         /// <summary>The lastStartedTime property</summary>
-        public DateTimeOffset? LastStartedTime { get; set; }
+        public DateTimeOffset? LastStartedTime { get => _explicitNullValueLastStartedTime; set { _explicitNullValueLastStartedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastStartedTime"); else _explicitNullProperties?.Remove("lastStartedTime"); } }
+        private DateTimeOffset? _explicitNullValueLastStartedTime = default!;
         /// <summary>The Worker Deployment Version this activity was dispatched to most recently. Deprecated. Use `last_deployment_version`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LastWorkerDeploymentVersion { get; set; }
+        public string? LastWorkerDeploymentVersion { get => _explicitNullValueLastWorkerDeploymentVersion; set { _explicitNullValueLastWorkerDeploymentVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastWorkerDeploymentVersion"); else _explicitNullProperties?.Remove("lastWorkerDeploymentVersion"); } }
+        private string? _explicitNullValueLastWorkerDeploymentVersion = default!;
 #nullable restore
 #else
-        public string LastWorkerDeploymentVersion { get; set; }
+        public string LastWorkerDeploymentVersion { get => _explicitNullValueLastWorkerDeploymentVersion; set { _explicitNullValueLastWorkerDeploymentVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastWorkerDeploymentVersion"); else _explicitNullProperties?.Remove("lastWorkerDeploymentVersion"); } }
+        private string _explicitNullValueLastWorkerDeploymentVersion = default!;
 #endif
         /// <summary>The lastWorkerIdentity property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LastWorkerIdentity { get; set; }
+        public string? LastWorkerIdentity { get => _explicitNullValueLastWorkerIdentity; set { _explicitNullValueLastWorkerIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastWorkerIdentity"); else _explicitNullProperties?.Remove("lastWorkerIdentity"); } }
+        private string? _explicitNullValueLastWorkerIdentity = default!;
 #nullable restore
 #else
-        public string LastWorkerIdentity { get; set; }
+        public string LastWorkerIdentity { get => _explicitNullValueLastWorkerIdentity; set { _explicitNullValueLastWorkerIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastWorkerIdentity"); else _explicitNullProperties?.Remove("lastWorkerIdentity"); } }
+        private string _explicitNullValueLastWorkerIdentity = default!;
 #endif
         /// <summary>Deprecated. The version stamp of the worker to whom this activity was most recently dispatched This field should be cleaned up when versioning-2 API is removed. [cleanup-experimental-wv]</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoLastWorkerVersionStamp? LastWorkerVersionStamp { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoLastWorkerVersionStamp? LastWorkerVersionStamp { get => _explicitNullValueLastWorkerVersionStamp; set { _explicitNullValueLastWorkerVersionStamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastWorkerVersionStamp"); else _explicitNullProperties?.Remove("lastWorkerVersionStamp"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoLastWorkerVersionStamp? _explicitNullValueLastWorkerVersionStamp = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoLastWorkerVersionStamp LastWorkerVersionStamp { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoLastWorkerVersionStamp LastWorkerVersionStamp { get => _explicitNullValueLastWorkerVersionStamp; set { _explicitNullValueLastWorkerVersionStamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastWorkerVersionStamp"); else _explicitNullProperties?.Remove("lastWorkerVersionStamp"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoLastWorkerVersionStamp _explicitNullValueLastWorkerVersionStamp = default!;
 #endif
         /// <summary>The maximumAttempts property</summary>
-        public int? MaximumAttempts { get; set; }
+        public int? MaximumAttempts { get => _explicitNullValueMaximumAttempts; set { _explicitNullValueMaximumAttempts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maximumAttempts"); else _explicitNullProperties?.Remove("maximumAttempts"); } }
+        private int? _explicitNullValueMaximumAttempts = default!;
         /// <summary>Next time when activity will be scheduled. If activity is currently scheduled or started it will be null.</summary>
-        public DateTimeOffset? NextAttemptScheduleTime { get; set; }
+        public DateTimeOffset? NextAttemptScheduleTime { get => _explicitNullValueNextAttemptScheduleTime; set { _explicitNullValueNextAttemptScheduleTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nextAttemptScheduleTime"); else _explicitNullProperties?.Remove("nextAttemptScheduleTime"); } }
+        private DateTimeOffset? _explicitNullValueNextAttemptScheduleTime = default!;
         /// <summary>Indicates if activity is paused.</summary>
-        public bool? Paused { get; set; }
+        public bool? Paused { get => _explicitNullValuePaused; set { _explicitNullValuePaused = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paused"); else _explicitNullProperties?.Remove("paused"); } }
+        private bool? _explicitNullValuePaused = default!;
         /// <summary>The pauseInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPauseInfo? PauseInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPauseInfo? PauseInfo { get => _explicitNullValuePauseInfo; set { _explicitNullValuePauseInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pauseInfo"); else _explicitNullProperties?.Remove("pauseInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPauseInfo? _explicitNullValuePauseInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPauseInfo PauseInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPauseInfo PauseInfo { get => _explicitNullValuePauseInfo; set { _explicitNullValuePauseInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pauseInfo"); else _explicitNullProperties?.Remove("pauseInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPauseInfo _explicitNullValuePauseInfo = default!;
 #endif
         /// <summary>Priority metadata. If this message is not present, or any fields are not present, they inherit the values from the workflow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPriority? Priority { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPriority? Priority { get => _explicitNullValuePriority; set { _explicitNullValuePriority = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priority"); else _explicitNullProperties?.Remove("priority"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPriority? _explicitNullValuePriority = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPriority Priority { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPriority Priority { get => _explicitNullValuePriority; set { _explicitNullValuePriority = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priority"); else _explicitNullProperties?.Remove("priority"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPriority _explicitNullValuePriority = default!;
 #endif
         /// <summary>The scheduledTime property</summary>
-        public DateTimeOffset? ScheduledTime { get; set; }
+        public DateTimeOffset? ScheduledTime { get => _explicitNullValueScheduledTime; set { _explicitNullValueScheduledTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduledTime"); else _explicitNullProperties?.Remove("scheduledTime"); } }
+        private DateTimeOffset? _explicitNullValueScheduledTime = default!;
         /// <summary>The state property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoState? State { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoState? State { get => _explicitNullValueState; set { _explicitNullValueState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state"); else _explicitNullProperties?.Remove("state"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoState? _explicitNullValueState = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfo"/> and sets the default values.
         /// </summary>
@@ -161,7 +230,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -228,6 +297,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoPriority>("priority", Priority);
             writer.WriteDateTimeOffsetValue("scheduledTime", ScheduledTime);
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingActivityInfoState>("state", State);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

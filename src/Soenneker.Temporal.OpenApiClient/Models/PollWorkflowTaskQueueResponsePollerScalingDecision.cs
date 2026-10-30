@@ -12,11 +12,20 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PollWorkflowTaskQueueResponsePollerScalingDecision : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("pollRequestDeltaSuggestion") is { } nullNodePollRequestDeltaSuggestion && nullNodePollRequestDeltaSuggestion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PollRequestDeltaSuggestion = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>How many poll requests to suggest should be added or removed, if any. As of now, server only scales up or down by 1. However, SDKs should allow for other values (while staying within defined min/max). The SDK is free to ignore this suggestion, EX: making more polls would not make sense because all slots are already occupied.</summary>
-        public int? PollRequestDeltaSuggestion { get; set; }
+        public int? PollRequestDeltaSuggestion { get => _explicitNullValuePollRequestDeltaSuggestion; set { _explicitNullValuePollRequestDeltaSuggestion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pollRequestDeltaSuggestion"); else _explicitNullProperties?.Remove("pollRequestDeltaSuggestion"); } }
+        private int? _explicitNullValuePollRequestDeltaSuggestion = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.PollWorkflowTaskQueueResponsePollerScalingDecision"/> and sets the default values.
         /// </summary>
@@ -32,7 +41,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.PollWorkflowTaskQueueResponsePollerScalingDecision CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.PollWorkflowTaskQueueResponsePollerScalingDecision();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.PollWorkflowTaskQueueResponsePollerScalingDecision(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -53,6 +62,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("pollRequestDeltaSuggestion", PollRequestDeltaSuggestion);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

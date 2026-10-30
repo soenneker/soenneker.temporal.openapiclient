@@ -11,94 +11,137 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class RegisterNamespaceRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("activeClusterName") is { } nullNodeActiveClusterName && nullNodeActiveClusterName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActiveClusterName = null;
+            if (parseNode.GetChildNode("clusters") is { } nullNodeClusters && nullNodeClusters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Clusters = null;
+            if (parseNode.GetChildNode("data") is { } nullNodeData && nullNodeData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Data = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("historyArchivalState") is { } nullNodeHistoryArchivalState && nullNodeHistoryArchivalState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HistoryArchivalState = null;
+            if (parseNode.GetChildNode("historyArchivalUri") is { } nullNodeHistoryArchivalUri && nullNodeHistoryArchivalUri.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HistoryArchivalUri = null;
+            if (parseNode.GetChildNode("isGlobalNamespace") is { } nullNodeIsGlobalNamespace && nullNodeIsGlobalNamespace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsGlobalNamespace = null;
+            if (parseNode.GetChildNode("namespace") is { } nullNodeNamespace && nullNodeNamespace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Namespace = null;
+            if (parseNode.GetChildNode("ownerEmail") is { } nullNodeOwnerEmail && nullNodeOwnerEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OwnerEmail = null;
+            if (parseNode.GetChildNode("securityToken") is { } nullNodeSecurityToken && nullNodeSecurityToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecurityToken = null;
+            if (parseNode.GetChildNode("visibilityArchivalState") is { } nullNodeVisibilityArchivalState && nullNodeVisibilityArchivalState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VisibilityArchivalState = null;
+            if (parseNode.GetChildNode("visibilityArchivalUri") is { } nullNodeVisibilityArchivalUri && nullNodeVisibilityArchivalUri.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VisibilityArchivalUri = null;
+            if (parseNode.GetChildNode("workflowExecutionRetentionPeriod") is { } nullNodeWorkflowExecutionRetentionPeriod && nullNodeWorkflowExecutionRetentionPeriod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowExecutionRetentionPeriod = null;
+        }
+
         /// <summary>The activeClusterName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ActiveClusterName { get; set; }
+        public string? ActiveClusterName { get => _explicitNullValueActiveClusterName; set { _explicitNullValueActiveClusterName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activeClusterName"); else _explicitNullProperties?.Remove("activeClusterName"); } }
+        private string? _explicitNullValueActiveClusterName = default!;
 #nullable restore
 #else
-        public string ActiveClusterName { get; set; }
+        public string ActiveClusterName { get => _explicitNullValueActiveClusterName; set { _explicitNullValueActiveClusterName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activeClusterName"); else _explicitNullProperties?.Remove("activeClusterName"); } }
+        private string _explicitNullValueActiveClusterName = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The clusters property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.ClusterReplicationConfig>? Clusters { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.ClusterReplicationConfig>? Clusters { get => _explicitNullValueClusters; set { _explicitNullValueClusters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clusters"); else _explicitNullProperties?.Remove("clusters"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.ClusterReplicationConfig>? _explicitNullValueClusters = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.ClusterReplicationConfig> Clusters { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.ClusterReplicationConfig> Clusters { get => _explicitNullValueClusters; set { _explicitNullValueClusters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clusters"); else _explicitNullProperties?.Remove("clusters"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.ClusterReplicationConfig> _explicitNullValueClusters = default!;
 #endif
         /// <summary>A key-value map for any customized purpose.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestDataProperty? Data { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestDataProperty? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestDataProperty? _explicitNullValueData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestDataProperty Data { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestDataProperty Data { get => _explicitNullValueData; set { _explicitNullValueData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestDataProperty _explicitNullValueData = default!;
 #endif
         /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>If unspecified (ARCHIVAL_STATE_UNSPECIFIED) then default server configuration is used.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestHistoryArchivalState? HistoryArchivalState { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestHistoryArchivalState? HistoryArchivalState { get => _explicitNullValueHistoryArchivalState; set { _explicitNullValueHistoryArchivalState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("historyArchivalState"); else _explicitNullProperties?.Remove("historyArchivalState"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestHistoryArchivalState? _explicitNullValueHistoryArchivalState = default!;
         /// <summary>The historyArchivalUri property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HistoryArchivalUri { get; set; }
+        public string? HistoryArchivalUri { get => _explicitNullValueHistoryArchivalUri; set { _explicitNullValueHistoryArchivalUri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("historyArchivalUri"); else _explicitNullProperties?.Remove("historyArchivalUri"); } }
+        private string? _explicitNullValueHistoryArchivalUri = default!;
 #nullable restore
 #else
-        public string HistoryArchivalUri { get; set; }
+        public string HistoryArchivalUri { get => _explicitNullValueHistoryArchivalUri; set { _explicitNullValueHistoryArchivalUri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("historyArchivalUri"); else _explicitNullProperties?.Remove("historyArchivalUri"); } }
+        private string _explicitNullValueHistoryArchivalUri = default!;
 #endif
         /// <summary>The isGlobalNamespace property</summary>
-        public bool? IsGlobalNamespace { get; set; }
+        public bool? IsGlobalNamespace { get => _explicitNullValueIsGlobalNamespace; set { _explicitNullValueIsGlobalNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isGlobalNamespace"); else _explicitNullProperties?.Remove("isGlobalNamespace"); } }
+        private bool? _explicitNullValueIsGlobalNamespace = default!;
         /// <summary>The namespace property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Namespace { get; set; }
+        public string? Namespace { get => _explicitNullValueNamespace; set { _explicitNullValueNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace"); else _explicitNullProperties?.Remove("namespace"); } }
+        private string? _explicitNullValueNamespace = default!;
 #nullable restore
 #else
-        public string Namespace { get; set; }
+        public string Namespace { get => _explicitNullValueNamespace; set { _explicitNullValueNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace"); else _explicitNullProperties?.Remove("namespace"); } }
+        private string _explicitNullValueNamespace = default!;
 #endif
         /// <summary>The ownerEmail property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OwnerEmail { get; set; }
+        public string? OwnerEmail { get => _explicitNullValueOwnerEmail; set { _explicitNullValueOwnerEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownerEmail"); else _explicitNullProperties?.Remove("ownerEmail"); } }
+        private string? _explicitNullValueOwnerEmail = default!;
 #nullable restore
 #else
-        public string OwnerEmail { get; set; }
+        public string OwnerEmail { get => _explicitNullValueOwnerEmail; set { _explicitNullValueOwnerEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownerEmail"); else _explicitNullProperties?.Remove("ownerEmail"); } }
+        private string _explicitNullValueOwnerEmail = default!;
 #endif
         /// <summary>The securityToken property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SecurityToken { get; set; }
+        public string? SecurityToken { get => _explicitNullValueSecurityToken; set { _explicitNullValueSecurityToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("securityToken"); else _explicitNullProperties?.Remove("securityToken"); } }
+        private string? _explicitNullValueSecurityToken = default!;
 #nullable restore
 #else
-        public string SecurityToken { get; set; }
+        public string SecurityToken { get => _explicitNullValueSecurityToken; set { _explicitNullValueSecurityToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("securityToken"); else _explicitNullProperties?.Remove("securityToken"); } }
+        private string _explicitNullValueSecurityToken = default!;
 #endif
         /// <summary>If unspecified (ARCHIVAL_STATE_UNSPECIFIED) then default server configuration is used.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestVisibilityArchivalState? VisibilityArchivalState { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestVisibilityArchivalState? VisibilityArchivalState { get => _explicitNullValueVisibilityArchivalState; set { _explicitNullValueVisibilityArchivalState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visibilityArchivalState"); else _explicitNullProperties?.Remove("visibilityArchivalState"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestVisibilityArchivalState? _explicitNullValueVisibilityArchivalState = default!;
         /// <summary>The visibilityArchivalUri property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VisibilityArchivalUri { get; set; }
+        public string? VisibilityArchivalUri { get => _explicitNullValueVisibilityArchivalUri; set { _explicitNullValueVisibilityArchivalUri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visibilityArchivalUri"); else _explicitNullProperties?.Remove("visibilityArchivalUri"); } }
+        private string? _explicitNullValueVisibilityArchivalUri = default!;
 #nullable restore
 #else
-        public string VisibilityArchivalUri { get; set; }
+        public string VisibilityArchivalUri { get => _explicitNullValueVisibilityArchivalUri; set { _explicitNullValueVisibilityArchivalUri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visibilityArchivalUri"); else _explicitNullProperties?.Remove("visibilityArchivalUri"); } }
+        private string _explicitNullValueVisibilityArchivalUri = default!;
 #endif
         /// <summary>The workflowExecutionRetentionPeriod property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkflowExecutionRetentionPeriod { get; set; }
+        public string? WorkflowExecutionRetentionPeriod { get => _explicitNullValueWorkflowExecutionRetentionPeriod; set { _explicitNullValueWorkflowExecutionRetentionPeriod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionRetentionPeriod"); else _explicitNullProperties?.Remove("workflowExecutionRetentionPeriod"); } }
+        private string? _explicitNullValueWorkflowExecutionRetentionPeriod = default!;
 #nullable restore
 #else
-        public string WorkflowExecutionRetentionPeriod { get; set; }
+        public string WorkflowExecutionRetentionPeriod { get => _explicitNullValueWorkflowExecutionRetentionPeriod; set { _explicitNullValueWorkflowExecutionRetentionPeriod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionRetentionPeriod"); else _explicitNullProperties?.Remove("workflowExecutionRetentionPeriod"); } }
+        private string _explicitNullValueWorkflowExecutionRetentionPeriod = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequest"/> and sets the default values.
@@ -115,7 +158,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -160,6 +203,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestVisibilityArchivalState>("visibilityArchivalState", VisibilityArchivalState);
             writer.WriteStringValue("visibilityArchivalUri", VisibilityArchivalUri);
             writer.WriteStringValue("workflowExecutionRetentionPeriod", WorkflowExecutionRetentionPeriod);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

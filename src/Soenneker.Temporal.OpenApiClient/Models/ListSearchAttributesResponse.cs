@@ -11,32 +11,48 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ListSearchAttributesResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("customAttributes") is { } nullNodeCustomAttributes && nullNodeCustomAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomAttributes = null;
+            if (parseNode.GetChildNode("storageSchema") is { } nullNodeStorageSchema && nullNodeStorageSchema.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StorageSchema = null;
+            if (parseNode.GetChildNode("systemAttributes") is { } nullNodeSystemAttributes && nullNodeSystemAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SystemAttributes = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Mapping between custom (user-registered) search attribute name to its IndexedValueType.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponseCustomAttributesProperty? CustomAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponseCustomAttributesProperty? CustomAttributes { get => _explicitNullValueCustomAttributes; set { _explicitNullValueCustomAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customAttributes"); else _explicitNullProperties?.Remove("customAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponseCustomAttributesProperty? _explicitNullValueCustomAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponseCustomAttributesProperty CustomAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponseCustomAttributesProperty CustomAttributes { get => _explicitNullValueCustomAttributes; set { _explicitNullValueCustomAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customAttributes"); else _explicitNullProperties?.Remove("customAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponseCustomAttributesProperty _explicitNullValueCustomAttributes = default!;
 #endif
         /// <summary>Mapping from the attribute name to the visibility storage native type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponseStorageSchemaProperty? StorageSchema { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponseStorageSchemaProperty? StorageSchema { get => _explicitNullValueStorageSchema; set { _explicitNullValueStorageSchema = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("storageSchema"); else _explicitNullProperties?.Remove("storageSchema"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponseStorageSchemaProperty? _explicitNullValueStorageSchema = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponseStorageSchemaProperty StorageSchema { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponseStorageSchemaProperty StorageSchema { get => _explicitNullValueStorageSchema; set { _explicitNullValueStorageSchema = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("storageSchema"); else _explicitNullProperties?.Remove("storageSchema"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponseStorageSchemaProperty _explicitNullValueStorageSchema = default!;
 #endif
         /// <summary>Mapping between system (predefined) search attribute name to its IndexedValueType.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponseSystemAttributesProperty? SystemAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponseSystemAttributesProperty? SystemAttributes { get => _explicitNullValueSystemAttributes; set { _explicitNullValueSystemAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("systemAttributes"); else _explicitNullProperties?.Remove("systemAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponseSystemAttributesProperty? _explicitNullValueSystemAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponseSystemAttributesProperty SystemAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponseSystemAttributesProperty SystemAttributes { get => _explicitNullValueSystemAttributes; set { _explicitNullValueSystemAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("systemAttributes"); else _explicitNullProperties?.Remove("systemAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponseSystemAttributesProperty _explicitNullValueSystemAttributes = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponse"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponseCustomAttributesProperty>("customAttributes", CustomAttributes);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponseStorageSchemaProperty>("storageSchema", StorageSchema);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ListSearchAttributesResponseSystemAttributesProperty>("systemAttributes", SystemAttributes);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

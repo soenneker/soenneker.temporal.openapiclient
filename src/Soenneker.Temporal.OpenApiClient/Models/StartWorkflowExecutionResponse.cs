@@ -11,37 +11,57 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class StartWorkflowExecutionResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("eagerWorkflowTask") is { } nullNodeEagerWorkflowTask && nullNodeEagerWorkflowTask.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EagerWorkflowTask = null;
+            if (parseNode.GetChildNode("link") is { } nullNodeLink && nullNodeLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Link = null;
+            if (parseNode.GetChildNode("runId") is { } nullNodeRunId && nullNodeRunId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RunId = null;
+            if (parseNode.GetChildNode("started") is { } nullNodeStarted && nullNodeStarted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Started = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>When `request_eager_execution` is set on the `StartWorkflowExecutionRequest`, the server - if supported - will return the first workflow task to be eagerly executed. The caller is expected to have a worker available to process the task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseEagerWorkflowTask? EagerWorkflowTask { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseEagerWorkflowTask? EagerWorkflowTask { get => _explicitNullValueEagerWorkflowTask; set { _explicitNullValueEagerWorkflowTask = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eagerWorkflowTask"); else _explicitNullProperties?.Remove("eagerWorkflowTask"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseEagerWorkflowTask? _explicitNullValueEagerWorkflowTask = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseEagerWorkflowTask EagerWorkflowTask { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseEagerWorkflowTask EagerWorkflowTask { get => _explicitNullValueEagerWorkflowTask; set { _explicitNullValueEagerWorkflowTask = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eagerWorkflowTask"); else _explicitNullProperties?.Remove("eagerWorkflowTask"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseEagerWorkflowTask _explicitNullValueEagerWorkflowTask = default!;
 #endif
         /// <summary>Link to the workflow event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseLink? Link { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseLink? Link { get => _explicitNullValueLink; set { _explicitNullValueLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link"); else _explicitNullProperties?.Remove("link"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseLink? _explicitNullValueLink = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseLink Link { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseLink Link { get => _explicitNullValueLink; set { _explicitNullValueLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link"); else _explicitNullProperties?.Remove("link"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseLink _explicitNullValueLink = default!;
 #endif
         /// <summary>The run id of the workflow that was started - or used (via WorkflowIdConflictPolicy USE_EXISTING).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RunId { get; set; }
+        public string? RunId { get => _explicitNullValueRunId; set { _explicitNullValueRunId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runId"); else _explicitNullProperties?.Remove("runId"); } }
+        private string? _explicitNullValueRunId = default!;
 #nullable restore
 #else
-        public string RunId { get; set; }
+        public string RunId { get => _explicitNullValueRunId; set { _explicitNullValueRunId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runId"); else _explicitNullProperties?.Remove("runId"); } }
+        private string _explicitNullValueRunId = default!;
 #endif
         /// <summary>If true, a new workflow was started.</summary>
-        public bool? Started { get; set; }
+        public bool? Started { get => _explicitNullValueStarted; set { _explicitNullValueStarted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("started"); else _explicitNullProperties?.Remove("started"); } }
+        private bool? _explicitNullValueStarted = default!;
         /// <summary>Current execution status of the workflow. Typically remains WORKFLOW_EXECUTION_STATUS_RUNNING unless a de-dupe occurs or in specific scenarios handled within the ExecuteMultiOperation (refer to its docs).</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseStatus? Status { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseStatus? _explicitNullValueStatus = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponse"/> and sets the default values.
         /// </summary>
@@ -57,7 +77,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -86,6 +106,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("runId", RunId);
             writer.WriteBoolValue("started", Started);
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseStatus>("status", Status);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

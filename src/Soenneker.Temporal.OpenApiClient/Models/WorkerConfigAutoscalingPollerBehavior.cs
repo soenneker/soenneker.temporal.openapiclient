@@ -11,15 +11,28 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class WorkerConfigAutoscalingPollerBehavior : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("initialPollers") is { } nullNodeInitialPollers && nullNodeInitialPollers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InitialPollers = null;
+            if (parseNode.GetChildNode("maxPollers") is { } nullNodeMaxPollers && nullNodeMaxPollers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxPollers = null;
+            if (parseNode.GetChildNode("minPollers") is { } nullNodeMinPollers && nullNodeMinPollers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinPollers = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>This many polls will be attempted initially before scaling kicks in. Must be between  `minimum` and `maximum`.</summary>
-        public int? InitialPollers { get; set; }
+        public int? InitialPollers { get => _explicitNullValueInitialPollers; set { _explicitNullValueInitialPollers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initialPollers"); else _explicitNullProperties?.Remove("initialPollers"); } }
+        private int? _explicitNullValueInitialPollers = default!;
         /// <summary>At most this many poll calls will ever be open at once. Must be &gt;= `minimum`.</summary>
-        public int? MaxPollers { get; set; }
+        public int? MaxPollers { get => _explicitNullValueMaxPollers; set { _explicitNullValueMaxPollers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxPollers"); else _explicitNullProperties?.Remove("maxPollers"); } }
+        private int? _explicitNullValueMaxPollers = default!;
         /// <summary>At least this many poll calls will always be attempted (assuming slots are available). Cannot be zero.</summary>
-        public int? MinPollers { get; set; }
+        public int? MinPollers { get => _explicitNullValueMinPollers; set { _explicitNullValueMinPollers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minPollers"); else _explicitNullProperties?.Remove("minPollers"); } }
+        private int? _explicitNullValueMinPollers = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkerConfigAutoscalingPollerBehavior"/> and sets the default values.
         /// </summary>
@@ -35,7 +48,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.WorkerConfigAutoscalingPollerBehavior CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.WorkerConfigAutoscalingPollerBehavior();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.WorkerConfigAutoscalingPollerBehavior(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -60,6 +73,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteIntValue("initialPollers", InitialPollers);
             writer.WriteIntValue("maxPollers", MaxPollers);
             writer.WriteIntValue("minPollers", MinPollers);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

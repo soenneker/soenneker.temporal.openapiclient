@@ -11,35 +11,53 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class DescribeWorkerDeploymentVersionResponseVersionTaskQueue : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("stats") is { } nullNodeStats && nullNodeStats.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Stats = null;
+            if (parseNode.GetChildNode("statsByPriorityKey") is { } nullNodeStatsByPriorityKey && nullNodeStatsByPriorityKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatsByPriorityKey = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>Only set if `report_task_queue_stats` is set on the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponseVersionTaskQueueStats? Stats { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponseVersionTaskQueueStats? Stats { get => _explicitNullValueStats; set { _explicitNullValueStats = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stats"); else _explicitNullProperties?.Remove("stats"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponseVersionTaskQueueStats? _explicitNullValueStats = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponseVersionTaskQueueStats Stats { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponseVersionTaskQueueStats Stats { get => _explicitNullValueStats; set { _explicitNullValueStats = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stats"); else _explicitNullProperties?.Remove("stats"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponseVersionTaskQueueStats _explicitNullValueStats = default!;
 #endif
         /// <summary>Task queue stats breakdown by priority key. Only contains actively used priority keys. Only set if `report_task_queue_stats` is set to true in the request. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;by&quot; is used to clarify the key. --)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponseVersionTaskQueueStatsByPriorityKeyProperty? StatsByPriorityKey { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponseVersionTaskQueueStatsByPriorityKeyProperty? StatsByPriorityKey { get => _explicitNullValueStatsByPriorityKey; set { _explicitNullValueStatsByPriorityKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statsByPriorityKey"); else _explicitNullProperties?.Remove("statsByPriorityKey"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponseVersionTaskQueueStatsByPriorityKeyProperty? _explicitNullValueStatsByPriorityKey = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponseVersionTaskQueueStatsByPriorityKeyProperty StatsByPriorityKey { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponseVersionTaskQueueStatsByPriorityKeyProperty StatsByPriorityKey { get => _explicitNullValueStatsByPriorityKey; set { _explicitNullValueStatsByPriorityKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statsByPriorityKey"); else _explicitNullProperties?.Remove("statsByPriorityKey"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponseVersionTaskQueueStatsByPriorityKeyProperty _explicitNullValueStatsByPriorityKey = default!;
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponseVersionTaskQueueType? Type { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponseVersionTaskQueueType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponseVersionTaskQueueType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponseVersionTaskQueue"/> and sets the default values.
         /// </summary>
@@ -55,7 +73,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponseVersionTaskQueue CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponseVersionTaskQueue();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponseVersionTaskQueue(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,6 +100,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponseVersionTaskQueueStats>("stats", Stats);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponseVersionTaskQueueStatsByPriorityKeyProperty>("statsByPriorityKey", StatsByPriorityKey);
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponseVersionTaskQueueType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

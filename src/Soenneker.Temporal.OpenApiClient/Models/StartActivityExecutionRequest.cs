@@ -11,172 +11,243 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class StartActivityExecutionRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("activityId") is { } nullNodeActivityId && nullNodeActivityId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActivityId = null;
+            if (parseNode.GetChildNode("activityType") is { } nullNodeActivityType && nullNodeActivityType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActivityType = null;
+            if (parseNode.GetChildNode("completionCallbacks") is { } nullNodeCompletionCallbacks && nullNodeCompletionCallbacks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompletionCallbacks = null;
+            if (parseNode.GetChildNode("header") is { } nullNodeHeader && nullNodeHeader.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Header = null;
+            if (parseNode.GetChildNode("heartbeatTimeout") is { } nullNodeHeartbeatTimeout && nullNodeHeartbeatTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HeartbeatTimeout = null;
+            if (parseNode.GetChildNode("idConflictPolicy") is { } nullNodeIdConflictPolicy && nullNodeIdConflictPolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IdConflictPolicy = null;
+            if (parseNode.GetChildNode("identity") is { } nullNodeIdentity && nullNodeIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Identity = null;
+            if (parseNode.GetChildNode("idReusePolicy") is { } nullNodeIdReusePolicy && nullNodeIdReusePolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IdReusePolicy = null;
+            if (parseNode.GetChildNode("input") is { } nullNodeInput && nullNodeInput.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Input = null;
+            if (parseNode.GetChildNode("links") is { } nullNodeLinks && nullNodeLinks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Links = null;
+            if (parseNode.GetChildNode("namespace") is { } nullNodeNamespace && nullNodeNamespace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Namespace = null;
+            if (parseNode.GetChildNode("onConflictOptions") is { } nullNodeOnConflictOptions && nullNodeOnConflictOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OnConflictOptions = null;
+            if (parseNode.GetChildNode("priority") is { } nullNodePriority && nullNodePriority.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Priority = null;
+            if (parseNode.GetChildNode("requestId") is { } nullNodeRequestId && nullNodeRequestId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestId = null;
+            if (parseNode.GetChildNode("retryPolicy") is { } nullNodeRetryPolicy && nullNodeRetryPolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RetryPolicy = null;
+            if (parseNode.GetChildNode("scheduleToCloseTimeout") is { } nullNodeScheduleToCloseTimeout && nullNodeScheduleToCloseTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduleToCloseTimeout = null;
+            if (parseNode.GetChildNode("scheduleToStartTimeout") is { } nullNodeScheduleToStartTimeout && nullNodeScheduleToStartTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduleToStartTimeout = null;
+            if (parseNode.GetChildNode("searchAttributes") is { } nullNodeSearchAttributes && nullNodeSearchAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SearchAttributes = null;
+            if (parseNode.GetChildNode("startDelay") is { } nullNodeStartDelay && nullNodeStartDelay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartDelay = null;
+            if (parseNode.GetChildNode("startToCloseTimeout") is { } nullNodeStartToCloseTimeout && nullNodeStartToCloseTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartToCloseTimeout = null;
+            if (parseNode.GetChildNode("taskQueue") is { } nullNodeTaskQueue && nullNodeTaskQueue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskQueue = null;
+            if (parseNode.GetChildNode("userMetadata") is { } nullNodeUserMetadata && nullNodeUserMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserMetadata = null;
+        }
+
         /// <summary>Identifier for this activity. Required. This identifier should be meaningful in the user&apos;s own system. It must be unique among activities in the same namespace, subject to the rules imposed by id_reuse_policy and id_conflict_policy.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ActivityId { get; set; }
+        public string? ActivityId { get => _explicitNullValueActivityId; set { _explicitNullValueActivityId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityId"); else _explicitNullProperties?.Remove("activityId"); } }
+        private string? _explicitNullValueActivityId = default!;
 #nullable restore
 #else
-        public string ActivityId { get; set; }
+        public string ActivityId { get => _explicitNullValueActivityId; set { _explicitNullValueActivityId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityId"); else _explicitNullProperties?.Remove("activityId"); } }
+        private string _explicitNullValueActivityId = default!;
 #endif
         /// <summary>The type of the activity, a string that corresponds to a registered activity on a worker.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestActivityType? ActivityType { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestActivityType? ActivityType { get => _explicitNullValueActivityType; set { _explicitNullValueActivityType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityType"); else _explicitNullProperties?.Remove("activityType"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestActivityType? _explicitNullValueActivityType = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestActivityType ActivityType { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestActivityType ActivityType { get => _explicitNullValueActivityType; set { _explicitNullValueActivityType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityType"); else _explicitNullProperties?.Remove("activityType"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestActivityType _explicitNullValueActivityType = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Callbacks to be called by the server when this activity reaches a terminal state. Callback addresses must be whitelisted in the server&apos;s dynamic configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.Callback>? CompletionCallbacks { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.Callback>? CompletionCallbacks { get => _explicitNullValueCompletionCallbacks; set { _explicitNullValueCompletionCallbacks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("completionCallbacks"); else _explicitNullProperties?.Remove("completionCallbacks"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.Callback>? _explicitNullValueCompletionCallbacks = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.Callback> CompletionCallbacks { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.Callback> CompletionCallbacks { get => _explicitNullValueCompletionCallbacks; set { _explicitNullValueCompletionCallbacks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("completionCallbacks"); else _explicitNullProperties?.Remove("completionCallbacks"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.Callback> _explicitNullValueCompletionCallbacks = default!;
 #endif
         /// <summary>Header for context propagation and tracing purposes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestHeader? Header { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestHeader? Header { get => _explicitNullValueHeader; set { _explicitNullValueHeader = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("header"); else _explicitNullProperties?.Remove("header"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestHeader? _explicitNullValueHeader = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestHeader Header { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestHeader Header { get => _explicitNullValueHeader; set { _explicitNullValueHeader = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("header"); else _explicitNullProperties?.Remove("header"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestHeader _explicitNullValueHeader = default!;
 #endif
         /// <summary>Maximum permitted time between successful worker heartbeats.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HeartbeatTimeout { get; set; }
+        public string? HeartbeatTimeout { get => _explicitNullValueHeartbeatTimeout; set { _explicitNullValueHeartbeatTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("heartbeatTimeout"); else _explicitNullProperties?.Remove("heartbeatTimeout"); } }
+        private string? _explicitNullValueHeartbeatTimeout = default!;
 #nullable restore
 #else
-        public string HeartbeatTimeout { get; set; }
+        public string HeartbeatTimeout { get => _explicitNullValueHeartbeatTimeout; set { _explicitNullValueHeartbeatTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("heartbeatTimeout"); else _explicitNullProperties?.Remove("heartbeatTimeout"); } }
+        private string _explicitNullValueHeartbeatTimeout = default!;
 #endif
         /// <summary>Defines how to resolve an activity id conflict with a *running* activity. The default policy is ACTIVITY_ID_CONFLICT_POLICY_FAIL.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestIdConflictPolicy? IdConflictPolicy { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestIdConflictPolicy? IdConflictPolicy { get => _explicitNullValueIdConflictPolicy; set { _explicitNullValueIdConflictPolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("idConflictPolicy"); else _explicitNullProperties?.Remove("idConflictPolicy"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestIdConflictPolicy? _explicitNullValueIdConflictPolicy = default!;
         /// <summary>The identity of the client who initiated this request</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Identity { get; set; }
+        public string? Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity"); else _explicitNullProperties?.Remove("identity"); } }
+        private string? _explicitNullValueIdentity = default!;
 #nullable restore
 #else
-        public string Identity { get; set; }
+        public string Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity"); else _explicitNullProperties?.Remove("identity"); } }
+        private string _explicitNullValueIdentity = default!;
 #endif
         /// <summary>Defines whether to allow re-using the activity id from a previously *closed* activity. The default policy is ACTIVITY_ID_REUSE_POLICY_ALLOW_DUPLICATE.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestIdReusePolicy? IdReusePolicy { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestIdReusePolicy? IdReusePolicy { get => _explicitNullValueIdReusePolicy; set { _explicitNullValueIdReusePolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("idReusePolicy"); else _explicitNullProperties?.Remove("idReusePolicy"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestIdReusePolicy? _explicitNullValueIdReusePolicy = default!;
         /// <summary>Serialized arguments to the activity. These are passed as arguments to the activity function.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestInput? Input { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestInput? Input { get => _explicitNullValueInput; set { _explicitNullValueInput = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("input"); else _explicitNullProperties?.Remove("input"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestInput? _explicitNullValueInput = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestInput Input { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestInput Input { get => _explicitNullValueInput; set { _explicitNullValueInput = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("input"); else _explicitNullProperties?.Remove("input"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestInput _explicitNullValueInput = default!;
 #endif
         /// <summary>Links to be associated with the activity. Callbacks may also have associated links; links already included with a callback should not be duplicated here.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.Link>? Links { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.Link>? Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.Link>? _explicitNullValueLinks = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.Link> Links { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.Link> Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.Link> _explicitNullValueLinks = default!;
 #endif
         /// <summary>The namespace property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Namespace { get; set; }
+        public string? Namespace { get => _explicitNullValueNamespace; set { _explicitNullValueNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace"); else _explicitNullProperties?.Remove("namespace"); } }
+        private string? _explicitNullValueNamespace = default!;
 #nullable restore
 #else
-        public string Namespace { get; set; }
+        public string Namespace { get => _explicitNullValueNamespace; set { _explicitNullValueNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace"); else _explicitNullProperties?.Remove("namespace"); } }
+        private string _explicitNullValueNamespace = default!;
 #endif
         /// <summary>Options for handling conflicts when using ACTIVITY_ID_CONFLICT_POLICY_USE_EXISTING.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestOnConflictOptions? OnConflictOptions { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestOnConflictOptions? OnConflictOptions { get => _explicitNullValueOnConflictOptions; set { _explicitNullValueOnConflictOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("onConflictOptions"); else _explicitNullProperties?.Remove("onConflictOptions"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestOnConflictOptions? _explicitNullValueOnConflictOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestOnConflictOptions OnConflictOptions { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestOnConflictOptions OnConflictOptions { get => _explicitNullValueOnConflictOptions; set { _explicitNullValueOnConflictOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("onConflictOptions"); else _explicitNullProperties?.Remove("onConflictOptions"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestOnConflictOptions _explicitNullValueOnConflictOptions = default!;
 #endif
         /// <summary>Priority metadata.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestPriority? Priority { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestPriority? Priority { get => _explicitNullValuePriority; set { _explicitNullValuePriority = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priority"); else _explicitNullProperties?.Remove("priority"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestPriority? _explicitNullValuePriority = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestPriority Priority { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestPriority Priority { get => _explicitNullValuePriority; set { _explicitNullValuePriority = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priority"); else _explicitNullProperties?.Remove("priority"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestPriority _explicitNullValuePriority = default!;
 #endif
         /// <summary>A unique identifier for this start request. Typically UUIDv4.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RequestId { get; set; }
+        public string? RequestId { get => _explicitNullValueRequestId; set { _explicitNullValueRequestId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestId"); else _explicitNullProperties?.Remove("requestId"); } }
+        private string? _explicitNullValueRequestId = default!;
 #nullable restore
 #else
-        public string RequestId { get; set; }
+        public string RequestId { get => _explicitNullValueRequestId; set { _explicitNullValueRequestId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestId"); else _explicitNullProperties?.Remove("requestId"); } }
+        private string _explicitNullValueRequestId = default!;
 #endif
         /// <summary>The retry policy for the activity. Will never exceed `schedule_to_close_timeout`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestRetryPolicy? RetryPolicy { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestRetryPolicy? RetryPolicy { get => _explicitNullValueRetryPolicy; set { _explicitNullValueRetryPolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("retryPolicy"); else _explicitNullProperties?.Remove("retryPolicy"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestRetryPolicy? _explicitNullValueRetryPolicy = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestRetryPolicy RetryPolicy { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestRetryPolicy RetryPolicy { get => _explicitNullValueRetryPolicy; set { _explicitNullValueRetryPolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("retryPolicy"); else _explicitNullProperties?.Remove("retryPolicy"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestRetryPolicy _explicitNullValueRetryPolicy = default!;
 #endif
         /// <summary>Indicates how long the caller is willing to wait for an activity completion. Limits how long retries will be attempted. Either this or `start_to_close_timeout` must be specified. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;to&quot; is used to indicate interval. --)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ScheduleToCloseTimeout { get; set; }
+        public string? ScheduleToCloseTimeout { get => _explicitNullValueScheduleToCloseTimeout; set { _explicitNullValueScheduleToCloseTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduleToCloseTimeout"); else _explicitNullProperties?.Remove("scheduleToCloseTimeout"); } }
+        private string? _explicitNullValueScheduleToCloseTimeout = default!;
 #nullable restore
 #else
-        public string ScheduleToCloseTimeout { get; set; }
+        public string ScheduleToCloseTimeout { get => _explicitNullValueScheduleToCloseTimeout; set { _explicitNullValueScheduleToCloseTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduleToCloseTimeout"); else _explicitNullProperties?.Remove("scheduleToCloseTimeout"); } }
+        private string _explicitNullValueScheduleToCloseTimeout = default!;
 #endif
         /// <summary>Limits time an activity task can stay in a task queue before a worker picks it up. This timeout is always non retryable, as all a retry would achieve is to put it back into the same queue. Defaults to `schedule_to_close_timeout` if not specified. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;to&quot; is used to indicate interval. --)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ScheduleToStartTimeout { get; set; }
+        public string? ScheduleToStartTimeout { get => _explicitNullValueScheduleToStartTimeout; set { _explicitNullValueScheduleToStartTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduleToStartTimeout"); else _explicitNullProperties?.Remove("scheduleToStartTimeout"); } }
+        private string? _explicitNullValueScheduleToStartTimeout = default!;
 #nullable restore
 #else
-        public string ScheduleToStartTimeout { get; set; }
+        public string ScheduleToStartTimeout { get => _explicitNullValueScheduleToStartTimeout; set { _explicitNullValueScheduleToStartTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduleToStartTimeout"); else _explicitNullProperties?.Remove("scheduleToStartTimeout"); } }
+        private string _explicitNullValueScheduleToStartTimeout = default!;
 #endif
         /// <summary>Search attributes for indexing.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestSearchAttributes? SearchAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestSearchAttributes? SearchAttributes { get => _explicitNullValueSearchAttributes; set { _explicitNullValueSearchAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("searchAttributes"); else _explicitNullProperties?.Remove("searchAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestSearchAttributes? _explicitNullValueSearchAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestSearchAttributes SearchAttributes { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestSearchAttributes SearchAttributes { get => _explicitNullValueSearchAttributes; set { _explicitNullValueSearchAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("searchAttributes"); else _explicitNullProperties?.Remove("searchAttributes"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestSearchAttributes _explicitNullValueSearchAttributes = default!;
 #endif
         /// <summary>Time to wait before dispatching the first activity task. This delay is not applied to retry attempts.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartDelay { get; set; }
+        public string? StartDelay { get => _explicitNullValueStartDelay; set { _explicitNullValueStartDelay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startDelay"); else _explicitNullProperties?.Remove("startDelay"); } }
+        private string? _explicitNullValueStartDelay = default!;
 #nullable restore
 #else
-        public string StartDelay { get; set; }
+        public string StartDelay { get => _explicitNullValueStartDelay; set { _explicitNullValueStartDelay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startDelay"); else _explicitNullProperties?.Remove("startDelay"); } }
+        private string _explicitNullValueStartDelay = default!;
 #endif
         /// <summary>Maximum time an activity is allowed to execute after being picked up by a worker. This timeout is always retryable. Either this or `schedule_to_close_timeout` must be specified. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;to&quot; is used to indicate interval. --)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartToCloseTimeout { get; set; }
+        public string? StartToCloseTimeout { get => _explicitNullValueStartToCloseTimeout; set { _explicitNullValueStartToCloseTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startToCloseTimeout"); else _explicitNullProperties?.Remove("startToCloseTimeout"); } }
+        private string? _explicitNullValueStartToCloseTimeout = default!;
 #nullable restore
 #else
-        public string StartToCloseTimeout { get; set; }
+        public string StartToCloseTimeout { get => _explicitNullValueStartToCloseTimeout; set { _explicitNullValueStartToCloseTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startToCloseTimeout"); else _explicitNullProperties?.Remove("startToCloseTimeout"); } }
+        private string _explicitNullValueStartToCloseTimeout = default!;
 #endif
         /// <summary>Task queue to schedule this activity on.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestTaskQueue? TaskQueue { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestTaskQueue? TaskQueue { get => _explicitNullValueTaskQueue; set { _explicitNullValueTaskQueue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taskQueue"); else _explicitNullProperties?.Remove("taskQueue"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestTaskQueue? _explicitNullValueTaskQueue = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestTaskQueue TaskQueue { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestTaskQueue TaskQueue { get => _explicitNullValueTaskQueue; set { _explicitNullValueTaskQueue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taskQueue"); else _explicitNullProperties?.Remove("taskQueue"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestTaskQueue _explicitNullValueTaskQueue = default!;
 #endif
         /// <summary>Metadata for use by user interfaces to display the fixed as-of-start summary and details of the activity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestUserMetadata? UserMetadata { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestUserMetadata? UserMetadata { get => _explicitNullValueUserMetadata; set { _explicitNullValueUserMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userMetadata"); else _explicitNullProperties?.Remove("userMetadata"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestUserMetadata? _explicitNullValueUserMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestUserMetadata UserMetadata { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestUserMetadata UserMetadata { get => _explicitNullValueUserMetadata; set { _explicitNullValueUserMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userMetadata"); else _explicitNullProperties?.Remove("userMetadata"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestUserMetadata _explicitNullValueUserMetadata = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest"/> and sets the default values.
@@ -193,7 +264,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -256,6 +327,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("startToCloseTimeout", StartToCloseTimeout);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestTaskQueue>("taskQueue", TaskQueue);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestUserMetadata>("userMetadata", UserMetadata);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

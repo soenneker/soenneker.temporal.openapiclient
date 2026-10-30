@@ -12,32 +12,48 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostResetOperationUpdateWorkflowOptionsWorkflowExecutionOptions : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("priority") is { } nullNodePriority && nullNodePriority.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Priority = null;
+            if (parseNode.GetChildNode("timeSkippingConfig") is { } nullNodeTimeSkippingConfig && nullNodeTimeSkippingConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeSkippingConfig = null;
+            if (parseNode.GetChildNode("versioningOverride") is { } nullNodeVersioningOverride && nullNodeVersioningOverride.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VersioningOverride = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>If set, overrides the workflow&apos;s priority sent by the SDK.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsPriority? Priority { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsPriority? Priority { get => _explicitNullValuePriority; set { _explicitNullValuePriority = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priority"); else _explicitNullProperties?.Remove("priority"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsPriority? _explicitNullValuePriority = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsPriority Priority { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsPriority Priority { get => _explicitNullValuePriority; set { _explicitNullValuePriority = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priority"); else _explicitNullProperties?.Remove("priority"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsPriority _explicitNullValuePriority = default!;
 #endif
         /// <summary>Time-skipping configuration for this workflow execution. If not set, the time-skipping configuration is not updated by this request; the existing configuration is preserved.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsTimeSkippingConfig? TimeSkippingConfig { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsTimeSkippingConfig? TimeSkippingConfig { get => _explicitNullValueTimeSkippingConfig; set { _explicitNullValueTimeSkippingConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeSkippingConfig"); else _explicitNullProperties?.Remove("timeSkippingConfig"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsTimeSkippingConfig? _explicitNullValueTimeSkippingConfig = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsTimeSkippingConfig TimeSkippingConfig { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsTimeSkippingConfig TimeSkippingConfig { get => _explicitNullValueTimeSkippingConfig; set { _explicitNullValueTimeSkippingConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeSkippingConfig"); else _explicitNullProperties?.Remove("timeSkippingConfig"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsTimeSkippingConfig _explicitNullValueTimeSkippingConfig = default!;
 #endif
         /// <summary>If set, takes precedence over the Versioning Behavior sent by the SDK on Workflow Task completion.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsVersioningOverride? VersioningOverride { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsVersioningOverride? VersioningOverride { get => _explicitNullValueVersioningOverride; set { _explicitNullValueVersioningOverride = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("versioningOverride"); else _explicitNullProperties?.Remove("versioningOverride"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsVersioningOverride? _explicitNullValueVersioningOverride = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsVersioningOverride VersioningOverride { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsVersioningOverride VersioningOverride { get => _explicitNullValueVersioningOverride; set { _explicitNullValueVersioningOverride = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("versioningOverride"); else _explicitNullProperties?.Remove("versioningOverride"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsVersioningOverride _explicitNullValueVersioningOverride = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptionsWorkflowExecutionOptions"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptionsWorkflowExecutionOptions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptionsWorkflowExecutionOptions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptionsWorkflowExecutionOptions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsPriority>("priority", Priority);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsTimeSkippingConfig>("timeSkippingConfig", TimeSkippingConfig);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionOptionsVersioningOverride>("versioningOverride", VersioningOverride);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

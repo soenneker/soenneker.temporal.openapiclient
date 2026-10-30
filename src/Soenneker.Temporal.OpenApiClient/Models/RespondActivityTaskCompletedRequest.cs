@@ -11,72 +11,103 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class RespondActivityTaskCompletedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("deployment") is { } nullNodeDeployment && nullNodeDeployment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Deployment = null;
+            if (parseNode.GetChildNode("deploymentOptions") is { } nullNodeDeploymentOptions && nullNodeDeploymentOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeploymentOptions = null;
+            if (parseNode.GetChildNode("identity") is { } nullNodeIdentity && nullNodeIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Identity = null;
+            if (parseNode.GetChildNode("namespace") is { } nullNodeNamespace && nullNodeNamespace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Namespace = null;
+            if (parseNode.GetChildNode("resourceId") is { } nullNodeResourceId && nullNodeResourceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResourceId = null;
+            if (parseNode.GetChildNode("result") is { } nullNodeResult && nullNodeResult.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Result = null;
+            if (parseNode.GetChildNode("taskToken") is { } nullNodeTaskToken && nullNodeTaskToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskToken = null;
+            if (parseNode.GetChildNode("workerVersion") is { } nullNodeWorkerVersion && nullNodeWorkerVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerVersion = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Deployment info of the worker that completed this task. Must be present if user has set `WorkerDeploymentOptions` regardless of versioning being enabled or not. Deprecated. Replaced with `deployment_options`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestDeployment? Deployment { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestDeployment? Deployment { get => _explicitNullValueDeployment; set { _explicitNullValueDeployment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deployment"); else _explicitNullProperties?.Remove("deployment"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestDeployment? _explicitNullValueDeployment = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestDeployment Deployment { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestDeployment Deployment { get => _explicitNullValueDeployment; set { _explicitNullValueDeployment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deployment"); else _explicitNullProperties?.Remove("deployment"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestDeployment _explicitNullValueDeployment = default!;
 #endif
         /// <summary>Worker deployment options that user has set in the worker.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestDeploymentOptions? DeploymentOptions { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestDeploymentOptions? DeploymentOptions { get => _explicitNullValueDeploymentOptions; set { _explicitNullValueDeploymentOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploymentOptions"); else _explicitNullProperties?.Remove("deploymentOptions"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestDeploymentOptions? _explicitNullValueDeploymentOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestDeploymentOptions DeploymentOptions { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestDeploymentOptions DeploymentOptions { get => _explicitNullValueDeploymentOptions; set { _explicitNullValueDeploymentOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploymentOptions"); else _explicitNullProperties?.Remove("deploymentOptions"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestDeploymentOptions _explicitNullValueDeploymentOptions = default!;
 #endif
         /// <summary>The identity of the worker/client</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Identity { get; set; }
+        public string? Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity"); else _explicitNullProperties?.Remove("identity"); } }
+        private string? _explicitNullValueIdentity = default!;
 #nullable restore
 #else
-        public string Identity { get; set; }
+        public string Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity"); else _explicitNullProperties?.Remove("identity"); } }
+        private string _explicitNullValueIdentity = default!;
 #endif
         /// <summary>The namespace property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Namespace { get; set; }
+        public string? Namespace { get => _explicitNullValueNamespace; set { _explicitNullValueNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace"); else _explicitNullProperties?.Remove("namespace"); } }
+        private string? _explicitNullValueNamespace = default!;
 #nullable restore
 #else
-        public string Namespace { get; set; }
+        public string Namespace { get => _explicitNullValueNamespace; set { _explicitNullValueNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace"); else _explicitNullProperties?.Remove("namespace"); } }
+        private string _explicitNullValueNamespace = default!;
 #endif
         /// <summary>Resource ID for routing. Contains the workflow ID or activity ID for standalone activities.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ResourceId { get; set; }
+        public string? ResourceId { get => _explicitNullValueResourceId; set { _explicitNullValueResourceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceId"); else _explicitNullProperties?.Remove("resourceId"); } }
+        private string? _explicitNullValueResourceId = default!;
 #nullable restore
 #else
-        public string ResourceId { get; set; }
+        public string ResourceId { get => _explicitNullValueResourceId; set { _explicitNullValueResourceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceId"); else _explicitNullProperties?.Remove("resourceId"); } }
+        private string _explicitNullValueResourceId = default!;
 #endif
         /// <summary>The result of successfully executing the activity</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestResult? Result { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestResult? Result { get => _explicitNullValueResult; set { _explicitNullValueResult = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("result"); else _explicitNullProperties?.Remove("result"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestResult? _explicitNullValueResult = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestResult Result { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestResult Result { get => _explicitNullValueResult; set { _explicitNullValueResult = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("result"); else _explicitNullProperties?.Remove("result"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestResult _explicitNullValueResult = default!;
 #endif
         /// <summary>The task token as received in `PollActivityTaskQueueResponse`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TaskToken { get; set; }
+        public string? TaskToken { get => _explicitNullValueTaskToken; set { _explicitNullValueTaskToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taskToken"); else _explicitNullProperties?.Remove("taskToken"); } }
+        private string? _explicitNullValueTaskToken = default!;
 #nullable restore
 #else
-        public string TaskToken { get; set; }
+        public string TaskToken { get => _explicitNullValueTaskToken; set { _explicitNullValueTaskToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taskToken"); else _explicitNullProperties?.Remove("taskToken"); } }
+        private string _explicitNullValueTaskToken = default!;
 #endif
         /// <summary>Version info of the worker who processed this task. This message&apos;s `build_id` field should always be set by SDKs. Workers opting into versioning will also set the `use_versioning` field to true. See message docstrings for more. Deprecated. Use `deployment_options` instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestWorkerVersion? WorkerVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestWorkerVersion? WorkerVersion { get => _explicitNullValueWorkerVersion; set { _explicitNullValueWorkerVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerVersion"); else _explicitNullProperties?.Remove("workerVersion"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestWorkerVersion? _explicitNullValueWorkerVersion = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestWorkerVersion WorkerVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestWorkerVersion WorkerVersion { get => _explicitNullValueWorkerVersion; set { _explicitNullValueWorkerVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerVersion"); else _explicitNullProperties?.Remove("workerVersion"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestWorkerVersion _explicitNullValueWorkerVersion = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequest"/> and sets the default values.
@@ -93,7 +124,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -128,6 +159,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestResult>("result", Result);
             writer.WriteStringValue("taskToken", TaskToken);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestWorkerVersion>("workerVersion", WorkerVersion);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

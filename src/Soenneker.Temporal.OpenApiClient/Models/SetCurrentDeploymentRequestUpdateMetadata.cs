@@ -12,24 +12,37 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SetCurrentDeploymentRequestUpdateMetadata : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("removeEntries") is { } nullNodeRemoveEntries && nullNodeRemoveEntries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RemoveEntries = null;
+            if (parseNode.GetChildNode("upsertEntries") is { } nullNodeUpsertEntries && nullNodeUpsertEntries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpsertEntries = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>List of keys to remove from the metadata.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? RemoveEntries { get; set; }
+        public List<string>? RemoveEntries { get => _explicitNullValueRemoveEntries; set { _explicitNullValueRemoveEntries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("removeEntries"); else _explicitNullProperties?.Remove("removeEntries"); } }
+        private List<string>? _explicitNullValueRemoveEntries = default!;
 #nullable restore
 #else
-        public List<string> RemoveEntries { get; set; }
+        public List<string> RemoveEntries { get => _explicitNullValueRemoveEntries; set { _explicitNullValueRemoveEntries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("removeEntries"); else _explicitNullProperties?.Remove("removeEntries"); } }
+        private List<string> _explicitNullValueRemoveEntries = default!;
 #endif
         /// <summary>The upsertEntries property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentRequestUpdateMetadataUpsertEntries? UpsertEntries { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentRequestUpdateMetadataUpsertEntries? UpsertEntries { get => _explicitNullValueUpsertEntries; set { _explicitNullValueUpsertEntries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upsertEntries"); else _explicitNullProperties?.Remove("upsertEntries"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentRequestUpdateMetadataUpsertEntries? _explicitNullValueUpsertEntries = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentRequestUpdateMetadataUpsertEntries UpsertEntries { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentRequestUpdateMetadataUpsertEntries UpsertEntries { get => _explicitNullValueUpsertEntries; set { _explicitNullValueUpsertEntries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upsertEntries"); else _explicitNullProperties?.Remove("upsertEntries"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentRequestUpdateMetadataUpsertEntries _explicitNullValueUpsertEntries = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentRequestUpdateMetadata"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentRequestUpdateMetadata CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentRequestUpdateMetadata();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentRequestUpdateMetadata(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("removeEntries", RemoveEntries);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentRequestUpdateMetadataUpsertEntries>("upsertEntries", UpsertEntries);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

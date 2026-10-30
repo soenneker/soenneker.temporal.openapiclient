@@ -12,43 +12,69 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class NexusOperationExecutionCancellationInfo : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("attempt") is { } nullNodeAttempt && nullNodeAttempt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attempt = null;
+            if (parseNode.GetChildNode("blockedReason") is { } nullNodeBlockedReason && nullNodeBlockedReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlockedReason = null;
+            if (parseNode.GetChildNode("lastAttemptCompleteTime") is { } nullNodeLastAttemptCompleteTime && nullNodeLastAttemptCompleteTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastAttemptCompleteTime = null;
+            if (parseNode.GetChildNode("lastAttemptFailure") is { } nullNodeLastAttemptFailure && nullNodeLastAttemptFailure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastAttemptFailure = null;
+            if (parseNode.GetChildNode("nextAttemptScheduleTime") is { } nullNodeNextAttemptScheduleTime && nullNodeNextAttemptScheduleTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextAttemptScheduleTime = null;
+            if (parseNode.GetChildNode("reason") is { } nullNodeReason && nullNodeReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reason = null;
+            if (parseNode.GetChildNode("requestedTime") is { } nullNodeRequestedTime && nullNodeRequestedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestedTime = null;
+            if (parseNode.GetChildNode("state") is { } nullNodeState && nullNodeState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) State = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The number of attempts made to deliver the cancel operation request. This number represents a minimum bound since the attempt is incremented after the request completes.</summary>
-        public int? Attempt { get; set; }
+        public int? Attempt { get => _explicitNullValueAttempt; set { _explicitNullValueAttempt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attempt"); else _explicitNullProperties?.Remove("attempt"); } }
+        private int? _explicitNullValueAttempt = default!;
         /// <summary>If the state is BLOCKED, blocked reason provides additional information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BlockedReason { get; set; }
+        public string? BlockedReason { get => _explicitNullValueBlockedReason; set { _explicitNullValueBlockedReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blockedReason"); else _explicitNullProperties?.Remove("blockedReason"); } }
+        private string? _explicitNullValueBlockedReason = default!;
 #nullable restore
 #else
-        public string BlockedReason { get; set; }
+        public string BlockedReason { get => _explicitNullValueBlockedReason; set { _explicitNullValueBlockedReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blockedReason"); else _explicitNullProperties?.Remove("blockedReason"); } }
+        private string _explicitNullValueBlockedReason = default!;
 #endif
         /// <summary>The time when the last attempt completed.</summary>
-        public DateTimeOffset? LastAttemptCompleteTime { get; set; }
+        public DateTimeOffset? LastAttemptCompleteTime { get => _explicitNullValueLastAttemptCompleteTime; set { _explicitNullValueLastAttemptCompleteTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastAttemptCompleteTime"); else _explicitNullProperties?.Remove("lastAttemptCompleteTime"); } }
+        private DateTimeOffset? _explicitNullValueLastAttemptCompleteTime = default!;
         /// <summary>The last attempt&apos;s failure, if any.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionCancellationInfoLastAttemptFailure? LastAttemptFailure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionCancellationInfoLastAttemptFailure? LastAttemptFailure { get => _explicitNullValueLastAttemptFailure; set { _explicitNullValueLastAttemptFailure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastAttemptFailure"); else _explicitNullProperties?.Remove("lastAttemptFailure"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionCancellationInfoLastAttemptFailure? _explicitNullValueLastAttemptFailure = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionCancellationInfoLastAttemptFailure LastAttemptFailure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionCancellationInfoLastAttemptFailure LastAttemptFailure { get => _explicitNullValueLastAttemptFailure; set { _explicitNullValueLastAttemptFailure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastAttemptFailure"); else _explicitNullProperties?.Remove("lastAttemptFailure"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionCancellationInfoLastAttemptFailure _explicitNullValueLastAttemptFailure = default!;
 #endif
         /// <summary>The time when the next attempt is scheduled.</summary>
-        public DateTimeOffset? NextAttemptScheduleTime { get; set; }
+        public DateTimeOffset? NextAttemptScheduleTime { get => _explicitNullValueNextAttemptScheduleTime; set { _explicitNullValueNextAttemptScheduleTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nextAttemptScheduleTime"); else _explicitNullProperties?.Remove("nextAttemptScheduleTime"); } }
+        private DateTimeOffset? _explicitNullValueNextAttemptScheduleTime = default!;
         /// <summary>A reason that may be specified in the CancelNexusOperationRequest.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Reason { get; set; }
+        public string? Reason { get => _explicitNullValueReason; set { _explicitNullValueReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason"); else _explicitNullProperties?.Remove("reason"); } }
+        private string? _explicitNullValueReason = default!;
 #nullable restore
 #else
-        public string Reason { get; set; }
+        public string Reason { get => _explicitNullValueReason; set { _explicitNullValueReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason"); else _explicitNullProperties?.Remove("reason"); } }
+        private string _explicitNullValueReason = default!;
 #endif
         /// <summary>The time when cancellation was requested.</summary>
-        public DateTimeOffset? RequestedTime { get; set; }
+        public DateTimeOffset? RequestedTime { get => _explicitNullValueRequestedTime; set { _explicitNullValueRequestedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestedTime"); else _explicitNullProperties?.Remove("requestedTime"); } }
+        private DateTimeOffset? _explicitNullValueRequestedTime = default!;
         /// <summary>The state property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionCancellationInfoState? State { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionCancellationInfoState? State { get => _explicitNullValueState; set { _explicitNullValueState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state"); else _explicitNullProperties?.Remove("state"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionCancellationInfoState? _explicitNullValueState = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionCancellationInfo"/> and sets the default values.
         /// </summary>
@@ -64,7 +90,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionCancellationInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionCancellationInfo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionCancellationInfo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -99,6 +125,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("reason", Reason);
             writer.WriteDateTimeOffsetValue("requestedTime", RequestedTime);
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationExecutionCancellationInfoState>("state", State);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

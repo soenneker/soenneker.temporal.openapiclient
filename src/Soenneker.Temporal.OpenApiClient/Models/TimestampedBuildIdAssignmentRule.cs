@@ -11,18 +11,30 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TimestampedBuildIdAssignmentRule : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("createTime") is { } nullNodeCreateTime && nullNodeCreateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateTime = null;
+            if (parseNode.GetChildNode("rule") is { } nullNodeRule && nullNodeRule.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rule = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The createTime property</summary>
-        public DateTimeOffset? CreateTime { get; set; }
+        public DateTimeOffset? CreateTime { get => _explicitNullValueCreateTime; set { _explicitNullValueCreateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createTime"); else _explicitNullProperties?.Remove("createTime"); } }
+        private DateTimeOffset? _explicitNullValueCreateTime = default!;
         /// <summary>Assignment rules are applied to *new* Workflow and Activity executions at schedule time to assign them to a Build ID. Assignment rules will not be used in the following cases:    - Child Workflows or Continue-As-New Executions who inherit their      parent/previous Workflow&apos;s assigned Build ID (by setting the      `inherit_build_id` flag - default behavior in SDKs when the same Task Queue      is used.)    - An Activity that inherits the assigned Build ID of its Workflow (by      setting the `use_workflow_build_id` flag - default behavior in SDKs      when the same Task Queue is used.) In absence of (applicable) redirect rules (`CompatibleBuildIdRedirectRule`s) the task will be dispatched to Workers of the Build ID determined by the assignment rules (or inherited). Otherwise, the final Build ID will be determined by the redirect rules. Once a Workflow completes its first Workflow Task in a particular Build ID it stays in that Build ID regardless of changes to assignment rules. Redirect rules can be used to move the workflow to another compatible Build ID. When using Worker Versioning on a Task Queue, in the steady state, there should typically be a single assignment rule to send all new executions to the latest Build ID. Existence of at least one such &quot;unconditional&quot; rule at all times is enforces by the system, unless the `force` flag is used by the user when replacing/deleting these rules (for exceptional cases). During a deployment, one or more additional rules can be added to assign a subset of the tasks to a new Build ID based on a &quot;ramp percentage&quot;. When there are multiple assignment rules for a Task Queue, the rules are evaluated in order, starting from index 0. The first applicable rule will be applied and the rest will be ignored. In the event that no assignment rule is applicable on a task (or the Task Queue is simply not versioned), the tasks will be dispatched to an unversioned Worker.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.BuildIdAssignmentRule? Rule { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BuildIdAssignmentRule? Rule { get => _explicitNullValueRule; set { _explicitNullValueRule = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rule"); else _explicitNullProperties?.Remove("rule"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.BuildIdAssignmentRule? _explicitNullValueRule = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.BuildIdAssignmentRule Rule { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BuildIdAssignmentRule Rule { get => _explicitNullValueRule; set { _explicitNullValueRule = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rule"); else _explicitNullProperties?.Remove("rule"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.BuildIdAssignmentRule _explicitNullValueRule = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.TimestampedBuildIdAssignmentRule"/> and sets the default values.
@@ -39,7 +51,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.TimestampedBuildIdAssignmentRule CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.TimestampedBuildIdAssignmentRule();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.TimestampedBuildIdAssignmentRule(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -62,6 +74,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("createTime", CreateTime);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.BuildIdAssignmentRule>("rule", Rule);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

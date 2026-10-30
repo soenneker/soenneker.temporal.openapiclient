@@ -12,42 +12,63 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class VersionInfo : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("alerts") is { } nullNodeAlerts && nullNodeAlerts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Alerts = null;
+            if (parseNode.GetChildNode("current") is { } nullNodeCurrent && nullNodeCurrent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Current = null;
+            if (parseNode.GetChildNode("instructions") is { } nullNodeInstructions && nullNodeInstructions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Instructions = null;
+            if (parseNode.GetChildNode("lastUpdateTime") is { } nullNodeLastUpdateTime && nullNodeLastUpdateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastUpdateTime = null;
+            if (parseNode.GetChildNode("recommended") is { } nullNodeRecommended && nullNodeRecommended.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Recommended = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The alerts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.Alert>? Alerts { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.Alert>? Alerts { get => _explicitNullValueAlerts; set { _explicitNullValueAlerts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alerts"); else _explicitNullProperties?.Remove("alerts"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.Alert>? _explicitNullValueAlerts = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.Alert> Alerts { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.Alert> Alerts { get => _explicitNullValueAlerts; set { _explicitNullValueAlerts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alerts"); else _explicitNullProperties?.Remove("alerts"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.Alert> _explicitNullValueAlerts = default!;
 #endif
         /// <summary>ReleaseInfo contains information about specific version of temporal.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ReleaseInfo? Current { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ReleaseInfo? Current { get => _explicitNullValueCurrent; set { _explicitNullValueCurrent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current"); else _explicitNullProperties?.Remove("current"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ReleaseInfo? _explicitNullValueCurrent = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ReleaseInfo Current { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ReleaseInfo Current { get => _explicitNullValueCurrent; set { _explicitNullValueCurrent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current"); else _explicitNullProperties?.Remove("current"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ReleaseInfo _explicitNullValueCurrent = default!;
 #endif
         /// <summary>The instructions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Instructions { get; set; }
+        public string? Instructions { get => _explicitNullValueInstructions; set { _explicitNullValueInstructions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instructions"); else _explicitNullProperties?.Remove("instructions"); } }
+        private string? _explicitNullValueInstructions = default!;
 #nullable restore
 #else
-        public string Instructions { get; set; }
+        public string Instructions { get => _explicitNullValueInstructions; set { _explicitNullValueInstructions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instructions"); else _explicitNullProperties?.Remove("instructions"); } }
+        private string _explicitNullValueInstructions = default!;
 #endif
         /// <summary>The lastUpdateTime property</summary>
-        public DateTimeOffset? LastUpdateTime { get; set; }
+        public DateTimeOffset? LastUpdateTime { get => _explicitNullValueLastUpdateTime; set { _explicitNullValueLastUpdateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastUpdateTime"); else _explicitNullProperties?.Remove("lastUpdateTime"); } }
+        private DateTimeOffset? _explicitNullValueLastUpdateTime = default!;
         /// <summary>ReleaseInfo contains information about specific version of temporal.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ReleaseInfo? Recommended { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ReleaseInfo? Recommended { get => _explicitNullValueRecommended; set { _explicitNullValueRecommended = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recommended"); else _explicitNullProperties?.Remove("recommended"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ReleaseInfo? _explicitNullValueRecommended = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ReleaseInfo Recommended { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ReleaseInfo Recommended { get => _explicitNullValueRecommended; set { _explicitNullValueRecommended = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recommended"); else _explicitNullProperties?.Remove("recommended"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ReleaseInfo _explicitNullValueRecommended = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.VersionInfo"/> and sets the default values.
@@ -64,7 +85,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.VersionInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.VersionInfo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.VersionInfo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -93,6 +114,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("instructions", Instructions);
             writer.WriteDateTimeOffsetValue("lastUpdateTime", LastUpdateTime);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ReleaseInfo>("recommended", Recommended);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

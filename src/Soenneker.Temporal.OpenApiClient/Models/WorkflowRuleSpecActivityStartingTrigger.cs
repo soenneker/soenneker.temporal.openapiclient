@@ -12,16 +12,26 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WorkflowRuleSpecActivityStartingTrigger : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("predicate") is { } nullNodePredicate && nullNodePredicate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Predicate = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Activity predicate is a SQL-like string filter parameter. It is used to match against workflow data. The following activity attributes are supported as part of the predicate: - ActivityType: An Activity Type is the mapping of a name to an Activity Definition.. - ActivityId: The ID of the activity. - ActivityAttempt: The number attempts of the activity. - BackoffInterval: The current amount of time between scheduled attempts of the activity. - ActivityStatus: The status of the activity. Can be one of &quot;Scheduled&quot;, &quot;Started&quot;, &quot;Paused&quot;. - TaskQueue: The name of the task queue the workflow specified that the activity should run on. Activity predicate support the following operators:  * =, !=, &gt;, &gt;=, &lt;, &lt;=  * AND, OR, ()  * BETWEEN ... AND    STARTS_WITH</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Predicate { get; set; }
+        public string? Predicate { get => _explicitNullValuePredicate; set { _explicitNullValuePredicate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("predicate"); else _explicitNullProperties?.Remove("predicate"); } }
+        private string? _explicitNullValuePredicate = default!;
 #nullable restore
 #else
-        public string Predicate { get; set; }
+        public string Predicate { get => _explicitNullValuePredicate; set { _explicitNullValuePredicate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("predicate"); else _explicitNullProperties?.Remove("predicate"); } }
+        private string _explicitNullValuePredicate = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRuleSpecActivityStartingTrigger"/> and sets the default values.
@@ -38,7 +48,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRuleSpecActivityStartingTrigger CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRuleSpecActivityStartingTrigger();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRuleSpecActivityStartingTrigger(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -59,6 +69,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("predicate", Predicate);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

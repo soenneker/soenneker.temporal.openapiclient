@@ -11,16 +11,26 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ScheduleAction : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("startWorkflow") is { } nullNodeStartWorkflow && nullNodeStartWorkflow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartWorkflow = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>All fields of NewWorkflowExecutionInfo are valid except for: - workflow_id_reuse_policy - cron_schedule The workflow id of the started workflow may not match this exactly, it may have a timestamp appended for uniqueness.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionStartWorkflow? StartWorkflow { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionStartWorkflow? StartWorkflow { get => _explicitNullValueStartWorkflow; set { _explicitNullValueStartWorkflow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startWorkflow"); else _explicitNullProperties?.Remove("startWorkflow"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionStartWorkflow? _explicitNullValueStartWorkflow = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionStartWorkflow StartWorkflow { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionStartWorkflow StartWorkflow { get => _explicitNullValueStartWorkflow; set { _explicitNullValueStartWorkflow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startWorkflow"); else _explicitNullProperties?.Remove("startWorkflow"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionStartWorkflow _explicitNullValueStartWorkflow = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.ScheduleAction"/> and sets the default values.
@@ -37,7 +47,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.ScheduleAction CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.ScheduleAction();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.ScheduleAction(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,6 +68,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionStartWorkflow>("startWorkflow", StartWorkflow);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

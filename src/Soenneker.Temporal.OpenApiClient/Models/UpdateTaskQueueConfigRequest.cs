@@ -11,66 +11,96 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class UpdateTaskQueueConfigRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("identity") is { } nullNodeIdentity && nullNodeIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Identity = null;
+            if (parseNode.GetChildNode("namespace") is { } nullNodeNamespace && nullNodeNamespace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Namespace = null;
+            if (parseNode.GetChildNode("setFairnessWeightOverrides") is { } nullNodeSetFairnessWeightOverrides && nullNodeSetFairnessWeightOverrides.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SetFairnessWeightOverrides = null;
+            if (parseNode.GetChildNode("taskQueue") is { } nullNodeTaskQueue && nullNodeTaskQueue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskQueue = null;
+            if (parseNode.GetChildNode("taskQueueType") is { } nullNodeTaskQueueType && nullNodeTaskQueueType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskQueueType = null;
+            if (parseNode.GetChildNode("unsetFairnessWeightOverrides") is { } nullNodeUnsetFairnessWeightOverrides && nullNodeUnsetFairnessWeightOverrides.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnsetFairnessWeightOverrides = null;
+            if (parseNode.GetChildNode("updateFairnessKeyRateLimitDefault") is { } nullNodeUpdateFairnessKeyRateLimitDefault && nullNodeUpdateFairnessKeyRateLimitDefault.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateFairnessKeyRateLimitDefault = null;
+            if (parseNode.GetChildNode("updateQueueRateLimit") is { } nullNodeUpdateQueueRateLimit && nullNodeUpdateQueueRateLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateQueueRateLimit = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The identity property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Identity { get; set; }
+        public string? Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity"); else _explicitNullProperties?.Remove("identity"); } }
+        private string? _explicitNullValueIdentity = default!;
 #nullable restore
 #else
-        public string Identity { get; set; }
+        public string Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity"); else _explicitNullProperties?.Remove("identity"); } }
+        private string _explicitNullValueIdentity = default!;
 #endif
         /// <summary>The namespace property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Namespace { get; set; }
+        public string? Namespace { get => _explicitNullValueNamespace; set { _explicitNullValueNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace"); else _explicitNullProperties?.Remove("namespace"); } }
+        private string? _explicitNullValueNamespace = default!;
 #nullable restore
 #else
-        public string Namespace { get; set; }
+        public string Namespace { get => _explicitNullValueNamespace; set { _explicitNullValueNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace"); else _explicitNullProperties?.Remove("namespace"); } }
+        private string _explicitNullValueNamespace = default!;
 #endif
         /// <summary>If set, overrides the fairness weight for each specified fairness key. Fairness keys not listed in this map will keep their existing overrides (if any).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestSetFairnessWeightOverridesProperty? SetFairnessWeightOverrides { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestSetFairnessWeightOverridesProperty? SetFairnessWeightOverrides { get => _explicitNullValueSetFairnessWeightOverrides; set { _explicitNullValueSetFairnessWeightOverrides = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("setFairnessWeightOverrides"); else _explicitNullProperties?.Remove("setFairnessWeightOverrides"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestSetFairnessWeightOverridesProperty? _explicitNullValueSetFairnessWeightOverrides = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestSetFairnessWeightOverridesProperty SetFairnessWeightOverrides { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestSetFairnessWeightOverridesProperty SetFairnessWeightOverrides { get => _explicitNullValueSetFairnessWeightOverrides; set { _explicitNullValueSetFairnessWeightOverrides = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("setFairnessWeightOverrides"); else _explicitNullProperties?.Remove("setFairnessWeightOverrides"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestSetFairnessWeightOverridesProperty _explicitNullValueSetFairnessWeightOverrides = default!;
 #endif
         /// <summary>Selects the task queue to update.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TaskQueue { get; set; }
+        public string? TaskQueue { get => _explicitNullValueTaskQueue; set { _explicitNullValueTaskQueue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taskQueue"); else _explicitNullProperties?.Remove("taskQueue"); } }
+        private string? _explicitNullValueTaskQueue = default!;
 #nullable restore
 #else
-        public string TaskQueue { get; set; }
+        public string TaskQueue { get => _explicitNullValueTaskQueue; set { _explicitNullValueTaskQueue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taskQueue"); else _explicitNullProperties?.Remove("taskQueue"); } }
+        private string _explicitNullValueTaskQueue = default!;
 #endif
         /// <summary>The taskQueueType property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestTaskQueueType? TaskQueueType { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestTaskQueueType? TaskQueueType { get => _explicitNullValueTaskQueueType; set { _explicitNullValueTaskQueueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taskQueueType"); else _explicitNullProperties?.Remove("taskQueueType"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestTaskQueueType? _explicitNullValueTaskQueueType = default!;
         /// <summary>If set, removes any existing fairness weight overrides for each specified fairness key. Fairness weights for corresponding keys fall back to the values set during task creation (if any), or to the default weight of 1.0.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? UnsetFairnessWeightOverrides { get; set; }
+        public List<string>? UnsetFairnessWeightOverrides { get => _explicitNullValueUnsetFairnessWeightOverrides; set { _explicitNullValueUnsetFairnessWeightOverrides = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unsetFairnessWeightOverrides"); else _explicitNullProperties?.Remove("unsetFairnessWeightOverrides"); } }
+        private List<string>? _explicitNullValueUnsetFairnessWeightOverrides = default!;
 #nullable restore
 #else
-        public List<string> UnsetFairnessWeightOverrides { get; set; }
+        public List<string> UnsetFairnessWeightOverrides { get => _explicitNullValueUnsetFairnessWeightOverrides; set { _explicitNullValueUnsetFairnessWeightOverrides = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unsetFairnessWeightOverrides"); else _explicitNullProperties?.Remove("unsetFairnessWeightOverrides"); } }
+        private List<string> _explicitNullValueUnsetFairnessWeightOverrides = default!;
 #endif
         /// <summary>Update to the default fairness key rate limit. If not set, this configuration is unchanged. If the `rate_limit` field in the `RateLimitUpdate` is missing, remove the existing rate limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestUpdateFairnessKeyRateLimitDefault? UpdateFairnessKeyRateLimitDefault { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestUpdateFairnessKeyRateLimitDefault? UpdateFairnessKeyRateLimitDefault { get => _explicitNullValueUpdateFairnessKeyRateLimitDefault; set { _explicitNullValueUpdateFairnessKeyRateLimitDefault = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateFairnessKeyRateLimitDefault"); else _explicitNullProperties?.Remove("updateFairnessKeyRateLimitDefault"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestUpdateFairnessKeyRateLimitDefault? _explicitNullValueUpdateFairnessKeyRateLimitDefault = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestUpdateFairnessKeyRateLimitDefault UpdateFairnessKeyRateLimitDefault { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestUpdateFairnessKeyRateLimitDefault UpdateFairnessKeyRateLimitDefault { get => _explicitNullValueUpdateFairnessKeyRateLimitDefault; set { _explicitNullValueUpdateFairnessKeyRateLimitDefault = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateFairnessKeyRateLimitDefault"); else _explicitNullProperties?.Remove("updateFairnessKeyRateLimitDefault"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestUpdateFairnessKeyRateLimitDefault _explicitNullValueUpdateFairnessKeyRateLimitDefault = default!;
 #endif
         /// <summary>Update to queue-wide rate limit. If not set, this configuration is unchanged. NOTE: A limit set by the worker is overriden; and restored again when reset. If the `rate_limit` field in the `RateLimitUpdate` is missing, remove the existing rate limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestUpdateQueueRateLimit? UpdateQueueRateLimit { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestUpdateQueueRateLimit? UpdateQueueRateLimit { get => _explicitNullValueUpdateQueueRateLimit; set { _explicitNullValueUpdateQueueRateLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateQueueRateLimit"); else _explicitNullProperties?.Remove("updateQueueRateLimit"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestUpdateQueueRateLimit? _explicitNullValueUpdateQueueRateLimit = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestUpdateQueueRateLimit UpdateQueueRateLimit { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestUpdateQueueRateLimit UpdateQueueRateLimit { get => _explicitNullValueUpdateQueueRateLimit; set { _explicitNullValueUpdateQueueRateLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateQueueRateLimit"); else _explicitNullProperties?.Remove("updateQueueRateLimit"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestUpdateQueueRateLimit _explicitNullValueUpdateQueueRateLimit = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequest"/> and sets the default values.
@@ -87,7 +117,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -122,6 +152,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("unsetFairnessWeightOverrides", UnsetFairnessWeightOverrides);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestUpdateFairnessKeyRateLimitDefault>("updateFairnessKeyRateLimitDefault", UpdateFairnessKeyRateLimitDefault);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateTaskQueueConfigRequestUpdateQueueRateLimit>("updateQueueRateLimit", UpdateQueueRateLimit);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

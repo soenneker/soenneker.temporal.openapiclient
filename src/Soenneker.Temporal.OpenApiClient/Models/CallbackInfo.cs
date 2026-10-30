@@ -12,43 +12,69 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CallbackInfo : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("attempt") is { } nullNodeAttempt && nullNodeAttempt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attempt = null;
+            if (parseNode.GetChildNode("blockedReason") is { } nullNodeBlockedReason && nullNodeBlockedReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlockedReason = null;
+            if (parseNode.GetChildNode("callback") is { } nullNodeCallback && nullNodeCallback.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Callback = null;
+            if (parseNode.GetChildNode("lastAttemptCompleteTime") is { } nullNodeLastAttemptCompleteTime && nullNodeLastAttemptCompleteTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastAttemptCompleteTime = null;
+            if (parseNode.GetChildNode("lastAttemptFailure") is { } nullNodeLastAttemptFailure && nullNodeLastAttemptFailure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastAttemptFailure = null;
+            if (parseNode.GetChildNode("nextAttemptScheduleTime") is { } nullNodeNextAttemptScheduleTime && nullNodeNextAttemptScheduleTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextAttemptScheduleTime = null;
+            if (parseNode.GetChildNode("registrationTime") is { } nullNodeRegistrationTime && nullNodeRegistrationTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegistrationTime = null;
+            if (parseNode.GetChildNode("state") is { } nullNodeState && nullNodeState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) State = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The number of attempts made to deliver the callback. This number represents a minimum bound since the attempt is incremented after the callback request completes.</summary>
-        public int? Attempt { get; set; }
+        public int? Attempt { get => _explicitNullValueAttempt; set { _explicitNullValueAttempt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attempt"); else _explicitNullProperties?.Remove("attempt"); } }
+        private int? _explicitNullValueAttempt = default!;
         /// <summary>If the state is BLOCKED, blocked reason provides additional information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BlockedReason { get; set; }
+        public string? BlockedReason { get => _explicitNullValueBlockedReason; set { _explicitNullValueBlockedReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blockedReason"); else _explicitNullProperties?.Remove("blockedReason"); } }
+        private string? _explicitNullValueBlockedReason = default!;
 #nullable restore
 #else
-        public string BlockedReason { get; set; }
+        public string BlockedReason { get => _explicitNullValueBlockedReason; set { _explicitNullValueBlockedReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blockedReason"); else _explicitNullProperties?.Remove("blockedReason"); } }
+        private string _explicitNullValueBlockedReason = default!;
 #endif
         /// <summary>Information on how this callback should be invoked (e.g. its URL and type).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfoCallback? Callback { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfoCallback? Callback { get => _explicitNullValueCallback; set { _explicitNullValueCallback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callback"); else _explicitNullProperties?.Remove("callback"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfoCallback? _explicitNullValueCallback = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfoCallback Callback { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfoCallback Callback { get => _explicitNullValueCallback; set { _explicitNullValueCallback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callback"); else _explicitNullProperties?.Remove("callback"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfoCallback _explicitNullValueCallback = default!;
 #endif
         /// <summary>The time when the last attempt completed.</summary>
-        public DateTimeOffset? LastAttemptCompleteTime { get; set; }
+        public DateTimeOffset? LastAttemptCompleteTime { get => _explicitNullValueLastAttemptCompleteTime; set { _explicitNullValueLastAttemptCompleteTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastAttemptCompleteTime"); else _explicitNullProperties?.Remove("lastAttemptCompleteTime"); } }
+        private DateTimeOffset? _explicitNullValueLastAttemptCompleteTime = default!;
         /// <summary>The last attempt&apos;s failure, if any.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfoLastAttemptFailure? LastAttemptFailure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfoLastAttemptFailure? LastAttemptFailure { get => _explicitNullValueLastAttemptFailure; set { _explicitNullValueLastAttemptFailure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastAttemptFailure"); else _explicitNullProperties?.Remove("lastAttemptFailure"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfoLastAttemptFailure? _explicitNullValueLastAttemptFailure = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfoLastAttemptFailure LastAttemptFailure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfoLastAttemptFailure LastAttemptFailure { get => _explicitNullValueLastAttemptFailure; set { _explicitNullValueLastAttemptFailure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastAttemptFailure"); else _explicitNullProperties?.Remove("lastAttemptFailure"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfoLastAttemptFailure _explicitNullValueLastAttemptFailure = default!;
 #endif
         /// <summary>The time when the next attempt is scheduled.</summary>
-        public DateTimeOffset? NextAttemptScheduleTime { get; set; }
+        public DateTimeOffset? NextAttemptScheduleTime { get => _explicitNullValueNextAttemptScheduleTime; set { _explicitNullValueNextAttemptScheduleTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nextAttemptScheduleTime"); else _explicitNullProperties?.Remove("nextAttemptScheduleTime"); } }
+        private DateTimeOffset? _explicitNullValueNextAttemptScheduleTime = default!;
         /// <summary>The time when the callback was registered.</summary>
-        public DateTimeOffset? RegistrationTime { get; set; }
+        public DateTimeOffset? RegistrationTime { get => _explicitNullValueRegistrationTime; set { _explicitNullValueRegistrationTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registrationTime"); else _explicitNullProperties?.Remove("registrationTime"); } }
+        private DateTimeOffset? _explicitNullValueRegistrationTime = default!;
         /// <summary>The current state of the callback.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfoState? State { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfoState? State { get => _explicitNullValueState; set { _explicitNullValueState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state"); else _explicitNullProperties?.Remove("state"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfoState? _explicitNullValueState = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo"/> and sets the default values.
         /// </summary>
@@ -64,7 +90,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -99,6 +125,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("nextAttemptScheduleTime", NextAttemptScheduleTime);
             writer.WriteDateTimeOffsetValue("registrationTime", RegistrationTime);
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.CallbackInfoState>("state", State);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

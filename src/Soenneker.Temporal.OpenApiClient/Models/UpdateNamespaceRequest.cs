@@ -11,58 +11,85 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class UpdateNamespaceRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("config") is { } nullNodeConfig && nullNodeConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Config = null;
+            if (parseNode.GetChildNode("deleteBadBinary") is { } nullNodeDeleteBadBinary && nullNodeDeleteBadBinary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeleteBadBinary = null;
+            if (parseNode.GetChildNode("namespace") is { } nullNodeNamespace && nullNodeNamespace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Namespace = null;
+            if (parseNode.GetChildNode("promoteNamespace") is { } nullNodePromoteNamespace && nullNodePromoteNamespace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PromoteNamespace = null;
+            if (parseNode.GetChildNode("replicationConfig") is { } nullNodeReplicationConfig && nullNodeReplicationConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReplicationConfig = null;
+            if (parseNode.GetChildNode("securityToken") is { } nullNodeSecurityToken && nullNodeSecurityToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecurityToken = null;
+            if (parseNode.GetChildNode("updateInfo") is { } nullNodeUpdateInfo && nullNodeUpdateInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateInfo = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The config property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceConfig? Config { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceConfig? Config { get => _explicitNullValueConfig; set { _explicitNullValueConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("config"); else _explicitNullProperties?.Remove("config"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NamespaceConfig? _explicitNullValueConfig = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceConfig Config { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceConfig Config { get => _explicitNullValueConfig; set { _explicitNullValueConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("config"); else _explicitNullProperties?.Remove("config"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NamespaceConfig _explicitNullValueConfig = default!;
 #endif
         /// <summary>The deleteBadBinary property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DeleteBadBinary { get; set; }
+        public string? DeleteBadBinary { get => _explicitNullValueDeleteBadBinary; set { _explicitNullValueDeleteBadBinary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deleteBadBinary"); else _explicitNullProperties?.Remove("deleteBadBinary"); } }
+        private string? _explicitNullValueDeleteBadBinary = default!;
 #nullable restore
 #else
-        public string DeleteBadBinary { get; set; }
+        public string DeleteBadBinary { get => _explicitNullValueDeleteBadBinary; set { _explicitNullValueDeleteBadBinary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deleteBadBinary"); else _explicitNullProperties?.Remove("deleteBadBinary"); } }
+        private string _explicitNullValueDeleteBadBinary = default!;
 #endif
         /// <summary>The namespace property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Namespace { get; set; }
+        public string? Namespace { get => _explicitNullValueNamespace; set { _explicitNullValueNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace"); else _explicitNullProperties?.Remove("namespace"); } }
+        private string? _explicitNullValueNamespace = default!;
 #nullable restore
 #else
-        public string Namespace { get; set; }
+        public string Namespace { get => _explicitNullValueNamespace; set { _explicitNullValueNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace"); else _explicitNullProperties?.Remove("namespace"); } }
+        private string _explicitNullValueNamespace = default!;
 #endif
         /// <summary>promote local namespace to global namespace. Ignored if namespace is already global namespace.</summary>
-        public bool? PromoteNamespace { get; set; }
+        public bool? PromoteNamespace { get => _explicitNullValuePromoteNamespace; set { _explicitNullValuePromoteNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promoteNamespace"); else _explicitNullProperties?.Remove("promoteNamespace"); } }
+        private bool? _explicitNullValuePromoteNamespace = default!;
         /// <summary>The replicationConfig property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceReplicationConfig? ReplicationConfig { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceReplicationConfig? ReplicationConfig { get => _explicitNullValueReplicationConfig; set { _explicitNullValueReplicationConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("replicationConfig"); else _explicitNullProperties?.Remove("replicationConfig"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NamespaceReplicationConfig? _explicitNullValueReplicationConfig = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceReplicationConfig ReplicationConfig { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceReplicationConfig ReplicationConfig { get => _explicitNullValueReplicationConfig; set { _explicitNullValueReplicationConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("replicationConfig"); else _explicitNullProperties?.Remove("replicationConfig"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NamespaceReplicationConfig _explicitNullValueReplicationConfig = default!;
 #endif
         /// <summary>The securityToken property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SecurityToken { get; set; }
+        public string? SecurityToken { get => _explicitNullValueSecurityToken; set { _explicitNullValueSecurityToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("securityToken"); else _explicitNullProperties?.Remove("securityToken"); } }
+        private string? _explicitNullValueSecurityToken = default!;
 #nullable restore
 #else
-        public string SecurityToken { get; set; }
+        public string SecurityToken { get => _explicitNullValueSecurityToken; set { _explicitNullValueSecurityToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("securityToken"); else _explicitNullProperties?.Remove("securityToken"); } }
+        private string _explicitNullValueSecurityToken = default!;
 #endif
         /// <summary>The updateInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateNamespaceInfo? UpdateInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateNamespaceInfo? UpdateInfo { get => _explicitNullValueUpdateInfo; set { _explicitNullValueUpdateInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateInfo"); else _explicitNullProperties?.Remove("updateInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.UpdateNamespaceInfo? _explicitNullValueUpdateInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateNamespaceInfo UpdateInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateNamespaceInfo UpdateInfo { get => _explicitNullValueUpdateInfo; set { _explicitNullValueUpdateInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateInfo"); else _explicitNullProperties?.Remove("updateInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.UpdateNamespaceInfo _explicitNullValueUpdateInfo = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.UpdateNamespaceRequest"/> and sets the default values.
@@ -79,7 +106,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.UpdateNamespaceRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.UpdateNamespaceRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.UpdateNamespaceRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -112,6 +139,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceReplicationConfig>("replicationConfig", ReplicationConfig);
             writer.WriteStringValue("securityToken", SecurityToken);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateNamespaceInfo>("updateInfo", UpdateInfo);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

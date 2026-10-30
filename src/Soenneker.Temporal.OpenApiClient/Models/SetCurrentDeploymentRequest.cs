@@ -12,40 +12,59 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SetCurrentDeploymentRequest : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("deployment") is { } nullNodeDeployment && nullNodeDeployment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Deployment = null;
+            if (parseNode.GetChildNode("identity") is { } nullNodeIdentity && nullNodeIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Identity = null;
+            if (parseNode.GetChildNode("namespace") is { } nullNodeNamespace && nullNodeNamespace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Namespace = null;
+            if (parseNode.GetChildNode("updateMetadata") is { } nullNodeUpdateMetadata && nullNodeUpdateMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateMetadata = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>`Deployment` identifies a deployment of Temporal workers. The combination of deployment series name + build ID serves as the identifier. User can use `WorkerDeploymentOptions` in their worker programs to specify these values. Deprecated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Deployment? Deployment { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.Deployment? Deployment { get => _explicitNullValueDeployment; set { _explicitNullValueDeployment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deployment"); else _explicitNullProperties?.Remove("deployment"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.Deployment? _explicitNullValueDeployment = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Deployment Deployment { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.Deployment Deployment { get => _explicitNullValueDeployment; set { _explicitNullValueDeployment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deployment"); else _explicitNullProperties?.Remove("deployment"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.Deployment _explicitNullValueDeployment = default!;
 #endif
         /// <summary>Optional. The identity of the client who initiated this request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Identity { get; set; }
+        public string? Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity"); else _explicitNullProperties?.Remove("identity"); } }
+        private string? _explicitNullValueIdentity = default!;
 #nullable restore
 #else
-        public string Identity { get; set; }
+        public string Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity"); else _explicitNullProperties?.Remove("identity"); } }
+        private string _explicitNullValueIdentity = default!;
 #endif
         /// <summary>The namespace property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Namespace { get; set; }
+        public string? Namespace { get => _explicitNullValueNamespace; set { _explicitNullValueNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace"); else _explicitNullProperties?.Remove("namespace"); } }
+        private string? _explicitNullValueNamespace = default!;
 #nullable restore
 #else
-        public string Namespace { get; set; }
+        public string Namespace { get => _explicitNullValueNamespace; set { _explicitNullValueNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace"); else _explicitNullProperties?.Remove("namespace"); } }
+        private string _explicitNullValueNamespace = default!;
 #endif
         /// <summary>Optional. Use to add or remove user-defined metadata entries. Metadata entries are exposed when describing a deployment. It is a good place for information such as operator name, links to internal deployment pipelines, etc.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentRequestUpdateMetadata? UpdateMetadata { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentRequestUpdateMetadata? UpdateMetadata { get => _explicitNullValueUpdateMetadata; set { _explicitNullValueUpdateMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateMetadata"); else _explicitNullProperties?.Remove("updateMetadata"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentRequestUpdateMetadata? _explicitNullValueUpdateMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentRequestUpdateMetadata UpdateMetadata { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentRequestUpdateMetadata UpdateMetadata { get => _explicitNullValueUpdateMetadata; set { _explicitNullValueUpdateMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateMetadata"); else _explicitNullProperties?.Remove("updateMetadata"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentRequestUpdateMetadata _explicitNullValueUpdateMetadata = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentRequest"/> and sets the default values.
@@ -62,7 +81,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,6 +108,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("identity", Identity);
             writer.WriteStringValue("namespace", Namespace);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentRequestUpdateMetadata>("updateMetadata", UpdateMetadata);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

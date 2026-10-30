@@ -12,43 +12,69 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WorkflowExecutionExtendedInfo : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("cancelRequested") is { } nullNodeCancelRequested && nullNodeCancelRequested.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CancelRequested = null;
+            if (parseNode.GetChildNode("executionExpirationTime") is { } nullNodeExecutionExpirationTime && nullNodeExecutionExpirationTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExecutionExpirationTime = null;
+            if (parseNode.GetChildNode("lastResetTime") is { } nullNodeLastResetTime && nullNodeLastResetTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastResetTime = null;
+            if (parseNode.GetChildNode("originalStartTime") is { } nullNodeOriginalStartTime && nullNodeOriginalStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginalStartTime = null;
+            if (parseNode.GetChildNode("pauseInfo") is { } nullNodePauseInfo && nullNodePauseInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PauseInfo = null;
+            if (parseNode.GetChildNode("requestIdInfos") is { } nullNodeRequestIdInfos && nullNodeRequestIdInfos.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestIdInfos = null;
+            if (parseNode.GetChildNode("resetRunId") is { } nullNodeResetRunId && nullNodeResetRunId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResetRunId = null;
+            if (parseNode.GetChildNode("runExpirationTime") is { } nullNodeRunExpirationTime && nullNodeRunExpirationTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RunExpirationTime = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>indicates if the workflow received a cancel request</summary>
-        public bool? CancelRequested { get; set; }
+        public bool? CancelRequested { get => _explicitNullValueCancelRequested; set { _explicitNullValueCancelRequested = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancelRequested"); else _explicitNullProperties?.Remove("cancelRequested"); } }
+        private bool? _explicitNullValueCancelRequested = default!;
         /// <summary>Workflow execution expiration time is defined as workflow start time plus expiration timeout. Workflow start time may change after workflow reset.</summary>
-        public DateTimeOffset? ExecutionExpirationTime { get; set; }
+        public DateTimeOffset? ExecutionExpirationTime { get => _explicitNullValueExecutionExpirationTime; set { _explicitNullValueExecutionExpirationTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("executionExpirationTime"); else _explicitNullProperties?.Remove("executionExpirationTime"); } }
+        private DateTimeOffset? _explicitNullValueExecutionExpirationTime = default!;
         /// <summary>Last workflow reset time. Nil if the workflow was never reset.</summary>
-        public DateTimeOffset? LastResetTime { get; set; }
+        public DateTimeOffset? LastResetTime { get => _explicitNullValueLastResetTime; set { _explicitNullValueLastResetTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastResetTime"); else _explicitNullProperties?.Remove("lastResetTime"); } }
+        private DateTimeOffset? _explicitNullValueLastResetTime = default!;
         /// <summary>Original workflow start time.</summary>
-        public DateTimeOffset? OriginalStartTime { get; set; }
+        public DateTimeOffset? OriginalStartTime { get => _explicitNullValueOriginalStartTime; set { _explicitNullValueOriginalStartTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originalStartTime"); else _explicitNullProperties?.Remove("originalStartTime"); } }
+        private DateTimeOffset? _explicitNullValueOriginalStartTime = default!;
         /// <summary>Information about the workflow execution pause operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfoPauseInfo? PauseInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfoPauseInfo? PauseInfo { get => _explicitNullValuePauseInfo; set { _explicitNullValuePauseInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pauseInfo"); else _explicitNullProperties?.Remove("pauseInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfoPauseInfo? _explicitNullValuePauseInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfoPauseInfo PauseInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfoPauseInfo PauseInfo { get => _explicitNullValuePauseInfo; set { _explicitNullValuePauseInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pauseInfo"); else _explicitNullProperties?.Remove("pauseInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfoPauseInfo _explicitNullValuePauseInfo = default!;
 #endif
         /// <summary>Request ID information (eg: history event information associated with the request ID). Note: It only contains request IDs from StartWorkflowExecution requests, including indirect calls (eg: if SignalWithStartWorkflowExecution starts a new workflow, then the request ID is used in the StartWorkflowExecution request).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfoRequestIdInfosProperty? RequestIdInfos { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfoRequestIdInfosProperty? RequestIdInfos { get => _explicitNullValueRequestIdInfos; set { _explicitNullValueRequestIdInfos = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestIdInfos"); else _explicitNullProperties?.Remove("requestIdInfos"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfoRequestIdInfosProperty? _explicitNullValueRequestIdInfos = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfoRequestIdInfosProperty RequestIdInfos { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfoRequestIdInfosProperty RequestIdInfos { get => _explicitNullValueRequestIdInfos; set { _explicitNullValueRequestIdInfos = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestIdInfos"); else _explicitNullProperties?.Remove("requestIdInfos"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfoRequestIdInfosProperty _explicitNullValueRequestIdInfos = default!;
 #endif
         /// <summary>Reset Run ID points to the new run when this execution is reset. If the execution is reset multiple times, it points to the latest run.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ResetRunId { get; set; }
+        public string? ResetRunId { get => _explicitNullValueResetRunId; set { _explicitNullValueResetRunId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resetRunId"); else _explicitNullProperties?.Remove("resetRunId"); } }
+        private string? _explicitNullValueResetRunId = default!;
 #nullable restore
 #else
-        public string ResetRunId { get; set; }
+        public string ResetRunId { get => _explicitNullValueResetRunId; set { _explicitNullValueResetRunId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resetRunId"); else _explicitNullProperties?.Remove("resetRunId"); } }
+        private string _explicitNullValueResetRunId = default!;
 #endif
         /// <summary>Workflow run expiration time is defined as current workflow run start time plus workflow run timeout.</summary>
-        public DateTimeOffset? RunExpirationTime { get; set; }
+        public DateTimeOffset? RunExpirationTime { get => _explicitNullValueRunExpirationTime; set { _explicitNullValueRunExpirationTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runExpirationTime"); else _explicitNullProperties?.Remove("runExpirationTime"); } }
+        private DateTimeOffset? _explicitNullValueRunExpirationTime = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfo"/> and sets the default values.
         /// </summary>
@@ -64,7 +90,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -99,6 +125,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionExtendedInfoRequestIdInfosProperty>("requestIdInfos", RequestIdInfos);
             writer.WriteStringValue("resetRunId", ResetRunId);
             writer.WriteDateTimeOffsetValue("runExpirationTime", RunExpirationTime);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

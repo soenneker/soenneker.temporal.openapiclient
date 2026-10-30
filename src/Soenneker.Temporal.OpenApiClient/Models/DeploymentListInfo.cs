@@ -12,21 +12,35 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DeploymentListInfo : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("createTime") is { } nullNodeCreateTime && nullNodeCreateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateTime = null;
+            if (parseNode.GetChildNode("deployment") is { } nullNodeDeployment && nullNodeDeployment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Deployment = null;
+            if (parseNode.GetChildNode("isCurrent") is { } nullNodeIsCurrent && nullNodeIsCurrent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsCurrent = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The createTime property</summary>
-        public DateTimeOffset? CreateTime { get; set; }
+        public DateTimeOffset? CreateTime { get => _explicitNullValueCreateTime; set { _explicitNullValueCreateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createTime"); else _explicitNullProperties?.Remove("createTime"); } }
+        private DateTimeOffset? _explicitNullValueCreateTime = default!;
         /// <summary>`Deployment` identifies a deployment of Temporal workers. The combination of deployment series name + build ID serves as the identifier. User can use `WorkerDeploymentOptions` in their worker programs to specify these values. Deprecated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Deployment? Deployment { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.Deployment? Deployment { get => _explicitNullValueDeployment; set { _explicitNullValueDeployment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deployment"); else _explicitNullProperties?.Remove("deployment"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.Deployment? _explicitNullValueDeployment = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Deployment Deployment { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.Deployment Deployment { get => _explicitNullValueDeployment; set { _explicitNullValueDeployment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deployment"); else _explicitNullProperties?.Remove("deployment"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.Deployment _explicitNullValueDeployment = default!;
 #endif
         /// <summary>If this deployment is the current deployment of its deployment series.</summary>
-        public bool? IsCurrent { get; set; }
+        public bool? IsCurrent { get => _explicitNullValueIsCurrent; set { _explicitNullValueIsCurrent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isCurrent"); else _explicitNullProperties?.Remove("isCurrent"); } }
+        private bool? _explicitNullValueIsCurrent = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.DeploymentListInfo"/> and sets the default values.
         /// </summary>
@@ -42,7 +56,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.DeploymentListInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.DeploymentListInfo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.DeploymentListInfo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -67,6 +81,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("createTime", CreateTime);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Deployment>("deployment", Deployment);
             writer.WriteBoolValue("isCurrent", IsCurrent);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

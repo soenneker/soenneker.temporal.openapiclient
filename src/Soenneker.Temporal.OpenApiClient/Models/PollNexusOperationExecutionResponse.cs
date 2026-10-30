@@ -11,43 +11,64 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PollNexusOperationExecutionResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("failure") is { } nullNodeFailure && nullNodeFailure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Failure = null;
+            if (parseNode.GetChildNode("operationToken") is { } nullNodeOperationToken && nullNodeOperationToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OperationToken = null;
+            if (parseNode.GetChildNode("result") is { } nullNodeResult && nullNodeResult.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Result = null;
+            if (parseNode.GetChildNode("runId") is { } nullNodeRunId && nullNodeRunId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RunId = null;
+            if (parseNode.GetChildNode("waitStage") is { } nullNodeWaitStage && nullNodeWaitStage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WaitStage = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The failure if the operation completed unsuccessfully.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.PollNexusOperationExecutionResponseFailure? Failure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PollNexusOperationExecutionResponseFailure? Failure { get => _explicitNullValueFailure; set { _explicitNullValueFailure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failure"); else _explicitNullProperties?.Remove("failure"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.PollNexusOperationExecutionResponseFailure? _explicitNullValueFailure = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.PollNexusOperationExecutionResponseFailure Failure { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PollNexusOperationExecutionResponseFailure Failure { get => _explicitNullValueFailure; set { _explicitNullValueFailure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failure"); else _explicitNullProperties?.Remove("failure"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.PollNexusOperationExecutionResponseFailure _explicitNullValueFailure = default!;
 #endif
         /// <summary>Operation token. Only populated for asynchronous operations after a successful StartOperation call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OperationToken { get; set; }
+        public string? OperationToken { get => _explicitNullValueOperationToken; set { _explicitNullValueOperationToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operationToken"); else _explicitNullProperties?.Remove("operationToken"); } }
+        private string? _explicitNullValueOperationToken = default!;
 #nullable restore
 #else
-        public string OperationToken { get; set; }
+        public string OperationToken { get => _explicitNullValueOperationToken; set { _explicitNullValueOperationToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operationToken"); else _explicitNullProperties?.Remove("operationToken"); } }
+        private string _explicitNullValueOperationToken = default!;
 #endif
         /// <summary>The result if the operation completed successfully.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Result { get; set; }
+        public UntypedNode? Result { get => _explicitNullValueResult; set { _explicitNullValueResult = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("result"); else _explicitNullProperties?.Remove("result"); } }
+        private UntypedNode? _explicitNullValueResult = default!;
 #nullable restore
 #else
-        public UntypedNode Result { get; set; }
+        public UntypedNode Result { get => _explicitNullValueResult; set { _explicitNullValueResult = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("result"); else _explicitNullProperties?.Remove("result"); } }
+        private UntypedNode _explicitNullValueResult = default!;
 #endif
         /// <summary>The run ID of the operation, useful when run_id was not specified in the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RunId { get; set; }
+        public string? RunId { get => _explicitNullValueRunId; set { _explicitNullValueRunId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runId"); else _explicitNullProperties?.Remove("runId"); } }
+        private string? _explicitNullValueRunId = default!;
 #nullable restore
 #else
-        public string RunId { get; set; }
+        public string RunId { get => _explicitNullValueRunId; set { _explicitNullValueRunId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runId"); else _explicitNullProperties?.Remove("runId"); } }
+        private string _explicitNullValueRunId = default!;
 #endif
         /// <summary>The current stage of the operation. May be more advanced than the stage requested in the poll.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.PollNexusOperationExecutionResponseWaitStage? WaitStage { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PollNexusOperationExecutionResponseWaitStage? WaitStage { get => _explicitNullValueWaitStage; set { _explicitNullValueWaitStage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("waitStage"); else _explicitNullProperties?.Remove("waitStage"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.PollNexusOperationExecutionResponseWaitStage? _explicitNullValueWaitStage = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.PollNexusOperationExecutionResponse"/> and sets the default values.
         /// </summary>
@@ -63,7 +84,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.PollNexusOperationExecutionResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.PollNexusOperationExecutionResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.PollNexusOperationExecutionResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -92,6 +113,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteObjectValue<UntypedNode>("result", Result);
             writer.WriteStringValue("runId", RunId);
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.PollNexusOperationExecutionResponseWaitStage>("waitStage", WaitStage);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

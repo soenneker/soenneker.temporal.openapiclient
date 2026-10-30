@@ -11,24 +11,37 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class QueryWorkflowResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("queryRejected") is { } nullNodeQueryRejected && nullNodeQueryRejected.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QueryRejected = null;
+            if (parseNode.GetChildNode("queryResult") is { } nullNodeQueryResult && nullNodeQueryResult.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QueryResult = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The queryRejected property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.QueryRejected? QueryRejected { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.QueryRejected? QueryRejected { get => _explicitNullValueQueryRejected; set { _explicitNullValueQueryRejected = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queryRejected"); else _explicitNullProperties?.Remove("queryRejected"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.QueryRejected? _explicitNullValueQueryRejected = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.QueryRejected QueryRejected { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.QueryRejected QueryRejected { get => _explicitNullValueQueryRejected; set { _explicitNullValueQueryRejected = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queryRejected"); else _explicitNullProperties?.Remove("queryRejected"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.QueryRejected _explicitNullValueQueryRejected = default!;
 #endif
         /// <summary>See `Payload`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Payloads? QueryResult { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.Payloads? QueryResult { get => _explicitNullValueQueryResult; set { _explicitNullValueQueryResult = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queryResult"); else _explicitNullProperties?.Remove("queryResult"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.Payloads? _explicitNullValueQueryResult = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Payloads QueryResult { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.Payloads QueryResult { get => _explicitNullValueQueryResult; set { _explicitNullValueQueryResult = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queryResult"); else _explicitNullProperties?.Remove("queryResult"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.Payloads _explicitNullValueQueryResult = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.QueryWorkflowResponse"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.QueryWorkflowResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.QueryWorkflowResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.QueryWorkflowResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.QueryRejected>("queryRejected", QueryRejected);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>("queryResult", QueryResult);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

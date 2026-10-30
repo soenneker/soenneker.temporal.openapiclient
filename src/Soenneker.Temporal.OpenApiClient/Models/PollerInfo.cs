@@ -11,36 +11,56 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PollerInfo : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("deploymentOptions") is { } nullNodeDeploymentOptions && nullNodeDeploymentOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeploymentOptions = null;
+            if (parseNode.GetChildNode("identity") is { } nullNodeIdentity && nullNodeIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Identity = null;
+            if (parseNode.GetChildNode("lastAccessTime") is { } nullNodeLastAccessTime && nullNodeLastAccessTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastAccessTime = null;
+            if (parseNode.GetChildNode("ratePerSecond") is { } nullNodeRatePerSecond && nullNodeRatePerSecond.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RatePerSecond = null;
+            if (parseNode.GetChildNode("workerVersionCapabilities") is { } nullNodeWorkerVersionCapabilities && nullNodeWorkerVersionCapabilities.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerVersionCapabilities = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Worker deployment options that SDK sent to server.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.PollerInfoDeploymentOptions? DeploymentOptions { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PollerInfoDeploymentOptions? DeploymentOptions { get => _explicitNullValueDeploymentOptions; set { _explicitNullValueDeploymentOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploymentOptions"); else _explicitNullProperties?.Remove("deploymentOptions"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.PollerInfoDeploymentOptions? _explicitNullValueDeploymentOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.PollerInfoDeploymentOptions DeploymentOptions { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PollerInfoDeploymentOptions DeploymentOptions { get => _explicitNullValueDeploymentOptions; set { _explicitNullValueDeploymentOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploymentOptions"); else _explicitNullProperties?.Remove("deploymentOptions"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.PollerInfoDeploymentOptions _explicitNullValueDeploymentOptions = default!;
 #endif
         /// <summary>The identity property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Identity { get; set; }
+        public string? Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity"); else _explicitNullProperties?.Remove("identity"); } }
+        private string? _explicitNullValueIdentity = default!;
 #nullable restore
 #else
-        public string Identity { get; set; }
+        public string Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity"); else _explicitNullProperties?.Remove("identity"); } }
+        private string _explicitNullValueIdentity = default!;
 #endif
         /// <summary>The lastAccessTime property</summary>
-        public DateTimeOffset? LastAccessTime { get; set; }
+        public DateTimeOffset? LastAccessTime { get => _explicitNullValueLastAccessTime; set { _explicitNullValueLastAccessTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastAccessTime"); else _explicitNullProperties?.Remove("lastAccessTime"); } }
+        private DateTimeOffset? _explicitNullValueLastAccessTime = default!;
         /// <summary>The ratePerSecond property</summary>
-        public double? RatePerSecond { get; set; }
+        public double? RatePerSecond { get => _explicitNullValueRatePerSecond; set { _explicitNullValueRatePerSecond = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ratePerSecond"); else _explicitNullProperties?.Remove("ratePerSecond"); } }
+        private double? _explicitNullValueRatePerSecond = default!;
         /// <summary>If a worker has opted into the worker versioning feature while polling, its capabilities will appear here. Deprecated. Replaced by deployment_options.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.PollerInfoWorkerVersionCapabilities? WorkerVersionCapabilities { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PollerInfoWorkerVersionCapabilities? WorkerVersionCapabilities { get => _explicitNullValueWorkerVersionCapabilities; set { _explicitNullValueWorkerVersionCapabilities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerVersionCapabilities"); else _explicitNullProperties?.Remove("workerVersionCapabilities"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.PollerInfoWorkerVersionCapabilities? _explicitNullValueWorkerVersionCapabilities = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.PollerInfoWorkerVersionCapabilities WorkerVersionCapabilities { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PollerInfoWorkerVersionCapabilities WorkerVersionCapabilities { get => _explicitNullValueWorkerVersionCapabilities; set { _explicitNullValueWorkerVersionCapabilities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerVersionCapabilities"); else _explicitNullProperties?.Remove("workerVersionCapabilities"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.PollerInfoWorkerVersionCapabilities _explicitNullValueWorkerVersionCapabilities = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.PollerInfo"/> and sets the default values.
@@ -57,7 +77,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.PollerInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.PollerInfo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.PollerInfo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -86,6 +106,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("lastAccessTime", LastAccessTime);
             writer.WriteDoubleValue("ratePerSecond", RatePerSecond);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.PollerInfoWorkerVersionCapabilities>("workerVersionCapabilities", WorkerVersionCapabilities);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,122 +11,173 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class StartBatchOperationRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("cancellationOperation") is { } nullNodeCancellationOperation && nullNodeCancellationOperation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CancellationOperation = null;
+            if (parseNode.GetChildNode("deletionOperation") is { } nullNodeDeletionOperation && nullNodeDeletionOperation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeletionOperation = null;
+            if (parseNode.GetChildNode("executions") is { } nullNodeExecutions && nullNodeExecutions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Executions = null;
+            if (parseNode.GetChildNode("jobId") is { } nullNodeJobId && nullNodeJobId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JobId = null;
+            if (parseNode.GetChildNode("maxOperationsPerSecond") is { } nullNodeMaxOperationsPerSecond && nullNodeMaxOperationsPerSecond.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxOperationsPerSecond = null;
+            if (parseNode.GetChildNode("namespace") is { } nullNodeNamespace && nullNodeNamespace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Namespace = null;
+            if (parseNode.GetChildNode("reason") is { } nullNodeReason && nullNodeReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reason = null;
+            if (parseNode.GetChildNode("resetActivitiesOperation") is { } nullNodeResetActivitiesOperation && nullNodeResetActivitiesOperation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResetActivitiesOperation = null;
+            if (parseNode.GetChildNode("resetOperation") is { } nullNodeResetOperation && nullNodeResetOperation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResetOperation = null;
+            if (parseNode.GetChildNode("signalOperation") is { } nullNodeSignalOperation && nullNodeSignalOperation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignalOperation = null;
+            if (parseNode.GetChildNode("terminationOperation") is { } nullNodeTerminationOperation && nullNodeTerminationOperation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TerminationOperation = null;
+            if (parseNode.GetChildNode("unpauseActivitiesOperation") is { } nullNodeUnpauseActivitiesOperation && nullNodeUnpauseActivitiesOperation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnpauseActivitiesOperation = null;
+            if (parseNode.GetChildNode("updateActivityOptionsOperation") is { } nullNodeUpdateActivityOptionsOperation && nullNodeUpdateActivityOptionsOperation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateActivityOptionsOperation = null;
+            if (parseNode.GetChildNode("updateWorkflowOptionsOperation") is { } nullNodeUpdateWorkflowOptionsOperation && nullNodeUpdateWorkflowOptionsOperation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateWorkflowOptionsOperation = null;
+            if (parseNode.GetChildNode("visibilityQuery") is { } nullNodeVisibilityQuery && nullNodeVisibilityQuery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VisibilityQuery = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>BatchOperationCancellation sends cancel requests to batch workflows. Keep the parameter in sync with temporal.api.workflowservice.v1.RequestCancelWorkflowExecutionRequest. Ignore first_execution_run_id because this is used for single workflow operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationCancellation? CancellationOperation { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationCancellation? CancellationOperation { get => _explicitNullValueCancellationOperation; set { _explicitNullValueCancellationOperation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancellationOperation"); else _explicitNullProperties?.Remove("cancellationOperation"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationCancellation? _explicitNullValueCancellationOperation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationCancellation CancellationOperation { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationCancellation CancellationOperation { get => _explicitNullValueCancellationOperation; set { _explicitNullValueCancellationOperation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancellationOperation"); else _explicitNullProperties?.Remove("cancellationOperation"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationCancellation _explicitNullValueCancellationOperation = default!;
 #endif
         /// <summary>BatchOperationDeletion sends deletion requests to batch workflows. Keep the parameter in sync with temporal.api.workflowservice.v1.DeleteWorkflowExecutionRequest.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationDeletion? DeletionOperation { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationDeletion? DeletionOperation { get => _explicitNullValueDeletionOperation; set { _explicitNullValueDeletionOperation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deletionOperation"); else _explicitNullProperties?.Remove("deletionOperation"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationDeletion? _explicitNullValueDeletionOperation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationDeletion DeletionOperation { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationDeletion DeletionOperation { get => _explicitNullValueDeletionOperation; set { _explicitNullValueDeletionOperation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deletionOperation"); else _explicitNullProperties?.Remove("deletionOperation"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationDeletion _explicitNullValueDeletionOperation = default!;
 #endif
         /// <summary>Executions to apply the batch operation This field and `visibility_query` are mutually exclusive</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution>? Executions { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution>? Executions { get => _explicitNullValueExecutions; set { _explicitNullValueExecutions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("executions"); else _explicitNullProperties?.Remove("executions"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution>? _explicitNullValueExecutions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution> Executions { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution> Executions { get => _explicitNullValueExecutions; set { _explicitNullValueExecutions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("executions"); else _explicitNullProperties?.Remove("executions"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution> _explicitNullValueExecutions = default!;
 #endif
         /// <summary>Job ID defines the unique ID for the batch job</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? JobId { get; set; }
+        public string? JobId { get => _explicitNullValueJobId; set { _explicitNullValueJobId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jobId"); else _explicitNullProperties?.Remove("jobId"); } }
+        private string? _explicitNullValueJobId = default!;
 #nullable restore
 #else
-        public string JobId { get; set; }
+        public string JobId { get => _explicitNullValueJobId; set { _explicitNullValueJobId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jobId"); else _explicitNullProperties?.Remove("jobId"); } }
+        private string _explicitNullValueJobId = default!;
 #endif
         /// <summary>Limit for the number of operations processed per second within this batch. Its purpose is to reduce the stress on the system caused by batch operations, which helps to prevent system overload and minimize potential delays in executing ongoing tasks for user workers. Note that when no explicit limit is provided, the server will operate according to its limit defined by the dynamic configuration key `worker.batcherRPS`. This also applies if the value in this field exceeds the server&apos;s configured limit.</summary>
-        public float? MaxOperationsPerSecond { get; set; }
+        public float? MaxOperationsPerSecond { get => _explicitNullValueMaxOperationsPerSecond; set { _explicitNullValueMaxOperationsPerSecond = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxOperationsPerSecond"); else _explicitNullProperties?.Remove("maxOperationsPerSecond"); } }
+        private float? _explicitNullValueMaxOperationsPerSecond = default!;
         /// <summary>Namespace that contains the batch operation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Namespace { get; set; }
+        public string? Namespace { get => _explicitNullValueNamespace; set { _explicitNullValueNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace"); else _explicitNullProperties?.Remove("namespace"); } }
+        private string? _explicitNullValueNamespace = default!;
 #nullable restore
 #else
-        public string Namespace { get; set; }
+        public string Namespace { get => _explicitNullValueNamespace; set { _explicitNullValueNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace"); else _explicitNullProperties?.Remove("namespace"); } }
+        private string _explicitNullValueNamespace = default!;
 #endif
         /// <summary>Reason to perform the batch operation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Reason { get; set; }
+        public string? Reason { get => _explicitNullValueReason; set { _explicitNullValueReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason"); else _explicitNullProperties?.Remove("reason"); } }
+        private string? _explicitNullValueReason = default!;
 #nullable restore
 #else
-        public string Reason { get; set; }
+        public string Reason { get => _explicitNullValueReason; set { _explicitNullValueReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason"); else _explicitNullProperties?.Remove("reason"); } }
+        private string _explicitNullValueReason = default!;
 #endif
         /// <summary>BatchOperationResetActivities sends activity reset requests in a batch. NOTE: keep in sync with temporal.api.workflowservice.v1.ResetActivityRequest</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationResetActivities? ResetActivitiesOperation { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationResetActivities? ResetActivitiesOperation { get => _explicitNullValueResetActivitiesOperation; set { _explicitNullValueResetActivitiesOperation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resetActivitiesOperation"); else _explicitNullProperties?.Remove("resetActivitiesOperation"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationResetActivities? _explicitNullValueResetActivitiesOperation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationResetActivities ResetActivitiesOperation { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationResetActivities ResetActivitiesOperation { get => _explicitNullValueResetActivitiesOperation; set { _explicitNullValueResetActivitiesOperation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resetActivitiesOperation"); else _explicitNullProperties?.Remove("resetActivitiesOperation"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationResetActivities _explicitNullValueResetActivitiesOperation = default!;
 #endif
         /// <summary>BatchOperationReset sends reset requests to batch workflows. Keep the parameter in sync with temporal.api.workflowservice.v1.ResetWorkflowExecutionRequest.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationReset? ResetOperation { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationReset? ResetOperation { get => _explicitNullValueResetOperation; set { _explicitNullValueResetOperation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resetOperation"); else _explicitNullProperties?.Remove("resetOperation"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationReset? _explicitNullValueResetOperation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationReset ResetOperation { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationReset ResetOperation { get => _explicitNullValueResetOperation; set { _explicitNullValueResetOperation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resetOperation"); else _explicitNullProperties?.Remove("resetOperation"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationReset _explicitNullValueResetOperation = default!;
 #endif
         /// <summary>BatchOperationSignal sends signals to batch workflows. Keep the parameter in sync with temporal.api.workflowservice.v1.SignalWorkflowExecutionRequest.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationSignal? SignalOperation { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationSignal? SignalOperation { get => _explicitNullValueSignalOperation; set { _explicitNullValueSignalOperation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signalOperation"); else _explicitNullProperties?.Remove("signalOperation"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationSignal? _explicitNullValueSignalOperation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationSignal SignalOperation { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationSignal SignalOperation { get => _explicitNullValueSignalOperation; set { _explicitNullValueSignalOperation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signalOperation"); else _explicitNullProperties?.Remove("signalOperation"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationSignal _explicitNullValueSignalOperation = default!;
 #endif
         /// <summary>BatchOperationTermination sends terminate requests to batch workflows. Keep the parameter in sync with temporal.api.workflowservice.v1.TerminateWorkflowExecutionRequest. Ignore first_execution_run_id because this is used for single workflow operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationTermination? TerminationOperation { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationTermination? TerminationOperation { get => _explicitNullValueTerminationOperation; set { _explicitNullValueTerminationOperation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("terminationOperation"); else _explicitNullProperties?.Remove("terminationOperation"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationTermination? _explicitNullValueTerminationOperation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationTermination TerminationOperation { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationTermination TerminationOperation { get => _explicitNullValueTerminationOperation; set { _explicitNullValueTerminationOperation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("terminationOperation"); else _explicitNullProperties?.Remove("terminationOperation"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationTermination _explicitNullValueTerminationOperation = default!;
 #endif
         /// <summary>BatchOperationUnpauseActivities sends unpause requests to batch workflows.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationUnpauseActivities? UnpauseActivitiesOperation { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationUnpauseActivities? UnpauseActivitiesOperation { get => _explicitNullValueUnpauseActivitiesOperation; set { _explicitNullValueUnpauseActivitiesOperation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unpauseActivitiesOperation"); else _explicitNullProperties?.Remove("unpauseActivitiesOperation"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationUnpauseActivities? _explicitNullValueUnpauseActivitiesOperation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationUnpauseActivities UnpauseActivitiesOperation { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationUnpauseActivities UnpauseActivitiesOperation { get => _explicitNullValueUnpauseActivitiesOperation; set { _explicitNullValueUnpauseActivitiesOperation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unpauseActivitiesOperation"); else _explicitNullProperties?.Remove("unpauseActivitiesOperation"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationUnpauseActivities _explicitNullValueUnpauseActivitiesOperation = default!;
 #endif
         /// <summary>BatchOperationUpdateActivityOptions sends an update-activity-options requests in a batch. NOTE: keep in sync with temporal.api.workflowservice.v1.UpdateActivityRequest</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationUpdateActivityOptions? UpdateActivityOptionsOperation { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationUpdateActivityOptions? UpdateActivityOptionsOperation { get => _explicitNullValueUpdateActivityOptionsOperation; set { _explicitNullValueUpdateActivityOptionsOperation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateActivityOptionsOperation"); else _explicitNullProperties?.Remove("updateActivityOptionsOperation"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationUpdateActivityOptions? _explicitNullValueUpdateActivityOptionsOperation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationUpdateActivityOptions UpdateActivityOptionsOperation { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationUpdateActivityOptions UpdateActivityOptionsOperation { get => _explicitNullValueUpdateActivityOptionsOperation; set { _explicitNullValueUpdateActivityOptionsOperation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateActivityOptionsOperation"); else _explicitNullProperties?.Remove("updateActivityOptionsOperation"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationUpdateActivityOptions _explicitNullValueUpdateActivityOptionsOperation = default!;
 #endif
         /// <summary>BatchOperationUpdateWorkflowExecutionOptions sends UpdateWorkflowExecutionOptions requests to batch workflows. Keep the parameters in sync with temporal.api.workflowservice.v1.UpdateWorkflowExecutionOptionsRequest.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationUpdateWorkflowExecutionOptions? UpdateWorkflowOptionsOperation { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationUpdateWorkflowExecutionOptions? UpdateWorkflowOptionsOperation { get => _explicitNullValueUpdateWorkflowOptionsOperation; set { _explicitNullValueUpdateWorkflowOptionsOperation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateWorkflowOptionsOperation"); else _explicitNullProperties?.Remove("updateWorkflowOptionsOperation"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationUpdateWorkflowExecutionOptions? _explicitNullValueUpdateWorkflowOptionsOperation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationUpdateWorkflowExecutionOptions UpdateWorkflowOptionsOperation { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationUpdateWorkflowExecutionOptions UpdateWorkflowOptionsOperation { get => _explicitNullValueUpdateWorkflowOptionsOperation; set { _explicitNullValueUpdateWorkflowOptionsOperation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateWorkflowOptionsOperation"); else _explicitNullProperties?.Remove("updateWorkflowOptionsOperation"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationUpdateWorkflowExecutionOptions _explicitNullValueUpdateWorkflowOptionsOperation = default!;
 #endif
         /// <summary>Visibility query defines the the group of workflow to apply the batch operation This field and `executions` are mutually exclusive</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VisibilityQuery { get; set; }
+        public string? VisibilityQuery { get => _explicitNullValueVisibilityQuery; set { _explicitNullValueVisibilityQuery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visibilityQuery"); else _explicitNullProperties?.Remove("visibilityQuery"); } }
+        private string? _explicitNullValueVisibilityQuery = default!;
 #nullable restore
 #else
-        public string VisibilityQuery { get; set; }
+        public string VisibilityQuery { get => _explicitNullValueVisibilityQuery; set { _explicitNullValueVisibilityQuery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visibilityQuery"); else _explicitNullProperties?.Remove("visibilityQuery"); } }
+        private string _explicitNullValueVisibilityQuery = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.StartBatchOperationRequest"/> and sets the default values.
@@ -143,7 +194,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.StartBatchOperationRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.StartBatchOperationRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.StartBatchOperationRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -192,6 +243,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationUpdateActivityOptions>("updateActivityOptionsOperation", UpdateActivityOptionsOperation);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.BatchOperationUpdateWorkflowExecutionOptions>("updateWorkflowOptionsOperation", UpdateWorkflowOptionsOperation);
             writer.WriteStringValue("visibilityQuery", VisibilityQuery);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

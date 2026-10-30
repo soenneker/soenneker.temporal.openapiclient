@@ -12,42 +12,63 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DescribeTaskQueueResponseTaskQueueStatus : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ackLevel") is { } nullNodeAckLevel && nullNodeAckLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AckLevel = null;
+            if (parseNode.GetChildNode("backlogCountHint") is { } nullNodeBacklogCountHint && nullNodeBacklogCountHint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BacklogCountHint = null;
+            if (parseNode.GetChildNode("ratePerSecond") is { } nullNodeRatePerSecond && nullNodeRatePerSecond.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RatePerSecond = null;
+            if (parseNode.GetChildNode("readLevel") is { } nullNodeReadLevel && nullNodeReadLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReadLevel = null;
+            if (parseNode.GetChildNode("taskIdBlock") is { } nullNodeTaskIdBlock && nullNodeTaskIdBlock.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskIdBlock = null;
+        }
+
         /// <summary>The ackLevel property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AckLevel { get; set; }
+        public string? AckLevel { get => _explicitNullValueAckLevel; set { _explicitNullValueAckLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ackLevel"); else _explicitNullProperties?.Remove("ackLevel"); } }
+        private string? _explicitNullValueAckLevel = default!;
 #nullable restore
 #else
-        public string AckLevel { get; set; }
+        public string AckLevel { get => _explicitNullValueAckLevel; set { _explicitNullValueAckLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ackLevel"); else _explicitNullProperties?.Remove("ackLevel"); } }
+        private string _explicitNullValueAckLevel = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The backlogCountHint property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BacklogCountHint { get; set; }
+        public string? BacklogCountHint { get => _explicitNullValueBacklogCountHint; set { _explicitNullValueBacklogCountHint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("backlogCountHint"); else _explicitNullProperties?.Remove("backlogCountHint"); } }
+        private string? _explicitNullValueBacklogCountHint = default!;
 #nullable restore
 #else
-        public string BacklogCountHint { get; set; }
+        public string BacklogCountHint { get => _explicitNullValueBacklogCountHint; set { _explicitNullValueBacklogCountHint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("backlogCountHint"); else _explicitNullProperties?.Remove("backlogCountHint"); } }
+        private string _explicitNullValueBacklogCountHint = default!;
 #endif
         /// <summary>The ratePerSecond property</summary>
-        public double? RatePerSecond { get; set; }
+        public double? RatePerSecond { get => _explicitNullValueRatePerSecond; set { _explicitNullValueRatePerSecond = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ratePerSecond"); else _explicitNullProperties?.Remove("ratePerSecond"); } }
+        private double? _explicitNullValueRatePerSecond = default!;
         /// <summary>The readLevel property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReadLevel { get; set; }
+        public string? ReadLevel { get => _explicitNullValueReadLevel; set { _explicitNullValueReadLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("readLevel"); else _explicitNullProperties?.Remove("readLevel"); } }
+        private string? _explicitNullValueReadLevel = default!;
 #nullable restore
 #else
-        public string ReadLevel { get; set; }
+        public string ReadLevel { get => _explicitNullValueReadLevel; set { _explicitNullValueReadLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("readLevel"); else _explicitNullProperties?.Remove("readLevel"); } }
+        private string _explicitNullValueReadLevel = default!;
 #endif
         /// <summary>The taskIdBlock property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.TaskIdBlock? TaskIdBlock { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.TaskIdBlock? TaskIdBlock { get => _explicitNullValueTaskIdBlock; set { _explicitNullValueTaskIdBlock = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taskIdBlock"); else _explicitNullProperties?.Remove("taskIdBlock"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.TaskIdBlock? _explicitNullValueTaskIdBlock = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.TaskIdBlock TaskIdBlock { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.TaskIdBlock TaskIdBlock { get => _explicitNullValueTaskIdBlock; set { _explicitNullValueTaskIdBlock = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taskIdBlock"); else _explicitNullProperties?.Remove("taskIdBlock"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.TaskIdBlock _explicitNullValueTaskIdBlock = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseTaskQueueStatus"/> and sets the default values.
@@ -64,7 +85,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseTaskQueueStatus CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseTaskQueueStatus();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseTaskQueueStatus(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -93,6 +114,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteDoubleValue("ratePerSecond", RatePerSecond);
             writer.WriteStringValue("readLevel", ReadLevel);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TaskIdBlock>("taskIdBlock", TaskIdBlock);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

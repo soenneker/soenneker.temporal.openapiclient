@@ -12,16 +12,26 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CreateWorkerDeploymentVersionRequestComputeConfig : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("scalingGroups") is { } nullNodeScalingGroups && nullNodeScalingGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScalingGroups = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Each scaling group describes a compute config for a specific subset of the worker deployment version: covering a specific set of task types and/or regions. Having different configurations for different task types, allows independent tuning of activity and workflow task processing (for example). The key of the map is the ID of the scaling group used to reference it in subsequent update calls.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentVersionRequestComputeConfigScalingGroups? ScalingGroups { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentVersionRequestComputeConfigScalingGroups? ScalingGroups { get => _explicitNullValueScalingGroups; set { _explicitNullValueScalingGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scalingGroups"); else _explicitNullProperties?.Remove("scalingGroups"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentVersionRequestComputeConfigScalingGroups? _explicitNullValueScalingGroups = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentVersionRequestComputeConfigScalingGroups ScalingGroups { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentVersionRequestComputeConfigScalingGroups ScalingGroups { get => _explicitNullValueScalingGroups; set { _explicitNullValueScalingGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scalingGroups"); else _explicitNullProperties?.Remove("scalingGroups"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentVersionRequestComputeConfigScalingGroups _explicitNullValueScalingGroups = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentVersionRequestComputeConfig"/> and sets the default values.
@@ -38,7 +48,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentVersionRequestComputeConfig CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentVersionRequestComputeConfig();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentVersionRequestComputeConfig(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -59,6 +69,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CreateWorkerDeploymentVersionRequestComputeConfigScalingGroups>("scalingGroups", ScalingGroups);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

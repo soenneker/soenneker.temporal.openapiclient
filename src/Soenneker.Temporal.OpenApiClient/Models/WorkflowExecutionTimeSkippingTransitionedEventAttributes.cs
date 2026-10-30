@@ -12,15 +12,28 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WorkflowExecutionTimeSkippingTransitionedEventAttributes : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("disabledAfterBound") is { } nullNodeDisabledAfterBound && nullNodeDisabledAfterBound.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisabledAfterBound = null;
+            if (parseNode.GetChildNode("targetTime") is { } nullNodeTargetTime && nullNodeTargetTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetTime = null;
+            if (parseNode.GetChildNode("wallClockTime") is { } nullNodeWallClockTime && nullNodeWallClockTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WallClockTime = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>when true, time skipping was disabled automatically due to a bound being reached. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;after&quot; is used to indicate temporal ordering. --)</summary>
-        public bool? DisabledAfterBound { get; set; }
+        public bool? DisabledAfterBound { get => _explicitNullValueDisabledAfterBound; set { _explicitNullValueDisabledAfterBound = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disabledAfterBound"); else _explicitNullProperties?.Remove("disabledAfterBound"); } }
+        private bool? _explicitNullValueDisabledAfterBound = default!;
         /// <summary>The virtual time after time skipping was applied.</summary>
-        public DateTimeOffset? TargetTime { get; set; }
+        public DateTimeOffset? TargetTime { get => _explicitNullValueTargetTime; set { _explicitNullValueTargetTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetTime"); else _explicitNullProperties?.Remove("targetTime"); } }
+        private DateTimeOffset? _explicitNullValueTargetTime = default!;
         /// <summary>The wall-clock time when the time-skipping state changed event was generated.</summary>
-        public DateTimeOffset? WallClockTime { get; set; }
+        public DateTimeOffset? WallClockTime { get => _explicitNullValueWallClockTime; set { _explicitNullValueWallClockTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wallClockTime"); else _explicitNullProperties?.Remove("wallClockTime"); } }
+        private DateTimeOffset? _explicitNullValueWallClockTime = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTimeSkippingTransitionedEventAttributes"/> and sets the default values.
         /// </summary>
@@ -36,7 +49,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTimeSkippingTransitionedEventAttributes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTimeSkippingTransitionedEventAttributes();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTimeSkippingTransitionedEventAttributes(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -61,6 +74,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteBoolValue("disabledAfterBound", DisabledAfterBound);
             writer.WriteDateTimeOffsetValue("targetTime", TargetTime);
             writer.WriteDateTimeOffsetValue("wallClockTime", WallClockTime);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

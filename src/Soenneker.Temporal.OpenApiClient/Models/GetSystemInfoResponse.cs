@@ -11,24 +11,37 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetSystemInfoResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("capabilities") is { } nullNodeCapabilities && nullNodeCapabilities.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Capabilities = null;
+            if (parseNode.GetChildNode("serverVersion") is { } nullNodeServerVersion && nullNodeServerVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServerVersion = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>All capabilities the system supports.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.GetSystemInfoResponseCapabilitiesComposed? Capabilities { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.GetSystemInfoResponseCapabilitiesComposed? Capabilities { get => _explicitNullValueCapabilities; set { _explicitNullValueCapabilities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capabilities"); else _explicitNullProperties?.Remove("capabilities"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.GetSystemInfoResponseCapabilitiesComposed? _explicitNullValueCapabilities = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.GetSystemInfoResponseCapabilitiesComposed Capabilities { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.GetSystemInfoResponseCapabilitiesComposed Capabilities { get => _explicitNullValueCapabilities; set { _explicitNullValueCapabilities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capabilities"); else _explicitNullProperties?.Remove("capabilities"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.GetSystemInfoResponseCapabilitiesComposed _explicitNullValueCapabilities = default!;
 #endif
         /// <summary>Version of the server.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ServerVersion { get; set; }
+        public string? ServerVersion { get => _explicitNullValueServerVersion; set { _explicitNullValueServerVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serverVersion"); else _explicitNullProperties?.Remove("serverVersion"); } }
+        private string? _explicitNullValueServerVersion = default!;
 #nullable restore
 #else
-        public string ServerVersion { get; set; }
+        public string ServerVersion { get => _explicitNullValueServerVersion; set { _explicitNullValueServerVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serverVersion"); else _explicitNullProperties?.Remove("serverVersion"); } }
+        private string _explicitNullValueServerVersion = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.GetSystemInfoResponse"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.GetSystemInfoResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.GetSystemInfoResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.GetSystemInfoResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.GetSystemInfoResponseCapabilitiesComposed>("capabilities", Capabilities);
             writer.WriteStringValue("serverVersion", ServerVersion);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,29 +11,51 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class WorkerSlotsInfo : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("currentAvailableSlots") is { } nullNodeCurrentAvailableSlots && nullNodeCurrentAvailableSlots.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentAvailableSlots = null;
+            if (parseNode.GetChildNode("currentUsedSlots") is { } nullNodeCurrentUsedSlots && nullNodeCurrentUsedSlots.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentUsedSlots = null;
+            if (parseNode.GetChildNode("lastIntervalFailureTasks") is { } nullNodeLastIntervalFailureTasks && nullNodeLastIntervalFailureTasks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastIntervalFailureTasks = null;
+            if (parseNode.GetChildNode("lastIntervalProcessedTasks") is { } nullNodeLastIntervalProcessedTasks && nullNodeLastIntervalProcessedTasks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastIntervalProcessedTasks = null;
+            if (parseNode.GetChildNode("slotSupplierKind") is { } nullNodeSlotSupplierKind && nullNodeSlotSupplierKind.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SlotSupplierKind = null;
+            if (parseNode.GetChildNode("totalFailedTasks") is { } nullNodeTotalFailedTasks && nullNodeTotalFailedTasks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalFailedTasks = null;
+            if (parseNode.GetChildNode("totalProcessedTasks") is { } nullNodeTotalProcessedTasks && nullNodeTotalProcessedTasks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalProcessedTasks = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Number of slots available for the worker to specific tasks. May be -1 if the upper bound is not known.</summary>
-        public int? CurrentAvailableSlots { get; set; }
+        public int? CurrentAvailableSlots { get => _explicitNullValueCurrentAvailableSlots; set { _explicitNullValueCurrentAvailableSlots = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currentAvailableSlots"); else _explicitNullProperties?.Remove("currentAvailableSlots"); } }
+        private int? _explicitNullValueCurrentAvailableSlots = default!;
         /// <summary>Number of slots used by the worker for specific tasks.</summary>
-        public int? CurrentUsedSlots { get; set; }
+        public int? CurrentUsedSlots { get => _explicitNullValueCurrentUsedSlots; set { _explicitNullValueCurrentUsedSlots = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currentUsedSlots"); else _explicitNullProperties?.Remove("currentUsedSlots"); } }
+        private int? _explicitNullValueCurrentUsedSlots = default!;
         /// <summary>Number of failed tasks processed since the last heartbeat from the worker.</summary>
-        public int? LastIntervalFailureTasks { get; set; }
+        public int? LastIntervalFailureTasks { get => _explicitNullValueLastIntervalFailureTasks; set { _explicitNullValueLastIntervalFailureTasks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastIntervalFailureTasks"); else _explicitNullProperties?.Remove("lastIntervalFailureTasks"); } }
+        private int? _explicitNullValueLastIntervalFailureTasks = default!;
         /// <summary>Number of tasks processed in since the last heartbeat from the worker. This is a cumulative counter, and it is reset to 0 each time the worker sends a heartbeat. Contains both successful and failed tasks.</summary>
-        public int? LastIntervalProcessedTasks { get; set; }
+        public int? LastIntervalProcessedTasks { get => _explicitNullValueLastIntervalProcessedTasks; set { _explicitNullValueLastIntervalProcessedTasks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastIntervalProcessedTasks"); else _explicitNullProperties?.Remove("lastIntervalProcessedTasks"); } }
+        private int? _explicitNullValueLastIntervalProcessedTasks = default!;
         /// <summary>Kind of the slot supplier, which is used to determine how the slots are allocated. Possible values: &quot;Fixed | ResourceBased | Custom String&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SlotSupplierKind { get; set; }
+        public string? SlotSupplierKind { get => _explicitNullValueSlotSupplierKind; set { _explicitNullValueSlotSupplierKind = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("slotSupplierKind"); else _explicitNullProperties?.Remove("slotSupplierKind"); } }
+        private string? _explicitNullValueSlotSupplierKind = default!;
 #nullable restore
 #else
-        public string SlotSupplierKind { get; set; }
+        public string SlotSupplierKind { get => _explicitNullValueSlotSupplierKind; set { _explicitNullValueSlotSupplierKind = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("slotSupplierKind"); else _explicitNullProperties?.Remove("slotSupplierKind"); } }
+        private string _explicitNullValueSlotSupplierKind = default!;
 #endif
         /// <summary>Total number of failed tasks processed by the worker so far.</summary>
-        public int? TotalFailedTasks { get; set; }
+        public int? TotalFailedTasks { get => _explicitNullValueTotalFailedTasks; set { _explicitNullValueTotalFailedTasks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalFailedTasks"); else _explicitNullProperties?.Remove("totalFailedTasks"); } }
+        private int? _explicitNullValueTotalFailedTasks = default!;
         /// <summary>Total number of tasks processed (completed both successfully and unsuccesfully, or any other way) by the worker since the worker started. This is a cumulative counter.</summary>
-        public int? TotalProcessedTasks { get; set; }
+        public int? TotalProcessedTasks { get => _explicitNullValueTotalProcessedTasks; set { _explicitNullValueTotalProcessedTasks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalProcessedTasks"); else _explicitNullProperties?.Remove("totalProcessedTasks"); } }
+        private int? _explicitNullValueTotalProcessedTasks = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo"/> and sets the default values.
         /// </summary>
@@ -49,7 +71,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,6 +104,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("slotSupplierKind", SlotSupplierKind);
             writer.WriteIntValue("totalFailedTasks", TotalFailedTasks);
             writer.WriteIntValue("totalProcessedTasks", TotalProcessedTasks);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

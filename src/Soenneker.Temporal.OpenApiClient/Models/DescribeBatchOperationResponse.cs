@@ -11,64 +11,97 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class DescribeBatchOperationResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("closeTime") is { } nullNodeCloseTime && nullNodeCloseTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CloseTime = null;
+            if (parseNode.GetChildNode("completeOperationCount") is { } nullNodeCompleteOperationCount && nullNodeCompleteOperationCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompleteOperationCount = null;
+            if (parseNode.GetChildNode("failureOperationCount") is { } nullNodeFailureOperationCount && nullNodeFailureOperationCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailureOperationCount = null;
+            if (parseNode.GetChildNode("identity") is { } nullNodeIdentity && nullNodeIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Identity = null;
+            if (parseNode.GetChildNode("jobId") is { } nullNodeJobId && nullNodeJobId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JobId = null;
+            if (parseNode.GetChildNode("operationType") is { } nullNodeOperationType && nullNodeOperationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OperationType = null;
+            if (parseNode.GetChildNode("reason") is { } nullNodeReason && nullNodeReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reason = null;
+            if (parseNode.GetChildNode("startTime") is { } nullNodeStartTime && nullNodeStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartTime = null;
+            if (parseNode.GetChildNode("state") is { } nullNodeState && nullNodeState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) State = null;
+            if (parseNode.GetChildNode("totalOperationCount") is { } nullNodeTotalOperationCount && nullNodeTotalOperationCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalOperationCount = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Batch operation close time</summary>
-        public DateTimeOffset? CloseTime { get; set; }
+        public DateTimeOffset? CloseTime { get => _explicitNullValueCloseTime; set { _explicitNullValueCloseTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("closeTime"); else _explicitNullProperties?.Remove("closeTime"); } }
+        private DateTimeOffset? _explicitNullValueCloseTime = default!;
         /// <summary>Complete operation count</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CompleteOperationCount { get; set; }
+        public string? CompleteOperationCount { get => _explicitNullValueCompleteOperationCount; set { _explicitNullValueCompleteOperationCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("completeOperationCount"); else _explicitNullProperties?.Remove("completeOperationCount"); } }
+        private string? _explicitNullValueCompleteOperationCount = default!;
 #nullable restore
 #else
-        public string CompleteOperationCount { get; set; }
+        public string CompleteOperationCount { get => _explicitNullValueCompleteOperationCount; set { _explicitNullValueCompleteOperationCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("completeOperationCount"); else _explicitNullProperties?.Remove("completeOperationCount"); } }
+        private string _explicitNullValueCompleteOperationCount = default!;
 #endif
         /// <summary>Failure operation count</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FailureOperationCount { get; set; }
+        public string? FailureOperationCount { get => _explicitNullValueFailureOperationCount; set { _explicitNullValueFailureOperationCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failureOperationCount"); else _explicitNullProperties?.Remove("failureOperationCount"); } }
+        private string? _explicitNullValueFailureOperationCount = default!;
 #nullable restore
 #else
-        public string FailureOperationCount { get; set; }
+        public string FailureOperationCount { get => _explicitNullValueFailureOperationCount; set { _explicitNullValueFailureOperationCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failureOperationCount"); else _explicitNullProperties?.Remove("failureOperationCount"); } }
+        private string _explicitNullValueFailureOperationCount = default!;
 #endif
         /// <summary>Identity indicates the operator identity</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Identity { get; set; }
+        public string? Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity"); else _explicitNullProperties?.Remove("identity"); } }
+        private string? _explicitNullValueIdentity = default!;
 #nullable restore
 #else
-        public string Identity { get; set; }
+        public string Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity"); else _explicitNullProperties?.Remove("identity"); } }
+        private string _explicitNullValueIdentity = default!;
 #endif
         /// <summary>Batch job ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? JobId { get; set; }
+        public string? JobId { get => _explicitNullValueJobId; set { _explicitNullValueJobId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jobId"); else _explicitNullProperties?.Remove("jobId"); } }
+        private string? _explicitNullValueJobId = default!;
 #nullable restore
 #else
-        public string JobId { get; set; }
+        public string JobId { get => _explicitNullValueJobId; set { _explicitNullValueJobId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jobId"); else _explicitNullProperties?.Remove("jobId"); } }
+        private string _explicitNullValueJobId = default!;
 #endif
         /// <summary>Batch operation type</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeBatchOperationResponseOperationType? OperationType { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeBatchOperationResponseOperationType? OperationType { get => _explicitNullValueOperationType; set { _explicitNullValueOperationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operationType"); else _explicitNullProperties?.Remove("operationType"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.DescribeBatchOperationResponseOperationType? _explicitNullValueOperationType = default!;
         /// <summary>Reason indicates the reason to stop a operation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Reason { get; set; }
+        public string? Reason { get => _explicitNullValueReason; set { _explicitNullValueReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason"); else _explicitNullProperties?.Remove("reason"); } }
+        private string? _explicitNullValueReason = default!;
 #nullable restore
 #else
-        public string Reason { get; set; }
+        public string Reason { get => _explicitNullValueReason; set { _explicitNullValueReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason"); else _explicitNullProperties?.Remove("reason"); } }
+        private string _explicitNullValueReason = default!;
 #endif
         /// <summary>Batch operation start time</summary>
-        public DateTimeOffset? StartTime { get; set; }
+        public DateTimeOffset? StartTime { get => _explicitNullValueStartTime; set { _explicitNullValueStartTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startTime"); else _explicitNullProperties?.Remove("startTime"); } }
+        private DateTimeOffset? _explicitNullValueStartTime = default!;
         /// <summary>Batch operation state</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeBatchOperationResponseState? State { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeBatchOperationResponseState? State { get => _explicitNullValueState; set { _explicitNullValueState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state"); else _explicitNullProperties?.Remove("state"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.DescribeBatchOperationResponseState? _explicitNullValueState = default!;
         /// <summary>Total operation count</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TotalOperationCount { get; set; }
+        public string? TotalOperationCount { get => _explicitNullValueTotalOperationCount; set { _explicitNullValueTotalOperationCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalOperationCount"); else _explicitNullProperties?.Remove("totalOperationCount"); } }
+        private string? _explicitNullValueTotalOperationCount = default!;
 #nullable restore
 #else
-        public string TotalOperationCount { get; set; }
+        public string TotalOperationCount { get => _explicitNullValueTotalOperationCount; set { _explicitNullValueTotalOperationCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalOperationCount"); else _explicitNullProperties?.Remove("totalOperationCount"); } }
+        private string _explicitNullValueTotalOperationCount = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.DescribeBatchOperationResponse"/> and sets the default values.
@@ -85,7 +118,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.DescribeBatchOperationResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.DescribeBatchOperationResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.DescribeBatchOperationResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -124,6 +157,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("startTime", StartTime);
             writer.WriteEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeBatchOperationResponseState>("state", State);
             writer.WriteStringValue("totalOperationCount", TotalOperationCount);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

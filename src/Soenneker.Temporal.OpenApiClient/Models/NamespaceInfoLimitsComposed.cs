@@ -12,24 +12,37 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class NamespaceInfoLimitsComposed : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("blobSizeLimitError") is { } nullNodeBlobSizeLimitError && nullNodeBlobSizeLimitError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlobSizeLimitError = null;
+            if (parseNode.GetChildNode("memoSizeLimitError") is { } nullNodeMemoSizeLimitError && nullNodeMemoSizeLimitError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MemoSizeLimitError = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Maximum size in bytes for payload fields in workflow history events (e.g., workflow/activity inputs and results, failure details, signal payloads). When exceeded, the server will reject the operation with an error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BlobSizeLimitError { get; set; }
+        public string? BlobSizeLimitError { get => _explicitNullValueBlobSizeLimitError; set { _explicitNullValueBlobSizeLimitError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blobSizeLimitError"); else _explicitNullProperties?.Remove("blobSizeLimitError"); } }
+        private string? _explicitNullValueBlobSizeLimitError = default!;
 #nullable restore
 #else
-        public string BlobSizeLimitError { get; set; }
+        public string BlobSizeLimitError { get => _explicitNullValueBlobSizeLimitError; set { _explicitNullValueBlobSizeLimitError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blobSizeLimitError"); else _explicitNullProperties?.Remove("blobSizeLimitError"); } }
+        private string _explicitNullValueBlobSizeLimitError = default!;
 #endif
         /// <summary>Maximum total memo size in bytes per workflow execution.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MemoSizeLimitError { get; set; }
+        public string? MemoSizeLimitError { get => _explicitNullValueMemoSizeLimitError; set { _explicitNullValueMemoSizeLimitError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("memoSizeLimitError"); else _explicitNullProperties?.Remove("memoSizeLimitError"); } }
+        private string? _explicitNullValueMemoSizeLimitError = default!;
 #nullable restore
 #else
-        public string MemoSizeLimitError { get; set; }
+        public string MemoSizeLimitError { get => _explicitNullValueMemoSizeLimitError; set { _explicitNullValueMemoSizeLimitError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("memoSizeLimitError"); else _explicitNullProperties?.Remove("memoSizeLimitError"); } }
+        private string _explicitNullValueMemoSizeLimitError = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoLimitsComposed"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoLimitsComposed CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoLimitsComposed();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.NamespaceInfoLimitsComposed(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("blobSizeLimitError", BlobSizeLimitError);
             writer.WriteStringValue("memoSizeLimitError", MemoSizeLimitError);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

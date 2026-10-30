@@ -12,16 +12,26 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WorkerInfo : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("workerHeartbeat") is { } nullNodeWorkerHeartbeat && nullNodeWorkerHeartbeat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerHeartbeat = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Worker info message, contains information about the worker and its current state. All information is provided by the worker itself. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: Removing those words make names less clear. --)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeat? WorkerHeartbeat { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeat? WorkerHeartbeat { get => _explicitNullValueWorkerHeartbeat; set { _explicitNullValueWorkerHeartbeat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerHeartbeat"); else _explicitNullProperties?.Remove("workerHeartbeat"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeat? _explicitNullValueWorkerHeartbeat = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeat WorkerHeartbeat { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeat WorkerHeartbeat { get => _explicitNullValueWorkerHeartbeat; set { _explicitNullValueWorkerHeartbeat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerHeartbeat"); else _explicitNullProperties?.Remove("workerHeartbeat"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeat _explicitNullValueWorkerHeartbeat = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkerInfo"/> and sets the default values.
@@ -38,7 +48,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.WorkerInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.WorkerInfo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.WorkerInfo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -59,6 +69,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeat>("workerHeartbeat", WorkerHeartbeat);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

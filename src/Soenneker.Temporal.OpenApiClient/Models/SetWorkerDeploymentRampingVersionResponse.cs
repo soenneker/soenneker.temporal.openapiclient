@@ -11,34 +11,52 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SetWorkerDeploymentRampingVersionResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("conflictToken") is { } nullNodeConflictToken && nullNodeConflictToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConflictToken = null;
+            if (parseNode.GetChildNode("previousDeploymentVersion") is { } nullNodePreviousDeploymentVersion && nullNodePreviousDeploymentVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreviousDeploymentVersion = null;
+            if (parseNode.GetChildNode("previousPercentage") is { } nullNodePreviousPercentage && nullNodePreviousPercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreviousPercentage = null;
+            if (parseNode.GetChildNode("previousVersion") is { } nullNodePreviousVersion && nullNodePreviousVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreviousVersion = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>This value is returned so that it can be optionally passed to APIs that write to the Worker Deployment state to ensure that the state did not change between this API call and a future write.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConflictToken { get; set; }
+        public string? ConflictToken { get => _explicitNullValueConflictToken; set { _explicitNullValueConflictToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conflictToken"); else _explicitNullProperties?.Remove("conflictToken"); } }
+        private string? _explicitNullValueConflictToken = default!;
 #nullable restore
 #else
-        public string ConflictToken { get; set; }
+        public string ConflictToken { get => _explicitNullValueConflictToken; set { _explicitNullValueConflictToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conflictToken"); else _explicitNullProperties?.Remove("conflictToken"); } }
+        private string _explicitNullValueConflictToken = default!;
 #endif
         /// <summary>The version that was ramping before executing this operation. Deprecated in favor of idempotency of the API. Use `DescribeWorkerDeployment` to get the Ramping version info before calling this API. By passing the `conflict_token` got from the `DescribeWorkerDeployment` call to this API you can ensure there is no interfering changes between the two calls.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.SetWorkerDeploymentRampingVersionResponsePreviousDeploymentVersion? PreviousDeploymentVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SetWorkerDeploymentRampingVersionResponsePreviousDeploymentVersion? PreviousDeploymentVersion { get => _explicitNullValuePreviousDeploymentVersion; set { _explicitNullValuePreviousDeploymentVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previousDeploymentVersion"); else _explicitNullProperties?.Remove("previousDeploymentVersion"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.SetWorkerDeploymentRampingVersionResponsePreviousDeploymentVersion? _explicitNullValuePreviousDeploymentVersion = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.SetWorkerDeploymentRampingVersionResponsePreviousDeploymentVersion PreviousDeploymentVersion { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SetWorkerDeploymentRampingVersionResponsePreviousDeploymentVersion PreviousDeploymentVersion { get => _explicitNullValuePreviousDeploymentVersion; set { _explicitNullValuePreviousDeploymentVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previousDeploymentVersion"); else _explicitNullProperties?.Remove("previousDeploymentVersion"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.SetWorkerDeploymentRampingVersionResponsePreviousDeploymentVersion _explicitNullValuePreviousDeploymentVersion = default!;
 #endif
         /// <summary>The ramping version percentage before executing this operation. Deprecated in favor of idempotency of the API. Use `DescribeWorkerDeployment` to get the Ramping version info before calling this API. By passing the `conflict_token` got from the `DescribeWorkerDeployment` call to this API you can ensure there is no interfering changes between the two calls.</summary>
-        public float? PreviousPercentage { get; set; }
+        public float? PreviousPercentage { get => _explicitNullValuePreviousPercentage; set { _explicitNullValuePreviousPercentage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previousPercentage"); else _explicitNullProperties?.Remove("previousPercentage"); } }
+        private float? _explicitNullValuePreviousPercentage = default!;
         /// <summary>Deprecated. Use `previous_deployment_version`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PreviousVersion { get; set; }
+        public string? PreviousVersion { get => _explicitNullValuePreviousVersion; set { _explicitNullValuePreviousVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previousVersion"); else _explicitNullProperties?.Remove("previousVersion"); } }
+        private string? _explicitNullValuePreviousVersion = default!;
 #nullable restore
 #else
-        public string PreviousVersion { get; set; }
+        public string PreviousVersion { get => _explicitNullValuePreviousVersion; set { _explicitNullValuePreviousVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previousVersion"); else _explicitNullProperties?.Remove("previousVersion"); } }
+        private string _explicitNullValuePreviousVersion = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.SetWorkerDeploymentRampingVersionResponse"/> and sets the default values.
@@ -55,7 +73,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.SetWorkerDeploymentRampingVersionResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.SetWorkerDeploymentRampingVersionResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.SetWorkerDeploymentRampingVersionResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,6 +100,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SetWorkerDeploymentRampingVersionResponsePreviousDeploymentVersion>("previousDeploymentVersion", PreviousDeploymentVersion);
             writer.WriteFloatValue("previousPercentage", PreviousPercentage);
             writer.WriteStringValue("previousVersion", PreviousVersion);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

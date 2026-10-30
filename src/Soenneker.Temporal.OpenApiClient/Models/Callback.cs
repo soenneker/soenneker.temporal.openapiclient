@@ -12,32 +12,48 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Callback : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("internal") is { } nullNodeInternal && nullNodeInternal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Internal = null;
+            if (parseNode.GetChildNode("links") is { } nullNodeLinks && nullNodeLinks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Links = null;
+            if (parseNode.GetChildNode("nexus") is { } nullNodeNexus && nullNodeNexus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Nexus = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Callbacks to be delivered internally within the system. This variant is not settable in the API and will be rejected by the service with an INVALID_ARGUMENT error. The only reason that this is exposed is because callbacks are replicated across clusters via the WorkflowExecutionStarted event, which is defined in the public API.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.CallbackInternal? Internal { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CallbackInternal? Internal { get => _explicitNullValueInternal; set { _explicitNullValueInternal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("internal"); else _explicitNullProperties?.Remove("internal"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.CallbackInternal? _explicitNullValueInternal = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.CallbackInternal Internal { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CallbackInternal Internal { get => _explicitNullValueInternal; set { _explicitNullValueInternal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("internal"); else _explicitNullProperties?.Remove("internal"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.CallbackInternal _explicitNullValueInternal = default!;
 #endif
         /// <summary>Links associated with the callback. It can be used to link to underlying resources of the callback.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.Link>? Links { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.Link>? Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.Link>? _explicitNullValueLinks = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.Link> Links { get; set; }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.Link> Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
+        private List<global::Soenneker.Temporal.OpenApiClient.Models.Link> _explicitNullValueLinks = default!;
 #endif
         /// <summary>The nexus property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.CallbackNexus? Nexus { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CallbackNexus? Nexus { get => _explicitNullValueNexus; set { _explicitNullValueNexus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nexus"); else _explicitNullProperties?.Remove("nexus"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.CallbackNexus? _explicitNullValueNexus = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.CallbackNexus Nexus { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CallbackNexus Nexus { get => _explicitNullValueNexus; set { _explicitNullValueNexus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nexus"); else _explicitNullProperties?.Remove("nexus"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.CallbackNexus _explicitNullValueNexus = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.Callback"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.Callback CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.Callback();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.Callback(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CallbackInternal>("internal", Internal);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.Link>("links", Links);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.CallbackNexus>("nexus", Nexus);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,128 +12,180 @@ namespace Soenneker.Temporal.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PendingNexusOperationInfoLastAttemptFailure : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("activityFailureInfo") is { } nullNodeActivityFailureInfo && nullNodeActivityFailureInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActivityFailureInfo = null;
+            if (parseNode.GetChildNode("applicationFailureInfo") is { } nullNodeApplicationFailureInfo && nullNodeApplicationFailureInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApplicationFailureInfo = null;
+            if (parseNode.GetChildNode("canceledFailureInfo") is { } nullNodeCanceledFailureInfo && nullNodeCanceledFailureInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanceledFailureInfo = null;
+            if (parseNode.GetChildNode("cause") is { } nullNodeCause && nullNodeCause.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cause = null;
+            if (parseNode.GetChildNode("childWorkflowExecutionFailureInfo") is { } nullNodeChildWorkflowExecutionFailureInfo && nullNodeChildWorkflowExecutionFailureInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChildWorkflowExecutionFailureInfo = null;
+            if (parseNode.GetChildNode("encodedAttributes") is { } nullNodeEncodedAttributes && nullNodeEncodedAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EncodedAttributes = null;
+            if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
+            if (parseNode.GetChildNode("nexusHandlerFailureInfo") is { } nullNodeNexusHandlerFailureInfo && nullNodeNexusHandlerFailureInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NexusHandlerFailureInfo = null;
+            if (parseNode.GetChildNode("nexusOperationExecutionFailureInfo") is { } nullNodeNexusOperationExecutionFailureInfo && nullNodeNexusOperationExecutionFailureInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NexusOperationExecutionFailureInfo = null;
+            if (parseNode.GetChildNode("resetWorkflowFailureInfo") is { } nullNodeResetWorkflowFailureInfo && nullNodeResetWorkflowFailureInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResetWorkflowFailureInfo = null;
+            if (parseNode.GetChildNode("serverFailureInfo") is { } nullNodeServerFailureInfo && nullNodeServerFailureInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServerFailureInfo = null;
+            if (parseNode.GetChildNode("source") is { } nullNodeSource && nullNodeSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Source = null;
+            if (parseNode.GetChildNode("stackTrace") is { } nullNodeStackTrace && nullNodeStackTrace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StackTrace = null;
+            if (parseNode.GetChildNode("terminatedFailureInfo") is { } nullNodeTerminatedFailureInfo && nullNodeTerminatedFailureInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TerminatedFailureInfo = null;
+            if (parseNode.GetChildNode("timeoutFailureInfo") is { } nullNodeTimeoutFailureInfo && nullNodeTimeoutFailureInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeoutFailureInfo = null;
+        }
+
         /// <summary>The activityFailureInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityFailureInfo? ActivityFailureInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityFailureInfo? ActivityFailureInfo { get => _explicitNullValueActivityFailureInfo; set { _explicitNullValueActivityFailureInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityFailureInfo"); else _explicitNullProperties?.Remove("activityFailureInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ActivityFailureInfo? _explicitNullValueActivityFailureInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityFailureInfo ActivityFailureInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityFailureInfo ActivityFailureInfo { get => _explicitNullValueActivityFailureInfo; set { _explicitNullValueActivityFailureInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityFailureInfo"); else _explicitNullProperties?.Remove("activityFailureInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ActivityFailureInfo _explicitNullValueActivityFailureInfo = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The applicationFailureInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ApplicationFailureInfo? ApplicationFailureInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ApplicationFailureInfo? ApplicationFailureInfo { get => _explicitNullValueApplicationFailureInfo; set { _explicitNullValueApplicationFailureInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("applicationFailureInfo"); else _explicitNullProperties?.Remove("applicationFailureInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ApplicationFailureInfo? _explicitNullValueApplicationFailureInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ApplicationFailureInfo ApplicationFailureInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ApplicationFailureInfo ApplicationFailureInfo { get => _explicitNullValueApplicationFailureInfo; set { _explicitNullValueApplicationFailureInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("applicationFailureInfo"); else _explicitNullProperties?.Remove("applicationFailureInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ApplicationFailureInfo _explicitNullValueApplicationFailureInfo = default!;
 #endif
         /// <summary>The canceledFailureInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.CanceledFailureInfo? CanceledFailureInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CanceledFailureInfo? CanceledFailureInfo { get => _explicitNullValueCanceledFailureInfo; set { _explicitNullValueCanceledFailureInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canceledFailureInfo"); else _explicitNullProperties?.Remove("canceledFailureInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.CanceledFailureInfo? _explicitNullValueCanceledFailureInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.CanceledFailureInfo CanceledFailureInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.CanceledFailureInfo CanceledFailureInfo { get => _explicitNullValueCanceledFailureInfo; set { _explicitNullValueCanceledFailureInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canceledFailureInfo"); else _explicitNullProperties?.Remove("canceledFailureInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.CanceledFailureInfo _explicitNullValueCanceledFailureInfo = default!;
 #endif
         /// <summary>The cause property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Failure? Cause { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.Failure? Cause { get => _explicitNullValueCause; set { _explicitNullValueCause = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cause"); else _explicitNullProperties?.Remove("cause"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.Failure? _explicitNullValueCause = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Failure Cause { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.Failure Cause { get => _explicitNullValueCause; set { _explicitNullValueCause = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cause"); else _explicitNullProperties?.Remove("cause"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.Failure _explicitNullValueCause = default!;
 #endif
         /// <summary>The childWorkflowExecutionFailureInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionFailureInfo? ChildWorkflowExecutionFailureInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionFailureInfo? ChildWorkflowExecutionFailureInfo { get => _explicitNullValueChildWorkflowExecutionFailureInfo; set { _explicitNullValueChildWorkflowExecutionFailureInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("childWorkflowExecutionFailureInfo"); else _explicitNullProperties?.Remove("childWorkflowExecutionFailureInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionFailureInfo? _explicitNullValueChildWorkflowExecutionFailureInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionFailureInfo ChildWorkflowExecutionFailureInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionFailureInfo ChildWorkflowExecutionFailureInfo { get => _explicitNullValueChildWorkflowExecutionFailureInfo; set { _explicitNullValueChildWorkflowExecutionFailureInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("childWorkflowExecutionFailureInfo"); else _explicitNullProperties?.Remove("childWorkflowExecutionFailureInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ChildWorkflowExecutionFailureInfo _explicitNullValueChildWorkflowExecutionFailureInfo = default!;
 #endif
         /// <summary>Alternative way to supply `message` and `stack_trace` and possibly other attributes, used for encryption of errors originating in user code which might contain sensitive information. The `encoded_attributes` Payload could represent any serializable object, e.g. JSON object or a `Failure` proto message. SDK authors: - The SDK should provide a default `encodeFailureAttributes` and `decodeFailureAttributes` implementation that:   - Uses a JSON object to represent `{ message, stack_trace }`.   - Overwrites the original message with &quot;Encoded failure&quot; to indicate that more information could be extracted.   - Overwrites the original stack_trace with an empty string.   - The resulting JSON object is converted to Payload using the default PayloadConverter and should be processed     by the user-provided PayloadCodec - If there&apos;s demand, we could allow overriding the default SDK implementation to encode other opaque Failure attributes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? EncodedAttributes { get; set; }
+        public UntypedNode? EncodedAttributes { get => _explicitNullValueEncodedAttributes; set { _explicitNullValueEncodedAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("encodedAttributes"); else _explicitNullProperties?.Remove("encodedAttributes"); } }
+        private UntypedNode? _explicitNullValueEncodedAttributes = default!;
 #nullable restore
 #else
-        public UntypedNode EncodedAttributes { get; set; }
+        public UntypedNode EncodedAttributes { get => _explicitNullValueEncodedAttributes; set { _explicitNullValueEncodedAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("encodedAttributes"); else _explicitNullProperties?.Remove("encodedAttributes"); } }
+        private UntypedNode _explicitNullValueEncodedAttributes = default!;
 #endif
         /// <summary>The message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Message { get; set; }
+        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private string? _explicitNullValueMessage = default!;
 #nullable restore
 #else
-        public string Message { get; set; }
+        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private string _explicitNullValueMessage = default!;
 #endif
         /// <summary>The nexusHandlerFailureInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.NexusHandlerFailureInfo? NexusHandlerFailureInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusHandlerFailureInfo? NexusHandlerFailureInfo { get => _explicitNullValueNexusHandlerFailureInfo; set { _explicitNullValueNexusHandlerFailureInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nexusHandlerFailureInfo"); else _explicitNullProperties?.Remove("nexusHandlerFailureInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NexusHandlerFailureInfo? _explicitNullValueNexusHandlerFailureInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.NexusHandlerFailureInfo NexusHandlerFailureInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusHandlerFailureInfo NexusHandlerFailureInfo { get => _explicitNullValueNexusHandlerFailureInfo; set { _explicitNullValueNexusHandlerFailureInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nexusHandlerFailureInfo"); else _explicitNullProperties?.Remove("nexusHandlerFailureInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NexusHandlerFailureInfo _explicitNullValueNexusHandlerFailureInfo = default!;
 #endif
         /// <summary>Representation of the Temporal SDK NexusOperationError object that is returned to workflow callers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationFailureInfo? NexusOperationExecutionFailureInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationFailureInfo? NexusOperationExecutionFailureInfo { get => _explicitNullValueNexusOperationExecutionFailureInfo; set { _explicitNullValueNexusOperationExecutionFailureInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nexusOperationExecutionFailureInfo"); else _explicitNullProperties?.Remove("nexusOperationExecutionFailureInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationFailureInfo? _explicitNullValueNexusOperationExecutionFailureInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationFailureInfo NexusOperationExecutionFailureInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationFailureInfo NexusOperationExecutionFailureInfo { get => _explicitNullValueNexusOperationExecutionFailureInfo; set { _explicitNullValueNexusOperationExecutionFailureInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nexusOperationExecutionFailureInfo"); else _explicitNullProperties?.Remove("nexusOperationExecutionFailureInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.NexusOperationFailureInfo _explicitNullValueNexusOperationExecutionFailureInfo = default!;
 #endif
         /// <summary>The resetWorkflowFailureInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ResetWorkflowFailureInfo? ResetWorkflowFailureInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ResetWorkflowFailureInfo? ResetWorkflowFailureInfo { get => _explicitNullValueResetWorkflowFailureInfo; set { _explicitNullValueResetWorkflowFailureInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resetWorkflowFailureInfo"); else _explicitNullProperties?.Remove("resetWorkflowFailureInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ResetWorkflowFailureInfo? _explicitNullValueResetWorkflowFailureInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ResetWorkflowFailureInfo ResetWorkflowFailureInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ResetWorkflowFailureInfo ResetWorkflowFailureInfo { get => _explicitNullValueResetWorkflowFailureInfo; set { _explicitNullValueResetWorkflowFailureInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resetWorkflowFailureInfo"); else _explicitNullProperties?.Remove("resetWorkflowFailureInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ResetWorkflowFailureInfo _explicitNullValueResetWorkflowFailureInfo = default!;
 #endif
         /// <summary>The serverFailureInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ServerFailureInfo? ServerFailureInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ServerFailureInfo? ServerFailureInfo { get => _explicitNullValueServerFailureInfo; set { _explicitNullValueServerFailureInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serverFailureInfo"); else _explicitNullProperties?.Remove("serverFailureInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ServerFailureInfo? _explicitNullValueServerFailureInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ServerFailureInfo ServerFailureInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ServerFailureInfo ServerFailureInfo { get => _explicitNullValueServerFailureInfo; set { _explicitNullValueServerFailureInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serverFailureInfo"); else _explicitNullProperties?.Remove("serverFailureInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.ServerFailureInfo _explicitNullValueServerFailureInfo = default!;
 #endif
         /// <summary>The source this Failure originated in, e.g. TypeScriptSDK / JavaSDK In some SDKs this is used to rehydrate the stack trace into an exception object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Source { get; set; }
+        public string? Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
+        private string? _explicitNullValueSource = default!;
 #nullable restore
 #else
-        public string Source { get; set; }
+        public string Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
+        private string _explicitNullValueSource = default!;
 #endif
         /// <summary>The stackTrace property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StackTrace { get; set; }
+        public string? StackTrace { get => _explicitNullValueStackTrace; set { _explicitNullValueStackTrace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stackTrace"); else _explicitNullProperties?.Remove("stackTrace"); } }
+        private string? _explicitNullValueStackTrace = default!;
 #nullable restore
 #else
-        public string StackTrace { get; set; }
+        public string StackTrace { get => _explicitNullValueStackTrace; set { _explicitNullValueStackTrace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stackTrace"); else _explicitNullProperties?.Remove("stackTrace"); } }
+        private string _explicitNullValueStackTrace = default!;
 #endif
         /// <summary>The terminatedFailureInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.TerminatedFailureInfo? TerminatedFailureInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.TerminatedFailureInfo? TerminatedFailureInfo { get => _explicitNullValueTerminatedFailureInfo; set { _explicitNullValueTerminatedFailureInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("terminatedFailureInfo"); else _explicitNullProperties?.Remove("terminatedFailureInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.TerminatedFailureInfo? _explicitNullValueTerminatedFailureInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.TerminatedFailureInfo TerminatedFailureInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.TerminatedFailureInfo TerminatedFailureInfo { get => _explicitNullValueTerminatedFailureInfo; set { _explicitNullValueTerminatedFailureInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("terminatedFailureInfo"); else _explicitNullProperties?.Remove("terminatedFailureInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.TerminatedFailureInfo _explicitNullValueTerminatedFailureInfo = default!;
 #endif
         /// <summary>The timeoutFailureInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.TimeoutFailureInfo? TimeoutFailureInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.TimeoutFailureInfo? TimeoutFailureInfo { get => _explicitNullValueTimeoutFailureInfo; set { _explicitNullValueTimeoutFailureInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeoutFailureInfo"); else _explicitNullProperties?.Remove("timeoutFailureInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.TimeoutFailureInfo? _explicitNullValueTimeoutFailureInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.TimeoutFailureInfo TimeoutFailureInfo { get; set; }
+        public global::Soenneker.Temporal.OpenApiClient.Models.TimeoutFailureInfo TimeoutFailureInfo { get => _explicitNullValueTimeoutFailureInfo; set { _explicitNullValueTimeoutFailureInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeoutFailureInfo"); else _explicitNullProperties?.Remove("timeoutFailureInfo"); } }
+        private global::Soenneker.Temporal.OpenApiClient.Models.TimeoutFailureInfo _explicitNullValueTimeoutFailureInfo = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.PendingNexusOperationInfoLastAttemptFailure"/> and sets the default values.
@@ -150,7 +202,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public static global::Soenneker.Temporal.OpenApiClient.Models.PendingNexusOperationInfoLastAttemptFailure CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Temporal.OpenApiClient.Models.PendingNexusOperationInfoLastAttemptFailure();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Temporal.OpenApiClient.Models.PendingNexusOperationInfoLastAttemptFailure(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -199,6 +251,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             writer.WriteStringValue("stackTrace", StackTrace);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TerminatedFailureInfo>("terminatedFailureInfo", TerminatedFailureInfo);
             writer.WriteObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.TimeoutFailureInfo>("timeoutFailureInfo", TimeoutFailureInfo);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
