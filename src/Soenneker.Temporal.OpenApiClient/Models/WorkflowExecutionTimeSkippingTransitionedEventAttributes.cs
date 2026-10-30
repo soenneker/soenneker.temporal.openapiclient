@@ -18,21 +18,24 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("disabledAfterBound") is { } nullNodeDisabledAfterBound && nullNodeDisabledAfterBound.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisabledAfterBound = null;
-            if (parseNode.GetChildNode("targetTime") is { } nullNodeTargetTime && nullNodeTargetTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetTime = null;
-            if (parseNode.GetChildNode("wallClockTime") is { } nullNodeWallClockTime && nullNodeWallClockTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WallClockTime = null;
+            if (parseNode.GetChildNode("disabledAfterBound") is null) { _explicitNullValueDisabledAfterBound = default!; _explicitNullProperties?.Remove("disabledAfterBound"); }
+            else if (parseNode.GetChildNode("disabledAfterBound") is { } nullNodeDisabledAfterBound && nullNodeDisabledAfterBound.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisabledAfterBound = null;
+            if (parseNode.GetChildNode("targetTime") is null) { _explicitNullValueTargetTime = default!; _explicitNullProperties?.Remove("targetTime"); }
+            else if (parseNode.GetChildNode("targetTime") is { } nullNodeTargetTime && nullNodeTargetTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetTime = null;
+            if (parseNode.GetChildNode("wallClockTime") is null) { _explicitNullValueWallClockTime = default!; _explicitNullProperties?.Remove("wallClockTime"); }
+            else if (parseNode.GetChildNode("wallClockTime") is { } nullNodeWallClockTime && nullNodeWallClockTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WallClockTime = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>when true, time skipping was disabled automatically due to a bound being reached. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;after&quot; is used to indicate temporal ordering. --)</summary>
-        public bool? DisabledAfterBound { get => _explicitNullValueDisabledAfterBound; set { _explicitNullValueDisabledAfterBound = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disabledAfterBound"); else _explicitNullProperties?.Remove("disabledAfterBound"); } }
+        public bool? DisabledAfterBound { get => _explicitNullValueDisabledAfterBound; set { _explicitNullValueDisabledAfterBound = value; AdditionalData?.Remove("disabledAfterBound"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disabledAfterBound"); else _explicitNullProperties?.Remove("disabledAfterBound"); } }
         private bool? _explicitNullValueDisabledAfterBound = default!;
         /// <summary>The virtual time after time skipping was applied.</summary>
-        public DateTimeOffset? TargetTime { get => _explicitNullValueTargetTime; set { _explicitNullValueTargetTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetTime"); else _explicitNullProperties?.Remove("targetTime"); } }
+        public DateTimeOffset? TargetTime { get => _explicitNullValueTargetTime; set { _explicitNullValueTargetTime = value; AdditionalData?.Remove("targetTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetTime"); else _explicitNullProperties?.Remove("targetTime"); } }
         private DateTimeOffset? _explicitNullValueTargetTime = default!;
         /// <summary>The wall-clock time when the time-skipping state changed event was generated.</summary>
-        public DateTimeOffset? WallClockTime { get => _explicitNullValueWallClockTime; set { _explicitNullValueWallClockTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wallClockTime"); else _explicitNullProperties?.Remove("wallClockTime"); } }
+        public DateTimeOffset? WallClockTime { get => _explicitNullValueWallClockTime; set { _explicitNullValueWallClockTime = value; AdditionalData?.Remove("wallClockTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wallClockTime"); else _explicitNullProperties?.Remove("wallClockTime"); } }
         private DateTimeOffset? _explicitNullValueWallClockTime = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTimeSkippingTransitionedEventAttributes"/> and sets the default values.

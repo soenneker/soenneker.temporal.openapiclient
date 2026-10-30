@@ -17,17 +17,19 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("rateLimitSource") is { } nullNodeRateLimitSource && nullNodeRateLimitSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RateLimitSource = null;
-            if (parseNode.GetChildNode("requestsPerSecond") is { } nullNodeRequestsPerSecond && nullNodeRequestsPerSecond.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestsPerSecond = null;
+            if (parseNode.GetChildNode("rateLimitSource") is null) { _explicitNullValueRateLimitSource = default!; _explicitNullProperties?.Remove("rateLimitSource"); }
+            else if (parseNode.GetChildNode("rateLimitSource") is { } nullNodeRateLimitSource && nullNodeRateLimitSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RateLimitSource = null;
+            if (parseNode.GetChildNode("requestsPerSecond") is null) { _explicitNullValueRequestsPerSecond = default!; _explicitNullProperties?.Remove("requestsPerSecond"); }
+            else if (parseNode.GetChildNode("requestsPerSecond") is { } nullNodeRequestsPerSecond && nullNodeRequestsPerSecond.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestsPerSecond = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Source of the RateLimit Configuration,which can be one of the following values: - SOURCE_API: The rate limit that is set via the TaskQueueConfig api. - SOURCE_WORKER: The rate limit is the value set using the workerOptions in TaskQueueActivitiesPerSecond. - SOURCE_SYSTEM: The rate limit is the default value set by the system</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseEffectiveRateLimitRateLimitSource? RateLimitSource { get => _explicitNullValueRateLimitSource; set { _explicitNullValueRateLimitSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rateLimitSource"); else _explicitNullProperties?.Remove("rateLimitSource"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseEffectiveRateLimitRateLimitSource? RateLimitSource { get => _explicitNullValueRateLimitSource; set { _explicitNullValueRateLimitSource = value; AdditionalData?.Remove("rateLimitSource"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rateLimitSource"); else _explicitNullProperties?.Remove("rateLimitSource"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseEffectiveRateLimitRateLimitSource? _explicitNullValueRateLimitSource = default!;
         /// <summary>The effective rate limit for the task queue.</summary>
-        public float? RequestsPerSecond { get => _explicitNullValueRequestsPerSecond; set { _explicitNullValueRequestsPerSecond = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestsPerSecond"); else _explicitNullProperties?.Remove("requestsPerSecond"); } }
+        public float? RequestsPerSecond { get => _explicitNullValueRequestsPerSecond; set { _explicitNullValueRequestsPerSecond = value; AdditionalData?.Remove("requestsPerSecond"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestsPerSecond"); else _explicitNullProperties?.Remove("requestsPerSecond"); } }
         private float? _explicitNullValueRequestsPerSecond = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseEffectiveRateLimit"/> and sets the default values.
@@ -54,7 +56,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "rateLimitSource", n => { RateLimitSource = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseEffectiveRateLimitRateLimitSource>(); } },
+                { "rateLimitSource", n => { var parsed = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.DescribeTaskQueueResponseEffectiveRateLimitRateLimitSource>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRateLimitSource = default; _explicitNullProperties?.Remove("rateLimitSource"); AdditionalData["rateLimitSource"] = unknown; } else { RateLimitSource = parsed; AdditionalData.Remove("rateLimitSource"); } } },
                 { "requestsPerSecond", n => { RequestsPerSecond = n.GetFloatValue(); } },
             };
         }

@@ -18,32 +18,58 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("assignedBuildId") is { } nullNodeAssignedBuildId && nullNodeAssignedBuildId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssignedBuildId = null;
-            if (parseNode.GetChildNode("autoResetPoints") is { } nullNodeAutoResetPoints && nullNodeAutoResetPoints.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoResetPoints = null;
-            if (parseNode.GetChildNode("closeTime") is { } nullNodeCloseTime && nullNodeCloseTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CloseTime = null;
-            if (parseNode.GetChildNode("execution") is { } nullNodeExecution && nullNodeExecution.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Execution = null;
-            if (parseNode.GetChildNode("executionDuration") is { } nullNodeExecutionDuration && nullNodeExecutionDuration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExecutionDuration = null;
-            if (parseNode.GetChildNode("executionTime") is { } nullNodeExecutionTime && nullNodeExecutionTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExecutionTime = null;
-            if (parseNode.GetChildNode("externalPayloadCount") is { } nullNodeExternalPayloadCount && nullNodeExternalPayloadCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalPayloadCount = null;
-            if (parseNode.GetChildNode("externalPayloadSizeBytes") is { } nullNodeExternalPayloadSizeBytes && nullNodeExternalPayloadSizeBytes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalPayloadSizeBytes = null;
-            if (parseNode.GetChildNode("firstRunId") is { } nullNodeFirstRunId && nullNodeFirstRunId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstRunId = null;
-            if (parseNode.GetChildNode("historyLength") is { } nullNodeHistoryLength && nullNodeHistoryLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HistoryLength = null;
-            if (parseNode.GetChildNode("historySizeBytes") is { } nullNodeHistorySizeBytes && nullNodeHistorySizeBytes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HistorySizeBytes = null;
-            if (parseNode.GetChildNode("inheritedBuildId") is { } nullNodeInheritedBuildId && nullNodeInheritedBuildId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InheritedBuildId = null;
-            if (parseNode.GetChildNode("memo") is { } nullNodeMemo && nullNodeMemo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Memo = null;
-            if (parseNode.GetChildNode("mostRecentWorkerVersionStamp") is { } nullNodeMostRecentWorkerVersionStamp && nullNodeMostRecentWorkerVersionStamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MostRecentWorkerVersionStamp = null;
-            if (parseNode.GetChildNode("parentExecution") is { } nullNodeParentExecution && nullNodeParentExecution.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentExecution = null;
-            if (parseNode.GetChildNode("parentNamespaceId") is { } nullNodeParentNamespaceId && nullNodeParentNamespaceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentNamespaceId = null;
-            if (parseNode.GetChildNode("priority") is { } nullNodePriority && nullNodePriority.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Priority = null;
-            if (parseNode.GetChildNode("rootExecution") is { } nullNodeRootExecution && nullNodeRootExecution.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RootExecution = null;
-            if (parseNode.GetChildNode("searchAttributes") is { } nullNodeSearchAttributes && nullNodeSearchAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SearchAttributes = null;
-            if (parseNode.GetChildNode("startTime") is { } nullNodeStartTime && nullNodeStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartTime = null;
-            if (parseNode.GetChildNode("stateTransitionCount") is { } nullNodeStateTransitionCount && nullNodeStateTransitionCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StateTransitionCount = null;
-            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
-            if (parseNode.GetChildNode("taskQueue") is { } nullNodeTaskQueue && nullNodeTaskQueue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskQueue = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
-            if (parseNode.GetChildNode("versioningInfo") is { } nullNodeVersioningInfo && nullNodeVersioningInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VersioningInfo = null;
-            if (parseNode.GetChildNode("workerDeploymentName") is { } nullNodeWorkerDeploymentName && nullNodeWorkerDeploymentName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerDeploymentName = null;
+            if (parseNode.GetChildNode("assignedBuildId") is null) { _explicitNullValueAssignedBuildId = default!; _explicitNullProperties?.Remove("assignedBuildId"); }
+            else if (parseNode.GetChildNode("assignedBuildId") is { } nullNodeAssignedBuildId && nullNodeAssignedBuildId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssignedBuildId = null;
+            if (parseNode.GetChildNode("autoResetPoints") is null) { _explicitNullValueAutoResetPoints = default!; _explicitNullProperties?.Remove("autoResetPoints"); }
+            else if (parseNode.GetChildNode("autoResetPoints") is { } nullNodeAutoResetPoints && nullNodeAutoResetPoints.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoResetPoints = null;
+            if (parseNode.GetChildNode("closeTime") is null) { _explicitNullValueCloseTime = default!; _explicitNullProperties?.Remove("closeTime"); }
+            else if (parseNode.GetChildNode("closeTime") is { } nullNodeCloseTime && nullNodeCloseTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CloseTime = null;
+            if (parseNode.GetChildNode("execution") is null) { _explicitNullValueExecution = default!; _explicitNullProperties?.Remove("execution"); }
+            else if (parseNode.GetChildNode("execution") is { } nullNodeExecution && nullNodeExecution.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Execution = null;
+            if (parseNode.GetChildNode("executionDuration") is null) { _explicitNullValueExecutionDuration = default!; _explicitNullProperties?.Remove("executionDuration"); }
+            else if (parseNode.GetChildNode("executionDuration") is { } nullNodeExecutionDuration && nullNodeExecutionDuration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExecutionDuration = null;
+            if (parseNode.GetChildNode("executionTime") is null) { _explicitNullValueExecutionTime = default!; _explicitNullProperties?.Remove("executionTime"); }
+            else if (parseNode.GetChildNode("executionTime") is { } nullNodeExecutionTime && nullNodeExecutionTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExecutionTime = null;
+            if (parseNode.GetChildNode("externalPayloadCount") is null) { _explicitNullValueExternalPayloadCount = default!; _explicitNullProperties?.Remove("externalPayloadCount"); }
+            else if (parseNode.GetChildNode("externalPayloadCount") is { } nullNodeExternalPayloadCount && nullNodeExternalPayloadCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalPayloadCount = null;
+            if (parseNode.GetChildNode("externalPayloadSizeBytes") is null) { _explicitNullValueExternalPayloadSizeBytes = default!; _explicitNullProperties?.Remove("externalPayloadSizeBytes"); }
+            else if (parseNode.GetChildNode("externalPayloadSizeBytes") is { } nullNodeExternalPayloadSizeBytes && nullNodeExternalPayloadSizeBytes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalPayloadSizeBytes = null;
+            if (parseNode.GetChildNode("firstRunId") is null) { _explicitNullValueFirstRunId = default!; _explicitNullProperties?.Remove("firstRunId"); }
+            else if (parseNode.GetChildNode("firstRunId") is { } nullNodeFirstRunId && nullNodeFirstRunId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstRunId = null;
+            if (parseNode.GetChildNode("historyLength") is null) { _explicitNullValueHistoryLength = default!; _explicitNullProperties?.Remove("historyLength"); }
+            else if (parseNode.GetChildNode("historyLength") is { } nullNodeHistoryLength && nullNodeHistoryLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HistoryLength = null;
+            if (parseNode.GetChildNode("historySizeBytes") is null) { _explicitNullValueHistorySizeBytes = default!; _explicitNullProperties?.Remove("historySizeBytes"); }
+            else if (parseNode.GetChildNode("historySizeBytes") is { } nullNodeHistorySizeBytes && nullNodeHistorySizeBytes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HistorySizeBytes = null;
+            if (parseNode.GetChildNode("inheritedBuildId") is null) { _explicitNullValueInheritedBuildId = default!; _explicitNullProperties?.Remove("inheritedBuildId"); }
+            else if (parseNode.GetChildNode("inheritedBuildId") is { } nullNodeInheritedBuildId && nullNodeInheritedBuildId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InheritedBuildId = null;
+            if (parseNode.GetChildNode("memo") is null) { _explicitNullValueMemo = default!; _explicitNullProperties?.Remove("memo"); }
+            else if (parseNode.GetChildNode("memo") is { } nullNodeMemo && nullNodeMemo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Memo = null;
+            if (parseNode.GetChildNode("mostRecentWorkerVersionStamp") is null) { _explicitNullValueMostRecentWorkerVersionStamp = default!; _explicitNullProperties?.Remove("mostRecentWorkerVersionStamp"); }
+            else if (parseNode.GetChildNode("mostRecentWorkerVersionStamp") is { } nullNodeMostRecentWorkerVersionStamp && nullNodeMostRecentWorkerVersionStamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MostRecentWorkerVersionStamp = null;
+            if (parseNode.GetChildNode("parentExecution") is null) { _explicitNullValueParentExecution = default!; _explicitNullProperties?.Remove("parentExecution"); }
+            else if (parseNode.GetChildNode("parentExecution") is { } nullNodeParentExecution && nullNodeParentExecution.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentExecution = null;
+            if (parseNode.GetChildNode("parentNamespaceId") is null) { _explicitNullValueParentNamespaceId = default!; _explicitNullProperties?.Remove("parentNamespaceId"); }
+            else if (parseNode.GetChildNode("parentNamespaceId") is { } nullNodeParentNamespaceId && nullNodeParentNamespaceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentNamespaceId = null;
+            if (parseNode.GetChildNode("priority") is null) { _explicitNullValuePriority = default!; _explicitNullProperties?.Remove("priority"); }
+            else if (parseNode.GetChildNode("priority") is { } nullNodePriority && nullNodePriority.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Priority = null;
+            if (parseNode.GetChildNode("rootExecution") is null) { _explicitNullValueRootExecution = default!; _explicitNullProperties?.Remove("rootExecution"); }
+            else if (parseNode.GetChildNode("rootExecution") is { } nullNodeRootExecution && nullNodeRootExecution.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RootExecution = null;
+            if (parseNode.GetChildNode("searchAttributes") is null) { _explicitNullValueSearchAttributes = default!; _explicitNullProperties?.Remove("searchAttributes"); }
+            else if (parseNode.GetChildNode("searchAttributes") is { } nullNodeSearchAttributes && nullNodeSearchAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SearchAttributes = null;
+            if (parseNode.GetChildNode("startTime") is null) { _explicitNullValueStartTime = default!; _explicitNullProperties?.Remove("startTime"); }
+            else if (parseNode.GetChildNode("startTime") is { } nullNodeStartTime && nullNodeStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartTime = null;
+            if (parseNode.GetChildNode("stateTransitionCount") is null) { _explicitNullValueStateTransitionCount = default!; _explicitNullProperties?.Remove("stateTransitionCount"); }
+            else if (parseNode.GetChildNode("stateTransitionCount") is { } nullNodeStateTransitionCount && nullNodeStateTransitionCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StateTransitionCount = null;
+            if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
+            else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("taskQueue") is null) { _explicitNullValueTaskQueue = default!; _explicitNullProperties?.Remove("taskQueue"); }
+            else if (parseNode.GetChildNode("taskQueue") is { } nullNodeTaskQueue && nullNodeTaskQueue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaskQueue = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("versioningInfo") is null) { _explicitNullValueVersioningInfo = default!; _explicitNullProperties?.Remove("versioningInfo"); }
+            else if (parseNode.GetChildNode("versioningInfo") is { } nullNodeVersioningInfo && nullNodeVersioningInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VersioningInfo = null;
+            if (parseNode.GetChildNode("workerDeploymentName") is null) { _explicitNullValueWorkerDeploymentName = default!; _explicitNullProperties?.Remove("workerDeploymentName"); }
+            else if (parseNode.GetChildNode("workerDeploymentName") is { } nullNodeWorkerDeploymentName && nullNodeWorkerDeploymentName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerDeploymentName = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -51,233 +77,233 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The currently assigned build ID for this execution. Presence of this value means worker versioning is used for this execution. Assigned build ID is selected based on Worker Versioning Assignment Rules when the first workflow task of the execution is scheduled. If the first workflow task fails and is scheduled again, the assigned build ID may change according to the latest versioning rules. Assigned build ID can also change in the middle of a execution if Compatible Redirect Rules are applied to this execution. Deprecated. This field should be cleaned up when versioning-2 API is removed. [cleanup-experimental-wv]</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AssignedBuildId { get => _explicitNullValueAssignedBuildId; set { _explicitNullValueAssignedBuildId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignedBuildId"); else _explicitNullProperties?.Remove("assignedBuildId"); } }
+        public string? AssignedBuildId { get => _explicitNullValueAssignedBuildId; set { _explicitNullValueAssignedBuildId = value; AdditionalData?.Remove("assignedBuildId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignedBuildId"); else _explicitNullProperties?.Remove("assignedBuildId"); } }
         private string? _explicitNullValueAssignedBuildId = default!;
 #nullable restore
 #else
-        public string AssignedBuildId { get => _explicitNullValueAssignedBuildId; set { _explicitNullValueAssignedBuildId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignedBuildId"); else _explicitNullProperties?.Remove("assignedBuildId"); } }
+        public string AssignedBuildId { get => _explicitNullValueAssignedBuildId; set { _explicitNullValueAssignedBuildId = value; AdditionalData?.Remove("assignedBuildId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignedBuildId"); else _explicitNullProperties?.Remove("assignedBuildId"); } }
         private string _explicitNullValueAssignedBuildId = default!;
 #endif
         /// <summary>The autoResetPoints property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ResetPoints? AutoResetPoints { get => _explicitNullValueAutoResetPoints; set { _explicitNullValueAutoResetPoints = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("autoResetPoints"); else _explicitNullProperties?.Remove("autoResetPoints"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ResetPoints? AutoResetPoints { get => _explicitNullValueAutoResetPoints; set { _explicitNullValueAutoResetPoints = value; AdditionalData?.Remove("autoResetPoints"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("autoResetPoints"); else _explicitNullProperties?.Remove("autoResetPoints"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.ResetPoints? _explicitNullValueAutoResetPoints = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ResetPoints AutoResetPoints { get => _explicitNullValueAutoResetPoints; set { _explicitNullValueAutoResetPoints = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("autoResetPoints"); else _explicitNullProperties?.Remove("autoResetPoints"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ResetPoints AutoResetPoints { get => _explicitNullValueAutoResetPoints; set { _explicitNullValueAutoResetPoints = value; AdditionalData?.Remove("autoResetPoints"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("autoResetPoints"); else _explicitNullProperties?.Remove("autoResetPoints"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.ResetPoints _explicitNullValueAutoResetPoints = default!;
 #endif
         /// <summary>The closeTime property</summary>
-        public DateTimeOffset? CloseTime { get => _explicitNullValueCloseTime; set { _explicitNullValueCloseTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("closeTime"); else _explicitNullProperties?.Remove("closeTime"); } }
+        public DateTimeOffset? CloseTime { get => _explicitNullValueCloseTime; set { _explicitNullValueCloseTime = value; AdditionalData?.Remove("closeTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("closeTime"); else _explicitNullProperties?.Remove("closeTime"); } }
         private DateTimeOffset? _explicitNullValueCloseTime = default!;
         /// <summary>Identifies a specific workflow within a namespace. Practically speaking, because run_id is a uuid, a workflow execution is globally unique. Note that many commands allow specifying an empty run id as a way of saying &quot;target the latest run of the workflow&quot;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution? Execution { get => _explicitNullValueExecution; set { _explicitNullValueExecution = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("execution"); else _explicitNullProperties?.Remove("execution"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution? Execution { get => _explicitNullValueExecution; set { _explicitNullValueExecution = value; AdditionalData?.Remove("execution"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("execution"); else _explicitNullProperties?.Remove("execution"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution? _explicitNullValueExecution = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution Execution { get => _explicitNullValueExecution; set { _explicitNullValueExecution = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("execution"); else _explicitNullProperties?.Remove("execution"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution Execution { get => _explicitNullValueExecution; set { _explicitNullValueExecution = value; AdditionalData?.Remove("execution"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("execution"); else _explicitNullProperties?.Remove("execution"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution _explicitNullValueExecution = default!;
 #endif
         /// <summary>Workflow execution duration is defined as difference between close time and execution time. This field is only populated if the workflow is closed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExecutionDuration { get => _explicitNullValueExecutionDuration; set { _explicitNullValueExecutionDuration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("executionDuration"); else _explicitNullProperties?.Remove("executionDuration"); } }
+        public string? ExecutionDuration { get => _explicitNullValueExecutionDuration; set { _explicitNullValueExecutionDuration = value; AdditionalData?.Remove("executionDuration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("executionDuration"); else _explicitNullProperties?.Remove("executionDuration"); } }
         private string? _explicitNullValueExecutionDuration = default!;
 #nullable restore
 #else
-        public string ExecutionDuration { get => _explicitNullValueExecutionDuration; set { _explicitNullValueExecutionDuration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("executionDuration"); else _explicitNullProperties?.Remove("executionDuration"); } }
+        public string ExecutionDuration { get => _explicitNullValueExecutionDuration; set { _explicitNullValueExecutionDuration = value; AdditionalData?.Remove("executionDuration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("executionDuration"); else _explicitNullProperties?.Remove("executionDuration"); } }
         private string _explicitNullValueExecutionDuration = default!;
 #endif
         /// <summary>The executionTime property</summary>
-        public DateTimeOffset? ExecutionTime { get => _explicitNullValueExecutionTime; set { _explicitNullValueExecutionTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("executionTime"); else _explicitNullProperties?.Remove("executionTime"); } }
+        public DateTimeOffset? ExecutionTime { get => _explicitNullValueExecutionTime; set { _explicitNullValueExecutionTime = value; AdditionalData?.Remove("executionTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("executionTime"); else _explicitNullProperties?.Remove("executionTime"); } }
         private DateTimeOffset? _explicitNullValueExecutionTime = default!;
         /// <summary>Count of external payloads referenced in workflow history.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalPayloadCount { get => _explicitNullValueExternalPayloadCount; set { _explicitNullValueExternalPayloadCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalPayloadCount"); else _explicitNullProperties?.Remove("externalPayloadCount"); } }
+        public string? ExternalPayloadCount { get => _explicitNullValueExternalPayloadCount; set { _explicitNullValueExternalPayloadCount = value; AdditionalData?.Remove("externalPayloadCount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalPayloadCount"); else _explicitNullProperties?.Remove("externalPayloadCount"); } }
         private string? _explicitNullValueExternalPayloadCount = default!;
 #nullable restore
 #else
-        public string ExternalPayloadCount { get => _explicitNullValueExternalPayloadCount; set { _explicitNullValueExternalPayloadCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalPayloadCount"); else _explicitNullProperties?.Remove("externalPayloadCount"); } }
+        public string ExternalPayloadCount { get => _explicitNullValueExternalPayloadCount; set { _explicitNullValueExternalPayloadCount = value; AdditionalData?.Remove("externalPayloadCount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalPayloadCount"); else _explicitNullProperties?.Remove("externalPayloadCount"); } }
         private string _explicitNullValueExternalPayloadCount = default!;
 #endif
         /// <summary>Total size in bytes of all external payloads referenced in workflow history.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalPayloadSizeBytes { get => _explicitNullValueExternalPayloadSizeBytes; set { _explicitNullValueExternalPayloadSizeBytes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalPayloadSizeBytes"); else _explicitNullProperties?.Remove("externalPayloadSizeBytes"); } }
+        public string? ExternalPayloadSizeBytes { get => _explicitNullValueExternalPayloadSizeBytes; set { _explicitNullValueExternalPayloadSizeBytes = value; AdditionalData?.Remove("externalPayloadSizeBytes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalPayloadSizeBytes"); else _explicitNullProperties?.Remove("externalPayloadSizeBytes"); } }
         private string? _explicitNullValueExternalPayloadSizeBytes = default!;
 #nullable restore
 #else
-        public string ExternalPayloadSizeBytes { get => _explicitNullValueExternalPayloadSizeBytes; set { _explicitNullValueExternalPayloadSizeBytes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalPayloadSizeBytes"); else _explicitNullProperties?.Remove("externalPayloadSizeBytes"); } }
+        public string ExternalPayloadSizeBytes { get => _explicitNullValueExternalPayloadSizeBytes; set { _explicitNullValueExternalPayloadSizeBytes = value; AdditionalData?.Remove("externalPayloadSizeBytes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalPayloadSizeBytes"); else _explicitNullProperties?.Remove("externalPayloadSizeBytes"); } }
         private string _explicitNullValueExternalPayloadSizeBytes = default!;
 #endif
         /// <summary>The first run ID in the execution chain. Executions created via the following operations are considered to be in the same chain - ContinueAsNew - Workflow Retry - Workflow Reset - Cron Schedule</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FirstRunId { get => _explicitNullValueFirstRunId; set { _explicitNullValueFirstRunId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("firstRunId"); else _explicitNullProperties?.Remove("firstRunId"); } }
+        public string? FirstRunId { get => _explicitNullValueFirstRunId; set { _explicitNullValueFirstRunId = value; AdditionalData?.Remove("firstRunId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("firstRunId"); else _explicitNullProperties?.Remove("firstRunId"); } }
         private string? _explicitNullValueFirstRunId = default!;
 #nullable restore
 #else
-        public string FirstRunId { get => _explicitNullValueFirstRunId; set { _explicitNullValueFirstRunId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("firstRunId"); else _explicitNullProperties?.Remove("firstRunId"); } }
+        public string FirstRunId { get => _explicitNullValueFirstRunId; set { _explicitNullValueFirstRunId = value; AdditionalData?.Remove("firstRunId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("firstRunId"); else _explicitNullProperties?.Remove("firstRunId"); } }
         private string _explicitNullValueFirstRunId = default!;
 #endif
         /// <summary>The historyLength property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HistoryLength { get => _explicitNullValueHistoryLength; set { _explicitNullValueHistoryLength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("historyLength"); else _explicitNullProperties?.Remove("historyLength"); } }
+        public string? HistoryLength { get => _explicitNullValueHistoryLength; set { _explicitNullValueHistoryLength = value; AdditionalData?.Remove("historyLength"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("historyLength"); else _explicitNullProperties?.Remove("historyLength"); } }
         private string? _explicitNullValueHistoryLength = default!;
 #nullable restore
 #else
-        public string HistoryLength { get => _explicitNullValueHistoryLength; set { _explicitNullValueHistoryLength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("historyLength"); else _explicitNullProperties?.Remove("historyLength"); } }
+        public string HistoryLength { get => _explicitNullValueHistoryLength; set { _explicitNullValueHistoryLength = value; AdditionalData?.Remove("historyLength"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("historyLength"); else _explicitNullProperties?.Remove("historyLength"); } }
         private string _explicitNullValueHistoryLength = default!;
 #endif
         /// <summary>The historySizeBytes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HistorySizeBytes { get => _explicitNullValueHistorySizeBytes; set { _explicitNullValueHistorySizeBytes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("historySizeBytes"); else _explicitNullProperties?.Remove("historySizeBytes"); } }
+        public string? HistorySizeBytes { get => _explicitNullValueHistorySizeBytes; set { _explicitNullValueHistorySizeBytes = value; AdditionalData?.Remove("historySizeBytes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("historySizeBytes"); else _explicitNullProperties?.Remove("historySizeBytes"); } }
         private string? _explicitNullValueHistorySizeBytes = default!;
 #nullable restore
 #else
-        public string HistorySizeBytes { get => _explicitNullValueHistorySizeBytes; set { _explicitNullValueHistorySizeBytes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("historySizeBytes"); else _explicitNullProperties?.Remove("historySizeBytes"); } }
+        public string HistorySizeBytes { get => _explicitNullValueHistorySizeBytes; set { _explicitNullValueHistorySizeBytes = value; AdditionalData?.Remove("historySizeBytes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("historySizeBytes"); else _explicitNullProperties?.Remove("historySizeBytes"); } }
         private string _explicitNullValueHistorySizeBytes = default!;
 #endif
         /// <summary>Build ID inherited from a previous/parent execution. If present, assigned_build_id will be set to this, instead of using the assignment rules. Deprecated. This field should be cleaned up when versioning-2 API is removed. [cleanup-experimental-wv]</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InheritedBuildId { get => _explicitNullValueInheritedBuildId; set { _explicitNullValueInheritedBuildId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inheritedBuildId"); else _explicitNullProperties?.Remove("inheritedBuildId"); } }
+        public string? InheritedBuildId { get => _explicitNullValueInheritedBuildId; set { _explicitNullValueInheritedBuildId = value; AdditionalData?.Remove("inheritedBuildId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inheritedBuildId"); else _explicitNullProperties?.Remove("inheritedBuildId"); } }
         private string? _explicitNullValueInheritedBuildId = default!;
 #nullable restore
 #else
-        public string InheritedBuildId { get => _explicitNullValueInheritedBuildId; set { _explicitNullValueInheritedBuildId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inheritedBuildId"); else _explicitNullProperties?.Remove("inheritedBuildId"); } }
+        public string InheritedBuildId { get => _explicitNullValueInheritedBuildId; set { _explicitNullValueInheritedBuildId = value; AdditionalData?.Remove("inheritedBuildId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inheritedBuildId"); else _explicitNullProperties?.Remove("inheritedBuildId"); } }
         private string _explicitNullValueInheritedBuildId = default!;
 #endif
         /// <summary>A user-defined set of *unindexed* fields that are exposed when listing/searching workflows</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Memo? Memo { get => _explicitNullValueMemo; set { _explicitNullValueMemo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("memo"); else _explicitNullProperties?.Remove("memo"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.Memo? Memo { get => _explicitNullValueMemo; set { _explicitNullValueMemo = value; AdditionalData?.Remove("memo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("memo"); else _explicitNullProperties?.Remove("memo"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.Memo? _explicitNullValueMemo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Memo Memo { get => _explicitNullValueMemo; set { _explicitNullValueMemo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("memo"); else _explicitNullProperties?.Remove("memo"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.Memo Memo { get => _explicitNullValueMemo; set { _explicitNullValueMemo = value; AdditionalData?.Remove("memo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("memo"); else _explicitNullProperties?.Remove("memo"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.Memo _explicitNullValueMemo = default!;
 #endif
         /// <summary>If set, the most recent worker version stamp that appeared in a workflow task completion Deprecated. This field should be cleaned up when versioning-2 API is removed. [cleanup-experimental-wv]</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoMostRecentWorkerVersionStamp? MostRecentWorkerVersionStamp { get => _explicitNullValueMostRecentWorkerVersionStamp; set { _explicitNullValueMostRecentWorkerVersionStamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mostRecentWorkerVersionStamp"); else _explicitNullProperties?.Remove("mostRecentWorkerVersionStamp"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoMostRecentWorkerVersionStamp? MostRecentWorkerVersionStamp { get => _explicitNullValueMostRecentWorkerVersionStamp; set { _explicitNullValueMostRecentWorkerVersionStamp = value; AdditionalData?.Remove("mostRecentWorkerVersionStamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mostRecentWorkerVersionStamp"); else _explicitNullProperties?.Remove("mostRecentWorkerVersionStamp"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoMostRecentWorkerVersionStamp? _explicitNullValueMostRecentWorkerVersionStamp = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoMostRecentWorkerVersionStamp MostRecentWorkerVersionStamp { get => _explicitNullValueMostRecentWorkerVersionStamp; set { _explicitNullValueMostRecentWorkerVersionStamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mostRecentWorkerVersionStamp"); else _explicitNullProperties?.Remove("mostRecentWorkerVersionStamp"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoMostRecentWorkerVersionStamp MostRecentWorkerVersionStamp { get => _explicitNullValueMostRecentWorkerVersionStamp; set { _explicitNullValueMostRecentWorkerVersionStamp = value; AdditionalData?.Remove("mostRecentWorkerVersionStamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mostRecentWorkerVersionStamp"); else _explicitNullProperties?.Remove("mostRecentWorkerVersionStamp"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoMostRecentWorkerVersionStamp _explicitNullValueMostRecentWorkerVersionStamp = default!;
 #endif
         /// <summary>Identifies a specific workflow within a namespace. Practically speaking, because run_id is a uuid, a workflow execution is globally unique. Note that many commands allow specifying an empty run id as a way of saying &quot;target the latest run of the workflow&quot;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution? ParentExecution { get => _explicitNullValueParentExecution; set { _explicitNullValueParentExecution = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parentExecution"); else _explicitNullProperties?.Remove("parentExecution"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution? ParentExecution { get => _explicitNullValueParentExecution; set { _explicitNullValueParentExecution = value; AdditionalData?.Remove("parentExecution"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parentExecution"); else _explicitNullProperties?.Remove("parentExecution"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution? _explicitNullValueParentExecution = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution ParentExecution { get => _explicitNullValueParentExecution; set { _explicitNullValueParentExecution = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parentExecution"); else _explicitNullProperties?.Remove("parentExecution"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution ParentExecution { get => _explicitNullValueParentExecution; set { _explicitNullValueParentExecution = value; AdditionalData?.Remove("parentExecution"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parentExecution"); else _explicitNullProperties?.Remove("parentExecution"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution _explicitNullValueParentExecution = default!;
 #endif
         /// <summary>The parentNamespaceId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ParentNamespaceId { get => _explicitNullValueParentNamespaceId; set { _explicitNullValueParentNamespaceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parentNamespaceId"); else _explicitNullProperties?.Remove("parentNamespaceId"); } }
+        public string? ParentNamespaceId { get => _explicitNullValueParentNamespaceId; set { _explicitNullValueParentNamespaceId = value; AdditionalData?.Remove("parentNamespaceId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parentNamespaceId"); else _explicitNullProperties?.Remove("parentNamespaceId"); } }
         private string? _explicitNullValueParentNamespaceId = default!;
 #nullable restore
 #else
-        public string ParentNamespaceId { get => _explicitNullValueParentNamespaceId; set { _explicitNullValueParentNamespaceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parentNamespaceId"); else _explicitNullProperties?.Remove("parentNamespaceId"); } }
+        public string ParentNamespaceId { get => _explicitNullValueParentNamespaceId; set { _explicitNullValueParentNamespaceId = value; AdditionalData?.Remove("parentNamespaceId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parentNamespaceId"); else _explicitNullProperties?.Remove("parentNamespaceId"); } }
         private string _explicitNullValueParentNamespaceId = default!;
 #endif
         /// <summary>Priority metadata</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoPriority? Priority { get => _explicitNullValuePriority; set { _explicitNullValuePriority = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priority"); else _explicitNullProperties?.Remove("priority"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoPriority? Priority { get => _explicitNullValuePriority; set { _explicitNullValuePriority = value; AdditionalData?.Remove("priority"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priority"); else _explicitNullProperties?.Remove("priority"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoPriority? _explicitNullValuePriority = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoPriority Priority { get => _explicitNullValuePriority; set { _explicitNullValuePriority = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priority"); else _explicitNullProperties?.Remove("priority"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoPriority Priority { get => _explicitNullValuePriority; set { _explicitNullValuePriority = value; AdditionalData?.Remove("priority"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priority"); else _explicitNullProperties?.Remove("priority"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoPriority _explicitNullValuePriority = default!;
 #endif
         /// <summary>Contains information about the root workflow execution. The root workflow execution is defined as follows: 1. A workflow without parent workflow is its own root workflow. 2. A workflow that has a parent workflow has the same root workflow as its parent workflow. Note: workflows continued as new or reseted may or may not have parents, check examples below. Examples:   Scenario 1: Workflow W1 starts child workflow W2, and W2 starts child workflow W3.     - The root workflow of all three workflows is W1.   Scenario 2: Workflow W1 starts child workflow W2, and W2 continued as new W3.     - The root workflow of all three workflows is W1.   Scenario 3: Workflow W1 continued as new W2.     - The root workflow of W1 is W1 and the root workflow of W2 is W2.   Scenario 4: Workflow W1 starts child workflow W2, and W2 is reseted, creating W3     - The root workflow of all three workflows is W1.   Scenario 5: Workflow W1 is reseted, creating W2.     - The root workflow of W1 is W1 and the root workflow of W2 is W2.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoRootExecution? RootExecution { get => _explicitNullValueRootExecution; set { _explicitNullValueRootExecution = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rootExecution"); else _explicitNullProperties?.Remove("rootExecution"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoRootExecution? RootExecution { get => _explicitNullValueRootExecution; set { _explicitNullValueRootExecution = value; AdditionalData?.Remove("rootExecution"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rootExecution"); else _explicitNullProperties?.Remove("rootExecution"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoRootExecution? _explicitNullValueRootExecution = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoRootExecution RootExecution { get => _explicitNullValueRootExecution; set { _explicitNullValueRootExecution = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rootExecution"); else _explicitNullProperties?.Remove("rootExecution"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoRootExecution RootExecution { get => _explicitNullValueRootExecution; set { _explicitNullValueRootExecution = value; AdditionalData?.Remove("rootExecution"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rootExecution"); else _explicitNullProperties?.Remove("rootExecution"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoRootExecution _explicitNullValueRootExecution = default!;
 #endif
         /// <summary>A user-defined set of *indexed* fields that are used/exposed when listing/searching workflows. The payload is not serialized in a user-defined way.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes? SearchAttributes { get => _explicitNullValueSearchAttributes; set { _explicitNullValueSearchAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("searchAttributes"); else _explicitNullProperties?.Remove("searchAttributes"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes? SearchAttributes { get => _explicitNullValueSearchAttributes; set { _explicitNullValueSearchAttributes = value; AdditionalData?.Remove("searchAttributes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("searchAttributes"); else _explicitNullProperties?.Remove("searchAttributes"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes? _explicitNullValueSearchAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes SearchAttributes { get => _explicitNullValueSearchAttributes; set { _explicitNullValueSearchAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("searchAttributes"); else _explicitNullProperties?.Remove("searchAttributes"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes SearchAttributes { get => _explicitNullValueSearchAttributes; set { _explicitNullValueSearchAttributes = value; AdditionalData?.Remove("searchAttributes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("searchAttributes"); else _explicitNullProperties?.Remove("searchAttributes"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes _explicitNullValueSearchAttributes = default!;
 #endif
         /// <summary>The startTime property</summary>
-        public DateTimeOffset? StartTime { get => _explicitNullValueStartTime; set { _explicitNullValueStartTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startTime"); else _explicitNullProperties?.Remove("startTime"); } }
+        public DateTimeOffset? StartTime { get => _explicitNullValueStartTime; set { _explicitNullValueStartTime = value; AdditionalData?.Remove("startTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startTime"); else _explicitNullProperties?.Remove("startTime"); } }
         private DateTimeOffset? _explicitNullValueStartTime = default!;
         /// <summary>The stateTransitionCount property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StateTransitionCount { get => _explicitNullValueStateTransitionCount; set { _explicitNullValueStateTransitionCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stateTransitionCount"); else _explicitNullProperties?.Remove("stateTransitionCount"); } }
+        public string? StateTransitionCount { get => _explicitNullValueStateTransitionCount; set { _explicitNullValueStateTransitionCount = value; AdditionalData?.Remove("stateTransitionCount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stateTransitionCount"); else _explicitNullProperties?.Remove("stateTransitionCount"); } }
         private string? _explicitNullValueStateTransitionCount = default!;
 #nullable restore
 #else
-        public string StateTransitionCount { get => _explicitNullValueStateTransitionCount; set { _explicitNullValueStateTransitionCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stateTransitionCount"); else _explicitNullProperties?.Remove("stateTransitionCount"); } }
+        public string StateTransitionCount { get => _explicitNullValueStateTransitionCount; set { _explicitNullValueStateTransitionCount = value; AdditionalData?.Remove("stateTransitionCount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stateTransitionCount"); else _explicitNullProperties?.Remove("stateTransitionCount"); } }
         private string _explicitNullValueStateTransitionCount = default!;
 #endif
         /// <summary>The status property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoStatus? _explicitNullValueStatus = default!;
         /// <summary>The taskQueue property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TaskQueue { get => _explicitNullValueTaskQueue; set { _explicitNullValueTaskQueue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taskQueue"); else _explicitNullProperties?.Remove("taskQueue"); } }
+        public string? TaskQueue { get => _explicitNullValueTaskQueue; set { _explicitNullValueTaskQueue = value; AdditionalData?.Remove("taskQueue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taskQueue"); else _explicitNullProperties?.Remove("taskQueue"); } }
         private string? _explicitNullValueTaskQueue = default!;
 #nullable restore
 #else
-        public string TaskQueue { get => _explicitNullValueTaskQueue; set { _explicitNullValueTaskQueue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taskQueue"); else _explicitNullProperties?.Remove("taskQueue"); } }
+        public string TaskQueue { get => _explicitNullValueTaskQueue; set { _explicitNullValueTaskQueue = value; AdditionalData?.Remove("taskQueue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taskQueue"); else _explicitNullProperties?.Remove("taskQueue"); } }
         private string _explicitNullValueTaskQueue = default!;
 #endif
         /// <summary>Represents the identifier used by a workflow author to define the workflow. Typically, the name of a function. This is sometimes referred to as the workflow&apos;s &quot;name&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowType? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowType Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowType Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowType _explicitNullValueType = default!;
 #endif
         /// <summary>Absent value means the workflow execution is not versioned. When present, the execution might be versioned or unversioned, depending on `versioning_info.behavior` and `versioning_info.versioning_override`. Experimental. Versioning info is experimental and might change in the future.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoVersioningInfo? VersioningInfo { get => _explicitNullValueVersioningInfo; set { _explicitNullValueVersioningInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("versioningInfo"); else _explicitNullProperties?.Remove("versioningInfo"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoVersioningInfo? VersioningInfo { get => _explicitNullValueVersioningInfo; set { _explicitNullValueVersioningInfo = value; AdditionalData?.Remove("versioningInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("versioningInfo"); else _explicitNullProperties?.Remove("versioningInfo"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoVersioningInfo? _explicitNullValueVersioningInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoVersioningInfo VersioningInfo { get => _explicitNullValueVersioningInfo; set { _explicitNullValueVersioningInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("versioningInfo"); else _explicitNullProperties?.Remove("versioningInfo"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoVersioningInfo VersioningInfo { get => _explicitNullValueVersioningInfo; set { _explicitNullValueVersioningInfo = value; AdditionalData?.Remove("versioningInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("versioningInfo"); else _explicitNullProperties?.Remove("versioningInfo"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoVersioningInfo _explicitNullValueVersioningInfo = default!;
 #endif
         /// <summary>The name of Worker Deployment that completed the most recent workflow task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkerDeploymentName { get => _explicitNullValueWorkerDeploymentName; set { _explicitNullValueWorkerDeploymentName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerDeploymentName"); else _explicitNullProperties?.Remove("workerDeploymentName"); } }
+        public string? WorkerDeploymentName { get => _explicitNullValueWorkerDeploymentName; set { _explicitNullValueWorkerDeploymentName = value; AdditionalData?.Remove("workerDeploymentName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerDeploymentName"); else _explicitNullProperties?.Remove("workerDeploymentName"); } }
         private string? _explicitNullValueWorkerDeploymentName = default!;
 #nullable restore
 #else
-        public string WorkerDeploymentName { get => _explicitNullValueWorkerDeploymentName; set { _explicitNullValueWorkerDeploymentName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerDeploymentName"); else _explicitNullProperties?.Remove("workerDeploymentName"); } }
+        public string WorkerDeploymentName { get => _explicitNullValueWorkerDeploymentName; set { _explicitNullValueWorkerDeploymentName = value; AdditionalData?.Remove("workerDeploymentName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerDeploymentName"); else _explicitNullProperties?.Remove("workerDeploymentName"); } }
         private string _explicitNullValueWorkerDeploymentName = default!;
 #endif
         /// <summary>
@@ -326,7 +352,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "searchAttributes", n => { SearchAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.SearchAttributes.CreateFromDiscriminatorValue); } },
                 { "startTime", n => { StartTime = n.GetDateTimeOffsetValue(); } },
                 { "stateTransitionCount", n => { StateTransitionCount = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoStatus>(); } },
+                { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
                 { "taskQueue", n => { TaskQueue = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowType>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowType.CreateFromDiscriminatorValue); } },
                 { "versioningInfo", n => { VersioningInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoVersioningInfo>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionInfoVersioningInfo.CreateFromDiscriminatorValue); } },

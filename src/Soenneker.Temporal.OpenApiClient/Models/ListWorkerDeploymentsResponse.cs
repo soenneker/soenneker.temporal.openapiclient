@@ -17,8 +17,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("nextPageToken") is { } nullNodeNextPageToken && nullNodeNextPageToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextPageToken = null;
-            if (parseNode.GetChildNode("workerDeployments") is { } nullNodeWorkerDeployments && nullNodeWorkerDeployments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerDeployments = null;
+            if (parseNode.GetChildNode("nextPageToken") is null) { _explicitNullValueNextPageToken = default!; _explicitNullProperties?.Remove("nextPageToken"); }
+            else if (parseNode.GetChildNode("nextPageToken") is { } nullNodeNextPageToken && nullNodeNextPageToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextPageToken = null;
+            if (parseNode.GetChildNode("workerDeployments") is null) { _explicitNullValueWorkerDeployments = default!; _explicitNullProperties?.Remove("workerDeployments"); }
+            else if (parseNode.GetChildNode("workerDeployments") is { } nullNodeWorkerDeployments && nullNodeWorkerDeployments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerDeployments = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The nextPageToken property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NextPageToken { get => _explicitNullValueNextPageToken; set { _explicitNullValueNextPageToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nextPageToken"); else _explicitNullProperties?.Remove("nextPageToken"); } }
+        public string? NextPageToken { get => _explicitNullValueNextPageToken; set { _explicitNullValueNextPageToken = value; AdditionalData?.Remove("nextPageToken"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nextPageToken"); else _explicitNullProperties?.Remove("nextPageToken"); } }
         private string? _explicitNullValueNextPageToken = default!;
 #nullable restore
 #else
-        public string NextPageToken { get => _explicitNullValueNextPageToken; set { _explicitNullValueNextPageToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nextPageToken"); else _explicitNullProperties?.Remove("nextPageToken"); } }
+        public string NextPageToken { get => _explicitNullValueNextPageToken; set { _explicitNullValueNextPageToken = value; AdditionalData?.Remove("nextPageToken"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nextPageToken"); else _explicitNullProperties?.Remove("nextPageToken"); } }
         private string _explicitNullValueNextPageToken = default!;
 #endif
         /// <summary>The list of worker deployments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummary>? WorkerDeployments { get => _explicitNullValueWorkerDeployments; set { _explicitNullValueWorkerDeployments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerDeployments"); else _explicitNullProperties?.Remove("workerDeployments"); } }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummary>? WorkerDeployments { get => _explicitNullValueWorkerDeployments; set { _explicitNullValueWorkerDeployments = value; AdditionalData?.Remove("workerDeployments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerDeployments"); else _explicitNullProperties?.Remove("workerDeployments"); } }
         private List<global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummary>? _explicitNullValueWorkerDeployments = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummary> WorkerDeployments { get => _explicitNullValueWorkerDeployments; set { _explicitNullValueWorkerDeployments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerDeployments"); else _explicitNullProperties?.Remove("workerDeployments"); } }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummary> WorkerDeployments { get => _explicitNullValueWorkerDeployments; set { _explicitNullValueWorkerDeployments = value; AdditionalData?.Remove("workerDeployments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerDeployments"); else _explicitNullProperties?.Remove("workerDeployments"); } }
         private List<global::Soenneker.Temporal.OpenApiClient.Models.ListWorkerDeploymentsResponseWorkerDeploymentSummary> _explicitNullValueWorkerDeployments = default!;
 #endif
         /// <summary>

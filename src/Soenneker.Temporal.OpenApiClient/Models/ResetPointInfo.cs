@@ -18,13 +18,20 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("binaryChecksum") is { } nullNodeBinaryChecksum && nullNodeBinaryChecksum.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BinaryChecksum = null;
-            if (parseNode.GetChildNode("buildId") is { } nullNodeBuildId && nullNodeBuildId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuildId = null;
-            if (parseNode.GetChildNode("createTime") is { } nullNodeCreateTime && nullNodeCreateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateTime = null;
-            if (parseNode.GetChildNode("expireTime") is { } nullNodeExpireTime && nullNodeExpireTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpireTime = null;
-            if (parseNode.GetChildNode("firstWorkflowTaskCompletedId") is { } nullNodeFirstWorkflowTaskCompletedId && nullNodeFirstWorkflowTaskCompletedId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstWorkflowTaskCompletedId = null;
-            if (parseNode.GetChildNode("resettable") is { } nullNodeResettable && nullNodeResettable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Resettable = null;
-            if (parseNode.GetChildNode("runId") is { } nullNodeRunId && nullNodeRunId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RunId = null;
+            if (parseNode.GetChildNode("binaryChecksum") is null) { _explicitNullValueBinaryChecksum = default!; _explicitNullProperties?.Remove("binaryChecksum"); }
+            else if (parseNode.GetChildNode("binaryChecksum") is { } nullNodeBinaryChecksum && nullNodeBinaryChecksum.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BinaryChecksum = null;
+            if (parseNode.GetChildNode("buildId") is null) { _explicitNullValueBuildId = default!; _explicitNullProperties?.Remove("buildId"); }
+            else if (parseNode.GetChildNode("buildId") is { } nullNodeBuildId && nullNodeBuildId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuildId = null;
+            if (parseNode.GetChildNode("createTime") is null) { _explicitNullValueCreateTime = default!; _explicitNullProperties?.Remove("createTime"); }
+            else if (parseNode.GetChildNode("createTime") is { } nullNodeCreateTime && nullNodeCreateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateTime = null;
+            if (parseNode.GetChildNode("expireTime") is null) { _explicitNullValueExpireTime = default!; _explicitNullProperties?.Remove("expireTime"); }
+            else if (parseNode.GetChildNode("expireTime") is { } nullNodeExpireTime && nullNodeExpireTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpireTime = null;
+            if (parseNode.GetChildNode("firstWorkflowTaskCompletedId") is null) { _explicitNullValueFirstWorkflowTaskCompletedId = default!; _explicitNullProperties?.Remove("firstWorkflowTaskCompletedId"); }
+            else if (parseNode.GetChildNode("firstWorkflowTaskCompletedId") is { } nullNodeFirstWorkflowTaskCompletedId && nullNodeFirstWorkflowTaskCompletedId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstWorkflowTaskCompletedId = null;
+            if (parseNode.GetChildNode("resettable") is null) { _explicitNullValueResettable = default!; _explicitNullProperties?.Remove("resettable"); }
+            else if (parseNode.GetChildNode("resettable") is { } nullNodeResettable && nullNodeResettable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Resettable = null;
+            if (parseNode.GetChildNode("runId") is null) { _explicitNullValueRunId = default!; _explicitNullProperties?.Remove("runId"); }
+            else if (parseNode.GetChildNode("runId") is { } nullNodeRunId && nullNodeRunId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RunId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -32,50 +39,50 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Deprecated. A worker binary version identifier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BinaryChecksum { get => _explicitNullValueBinaryChecksum; set { _explicitNullValueBinaryChecksum = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("binaryChecksum"); else _explicitNullProperties?.Remove("binaryChecksum"); } }
+        public string? BinaryChecksum { get => _explicitNullValueBinaryChecksum; set { _explicitNullValueBinaryChecksum = value; AdditionalData?.Remove("binaryChecksum"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("binaryChecksum"); else _explicitNullProperties?.Remove("binaryChecksum"); } }
         private string? _explicitNullValueBinaryChecksum = default!;
 #nullable restore
 #else
-        public string BinaryChecksum { get => _explicitNullValueBinaryChecksum; set { _explicitNullValueBinaryChecksum = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("binaryChecksum"); else _explicitNullProperties?.Remove("binaryChecksum"); } }
+        public string BinaryChecksum { get => _explicitNullValueBinaryChecksum; set { _explicitNullValueBinaryChecksum = value; AdditionalData?.Remove("binaryChecksum"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("binaryChecksum"); else _explicitNullProperties?.Remove("binaryChecksum"); } }
         private string _explicitNullValueBinaryChecksum = default!;
 #endif
         /// <summary>Worker build id.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BuildId { get => _explicitNullValueBuildId; set { _explicitNullValueBuildId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buildId"); else _explicitNullProperties?.Remove("buildId"); } }
+        public string? BuildId { get => _explicitNullValueBuildId; set { _explicitNullValueBuildId = value; AdditionalData?.Remove("buildId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buildId"); else _explicitNullProperties?.Remove("buildId"); } }
         private string? _explicitNullValueBuildId = default!;
 #nullable restore
 #else
-        public string BuildId { get => _explicitNullValueBuildId; set { _explicitNullValueBuildId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buildId"); else _explicitNullProperties?.Remove("buildId"); } }
+        public string BuildId { get => _explicitNullValueBuildId; set { _explicitNullValueBuildId = value; AdditionalData?.Remove("buildId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buildId"); else _explicitNullProperties?.Remove("buildId"); } }
         private string _explicitNullValueBuildId = default!;
 #endif
         /// <summary>The createTime property</summary>
-        public DateTimeOffset? CreateTime { get => _explicitNullValueCreateTime; set { _explicitNullValueCreateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createTime"); else _explicitNullProperties?.Remove("createTime"); } }
+        public DateTimeOffset? CreateTime { get => _explicitNullValueCreateTime; set { _explicitNullValueCreateTime = value; AdditionalData?.Remove("createTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createTime"); else _explicitNullProperties?.Remove("createTime"); } }
         private DateTimeOffset? _explicitNullValueCreateTime = default!;
         /// <summary>(-- api-linter: core::0214::resource-expiry=disabled     aip.dev/not-precedent: TTL is not defined for ResetPointInfo. --) The time that the run is deleted due to retention.</summary>
-        public DateTimeOffset? ExpireTime { get => _explicitNullValueExpireTime; set { _explicitNullValueExpireTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expireTime"); else _explicitNullProperties?.Remove("expireTime"); } }
+        public DateTimeOffset? ExpireTime { get => _explicitNullValueExpireTime; set { _explicitNullValueExpireTime = value; AdditionalData?.Remove("expireTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expireTime"); else _explicitNullProperties?.Remove("expireTime"); } }
         private DateTimeOffset? _explicitNullValueExpireTime = default!;
         /// <summary>Event ID of the first WorkflowTaskCompleted event processed by this worker build.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FirstWorkflowTaskCompletedId { get => _explicitNullValueFirstWorkflowTaskCompletedId; set { _explicitNullValueFirstWorkflowTaskCompletedId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("firstWorkflowTaskCompletedId"); else _explicitNullProperties?.Remove("firstWorkflowTaskCompletedId"); } }
+        public string? FirstWorkflowTaskCompletedId { get => _explicitNullValueFirstWorkflowTaskCompletedId; set { _explicitNullValueFirstWorkflowTaskCompletedId = value; AdditionalData?.Remove("firstWorkflowTaskCompletedId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("firstWorkflowTaskCompletedId"); else _explicitNullProperties?.Remove("firstWorkflowTaskCompletedId"); } }
         private string? _explicitNullValueFirstWorkflowTaskCompletedId = default!;
 #nullable restore
 #else
-        public string FirstWorkflowTaskCompletedId { get => _explicitNullValueFirstWorkflowTaskCompletedId; set { _explicitNullValueFirstWorkflowTaskCompletedId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("firstWorkflowTaskCompletedId"); else _explicitNullProperties?.Remove("firstWorkflowTaskCompletedId"); } }
+        public string FirstWorkflowTaskCompletedId { get => _explicitNullValueFirstWorkflowTaskCompletedId; set { _explicitNullValueFirstWorkflowTaskCompletedId = value; AdditionalData?.Remove("firstWorkflowTaskCompletedId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("firstWorkflowTaskCompletedId"); else _explicitNullProperties?.Remove("firstWorkflowTaskCompletedId"); } }
         private string _explicitNullValueFirstWorkflowTaskCompletedId = default!;
 #endif
         /// <summary>false if the reset point has pending childWFs/reqCancels/signalExternals.</summary>
-        public bool? Resettable { get => _explicitNullValueResettable; set { _explicitNullValueResettable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resettable"); else _explicitNullProperties?.Remove("resettable"); } }
+        public bool? Resettable { get => _explicitNullValueResettable; set { _explicitNullValueResettable = value; AdditionalData?.Remove("resettable"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resettable"); else _explicitNullProperties?.Remove("resettable"); } }
         private bool? _explicitNullValueResettable = default!;
         /// <summary>The first run ID in the execution chain that was touched by this worker build.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RunId { get => _explicitNullValueRunId; set { _explicitNullValueRunId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runId"); else _explicitNullProperties?.Remove("runId"); } }
+        public string? RunId { get => _explicitNullValueRunId; set { _explicitNullValueRunId = value; AdditionalData?.Remove("runId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runId"); else _explicitNullProperties?.Remove("runId"); } }
         private string? _explicitNullValueRunId = default!;
 #nullable restore
 #else
-        public string RunId { get => _explicitNullValueRunId; set { _explicitNullValueRunId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runId"); else _explicitNullProperties?.Remove("runId"); } }
+        public string RunId { get => _explicitNullValueRunId; set { _explicitNullValueRunId = value; AdditionalData?.Remove("runId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runId"); else _explicitNullProperties?.Remove("runId"); } }
         private string _explicitNullValueRunId = default!;
 #endif
         /// <summary>

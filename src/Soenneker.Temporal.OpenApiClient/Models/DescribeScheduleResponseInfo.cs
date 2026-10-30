@@ -18,27 +18,38 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("actionCount") is { } nullNodeActionCount && nullNodeActionCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionCount = null;
-            if (parseNode.GetChildNode("bufferDropped") is { } nullNodeBufferDropped && nullNodeBufferDropped.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BufferDropped = null;
-            if (parseNode.GetChildNode("bufferSize") is { } nullNodeBufferSize && nullNodeBufferSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BufferSize = null;
-            if (parseNode.GetChildNode("createTime") is { } nullNodeCreateTime && nullNodeCreateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateTime = null;
-            if (parseNode.GetChildNode("futureActionTimes") is { } nullNodeFutureActionTimes && nullNodeFutureActionTimes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FutureActionTimes = null;
-            if (parseNode.GetChildNode("invalidScheduleError") is { } nullNodeInvalidScheduleError && nullNodeInvalidScheduleError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvalidScheduleError = null;
-            if (parseNode.GetChildNode("missedCatchupWindow") is { } nullNodeMissedCatchupWindow && nullNodeMissedCatchupWindow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MissedCatchupWindow = null;
-            if (parseNode.GetChildNode("overlapSkipped") is { } nullNodeOverlapSkipped && nullNodeOverlapSkipped.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverlapSkipped = null;
-            if (parseNode.GetChildNode("recentActions") is { } nullNodeRecentActions && nullNodeRecentActions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecentActions = null;
-            if (parseNode.GetChildNode("runningWorkflows") is { } nullNodeRunningWorkflows && nullNodeRunningWorkflows.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RunningWorkflows = null;
-            if (parseNode.GetChildNode("updateTime") is { } nullNodeUpdateTime && nullNodeUpdateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateTime = null;
+            if (parseNode.GetChildNode("actionCount") is null) { _explicitNullValueActionCount = default!; _explicitNullProperties?.Remove("actionCount"); }
+            else if (parseNode.GetChildNode("actionCount") is { } nullNodeActionCount && nullNodeActionCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionCount = null;
+            if (parseNode.GetChildNode("bufferDropped") is null) { _explicitNullValueBufferDropped = default!; _explicitNullProperties?.Remove("bufferDropped"); }
+            else if (parseNode.GetChildNode("bufferDropped") is { } nullNodeBufferDropped && nullNodeBufferDropped.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BufferDropped = null;
+            if (parseNode.GetChildNode("bufferSize") is null) { _explicitNullValueBufferSize = default!; _explicitNullProperties?.Remove("bufferSize"); }
+            else if (parseNode.GetChildNode("bufferSize") is { } nullNodeBufferSize && nullNodeBufferSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BufferSize = null;
+            if (parseNode.GetChildNode("createTime") is null) { _explicitNullValueCreateTime = default!; _explicitNullProperties?.Remove("createTime"); }
+            else if (parseNode.GetChildNode("createTime") is { } nullNodeCreateTime && nullNodeCreateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateTime = null;
+            if (parseNode.GetChildNode("futureActionTimes") is null) { _explicitNullValueFutureActionTimes = default!; _explicitNullProperties?.Remove("futureActionTimes"); }
+            else if (parseNode.GetChildNode("futureActionTimes") is { } nullNodeFutureActionTimes && nullNodeFutureActionTimes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FutureActionTimes = null;
+            if (parseNode.GetChildNode("invalidScheduleError") is null) { _explicitNullValueInvalidScheduleError = default!; _explicitNullProperties?.Remove("invalidScheduleError"); }
+            else if (parseNode.GetChildNode("invalidScheduleError") is { } nullNodeInvalidScheduleError && nullNodeInvalidScheduleError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvalidScheduleError = null;
+            if (parseNode.GetChildNode("missedCatchupWindow") is null) { _explicitNullValueMissedCatchupWindow = default!; _explicitNullProperties?.Remove("missedCatchupWindow"); }
+            else if (parseNode.GetChildNode("missedCatchupWindow") is { } nullNodeMissedCatchupWindow && nullNodeMissedCatchupWindow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MissedCatchupWindow = null;
+            if (parseNode.GetChildNode("overlapSkipped") is null) { _explicitNullValueOverlapSkipped = default!; _explicitNullProperties?.Remove("overlapSkipped"); }
+            else if (parseNode.GetChildNode("overlapSkipped") is { } nullNodeOverlapSkipped && nullNodeOverlapSkipped.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverlapSkipped = null;
+            if (parseNode.GetChildNode("recentActions") is null) { _explicitNullValueRecentActions = default!; _explicitNullProperties?.Remove("recentActions"); }
+            else if (parseNode.GetChildNode("recentActions") is { } nullNodeRecentActions && nullNodeRecentActions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecentActions = null;
+            if (parseNode.GetChildNode("runningWorkflows") is null) { _explicitNullValueRunningWorkflows = default!; _explicitNullProperties?.Remove("runningWorkflows"); }
+            else if (parseNode.GetChildNode("runningWorkflows") is { } nullNodeRunningWorkflows && nullNodeRunningWorkflows.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RunningWorkflows = null;
+            if (parseNode.GetChildNode("updateTime") is null) { _explicitNullValueUpdateTime = default!; _explicitNullProperties?.Remove("updateTime"); }
+            else if (parseNode.GetChildNode("updateTime") is { } nullNodeUpdateTime && nullNodeUpdateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateTime = null;
         }
 
         /// <summary>Number of actions taken so far.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ActionCount { get => _explicitNullValueActionCount; set { _explicitNullValueActionCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionCount"); else _explicitNullProperties?.Remove("actionCount"); } }
+        public string? ActionCount { get => _explicitNullValueActionCount; set { _explicitNullValueActionCount = value; AdditionalData?.Remove("actionCount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionCount"); else _explicitNullProperties?.Remove("actionCount"); } }
         private string? _explicitNullValueActionCount = default!;
 #nullable restore
 #else
-        public string ActionCount { get => _explicitNullValueActionCount; set { _explicitNullValueActionCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionCount"); else _explicitNullProperties?.Remove("actionCount"); } }
+        public string ActionCount { get => _explicitNullValueActionCount; set { _explicitNullValueActionCount = value; AdditionalData?.Remove("actionCount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionCount"); else _explicitNullProperties?.Remove("actionCount"); } }
         private string _explicitNullValueActionCount = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -46,88 +57,88 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Number of dropped actions due to buffer limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BufferDropped { get => _explicitNullValueBufferDropped; set { _explicitNullValueBufferDropped = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bufferDropped"); else _explicitNullProperties?.Remove("bufferDropped"); } }
+        public string? BufferDropped { get => _explicitNullValueBufferDropped; set { _explicitNullValueBufferDropped = value; AdditionalData?.Remove("bufferDropped"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bufferDropped"); else _explicitNullProperties?.Remove("bufferDropped"); } }
         private string? _explicitNullValueBufferDropped = default!;
 #nullable restore
 #else
-        public string BufferDropped { get => _explicitNullValueBufferDropped; set { _explicitNullValueBufferDropped = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bufferDropped"); else _explicitNullProperties?.Remove("bufferDropped"); } }
+        public string BufferDropped { get => _explicitNullValueBufferDropped; set { _explicitNullValueBufferDropped = value; AdditionalData?.Remove("bufferDropped"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bufferDropped"); else _explicitNullProperties?.Remove("bufferDropped"); } }
         private string _explicitNullValueBufferDropped = default!;
 #endif
         /// <summary>Number of actions in the buffer. The buffer holds the actions that cannot be immediately triggered (due to the overlap policy). These actions can be a result of the normal schedule or a backfill.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BufferSize { get => _explicitNullValueBufferSize; set { _explicitNullValueBufferSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bufferSize"); else _explicitNullProperties?.Remove("bufferSize"); } }
+        public string? BufferSize { get => _explicitNullValueBufferSize; set { _explicitNullValueBufferSize = value; AdditionalData?.Remove("bufferSize"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bufferSize"); else _explicitNullProperties?.Remove("bufferSize"); } }
         private string? _explicitNullValueBufferSize = default!;
 #nullable restore
 #else
-        public string BufferSize { get => _explicitNullValueBufferSize; set { _explicitNullValueBufferSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bufferSize"); else _explicitNullProperties?.Remove("bufferSize"); } }
+        public string BufferSize { get => _explicitNullValueBufferSize; set { _explicitNullValueBufferSize = value; AdditionalData?.Remove("bufferSize"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bufferSize"); else _explicitNullProperties?.Remove("bufferSize"); } }
         private string _explicitNullValueBufferSize = default!;
 #endif
         /// <summary>Timestamps of schedule creation and last update.</summary>
-        public DateTimeOffset? CreateTime { get => _explicitNullValueCreateTime; set { _explicitNullValueCreateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createTime"); else _explicitNullProperties?.Remove("createTime"); } }
+        public DateTimeOffset? CreateTime { get => _explicitNullValueCreateTime; set { _explicitNullValueCreateTime = value; AdditionalData?.Remove("createTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createTime"); else _explicitNullProperties?.Remove("createTime"); } }
         private DateTimeOffset? _explicitNullValueCreateTime = default!;
         /// <summary>Next ten scheduled action times.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<DateTimeOffset?>? FutureActionTimes { get => _explicitNullValueFutureActionTimes; set { _explicitNullValueFutureActionTimes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("futureActionTimes"); else _explicitNullProperties?.Remove("futureActionTimes"); } }
+        public List<DateTimeOffset?>? FutureActionTimes { get => _explicitNullValueFutureActionTimes; set { _explicitNullValueFutureActionTimes = value; AdditionalData?.Remove("futureActionTimes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("futureActionTimes"); else _explicitNullProperties?.Remove("futureActionTimes"); } }
         private List<DateTimeOffset?>? _explicitNullValueFutureActionTimes = default!;
 #nullable restore
 #else
-        public List<DateTimeOffset?> FutureActionTimes { get => _explicitNullValueFutureActionTimes; set { _explicitNullValueFutureActionTimes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("futureActionTimes"); else _explicitNullProperties?.Remove("futureActionTimes"); } }
+        public List<DateTimeOffset?> FutureActionTimes { get => _explicitNullValueFutureActionTimes; set { _explicitNullValueFutureActionTimes = value; AdditionalData?.Remove("futureActionTimes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("futureActionTimes"); else _explicitNullProperties?.Remove("futureActionTimes"); } }
         private List<DateTimeOffset?> _explicitNullValueFutureActionTimes = default!;
 #endif
         /// <summary>Deprecated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InvalidScheduleError { get => _explicitNullValueInvalidScheduleError; set { _explicitNullValueInvalidScheduleError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invalidScheduleError"); else _explicitNullProperties?.Remove("invalidScheduleError"); } }
+        public string? InvalidScheduleError { get => _explicitNullValueInvalidScheduleError; set { _explicitNullValueInvalidScheduleError = value; AdditionalData?.Remove("invalidScheduleError"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invalidScheduleError"); else _explicitNullProperties?.Remove("invalidScheduleError"); } }
         private string? _explicitNullValueInvalidScheduleError = default!;
 #nullable restore
 #else
-        public string InvalidScheduleError { get => _explicitNullValueInvalidScheduleError; set { _explicitNullValueInvalidScheduleError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invalidScheduleError"); else _explicitNullProperties?.Remove("invalidScheduleError"); } }
+        public string InvalidScheduleError { get => _explicitNullValueInvalidScheduleError; set { _explicitNullValueInvalidScheduleError = value; AdditionalData?.Remove("invalidScheduleError"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invalidScheduleError"); else _explicitNullProperties?.Remove("invalidScheduleError"); } }
         private string _explicitNullValueInvalidScheduleError = default!;
 #endif
         /// <summary>Number of times a scheduled action was skipped due to missing the catchup window.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MissedCatchupWindow { get => _explicitNullValueMissedCatchupWindow; set { _explicitNullValueMissedCatchupWindow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("missedCatchupWindow"); else _explicitNullProperties?.Remove("missedCatchupWindow"); } }
+        public string? MissedCatchupWindow { get => _explicitNullValueMissedCatchupWindow; set { _explicitNullValueMissedCatchupWindow = value; AdditionalData?.Remove("missedCatchupWindow"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("missedCatchupWindow"); else _explicitNullProperties?.Remove("missedCatchupWindow"); } }
         private string? _explicitNullValueMissedCatchupWindow = default!;
 #nullable restore
 #else
-        public string MissedCatchupWindow { get => _explicitNullValueMissedCatchupWindow; set { _explicitNullValueMissedCatchupWindow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("missedCatchupWindow"); else _explicitNullProperties?.Remove("missedCatchupWindow"); } }
+        public string MissedCatchupWindow { get => _explicitNullValueMissedCatchupWindow; set { _explicitNullValueMissedCatchupWindow = value; AdditionalData?.Remove("missedCatchupWindow"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("missedCatchupWindow"); else _explicitNullProperties?.Remove("missedCatchupWindow"); } }
         private string _explicitNullValueMissedCatchupWindow = default!;
 #endif
         /// <summary>Number of skipped actions due to overlap.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OverlapSkipped { get => _explicitNullValueOverlapSkipped; set { _explicitNullValueOverlapSkipped = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overlapSkipped"); else _explicitNullProperties?.Remove("overlapSkipped"); } }
+        public string? OverlapSkipped { get => _explicitNullValueOverlapSkipped; set { _explicitNullValueOverlapSkipped = value; AdditionalData?.Remove("overlapSkipped"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overlapSkipped"); else _explicitNullProperties?.Remove("overlapSkipped"); } }
         private string? _explicitNullValueOverlapSkipped = default!;
 #nullable restore
 #else
-        public string OverlapSkipped { get => _explicitNullValueOverlapSkipped; set { _explicitNullValueOverlapSkipped = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overlapSkipped"); else _explicitNullProperties?.Remove("overlapSkipped"); } }
+        public string OverlapSkipped { get => _explicitNullValueOverlapSkipped; set { _explicitNullValueOverlapSkipped = value; AdditionalData?.Remove("overlapSkipped"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overlapSkipped"); else _explicitNullProperties?.Remove("overlapSkipped"); } }
         private string _explicitNullValueOverlapSkipped = default!;
 #endif
         /// <summary>Most recent ten actual action times (including manual triggers).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResult>? RecentActions { get => _explicitNullValueRecentActions; set { _explicitNullValueRecentActions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recentActions"); else _explicitNullProperties?.Remove("recentActions"); } }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResult>? RecentActions { get => _explicitNullValueRecentActions; set { _explicitNullValueRecentActions = value; AdditionalData?.Remove("recentActions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recentActions"); else _explicitNullProperties?.Remove("recentActions"); } }
         private List<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResult>? _explicitNullValueRecentActions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResult> RecentActions { get => _explicitNullValueRecentActions; set { _explicitNullValueRecentActions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recentActions"); else _explicitNullProperties?.Remove("recentActions"); } }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResult> RecentActions { get => _explicitNullValueRecentActions; set { _explicitNullValueRecentActions = value; AdditionalData?.Remove("recentActions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recentActions"); else _explicitNullProperties?.Remove("recentActions"); } }
         private List<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResult> _explicitNullValueRecentActions = default!;
 #endif
         /// <summary>Currently-running workflows started by this schedule. (There might be more than one if the overlap policy allows overlaps.) Note that the run_ids in here are the original execution run ids as started by the schedule. If the workflows retried, did continue-as-new, or were reset, they might still be running but with a different run_id.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution>? RunningWorkflows { get => _explicitNullValueRunningWorkflows; set { _explicitNullValueRunningWorkflows = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runningWorkflows"); else _explicitNullProperties?.Remove("runningWorkflows"); } }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution>? RunningWorkflows { get => _explicitNullValueRunningWorkflows; set { _explicitNullValueRunningWorkflows = value; AdditionalData?.Remove("runningWorkflows"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runningWorkflows"); else _explicitNullProperties?.Remove("runningWorkflows"); } }
         private List<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution>? _explicitNullValueRunningWorkflows = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution> RunningWorkflows { get => _explicitNullValueRunningWorkflows; set { _explicitNullValueRunningWorkflows = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runningWorkflows"); else _explicitNullProperties?.Remove("runningWorkflows"); } }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution> RunningWorkflows { get => _explicitNullValueRunningWorkflows; set { _explicitNullValueRunningWorkflows = value; AdditionalData?.Remove("runningWorkflows"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runningWorkflows"); else _explicitNullProperties?.Remove("runningWorkflows"); } }
         private List<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecution> _explicitNullValueRunningWorkflows = default!;
 #endif
         /// <summary>The updateTime property</summary>
-        public DateTimeOffset? UpdateTime { get => _explicitNullValueUpdateTime; set { _explicitNullValueUpdateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateTime"); else _explicitNullProperties?.Remove("updateTime"); } }
+        public DateTimeOffset? UpdateTime { get => _explicitNullValueUpdateTime; set { _explicitNullValueUpdateTime = value; AdditionalData?.Remove("updateTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateTime"); else _explicitNullProperties?.Remove("updateTime"); } }
         private DateTimeOffset? _explicitNullValueUpdateTime = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.DescribeScheduleResponseInfo"/> and sets the default values.

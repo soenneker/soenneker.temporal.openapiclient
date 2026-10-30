@@ -17,40 +17,44 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("acceptedRequest") is { } nullNodeAcceptedRequest && nullNodeAcceptedRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcceptedRequest = null;
-            if (parseNode.GetChildNode("acceptedRequestMessageId") is { } nullNodeAcceptedRequestMessageId && nullNodeAcceptedRequestMessageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcceptedRequestMessageId = null;
-            if (parseNode.GetChildNode("acceptedRequestSequencingEventId") is { } nullNodeAcceptedRequestSequencingEventId && nullNodeAcceptedRequestSequencingEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcceptedRequestSequencingEventId = null;
-            if (parseNode.GetChildNode("protocolInstanceId") is { } nullNodeProtocolInstanceId && nullNodeProtocolInstanceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProtocolInstanceId = null;
+            if (parseNode.GetChildNode("acceptedRequest") is null) { _explicitNullValueAcceptedRequest = default!; _explicitNullProperties?.Remove("acceptedRequest"); }
+            else if (parseNode.GetChildNode("acceptedRequest") is { } nullNodeAcceptedRequest && nullNodeAcceptedRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcceptedRequest = null;
+            if (parseNode.GetChildNode("acceptedRequestMessageId") is null) { _explicitNullValueAcceptedRequestMessageId = default!; _explicitNullProperties?.Remove("acceptedRequestMessageId"); }
+            else if (parseNode.GetChildNode("acceptedRequestMessageId") is { } nullNodeAcceptedRequestMessageId && nullNodeAcceptedRequestMessageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcceptedRequestMessageId = null;
+            if (parseNode.GetChildNode("acceptedRequestSequencingEventId") is null) { _explicitNullValueAcceptedRequestSequencingEventId = default!; _explicitNullProperties?.Remove("acceptedRequestSequencingEventId"); }
+            else if (parseNode.GetChildNode("acceptedRequestSequencingEventId") is { } nullNodeAcceptedRequestSequencingEventId && nullNodeAcceptedRequestSequencingEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcceptedRequestSequencingEventId = null;
+            if (parseNode.GetChildNode("protocolInstanceId") is null) { _explicitNullValueProtocolInstanceId = default!; _explicitNullProperties?.Remove("protocolInstanceId"); }
+            else if (parseNode.GetChildNode("protocolInstanceId") is { } nullNodeProtocolInstanceId && nullNodeProtocolInstanceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProtocolInstanceId = null;
         }
 
         /// <summary>The message payload of the original request message that initiated this update.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAcceptedEventAttributesAcceptedRequest? AcceptedRequest { get => _explicitNullValueAcceptedRequest; set { _explicitNullValueAcceptedRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acceptedRequest"); else _explicitNullProperties?.Remove("acceptedRequest"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAcceptedEventAttributesAcceptedRequest? AcceptedRequest { get => _explicitNullValueAcceptedRequest; set { _explicitNullValueAcceptedRequest = value; AdditionalData?.Remove("acceptedRequest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acceptedRequest"); else _explicitNullProperties?.Remove("acceptedRequest"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAcceptedEventAttributesAcceptedRequest? _explicitNullValueAcceptedRequest = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAcceptedEventAttributesAcceptedRequest AcceptedRequest { get => _explicitNullValueAcceptedRequest; set { _explicitNullValueAcceptedRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acceptedRequest"); else _explicitNullProperties?.Remove("acceptedRequest"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAcceptedEventAttributesAcceptedRequest AcceptedRequest { get => _explicitNullValueAcceptedRequest; set { _explicitNullValueAcceptedRequest = value; AdditionalData?.Remove("acceptedRequest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acceptedRequest"); else _explicitNullProperties?.Remove("acceptedRequest"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateAcceptedEventAttributesAcceptedRequest _explicitNullValueAcceptedRequest = default!;
 #endif
         /// <summary>The message ID of the original request message that initiated this update. Needed so that the worker can recreate and deliver that same message as part of replay.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AcceptedRequestMessageId { get => _explicitNullValueAcceptedRequestMessageId; set { _explicitNullValueAcceptedRequestMessageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acceptedRequestMessageId"); else _explicitNullProperties?.Remove("acceptedRequestMessageId"); } }
+        public string? AcceptedRequestMessageId { get => _explicitNullValueAcceptedRequestMessageId; set { _explicitNullValueAcceptedRequestMessageId = value; AdditionalData?.Remove("acceptedRequestMessageId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acceptedRequestMessageId"); else _explicitNullProperties?.Remove("acceptedRequestMessageId"); } }
         private string? _explicitNullValueAcceptedRequestMessageId = default!;
 #nullable restore
 #else
-        public string AcceptedRequestMessageId { get => _explicitNullValueAcceptedRequestMessageId; set { _explicitNullValueAcceptedRequestMessageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acceptedRequestMessageId"); else _explicitNullProperties?.Remove("acceptedRequestMessageId"); } }
+        public string AcceptedRequestMessageId { get => _explicitNullValueAcceptedRequestMessageId; set { _explicitNullValueAcceptedRequestMessageId = value; AdditionalData?.Remove("acceptedRequestMessageId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acceptedRequestMessageId"); else _explicitNullProperties?.Remove("acceptedRequestMessageId"); } }
         private string _explicitNullValueAcceptedRequestMessageId = default!;
 #endif
         /// <summary>The event ID used to sequence the original request message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AcceptedRequestSequencingEventId { get => _explicitNullValueAcceptedRequestSequencingEventId; set { _explicitNullValueAcceptedRequestSequencingEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acceptedRequestSequencingEventId"); else _explicitNullProperties?.Remove("acceptedRequestSequencingEventId"); } }
+        public string? AcceptedRequestSequencingEventId { get => _explicitNullValueAcceptedRequestSequencingEventId; set { _explicitNullValueAcceptedRequestSequencingEventId = value; AdditionalData?.Remove("acceptedRequestSequencingEventId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acceptedRequestSequencingEventId"); else _explicitNullProperties?.Remove("acceptedRequestSequencingEventId"); } }
         private string? _explicitNullValueAcceptedRequestSequencingEventId = default!;
 #nullable restore
 #else
-        public string AcceptedRequestSequencingEventId { get => _explicitNullValueAcceptedRequestSequencingEventId; set { _explicitNullValueAcceptedRequestSequencingEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acceptedRequestSequencingEventId"); else _explicitNullProperties?.Remove("acceptedRequestSequencingEventId"); } }
+        public string AcceptedRequestSequencingEventId { get => _explicitNullValueAcceptedRequestSequencingEventId; set { _explicitNullValueAcceptedRequestSequencingEventId = value; AdditionalData?.Remove("acceptedRequestSequencingEventId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acceptedRequestSequencingEventId"); else _explicitNullProperties?.Remove("acceptedRequestSequencingEventId"); } }
         private string _explicitNullValueAcceptedRequestSequencingEventId = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -58,11 +62,11 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The instance ID of the update protocol that generated this event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProtocolInstanceId { get => _explicitNullValueProtocolInstanceId; set { _explicitNullValueProtocolInstanceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("protocolInstanceId"); else _explicitNullProperties?.Remove("protocolInstanceId"); } }
+        public string? ProtocolInstanceId { get => _explicitNullValueProtocolInstanceId; set { _explicitNullValueProtocolInstanceId = value; AdditionalData?.Remove("protocolInstanceId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("protocolInstanceId"); else _explicitNullProperties?.Remove("protocolInstanceId"); } }
         private string? _explicitNullValueProtocolInstanceId = default!;
 #nullable restore
 #else
-        public string ProtocolInstanceId { get => _explicitNullValueProtocolInstanceId; set { _explicitNullValueProtocolInstanceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("protocolInstanceId"); else _explicitNullProperties?.Remove("protocolInstanceId"); } }
+        public string ProtocolInstanceId { get => _explicitNullValueProtocolInstanceId; set { _explicitNullValueProtocolInstanceId = value; AdditionalData?.Remove("protocolInstanceId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("protocolInstanceId"); else _explicitNullProperties?.Remove("protocolInstanceId"); } }
         private string _explicitNullValueProtocolInstanceId = default!;
 #endif
         /// <summary>

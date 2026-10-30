@@ -18,71 +18,78 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("createTime") is { } nullNodeCreateTime && nullNodeCreateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateTime = null;
-            if (parseNode.GetChildNode("lastModifierIdentity") is { } nullNodeLastModifierIdentity && nullNodeLastModifierIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastModifierIdentity = null;
-            if (parseNode.GetChildNode("managerIdentity") is { } nullNodeManagerIdentity && nullNodeManagerIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ManagerIdentity = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("routingConfig") is { } nullNodeRoutingConfig && nullNodeRoutingConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoutingConfig = null;
-            if (parseNode.GetChildNode("routingConfigUpdateState") is { } nullNodeRoutingConfigUpdateState && nullNodeRoutingConfigUpdateState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoutingConfigUpdateState = null;
-            if (parseNode.GetChildNode("versionSummaries") is { } nullNodeVersionSummaries && nullNodeVersionSummaries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VersionSummaries = null;
+            if (parseNode.GetChildNode("createTime") is null) { _explicitNullValueCreateTime = default!; _explicitNullProperties?.Remove("createTime"); }
+            else if (parseNode.GetChildNode("createTime") is { } nullNodeCreateTime && nullNodeCreateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateTime = null;
+            if (parseNode.GetChildNode("lastModifierIdentity") is null) { _explicitNullValueLastModifierIdentity = default!; _explicitNullProperties?.Remove("lastModifierIdentity"); }
+            else if (parseNode.GetChildNode("lastModifierIdentity") is { } nullNodeLastModifierIdentity && nullNodeLastModifierIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastModifierIdentity = null;
+            if (parseNode.GetChildNode("managerIdentity") is null) { _explicitNullValueManagerIdentity = default!; _explicitNullProperties?.Remove("managerIdentity"); }
+            else if (parseNode.GetChildNode("managerIdentity") is { } nullNodeManagerIdentity && nullNodeManagerIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ManagerIdentity = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("routingConfig") is null) { _explicitNullValueRoutingConfig = default!; _explicitNullProperties?.Remove("routingConfig"); }
+            else if (parseNode.GetChildNode("routingConfig") is { } nullNodeRoutingConfig && nullNodeRoutingConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoutingConfig = null;
+            if (parseNode.GetChildNode("routingConfigUpdateState") is null) { _explicitNullValueRoutingConfigUpdateState = default!; _explicitNullProperties?.Remove("routingConfigUpdateState"); }
+            else if (parseNode.GetChildNode("routingConfigUpdateState") is { } nullNodeRoutingConfigUpdateState && nullNodeRoutingConfigUpdateState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoutingConfigUpdateState = null;
+            if (parseNode.GetChildNode("versionSummaries") is null) { _explicitNullValueVersionSummaries = default!; _explicitNullProperties?.Remove("versionSummaries"); }
+            else if (parseNode.GetChildNode("versionSummaries") is { } nullNodeVersionSummaries && nullNodeVersionSummaries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VersionSummaries = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The createTime property</summary>
-        public DateTimeOffset? CreateTime { get => _explicitNullValueCreateTime; set { _explicitNullValueCreateTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createTime"); else _explicitNullProperties?.Remove("createTime"); } }
+        public DateTimeOffset? CreateTime { get => _explicitNullValueCreateTime; set { _explicitNullValueCreateTime = value; AdditionalData?.Remove("createTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createTime"); else _explicitNullProperties?.Remove("createTime"); } }
         private DateTimeOffset? _explicitNullValueCreateTime = default!;
         /// <summary>Identity of the last client who modified the configuration of this Deployment. Set to the `identity` value sent by APIs such as `SetWorkerDeploymentCurrentVersion` and `SetWorkerDeploymentRampingVersion`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LastModifierIdentity { get => _explicitNullValueLastModifierIdentity; set { _explicitNullValueLastModifierIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastModifierIdentity"); else _explicitNullProperties?.Remove("lastModifierIdentity"); } }
+        public string? LastModifierIdentity { get => _explicitNullValueLastModifierIdentity; set { _explicitNullValueLastModifierIdentity = value; AdditionalData?.Remove("lastModifierIdentity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastModifierIdentity"); else _explicitNullProperties?.Remove("lastModifierIdentity"); } }
         private string? _explicitNullValueLastModifierIdentity = default!;
 #nullable restore
 #else
-        public string LastModifierIdentity { get => _explicitNullValueLastModifierIdentity; set { _explicitNullValueLastModifierIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastModifierIdentity"); else _explicitNullProperties?.Remove("lastModifierIdentity"); } }
+        public string LastModifierIdentity { get => _explicitNullValueLastModifierIdentity; set { _explicitNullValueLastModifierIdentity = value; AdditionalData?.Remove("lastModifierIdentity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastModifierIdentity"); else _explicitNullProperties?.Remove("lastModifierIdentity"); } }
         private string _explicitNullValueLastModifierIdentity = default!;
 #endif
         /// <summary>Identity of the client that has the exclusive right to make changes to this Worker Deployment. Empty by default. If this is set, clients whose identity does not match `manager_identity` will not be able to make changes to this Worker Deployment. They can either set their own identity as the manager or unset the field to proceed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ManagerIdentity { get => _explicitNullValueManagerIdentity; set { _explicitNullValueManagerIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("managerIdentity"); else _explicitNullProperties?.Remove("managerIdentity"); } }
+        public string? ManagerIdentity { get => _explicitNullValueManagerIdentity; set { _explicitNullValueManagerIdentity = value; AdditionalData?.Remove("managerIdentity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("managerIdentity"); else _explicitNullProperties?.Remove("managerIdentity"); } }
         private string? _explicitNullValueManagerIdentity = default!;
 #nullable restore
 #else
-        public string ManagerIdentity { get => _explicitNullValueManagerIdentity; set { _explicitNullValueManagerIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("managerIdentity"); else _explicitNullProperties?.Remove("managerIdentity"); } }
+        public string ManagerIdentity { get => _explicitNullValueManagerIdentity; set { _explicitNullValueManagerIdentity = value; AdditionalData?.Remove("managerIdentity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("managerIdentity"); else _explicitNullProperties?.Remove("managerIdentity"); } }
         private string _explicitNullValueManagerIdentity = default!;
 #endif
         /// <summary>Identifies a Worker Deployment. Must be unique within the namespace.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>The routingConfig property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.RoutingConfig? RoutingConfig { get => _explicitNullValueRoutingConfig; set { _explicitNullValueRoutingConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("routingConfig"); else _explicitNullProperties?.Remove("routingConfig"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RoutingConfig? RoutingConfig { get => _explicitNullValueRoutingConfig; set { _explicitNullValueRoutingConfig = value; AdditionalData?.Remove("routingConfig"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("routingConfig"); else _explicitNullProperties?.Remove("routingConfig"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.RoutingConfig? _explicitNullValueRoutingConfig = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.RoutingConfig RoutingConfig { get => _explicitNullValueRoutingConfig; set { _explicitNullValueRoutingConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("routingConfig"); else _explicitNullProperties?.Remove("routingConfig"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RoutingConfig RoutingConfig { get => _explicitNullValueRoutingConfig; set { _explicitNullValueRoutingConfig = value; AdditionalData?.Remove("routingConfig"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("routingConfig"); else _explicitNullProperties?.Remove("routingConfig"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.RoutingConfig _explicitNullValueRoutingConfig = default!;
 #endif
         /// <summary>Indicates whether the routing_config has been fully propagated to all relevant task queues and their partitions.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoRoutingConfigUpdateState? RoutingConfigUpdateState { get => _explicitNullValueRoutingConfigUpdateState; set { _explicitNullValueRoutingConfigUpdateState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("routingConfigUpdateState"); else _explicitNullProperties?.Remove("routingConfigUpdateState"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoRoutingConfigUpdateState? RoutingConfigUpdateState { get => _explicitNullValueRoutingConfigUpdateState; set { _explicitNullValueRoutingConfigUpdateState = value; AdditionalData?.Remove("routingConfigUpdateState"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("routingConfigUpdateState"); else _explicitNullProperties?.Remove("routingConfigUpdateState"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoRoutingConfigUpdateState? _explicitNullValueRoutingConfigUpdateState = default!;
         /// <summary>Deployment Versions that are currently tracked in this Deployment. A DeploymentVersion will be cleaned up automatically if all the following conditions meet: - It does not receive new executions (is not current or ramping) - It has no active pollers (see WorkerDeploymentVersionInfo.pollers_status) - It is drained (see WorkerDeploymentVersionInfo.drainage_status)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummary>? VersionSummaries { get => _explicitNullValueVersionSummaries; set { _explicitNullValueVersionSummaries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("versionSummaries"); else _explicitNullProperties?.Remove("versionSummaries"); } }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummary>? VersionSummaries { get => _explicitNullValueVersionSummaries; set { _explicitNullValueVersionSummaries = value; AdditionalData?.Remove("versionSummaries"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("versionSummaries"); else _explicitNullProperties?.Remove("versionSummaries"); } }
         private List<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummary>? _explicitNullValueVersionSummaries = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummary> VersionSummaries { get => _explicitNullValueVersionSummaries; set { _explicitNullValueVersionSummaries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("versionSummaries"); else _explicitNullProperties?.Remove("versionSummaries"); } }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummary> VersionSummaries { get => _explicitNullValueVersionSummaries; set { _explicitNullValueVersionSummaries = value; AdditionalData?.Remove("versionSummaries"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("versionSummaries"); else _explicitNullProperties?.Remove("versionSummaries"); } }
         private List<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummary> _explicitNullValueVersionSummaries = default!;
 #endif
         /// <summary>
@@ -115,7 +122,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "managerIdentity", n => { ManagerIdentity = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "routingConfig", n => { RoutingConfig = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RoutingConfig>(global::Soenneker.Temporal.OpenApiClient.Models.RoutingConfig.CreateFromDiscriminatorValue); } },
-                { "routingConfigUpdateState", n => { RoutingConfigUpdateState = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoRoutingConfigUpdateState>(); } },
+                { "routingConfigUpdateState", n => { var parsed = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoRoutingConfigUpdateState>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRoutingConfigUpdateState = default; _explicitNullProperties?.Remove("routingConfigUpdateState"); AdditionalData["routingConfigUpdateState"] = unknown; } else { RoutingConfigUpdateState = parsed; AdditionalData.Remove("routingConfigUpdateState"); } } },
                 { "versionSummaries", n => { VersionSummaries = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummary>(global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfoWorkerDeploymentVersionSummary.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }

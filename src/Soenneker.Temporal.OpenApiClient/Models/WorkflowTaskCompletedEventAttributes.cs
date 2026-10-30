@@ -17,18 +17,30 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("binaryChecksum") is { } nullNodeBinaryChecksum && nullNodeBinaryChecksum.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BinaryChecksum = null;
-            if (parseNode.GetChildNode("deployment") is { } nullNodeDeployment && nullNodeDeployment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Deployment = null;
-            if (parseNode.GetChildNode("deploymentVersion") is { } nullNodeDeploymentVersion && nullNodeDeploymentVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeploymentVersion = null;
-            if (parseNode.GetChildNode("identity") is { } nullNodeIdentity && nullNodeIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Identity = null;
-            if (parseNode.GetChildNode("meteringMetadata") is { } nullNodeMeteringMetadata && nullNodeMeteringMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MeteringMetadata = null;
-            if (parseNode.GetChildNode("scheduledEventId") is { } nullNodeScheduledEventId && nullNodeScheduledEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduledEventId = null;
-            if (parseNode.GetChildNode("sdkMetadata") is { } nullNodeSdkMetadata && nullNodeSdkMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SdkMetadata = null;
-            if (parseNode.GetChildNode("startedEventId") is { } nullNodeStartedEventId && nullNodeStartedEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartedEventId = null;
-            if (parseNode.GetChildNode("versioningBehavior") is { } nullNodeVersioningBehavior && nullNodeVersioningBehavior.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VersioningBehavior = null;
-            if (parseNode.GetChildNode("workerDeploymentName") is { } nullNodeWorkerDeploymentName && nullNodeWorkerDeploymentName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerDeploymentName = null;
-            if (parseNode.GetChildNode("workerDeploymentVersion") is { } nullNodeWorkerDeploymentVersion && nullNodeWorkerDeploymentVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerDeploymentVersion = null;
-            if (parseNode.GetChildNode("workerVersion") is { } nullNodeWorkerVersion && nullNodeWorkerVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerVersion = null;
+            if (parseNode.GetChildNode("binaryChecksum") is null) { _explicitNullValueBinaryChecksum = default!; _explicitNullProperties?.Remove("binaryChecksum"); }
+            else if (parseNode.GetChildNode("binaryChecksum") is { } nullNodeBinaryChecksum && nullNodeBinaryChecksum.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BinaryChecksum = null;
+            if (parseNode.GetChildNode("deployment") is null) { _explicitNullValueDeployment = default!; _explicitNullProperties?.Remove("deployment"); }
+            else if (parseNode.GetChildNode("deployment") is { } nullNodeDeployment && nullNodeDeployment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Deployment = null;
+            if (parseNode.GetChildNode("deploymentVersion") is null) { _explicitNullValueDeploymentVersion = default!; _explicitNullProperties?.Remove("deploymentVersion"); }
+            else if (parseNode.GetChildNode("deploymentVersion") is { } nullNodeDeploymentVersion && nullNodeDeploymentVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeploymentVersion = null;
+            if (parseNode.GetChildNode("identity") is null) { _explicitNullValueIdentity = default!; _explicitNullProperties?.Remove("identity"); }
+            else if (parseNode.GetChildNode("identity") is { } nullNodeIdentity && nullNodeIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Identity = null;
+            if (parseNode.GetChildNode("meteringMetadata") is null) { _explicitNullValueMeteringMetadata = default!; _explicitNullProperties?.Remove("meteringMetadata"); }
+            else if (parseNode.GetChildNode("meteringMetadata") is { } nullNodeMeteringMetadata && nullNodeMeteringMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MeteringMetadata = null;
+            if (parseNode.GetChildNode("scheduledEventId") is null) { _explicitNullValueScheduledEventId = default!; _explicitNullProperties?.Remove("scheduledEventId"); }
+            else if (parseNode.GetChildNode("scheduledEventId") is { } nullNodeScheduledEventId && nullNodeScheduledEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduledEventId = null;
+            if (parseNode.GetChildNode("sdkMetadata") is null) { _explicitNullValueSdkMetadata = default!; _explicitNullProperties?.Remove("sdkMetadata"); }
+            else if (parseNode.GetChildNode("sdkMetadata") is { } nullNodeSdkMetadata && nullNodeSdkMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SdkMetadata = null;
+            if (parseNode.GetChildNode("startedEventId") is null) { _explicitNullValueStartedEventId = default!; _explicitNullProperties?.Remove("startedEventId"); }
+            else if (parseNode.GetChildNode("startedEventId") is { } nullNodeStartedEventId && nullNodeStartedEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartedEventId = null;
+            if (parseNode.GetChildNode("versioningBehavior") is null) { _explicitNullValueVersioningBehavior = default!; _explicitNullProperties?.Remove("versioningBehavior"); }
+            else if (parseNode.GetChildNode("versioningBehavior") is { } nullNodeVersioningBehavior && nullNodeVersioningBehavior.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VersioningBehavior = null;
+            if (parseNode.GetChildNode("workerDeploymentName") is null) { _explicitNullValueWorkerDeploymentName = default!; _explicitNullProperties?.Remove("workerDeploymentName"); }
+            else if (parseNode.GetChildNode("workerDeploymentName") is { } nullNodeWorkerDeploymentName && nullNodeWorkerDeploymentName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerDeploymentName = null;
+            if (parseNode.GetChildNode("workerDeploymentVersion") is null) { _explicitNullValueWorkerDeploymentVersion = default!; _explicitNullProperties?.Remove("workerDeploymentVersion"); }
+            else if (parseNode.GetChildNode("workerDeploymentVersion") is { } nullNodeWorkerDeploymentVersion && nullNodeWorkerDeploymentVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerDeploymentVersion = null;
+            if (parseNode.GetChildNode("workerVersion") is null) { _explicitNullValueWorkerVersion = default!; _explicitNullProperties?.Remove("workerVersion"); }
+            else if (parseNode.GetChildNode("workerVersion") is { } nullNodeWorkerVersion && nullNodeWorkerVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerVersion = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -36,114 +48,114 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Binary ID of the worker who completed this task Deprecated. Replaced with `deployment_version`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BinaryChecksum { get => _explicitNullValueBinaryChecksum; set { _explicitNullValueBinaryChecksum = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("binaryChecksum"); else _explicitNullProperties?.Remove("binaryChecksum"); } }
+        public string? BinaryChecksum { get => _explicitNullValueBinaryChecksum; set { _explicitNullValueBinaryChecksum = value; AdditionalData?.Remove("binaryChecksum"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("binaryChecksum"); else _explicitNullProperties?.Remove("binaryChecksum"); } }
         private string? _explicitNullValueBinaryChecksum = default!;
 #nullable restore
 #else
-        public string BinaryChecksum { get => _explicitNullValueBinaryChecksum; set { _explicitNullValueBinaryChecksum = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("binaryChecksum"); else _explicitNullProperties?.Remove("binaryChecksum"); } }
+        public string BinaryChecksum { get => _explicitNullValueBinaryChecksum; set { _explicitNullValueBinaryChecksum = value; AdditionalData?.Remove("binaryChecksum"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("binaryChecksum"); else _explicitNullProperties?.Remove("binaryChecksum"); } }
         private string _explicitNullValueBinaryChecksum = default!;
 #endif
         /// <summary>The deployment that completed this task. May or may not be set for unversioned workers, depending on whether a value is sent by the SDK. This value updates workflow execution&apos;s `versioning_info.deployment`. Deprecated. Replaced with `deployment_version`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesDeployment? Deployment { get => _explicitNullValueDeployment; set { _explicitNullValueDeployment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deployment"); else _explicitNullProperties?.Remove("deployment"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesDeployment? Deployment { get => _explicitNullValueDeployment; set { _explicitNullValueDeployment = value; AdditionalData?.Remove("deployment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deployment"); else _explicitNullProperties?.Remove("deployment"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesDeployment? _explicitNullValueDeployment = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesDeployment Deployment { get => _explicitNullValueDeployment; set { _explicitNullValueDeployment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deployment"); else _explicitNullProperties?.Remove("deployment"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesDeployment Deployment { get => _explicitNullValueDeployment; set { _explicitNullValueDeployment = value; AdditionalData?.Remove("deployment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deployment"); else _explicitNullProperties?.Remove("deployment"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesDeployment _explicitNullValueDeployment = default!;
 #endif
         /// <summary>The Worker Deployment Version that completed this task. Must be set if `versioning_behavior` is set. This value updates workflow execution&apos;s `versioning_info.deployment_version`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesDeploymentVersion? DeploymentVersion { get => _explicitNullValueDeploymentVersion; set { _explicitNullValueDeploymentVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploymentVersion"); else _explicitNullProperties?.Remove("deploymentVersion"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesDeploymentVersion? DeploymentVersion { get => _explicitNullValueDeploymentVersion; set { _explicitNullValueDeploymentVersion = value; AdditionalData?.Remove("deploymentVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploymentVersion"); else _explicitNullProperties?.Remove("deploymentVersion"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesDeploymentVersion? _explicitNullValueDeploymentVersion = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesDeploymentVersion DeploymentVersion { get => _explicitNullValueDeploymentVersion; set { _explicitNullValueDeploymentVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploymentVersion"); else _explicitNullProperties?.Remove("deploymentVersion"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesDeploymentVersion DeploymentVersion { get => _explicitNullValueDeploymentVersion; set { _explicitNullValueDeploymentVersion = value; AdditionalData?.Remove("deploymentVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploymentVersion"); else _explicitNullProperties?.Remove("deploymentVersion"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesDeploymentVersion _explicitNullValueDeploymentVersion = default!;
 #endif
         /// <summary>Identity of the worker who completed this task</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity"); else _explicitNullProperties?.Remove("identity"); } }
+        public string? Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; AdditionalData?.Remove("identity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity"); else _explicitNullProperties?.Remove("identity"); } }
         private string? _explicitNullValueIdentity = default!;
 #nullable restore
 #else
-        public string Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity"); else _explicitNullProperties?.Remove("identity"); } }
+        public string Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; AdditionalData?.Remove("identity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity"); else _explicitNullProperties?.Remove("identity"); } }
         private string _explicitNullValueIdentity = default!;
 #endif
         /// <summary>Local usage data sent during workflow task completion and recorded here for posterity</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesMeteringMetadata? MeteringMetadata { get => _explicitNullValueMeteringMetadata; set { _explicitNullValueMeteringMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meteringMetadata"); else _explicitNullProperties?.Remove("meteringMetadata"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesMeteringMetadata? MeteringMetadata { get => _explicitNullValueMeteringMetadata; set { _explicitNullValueMeteringMetadata = value; AdditionalData?.Remove("meteringMetadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meteringMetadata"); else _explicitNullProperties?.Remove("meteringMetadata"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesMeteringMetadata? _explicitNullValueMeteringMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesMeteringMetadata MeteringMetadata { get => _explicitNullValueMeteringMetadata; set { _explicitNullValueMeteringMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meteringMetadata"); else _explicitNullProperties?.Remove("meteringMetadata"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesMeteringMetadata MeteringMetadata { get => _explicitNullValueMeteringMetadata; set { _explicitNullValueMeteringMetadata = value; AdditionalData?.Remove("meteringMetadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meteringMetadata"); else _explicitNullProperties?.Remove("meteringMetadata"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesMeteringMetadata _explicitNullValueMeteringMetadata = default!;
 #endif
         /// <summary>The id of the `WORKFLOW_TASK_SCHEDULED` event this task corresponds to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ScheduledEventId { get => _explicitNullValueScheduledEventId; set { _explicitNullValueScheduledEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduledEventId"); else _explicitNullProperties?.Remove("scheduledEventId"); } }
+        public string? ScheduledEventId { get => _explicitNullValueScheduledEventId; set { _explicitNullValueScheduledEventId = value; AdditionalData?.Remove("scheduledEventId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduledEventId"); else _explicitNullProperties?.Remove("scheduledEventId"); } }
         private string? _explicitNullValueScheduledEventId = default!;
 #nullable restore
 #else
-        public string ScheduledEventId { get => _explicitNullValueScheduledEventId; set { _explicitNullValueScheduledEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduledEventId"); else _explicitNullProperties?.Remove("scheduledEventId"); } }
+        public string ScheduledEventId { get => _explicitNullValueScheduledEventId; set { _explicitNullValueScheduledEventId = value; AdditionalData?.Remove("scheduledEventId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduledEventId"); else _explicitNullProperties?.Remove("scheduledEventId"); } }
         private string _explicitNullValueScheduledEventId = default!;
 #endif
         /// <summary>Data the SDK wishes to record for itself, but server need not interpret, and does not directly impact workflow state.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesSdkMetadata? SdkMetadata { get => _explicitNullValueSdkMetadata; set { _explicitNullValueSdkMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sdkMetadata"); else _explicitNullProperties?.Remove("sdkMetadata"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesSdkMetadata? SdkMetadata { get => _explicitNullValueSdkMetadata; set { _explicitNullValueSdkMetadata = value; AdditionalData?.Remove("sdkMetadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sdkMetadata"); else _explicitNullProperties?.Remove("sdkMetadata"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesSdkMetadata? _explicitNullValueSdkMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesSdkMetadata SdkMetadata { get => _explicitNullValueSdkMetadata; set { _explicitNullValueSdkMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sdkMetadata"); else _explicitNullProperties?.Remove("sdkMetadata"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesSdkMetadata SdkMetadata { get => _explicitNullValueSdkMetadata; set { _explicitNullValueSdkMetadata = value; AdditionalData?.Remove("sdkMetadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sdkMetadata"); else _explicitNullProperties?.Remove("sdkMetadata"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesSdkMetadata _explicitNullValueSdkMetadata = default!;
 #endif
         /// <summary>The id of the `WORKFLOW_TASK_STARTED` event this task corresponds to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartedEventId { get => _explicitNullValueStartedEventId; set { _explicitNullValueStartedEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startedEventId"); else _explicitNullProperties?.Remove("startedEventId"); } }
+        public string? StartedEventId { get => _explicitNullValueStartedEventId; set { _explicitNullValueStartedEventId = value; AdditionalData?.Remove("startedEventId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startedEventId"); else _explicitNullProperties?.Remove("startedEventId"); } }
         private string? _explicitNullValueStartedEventId = default!;
 #nullable restore
 #else
-        public string StartedEventId { get => _explicitNullValueStartedEventId; set { _explicitNullValueStartedEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startedEventId"); else _explicitNullProperties?.Remove("startedEventId"); } }
+        public string StartedEventId { get => _explicitNullValueStartedEventId; set { _explicitNullValueStartedEventId = value; AdditionalData?.Remove("startedEventId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startedEventId"); else _explicitNullProperties?.Remove("startedEventId"); } }
         private string _explicitNullValueStartedEventId = default!;
 #endif
         /// <summary>Versioning behavior sent by the worker that completed this task for this particular workflow execution. UNSPECIFIED means the task was completed by an unversioned worker. This value updates workflow execution&apos;s `versioning_info.behavior`.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesVersioningBehavior? VersioningBehavior { get => _explicitNullValueVersioningBehavior; set { _explicitNullValueVersioningBehavior = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("versioningBehavior"); else _explicitNullProperties?.Remove("versioningBehavior"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesVersioningBehavior? VersioningBehavior { get => _explicitNullValueVersioningBehavior; set { _explicitNullValueVersioningBehavior = value; AdditionalData?.Remove("versioningBehavior"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("versioningBehavior"); else _explicitNullProperties?.Remove("versioningBehavior"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesVersioningBehavior? _explicitNullValueVersioningBehavior = default!;
         /// <summary>The name of Worker Deployment that completed this task. Must be set if `versioning_behavior` is set. This value updates workflow execution&apos;s `worker_deployment_name`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkerDeploymentName { get => _explicitNullValueWorkerDeploymentName; set { _explicitNullValueWorkerDeploymentName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerDeploymentName"); else _explicitNullProperties?.Remove("workerDeploymentName"); } }
+        public string? WorkerDeploymentName { get => _explicitNullValueWorkerDeploymentName; set { _explicitNullValueWorkerDeploymentName = value; AdditionalData?.Remove("workerDeploymentName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerDeploymentName"); else _explicitNullProperties?.Remove("workerDeploymentName"); } }
         private string? _explicitNullValueWorkerDeploymentName = default!;
 #nullable restore
 #else
-        public string WorkerDeploymentName { get => _explicitNullValueWorkerDeploymentName; set { _explicitNullValueWorkerDeploymentName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerDeploymentName"); else _explicitNullProperties?.Remove("workerDeploymentName"); } }
+        public string WorkerDeploymentName { get => _explicitNullValueWorkerDeploymentName; set { _explicitNullValueWorkerDeploymentName = value; AdditionalData?.Remove("workerDeploymentName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerDeploymentName"); else _explicitNullProperties?.Remove("workerDeploymentName"); } }
         private string _explicitNullValueWorkerDeploymentName = default!;
 #endif
         /// <summary>The Worker Deployment Version that completed this task. Must be set if `versioning_behavior` is set. This value updates workflow execution&apos;s `versioning_info.version`. Deprecated. Replaced with `deployment_version`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkerDeploymentVersion { get => _explicitNullValueWorkerDeploymentVersion; set { _explicitNullValueWorkerDeploymentVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerDeploymentVersion"); else _explicitNullProperties?.Remove("workerDeploymentVersion"); } }
+        public string? WorkerDeploymentVersion { get => _explicitNullValueWorkerDeploymentVersion; set { _explicitNullValueWorkerDeploymentVersion = value; AdditionalData?.Remove("workerDeploymentVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerDeploymentVersion"); else _explicitNullProperties?.Remove("workerDeploymentVersion"); } }
         private string? _explicitNullValueWorkerDeploymentVersion = default!;
 #nullable restore
 #else
-        public string WorkerDeploymentVersion { get => _explicitNullValueWorkerDeploymentVersion; set { _explicitNullValueWorkerDeploymentVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerDeploymentVersion"); else _explicitNullProperties?.Remove("workerDeploymentVersion"); } }
+        public string WorkerDeploymentVersion { get => _explicitNullValueWorkerDeploymentVersion; set { _explicitNullValueWorkerDeploymentVersion = value; AdditionalData?.Remove("workerDeploymentVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerDeploymentVersion"); else _explicitNullProperties?.Remove("workerDeploymentVersion"); } }
         private string _explicitNullValueWorkerDeploymentVersion = default!;
 #endif
         /// <summary>Version info of the worker who processed this workflow task. If present, the `build_id` field within is also used as `binary_checksum`, which may be omitted in that case (it may also be populated to preserve compatibility). Deprecated. Use `deployment_version` and `versioning_behavior` instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesWorkerVersion? WorkerVersion { get => _explicitNullValueWorkerVersion; set { _explicitNullValueWorkerVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerVersion"); else _explicitNullProperties?.Remove("workerVersion"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesWorkerVersion? WorkerVersion { get => _explicitNullValueWorkerVersion; set { _explicitNullValueWorkerVersion = value; AdditionalData?.Remove("workerVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerVersion"); else _explicitNullProperties?.Remove("workerVersion"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesWorkerVersion? _explicitNullValueWorkerVersion = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesWorkerVersion WorkerVersion { get => _explicitNullValueWorkerVersion; set { _explicitNullValueWorkerVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerVersion"); else _explicitNullProperties?.Remove("workerVersion"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesWorkerVersion WorkerVersion { get => _explicitNullValueWorkerVersion; set { _explicitNullValueWorkerVersion = value; AdditionalData?.Remove("workerVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerVersion"); else _explicitNullProperties?.Remove("workerVersion"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesWorkerVersion _explicitNullValueWorkerVersion = default!;
 #endif
         /// <summary>
@@ -179,7 +191,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "scheduledEventId", n => { ScheduledEventId = n.GetStringValue(); } },
                 { "sdkMetadata", n => { SdkMetadata = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesSdkMetadata>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesSdkMetadata.CreateFromDiscriminatorValue); } },
                 { "startedEventId", n => { StartedEventId = n.GetStringValue(); } },
-                { "versioningBehavior", n => { VersioningBehavior = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesVersioningBehavior>(); } },
+                { "versioningBehavior", n => { var parsed = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesVersioningBehavior>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueVersioningBehavior = default; _explicitNullProperties?.Remove("versioningBehavior"); AdditionalData["versioningBehavior"] = unknown; } else { VersioningBehavior = parsed; AdditionalData.Remove("versioningBehavior"); } } },
                 { "workerDeploymentName", n => { WorkerDeploymentName = n.GetStringValue(); } },
                 { "workerDeploymentVersion", n => { WorkerDeploymentVersion = n.GetStringValue(); } },
                 { "workerVersion", n => { WorkerVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesWorkerVersion>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesWorkerVersion.CreateFromDiscriminatorValue); } },

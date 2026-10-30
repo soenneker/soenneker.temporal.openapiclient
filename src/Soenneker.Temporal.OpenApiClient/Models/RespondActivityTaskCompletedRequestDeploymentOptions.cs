@@ -18,9 +18,12 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("buildId") is { } nullNodeBuildId && nullNodeBuildId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuildId = null;
-            if (parseNode.GetChildNode("deploymentName") is { } nullNodeDeploymentName && nullNodeDeploymentName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeploymentName = null;
-            if (parseNode.GetChildNode("workerVersioningMode") is { } nullNodeWorkerVersioningMode && nullNodeWorkerVersioningMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerVersioningMode = null;
+            if (parseNode.GetChildNode("buildId") is null) { _explicitNullValueBuildId = default!; _explicitNullProperties?.Remove("buildId"); }
+            else if (parseNode.GetChildNode("buildId") is { } nullNodeBuildId && nullNodeBuildId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuildId = null;
+            if (parseNode.GetChildNode("deploymentName") is null) { _explicitNullValueDeploymentName = default!; _explicitNullProperties?.Remove("deploymentName"); }
+            else if (parseNode.GetChildNode("deploymentName") is { } nullNodeDeploymentName && nullNodeDeploymentName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeploymentName = null;
+            if (parseNode.GetChildNode("workerVersioningMode") is null) { _explicitNullValueWorkerVersioningMode = default!; _explicitNullProperties?.Remove("workerVersioningMode"); }
+            else if (parseNode.GetChildNode("workerVersioningMode") is { } nullNodeWorkerVersioningMode && nullNodeWorkerVersioningMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerVersioningMode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,25 +31,25 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The Build ID of the worker. Required when `worker_versioning_mode==VERSIONED`, in which case, the worker will be part of a Deployment Version.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BuildId { get => _explicitNullValueBuildId; set { _explicitNullValueBuildId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buildId"); else _explicitNullProperties?.Remove("buildId"); } }
+        public string? BuildId { get => _explicitNullValueBuildId; set { _explicitNullValueBuildId = value; AdditionalData?.Remove("buildId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buildId"); else _explicitNullProperties?.Remove("buildId"); } }
         private string? _explicitNullValueBuildId = default!;
 #nullable restore
 #else
-        public string BuildId { get => _explicitNullValueBuildId; set { _explicitNullValueBuildId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buildId"); else _explicitNullProperties?.Remove("buildId"); } }
+        public string BuildId { get => _explicitNullValueBuildId; set { _explicitNullValueBuildId = value; AdditionalData?.Remove("buildId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buildId"); else _explicitNullProperties?.Remove("buildId"); } }
         private string _explicitNullValueBuildId = default!;
 #endif
         /// <summary>Required when `worker_versioning_mode==VERSIONED`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DeploymentName { get => _explicitNullValueDeploymentName; set { _explicitNullValueDeploymentName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploymentName"); else _explicitNullProperties?.Remove("deploymentName"); } }
+        public string? DeploymentName { get => _explicitNullValueDeploymentName; set { _explicitNullValueDeploymentName = value; AdditionalData?.Remove("deploymentName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploymentName"); else _explicitNullProperties?.Remove("deploymentName"); } }
         private string? _explicitNullValueDeploymentName = default!;
 #nullable restore
 #else
-        public string DeploymentName { get => _explicitNullValueDeploymentName; set { _explicitNullValueDeploymentName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploymentName"); else _explicitNullProperties?.Remove("deploymentName"); } }
+        public string DeploymentName { get => _explicitNullValueDeploymentName; set { _explicitNullValueDeploymentName = value; AdditionalData?.Remove("deploymentName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploymentName"); else _explicitNullProperties?.Remove("deploymentName"); } }
         private string _explicitNullValueDeploymentName = default!;
 #endif
         /// <summary>Required. Versioning Mode for this worker. Must be the same for all workers with the same `deployment_name` and `build_id` combination, across all Task Queues. When `worker_versioning_mode==VERSIONED`, the worker will be part of a Deployment Version.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentOptionsWorkerVersioningMode? WorkerVersioningMode { get => _explicitNullValueWorkerVersioningMode; set { _explicitNullValueWorkerVersioningMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerVersioningMode"); else _explicitNullProperties?.Remove("workerVersioningMode"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentOptionsWorkerVersioningMode? WorkerVersioningMode { get => _explicitNullValueWorkerVersioningMode; set { _explicitNullValueWorkerVersioningMode = value; AdditionalData?.Remove("workerVersioningMode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerVersioningMode"); else _explicitNullProperties?.Remove("workerVersioningMode"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentOptionsWorkerVersioningMode? _explicitNullValueWorkerVersioningMode = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestDeploymentOptions"/> and sets the default values.
@@ -75,7 +78,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             {
                 { "buildId", n => { BuildId = n.GetStringValue(); } },
                 { "deploymentName", n => { DeploymentName = n.GetStringValue(); } },
-                { "workerVersioningMode", n => { WorkerVersioningMode = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentOptionsWorkerVersioningMode>(); } },
+                { "workerVersioningMode", n => { var parsed = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentOptionsWorkerVersioningMode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueWorkerVersioningMode = default; _explicitNullProperties?.Remove("workerVersioningMode"); AdditionalData["workerVersioningMode"] = unknown; } else { WorkerVersioningMode = parsed; AdditionalData.Remove("workerVersioningMode"); } } },
             };
         }
         /// <summary>

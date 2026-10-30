@@ -18,20 +18,24 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("activity") is { } nullNodeActivity && nullNodeActivity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Activity = null;
-            if (parseNode.GetChildNode("batchJob") is { } nullNodeBatchJob && nullNodeBatchJob.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BatchJob = null;
-            if (parseNode.GetChildNode("nexusOperation") is { } nullNodeNexusOperation && nullNodeNexusOperation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NexusOperation = null;
-            if (parseNode.GetChildNode("workflowEvent") is { } nullNodeWorkflowEvent && nullNodeWorkflowEvent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowEvent = null;
+            if (parseNode.GetChildNode("activity") is null) { _explicitNullValueActivity = default!; _explicitNullProperties?.Remove("activity"); }
+            else if (parseNode.GetChildNode("activity") is { } nullNodeActivity && nullNodeActivity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Activity = null;
+            if (parseNode.GetChildNode("batchJob") is null) { _explicitNullValueBatchJob = default!; _explicitNullProperties?.Remove("batchJob"); }
+            else if (parseNode.GetChildNode("batchJob") is { } nullNodeBatchJob && nullNodeBatchJob.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BatchJob = null;
+            if (parseNode.GetChildNode("nexusOperation") is null) { _explicitNullValueNexusOperation = default!; _explicitNullProperties?.Remove("nexusOperation"); }
+            else if (parseNode.GetChildNode("nexusOperation") is { } nullNodeNexusOperation && nullNodeNexusOperation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NexusOperation = null;
+            if (parseNode.GetChildNode("workflowEvent") is null) { _explicitNullValueWorkflowEvent = default!; _explicitNullProperties?.Remove("workflowEvent"); }
+            else if (parseNode.GetChildNode("workflowEvent") is { } nullNodeWorkflowEvent && nullNodeWorkflowEvent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowEvent = null;
         }
 
         /// <summary>A link to an activity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.LinkActivity? Activity { get => _explicitNullValueActivity; set { _explicitNullValueActivity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activity"); else _explicitNullProperties?.Remove("activity"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.LinkActivity? Activity { get => _explicitNullValueActivity; set { _explicitNullValueActivity = value; AdditionalData?.Remove("activity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activity"); else _explicitNullProperties?.Remove("activity"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.LinkActivity? _explicitNullValueActivity = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.LinkActivity Activity { get => _explicitNullValueActivity; set { _explicitNullValueActivity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activity"); else _explicitNullProperties?.Remove("activity"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.LinkActivity Activity { get => _explicitNullValueActivity; set { _explicitNullValueActivity = value; AdditionalData?.Remove("activity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activity"); else _explicitNullProperties?.Remove("activity"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.LinkActivity _explicitNullValueActivity = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -39,31 +43,31 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>A link to a built-in batch job. Batch jobs can be used to perform operations on a set of workflows (e.g. terminate, signal, cancel, etc). This link can be put on workflow history events generated by actions taken by a batch job.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.LinkBatchJob? BatchJob { get => _explicitNullValueBatchJob; set { _explicitNullValueBatchJob = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("batchJob"); else _explicitNullProperties?.Remove("batchJob"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.LinkBatchJob? BatchJob { get => _explicitNullValueBatchJob; set { _explicitNullValueBatchJob = value; AdditionalData?.Remove("batchJob"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("batchJob"); else _explicitNullProperties?.Remove("batchJob"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.LinkBatchJob? _explicitNullValueBatchJob = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.LinkBatchJob BatchJob { get => _explicitNullValueBatchJob; set { _explicitNullValueBatchJob = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("batchJob"); else _explicitNullProperties?.Remove("batchJob"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.LinkBatchJob BatchJob { get => _explicitNullValueBatchJob; set { _explicitNullValueBatchJob = value; AdditionalData?.Remove("batchJob"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("batchJob"); else _explicitNullProperties?.Remove("batchJob"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.LinkBatchJob _explicitNullValueBatchJob = default!;
 #endif
         /// <summary>A link to a standalone Nexus operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.LinkNexusOperation? NexusOperation { get => _explicitNullValueNexusOperation; set { _explicitNullValueNexusOperation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nexusOperation"); else _explicitNullProperties?.Remove("nexusOperation"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.LinkNexusOperation? NexusOperation { get => _explicitNullValueNexusOperation; set { _explicitNullValueNexusOperation = value; AdditionalData?.Remove("nexusOperation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nexusOperation"); else _explicitNullProperties?.Remove("nexusOperation"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.LinkNexusOperation? _explicitNullValueNexusOperation = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.LinkNexusOperation NexusOperation { get => _explicitNullValueNexusOperation; set { _explicitNullValueNexusOperation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nexusOperation"); else _explicitNullProperties?.Remove("nexusOperation"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.LinkNexusOperation NexusOperation { get => _explicitNullValueNexusOperation; set { _explicitNullValueNexusOperation = value; AdditionalData?.Remove("nexusOperation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nexusOperation"); else _explicitNullProperties?.Remove("nexusOperation"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.LinkNexusOperation _explicitNullValueNexusOperation = default!;
 #endif
         /// <summary>The workflowEvent property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.LinkWorkflowEvent? WorkflowEvent { get => _explicitNullValueWorkflowEvent; set { _explicitNullValueWorkflowEvent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowEvent"); else _explicitNullProperties?.Remove("workflowEvent"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.LinkWorkflowEvent? WorkflowEvent { get => _explicitNullValueWorkflowEvent; set { _explicitNullValueWorkflowEvent = value; AdditionalData?.Remove("workflowEvent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowEvent"); else _explicitNullProperties?.Remove("workflowEvent"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.LinkWorkflowEvent? _explicitNullValueWorkflowEvent = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.LinkWorkflowEvent WorkflowEvent { get => _explicitNullValueWorkflowEvent; set { _explicitNullValueWorkflowEvent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowEvent"); else _explicitNullProperties?.Remove("workflowEvent"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.LinkWorkflowEvent WorkflowEvent { get => _explicitNullValueWorkflowEvent; set { _explicitNullValueWorkflowEvent = value; AdditionalData?.Remove("workflowEvent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowEvent"); else _explicitNullProperties?.Remove("workflowEvent"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.LinkWorkflowEvent _explicitNullValueWorkflowEvent = default!;
 #endif
         /// <summary>

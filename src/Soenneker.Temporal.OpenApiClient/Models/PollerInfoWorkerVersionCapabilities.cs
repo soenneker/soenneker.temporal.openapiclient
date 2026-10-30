@@ -18,9 +18,12 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("buildId") is { } nullNodeBuildId && nullNodeBuildId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuildId = null;
-            if (parseNode.GetChildNode("deploymentSeriesName") is { } nullNodeDeploymentSeriesName && nullNodeDeploymentSeriesName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeploymentSeriesName = null;
-            if (parseNode.GetChildNode("useVersioning") is { } nullNodeUseVersioning && nullNodeUseVersioning.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseVersioning = null;
+            if (parseNode.GetChildNode("buildId") is null) { _explicitNullValueBuildId = default!; _explicitNullProperties?.Remove("buildId"); }
+            else if (parseNode.GetChildNode("buildId") is { } nullNodeBuildId && nullNodeBuildId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuildId = null;
+            if (parseNode.GetChildNode("deploymentSeriesName") is null) { _explicitNullValueDeploymentSeriesName = default!; _explicitNullProperties?.Remove("deploymentSeriesName"); }
+            else if (parseNode.GetChildNode("deploymentSeriesName") is { } nullNodeDeploymentSeriesName && nullNodeDeploymentSeriesName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeploymentSeriesName = null;
+            if (parseNode.GetChildNode("useVersioning") is null) { _explicitNullValueUseVersioning = default!; _explicitNullProperties?.Remove("useVersioning"); }
+            else if (parseNode.GetChildNode("useVersioning") is { } nullNodeUseVersioning && nullNodeUseVersioning.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseVersioning = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,25 +31,25 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>An opaque whole-worker identifier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BuildId { get => _explicitNullValueBuildId; set { _explicitNullValueBuildId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buildId"); else _explicitNullProperties?.Remove("buildId"); } }
+        public string? BuildId { get => _explicitNullValueBuildId; set { _explicitNullValueBuildId = value; AdditionalData?.Remove("buildId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buildId"); else _explicitNullProperties?.Remove("buildId"); } }
         private string? _explicitNullValueBuildId = default!;
 #nullable restore
 #else
-        public string BuildId { get => _explicitNullValueBuildId; set { _explicitNullValueBuildId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buildId"); else _explicitNullProperties?.Remove("buildId"); } }
+        public string BuildId { get => _explicitNullValueBuildId; set { _explicitNullValueBuildId = value; AdditionalData?.Remove("buildId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buildId"); else _explicitNullProperties?.Remove("buildId"); } }
         private string _explicitNullValueBuildId = default!;
 #endif
         /// <summary>Must be sent if user has set a deployment series name (versioning-3).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DeploymentSeriesName { get => _explicitNullValueDeploymentSeriesName; set { _explicitNullValueDeploymentSeriesName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploymentSeriesName"); else _explicitNullProperties?.Remove("deploymentSeriesName"); } }
+        public string? DeploymentSeriesName { get => _explicitNullValueDeploymentSeriesName; set { _explicitNullValueDeploymentSeriesName = value; AdditionalData?.Remove("deploymentSeriesName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploymentSeriesName"); else _explicitNullProperties?.Remove("deploymentSeriesName"); } }
         private string? _explicitNullValueDeploymentSeriesName = default!;
 #nullable restore
 #else
-        public string DeploymentSeriesName { get => _explicitNullValueDeploymentSeriesName; set { _explicitNullValueDeploymentSeriesName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploymentSeriesName"); else _explicitNullProperties?.Remove("deploymentSeriesName"); } }
+        public string DeploymentSeriesName { get => _explicitNullValueDeploymentSeriesName; set { _explicitNullValueDeploymentSeriesName = value; AdditionalData?.Remove("deploymentSeriesName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploymentSeriesName"); else _explicitNullProperties?.Remove("deploymentSeriesName"); } }
         private string _explicitNullValueDeploymentSeriesName = default!;
 #endif
         /// <summary>If set, the worker is opting in to worker versioning, and wishes to only receive appropriate tasks.</summary>
-        public bool? UseVersioning { get => _explicitNullValueUseVersioning; set { _explicitNullValueUseVersioning = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("useVersioning"); else _explicitNullProperties?.Remove("useVersioning"); } }
+        public bool? UseVersioning { get => _explicitNullValueUseVersioning; set { _explicitNullValueUseVersioning = value; AdditionalData?.Remove("useVersioning"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("useVersioning"); else _explicitNullProperties?.Remove("useVersioning"); } }
         private bool? _explicitNullValueUseVersioning = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.PollerInfoWorkerVersionCapabilities"/> and sets the default values.

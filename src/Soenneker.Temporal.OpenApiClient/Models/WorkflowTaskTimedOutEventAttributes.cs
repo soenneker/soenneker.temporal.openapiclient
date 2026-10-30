@@ -17,9 +17,12 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("scheduledEventId") is { } nullNodeScheduledEventId && nullNodeScheduledEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduledEventId = null;
-            if (parseNode.GetChildNode("startedEventId") is { } nullNodeStartedEventId && nullNodeStartedEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartedEventId = null;
-            if (parseNode.GetChildNode("timeoutType") is { } nullNodeTimeoutType && nullNodeTimeoutType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeoutType = null;
+            if (parseNode.GetChildNode("scheduledEventId") is null) { _explicitNullValueScheduledEventId = default!; _explicitNullProperties?.Remove("scheduledEventId"); }
+            else if (parseNode.GetChildNode("scheduledEventId") is { } nullNodeScheduledEventId && nullNodeScheduledEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduledEventId = null;
+            if (parseNode.GetChildNode("startedEventId") is null) { _explicitNullValueStartedEventId = default!; _explicitNullProperties?.Remove("startedEventId"); }
+            else if (parseNode.GetChildNode("startedEventId") is { } nullNodeStartedEventId && nullNodeStartedEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartedEventId = null;
+            if (parseNode.GetChildNode("timeoutType") is null) { _explicitNullValueTimeoutType = default!; _explicitNullProperties?.Remove("timeoutType"); }
+            else if (parseNode.GetChildNode("timeoutType") is { } nullNodeTimeoutType && nullNodeTimeoutType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeoutType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,25 +30,25 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The id of the `WORKFLOW_TASK_SCHEDULED` event this task corresponds to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ScheduledEventId { get => _explicitNullValueScheduledEventId; set { _explicitNullValueScheduledEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduledEventId"); else _explicitNullProperties?.Remove("scheduledEventId"); } }
+        public string? ScheduledEventId { get => _explicitNullValueScheduledEventId; set { _explicitNullValueScheduledEventId = value; AdditionalData?.Remove("scheduledEventId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduledEventId"); else _explicitNullProperties?.Remove("scheduledEventId"); } }
         private string? _explicitNullValueScheduledEventId = default!;
 #nullable restore
 #else
-        public string ScheduledEventId { get => _explicitNullValueScheduledEventId; set { _explicitNullValueScheduledEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduledEventId"); else _explicitNullProperties?.Remove("scheduledEventId"); } }
+        public string ScheduledEventId { get => _explicitNullValueScheduledEventId; set { _explicitNullValueScheduledEventId = value; AdditionalData?.Remove("scheduledEventId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduledEventId"); else _explicitNullProperties?.Remove("scheduledEventId"); } }
         private string _explicitNullValueScheduledEventId = default!;
 #endif
         /// <summary>The id of the `WORKFLOW_TASK_STARTED` event this task corresponds to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartedEventId { get => _explicitNullValueStartedEventId; set { _explicitNullValueStartedEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startedEventId"); else _explicitNullProperties?.Remove("startedEventId"); } }
+        public string? StartedEventId { get => _explicitNullValueStartedEventId; set { _explicitNullValueStartedEventId = value; AdditionalData?.Remove("startedEventId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startedEventId"); else _explicitNullProperties?.Remove("startedEventId"); } }
         private string? _explicitNullValueStartedEventId = default!;
 #nullable restore
 #else
-        public string StartedEventId { get => _explicitNullValueStartedEventId; set { _explicitNullValueStartedEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startedEventId"); else _explicitNullProperties?.Remove("startedEventId"); } }
+        public string StartedEventId { get => _explicitNullValueStartedEventId; set { _explicitNullValueStartedEventId = value; AdditionalData?.Remove("startedEventId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startedEventId"); else _explicitNullProperties?.Remove("startedEventId"); } }
         private string _explicitNullValueStartedEventId = default!;
 #endif
         /// <summary>The timeoutType property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskTimedOutEventAttributesTimeoutType? TimeoutType { get => _explicitNullValueTimeoutType; set { _explicitNullValueTimeoutType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeoutType"); else _explicitNullProperties?.Remove("timeoutType"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskTimedOutEventAttributesTimeoutType? TimeoutType { get => _explicitNullValueTimeoutType; set { _explicitNullValueTimeoutType = value; AdditionalData?.Remove("timeoutType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeoutType"); else _explicitNullProperties?.Remove("timeoutType"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskTimedOutEventAttributesTimeoutType? _explicitNullValueTimeoutType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskTimedOutEventAttributes"/> and sets the default values.
@@ -74,7 +77,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             {
                 { "scheduledEventId", n => { ScheduledEventId = n.GetStringValue(); } },
                 { "startedEventId", n => { StartedEventId = n.GetStringValue(); } },
-                { "timeoutType", n => { TimeoutType = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskTimedOutEventAttributesTimeoutType>(); } },
+                { "timeoutType", n => { var parsed = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskTimedOutEventAttributesTimeoutType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTimeoutType = default; _explicitNullProperties?.Remove("timeoutType"); AdditionalData["timeoutType"] = unknown; } else { TimeoutType = parsed; AdditionalData.Remove("timeoutType"); } } },
             };
         }
         /// <summary>

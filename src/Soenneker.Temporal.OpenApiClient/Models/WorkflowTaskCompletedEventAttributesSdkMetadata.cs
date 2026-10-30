@@ -18,10 +18,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("coreUsedFlags") is { } nullNodeCoreUsedFlags && nullNodeCoreUsedFlags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CoreUsedFlags = null;
-            if (parseNode.GetChildNode("langUsedFlags") is { } nullNodeLangUsedFlags && nullNodeLangUsedFlags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LangUsedFlags = null;
-            if (parseNode.GetChildNode("sdkName") is { } nullNodeSdkName && nullNodeSdkName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SdkName = null;
-            if (parseNode.GetChildNode("sdkVersion") is { } nullNodeSdkVersion && nullNodeSdkVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SdkVersion = null;
+            if (parseNode.GetChildNode("coreUsedFlags") is null) { _explicitNullValueCoreUsedFlags = default!; _explicitNullProperties?.Remove("coreUsedFlags"); }
+            else if (parseNode.GetChildNode("coreUsedFlags") is { } nullNodeCoreUsedFlags && nullNodeCoreUsedFlags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CoreUsedFlags = null;
+            if (parseNode.GetChildNode("langUsedFlags") is null) { _explicitNullValueLangUsedFlags = default!; _explicitNullProperties?.Remove("langUsedFlags"); }
+            else if (parseNode.GetChildNode("langUsedFlags") is { } nullNodeLangUsedFlags && nullNodeLangUsedFlags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LangUsedFlags = null;
+            if (parseNode.GetChildNode("sdkName") is null) { _explicitNullValueSdkName = default!; _explicitNullProperties?.Remove("sdkName"); }
+            else if (parseNode.GetChildNode("sdkName") is { } nullNodeSdkName && nullNodeSdkName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SdkName = null;
+            if (parseNode.GetChildNode("sdkVersion") is null) { _explicitNullValueSdkVersion = default!; _explicitNullProperties?.Remove("sdkVersion"); }
+            else if (parseNode.GetChildNode("sdkVersion") is { } nullNodeSdkVersion && nullNodeSdkVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SdkVersion = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,41 +33,41 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Internal flags used by the core SDK. SDKs using flags must comply with the following behavior: During replay: * If a flag is not recognized (value is too high or not defined), it must fail the workflow   task. * If a flag is recognized, it is stored in a set of used flags for the run. Code checks for   that flag during and after this WFT are allowed to assume that the flag is present. * If a code check for a flag does not find the flag in the set of used flags, it must take   the branch corresponding to the absence of that flag. During non-replay execution of new WFTs: * The SDK is free to use all flags it knows about. It must record any newly-used (IE: not   previously recorded) flags when completing the WFT. SDKs which are too old to even know about this field at all are considered to produce undefined behavior if they replay workflows which used this mechanism. (-- api-linter: core::0141::forbidden-types=disabled     aip.dev/not-precedent: These really shouldn&apos;t have negative values. --)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? CoreUsedFlags { get => _explicitNullValueCoreUsedFlags; set { _explicitNullValueCoreUsedFlags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coreUsedFlags"); else _explicitNullProperties?.Remove("coreUsedFlags"); } }
+        public List<int?>? CoreUsedFlags { get => _explicitNullValueCoreUsedFlags; set { _explicitNullValueCoreUsedFlags = value; AdditionalData?.Remove("coreUsedFlags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coreUsedFlags"); else _explicitNullProperties?.Remove("coreUsedFlags"); } }
         private List<int?>? _explicitNullValueCoreUsedFlags = default!;
 #nullable restore
 #else
-        public List<int?> CoreUsedFlags { get => _explicitNullValueCoreUsedFlags; set { _explicitNullValueCoreUsedFlags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coreUsedFlags"); else _explicitNullProperties?.Remove("coreUsedFlags"); } }
+        public List<int?> CoreUsedFlags { get => _explicitNullValueCoreUsedFlags; set { _explicitNullValueCoreUsedFlags = value; AdditionalData?.Remove("coreUsedFlags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coreUsedFlags"); else _explicitNullProperties?.Remove("coreUsedFlags"); } }
         private List<int?> _explicitNullValueCoreUsedFlags = default!;
 #endif
         /// <summary>Flags used by the SDK lang. No attempt is made to distinguish between different SDK languages here as processing a workflow with a different language than the one which authored it is already undefined behavior. See `core_used_patches` for more. (-- api-linter: core::0141::forbidden-types=disabled     aip.dev/not-precedent: These really shouldn&apos;t have negative values. --)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? LangUsedFlags { get => _explicitNullValueLangUsedFlags; set { _explicitNullValueLangUsedFlags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("langUsedFlags"); else _explicitNullProperties?.Remove("langUsedFlags"); } }
+        public List<int?>? LangUsedFlags { get => _explicitNullValueLangUsedFlags; set { _explicitNullValueLangUsedFlags = value; AdditionalData?.Remove("langUsedFlags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("langUsedFlags"); else _explicitNullProperties?.Remove("langUsedFlags"); } }
         private List<int?>? _explicitNullValueLangUsedFlags = default!;
 #nullable restore
 #else
-        public List<int?> LangUsedFlags { get => _explicitNullValueLangUsedFlags; set { _explicitNullValueLangUsedFlags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("langUsedFlags"); else _explicitNullProperties?.Remove("langUsedFlags"); } }
+        public List<int?> LangUsedFlags { get => _explicitNullValueLangUsedFlags; set { _explicitNullValueLangUsedFlags = value; AdditionalData?.Remove("langUsedFlags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("langUsedFlags"); else _explicitNullProperties?.Remove("langUsedFlags"); } }
         private List<int?> _explicitNullValueLangUsedFlags = default!;
 #endif
         /// <summary>Name of the SDK that processed the task. This is usually something like &quot;temporal-go&quot; and is usually the same as client-name gRPC header. This should only be set if its value changed since the last time recorded on the workflow (or be set on the first task). (-- api-linter: core::0122::name-suffix=disabled     aip.dev/not-precedent: We&apos;re ok with a name suffix here. --)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SdkName { get => _explicitNullValueSdkName; set { _explicitNullValueSdkName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sdkName"); else _explicitNullProperties?.Remove("sdkName"); } }
+        public string? SdkName { get => _explicitNullValueSdkName; set { _explicitNullValueSdkName = value; AdditionalData?.Remove("sdkName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sdkName"); else _explicitNullProperties?.Remove("sdkName"); } }
         private string? _explicitNullValueSdkName = default!;
 #nullable restore
 #else
-        public string SdkName { get => _explicitNullValueSdkName; set { _explicitNullValueSdkName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sdkName"); else _explicitNullProperties?.Remove("sdkName"); } }
+        public string SdkName { get => _explicitNullValueSdkName; set { _explicitNullValueSdkName = value; AdditionalData?.Remove("sdkName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sdkName"); else _explicitNullProperties?.Remove("sdkName"); } }
         private string _explicitNullValueSdkName = default!;
 #endif
         /// <summary>Version of the SDK that processed the task. This is usually something like &quot;1.20.0&quot; and is usually the same as client-version gRPC header. This should only be set if its value changed since the last time recorded on the workflow (or be set on the first task).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SdkVersion { get => _explicitNullValueSdkVersion; set { _explicitNullValueSdkVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sdkVersion"); else _explicitNullProperties?.Remove("sdkVersion"); } }
+        public string? SdkVersion { get => _explicitNullValueSdkVersion; set { _explicitNullValueSdkVersion = value; AdditionalData?.Remove("sdkVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sdkVersion"); else _explicitNullProperties?.Remove("sdkVersion"); } }
         private string? _explicitNullValueSdkVersion = default!;
 #nullable restore
 #else
-        public string SdkVersion { get => _explicitNullValueSdkVersion; set { _explicitNullValueSdkVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sdkVersion"); else _explicitNullProperties?.Remove("sdkVersion"); } }
+        public string SdkVersion { get => _explicitNullValueSdkVersion; set { _explicitNullValueSdkVersion = value; AdditionalData?.Remove("sdkVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sdkVersion"); else _explicitNullProperties?.Remove("sdkVersion"); } }
         private string _explicitNullValueSdkVersion = default!;
 #endif
         /// <summary>

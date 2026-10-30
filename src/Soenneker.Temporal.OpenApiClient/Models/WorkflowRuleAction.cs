@@ -17,17 +17,18 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("activityPause") is { } nullNodeActivityPause && nullNodeActivityPause.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActivityPause = null;
+            if (parseNode.GetChildNode("activityPause") is null) { _explicitNullValueActivityPause = default!; _explicitNullProperties?.Remove("activityPause"); }
+            else if (parseNode.GetChildNode("activityPause") is { } nullNodeActivityPause && nullNodeActivityPause.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActivityPause = null;
         }
 
         /// <summary>The activityPause property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRuleActionActivityPause? ActivityPause { get => _explicitNullValueActivityPause; set { _explicitNullValueActivityPause = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityPause"); else _explicitNullProperties?.Remove("activityPause"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRuleActionActivityPause? ActivityPause { get => _explicitNullValueActivityPause; set { _explicitNullValueActivityPause = value; AdditionalData?.Remove("activityPause"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityPause"); else _explicitNullProperties?.Remove("activityPause"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRuleActionActivityPause? _explicitNullValueActivityPause = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRuleActionActivityPause ActivityPause { get => _explicitNullValueActivityPause; set { _explicitNullValueActivityPause = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityPause"); else _explicitNullProperties?.Remove("activityPause"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRuleActionActivityPause ActivityPause { get => _explicitNullValueActivityPause; set { _explicitNullValueActivityPause = value; AdditionalData?.Remove("activityPause"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityPause"); else _explicitNullProperties?.Remove("activityPause"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRuleActionActivityPause _explicitNullValueActivityPause = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>

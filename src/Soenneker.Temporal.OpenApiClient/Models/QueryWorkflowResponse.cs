@@ -17,8 +17,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("queryRejected") is { } nullNodeQueryRejected && nullNodeQueryRejected.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QueryRejected = null;
-            if (parseNode.GetChildNode("queryResult") is { } nullNodeQueryResult && nullNodeQueryResult.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QueryResult = null;
+            if (parseNode.GetChildNode("queryRejected") is null) { _explicitNullValueQueryRejected = default!; _explicitNullProperties?.Remove("queryRejected"); }
+            else if (parseNode.GetChildNode("queryRejected") is { } nullNodeQueryRejected && nullNodeQueryRejected.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QueryRejected = null;
+            if (parseNode.GetChildNode("queryResult") is null) { _explicitNullValueQueryResult = default!; _explicitNullProperties?.Remove("queryResult"); }
+            else if (parseNode.GetChildNode("queryResult") is { } nullNodeQueryResult && nullNodeQueryResult.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QueryResult = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The queryRejected property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.QueryRejected? QueryRejected { get => _explicitNullValueQueryRejected; set { _explicitNullValueQueryRejected = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queryRejected"); else _explicitNullProperties?.Remove("queryRejected"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.QueryRejected? QueryRejected { get => _explicitNullValueQueryRejected; set { _explicitNullValueQueryRejected = value; AdditionalData?.Remove("queryRejected"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queryRejected"); else _explicitNullProperties?.Remove("queryRejected"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.QueryRejected? _explicitNullValueQueryRejected = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.QueryRejected QueryRejected { get => _explicitNullValueQueryRejected; set { _explicitNullValueQueryRejected = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queryRejected"); else _explicitNullProperties?.Remove("queryRejected"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.QueryRejected QueryRejected { get => _explicitNullValueQueryRejected; set { _explicitNullValueQueryRejected = value; AdditionalData?.Remove("queryRejected"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queryRejected"); else _explicitNullProperties?.Remove("queryRejected"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.QueryRejected _explicitNullValueQueryRejected = default!;
 #endif
         /// <summary>See `Payload`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Payloads? QueryResult { get => _explicitNullValueQueryResult; set { _explicitNullValueQueryResult = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queryResult"); else _explicitNullProperties?.Remove("queryResult"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.Payloads? QueryResult { get => _explicitNullValueQueryResult; set { _explicitNullValueQueryResult = value; AdditionalData?.Remove("queryResult"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queryResult"); else _explicitNullProperties?.Remove("queryResult"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.Payloads? _explicitNullValueQueryResult = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Payloads QueryResult { get => _explicitNullValueQueryResult; set { _explicitNullValueQueryResult = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queryResult"); else _explicitNullProperties?.Remove("queryResult"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.Payloads QueryResult { get => _explicitNullValueQueryResult; set { _explicitNullValueQueryResult = value; AdditionalData?.Remove("queryResult"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queryResult"); else _explicitNullProperties?.Remove("queryResult"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.Payloads _explicitNullValueQueryResult = default!;
 #endif
         /// <summary>

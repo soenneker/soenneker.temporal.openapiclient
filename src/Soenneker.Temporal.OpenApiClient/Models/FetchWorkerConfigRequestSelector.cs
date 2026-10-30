@@ -18,7 +18,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("workerInstanceKey") is { } nullNodeWorkerInstanceKey && nullNodeWorkerInstanceKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerInstanceKey = null;
+            if (parseNode.GetChildNode("workerInstanceKey") is null) { _explicitNullValueWorkerInstanceKey = default!; _explicitNullProperties?.Remove("workerInstanceKey"); }
+            else if (parseNode.GetChildNode("workerInstanceKey") is { } nullNodeWorkerInstanceKey && nullNodeWorkerInstanceKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerInstanceKey = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Worker instance key to which the command should be sent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkerInstanceKey { get => _explicitNullValueWorkerInstanceKey; set { _explicitNullValueWorkerInstanceKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerInstanceKey"); else _explicitNullProperties?.Remove("workerInstanceKey"); } }
+        public string? WorkerInstanceKey { get => _explicitNullValueWorkerInstanceKey; set { _explicitNullValueWorkerInstanceKey = value; AdditionalData?.Remove("workerInstanceKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerInstanceKey"); else _explicitNullProperties?.Remove("workerInstanceKey"); } }
         private string? _explicitNullValueWorkerInstanceKey = default!;
 #nullable restore
 #else
-        public string WorkerInstanceKey { get => _explicitNullValueWorkerInstanceKey; set { _explicitNullValueWorkerInstanceKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerInstanceKey"); else _explicitNullProperties?.Remove("workerInstanceKey"); } }
+        public string WorkerInstanceKey { get => _explicitNullValueWorkerInstanceKey; set { _explicitNullValueWorkerInstanceKey = value; AdditionalData?.Remove("workerInstanceKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerInstanceKey"); else _explicitNullProperties?.Remove("workerInstanceKey"); } }
         private string _explicitNullValueWorkerInstanceKey = default!;
 #endif
         /// <summary>

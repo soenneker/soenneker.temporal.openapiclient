@@ -17,21 +17,24 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("currentPollers") is { } nullNodeCurrentPollers && nullNodeCurrentPollers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentPollers = null;
-            if (parseNode.GetChildNode("isAutoscaling") is { } nullNodeIsAutoscaling && nullNodeIsAutoscaling.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAutoscaling = null;
-            if (parseNode.GetChildNode("lastSuccessfulPollTime") is { } nullNodeLastSuccessfulPollTime && nullNodeLastSuccessfulPollTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastSuccessfulPollTime = null;
+            if (parseNode.GetChildNode("currentPollers") is null) { _explicitNullValueCurrentPollers = default!; _explicitNullProperties?.Remove("currentPollers"); }
+            else if (parseNode.GetChildNode("currentPollers") is { } nullNodeCurrentPollers && nullNodeCurrentPollers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentPollers = null;
+            if (parseNode.GetChildNode("isAutoscaling") is null) { _explicitNullValueIsAutoscaling = default!; _explicitNullProperties?.Remove("isAutoscaling"); }
+            else if (parseNode.GetChildNode("isAutoscaling") is { } nullNodeIsAutoscaling && nullNodeIsAutoscaling.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAutoscaling = null;
+            if (parseNode.GetChildNode("lastSuccessfulPollTime") is null) { _explicitNullValueLastSuccessfulPollTime = default!; _explicitNullProperties?.Remove("lastSuccessfulPollTime"); }
+            else if (parseNode.GetChildNode("lastSuccessfulPollTime") is { } nullNodeLastSuccessfulPollTime && nullNodeLastSuccessfulPollTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastSuccessfulPollTime = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Number of polling RPCs that are currently in flight.</summary>
-        public int? CurrentPollers { get => _explicitNullValueCurrentPollers; set { _explicitNullValueCurrentPollers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currentPollers"); else _explicitNullProperties?.Remove("currentPollers"); } }
+        public int? CurrentPollers { get => _explicitNullValueCurrentPollers; set { _explicitNullValueCurrentPollers = value; AdditionalData?.Remove("currentPollers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currentPollers"); else _explicitNullProperties?.Remove("currentPollers"); } }
         private int? _explicitNullValueCurrentPollers = default!;
         /// <summary>Set true if the number of concurrent pollers is auto-scaled</summary>
-        public bool? IsAutoscaling { get => _explicitNullValueIsAutoscaling; set { _explicitNullValueIsAutoscaling = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isAutoscaling"); else _explicitNullProperties?.Remove("isAutoscaling"); } }
+        public bool? IsAutoscaling { get => _explicitNullValueIsAutoscaling; set { _explicitNullValueIsAutoscaling = value; AdditionalData?.Remove("isAutoscaling"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isAutoscaling"); else _explicitNullProperties?.Remove("isAutoscaling"); } }
         private bool? _explicitNullValueIsAutoscaling = default!;
         /// <summary>The lastSuccessfulPollTime property</summary>
-        public DateTimeOffset? LastSuccessfulPollTime { get => _explicitNullValueLastSuccessfulPollTime; set { _explicitNullValueLastSuccessfulPollTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastSuccessfulPollTime"); else _explicitNullProperties?.Remove("lastSuccessfulPollTime"); } }
+        public DateTimeOffset? LastSuccessfulPollTime { get => _explicitNullValueLastSuccessfulPollTime; set { _explicitNullValueLastSuccessfulPollTime = value; AdditionalData?.Remove("lastSuccessfulPollTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastSuccessfulPollTime"); else _explicitNullProperties?.Remove("lastSuccessfulPollTime"); } }
         private DateTimeOffset? _explicitNullValueLastSuccessfulPollTime = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkerPollerInfo"/> and sets the default values.

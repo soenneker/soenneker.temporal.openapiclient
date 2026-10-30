@@ -17,8 +17,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("conflictToken") is { } nullNodeConflictToken && nullNodeConflictToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConflictToken = null;
-            if (parseNode.GetChildNode("previousManagerIdentity") is { } nullNodePreviousManagerIdentity && nullNodePreviousManagerIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreviousManagerIdentity = null;
+            if (parseNode.GetChildNode("conflictToken") is null) { _explicitNullValueConflictToken = default!; _explicitNullProperties?.Remove("conflictToken"); }
+            else if (parseNode.GetChildNode("conflictToken") is { } nullNodeConflictToken && nullNodeConflictToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConflictToken = null;
+            if (parseNode.GetChildNode("previousManagerIdentity") is null) { _explicitNullValuePreviousManagerIdentity = default!; _explicitNullProperties?.Remove("previousManagerIdentity"); }
+            else if (parseNode.GetChildNode("previousManagerIdentity") is { } nullNodePreviousManagerIdentity && nullNodePreviousManagerIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreviousManagerIdentity = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>This value is returned so that it can be optionally passed to APIs that write to the Worker Deployment state to ensure that the state did not change between this API call and a future write.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConflictToken { get => _explicitNullValueConflictToken; set { _explicitNullValueConflictToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conflictToken"); else _explicitNullProperties?.Remove("conflictToken"); } }
+        public string? ConflictToken { get => _explicitNullValueConflictToken; set { _explicitNullValueConflictToken = value; AdditionalData?.Remove("conflictToken"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conflictToken"); else _explicitNullProperties?.Remove("conflictToken"); } }
         private string? _explicitNullValueConflictToken = default!;
 #nullable restore
 #else
-        public string ConflictToken { get => _explicitNullValueConflictToken; set { _explicitNullValueConflictToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conflictToken"); else _explicitNullProperties?.Remove("conflictToken"); } }
+        public string ConflictToken { get => _explicitNullValueConflictToken; set { _explicitNullValueConflictToken = value; AdditionalData?.Remove("conflictToken"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conflictToken"); else _explicitNullProperties?.Remove("conflictToken"); } }
         private string _explicitNullValueConflictToken = default!;
 #endif
         /// <summary>What the `manager_identity` field was before this change. Deprecated in favor of idempotency of the API. Use `DescribeWorkerDeployment` to get the manager identity before calling this API. By passing the `conflict_token` got from the `DescribeWorkerDeployment` call to this API you can ensure there is no interfering changes between the two calls.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PreviousManagerIdentity { get => _explicitNullValuePreviousManagerIdentity; set { _explicitNullValuePreviousManagerIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previousManagerIdentity"); else _explicitNullProperties?.Remove("previousManagerIdentity"); } }
+        public string? PreviousManagerIdentity { get => _explicitNullValuePreviousManagerIdentity; set { _explicitNullValuePreviousManagerIdentity = value; AdditionalData?.Remove("previousManagerIdentity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previousManagerIdentity"); else _explicitNullProperties?.Remove("previousManagerIdentity"); } }
         private string? _explicitNullValuePreviousManagerIdentity = default!;
 #nullable restore
 #else
-        public string PreviousManagerIdentity { get => _explicitNullValuePreviousManagerIdentity; set { _explicitNullValuePreviousManagerIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previousManagerIdentity"); else _explicitNullProperties?.Remove("previousManagerIdentity"); } }
+        public string PreviousManagerIdentity { get => _explicitNullValuePreviousManagerIdentity; set { _explicitNullValuePreviousManagerIdentity = value; AdditionalData?.Remove("previousManagerIdentity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previousManagerIdentity"); else _explicitNullProperties?.Remove("previousManagerIdentity"); } }
         private string _explicitNullValuePreviousManagerIdentity = default!;
 #endif
         /// <summary>

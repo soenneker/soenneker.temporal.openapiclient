@@ -18,8 +18,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("signalWorkflow") is { } nullNodeSignalWorkflow && nullNodeSignalWorkflow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignalWorkflow = null;
-            if (parseNode.GetChildNode("updateWorkflowOptions") is { } nullNodeUpdateWorkflowOptions && nullNodeUpdateWorkflowOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateWorkflowOptions = null;
+            if (parseNode.GetChildNode("signalWorkflow") is null) { _explicitNullValueSignalWorkflow = default!; _explicitNullProperties?.Remove("signalWorkflow"); }
+            else if (parseNode.GetChildNode("signalWorkflow") is { } nullNodeSignalWorkflow && nullNodeSignalWorkflow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignalWorkflow = null;
+            if (parseNode.GetChildNode("updateWorkflowOptions") is null) { _explicitNullValueUpdateWorkflowOptions = default!; _explicitNullProperties?.Remove("updateWorkflowOptions"); }
+            else if (parseNode.GetChildNode("updateWorkflowOptions") is { } nullNodeUpdateWorkflowOptions && nullNodeUpdateWorkflowOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateWorkflowOptions = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>SignalWorkflow represents sending a signal after a workflow reset. Keep the parameter in sync with temporal.api.workflowservice.v1.SignalWorkflowExecutionRequest.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationSignalWorkflow? SignalWorkflow { get => _explicitNullValueSignalWorkflow; set { _explicitNullValueSignalWorkflow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signalWorkflow"); else _explicitNullProperties?.Remove("signalWorkflow"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationSignalWorkflow? SignalWorkflow { get => _explicitNullValueSignalWorkflow; set { _explicitNullValueSignalWorkflow = value; AdditionalData?.Remove("signalWorkflow"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signalWorkflow"); else _explicitNullProperties?.Remove("signalWorkflow"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationSignalWorkflow? _explicitNullValueSignalWorkflow = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationSignalWorkflow SignalWorkflow { get => _explicitNullValueSignalWorkflow; set { _explicitNullValueSignalWorkflow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signalWorkflow"); else _explicitNullProperties?.Remove("signalWorkflow"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationSignalWorkflow SignalWorkflow { get => _explicitNullValueSignalWorkflow; set { _explicitNullValueSignalWorkflow = value; AdditionalData?.Remove("signalWorkflow"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signalWorkflow"); else _explicitNullProperties?.Remove("signalWorkflow"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationSignalWorkflow _explicitNullValueSignalWorkflow = default!;
 #endif
         /// <summary>UpdateWorkflowOptions represents updating workflow execution options after a workflow reset. Keep the parameters in sync with temporal.api.workflowservice.v1.UpdateWorkflowExecutionOptionsRequest.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptions? UpdateWorkflowOptions { get => _explicitNullValueUpdateWorkflowOptions; set { _explicitNullValueUpdateWorkflowOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateWorkflowOptions"); else _explicitNullProperties?.Remove("updateWorkflowOptions"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptions? UpdateWorkflowOptions { get => _explicitNullValueUpdateWorkflowOptions; set { _explicitNullValueUpdateWorkflowOptions = value; AdditionalData?.Remove("updateWorkflowOptions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateWorkflowOptions"); else _explicitNullProperties?.Remove("updateWorkflowOptions"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptions? _explicitNullValueUpdateWorkflowOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptions UpdateWorkflowOptions { get => _explicitNullValueUpdateWorkflowOptions; set { _explicitNullValueUpdateWorkflowOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateWorkflowOptions"); else _explicitNullProperties?.Remove("updateWorkflowOptions"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptions UpdateWorkflowOptions { get => _explicitNullValueUpdateWorkflowOptions; set { _explicitNullValueUpdateWorkflowOptions = value; AdditionalData?.Remove("updateWorkflowOptions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateWorkflowOptions"); else _explicitNullProperties?.Remove("updateWorkflowOptions"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptions _explicitNullValueUpdateWorkflowOptions = default!;
 #endif
         /// <summary>

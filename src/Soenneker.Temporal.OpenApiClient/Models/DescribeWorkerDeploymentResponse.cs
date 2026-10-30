@@ -17,8 +17,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("conflictToken") is { } nullNodeConflictToken && nullNodeConflictToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConflictToken = null;
-            if (parseNode.GetChildNode("workerDeploymentInfo") is { } nullNodeWorkerDeploymentInfo && nullNodeWorkerDeploymentInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerDeploymentInfo = null;
+            if (parseNode.GetChildNode("conflictToken") is null) { _explicitNullValueConflictToken = default!; _explicitNullProperties?.Remove("conflictToken"); }
+            else if (parseNode.GetChildNode("conflictToken") is { } nullNodeConflictToken && nullNodeConflictToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConflictToken = null;
+            if (parseNode.GetChildNode("workerDeploymentInfo") is null) { _explicitNullValueWorkerDeploymentInfo = default!; _explicitNullProperties?.Remove("workerDeploymentInfo"); }
+            else if (parseNode.GetChildNode("workerDeploymentInfo") is { } nullNodeWorkerDeploymentInfo && nullNodeWorkerDeploymentInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerDeploymentInfo = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>This value is returned so that it can be optionally passed to APIs that write to the Worker Deployment state to ensure that the state did not change between this read and a future write.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConflictToken { get => _explicitNullValueConflictToken; set { _explicitNullValueConflictToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conflictToken"); else _explicitNullProperties?.Remove("conflictToken"); } }
+        public string? ConflictToken { get => _explicitNullValueConflictToken; set { _explicitNullValueConflictToken = value; AdditionalData?.Remove("conflictToken"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conflictToken"); else _explicitNullProperties?.Remove("conflictToken"); } }
         private string? _explicitNullValueConflictToken = default!;
 #nullable restore
 #else
-        public string ConflictToken { get => _explicitNullValueConflictToken; set { _explicitNullValueConflictToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conflictToken"); else _explicitNullProperties?.Remove("conflictToken"); } }
+        public string ConflictToken { get => _explicitNullValueConflictToken; set { _explicitNullValueConflictToken = value; AdditionalData?.Remove("conflictToken"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conflictToken"); else _explicitNullProperties?.Remove("conflictToken"); } }
         private string _explicitNullValueConflictToken = default!;
 #endif
         /// <summary>A Worker Deployment (Deployment, for short) represents all workers serving a shared set of Task Queues. Typically, a Deployment represents one service or application. A Deployment contains multiple Deployment Versions, each representing a different version of workers. (see documentation of WorkerDeploymentVersionInfo) Deployment records are created in Temporal server automatically when their first poller arrives to the server.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfo? WorkerDeploymentInfo { get => _explicitNullValueWorkerDeploymentInfo; set { _explicitNullValueWorkerDeploymentInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerDeploymentInfo"); else _explicitNullProperties?.Remove("workerDeploymentInfo"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfo? WorkerDeploymentInfo { get => _explicitNullValueWorkerDeploymentInfo; set { _explicitNullValueWorkerDeploymentInfo = value; AdditionalData?.Remove("workerDeploymentInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerDeploymentInfo"); else _explicitNullProperties?.Remove("workerDeploymentInfo"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfo? _explicitNullValueWorkerDeploymentInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfo WorkerDeploymentInfo { get => _explicitNullValueWorkerDeploymentInfo; set { _explicitNullValueWorkerDeploymentInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerDeploymentInfo"); else _explicitNullProperties?.Remove("workerDeploymentInfo"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfo WorkerDeploymentInfo { get => _explicitNullValueWorkerDeploymentInfo; set { _explicitNullValueWorkerDeploymentInfo = value; AdditionalData?.Remove("workerDeploymentInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerDeploymentInfo"); else _explicitNullProperties?.Remove("workerDeploymentInfo"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentInfo _explicitNullValueWorkerDeploymentInfo = default!;
 #endif
         /// <summary>

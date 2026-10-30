@@ -18,13 +18,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("rampPercentage") is { } nullNodeRampPercentage && nullNodeRampPercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RampPercentage = null;
+            if (parseNode.GetChildNode("rampPercentage") is null) { _explicitNullValueRampPercentage = default!; _explicitNullProperties?.Remove("rampPercentage"); }
+            else if (parseNode.GetChildNode("rampPercentage") is { } nullNodeRampPercentage && nullNodeRampPercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RampPercentage = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Acceptable range is [0,100).</summary>
-        public float? RampPercentage { get => _explicitNullValueRampPercentage; set { _explicitNullValueRampPercentage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rampPercentage"); else _explicitNullProperties?.Remove("rampPercentage"); } }
+        public float? RampPercentage { get => _explicitNullValueRampPercentage; set { _explicitNullValueRampPercentage = value; AdditionalData?.Remove("rampPercentage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rampPercentage"); else _explicitNullProperties?.Remove("rampPercentage"); } }
         private float? _explicitNullValueRampPercentage = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.BuildIdAssignmentRulePercentageRamp"/> and sets the default values.

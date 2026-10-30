@@ -17,29 +17,42 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("activeClusterName") is { } nullNodeActiveClusterName && nullNodeActiveClusterName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActiveClusterName = null;
-            if (parseNode.GetChildNode("clusters") is { } nullNodeClusters && nullNodeClusters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Clusters = null;
-            if (parseNode.GetChildNode("data") is { } nullNodeData && nullNodeData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Data = null;
-            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
-            if (parseNode.GetChildNode("historyArchivalState") is { } nullNodeHistoryArchivalState && nullNodeHistoryArchivalState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HistoryArchivalState = null;
-            if (parseNode.GetChildNode("historyArchivalUri") is { } nullNodeHistoryArchivalUri && nullNodeHistoryArchivalUri.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HistoryArchivalUri = null;
-            if (parseNode.GetChildNode("isGlobalNamespace") is { } nullNodeIsGlobalNamespace && nullNodeIsGlobalNamespace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsGlobalNamespace = null;
-            if (parseNode.GetChildNode("namespace") is { } nullNodeNamespace && nullNodeNamespace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Namespace = null;
-            if (parseNode.GetChildNode("ownerEmail") is { } nullNodeOwnerEmail && nullNodeOwnerEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OwnerEmail = null;
-            if (parseNode.GetChildNode("securityToken") is { } nullNodeSecurityToken && nullNodeSecurityToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecurityToken = null;
-            if (parseNode.GetChildNode("visibilityArchivalState") is { } nullNodeVisibilityArchivalState && nullNodeVisibilityArchivalState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VisibilityArchivalState = null;
-            if (parseNode.GetChildNode("visibilityArchivalUri") is { } nullNodeVisibilityArchivalUri && nullNodeVisibilityArchivalUri.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VisibilityArchivalUri = null;
-            if (parseNode.GetChildNode("workflowExecutionRetentionPeriod") is { } nullNodeWorkflowExecutionRetentionPeriod && nullNodeWorkflowExecutionRetentionPeriod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowExecutionRetentionPeriod = null;
+            if (parseNode.GetChildNode("activeClusterName") is null) { _explicitNullValueActiveClusterName = default!; _explicitNullProperties?.Remove("activeClusterName"); }
+            else if (parseNode.GetChildNode("activeClusterName") is { } nullNodeActiveClusterName && nullNodeActiveClusterName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActiveClusterName = null;
+            if (parseNode.GetChildNode("clusters") is null) { _explicitNullValueClusters = default!; _explicitNullProperties?.Remove("clusters"); }
+            else if (parseNode.GetChildNode("clusters") is { } nullNodeClusters && nullNodeClusters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Clusters = null;
+            if (parseNode.GetChildNode("data") is null) { _explicitNullValueData = default!; _explicitNullProperties?.Remove("data"); }
+            else if (parseNode.GetChildNode("data") is { } nullNodeData && nullNodeData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Data = null;
+            if (parseNode.GetChildNode("description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("description"); }
+            else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("historyArchivalState") is null) { _explicitNullValueHistoryArchivalState = default!; _explicitNullProperties?.Remove("historyArchivalState"); }
+            else if (parseNode.GetChildNode("historyArchivalState") is { } nullNodeHistoryArchivalState && nullNodeHistoryArchivalState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HistoryArchivalState = null;
+            if (parseNode.GetChildNode("historyArchivalUri") is null) { _explicitNullValueHistoryArchivalUri = default!; _explicitNullProperties?.Remove("historyArchivalUri"); }
+            else if (parseNode.GetChildNode("historyArchivalUri") is { } nullNodeHistoryArchivalUri && nullNodeHistoryArchivalUri.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HistoryArchivalUri = null;
+            if (parseNode.GetChildNode("isGlobalNamespace") is null) { _explicitNullValueIsGlobalNamespace = default!; _explicitNullProperties?.Remove("isGlobalNamespace"); }
+            else if (parseNode.GetChildNode("isGlobalNamespace") is { } nullNodeIsGlobalNamespace && nullNodeIsGlobalNamespace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsGlobalNamespace = null;
+            if (parseNode.GetChildNode("namespace") is null) { _explicitNullValueNamespace = default!; _explicitNullProperties?.Remove("namespace"); }
+            else if (parseNode.GetChildNode("namespace") is { } nullNodeNamespace && nullNodeNamespace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Namespace = null;
+            if (parseNode.GetChildNode("ownerEmail") is null) { _explicitNullValueOwnerEmail = default!; _explicitNullProperties?.Remove("ownerEmail"); }
+            else if (parseNode.GetChildNode("ownerEmail") is { } nullNodeOwnerEmail && nullNodeOwnerEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OwnerEmail = null;
+            if (parseNode.GetChildNode("securityToken") is null) { _explicitNullValueSecurityToken = default!; _explicitNullProperties?.Remove("securityToken"); }
+            else if (parseNode.GetChildNode("securityToken") is { } nullNodeSecurityToken && nullNodeSecurityToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecurityToken = null;
+            if (parseNode.GetChildNode("visibilityArchivalState") is null) { _explicitNullValueVisibilityArchivalState = default!; _explicitNullProperties?.Remove("visibilityArchivalState"); }
+            else if (parseNode.GetChildNode("visibilityArchivalState") is { } nullNodeVisibilityArchivalState && nullNodeVisibilityArchivalState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VisibilityArchivalState = null;
+            if (parseNode.GetChildNode("visibilityArchivalUri") is null) { _explicitNullValueVisibilityArchivalUri = default!; _explicitNullProperties?.Remove("visibilityArchivalUri"); }
+            else if (parseNode.GetChildNode("visibilityArchivalUri") is { } nullNodeVisibilityArchivalUri && nullNodeVisibilityArchivalUri.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VisibilityArchivalUri = null;
+            if (parseNode.GetChildNode("workflowExecutionRetentionPeriod") is null) { _explicitNullValueWorkflowExecutionRetentionPeriod = default!; _explicitNullProperties?.Remove("workflowExecutionRetentionPeriod"); }
+            else if (parseNode.GetChildNode("workflowExecutionRetentionPeriod") is { } nullNodeWorkflowExecutionRetentionPeriod && nullNodeWorkflowExecutionRetentionPeriod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowExecutionRetentionPeriod = null;
         }
 
         /// <summary>The activeClusterName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ActiveClusterName { get => _explicitNullValueActiveClusterName; set { _explicitNullValueActiveClusterName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activeClusterName"); else _explicitNullProperties?.Remove("activeClusterName"); } }
+        public string? ActiveClusterName { get => _explicitNullValueActiveClusterName; set { _explicitNullValueActiveClusterName = value; AdditionalData?.Remove("activeClusterName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activeClusterName"); else _explicitNullProperties?.Remove("activeClusterName"); } }
         private string? _explicitNullValueActiveClusterName = default!;
 #nullable restore
 #else
-        public string ActiveClusterName { get => _explicitNullValueActiveClusterName; set { _explicitNullValueActiveClusterName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activeClusterName"); else _explicitNullProperties?.Remove("activeClusterName"); } }
+        public string ActiveClusterName { get => _explicitNullValueActiveClusterName; set { _explicitNullValueActiveClusterName = value; AdditionalData?.Remove("activeClusterName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activeClusterName"); else _explicitNullProperties?.Remove("activeClusterName"); } }
         private string _explicitNullValueActiveClusterName = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -47,100 +60,100 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The clusters property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.ClusterReplicationConfig>? Clusters { get => _explicitNullValueClusters; set { _explicitNullValueClusters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clusters"); else _explicitNullProperties?.Remove("clusters"); } }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.ClusterReplicationConfig>? Clusters { get => _explicitNullValueClusters; set { _explicitNullValueClusters = value; AdditionalData?.Remove("clusters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clusters"); else _explicitNullProperties?.Remove("clusters"); } }
         private List<global::Soenneker.Temporal.OpenApiClient.Models.ClusterReplicationConfig>? _explicitNullValueClusters = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.ClusterReplicationConfig> Clusters { get => _explicitNullValueClusters; set { _explicitNullValueClusters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clusters"); else _explicitNullProperties?.Remove("clusters"); } }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.ClusterReplicationConfig> Clusters { get => _explicitNullValueClusters; set { _explicitNullValueClusters = value; AdditionalData?.Remove("clusters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clusters"); else _explicitNullProperties?.Remove("clusters"); } }
         private List<global::Soenneker.Temporal.OpenApiClient.Models.ClusterReplicationConfig> _explicitNullValueClusters = default!;
 #endif
         /// <summary>A key-value map for any customized purpose.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestDataProperty? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestDataProperty? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestDataProperty? _explicitNullValueData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestDataProperty Data { get => _explicitNullValueData; set { _explicitNullValueData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestDataProperty Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestDataProperty _explicitNullValueData = default!;
 #endif
         /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>If unspecified (ARCHIVAL_STATE_UNSPECIFIED) then default server configuration is used.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestHistoryArchivalState? HistoryArchivalState { get => _explicitNullValueHistoryArchivalState; set { _explicitNullValueHistoryArchivalState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("historyArchivalState"); else _explicitNullProperties?.Remove("historyArchivalState"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestHistoryArchivalState? HistoryArchivalState { get => _explicitNullValueHistoryArchivalState; set { _explicitNullValueHistoryArchivalState = value; AdditionalData?.Remove("historyArchivalState"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("historyArchivalState"); else _explicitNullProperties?.Remove("historyArchivalState"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestHistoryArchivalState? _explicitNullValueHistoryArchivalState = default!;
         /// <summary>The historyArchivalUri property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HistoryArchivalUri { get => _explicitNullValueHistoryArchivalUri; set { _explicitNullValueHistoryArchivalUri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("historyArchivalUri"); else _explicitNullProperties?.Remove("historyArchivalUri"); } }
+        public string? HistoryArchivalUri { get => _explicitNullValueHistoryArchivalUri; set { _explicitNullValueHistoryArchivalUri = value; AdditionalData?.Remove("historyArchivalUri"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("historyArchivalUri"); else _explicitNullProperties?.Remove("historyArchivalUri"); } }
         private string? _explicitNullValueHistoryArchivalUri = default!;
 #nullable restore
 #else
-        public string HistoryArchivalUri { get => _explicitNullValueHistoryArchivalUri; set { _explicitNullValueHistoryArchivalUri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("historyArchivalUri"); else _explicitNullProperties?.Remove("historyArchivalUri"); } }
+        public string HistoryArchivalUri { get => _explicitNullValueHistoryArchivalUri; set { _explicitNullValueHistoryArchivalUri = value; AdditionalData?.Remove("historyArchivalUri"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("historyArchivalUri"); else _explicitNullProperties?.Remove("historyArchivalUri"); } }
         private string _explicitNullValueHistoryArchivalUri = default!;
 #endif
         /// <summary>The isGlobalNamespace property</summary>
-        public bool? IsGlobalNamespace { get => _explicitNullValueIsGlobalNamespace; set { _explicitNullValueIsGlobalNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isGlobalNamespace"); else _explicitNullProperties?.Remove("isGlobalNamespace"); } }
+        public bool? IsGlobalNamespace { get => _explicitNullValueIsGlobalNamespace; set { _explicitNullValueIsGlobalNamespace = value; AdditionalData?.Remove("isGlobalNamespace"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isGlobalNamespace"); else _explicitNullProperties?.Remove("isGlobalNamespace"); } }
         private bool? _explicitNullValueIsGlobalNamespace = default!;
         /// <summary>The namespace property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Namespace { get => _explicitNullValueNamespace; set { _explicitNullValueNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace"); else _explicitNullProperties?.Remove("namespace"); } }
+        public string? Namespace { get => _explicitNullValueNamespace; set { _explicitNullValueNamespace = value; AdditionalData?.Remove("namespace"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace"); else _explicitNullProperties?.Remove("namespace"); } }
         private string? _explicitNullValueNamespace = default!;
 #nullable restore
 #else
-        public string Namespace { get => _explicitNullValueNamespace; set { _explicitNullValueNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace"); else _explicitNullProperties?.Remove("namespace"); } }
+        public string Namespace { get => _explicitNullValueNamespace; set { _explicitNullValueNamespace = value; AdditionalData?.Remove("namespace"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace"); else _explicitNullProperties?.Remove("namespace"); } }
         private string _explicitNullValueNamespace = default!;
 #endif
         /// <summary>The ownerEmail property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OwnerEmail { get => _explicitNullValueOwnerEmail; set { _explicitNullValueOwnerEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownerEmail"); else _explicitNullProperties?.Remove("ownerEmail"); } }
+        public string? OwnerEmail { get => _explicitNullValueOwnerEmail; set { _explicitNullValueOwnerEmail = value; AdditionalData?.Remove("ownerEmail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownerEmail"); else _explicitNullProperties?.Remove("ownerEmail"); } }
         private string? _explicitNullValueOwnerEmail = default!;
 #nullable restore
 #else
-        public string OwnerEmail { get => _explicitNullValueOwnerEmail; set { _explicitNullValueOwnerEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownerEmail"); else _explicitNullProperties?.Remove("ownerEmail"); } }
+        public string OwnerEmail { get => _explicitNullValueOwnerEmail; set { _explicitNullValueOwnerEmail = value; AdditionalData?.Remove("ownerEmail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownerEmail"); else _explicitNullProperties?.Remove("ownerEmail"); } }
         private string _explicitNullValueOwnerEmail = default!;
 #endif
         /// <summary>The securityToken property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SecurityToken { get => _explicitNullValueSecurityToken; set { _explicitNullValueSecurityToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("securityToken"); else _explicitNullProperties?.Remove("securityToken"); } }
+        public string? SecurityToken { get => _explicitNullValueSecurityToken; set { _explicitNullValueSecurityToken = value; AdditionalData?.Remove("securityToken"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("securityToken"); else _explicitNullProperties?.Remove("securityToken"); } }
         private string? _explicitNullValueSecurityToken = default!;
 #nullable restore
 #else
-        public string SecurityToken { get => _explicitNullValueSecurityToken; set { _explicitNullValueSecurityToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("securityToken"); else _explicitNullProperties?.Remove("securityToken"); } }
+        public string SecurityToken { get => _explicitNullValueSecurityToken; set { _explicitNullValueSecurityToken = value; AdditionalData?.Remove("securityToken"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("securityToken"); else _explicitNullProperties?.Remove("securityToken"); } }
         private string _explicitNullValueSecurityToken = default!;
 #endif
         /// <summary>If unspecified (ARCHIVAL_STATE_UNSPECIFIED) then default server configuration is used.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestVisibilityArchivalState? VisibilityArchivalState { get => _explicitNullValueVisibilityArchivalState; set { _explicitNullValueVisibilityArchivalState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visibilityArchivalState"); else _explicitNullProperties?.Remove("visibilityArchivalState"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestVisibilityArchivalState? VisibilityArchivalState { get => _explicitNullValueVisibilityArchivalState; set { _explicitNullValueVisibilityArchivalState = value; AdditionalData?.Remove("visibilityArchivalState"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visibilityArchivalState"); else _explicitNullProperties?.Remove("visibilityArchivalState"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestVisibilityArchivalState? _explicitNullValueVisibilityArchivalState = default!;
         /// <summary>The visibilityArchivalUri property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VisibilityArchivalUri { get => _explicitNullValueVisibilityArchivalUri; set { _explicitNullValueVisibilityArchivalUri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visibilityArchivalUri"); else _explicitNullProperties?.Remove("visibilityArchivalUri"); } }
+        public string? VisibilityArchivalUri { get => _explicitNullValueVisibilityArchivalUri; set { _explicitNullValueVisibilityArchivalUri = value; AdditionalData?.Remove("visibilityArchivalUri"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visibilityArchivalUri"); else _explicitNullProperties?.Remove("visibilityArchivalUri"); } }
         private string? _explicitNullValueVisibilityArchivalUri = default!;
 #nullable restore
 #else
-        public string VisibilityArchivalUri { get => _explicitNullValueVisibilityArchivalUri; set { _explicitNullValueVisibilityArchivalUri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visibilityArchivalUri"); else _explicitNullProperties?.Remove("visibilityArchivalUri"); } }
+        public string VisibilityArchivalUri { get => _explicitNullValueVisibilityArchivalUri; set { _explicitNullValueVisibilityArchivalUri = value; AdditionalData?.Remove("visibilityArchivalUri"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visibilityArchivalUri"); else _explicitNullProperties?.Remove("visibilityArchivalUri"); } }
         private string _explicitNullValueVisibilityArchivalUri = default!;
 #endif
         /// <summary>The workflowExecutionRetentionPeriod property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkflowExecutionRetentionPeriod { get => _explicitNullValueWorkflowExecutionRetentionPeriod; set { _explicitNullValueWorkflowExecutionRetentionPeriod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionRetentionPeriod"); else _explicitNullProperties?.Remove("workflowExecutionRetentionPeriod"); } }
+        public string? WorkflowExecutionRetentionPeriod { get => _explicitNullValueWorkflowExecutionRetentionPeriod; set { _explicitNullValueWorkflowExecutionRetentionPeriod = value; AdditionalData?.Remove("workflowExecutionRetentionPeriod"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionRetentionPeriod"); else _explicitNullProperties?.Remove("workflowExecutionRetentionPeriod"); } }
         private string? _explicitNullValueWorkflowExecutionRetentionPeriod = default!;
 #nullable restore
 #else
-        public string WorkflowExecutionRetentionPeriod { get => _explicitNullValueWorkflowExecutionRetentionPeriod; set { _explicitNullValueWorkflowExecutionRetentionPeriod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionRetentionPeriod"); else _explicitNullProperties?.Remove("workflowExecutionRetentionPeriod"); } }
+        public string WorkflowExecutionRetentionPeriod { get => _explicitNullValueWorkflowExecutionRetentionPeriod; set { _explicitNullValueWorkflowExecutionRetentionPeriod = value; AdditionalData?.Remove("workflowExecutionRetentionPeriod"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionRetentionPeriod"); else _explicitNullProperties?.Remove("workflowExecutionRetentionPeriod"); } }
         private string _explicitNullValueWorkflowExecutionRetentionPeriod = default!;
 #endif
         /// <summary>
@@ -172,13 +185,13 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "clusters", n => { Clusters = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.ClusterReplicationConfig>(global::Soenneker.Temporal.OpenApiClient.Models.ClusterReplicationConfig.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "data", n => { Data = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestDataProperty>(global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestDataProperty.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "historyArchivalState", n => { HistoryArchivalState = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestHistoryArchivalState>(); } },
+                { "historyArchivalState", n => { var parsed = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestHistoryArchivalState>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueHistoryArchivalState = default; _explicitNullProperties?.Remove("historyArchivalState"); AdditionalData["historyArchivalState"] = unknown; } else { HistoryArchivalState = parsed; AdditionalData.Remove("historyArchivalState"); } } },
                 { "historyArchivalUri", n => { HistoryArchivalUri = n.GetStringValue(); } },
                 { "isGlobalNamespace", n => { IsGlobalNamespace = n.GetBoolValue(); } },
                 { "namespace", n => { Namespace = n.GetStringValue(); } },
                 { "ownerEmail", n => { OwnerEmail = n.GetStringValue(); } },
                 { "securityToken", n => { SecurityToken = n.GetStringValue(); } },
-                { "visibilityArchivalState", n => { VisibilityArchivalState = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestVisibilityArchivalState>(); } },
+                { "visibilityArchivalState", n => { var parsed = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.RegisterNamespaceRequestVisibilityArchivalState>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueVisibilityArchivalState = default; _explicitNullProperties?.Remove("visibilityArchivalState"); AdditionalData["visibilityArchivalState"] = unknown; } else { VisibilityArchivalState = parsed; AdditionalData.Remove("visibilityArchivalState"); } } },
                 { "visibilityArchivalUri", n => { VisibilityArchivalUri = n.GetStringValue(); } },
                 { "workflowExecutionRetentionPeriod", n => { WorkflowExecutionRetentionPeriod = n.GetStringValue(); } },
             };

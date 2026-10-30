@@ -18,9 +18,12 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("assignmentRules") is { } nullNodeAssignmentRules && nullNodeAssignmentRules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssignmentRules = null;
-            if (parseNode.GetChildNode("compatibleRedirectRules") is { } nullNodeCompatibleRedirectRules && nullNodeCompatibleRedirectRules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompatibleRedirectRules = null;
-            if (parseNode.GetChildNode("conflictToken") is { } nullNodeConflictToken && nullNodeConflictToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConflictToken = null;
+            if (parseNode.GetChildNode("assignmentRules") is null) { _explicitNullValueAssignmentRules = default!; _explicitNullProperties?.Remove("assignmentRules"); }
+            else if (parseNode.GetChildNode("assignmentRules") is { } nullNodeAssignmentRules && nullNodeAssignmentRules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssignmentRules = null;
+            if (parseNode.GetChildNode("compatibleRedirectRules") is null) { _explicitNullValueCompatibleRedirectRules = default!; _explicitNullProperties?.Remove("compatibleRedirectRules"); }
+            else if (parseNode.GetChildNode("compatibleRedirectRules") is { } nullNodeCompatibleRedirectRules && nullNodeCompatibleRedirectRules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompatibleRedirectRules = null;
+            if (parseNode.GetChildNode("conflictToken") is null) { _explicitNullValueConflictToken = default!; _explicitNullProperties?.Remove("conflictToken"); }
+            else if (parseNode.GetChildNode("conflictToken") is { } nullNodeConflictToken && nullNodeConflictToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConflictToken = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The assignmentRules property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.TimestampedBuildIdAssignmentRule>? AssignmentRules { get => _explicitNullValueAssignmentRules; set { _explicitNullValueAssignmentRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignmentRules"); else _explicitNullProperties?.Remove("assignmentRules"); } }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.TimestampedBuildIdAssignmentRule>? AssignmentRules { get => _explicitNullValueAssignmentRules; set { _explicitNullValueAssignmentRules = value; AdditionalData?.Remove("assignmentRules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignmentRules"); else _explicitNullProperties?.Remove("assignmentRules"); } }
         private List<global::Soenneker.Temporal.OpenApiClient.Models.TimestampedBuildIdAssignmentRule>? _explicitNullValueAssignmentRules = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.TimestampedBuildIdAssignmentRule> AssignmentRules { get => _explicitNullValueAssignmentRules; set { _explicitNullValueAssignmentRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignmentRules"); else _explicitNullProperties?.Remove("assignmentRules"); } }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.TimestampedBuildIdAssignmentRule> AssignmentRules { get => _explicitNullValueAssignmentRules; set { _explicitNullValueAssignmentRules = value; AdditionalData?.Remove("assignmentRules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignmentRules"); else _explicitNullProperties?.Remove("assignmentRules"); } }
         private List<global::Soenneker.Temporal.OpenApiClient.Models.TimestampedBuildIdAssignmentRule> _explicitNullValueAssignmentRules = default!;
 #endif
         /// <summary>The compatibleRedirectRules property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.TimestampedCompatibleBuildIdRedirectRule>? CompatibleRedirectRules { get => _explicitNullValueCompatibleRedirectRules; set { _explicitNullValueCompatibleRedirectRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("compatibleRedirectRules"); else _explicitNullProperties?.Remove("compatibleRedirectRules"); } }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.TimestampedCompatibleBuildIdRedirectRule>? CompatibleRedirectRules { get => _explicitNullValueCompatibleRedirectRules; set { _explicitNullValueCompatibleRedirectRules = value; AdditionalData?.Remove("compatibleRedirectRules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("compatibleRedirectRules"); else _explicitNullProperties?.Remove("compatibleRedirectRules"); } }
         private List<global::Soenneker.Temporal.OpenApiClient.Models.TimestampedCompatibleBuildIdRedirectRule>? _explicitNullValueCompatibleRedirectRules = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.TimestampedCompatibleBuildIdRedirectRule> CompatibleRedirectRules { get => _explicitNullValueCompatibleRedirectRules; set { _explicitNullValueCompatibleRedirectRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("compatibleRedirectRules"); else _explicitNullProperties?.Remove("compatibleRedirectRules"); } }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.TimestampedCompatibleBuildIdRedirectRule> CompatibleRedirectRules { get => _explicitNullValueCompatibleRedirectRules; set { _explicitNullValueCompatibleRedirectRules = value; AdditionalData?.Remove("compatibleRedirectRules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("compatibleRedirectRules"); else _explicitNullProperties?.Remove("compatibleRedirectRules"); } }
         private List<global::Soenneker.Temporal.OpenApiClient.Models.TimestampedCompatibleBuildIdRedirectRule> _explicitNullValueCompatibleRedirectRules = default!;
 #endif
         /// <summary>This value can be passed back to UpdateWorkerVersioningRulesRequest to ensure that the rules were not modified between this List and the Update, which could lead to lost updates and other confusion.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConflictToken { get => _explicitNullValueConflictToken; set { _explicitNullValueConflictToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conflictToken"); else _explicitNullProperties?.Remove("conflictToken"); } }
+        public string? ConflictToken { get => _explicitNullValueConflictToken; set { _explicitNullValueConflictToken = value; AdditionalData?.Remove("conflictToken"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conflictToken"); else _explicitNullProperties?.Remove("conflictToken"); } }
         private string? _explicitNullValueConflictToken = default!;
 #nullable restore
 #else
-        public string ConflictToken { get => _explicitNullValueConflictToken; set { _explicitNullValueConflictToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conflictToken"); else _explicitNullProperties?.Remove("conflictToken"); } }
+        public string ConflictToken { get => _explicitNullValueConflictToken; set { _explicitNullValueConflictToken = value; AdditionalData?.Remove("conflictToken"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conflictToken"); else _explicitNullProperties?.Remove("conflictToken"); } }
         private string _explicitNullValueConflictToken = default!;
 #endif
         /// <summary>

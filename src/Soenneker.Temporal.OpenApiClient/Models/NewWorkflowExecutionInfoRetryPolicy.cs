@@ -18,49 +18,54 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("backoffCoefficient") is { } nullNodeBackoffCoefficient && nullNodeBackoffCoefficient.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BackoffCoefficient = null;
-            if (parseNode.GetChildNode("initialInterval") is { } nullNodeInitialInterval && nullNodeInitialInterval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InitialInterval = null;
-            if (parseNode.GetChildNode("maximumAttempts") is { } nullNodeMaximumAttempts && nullNodeMaximumAttempts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaximumAttempts = null;
-            if (parseNode.GetChildNode("maximumInterval") is { } nullNodeMaximumInterval && nullNodeMaximumInterval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaximumInterval = null;
-            if (parseNode.GetChildNode("nonRetryableErrorTypes") is { } nullNodeNonRetryableErrorTypes && nullNodeNonRetryableErrorTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NonRetryableErrorTypes = null;
+            if (parseNode.GetChildNode("backoffCoefficient") is null) { _explicitNullValueBackoffCoefficient = default!; _explicitNullProperties?.Remove("backoffCoefficient"); }
+            else if (parseNode.GetChildNode("backoffCoefficient") is { } nullNodeBackoffCoefficient && nullNodeBackoffCoefficient.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BackoffCoefficient = null;
+            if (parseNode.GetChildNode("initialInterval") is null) { _explicitNullValueInitialInterval = default!; _explicitNullProperties?.Remove("initialInterval"); }
+            else if (parseNode.GetChildNode("initialInterval") is { } nullNodeInitialInterval && nullNodeInitialInterval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InitialInterval = null;
+            if (parseNode.GetChildNode("maximumAttempts") is null) { _explicitNullValueMaximumAttempts = default!; _explicitNullProperties?.Remove("maximumAttempts"); }
+            else if (parseNode.GetChildNode("maximumAttempts") is { } nullNodeMaximumAttempts && nullNodeMaximumAttempts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaximumAttempts = null;
+            if (parseNode.GetChildNode("maximumInterval") is null) { _explicitNullValueMaximumInterval = default!; _explicitNullProperties?.Remove("maximumInterval"); }
+            else if (parseNode.GetChildNode("maximumInterval") is { } nullNodeMaximumInterval && nullNodeMaximumInterval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaximumInterval = null;
+            if (parseNode.GetChildNode("nonRetryableErrorTypes") is null) { _explicitNullValueNonRetryableErrorTypes = default!; _explicitNullProperties?.Remove("nonRetryableErrorTypes"); }
+            else if (parseNode.GetChildNode("nonRetryableErrorTypes") is { } nullNodeNonRetryableErrorTypes && nullNodeNonRetryableErrorTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NonRetryableErrorTypes = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Coefficient used to calculate the next retry interval. The next retry interval is previous interval multiplied by the coefficient. Must be 1 or larger.</summary>
-        public double? BackoffCoefficient { get => _explicitNullValueBackoffCoefficient; set { _explicitNullValueBackoffCoefficient = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("backoffCoefficient"); else _explicitNullProperties?.Remove("backoffCoefficient"); } }
+        public double? BackoffCoefficient { get => _explicitNullValueBackoffCoefficient; set { _explicitNullValueBackoffCoefficient = value; AdditionalData?.Remove("backoffCoefficient"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("backoffCoefficient"); else _explicitNullProperties?.Remove("backoffCoefficient"); } }
         private double? _explicitNullValueBackoffCoefficient = default!;
         /// <summary>Interval of the first retry. If retryBackoffCoefficient is 1.0 then it is used for all retries.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InitialInterval { get => _explicitNullValueInitialInterval; set { _explicitNullValueInitialInterval = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initialInterval"); else _explicitNullProperties?.Remove("initialInterval"); } }
+        public string? InitialInterval { get => _explicitNullValueInitialInterval; set { _explicitNullValueInitialInterval = value; AdditionalData?.Remove("initialInterval"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initialInterval"); else _explicitNullProperties?.Remove("initialInterval"); } }
         private string? _explicitNullValueInitialInterval = default!;
 #nullable restore
 #else
-        public string InitialInterval { get => _explicitNullValueInitialInterval; set { _explicitNullValueInitialInterval = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initialInterval"); else _explicitNullProperties?.Remove("initialInterval"); } }
+        public string InitialInterval { get => _explicitNullValueInitialInterval; set { _explicitNullValueInitialInterval = value; AdditionalData?.Remove("initialInterval"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initialInterval"); else _explicitNullProperties?.Remove("initialInterval"); } }
         private string _explicitNullValueInitialInterval = default!;
 #endif
         /// <summary>Maximum number of attempts. When exceeded the retries stop even if not expired yet. 1 disables retries. 0 means unlimited (up to the timeouts)</summary>
-        public int? MaximumAttempts { get => _explicitNullValueMaximumAttempts; set { _explicitNullValueMaximumAttempts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maximumAttempts"); else _explicitNullProperties?.Remove("maximumAttempts"); } }
+        public int? MaximumAttempts { get => _explicitNullValueMaximumAttempts; set { _explicitNullValueMaximumAttempts = value; AdditionalData?.Remove("maximumAttempts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maximumAttempts"); else _explicitNullProperties?.Remove("maximumAttempts"); } }
         private int? _explicitNullValueMaximumAttempts = default!;
         /// <summary>Maximum interval between retries. Exponential backoff leads to interval increase. This value is the cap of the increase. Default is 100x of the initial interval.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MaximumInterval { get => _explicitNullValueMaximumInterval; set { _explicitNullValueMaximumInterval = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maximumInterval"); else _explicitNullProperties?.Remove("maximumInterval"); } }
+        public string? MaximumInterval { get => _explicitNullValueMaximumInterval; set { _explicitNullValueMaximumInterval = value; AdditionalData?.Remove("maximumInterval"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maximumInterval"); else _explicitNullProperties?.Remove("maximumInterval"); } }
         private string? _explicitNullValueMaximumInterval = default!;
 #nullable restore
 #else
-        public string MaximumInterval { get => _explicitNullValueMaximumInterval; set { _explicitNullValueMaximumInterval = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maximumInterval"); else _explicitNullProperties?.Remove("maximumInterval"); } }
+        public string MaximumInterval { get => _explicitNullValueMaximumInterval; set { _explicitNullValueMaximumInterval = value; AdditionalData?.Remove("maximumInterval"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maximumInterval"); else _explicitNullProperties?.Remove("maximumInterval"); } }
         private string _explicitNullValueMaximumInterval = default!;
 #endif
         /// <summary>Non-Retryable errors types. Will stop retrying if the error type matches this list. Note that this is not a substring match, the error *type* (not message) must match exactly.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? NonRetryableErrorTypes { get => _explicitNullValueNonRetryableErrorTypes; set { _explicitNullValueNonRetryableErrorTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nonRetryableErrorTypes"); else _explicitNullProperties?.Remove("nonRetryableErrorTypes"); } }
+        public List<string>? NonRetryableErrorTypes { get => _explicitNullValueNonRetryableErrorTypes; set { _explicitNullValueNonRetryableErrorTypes = value; AdditionalData?.Remove("nonRetryableErrorTypes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nonRetryableErrorTypes"); else _explicitNullProperties?.Remove("nonRetryableErrorTypes"); } }
         private List<string>? _explicitNullValueNonRetryableErrorTypes = default!;
 #nullable restore
 #else
-        public List<string> NonRetryableErrorTypes { get => _explicitNullValueNonRetryableErrorTypes; set { _explicitNullValueNonRetryableErrorTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nonRetryableErrorTypes"); else _explicitNullProperties?.Remove("nonRetryableErrorTypes"); } }
+        public List<string> NonRetryableErrorTypes { get => _explicitNullValueNonRetryableErrorTypes; set { _explicitNullValueNonRetryableErrorTypes = value; AdditionalData?.Remove("nonRetryableErrorTypes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nonRetryableErrorTypes"); else _explicitNullProperties?.Remove("nonRetryableErrorTypes"); } }
         private List<string> _explicitNullValueNonRetryableErrorTypes = default!;
 #endif
         /// <summary>

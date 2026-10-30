@@ -17,9 +17,12 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("startToFireTimeout") is { } nullNodeStartToFireTimeout && nullNodeStartToFireTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartToFireTimeout = null;
-            if (parseNode.GetChildNode("timerId") is { } nullNodeTimerId && nullNodeTimerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimerId = null;
-            if (parseNode.GetChildNode("workflowTaskCompletedEventId") is { } nullNodeWorkflowTaskCompletedEventId && nullNodeWorkflowTaskCompletedEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowTaskCompletedEventId = null;
+            if (parseNode.GetChildNode("startToFireTimeout") is null) { _explicitNullValueStartToFireTimeout = default!; _explicitNullProperties?.Remove("startToFireTimeout"); }
+            else if (parseNode.GetChildNode("startToFireTimeout") is { } nullNodeStartToFireTimeout && nullNodeStartToFireTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartToFireTimeout = null;
+            if (parseNode.GetChildNode("timerId") is null) { _explicitNullValueTimerId = default!; _explicitNullProperties?.Remove("timerId"); }
+            else if (parseNode.GetChildNode("timerId") is { } nullNodeTimerId && nullNodeTimerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimerId = null;
+            if (parseNode.GetChildNode("workflowTaskCompletedEventId") is null) { _explicitNullValueWorkflowTaskCompletedEventId = default!; _explicitNullProperties?.Remove("workflowTaskCompletedEventId"); }
+            else if (parseNode.GetChildNode("workflowTaskCompletedEventId") is { } nullNodeWorkflowTaskCompletedEventId && nullNodeWorkflowTaskCompletedEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowTaskCompletedEventId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>How long until this timer fires (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: &quot;to&quot; is used to indicate interval. --)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartToFireTimeout { get => _explicitNullValueStartToFireTimeout; set { _explicitNullValueStartToFireTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startToFireTimeout"); else _explicitNullProperties?.Remove("startToFireTimeout"); } }
+        public string? StartToFireTimeout { get => _explicitNullValueStartToFireTimeout; set { _explicitNullValueStartToFireTimeout = value; AdditionalData?.Remove("startToFireTimeout"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startToFireTimeout"); else _explicitNullProperties?.Remove("startToFireTimeout"); } }
         private string? _explicitNullValueStartToFireTimeout = default!;
 #nullable restore
 #else
-        public string StartToFireTimeout { get => _explicitNullValueStartToFireTimeout; set { _explicitNullValueStartToFireTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startToFireTimeout"); else _explicitNullProperties?.Remove("startToFireTimeout"); } }
+        public string StartToFireTimeout { get => _explicitNullValueStartToFireTimeout; set { _explicitNullValueStartToFireTimeout = value; AdditionalData?.Remove("startToFireTimeout"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startToFireTimeout"); else _explicitNullProperties?.Remove("startToFireTimeout"); } }
         private string _explicitNullValueStartToFireTimeout = default!;
 #endif
         /// <summary>The worker/user assigned id for this timer</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TimerId { get => _explicitNullValueTimerId; set { _explicitNullValueTimerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timerId"); else _explicitNullProperties?.Remove("timerId"); } }
+        public string? TimerId { get => _explicitNullValueTimerId; set { _explicitNullValueTimerId = value; AdditionalData?.Remove("timerId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timerId"); else _explicitNullProperties?.Remove("timerId"); } }
         private string? _explicitNullValueTimerId = default!;
 #nullable restore
 #else
-        public string TimerId { get => _explicitNullValueTimerId; set { _explicitNullValueTimerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timerId"); else _explicitNullProperties?.Remove("timerId"); } }
+        public string TimerId { get => _explicitNullValueTimerId; set { _explicitNullValueTimerId = value; AdditionalData?.Remove("timerId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timerId"); else _explicitNullProperties?.Remove("timerId"); } }
         private string _explicitNullValueTimerId = default!;
 #endif
         /// <summary>The `WORKFLOW_TASK_COMPLETED` event which this command was reported with</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkflowTaskCompletedEventId { get => _explicitNullValueWorkflowTaskCompletedEventId; set { _explicitNullValueWorkflowTaskCompletedEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowTaskCompletedEventId"); else _explicitNullProperties?.Remove("workflowTaskCompletedEventId"); } }
+        public string? WorkflowTaskCompletedEventId { get => _explicitNullValueWorkflowTaskCompletedEventId; set { _explicitNullValueWorkflowTaskCompletedEventId = value; AdditionalData?.Remove("workflowTaskCompletedEventId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowTaskCompletedEventId"); else _explicitNullProperties?.Remove("workflowTaskCompletedEventId"); } }
         private string? _explicitNullValueWorkflowTaskCompletedEventId = default!;
 #nullable restore
 #else
-        public string WorkflowTaskCompletedEventId { get => _explicitNullValueWorkflowTaskCompletedEventId; set { _explicitNullValueWorkflowTaskCompletedEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowTaskCompletedEventId"); else _explicitNullProperties?.Remove("workflowTaskCompletedEventId"); } }
+        public string WorkflowTaskCompletedEventId { get => _explicitNullValueWorkflowTaskCompletedEventId; set { _explicitNullValueWorkflowTaskCompletedEventId = value; AdditionalData?.Remove("workflowTaskCompletedEventId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowTaskCompletedEventId"); else _explicitNullProperties?.Remove("workflowTaskCompletedEventId"); } }
         private string _explicitNullValueWorkflowTaskCompletedEventId = default!;
 #endif
         /// <summary>

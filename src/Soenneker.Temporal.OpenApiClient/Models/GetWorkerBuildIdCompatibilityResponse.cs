@@ -18,7 +18,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("majorVersionSets") is { } nullNodeMajorVersionSets && nullNodeMajorVersionSets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MajorVersionSets = null;
+            if (parseNode.GetChildNode("majorVersionSets") is null) { _explicitNullValueMajorVersionSets = default!; _explicitNullProperties?.Remove("majorVersionSets"); }
+            else if (parseNode.GetChildNode("majorVersionSets") is { } nullNodeMajorVersionSets && nullNodeMajorVersionSets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MajorVersionSets = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Major version sets, in order from oldest to newest. The last element of the list will always be the current default major version. IE: New workflows will target the most recent version in that version set. There may be fewer sets returned than exist, if the request chose to limit this response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.CompatibleVersionSet>? MajorVersionSets { get => _explicitNullValueMajorVersionSets; set { _explicitNullValueMajorVersionSets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("majorVersionSets"); else _explicitNullProperties?.Remove("majorVersionSets"); } }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.CompatibleVersionSet>? MajorVersionSets { get => _explicitNullValueMajorVersionSets; set { _explicitNullValueMajorVersionSets = value; AdditionalData?.Remove("majorVersionSets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("majorVersionSets"); else _explicitNullProperties?.Remove("majorVersionSets"); } }
         private List<global::Soenneker.Temporal.OpenApiClient.Models.CompatibleVersionSet>? _explicitNullValueMajorVersionSets = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.CompatibleVersionSet> MajorVersionSets { get => _explicitNullValueMajorVersionSets; set { _explicitNullValueMajorVersionSets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("majorVersionSets"); else _explicitNullProperties?.Remove("majorVersionSets"); } }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.CompatibleVersionSet> MajorVersionSets { get => _explicitNullValueMajorVersionSets; set { _explicitNullValueMajorVersionSets = value; AdditionalData?.Remove("majorVersionSets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("majorVersionSets"); else _explicitNullProperties?.Remove("majorVersionSets"); } }
         private List<global::Soenneker.Temporal.OpenApiClient.Models.CompatibleVersionSet> _explicitNullValueMajorVersionSets = default!;
 #endif
         /// <summary>

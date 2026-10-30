@@ -18,8 +18,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("blobSizeLimitError") is { } nullNodeBlobSizeLimitError && nullNodeBlobSizeLimitError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlobSizeLimitError = null;
-            if (parseNode.GetChildNode("memoSizeLimitError") is { } nullNodeMemoSizeLimitError && nullNodeMemoSizeLimitError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MemoSizeLimitError = null;
+            if (parseNode.GetChildNode("blobSizeLimitError") is null) { _explicitNullValueBlobSizeLimitError = default!; _explicitNullProperties?.Remove("blobSizeLimitError"); }
+            else if (parseNode.GetChildNode("blobSizeLimitError") is { } nullNodeBlobSizeLimitError && nullNodeBlobSizeLimitError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlobSizeLimitError = null;
+            if (parseNode.GetChildNode("memoSizeLimitError") is null) { _explicitNullValueMemoSizeLimitError = default!; _explicitNullProperties?.Remove("memoSizeLimitError"); }
+            else if (parseNode.GetChildNode("memoSizeLimitError") is { } nullNodeMemoSizeLimitError && nullNodeMemoSizeLimitError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MemoSizeLimitError = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Maximum size in bytes for payload fields in workflow history events (e.g., workflow/activity inputs and results, failure details, signal payloads). When exceeded, the server will reject the operation with an error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BlobSizeLimitError { get => _explicitNullValueBlobSizeLimitError; set { _explicitNullValueBlobSizeLimitError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blobSizeLimitError"); else _explicitNullProperties?.Remove("blobSizeLimitError"); } }
+        public string? BlobSizeLimitError { get => _explicitNullValueBlobSizeLimitError; set { _explicitNullValueBlobSizeLimitError = value; AdditionalData?.Remove("blobSizeLimitError"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blobSizeLimitError"); else _explicitNullProperties?.Remove("blobSizeLimitError"); } }
         private string? _explicitNullValueBlobSizeLimitError = default!;
 #nullable restore
 #else
-        public string BlobSizeLimitError { get => _explicitNullValueBlobSizeLimitError; set { _explicitNullValueBlobSizeLimitError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blobSizeLimitError"); else _explicitNullProperties?.Remove("blobSizeLimitError"); } }
+        public string BlobSizeLimitError { get => _explicitNullValueBlobSizeLimitError; set { _explicitNullValueBlobSizeLimitError = value; AdditionalData?.Remove("blobSizeLimitError"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blobSizeLimitError"); else _explicitNullProperties?.Remove("blobSizeLimitError"); } }
         private string _explicitNullValueBlobSizeLimitError = default!;
 #endif
         /// <summary>Maximum total memo size in bytes per workflow execution.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MemoSizeLimitError { get => _explicitNullValueMemoSizeLimitError; set { _explicitNullValueMemoSizeLimitError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("memoSizeLimitError"); else _explicitNullProperties?.Remove("memoSizeLimitError"); } }
+        public string? MemoSizeLimitError { get => _explicitNullValueMemoSizeLimitError; set { _explicitNullValueMemoSizeLimitError = value; AdditionalData?.Remove("memoSizeLimitError"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("memoSizeLimitError"); else _explicitNullProperties?.Remove("memoSizeLimitError"); } }
         private string? _explicitNullValueMemoSizeLimitError = default!;
 #nullable restore
 #else
-        public string MemoSizeLimitError { get => _explicitNullValueMemoSizeLimitError; set { _explicitNullValueMemoSizeLimitError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("memoSizeLimitError"); else _explicitNullProperties?.Remove("memoSizeLimitError"); } }
+        public string MemoSizeLimitError { get => _explicitNullValueMemoSizeLimitError; set { _explicitNullValueMemoSizeLimitError = value; AdditionalData?.Remove("memoSizeLimitError"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("memoSizeLimitError"); else _explicitNullProperties?.Remove("memoSizeLimitError"); } }
         private string _explicitNullValueMemoSizeLimitError = default!;
 #endif
         /// <summary>

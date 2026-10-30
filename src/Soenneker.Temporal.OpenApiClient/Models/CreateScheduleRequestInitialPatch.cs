@@ -18,10 +18,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("backfillRequest") is { } nullNodeBackfillRequest && nullNodeBackfillRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BackfillRequest = null;
-            if (parseNode.GetChildNode("pause") is { } nullNodePause && nullNodePause.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pause = null;
-            if (parseNode.GetChildNode("triggerImmediately") is { } nullNodeTriggerImmediately && nullNodeTriggerImmediately.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerImmediately = null;
-            if (parseNode.GetChildNode("unpause") is { } nullNodeUnpause && nullNodeUnpause.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Unpause = null;
+            if (parseNode.GetChildNode("backfillRequest") is null) { _explicitNullValueBackfillRequest = default!; _explicitNullProperties?.Remove("backfillRequest"); }
+            else if (parseNode.GetChildNode("backfillRequest") is { } nullNodeBackfillRequest && nullNodeBackfillRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BackfillRequest = null;
+            if (parseNode.GetChildNode("pause") is null) { _explicitNullValuePause = default!; _explicitNullProperties?.Remove("pause"); }
+            else if (parseNode.GetChildNode("pause") is { } nullNodePause && nullNodePause.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pause = null;
+            if (parseNode.GetChildNode("triggerImmediately") is null) { _explicitNullValueTriggerImmediately = default!; _explicitNullProperties?.Remove("triggerImmediately"); }
+            else if (parseNode.GetChildNode("triggerImmediately") is { } nullNodeTriggerImmediately && nullNodeTriggerImmediately.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerImmediately = null;
+            if (parseNode.GetChildNode("unpause") is null) { _explicitNullValueUnpause = default!; _explicitNullProperties?.Remove("unpause"); }
+            else if (parseNode.GetChildNode("unpause") is { } nullNodeUnpause && nullNodeUnpause.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Unpause = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,41 +33,41 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>If set, runs though the specified time period(s) and takes actions as if that time passed by right now, all at once. The overlap policy can be overridden for the scope of the backfill.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.BackfillRequest>? BackfillRequest { get => _explicitNullValueBackfillRequest; set { _explicitNullValueBackfillRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("backfillRequest"); else _explicitNullProperties?.Remove("backfillRequest"); } }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.BackfillRequest>? BackfillRequest { get => _explicitNullValueBackfillRequest; set { _explicitNullValueBackfillRequest = value; AdditionalData?.Remove("backfillRequest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("backfillRequest"); else _explicitNullProperties?.Remove("backfillRequest"); } }
         private List<global::Soenneker.Temporal.OpenApiClient.Models.BackfillRequest>? _explicitNullValueBackfillRequest = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.BackfillRequest> BackfillRequest { get => _explicitNullValueBackfillRequest; set { _explicitNullValueBackfillRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("backfillRequest"); else _explicitNullProperties?.Remove("backfillRequest"); } }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.BackfillRequest> BackfillRequest { get => _explicitNullValueBackfillRequest; set { _explicitNullValueBackfillRequest = value; AdditionalData?.Remove("backfillRequest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("backfillRequest"); else _explicitNullProperties?.Remove("backfillRequest"); } }
         private List<global::Soenneker.Temporal.OpenApiClient.Models.BackfillRequest> _explicitNullValueBackfillRequest = default!;
 #endif
         /// <summary>If set, change the state to paused or unpaused (respectively) and set the notes field to the value of the string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Pause { get => _explicitNullValuePause; set { _explicitNullValuePause = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pause"); else _explicitNullProperties?.Remove("pause"); } }
+        public string? Pause { get => _explicitNullValuePause; set { _explicitNullValuePause = value; AdditionalData?.Remove("pause"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pause"); else _explicitNullProperties?.Remove("pause"); } }
         private string? _explicitNullValuePause = default!;
 #nullable restore
 #else
-        public string Pause { get => _explicitNullValuePause; set { _explicitNullValuePause = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pause"); else _explicitNullProperties?.Remove("pause"); } }
+        public string Pause { get => _explicitNullValuePause; set { _explicitNullValuePause = value; AdditionalData?.Remove("pause"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pause"); else _explicitNullProperties?.Remove("pause"); } }
         private string _explicitNullValuePause = default!;
 #endif
         /// <summary>If set, trigger one action immediately.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.SchedulePatchTriggerImmediately? TriggerImmediately { get => _explicitNullValueTriggerImmediately; set { _explicitNullValueTriggerImmediately = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerImmediately"); else _explicitNullProperties?.Remove("triggerImmediately"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SchedulePatchTriggerImmediately? TriggerImmediately { get => _explicitNullValueTriggerImmediately; set { _explicitNullValueTriggerImmediately = value; AdditionalData?.Remove("triggerImmediately"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerImmediately"); else _explicitNullProperties?.Remove("triggerImmediately"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.SchedulePatchTriggerImmediately? _explicitNullValueTriggerImmediately = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.SchedulePatchTriggerImmediately TriggerImmediately { get => _explicitNullValueTriggerImmediately; set { _explicitNullValueTriggerImmediately = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerImmediately"); else _explicitNullProperties?.Remove("triggerImmediately"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SchedulePatchTriggerImmediately TriggerImmediately { get => _explicitNullValueTriggerImmediately; set { _explicitNullValueTriggerImmediately = value; AdditionalData?.Remove("triggerImmediately"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerImmediately"); else _explicitNullProperties?.Remove("triggerImmediately"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.SchedulePatchTriggerImmediately _explicitNullValueTriggerImmediately = default!;
 #endif
         /// <summary>The unpause property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Unpause { get => _explicitNullValueUnpause; set { _explicitNullValueUnpause = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unpause"); else _explicitNullProperties?.Remove("unpause"); } }
+        public string? Unpause { get => _explicitNullValueUnpause; set { _explicitNullValueUnpause = value; AdditionalData?.Remove("unpause"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unpause"); else _explicitNullProperties?.Remove("unpause"); } }
         private string? _explicitNullValueUnpause = default!;
 #nullable restore
 #else
-        public string Unpause { get => _explicitNullValueUnpause; set { _explicitNullValueUnpause = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unpause"); else _explicitNullProperties?.Remove("unpause"); } }
+        public string Unpause { get => _explicitNullValueUnpause; set { _explicitNullValueUnpause = value; AdditionalData?.Remove("unpause"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unpause"); else _explicitNullProperties?.Remove("unpause"); } }
         private string _explicitNullValueUnpause = default!;
 #endif
         /// <summary>

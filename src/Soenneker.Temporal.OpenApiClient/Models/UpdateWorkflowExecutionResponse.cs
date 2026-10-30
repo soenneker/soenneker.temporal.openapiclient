@@ -17,9 +17,12 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("outcome") is { } nullNodeOutcome && nullNodeOutcome.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Outcome = null;
-            if (parseNode.GetChildNode("stage") is { } nullNodeStage && nullNodeStage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Stage = null;
-            if (parseNode.GetChildNode("updateRef") is { } nullNodeUpdateRef && nullNodeUpdateRef.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateRef = null;
+            if (parseNode.GetChildNode("outcome") is null) { _explicitNullValueOutcome = default!; _explicitNullProperties?.Remove("outcome"); }
+            else if (parseNode.GetChildNode("outcome") is { } nullNodeOutcome && nullNodeOutcome.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Outcome = null;
+            if (parseNode.GetChildNode("stage") is null) { _explicitNullValueStage = default!; _explicitNullProperties?.Remove("stage"); }
+            else if (parseNode.GetChildNode("stage") is { } nullNodeStage && nullNodeStage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Stage = null;
+            if (parseNode.GetChildNode("updateRef") is null) { _explicitNullValueUpdateRef = default!; _explicitNullProperties?.Remove("updateRef"); }
+            else if (parseNode.GetChildNode("updateRef") is { } nullNodeUpdateRef && nullNodeUpdateRef.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateRef = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,24 +30,24 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The outcome of the Update if and only if the Workflow Update has completed. If this response is being returned before the Update has completed then this field will not be set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseOutcome? Outcome { get => _explicitNullValueOutcome; set { _explicitNullValueOutcome = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outcome"); else _explicitNullProperties?.Remove("outcome"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseOutcome? Outcome { get => _explicitNullValueOutcome; set { _explicitNullValueOutcome = value; AdditionalData?.Remove("outcome"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outcome"); else _explicitNullProperties?.Remove("outcome"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseOutcome? _explicitNullValueOutcome = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseOutcome Outcome { get => _explicitNullValueOutcome; set { _explicitNullValueOutcome = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outcome"); else _explicitNullProperties?.Remove("outcome"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseOutcome Outcome { get => _explicitNullValueOutcome; set { _explicitNullValueOutcome = value; AdditionalData?.Remove("outcome"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outcome"); else _explicitNullProperties?.Remove("outcome"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseOutcome _explicitNullValueOutcome = default!;
 #endif
         /// <summary>The most advanced lifecycle stage that the Update is known to have reached, where lifecycle stages are ordered UPDATE_WORKFLOW_EXECUTION_LIFECYCLE_STAGE_UNSPECIFIED &lt; UPDATE_WORKFLOW_EXECUTION_LIFECYCLE_STAGE_ADMITTED &lt; UPDATE_WORKFLOW_EXECUTION_LIFECYCLE_STAGE_ACCEPTED &lt; UPDATE_WORKFLOW_EXECUTION_LIFECYCLE_STAGE_COMPLETED. UNSPECIFIED will be returned if and only if the server&apos;s maximum wait time was reached before the Update reached the stage specified in the request WaitPolicy, and before the context deadline expired; clients may may then retry the call as needed.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseStage? Stage { get => _explicitNullValueStage; set { _explicitNullValueStage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stage"); else _explicitNullProperties?.Remove("stage"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseStage? Stage { get => _explicitNullValueStage; set { _explicitNullValueStage = value; AdditionalData?.Remove("stage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stage"); else _explicitNullProperties?.Remove("stage"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseStage? _explicitNullValueStage = default!;
         /// <summary>Enough information for subsequent poll calls if needed. Never null.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseUpdateRef? UpdateRef { get => _explicitNullValueUpdateRef; set { _explicitNullValueUpdateRef = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateRef"); else _explicitNullProperties?.Remove("updateRef"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseUpdateRef? UpdateRef { get => _explicitNullValueUpdateRef; set { _explicitNullValueUpdateRef = value; AdditionalData?.Remove("updateRef"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateRef"); else _explicitNullProperties?.Remove("updateRef"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseUpdateRef? _explicitNullValueUpdateRef = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseUpdateRef UpdateRef { get => _explicitNullValueUpdateRef; set { _explicitNullValueUpdateRef = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateRef"); else _explicitNullProperties?.Remove("updateRef"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseUpdateRef UpdateRef { get => _explicitNullValueUpdateRef; set { _explicitNullValueUpdateRef = value; AdditionalData?.Remove("updateRef"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateRef"); else _explicitNullProperties?.Remove("updateRef"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseUpdateRef _explicitNullValueUpdateRef = default!;
 #endif
         /// <summary>
@@ -73,7 +76,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "outcome", n => { Outcome = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseOutcome>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseOutcome.CreateFromDiscriminatorValue); } },
-                { "stage", n => { Stage = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseStage>(); } },
+                { "stage", n => { var parsed = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseStage>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStage = default; _explicitNullProperties?.Remove("stage"); AdditionalData["stage"] = unknown; } else { Stage = parsed; AdditionalData.Remove("stage"); } } },
                 { "updateRef", n => { UpdateRef = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseUpdateRef>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionResponseUpdateRef.CreateFromDiscriminatorValue); } },
             };
         }

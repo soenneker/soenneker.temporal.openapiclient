@@ -18,11 +18,16 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("buildId") is { } nullNodeBuildId && nullNodeBuildId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuildId = null;
-            if (parseNode.GetChildNode("currentRunOnly") is { } nullNodeCurrentRunOnly && nullNodeCurrentRunOnly.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentRunOnly = null;
-            if (parseNode.GetChildNode("resetReapplyExcludeTypes") is { } nullNodeResetReapplyExcludeTypes && nullNodeResetReapplyExcludeTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResetReapplyExcludeTypes = null;
-            if (parseNode.GetChildNode("resetReapplyType") is { } nullNodeResetReapplyType && nullNodeResetReapplyType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResetReapplyType = null;
-            if (parseNode.GetChildNode("workflowTaskId") is { } nullNodeWorkflowTaskId && nullNodeWorkflowTaskId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowTaskId = null;
+            if (parseNode.GetChildNode("buildId") is null) { _explicitNullValueBuildId = default!; _explicitNullProperties?.Remove("buildId"); }
+            else if (parseNode.GetChildNode("buildId") is { } nullNodeBuildId && nullNodeBuildId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuildId = null;
+            if (parseNode.GetChildNode("currentRunOnly") is null) { _explicitNullValueCurrentRunOnly = default!; _explicitNullProperties?.Remove("currentRunOnly"); }
+            else if (parseNode.GetChildNode("currentRunOnly") is { } nullNodeCurrentRunOnly && nullNodeCurrentRunOnly.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentRunOnly = null;
+            if (parseNode.GetChildNode("resetReapplyExcludeTypes") is null) { _explicitNullValueResetReapplyExcludeTypes = default!; _explicitNullProperties?.Remove("resetReapplyExcludeTypes"); }
+            else if (parseNode.GetChildNode("resetReapplyExcludeTypes") is { } nullNodeResetReapplyExcludeTypes && nullNodeResetReapplyExcludeTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResetReapplyExcludeTypes = null;
+            if (parseNode.GetChildNode("resetReapplyType") is null) { _explicitNullValueResetReapplyType = default!; _explicitNullProperties?.Remove("resetReapplyType"); }
+            else if (parseNode.GetChildNode("resetReapplyType") is { } nullNodeResetReapplyType && nullNodeResetReapplyType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResetReapplyType = null;
+            if (parseNode.GetChildNode("workflowTaskId") is null) { _explicitNullValueWorkflowTaskId = default!; _explicitNullProperties?.Remove("workflowTaskId"); }
+            else if (parseNode.GetChildNode("workflowTaskId") is { } nullNodeWorkflowTaskId && nullNodeWorkflowTaskId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowTaskId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,37 +35,37 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Resets to the first workflow task processed by this build id. If the workflow was not processed by the build id, or the workflow task can&apos;t be determined, no reset will be performed. Note that by default, this reset is allowed to be to a prior run in a chain of continue-as-new.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BuildId { get => _explicitNullValueBuildId; set { _explicitNullValueBuildId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buildId"); else _explicitNullProperties?.Remove("buildId"); } }
+        public string? BuildId { get => _explicitNullValueBuildId; set { _explicitNullValueBuildId = value; AdditionalData?.Remove("buildId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buildId"); else _explicitNullProperties?.Remove("buildId"); } }
         private string? _explicitNullValueBuildId = default!;
 #nullable restore
 #else
-        public string BuildId { get => _explicitNullValueBuildId; set { _explicitNullValueBuildId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buildId"); else _explicitNullProperties?.Remove("buildId"); } }
+        public string BuildId { get => _explicitNullValueBuildId; set { _explicitNullValueBuildId = value; AdditionalData?.Remove("buildId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buildId"); else _explicitNullProperties?.Remove("buildId"); } }
         private string _explicitNullValueBuildId = default!;
 #endif
         /// <summary>If true, limit the reset to only within the current run. (Applies to build_id targets and possibly others in the future.)</summary>
-        public bool? CurrentRunOnly { get => _explicitNullValueCurrentRunOnly; set { _explicitNullValueCurrentRunOnly = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currentRunOnly"); else _explicitNullProperties?.Remove("currentRunOnly"); } }
+        public bool? CurrentRunOnly { get => _explicitNullValueCurrentRunOnly; set { _explicitNullValueCurrentRunOnly = value; AdditionalData?.Remove("currentRunOnly"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currentRunOnly"); else _explicitNullProperties?.Remove("currentRunOnly"); } }
         private bool? _explicitNullValueCurrentRunOnly = default!;
         /// <summary>Event types not to be reapplied</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.ResetOptionsResetReapplyExcludeTypesItem?>? ResetReapplyExcludeTypes { get => _explicitNullValueResetReapplyExcludeTypes; set { _explicitNullValueResetReapplyExcludeTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resetReapplyExcludeTypes"); else _explicitNullProperties?.Remove("resetReapplyExcludeTypes"); } }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.ResetOptionsResetReapplyExcludeTypesItem?>? ResetReapplyExcludeTypes { get => _explicitNullValueResetReapplyExcludeTypes; set { _explicitNullValueResetReapplyExcludeTypes = value; AdditionalData?.Remove("resetReapplyExcludeTypes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resetReapplyExcludeTypes"); else _explicitNullProperties?.Remove("resetReapplyExcludeTypes"); } }
         private List<global::Soenneker.Temporal.OpenApiClient.Models.ResetOptionsResetReapplyExcludeTypesItem?>? _explicitNullValueResetReapplyExcludeTypes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.ResetOptionsResetReapplyExcludeTypesItem?> ResetReapplyExcludeTypes { get => _explicitNullValueResetReapplyExcludeTypes; set { _explicitNullValueResetReapplyExcludeTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resetReapplyExcludeTypes"); else _explicitNullProperties?.Remove("resetReapplyExcludeTypes"); } }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.ResetOptionsResetReapplyExcludeTypesItem?> ResetReapplyExcludeTypes { get => _explicitNullValueResetReapplyExcludeTypes; set { _explicitNullValueResetReapplyExcludeTypes = value; AdditionalData?.Remove("resetReapplyExcludeTypes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resetReapplyExcludeTypes"); else _explicitNullProperties?.Remove("resetReapplyExcludeTypes"); } }
         private List<global::Soenneker.Temporal.OpenApiClient.Models.ResetOptionsResetReapplyExcludeTypesItem?> _explicitNullValueResetReapplyExcludeTypes = default!;
 #endif
         /// <summary>Deprecated. Use `options`. Default: RESET_REAPPLY_TYPE_SIGNAL</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.ResetOptionsResetReapplyType? ResetReapplyType { get => _explicitNullValueResetReapplyType; set { _explicitNullValueResetReapplyType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resetReapplyType"); else _explicitNullProperties?.Remove("resetReapplyType"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ResetOptionsResetReapplyType? ResetReapplyType { get => _explicitNullValueResetReapplyType; set { _explicitNullValueResetReapplyType = value; AdditionalData?.Remove("resetReapplyType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resetReapplyType"); else _explicitNullProperties?.Remove("resetReapplyType"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.ResetOptionsResetReapplyType? _explicitNullValueResetReapplyType = default!;
         /// <summary>The id of a specific `WORKFLOW_TASK_COMPLETED`,`WORKFLOW_TASK_TIMED_OUT`, `WORKFLOW_TASK_FAILED`, or `WORKFLOW_TASK_STARTED` event to reset to. Note that this option doesn&apos;t make sense when used as part of a batch request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkflowTaskId { get => _explicitNullValueWorkflowTaskId; set { _explicitNullValueWorkflowTaskId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowTaskId"); else _explicitNullProperties?.Remove("workflowTaskId"); } }
+        public string? WorkflowTaskId { get => _explicitNullValueWorkflowTaskId; set { _explicitNullValueWorkflowTaskId = value; AdditionalData?.Remove("workflowTaskId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowTaskId"); else _explicitNullProperties?.Remove("workflowTaskId"); } }
         private string? _explicitNullValueWorkflowTaskId = default!;
 #nullable restore
 #else
-        public string WorkflowTaskId { get => _explicitNullValueWorkflowTaskId; set { _explicitNullValueWorkflowTaskId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowTaskId"); else _explicitNullProperties?.Remove("workflowTaskId"); } }
+        public string WorkflowTaskId { get => _explicitNullValueWorkflowTaskId; set { _explicitNullValueWorkflowTaskId = value; AdditionalData?.Remove("workflowTaskId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowTaskId"); else _explicitNullProperties?.Remove("workflowTaskId"); } }
         private string _explicitNullValueWorkflowTaskId = default!;
 #endif
         /// <summary>
@@ -91,7 +96,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "buildId", n => { BuildId = n.GetStringValue(); } },
                 { "currentRunOnly", n => { CurrentRunOnly = n.GetBoolValue(); } },
                 { "resetReapplyExcludeTypes", n => { ResetReapplyExcludeTypes = n.GetCollectionOfEnumValues<global::Soenneker.Temporal.OpenApiClient.Models.ResetOptionsResetReapplyExcludeTypesItem>()?.AsList(); } },
-                { "resetReapplyType", n => { ResetReapplyType = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.ResetOptionsResetReapplyType>(); } },
+                { "resetReapplyType", n => { var parsed = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.ResetOptionsResetReapplyType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueResetReapplyType = default; _explicitNullProperties?.Remove("resetReapplyType"); AdditionalData["resetReapplyType"] = unknown; } else { ResetReapplyType = parsed; AdditionalData.Remove("resetReapplyType"); } } },
                 { "workflowTaskId", n => { WorkflowTaskId = n.GetStringValue(); } },
             };
         }

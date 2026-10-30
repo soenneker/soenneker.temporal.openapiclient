@@ -18,7 +18,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("deploymentInfo") is { } nullNodeDeploymentInfo && nullNodeDeploymentInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeploymentInfo = null;
+            if (parseNode.GetChildNode("deploymentInfo") is null) { _explicitNullValueDeploymentInfo = default!; _explicitNullProperties?.Remove("deploymentInfo"); }
+            else if (parseNode.GetChildNode("deploymentInfo") is { } nullNodeDeploymentInfo && nullNodeDeploymentInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeploymentInfo = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>`DeploymentInfo` holds information about a deployment. Deployment information is tracked automatically by server as soon as the first poll from that deployment reaches the server. There can be multiple task queue workers in a single deployment which are listed in this message. Deprecated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfo? DeploymentInfo { get => _explicitNullValueDeploymentInfo; set { _explicitNullValueDeploymentInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploymentInfo"); else _explicitNullProperties?.Remove("deploymentInfo"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfo? DeploymentInfo { get => _explicitNullValueDeploymentInfo; set { _explicitNullValueDeploymentInfo = value; AdditionalData?.Remove("deploymentInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploymentInfo"); else _explicitNullProperties?.Remove("deploymentInfo"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfo? _explicitNullValueDeploymentInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfo DeploymentInfo { get => _explicitNullValueDeploymentInfo; set { _explicitNullValueDeploymentInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploymentInfo"); else _explicitNullProperties?.Remove("deploymentInfo"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfo DeploymentInfo { get => _explicitNullValueDeploymentInfo; set { _explicitNullValueDeploymentInfo = value; AdditionalData?.Remove("deploymentInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploymentInfo"); else _explicitNullProperties?.Remove("deploymentInfo"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfo _explicitNullValueDeploymentInfo = default!;
 #endif
         /// <summary>

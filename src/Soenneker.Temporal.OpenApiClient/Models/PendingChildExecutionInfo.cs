@@ -17,11 +17,16 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("initiatedId") is { } nullNodeInitiatedId && nullNodeInitiatedId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InitiatedId = null;
-            if (parseNode.GetChildNode("parentClosePolicy") is { } nullNodeParentClosePolicy && nullNodeParentClosePolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentClosePolicy = null;
-            if (parseNode.GetChildNode("runId") is { } nullNodeRunId && nullNodeRunId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RunId = null;
-            if (parseNode.GetChildNode("workflowId") is { } nullNodeWorkflowId && nullNodeWorkflowId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowId = null;
-            if (parseNode.GetChildNode("workflowTypeName") is { } nullNodeWorkflowTypeName && nullNodeWorkflowTypeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowTypeName = null;
+            if (parseNode.GetChildNode("initiatedId") is null) { _explicitNullValueInitiatedId = default!; _explicitNullProperties?.Remove("initiatedId"); }
+            else if (parseNode.GetChildNode("initiatedId") is { } nullNodeInitiatedId && nullNodeInitiatedId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InitiatedId = null;
+            if (parseNode.GetChildNode("parentClosePolicy") is null) { _explicitNullValueParentClosePolicy = default!; _explicitNullProperties?.Remove("parentClosePolicy"); }
+            else if (parseNode.GetChildNode("parentClosePolicy") is { } nullNodeParentClosePolicy && nullNodeParentClosePolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentClosePolicy = null;
+            if (parseNode.GetChildNode("runId") is null) { _explicitNullValueRunId = default!; _explicitNullProperties?.Remove("runId"); }
+            else if (parseNode.GetChildNode("runId") is { } nullNodeRunId && nullNodeRunId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RunId = null;
+            if (parseNode.GetChildNode("workflowId") is null) { _explicitNullValueWorkflowId = default!; _explicitNullProperties?.Remove("workflowId"); }
+            else if (parseNode.GetChildNode("workflowId") is { } nullNodeWorkflowId && nullNodeWorkflowId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowId = null;
+            if (parseNode.GetChildNode("workflowTypeName") is null) { _explicitNullValueWorkflowTypeName = default!; _explicitNullProperties?.Remove("workflowTypeName"); }
+            else if (parseNode.GetChildNode("workflowTypeName") is { } nullNodeWorkflowTypeName && nullNodeWorkflowTypeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowTypeName = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,44 +34,44 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The initiatedId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InitiatedId { get => _explicitNullValueInitiatedId; set { _explicitNullValueInitiatedId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initiatedId"); else _explicitNullProperties?.Remove("initiatedId"); } }
+        public string? InitiatedId { get => _explicitNullValueInitiatedId; set { _explicitNullValueInitiatedId = value; AdditionalData?.Remove("initiatedId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initiatedId"); else _explicitNullProperties?.Remove("initiatedId"); } }
         private string? _explicitNullValueInitiatedId = default!;
 #nullable restore
 #else
-        public string InitiatedId { get => _explicitNullValueInitiatedId; set { _explicitNullValueInitiatedId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initiatedId"); else _explicitNullProperties?.Remove("initiatedId"); } }
+        public string InitiatedId { get => _explicitNullValueInitiatedId; set { _explicitNullValueInitiatedId = value; AdditionalData?.Remove("initiatedId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initiatedId"); else _explicitNullProperties?.Remove("initiatedId"); } }
         private string _explicitNullValueInitiatedId = default!;
 #endif
         /// <summary>Default: PARENT_CLOSE_POLICY_TERMINATE.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.PendingChildExecutionInfoParentClosePolicy? ParentClosePolicy { get => _explicitNullValueParentClosePolicy; set { _explicitNullValueParentClosePolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parentClosePolicy"); else _explicitNullProperties?.Remove("parentClosePolicy"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PendingChildExecutionInfoParentClosePolicy? ParentClosePolicy { get => _explicitNullValueParentClosePolicy; set { _explicitNullValueParentClosePolicy = value; AdditionalData?.Remove("parentClosePolicy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parentClosePolicy"); else _explicitNullProperties?.Remove("parentClosePolicy"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.PendingChildExecutionInfoParentClosePolicy? _explicitNullValueParentClosePolicy = default!;
         /// <summary>The runId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RunId { get => _explicitNullValueRunId; set { _explicitNullValueRunId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runId"); else _explicitNullProperties?.Remove("runId"); } }
+        public string? RunId { get => _explicitNullValueRunId; set { _explicitNullValueRunId = value; AdditionalData?.Remove("runId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runId"); else _explicitNullProperties?.Remove("runId"); } }
         private string? _explicitNullValueRunId = default!;
 #nullable restore
 #else
-        public string RunId { get => _explicitNullValueRunId; set { _explicitNullValueRunId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runId"); else _explicitNullProperties?.Remove("runId"); } }
+        public string RunId { get => _explicitNullValueRunId; set { _explicitNullValueRunId = value; AdditionalData?.Remove("runId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runId"); else _explicitNullProperties?.Remove("runId"); } }
         private string _explicitNullValueRunId = default!;
 #endif
         /// <summary>The workflowId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkflowId { get => _explicitNullValueWorkflowId; set { _explicitNullValueWorkflowId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowId"); else _explicitNullProperties?.Remove("workflowId"); } }
+        public string? WorkflowId { get => _explicitNullValueWorkflowId; set { _explicitNullValueWorkflowId = value; AdditionalData?.Remove("workflowId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowId"); else _explicitNullProperties?.Remove("workflowId"); } }
         private string? _explicitNullValueWorkflowId = default!;
 #nullable restore
 #else
-        public string WorkflowId { get => _explicitNullValueWorkflowId; set { _explicitNullValueWorkflowId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowId"); else _explicitNullProperties?.Remove("workflowId"); } }
+        public string WorkflowId { get => _explicitNullValueWorkflowId; set { _explicitNullValueWorkflowId = value; AdditionalData?.Remove("workflowId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowId"); else _explicitNullProperties?.Remove("workflowId"); } }
         private string _explicitNullValueWorkflowId = default!;
 #endif
         /// <summary>The workflowTypeName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkflowTypeName { get => _explicitNullValueWorkflowTypeName; set { _explicitNullValueWorkflowTypeName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowTypeName"); else _explicitNullProperties?.Remove("workflowTypeName"); } }
+        public string? WorkflowTypeName { get => _explicitNullValueWorkflowTypeName; set { _explicitNullValueWorkflowTypeName = value; AdditionalData?.Remove("workflowTypeName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowTypeName"); else _explicitNullProperties?.Remove("workflowTypeName"); } }
         private string? _explicitNullValueWorkflowTypeName = default!;
 #nullable restore
 #else
-        public string WorkflowTypeName { get => _explicitNullValueWorkflowTypeName; set { _explicitNullValueWorkflowTypeName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowTypeName"); else _explicitNullProperties?.Remove("workflowTypeName"); } }
+        public string WorkflowTypeName { get => _explicitNullValueWorkflowTypeName; set { _explicitNullValueWorkflowTypeName = value; AdditionalData?.Remove("workflowTypeName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowTypeName"); else _explicitNullProperties?.Remove("workflowTypeName"); } }
         private string _explicitNullValueWorkflowTypeName = default!;
 #endif
         /// <summary>
@@ -95,7 +100,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "initiatedId", n => { InitiatedId = n.GetStringValue(); } },
-                { "parentClosePolicy", n => { ParentClosePolicy = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingChildExecutionInfoParentClosePolicy>(); } },
+                { "parentClosePolicy", n => { var parsed = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.PendingChildExecutionInfoParentClosePolicy>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueParentClosePolicy = default; _explicitNullProperties?.Remove("parentClosePolicy"); AdditionalData["parentClosePolicy"] = unknown; } else { ParentClosePolicy = parsed; AdditionalData.Remove("parentClosePolicy"); } } },
                 { "runId", n => { RunId = n.GetStringValue(); } },
                 { "workflowId", n => { WorkflowId = n.GetStringValue(); } },
                 { "workflowTypeName", n => { WorkflowTypeName = n.GetStringValue(); } },

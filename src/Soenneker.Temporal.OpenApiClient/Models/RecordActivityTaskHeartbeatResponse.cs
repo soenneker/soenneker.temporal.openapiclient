@@ -17,21 +17,24 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("activityPaused") is { } nullNodeActivityPaused && nullNodeActivityPaused.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActivityPaused = null;
-            if (parseNode.GetChildNode("activityReset") is { } nullNodeActivityReset && nullNodeActivityReset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActivityReset = null;
-            if (parseNode.GetChildNode("cancelRequested") is { } nullNodeCancelRequested && nullNodeCancelRequested.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CancelRequested = null;
+            if (parseNode.GetChildNode("activityPaused") is null) { _explicitNullValueActivityPaused = default!; _explicitNullProperties?.Remove("activityPaused"); }
+            else if (parseNode.GetChildNode("activityPaused") is { } nullNodeActivityPaused && nullNodeActivityPaused.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActivityPaused = null;
+            if (parseNode.GetChildNode("activityReset") is null) { _explicitNullValueActivityReset = default!; _explicitNullProperties?.Remove("activityReset"); }
+            else if (parseNode.GetChildNode("activityReset") is { } nullNodeActivityReset && nullNodeActivityReset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActivityReset = null;
+            if (parseNode.GetChildNode("cancelRequested") is null) { _explicitNullValueCancelRequested = default!; _explicitNullProperties?.Remove("cancelRequested"); }
+            else if (parseNode.GetChildNode("cancelRequested") is { } nullNodeCancelRequested && nullNodeCancelRequested.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CancelRequested = null;
         }
 
         /// <summary>Will be set to true if the activity is paused.</summary>
-        public bool? ActivityPaused { get => _explicitNullValueActivityPaused; set { _explicitNullValueActivityPaused = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityPaused"); else _explicitNullProperties?.Remove("activityPaused"); } }
+        public bool? ActivityPaused { get => _explicitNullValueActivityPaused; set { _explicitNullValueActivityPaused = value; AdditionalData?.Remove("activityPaused"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityPaused"); else _explicitNullProperties?.Remove("activityPaused"); } }
         private bool? _explicitNullValueActivityPaused = default!;
         /// <summary>Will be set to true if the activity was reset. Applies only to the current run.</summary>
-        public bool? ActivityReset { get => _explicitNullValueActivityReset; set { _explicitNullValueActivityReset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityReset"); else _explicitNullProperties?.Remove("activityReset"); } }
+        public bool? ActivityReset { get => _explicitNullValueActivityReset; set { _explicitNullValueActivityReset = value; AdditionalData?.Remove("activityReset"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityReset"); else _explicitNullProperties?.Remove("activityReset"); } }
         private bool? _explicitNullValueActivityReset = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Will be set to true if the activity has been asked to cancel itself. The SDK should then notify the activity of cancellation if it is still running.</summary>
-        public bool? CancelRequested { get => _explicitNullValueCancelRequested; set { _explicitNullValueCancelRequested = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancelRequested"); else _explicitNullProperties?.Remove("cancelRequested"); } }
+        public bool? CancelRequested { get => _explicitNullValueCancelRequested; set { _explicitNullValueCancelRequested = value; AdditionalData?.Remove("cancelRequested"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancelRequested"); else _explicitNullProperties?.Remove("cancelRequested"); } }
         private bool? _explicitNullValueCancelRequested = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.RecordActivityTaskHeartbeatResponse"/> and sets the default values.

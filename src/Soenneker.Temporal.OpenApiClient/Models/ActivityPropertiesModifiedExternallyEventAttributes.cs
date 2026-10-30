@@ -17,8 +17,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("newRetryPolicy") is { } nullNodeNewRetryPolicy && nullNodeNewRetryPolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewRetryPolicy = null;
-            if (parseNode.GetChildNode("scheduledEventId") is { } nullNodeScheduledEventId && nullNodeScheduledEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduledEventId = null;
+            if (parseNode.GetChildNode("newRetryPolicy") is null) { _explicitNullValueNewRetryPolicy = default!; _explicitNullProperties?.Remove("newRetryPolicy"); }
+            else if (parseNode.GetChildNode("newRetryPolicy") is { } nullNodeNewRetryPolicy && nullNodeNewRetryPolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewRetryPolicy = null;
+            if (parseNode.GetChildNode("scheduledEventId") is null) { _explicitNullValueScheduledEventId = default!; _explicitNullProperties?.Remove("scheduledEventId"); }
+            else if (parseNode.GetChildNode("scheduledEventId") is { } nullNodeScheduledEventId && nullNodeScheduledEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduledEventId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>If set, update the retry policy of the activity, replacing it with the specified one. The number of attempts at the activity is preserved.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityPropertiesModifiedExternallyEventAttributesNewRetryPolicy? NewRetryPolicy { get => _explicitNullValueNewRetryPolicy; set { _explicitNullValueNewRetryPolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newRetryPolicy"); else _explicitNullProperties?.Remove("newRetryPolicy"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityPropertiesModifiedExternallyEventAttributesNewRetryPolicy? NewRetryPolicy { get => _explicitNullValueNewRetryPolicy; set { _explicitNullValueNewRetryPolicy = value; AdditionalData?.Remove("newRetryPolicy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newRetryPolicy"); else _explicitNullProperties?.Remove("newRetryPolicy"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.ActivityPropertiesModifiedExternallyEventAttributesNewRetryPolicy? _explicitNullValueNewRetryPolicy = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityPropertiesModifiedExternallyEventAttributesNewRetryPolicy NewRetryPolicy { get => _explicitNullValueNewRetryPolicy; set { _explicitNullValueNewRetryPolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newRetryPolicy"); else _explicitNullProperties?.Remove("newRetryPolicy"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ActivityPropertiesModifiedExternallyEventAttributesNewRetryPolicy NewRetryPolicy { get => _explicitNullValueNewRetryPolicy; set { _explicitNullValueNewRetryPolicy = value; AdditionalData?.Remove("newRetryPolicy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newRetryPolicy"); else _explicitNullProperties?.Remove("newRetryPolicy"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.ActivityPropertiesModifiedExternallyEventAttributesNewRetryPolicy _explicitNullValueNewRetryPolicy = default!;
 #endif
         /// <summary>The id of the `ACTIVITY_TASK_SCHEDULED` event this modification corresponds to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ScheduledEventId { get => _explicitNullValueScheduledEventId; set { _explicitNullValueScheduledEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduledEventId"); else _explicitNullProperties?.Remove("scheduledEventId"); } }
+        public string? ScheduledEventId { get => _explicitNullValueScheduledEventId; set { _explicitNullValueScheduledEventId = value; AdditionalData?.Remove("scheduledEventId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduledEventId"); else _explicitNullProperties?.Remove("scheduledEventId"); } }
         private string? _explicitNullValueScheduledEventId = default!;
 #nullable restore
 #else
-        public string ScheduledEventId { get => _explicitNullValueScheduledEventId; set { _explicitNullValueScheduledEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduledEventId"); else _explicitNullProperties?.Remove("scheduledEventId"); } }
+        public string ScheduledEventId { get => _explicitNullValueScheduledEventId; set { _explicitNullValueScheduledEventId = value; AdditionalData?.Remove("scheduledEventId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduledEventId"); else _explicitNullProperties?.Remove("scheduledEventId"); } }
         private string _explicitNullValueScheduledEventId = default!;
 #endif
         /// <summary>

@@ -18,7 +18,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("workerHeartbeat") is { } nullNodeWorkerHeartbeat && nullNodeWorkerHeartbeat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerHeartbeat = null;
+            if (parseNode.GetChildNode("workerHeartbeat") is null) { _explicitNullValueWorkerHeartbeat = default!; _explicitNullProperties?.Remove("workerHeartbeat"); }
+            else if (parseNode.GetChildNode("workerHeartbeat") is { } nullNodeWorkerHeartbeat && nullNodeWorkerHeartbeat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerHeartbeat = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Worker info message, contains information about the worker and its current state. All information is provided by the worker itself. (-- api-linter: core::0140::prepositions=disabled     aip.dev/not-precedent: Removing those words make names less clear. --)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeat? WorkerHeartbeat { get => _explicitNullValueWorkerHeartbeat; set { _explicitNullValueWorkerHeartbeat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerHeartbeat"); else _explicitNullProperties?.Remove("workerHeartbeat"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeat? WorkerHeartbeat { get => _explicitNullValueWorkerHeartbeat; set { _explicitNullValueWorkerHeartbeat = value; AdditionalData?.Remove("workerHeartbeat"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerHeartbeat"); else _explicitNullProperties?.Remove("workerHeartbeat"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeat? _explicitNullValueWorkerHeartbeat = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeat WorkerHeartbeat { get => _explicitNullValueWorkerHeartbeat; set { _explicitNullValueWorkerHeartbeat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerHeartbeat"); else _explicitNullProperties?.Remove("workerHeartbeat"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeat WorkerHeartbeat { get => _explicitNullValueWorkerHeartbeat; set { _explicitNullValueWorkerHeartbeat = value; AdditionalData?.Remove("workerHeartbeat"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerHeartbeat"); else _explicitNullProperties?.Remove("workerHeartbeat"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkerHeartbeat _explicitNullValueWorkerHeartbeat = default!;
 #endif
         /// <summary>

@@ -18,17 +18,19 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("overlapPolicy") is { } nullNodeOverlapPolicy && nullNodeOverlapPolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverlapPolicy = null;
-            if (parseNode.GetChildNode("scheduledTime") is { } nullNodeScheduledTime && nullNodeScheduledTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduledTime = null;
+            if (parseNode.GetChildNode("overlapPolicy") is null) { _explicitNullValueOverlapPolicy = default!; _explicitNullProperties?.Remove("overlapPolicy"); }
+            else if (parseNode.GetChildNode("overlapPolicy") is { } nullNodeOverlapPolicy && nullNodeOverlapPolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverlapPolicy = null;
+            if (parseNode.GetChildNode("scheduledTime") is null) { _explicitNullValueScheduledTime = default!; _explicitNullProperties?.Remove("scheduledTime"); }
+            else if (parseNode.GetChildNode("scheduledTime") is { } nullNodeScheduledTime && nullNodeScheduledTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduledTime = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>If set, override overlap policy for this one request.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.TriggerImmediatelyRequestOverlapPolicy? OverlapPolicy { get => _explicitNullValueOverlapPolicy; set { _explicitNullValueOverlapPolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overlapPolicy"); else _explicitNullProperties?.Remove("overlapPolicy"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.TriggerImmediatelyRequestOverlapPolicy? OverlapPolicy { get => _explicitNullValueOverlapPolicy; set { _explicitNullValueOverlapPolicy = value; AdditionalData?.Remove("overlapPolicy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overlapPolicy"); else _explicitNullProperties?.Remove("overlapPolicy"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.TriggerImmediatelyRequestOverlapPolicy? _explicitNullValueOverlapPolicy = default!;
         /// <summary>Timestamp used for the identity of the target workflow. If not set the default value is the current time.</summary>
-        public DateTimeOffset? ScheduledTime { get => _explicitNullValueScheduledTime; set { _explicitNullValueScheduledTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduledTime"); else _explicitNullProperties?.Remove("scheduledTime"); } }
+        public DateTimeOffset? ScheduledTime { get => _explicitNullValueScheduledTime; set { _explicitNullValueScheduledTime = value; AdditionalData?.Remove("scheduledTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduledTime"); else _explicitNullProperties?.Remove("scheduledTime"); } }
         private DateTimeOffset? _explicitNullValueScheduledTime = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.SchedulePatchTriggerImmediately"/> and sets the default values.
@@ -55,7 +57,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "overlapPolicy", n => { OverlapPolicy = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.TriggerImmediatelyRequestOverlapPolicy>(); } },
+                { "overlapPolicy", n => { var parsed = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.TriggerImmediatelyRequestOverlapPolicy>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOverlapPolicy = default; _explicitNullProperties?.Remove("overlapPolicy"); AdditionalData["overlapPolicy"] = unknown; } else { OverlapPolicy = parsed; AdditionalData.Remove("overlapPolicy"); } } },
                 { "scheduledTime", n => { ScheduledTime = n.GetDateTimeOffsetValue(); } },
             };
         }

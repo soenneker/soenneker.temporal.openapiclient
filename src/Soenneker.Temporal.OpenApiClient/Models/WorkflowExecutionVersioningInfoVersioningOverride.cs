@@ -18,49 +18,54 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("autoUpgrade") is { } nullNodeAutoUpgrade && nullNodeAutoUpgrade.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoUpgrade = null;
-            if (parseNode.GetChildNode("behavior") is { } nullNodeBehavior && nullNodeBehavior.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Behavior = null;
-            if (parseNode.GetChildNode("deployment") is { } nullNodeDeployment && nullNodeDeployment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Deployment = null;
-            if (parseNode.GetChildNode("pinned") is { } nullNodePinned && nullNodePinned.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pinned = null;
-            if (parseNode.GetChildNode("pinnedVersion") is { } nullNodePinnedVersion && nullNodePinnedVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PinnedVersion = null;
+            if (parseNode.GetChildNode("autoUpgrade") is null) { _explicitNullValueAutoUpgrade = default!; _explicitNullProperties?.Remove("autoUpgrade"); }
+            else if (parseNode.GetChildNode("autoUpgrade") is { } nullNodeAutoUpgrade && nullNodeAutoUpgrade.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoUpgrade = null;
+            if (parseNode.GetChildNode("behavior") is null) { _explicitNullValueBehavior = default!; _explicitNullProperties?.Remove("behavior"); }
+            else if (parseNode.GetChildNode("behavior") is { } nullNodeBehavior && nullNodeBehavior.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Behavior = null;
+            if (parseNode.GetChildNode("deployment") is null) { _explicitNullValueDeployment = default!; _explicitNullProperties?.Remove("deployment"); }
+            else if (parseNode.GetChildNode("deployment") is { } nullNodeDeployment && nullNodeDeployment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Deployment = null;
+            if (parseNode.GetChildNode("pinned") is null) { _explicitNullValuePinned = default!; _explicitNullProperties?.Remove("pinned"); }
+            else if (parseNode.GetChildNode("pinned") is { } nullNodePinned && nullNodePinned.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pinned = null;
+            if (parseNode.GetChildNode("pinnedVersion") is null) { _explicitNullValuePinnedVersion = default!; _explicitNullProperties?.Remove("pinnedVersion"); }
+            else if (parseNode.GetChildNode("pinnedVersion") is { } nullNodePinnedVersion && nullNodePinnedVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PinnedVersion = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Override the workflow to have AutoUpgrade behavior.</summary>
-        public bool? AutoUpgrade { get => _explicitNullValueAutoUpgrade; set { _explicitNullValueAutoUpgrade = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("autoUpgrade"); else _explicitNullProperties?.Remove("autoUpgrade"); } }
+        public bool? AutoUpgrade { get => _explicitNullValueAutoUpgrade; set { _explicitNullValueAutoUpgrade = value; AdditionalData?.Remove("autoUpgrade"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("autoUpgrade"); else _explicitNullProperties?.Remove("autoUpgrade"); } }
         private bool? _explicitNullValueAutoUpgrade = default!;
         /// <summary>Required. Deprecated. Use `override`.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverrideBehavior? Behavior { get => _explicitNullValueBehavior; set { _explicitNullValueBehavior = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("behavior"); else _explicitNullProperties?.Remove("behavior"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverrideBehavior? Behavior { get => _explicitNullValueBehavior; set { _explicitNullValueBehavior = value; AdditionalData?.Remove("behavior"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("behavior"); else _explicitNullProperties?.Remove("behavior"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverrideBehavior? _explicitNullValueBehavior = default!;
         /// <summary>Required if behavior is `PINNED`. Must be null if behavior is `AUTO_UPGRADE`. Identifies the worker deployment to pin the workflow to. Deprecated. Use `override.pinned.version`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverrideDeployment? Deployment { get => _explicitNullValueDeployment; set { _explicitNullValueDeployment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deployment"); else _explicitNullProperties?.Remove("deployment"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverrideDeployment? Deployment { get => _explicitNullValueDeployment; set { _explicitNullValueDeployment = value; AdditionalData?.Remove("deployment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deployment"); else _explicitNullProperties?.Remove("deployment"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverrideDeployment? _explicitNullValueDeployment = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverrideDeployment Deployment { get => _explicitNullValueDeployment; set { _explicitNullValueDeployment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deployment"); else _explicitNullProperties?.Remove("deployment"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverrideDeployment Deployment { get => _explicitNullValueDeployment; set { _explicitNullValueDeployment = value; AdditionalData?.Remove("deployment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deployment"); else _explicitNullProperties?.Remove("deployment"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverrideDeployment _explicitNullValueDeployment = default!;
 #endif
         /// <summary>Override the workflow to have Pinned behavior.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverridePinned? Pinned { get => _explicitNullValuePinned; set { _explicitNullValuePinned = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pinned"); else _explicitNullProperties?.Remove("pinned"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverridePinned? Pinned { get => _explicitNullValuePinned; set { _explicitNullValuePinned = value; AdditionalData?.Remove("pinned"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pinned"); else _explicitNullProperties?.Remove("pinned"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverridePinned? _explicitNullValuePinned = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverridePinned Pinned { get => _explicitNullValuePinned; set { _explicitNullValuePinned = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pinned"); else _explicitNullProperties?.Remove("pinned"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverridePinned Pinned { get => _explicitNullValuePinned; set { _explicitNullValuePinned = value; AdditionalData?.Remove("pinned"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pinned"); else _explicitNullProperties?.Remove("pinned"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverridePinned _explicitNullValuePinned = default!;
 #endif
         /// <summary>Required if behavior is `PINNED`. Must be absent if behavior is not `PINNED`. Identifies the worker deployment version to pin the workflow to, in the format &quot;&lt;deployment_name&gt;.&lt;build_id&gt;&quot;. Deprecated. Use `override.pinned.version`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PinnedVersion { get => _explicitNullValuePinnedVersion; set { _explicitNullValuePinnedVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pinnedVersion"); else _explicitNullProperties?.Remove("pinnedVersion"); } }
+        public string? PinnedVersion { get => _explicitNullValuePinnedVersion; set { _explicitNullValuePinnedVersion = value; AdditionalData?.Remove("pinnedVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pinnedVersion"); else _explicitNullProperties?.Remove("pinnedVersion"); } }
         private string? _explicitNullValuePinnedVersion = default!;
 #nullable restore
 #else
-        public string PinnedVersion { get => _explicitNullValuePinnedVersion; set { _explicitNullValuePinnedVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pinnedVersion"); else _explicitNullProperties?.Remove("pinnedVersion"); } }
+        public string PinnedVersion { get => _explicitNullValuePinnedVersion; set { _explicitNullValuePinnedVersion = value; AdditionalData?.Remove("pinnedVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pinnedVersion"); else _explicitNullProperties?.Remove("pinnedVersion"); } }
         private string _explicitNullValuePinnedVersion = default!;
 #endif
         /// <summary>
@@ -89,7 +94,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "autoUpgrade", n => { AutoUpgrade = n.GetBoolValue(); } },
-                { "behavior", n => { Behavior = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverrideBehavior>(); } },
+                { "behavior", n => { var parsed = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverrideBehavior>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBehavior = default; _explicitNullProperties?.Remove("behavior"); AdditionalData["behavior"] = unknown; } else { Behavior = parsed; AdditionalData.Remove("behavior"); } } },
                 { "deployment", n => { Deployment = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverrideDeployment>(global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverrideDeployment.CreateFromDiscriminatorValue); } },
                 { "pinned", n => { Pinned = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverridePinned>(global::Soenneker.Temporal.OpenApiClient.Models.VersioningOverridePinned.CreateFromDiscriminatorValue); } },
                 { "pinnedVersion", n => { PinnedVersion = n.GetStringValue(); } },

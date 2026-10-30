@@ -17,7 +17,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("workflowExecutionOptions") is { } nullNodeWorkflowExecutionOptions && nullNodeWorkflowExecutionOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowExecutionOptions = null;
+            if (parseNode.GetChildNode("workflowExecutionOptions") is null) { _explicitNullValueWorkflowExecutionOptions = default!; _explicitNullProperties?.Remove("workflowExecutionOptions"); }
+            else if (parseNode.GetChildNode("workflowExecutionOptions") is { } nullNodeWorkflowExecutionOptions && nullNodeWorkflowExecutionOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowExecutionOptions = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Workflow Execution options after update.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionOptionsResponseWorkflowExecutionOptions? WorkflowExecutionOptions { get => _explicitNullValueWorkflowExecutionOptions; set { _explicitNullValueWorkflowExecutionOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionOptions"); else _explicitNullProperties?.Remove("workflowExecutionOptions"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionOptionsResponseWorkflowExecutionOptions? WorkflowExecutionOptions { get => _explicitNullValueWorkflowExecutionOptions; set { _explicitNullValueWorkflowExecutionOptions = value; AdditionalData?.Remove("workflowExecutionOptions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionOptions"); else _explicitNullProperties?.Remove("workflowExecutionOptions"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionOptionsResponseWorkflowExecutionOptions? _explicitNullValueWorkflowExecutionOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionOptionsResponseWorkflowExecutionOptions WorkflowExecutionOptions { get => _explicitNullValueWorkflowExecutionOptions; set { _explicitNullValueWorkflowExecutionOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionOptions"); else _explicitNullProperties?.Remove("workflowExecutionOptions"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionOptionsResponseWorkflowExecutionOptions WorkflowExecutionOptions { get => _explicitNullValueWorkflowExecutionOptions; set { _explicitNullValueWorkflowExecutionOptions = value; AdditionalData?.Remove("workflowExecutionOptions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionOptions"); else _explicitNullProperties?.Remove("workflowExecutionOptions"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionOptionsResponseWorkflowExecutionOptions _explicitNullValueWorkflowExecutionOptions = default!;
 #endif
         /// <summary>

@@ -18,8 +18,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("currentDeploymentInfo") is { } nullNodeCurrentDeploymentInfo && nullNodeCurrentDeploymentInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentDeploymentInfo = null;
-            if (parseNode.GetChildNode("previousDeploymentInfo") is { } nullNodePreviousDeploymentInfo && nullNodePreviousDeploymentInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreviousDeploymentInfo = null;
+            if (parseNode.GetChildNode("currentDeploymentInfo") is null) { _explicitNullValueCurrentDeploymentInfo = default!; _explicitNullProperties?.Remove("currentDeploymentInfo"); }
+            else if (parseNode.GetChildNode("currentDeploymentInfo") is { } nullNodeCurrentDeploymentInfo && nullNodeCurrentDeploymentInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentDeploymentInfo = null;
+            if (parseNode.GetChildNode("previousDeploymentInfo") is null) { _explicitNullValuePreviousDeploymentInfo = default!; _explicitNullProperties?.Remove("previousDeploymentInfo"); }
+            else if (parseNode.GetChildNode("previousDeploymentInfo") is { } nullNodePreviousDeploymentInfo && nullNodePreviousDeploymentInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreviousDeploymentInfo = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>`DeploymentInfo` holds information about a deployment. Deployment information is tracked automatically by server as soon as the first poll from that deployment reaches the server. There can be multiple task queue workers in a single deployment which are listed in this message. Deprecated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfo? CurrentDeploymentInfo { get => _explicitNullValueCurrentDeploymentInfo; set { _explicitNullValueCurrentDeploymentInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currentDeploymentInfo"); else _explicitNullProperties?.Remove("currentDeploymentInfo"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfo? CurrentDeploymentInfo { get => _explicitNullValueCurrentDeploymentInfo; set { _explicitNullValueCurrentDeploymentInfo = value; AdditionalData?.Remove("currentDeploymentInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currentDeploymentInfo"); else _explicitNullProperties?.Remove("currentDeploymentInfo"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfo? _explicitNullValueCurrentDeploymentInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfo CurrentDeploymentInfo { get => _explicitNullValueCurrentDeploymentInfo; set { _explicitNullValueCurrentDeploymentInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currentDeploymentInfo"); else _explicitNullProperties?.Remove("currentDeploymentInfo"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfo CurrentDeploymentInfo { get => _explicitNullValueCurrentDeploymentInfo; set { _explicitNullValueCurrentDeploymentInfo = value; AdditionalData?.Remove("currentDeploymentInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currentDeploymentInfo"); else _explicitNullProperties?.Remove("currentDeploymentInfo"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.DeploymentInfo _explicitNullValueCurrentDeploymentInfo = default!;
 #endif
         /// <summary>Info of the deployment that was current before executing this operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentResponsePreviousDeploymentInfo? PreviousDeploymentInfo { get => _explicitNullValuePreviousDeploymentInfo; set { _explicitNullValuePreviousDeploymentInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previousDeploymentInfo"); else _explicitNullProperties?.Remove("previousDeploymentInfo"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentResponsePreviousDeploymentInfo? PreviousDeploymentInfo { get => _explicitNullValuePreviousDeploymentInfo; set { _explicitNullValuePreviousDeploymentInfo = value; AdditionalData?.Remove("previousDeploymentInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previousDeploymentInfo"); else _explicitNullProperties?.Remove("previousDeploymentInfo"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentResponsePreviousDeploymentInfo? _explicitNullValuePreviousDeploymentInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentResponsePreviousDeploymentInfo PreviousDeploymentInfo { get => _explicitNullValuePreviousDeploymentInfo; set { _explicitNullValuePreviousDeploymentInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previousDeploymentInfo"); else _explicitNullProperties?.Remove("previousDeploymentInfo"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentResponsePreviousDeploymentInfo PreviousDeploymentInfo { get => _explicitNullValuePreviousDeploymentInfo; set { _explicitNullValuePreviousDeploymentInfo = value; AdditionalData?.Remove("previousDeploymentInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previousDeploymentInfo"); else _explicitNullProperties?.Remove("previousDeploymentInfo"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentResponsePreviousDeploymentInfo _explicitNullValuePreviousDeploymentInfo = default!;
 #endif
         /// <summary>

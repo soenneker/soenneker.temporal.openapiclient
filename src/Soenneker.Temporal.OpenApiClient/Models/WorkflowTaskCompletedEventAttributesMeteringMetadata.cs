@@ -18,13 +18,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("nonfirstLocalActivityExecutionAttempts") is { } nullNodeNonfirstLocalActivityExecutionAttempts && nullNodeNonfirstLocalActivityExecutionAttempts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NonfirstLocalActivityExecutionAttempts = null;
+            if (parseNode.GetChildNode("nonfirstLocalActivityExecutionAttempts") is null) { _explicitNullValueNonfirstLocalActivityExecutionAttempts = default!; _explicitNullProperties?.Remove("nonfirstLocalActivityExecutionAttempts"); }
+            else if (parseNode.GetChildNode("nonfirstLocalActivityExecutionAttempts") is { } nullNodeNonfirstLocalActivityExecutionAttempts && nullNodeNonfirstLocalActivityExecutionAttempts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NonfirstLocalActivityExecutionAttempts = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Count of local activities which have begun an execution attempt during this workflow task, and whose first attempt occurred in some previous task. This is used for metering purposes, and does not affect workflow state. (-- api-linter: core::0141::forbidden-types=disabled     aip.dev/not-precedent: Negative values make no sense to represent. --)</summary>
-        public int? NonfirstLocalActivityExecutionAttempts { get => _explicitNullValueNonfirstLocalActivityExecutionAttempts; set { _explicitNullValueNonfirstLocalActivityExecutionAttempts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nonfirstLocalActivityExecutionAttempts"); else _explicitNullProperties?.Remove("nonfirstLocalActivityExecutionAttempts"); } }
+        public int? NonfirstLocalActivityExecutionAttempts { get => _explicitNullValueNonfirstLocalActivityExecutionAttempts; set { _explicitNullValueNonfirstLocalActivityExecutionAttempts = value; AdditionalData?.Remove("nonfirstLocalActivityExecutionAttempts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nonfirstLocalActivityExecutionAttempts"); else _explicitNullProperties?.Remove("nonfirstLocalActivityExecutionAttempts"); } }
         private int? _explicitNullValueNonfirstLocalActivityExecutionAttempts = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesMeteringMetadata"/> and sets the default values.

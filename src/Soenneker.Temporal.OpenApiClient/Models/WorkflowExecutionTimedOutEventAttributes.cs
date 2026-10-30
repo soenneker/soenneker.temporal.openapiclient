@@ -17,8 +17,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("newExecutionRunId") is { } nullNodeNewExecutionRunId && nullNodeNewExecutionRunId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewExecutionRunId = null;
-            if (parseNode.GetChildNode("retryState") is { } nullNodeRetryState && nullNodeRetryState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RetryState = null;
+            if (parseNode.GetChildNode("newExecutionRunId") is null) { _explicitNullValueNewExecutionRunId = default!; _explicitNullProperties?.Remove("newExecutionRunId"); }
+            else if (parseNode.GetChildNode("newExecutionRunId") is { } nullNodeNewExecutionRunId && nullNodeNewExecutionRunId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewExecutionRunId = null;
+            if (parseNode.GetChildNode("retryState") is null) { _explicitNullValueRetryState = default!; _explicitNullProperties?.Remove("retryState"); }
+            else if (parseNode.GetChildNode("retryState") is { } nullNodeRetryState && nullNodeRetryState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RetryState = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>If another run is started by cron or retry, this contains the new run id.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NewExecutionRunId { get => _explicitNullValueNewExecutionRunId; set { _explicitNullValueNewExecutionRunId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newExecutionRunId"); else _explicitNullProperties?.Remove("newExecutionRunId"); } }
+        public string? NewExecutionRunId { get => _explicitNullValueNewExecutionRunId; set { _explicitNullValueNewExecutionRunId = value; AdditionalData?.Remove("newExecutionRunId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newExecutionRunId"); else _explicitNullProperties?.Remove("newExecutionRunId"); } }
         private string? _explicitNullValueNewExecutionRunId = default!;
 #nullable restore
 #else
-        public string NewExecutionRunId { get => _explicitNullValueNewExecutionRunId; set { _explicitNullValueNewExecutionRunId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newExecutionRunId"); else _explicitNullProperties?.Remove("newExecutionRunId"); } }
+        public string NewExecutionRunId { get => _explicitNullValueNewExecutionRunId; set { _explicitNullValueNewExecutionRunId = value; AdditionalData?.Remove("newExecutionRunId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newExecutionRunId"); else _explicitNullProperties?.Remove("newExecutionRunId"); } }
         private string _explicitNullValueNewExecutionRunId = default!;
 #endif
         /// <summary>The retryState property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTimedOutEventAttributesRetryState? RetryState { get => _explicitNullValueRetryState; set { _explicitNullValueRetryState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("retryState"); else _explicitNullProperties?.Remove("retryState"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTimedOutEventAttributesRetryState? RetryState { get => _explicitNullValueRetryState; set { _explicitNullValueRetryState = value; AdditionalData?.Remove("retryState"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("retryState"); else _explicitNullProperties?.Remove("retryState"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTimedOutEventAttributesRetryState? _explicitNullValueRetryState = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTimedOutEventAttributes"/> and sets the default values.
@@ -62,7 +64,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "newExecutionRunId", n => { NewExecutionRunId = n.GetStringValue(); } },
-                { "retryState", n => { RetryState = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTimedOutEventAttributesRetryState>(); } },
+                { "retryState", n => { var parsed = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionTimedOutEventAttributesRetryState>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRetryState = default; _explicitNullProperties?.Remove("retryState"); AdditionalData["retryState"] = unknown; } else { RetryState = parsed; AdditionalData.Remove("retryState"); } } },
             };
         }
         /// <summary>

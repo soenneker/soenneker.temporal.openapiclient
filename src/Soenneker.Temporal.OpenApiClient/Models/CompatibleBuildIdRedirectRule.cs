@@ -18,8 +18,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("sourceBuildId") is { } nullNodeSourceBuildId && nullNodeSourceBuildId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceBuildId = null;
-            if (parseNode.GetChildNode("targetBuildId") is { } nullNodeTargetBuildId && nullNodeTargetBuildId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetBuildId = null;
+            if (parseNode.GetChildNode("sourceBuildId") is null) { _explicitNullValueSourceBuildId = default!; _explicitNullProperties?.Remove("sourceBuildId"); }
+            else if (parseNode.GetChildNode("sourceBuildId") is { } nullNodeSourceBuildId && nullNodeSourceBuildId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceBuildId = null;
+            if (parseNode.GetChildNode("targetBuildId") is null) { _explicitNullValueTargetBuildId = default!; _explicitNullProperties?.Remove("targetBuildId"); }
+            else if (parseNode.GetChildNode("targetBuildId") is { } nullNodeTargetBuildId && nullNodeTargetBuildId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetBuildId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The sourceBuildId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SourceBuildId { get => _explicitNullValueSourceBuildId; set { _explicitNullValueSourceBuildId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceBuildId"); else _explicitNullProperties?.Remove("sourceBuildId"); } }
+        public string? SourceBuildId { get => _explicitNullValueSourceBuildId; set { _explicitNullValueSourceBuildId = value; AdditionalData?.Remove("sourceBuildId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceBuildId"); else _explicitNullProperties?.Remove("sourceBuildId"); } }
         private string? _explicitNullValueSourceBuildId = default!;
 #nullable restore
 #else
-        public string SourceBuildId { get => _explicitNullValueSourceBuildId; set { _explicitNullValueSourceBuildId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceBuildId"); else _explicitNullProperties?.Remove("sourceBuildId"); } }
+        public string SourceBuildId { get => _explicitNullValueSourceBuildId; set { _explicitNullValueSourceBuildId = value; AdditionalData?.Remove("sourceBuildId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceBuildId"); else _explicitNullProperties?.Remove("sourceBuildId"); } }
         private string _explicitNullValueSourceBuildId = default!;
 #endif
         /// <summary>Target Build ID must be compatible with the Source Build ID; that is it must be able to process event histories made by the Source Build ID by using [Patching](https://docs.temporal.io/workflows#patching) or other means.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TargetBuildId { get => _explicitNullValueTargetBuildId; set { _explicitNullValueTargetBuildId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetBuildId"); else _explicitNullProperties?.Remove("targetBuildId"); } }
+        public string? TargetBuildId { get => _explicitNullValueTargetBuildId; set { _explicitNullValueTargetBuildId = value; AdditionalData?.Remove("targetBuildId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetBuildId"); else _explicitNullProperties?.Remove("targetBuildId"); } }
         private string? _explicitNullValueTargetBuildId = default!;
 #nullable restore
 #else
-        public string TargetBuildId { get => _explicitNullValueTargetBuildId; set { _explicitNullValueTargetBuildId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetBuildId"); else _explicitNullProperties?.Remove("targetBuildId"); } }
+        public string TargetBuildId { get => _explicitNullValueTargetBuildId; set { _explicitNullValueTargetBuildId = value; AdditionalData?.Remove("targetBuildId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetBuildId"); else _explicitNullProperties?.Remove("targetBuildId"); } }
         private string _explicitNullValueTargetBuildId = default!;
 #endif
         /// <summary>

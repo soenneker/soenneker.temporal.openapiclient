@@ -17,16 +17,26 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("baseRunId") is { } nullNodeBaseRunId && nullNodeBaseRunId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BaseRunId = null;
-            if (parseNode.GetChildNode("binaryChecksum") is { } nullNodeBinaryChecksum && nullNodeBinaryChecksum.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BinaryChecksum = null;
-            if (parseNode.GetChildNode("cause") is { } nullNodeCause && nullNodeCause.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cause = null;
-            if (parseNode.GetChildNode("failure") is { } nullNodeFailure && nullNodeFailure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Failure = null;
-            if (parseNode.GetChildNode("forkEventVersion") is { } nullNodeForkEventVersion && nullNodeForkEventVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ForkEventVersion = null;
-            if (parseNode.GetChildNode("identity") is { } nullNodeIdentity && nullNodeIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Identity = null;
-            if (parseNode.GetChildNode("newRunId") is { } nullNodeNewRunId && nullNodeNewRunId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewRunId = null;
-            if (parseNode.GetChildNode("scheduledEventId") is { } nullNodeScheduledEventId && nullNodeScheduledEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduledEventId = null;
-            if (parseNode.GetChildNode("startedEventId") is { } nullNodeStartedEventId && nullNodeStartedEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartedEventId = null;
-            if (parseNode.GetChildNode("workerVersion") is { } nullNodeWorkerVersion && nullNodeWorkerVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerVersion = null;
+            if (parseNode.GetChildNode("baseRunId") is null) { _explicitNullValueBaseRunId = default!; _explicitNullProperties?.Remove("baseRunId"); }
+            else if (parseNode.GetChildNode("baseRunId") is { } nullNodeBaseRunId && nullNodeBaseRunId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BaseRunId = null;
+            if (parseNode.GetChildNode("binaryChecksum") is null) { _explicitNullValueBinaryChecksum = default!; _explicitNullProperties?.Remove("binaryChecksum"); }
+            else if (parseNode.GetChildNode("binaryChecksum") is { } nullNodeBinaryChecksum && nullNodeBinaryChecksum.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BinaryChecksum = null;
+            if (parseNode.GetChildNode("cause") is null) { _explicitNullValueCause = default!; _explicitNullProperties?.Remove("cause"); }
+            else if (parseNode.GetChildNode("cause") is { } nullNodeCause && nullNodeCause.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cause = null;
+            if (parseNode.GetChildNode("failure") is null) { _explicitNullValueFailure = default!; _explicitNullProperties?.Remove("failure"); }
+            else if (parseNode.GetChildNode("failure") is { } nullNodeFailure && nullNodeFailure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Failure = null;
+            if (parseNode.GetChildNode("forkEventVersion") is null) { _explicitNullValueForkEventVersion = default!; _explicitNullProperties?.Remove("forkEventVersion"); }
+            else if (parseNode.GetChildNode("forkEventVersion") is { } nullNodeForkEventVersion && nullNodeForkEventVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ForkEventVersion = null;
+            if (parseNode.GetChildNode("identity") is null) { _explicitNullValueIdentity = default!; _explicitNullProperties?.Remove("identity"); }
+            else if (parseNode.GetChildNode("identity") is { } nullNodeIdentity && nullNodeIdentity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Identity = null;
+            if (parseNode.GetChildNode("newRunId") is null) { _explicitNullValueNewRunId = default!; _explicitNullProperties?.Remove("newRunId"); }
+            else if (parseNode.GetChildNode("newRunId") is { } nullNodeNewRunId && nullNodeNewRunId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewRunId = null;
+            if (parseNode.GetChildNode("scheduledEventId") is null) { _explicitNullValueScheduledEventId = default!; _explicitNullProperties?.Remove("scheduledEventId"); }
+            else if (parseNode.GetChildNode("scheduledEventId") is { } nullNodeScheduledEventId && nullNodeScheduledEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduledEventId = null;
+            if (parseNode.GetChildNode("startedEventId") is null) { _explicitNullValueStartedEventId = default!; _explicitNullProperties?.Remove("startedEventId"); }
+            else if (parseNode.GetChildNode("startedEventId") is { } nullNodeStartedEventId && nullNodeStartedEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartedEventId = null;
+            if (parseNode.GetChildNode("workerVersion") is null) { _explicitNullValueWorkerVersion = default!; _explicitNullProperties?.Remove("workerVersion"); }
+            else if (parseNode.GetChildNode("workerVersion") is { } nullNodeWorkerVersion && nullNodeWorkerVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerVersion = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -34,94 +44,94 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The original run id of the workflow. For reset workflow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BaseRunId { get => _explicitNullValueBaseRunId; set { _explicitNullValueBaseRunId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("baseRunId"); else _explicitNullProperties?.Remove("baseRunId"); } }
+        public string? BaseRunId { get => _explicitNullValueBaseRunId; set { _explicitNullValueBaseRunId = value; AdditionalData?.Remove("baseRunId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("baseRunId"); else _explicitNullProperties?.Remove("baseRunId"); } }
         private string? _explicitNullValueBaseRunId = default!;
 #nullable restore
 #else
-        public string BaseRunId { get => _explicitNullValueBaseRunId; set { _explicitNullValueBaseRunId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("baseRunId"); else _explicitNullProperties?.Remove("baseRunId"); } }
+        public string BaseRunId { get => _explicitNullValueBaseRunId; set { _explicitNullValueBaseRunId = value; AdditionalData?.Remove("baseRunId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("baseRunId"); else _explicitNullProperties?.Remove("baseRunId"); } }
         private string _explicitNullValueBaseRunId = default!;
 #endif
         /// <summary>Deprecated. This field should be cleaned up when versioning-2 API is removed. [cleanup-experimental-wv] If a worker explicitly failed this task, its binary id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BinaryChecksum { get => _explicitNullValueBinaryChecksum; set { _explicitNullValueBinaryChecksum = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("binaryChecksum"); else _explicitNullProperties?.Remove("binaryChecksum"); } }
+        public string? BinaryChecksum { get => _explicitNullValueBinaryChecksum; set { _explicitNullValueBinaryChecksum = value; AdditionalData?.Remove("binaryChecksum"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("binaryChecksum"); else _explicitNullProperties?.Remove("binaryChecksum"); } }
         private string? _explicitNullValueBinaryChecksum = default!;
 #nullable restore
 #else
-        public string BinaryChecksum { get => _explicitNullValueBinaryChecksum; set { _explicitNullValueBinaryChecksum = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("binaryChecksum"); else _explicitNullProperties?.Remove("binaryChecksum"); } }
+        public string BinaryChecksum { get => _explicitNullValueBinaryChecksum; set { _explicitNullValueBinaryChecksum = value; AdditionalData?.Remove("binaryChecksum"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("binaryChecksum"); else _explicitNullProperties?.Remove("binaryChecksum"); } }
         private string _explicitNullValueBinaryChecksum = default!;
 #endif
         /// <summary>The cause property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributesCause? Cause { get => _explicitNullValueCause; set { _explicitNullValueCause = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cause"); else _explicitNullProperties?.Remove("cause"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributesCause? Cause { get => _explicitNullValueCause; set { _explicitNullValueCause = value; AdditionalData?.Remove("cause"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cause"); else _explicitNullProperties?.Remove("cause"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributesCause? _explicitNullValueCause = default!;
         /// <summary>The failure details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributesFailure? Failure { get => _explicitNullValueFailure; set { _explicitNullValueFailure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failure"); else _explicitNullProperties?.Remove("failure"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributesFailure? Failure { get => _explicitNullValueFailure; set { _explicitNullValueFailure = value; AdditionalData?.Remove("failure"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failure"); else _explicitNullProperties?.Remove("failure"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributesFailure? _explicitNullValueFailure = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributesFailure Failure { get => _explicitNullValueFailure; set { _explicitNullValueFailure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failure"); else _explicitNullProperties?.Remove("failure"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributesFailure Failure { get => _explicitNullValueFailure; set { _explicitNullValueFailure = value; AdditionalData?.Remove("failure"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failure"); else _explicitNullProperties?.Remove("failure"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributesFailure _explicitNullValueFailure = default!;
 #endif
         /// <summary>Version of the event where the history branch was forked. Used by multi-cluster replication during resets to identify the correct history branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ForkEventVersion { get => _explicitNullValueForkEventVersion; set { _explicitNullValueForkEventVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forkEventVersion"); else _explicitNullProperties?.Remove("forkEventVersion"); } }
+        public string? ForkEventVersion { get => _explicitNullValueForkEventVersion; set { _explicitNullValueForkEventVersion = value; AdditionalData?.Remove("forkEventVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forkEventVersion"); else _explicitNullProperties?.Remove("forkEventVersion"); } }
         private string? _explicitNullValueForkEventVersion = default!;
 #nullable restore
 #else
-        public string ForkEventVersion { get => _explicitNullValueForkEventVersion; set { _explicitNullValueForkEventVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forkEventVersion"); else _explicitNullProperties?.Remove("forkEventVersion"); } }
+        public string ForkEventVersion { get => _explicitNullValueForkEventVersion; set { _explicitNullValueForkEventVersion = value; AdditionalData?.Remove("forkEventVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forkEventVersion"); else _explicitNullProperties?.Remove("forkEventVersion"); } }
         private string _explicitNullValueForkEventVersion = default!;
 #endif
         /// <summary>If a worker explicitly failed this task, this field contains the worker&apos;s identity. When the server generates the failure internally this field is set as &apos;history-service&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity"); else _explicitNullProperties?.Remove("identity"); } }
+        public string? Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; AdditionalData?.Remove("identity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity"); else _explicitNullProperties?.Remove("identity"); } }
         private string? _explicitNullValueIdentity = default!;
 #nullable restore
 #else
-        public string Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity"); else _explicitNullProperties?.Remove("identity"); } }
+        public string Identity { get => _explicitNullValueIdentity; set { _explicitNullValueIdentity = value; AdditionalData?.Remove("identity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identity"); else _explicitNullProperties?.Remove("identity"); } }
         private string _explicitNullValueIdentity = default!;
 #endif
         /// <summary>If the workflow is being reset, the new run id.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NewRunId { get => _explicitNullValueNewRunId; set { _explicitNullValueNewRunId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newRunId"); else _explicitNullProperties?.Remove("newRunId"); } }
+        public string? NewRunId { get => _explicitNullValueNewRunId; set { _explicitNullValueNewRunId = value; AdditionalData?.Remove("newRunId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newRunId"); else _explicitNullProperties?.Remove("newRunId"); } }
         private string? _explicitNullValueNewRunId = default!;
 #nullable restore
 #else
-        public string NewRunId { get => _explicitNullValueNewRunId; set { _explicitNullValueNewRunId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newRunId"); else _explicitNullProperties?.Remove("newRunId"); } }
+        public string NewRunId { get => _explicitNullValueNewRunId; set { _explicitNullValueNewRunId = value; AdditionalData?.Remove("newRunId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newRunId"); else _explicitNullProperties?.Remove("newRunId"); } }
         private string _explicitNullValueNewRunId = default!;
 #endif
         /// <summary>The id of the `WORKFLOW_TASK_SCHEDULED` event this task corresponds to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ScheduledEventId { get => _explicitNullValueScheduledEventId; set { _explicitNullValueScheduledEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduledEventId"); else _explicitNullProperties?.Remove("scheduledEventId"); } }
+        public string? ScheduledEventId { get => _explicitNullValueScheduledEventId; set { _explicitNullValueScheduledEventId = value; AdditionalData?.Remove("scheduledEventId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduledEventId"); else _explicitNullProperties?.Remove("scheduledEventId"); } }
         private string? _explicitNullValueScheduledEventId = default!;
 #nullable restore
 #else
-        public string ScheduledEventId { get => _explicitNullValueScheduledEventId; set { _explicitNullValueScheduledEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduledEventId"); else _explicitNullProperties?.Remove("scheduledEventId"); } }
+        public string ScheduledEventId { get => _explicitNullValueScheduledEventId; set { _explicitNullValueScheduledEventId = value; AdditionalData?.Remove("scheduledEventId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduledEventId"); else _explicitNullProperties?.Remove("scheduledEventId"); } }
         private string _explicitNullValueScheduledEventId = default!;
 #endif
         /// <summary>The id of the `WORKFLOW_TASK_STARTED` event this task corresponds to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartedEventId { get => _explicitNullValueStartedEventId; set { _explicitNullValueStartedEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startedEventId"); else _explicitNullProperties?.Remove("startedEventId"); } }
+        public string? StartedEventId { get => _explicitNullValueStartedEventId; set { _explicitNullValueStartedEventId = value; AdditionalData?.Remove("startedEventId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startedEventId"); else _explicitNullProperties?.Remove("startedEventId"); } }
         private string? _explicitNullValueStartedEventId = default!;
 #nullable restore
 #else
-        public string StartedEventId { get => _explicitNullValueStartedEventId; set { _explicitNullValueStartedEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startedEventId"); else _explicitNullProperties?.Remove("startedEventId"); } }
+        public string StartedEventId { get => _explicitNullValueStartedEventId; set { _explicitNullValueStartedEventId = value; AdditionalData?.Remove("startedEventId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startedEventId"); else _explicitNullProperties?.Remove("startedEventId"); } }
         private string _explicitNullValueStartedEventId = default!;
 #endif
         /// <summary>Version info of the worker who processed this workflow task. If present, the `build_id` field within is also used as `binary_checksum`, which may be omitted in that case (it may also be populated to preserve compatibility). Deprecated. This field should be cleaned up when versioning-2 API is removed. [cleanup-experimental-wv]</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributesWorkerVersion? WorkerVersion { get => _explicitNullValueWorkerVersion; set { _explicitNullValueWorkerVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerVersion"); else _explicitNullProperties?.Remove("workerVersion"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributesWorkerVersion? WorkerVersion { get => _explicitNullValueWorkerVersion; set { _explicitNullValueWorkerVersion = value; AdditionalData?.Remove("workerVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerVersion"); else _explicitNullProperties?.Remove("workerVersion"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributesWorkerVersion? _explicitNullValueWorkerVersion = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributesWorkerVersion WorkerVersion { get => _explicitNullValueWorkerVersion; set { _explicitNullValueWorkerVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerVersion"); else _explicitNullProperties?.Remove("workerVersion"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributesWorkerVersion WorkerVersion { get => _explicitNullValueWorkerVersion; set { _explicitNullValueWorkerVersion = value; AdditionalData?.Remove("workerVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerVersion"); else _explicitNullProperties?.Remove("workerVersion"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributesWorkerVersion _explicitNullValueWorkerVersion = default!;
 #endif
         /// <summary>
@@ -151,7 +161,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             {
                 { "baseRunId", n => { BaseRunId = n.GetStringValue(); } },
                 { "binaryChecksum", n => { BinaryChecksum = n.GetStringValue(); } },
-                { "cause", n => { Cause = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributesCause>(); } },
+                { "cause", n => { var parsed = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributesCause>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCause = default; _explicitNullProperties?.Remove("cause"); AdditionalData["cause"] = unknown; } else { Cause = parsed; AdditionalData.Remove("cause"); } } },
                 { "failure", n => { Failure = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributesFailure>(global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskFailedEventAttributesFailure.CreateFromDiscriminatorValue); } },
                 { "forkEventVersion", n => { ForkEventVersion = n.GetStringValue(); } },
                 { "identity", n => { Identity = n.GetStringValue(); } },

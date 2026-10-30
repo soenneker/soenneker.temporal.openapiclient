@@ -18,23 +18,25 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("failoverTime") is { } nullNodeFailoverTime && nullNodeFailoverTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailoverTime = null;
-            if (parseNode.GetChildNode("failoverVersion") is { } nullNodeFailoverVersion && nullNodeFailoverVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailoverVersion = null;
+            if (parseNode.GetChildNode("failoverTime") is null) { _explicitNullValueFailoverTime = default!; _explicitNullProperties?.Remove("failoverTime"); }
+            else if (parseNode.GetChildNode("failoverTime") is { } nullNodeFailoverTime && nullNodeFailoverTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailoverTime = null;
+            if (parseNode.GetChildNode("failoverVersion") is null) { _explicitNullValueFailoverVersion = default!; _explicitNullProperties?.Remove("failoverVersion"); }
+            else if (parseNode.GetChildNode("failoverVersion") is { } nullNodeFailoverVersion && nullNodeFailoverVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailoverVersion = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Timestamp when the Cluster switched to the following failover_version</summary>
-        public DateTimeOffset? FailoverTime { get => _explicitNullValueFailoverTime; set { _explicitNullValueFailoverTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failoverTime"); else _explicitNullProperties?.Remove("failoverTime"); } }
+        public DateTimeOffset? FailoverTime { get => _explicitNullValueFailoverTime; set { _explicitNullValueFailoverTime = value; AdditionalData?.Remove("failoverTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failoverTime"); else _explicitNullProperties?.Remove("failoverTime"); } }
         private DateTimeOffset? _explicitNullValueFailoverTime = default!;
         /// <summary>The failoverVersion property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FailoverVersion { get => _explicitNullValueFailoverVersion; set { _explicitNullValueFailoverVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failoverVersion"); else _explicitNullProperties?.Remove("failoverVersion"); } }
+        public string? FailoverVersion { get => _explicitNullValueFailoverVersion; set { _explicitNullValueFailoverVersion = value; AdditionalData?.Remove("failoverVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failoverVersion"); else _explicitNullProperties?.Remove("failoverVersion"); } }
         private string? _explicitNullValueFailoverVersion = default!;
 #nullable restore
 #else
-        public string FailoverVersion { get => _explicitNullValueFailoverVersion; set { _explicitNullValueFailoverVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failoverVersion"); else _explicitNullProperties?.Remove("failoverVersion"); } }
+        public string FailoverVersion { get => _explicitNullValueFailoverVersion; set { _explicitNullValueFailoverVersion = value; AdditionalData?.Remove("failoverVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failoverVersion"); else _explicitNullProperties?.Remove("failoverVersion"); } }
         private string _explicitNullValueFailoverVersion = default!;
 #endif
         /// <summary>

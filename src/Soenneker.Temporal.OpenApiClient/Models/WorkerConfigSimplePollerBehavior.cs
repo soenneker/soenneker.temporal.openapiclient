@@ -17,13 +17,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("maxPollers") is { } nullNodeMaxPollers && nullNodeMaxPollers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxPollers = null;
+            if (parseNode.GetChildNode("maxPollers") is null) { _explicitNullValueMaxPollers = default!; _explicitNullProperties?.Remove("maxPollers"); }
+            else if (parseNode.GetChildNode("maxPollers") is { } nullNodeMaxPollers && nullNodeMaxPollers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxPollers = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The maxPollers property</summary>
-        public int? MaxPollers { get => _explicitNullValueMaxPollers; set { _explicitNullValueMaxPollers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxPollers"); else _explicitNullProperties?.Remove("maxPollers"); } }
+        public int? MaxPollers { get => _explicitNullValueMaxPollers; set { _explicitNullValueMaxPollers = value; AdditionalData?.Remove("maxPollers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxPollers"); else _explicitNullProperties?.Remove("maxPollers"); } }
         private int? _explicitNullValueMaxPollers = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkerConfigSimplePollerBehavior"/> and sets the default values.

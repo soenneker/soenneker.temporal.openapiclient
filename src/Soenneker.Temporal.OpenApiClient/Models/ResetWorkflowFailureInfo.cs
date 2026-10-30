@@ -17,7 +17,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("lastHeartbeatDetails") is { } nullNodeLastHeartbeatDetails && nullNodeLastHeartbeatDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastHeartbeatDetails = null;
+            if (parseNode.GetChildNode("lastHeartbeatDetails") is null) { _explicitNullValueLastHeartbeatDetails = default!; _explicitNullProperties?.Remove("lastHeartbeatDetails"); }
+            else if (parseNode.GetChildNode("lastHeartbeatDetails") is { } nullNodeLastHeartbeatDetails && nullNodeLastHeartbeatDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastHeartbeatDetails = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>See `Payload`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.Payloads? LastHeartbeatDetails { get => _explicitNullValueLastHeartbeatDetails; set { _explicitNullValueLastHeartbeatDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastHeartbeatDetails"); else _explicitNullProperties?.Remove("lastHeartbeatDetails"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.Payloads? LastHeartbeatDetails { get => _explicitNullValueLastHeartbeatDetails; set { _explicitNullValueLastHeartbeatDetails = value; AdditionalData?.Remove("lastHeartbeatDetails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastHeartbeatDetails"); else _explicitNullProperties?.Remove("lastHeartbeatDetails"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.Payloads? _explicitNullValueLastHeartbeatDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.Payloads LastHeartbeatDetails { get => _explicitNullValueLastHeartbeatDetails; set { _explicitNullValueLastHeartbeatDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastHeartbeatDetails"); else _explicitNullProperties?.Remove("lastHeartbeatDetails"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.Payloads LastHeartbeatDetails { get => _explicitNullValueLastHeartbeatDetails; set { _explicitNullValueLastHeartbeatDetails = value; AdditionalData?.Remove("lastHeartbeatDetails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastHeartbeatDetails"); else _explicitNullProperties?.Remove("lastHeartbeatDetails"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.Payloads _explicitNullValueLastHeartbeatDetails = default!;
 #endif
         /// <summary>

@@ -17,21 +17,24 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("initialPollers") is { } nullNodeInitialPollers && nullNodeInitialPollers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InitialPollers = null;
-            if (parseNode.GetChildNode("maxPollers") is { } nullNodeMaxPollers && nullNodeMaxPollers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxPollers = null;
-            if (parseNode.GetChildNode("minPollers") is { } nullNodeMinPollers && nullNodeMinPollers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinPollers = null;
+            if (parseNode.GetChildNode("initialPollers") is null) { _explicitNullValueInitialPollers = default!; _explicitNullProperties?.Remove("initialPollers"); }
+            else if (parseNode.GetChildNode("initialPollers") is { } nullNodeInitialPollers && nullNodeInitialPollers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InitialPollers = null;
+            if (parseNode.GetChildNode("maxPollers") is null) { _explicitNullValueMaxPollers = default!; _explicitNullProperties?.Remove("maxPollers"); }
+            else if (parseNode.GetChildNode("maxPollers") is { } nullNodeMaxPollers && nullNodeMaxPollers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxPollers = null;
+            if (parseNode.GetChildNode("minPollers") is null) { _explicitNullValueMinPollers = default!; _explicitNullProperties?.Remove("minPollers"); }
+            else if (parseNode.GetChildNode("minPollers") is { } nullNodeMinPollers && nullNodeMinPollers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinPollers = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>This many polls will be attempted initially before scaling kicks in. Must be between  `minimum` and `maximum`.</summary>
-        public int? InitialPollers { get => _explicitNullValueInitialPollers; set { _explicitNullValueInitialPollers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initialPollers"); else _explicitNullProperties?.Remove("initialPollers"); } }
+        public int? InitialPollers { get => _explicitNullValueInitialPollers; set { _explicitNullValueInitialPollers = value; AdditionalData?.Remove("initialPollers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initialPollers"); else _explicitNullProperties?.Remove("initialPollers"); } }
         private int? _explicitNullValueInitialPollers = default!;
         /// <summary>At most this many poll calls will ever be open at once. Must be &gt;= `minimum`.</summary>
-        public int? MaxPollers { get => _explicitNullValueMaxPollers; set { _explicitNullValueMaxPollers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxPollers"); else _explicitNullProperties?.Remove("maxPollers"); } }
+        public int? MaxPollers { get => _explicitNullValueMaxPollers; set { _explicitNullValueMaxPollers = value; AdditionalData?.Remove("maxPollers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxPollers"); else _explicitNullProperties?.Remove("maxPollers"); } }
         private int? _explicitNullValueMaxPollers = default!;
         /// <summary>At least this many poll calls will always be attempted (assuming slots are available). Cannot be zero.</summary>
-        public int? MinPollers { get => _explicitNullValueMinPollers; set { _explicitNullValueMinPollers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minPollers"); else _explicitNullProperties?.Remove("minPollers"); } }
+        public int? MinPollers { get => _explicitNullValueMinPollers; set { _explicitNullValueMinPollers = value; AdditionalData?.Remove("minPollers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minPollers"); else _explicitNullProperties?.Remove("minPollers"); } }
         private int? _explicitNullValueMinPollers = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkerConfigAutoscalingPollerBehavior"/> and sets the default values.

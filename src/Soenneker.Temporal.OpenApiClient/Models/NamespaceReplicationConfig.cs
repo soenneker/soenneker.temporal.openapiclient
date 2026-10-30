@@ -17,19 +17,22 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("activeClusterName") is { } nullNodeActiveClusterName && nullNodeActiveClusterName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActiveClusterName = null;
-            if (parseNode.GetChildNode("clusters") is { } nullNodeClusters && nullNodeClusters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Clusters = null;
-            if (parseNode.GetChildNode("state") is { } nullNodeState && nullNodeState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) State = null;
+            if (parseNode.GetChildNode("activeClusterName") is null) { _explicitNullValueActiveClusterName = default!; _explicitNullProperties?.Remove("activeClusterName"); }
+            else if (parseNode.GetChildNode("activeClusterName") is { } nullNodeActiveClusterName && nullNodeActiveClusterName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActiveClusterName = null;
+            if (parseNode.GetChildNode("clusters") is null) { _explicitNullValueClusters = default!; _explicitNullProperties?.Remove("clusters"); }
+            else if (parseNode.GetChildNode("clusters") is { } nullNodeClusters && nullNodeClusters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Clusters = null;
+            if (parseNode.GetChildNode("state") is null) { _explicitNullValueState = default!; _explicitNullProperties?.Remove("state"); }
+            else if (parseNode.GetChildNode("state") is { } nullNodeState && nullNodeState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) State = null;
         }
 
         /// <summary>The activeClusterName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ActiveClusterName { get => _explicitNullValueActiveClusterName; set { _explicitNullValueActiveClusterName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activeClusterName"); else _explicitNullProperties?.Remove("activeClusterName"); } }
+        public string? ActiveClusterName { get => _explicitNullValueActiveClusterName; set { _explicitNullValueActiveClusterName = value; AdditionalData?.Remove("activeClusterName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activeClusterName"); else _explicitNullProperties?.Remove("activeClusterName"); } }
         private string? _explicitNullValueActiveClusterName = default!;
 #nullable restore
 #else
-        public string ActiveClusterName { get => _explicitNullValueActiveClusterName; set { _explicitNullValueActiveClusterName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activeClusterName"); else _explicitNullProperties?.Remove("activeClusterName"); } }
+        public string ActiveClusterName { get => _explicitNullValueActiveClusterName; set { _explicitNullValueActiveClusterName = value; AdditionalData?.Remove("activeClusterName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activeClusterName"); else _explicitNullProperties?.Remove("activeClusterName"); } }
         private string _explicitNullValueActiveClusterName = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -37,15 +40,15 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The clusters property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.ClusterReplicationConfig>? Clusters { get => _explicitNullValueClusters; set { _explicitNullValueClusters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clusters"); else _explicitNullProperties?.Remove("clusters"); } }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.ClusterReplicationConfig>? Clusters { get => _explicitNullValueClusters; set { _explicitNullValueClusters = value; AdditionalData?.Remove("clusters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clusters"); else _explicitNullProperties?.Remove("clusters"); } }
         private List<global::Soenneker.Temporal.OpenApiClient.Models.ClusterReplicationConfig>? _explicitNullValueClusters = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.ClusterReplicationConfig> Clusters { get => _explicitNullValueClusters; set { _explicitNullValueClusters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clusters"); else _explicitNullProperties?.Remove("clusters"); } }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.ClusterReplicationConfig> Clusters { get => _explicitNullValueClusters; set { _explicitNullValueClusters = value; AdditionalData?.Remove("clusters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clusters"); else _explicitNullProperties?.Remove("clusters"); } }
         private List<global::Soenneker.Temporal.OpenApiClient.Models.ClusterReplicationConfig> _explicitNullValueClusters = default!;
 #endif
         /// <summary>The state property</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceReplicationConfigState? State { get => _explicitNullValueState; set { _explicitNullValueState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state"); else _explicitNullProperties?.Remove("state"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NamespaceReplicationConfigState? State { get => _explicitNullValueState; set { _explicitNullValueState = value; AdditionalData?.Remove("state"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state"); else _explicitNullProperties?.Remove("state"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.NamespaceReplicationConfigState? _explicitNullValueState = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.NamespaceReplicationConfig"/> and sets the default values.
@@ -74,7 +77,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             {
                 { "activeClusterName", n => { ActiveClusterName = n.GetStringValue(); } },
                 { "clusters", n => { Clusters = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.ClusterReplicationConfig>(global::Soenneker.Temporal.OpenApiClient.Models.ClusterReplicationConfig.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "state", n => { State = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceReplicationConfigState>(); } },
+                { "state", n => { var parsed = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceReplicationConfigState>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueState = default; _explicitNullProperties?.Remove("state"); AdditionalData["state"] = unknown; } else { State = parsed; AdditionalData.Remove("state"); } } },
             };
         }
         /// <summary>

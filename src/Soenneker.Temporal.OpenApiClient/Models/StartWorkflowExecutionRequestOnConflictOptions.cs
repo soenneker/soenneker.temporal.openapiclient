@@ -18,21 +18,24 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("attachCompletionCallbacks") is { } nullNodeAttachCompletionCallbacks && nullNodeAttachCompletionCallbacks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AttachCompletionCallbacks = null;
-            if (parseNode.GetChildNode("attachLinks") is { } nullNodeAttachLinks && nullNodeAttachLinks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AttachLinks = null;
-            if (parseNode.GetChildNode("attachRequestId") is { } nullNodeAttachRequestId && nullNodeAttachRequestId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AttachRequestId = null;
+            if (parseNode.GetChildNode("attachCompletionCallbacks") is null) { _explicitNullValueAttachCompletionCallbacks = default!; _explicitNullProperties?.Remove("attachCompletionCallbacks"); }
+            else if (parseNode.GetChildNode("attachCompletionCallbacks") is { } nullNodeAttachCompletionCallbacks && nullNodeAttachCompletionCallbacks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AttachCompletionCallbacks = null;
+            if (parseNode.GetChildNode("attachLinks") is null) { _explicitNullValueAttachLinks = default!; _explicitNullProperties?.Remove("attachLinks"); }
+            else if (parseNode.GetChildNode("attachLinks") is { } nullNodeAttachLinks && nullNodeAttachLinks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AttachLinks = null;
+            if (parseNode.GetChildNode("attachRequestId") is null) { _explicitNullValueAttachRequestId = default!; _explicitNullProperties?.Remove("attachRequestId"); }
+            else if (parseNode.GetChildNode("attachRequestId") is { } nullNodeAttachRequestId && nullNodeAttachRequestId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AttachRequestId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Attaches the completion callbacks to the running execution.</summary>
-        public bool? AttachCompletionCallbacks { get => _explicitNullValueAttachCompletionCallbacks; set { _explicitNullValueAttachCompletionCallbacks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachCompletionCallbacks"); else _explicitNullProperties?.Remove("attachCompletionCallbacks"); } }
+        public bool? AttachCompletionCallbacks { get => _explicitNullValueAttachCompletionCallbacks; set { _explicitNullValueAttachCompletionCallbacks = value; AdditionalData?.Remove("attachCompletionCallbacks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachCompletionCallbacks"); else _explicitNullProperties?.Remove("attachCompletionCallbacks"); } }
         private bool? _explicitNullValueAttachCompletionCallbacks = default!;
         /// <summary>Attaches the links to the running execution.</summary>
-        public bool? AttachLinks { get => _explicitNullValueAttachLinks; set { _explicitNullValueAttachLinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachLinks"); else _explicitNullProperties?.Remove("attachLinks"); } }
+        public bool? AttachLinks { get => _explicitNullValueAttachLinks; set { _explicitNullValueAttachLinks = value; AdditionalData?.Remove("attachLinks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachLinks"); else _explicitNullProperties?.Remove("attachLinks"); } }
         private bool? _explicitNullValueAttachLinks = default!;
         /// <summary>Attaches the request ID to the running execution.</summary>
-        public bool? AttachRequestId { get => _explicitNullValueAttachRequestId; set { _explicitNullValueAttachRequestId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachRequestId"); else _explicitNullProperties?.Remove("attachRequestId"); } }
+        public bool? AttachRequestId { get => _explicitNullValueAttachRequestId; set { _explicitNullValueAttachRequestId = value; AdditionalData?.Remove("attachRequestId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachRequestId"); else _explicitNullProperties?.Remove("attachRequestId"); } }
         private bool? _explicitNullValueAttachRequestId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionRequestOnConflictOptions"/> and sets the default values.

@@ -18,49 +18,54 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("currentHostCpuUsage") is { } nullNodeCurrentHostCpuUsage && nullNodeCurrentHostCpuUsage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentHostCpuUsage = null;
-            if (parseNode.GetChildNode("currentHostMemUsage") is { } nullNodeCurrentHostMemUsage && nullNodeCurrentHostMemUsage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentHostMemUsage = null;
-            if (parseNode.GetChildNode("hostName") is { } nullNodeHostName && nullNodeHostName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HostName = null;
-            if (parseNode.GetChildNode("processId") is { } nullNodeProcessId && nullNodeProcessId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProcessId = null;
-            if (parseNode.GetChildNode("workerGroupingKey") is { } nullNodeWorkerGroupingKey && nullNodeWorkerGroupingKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerGroupingKey = null;
+            if (parseNode.GetChildNode("currentHostCpuUsage") is null) { _explicitNullValueCurrentHostCpuUsage = default!; _explicitNullProperties?.Remove("currentHostCpuUsage"); }
+            else if (parseNode.GetChildNode("currentHostCpuUsage") is { } nullNodeCurrentHostCpuUsage && nullNodeCurrentHostCpuUsage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentHostCpuUsage = null;
+            if (parseNode.GetChildNode("currentHostMemUsage") is null) { _explicitNullValueCurrentHostMemUsage = default!; _explicitNullProperties?.Remove("currentHostMemUsage"); }
+            else if (parseNode.GetChildNode("currentHostMemUsage") is { } nullNodeCurrentHostMemUsage && nullNodeCurrentHostMemUsage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentHostMemUsage = null;
+            if (parseNode.GetChildNode("hostName") is null) { _explicitNullValueHostName = default!; _explicitNullProperties?.Remove("hostName"); }
+            else if (parseNode.GetChildNode("hostName") is { } nullNodeHostName && nullNodeHostName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HostName = null;
+            if (parseNode.GetChildNode("processId") is null) { _explicitNullValueProcessId = default!; _explicitNullProperties?.Remove("processId"); }
+            else if (parseNode.GetChildNode("processId") is { } nullNodeProcessId && nullNodeProcessId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProcessId = null;
+            if (parseNode.GetChildNode("workerGroupingKey") is null) { _explicitNullValueWorkerGroupingKey = default!; _explicitNullProperties?.Remove("workerGroupingKey"); }
+            else if (parseNode.GetChildNode("workerGroupingKey") is { } nullNodeWorkerGroupingKey && nullNodeWorkerGroupingKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerGroupingKey = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>System used CPU as a float in the range [0.0, 1.0] where 1.0 is defined as all cores on the host pegged.</summary>
-        public float? CurrentHostCpuUsage { get => _explicitNullValueCurrentHostCpuUsage; set { _explicitNullValueCurrentHostCpuUsage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currentHostCpuUsage"); else _explicitNullProperties?.Remove("currentHostCpuUsage"); } }
+        public float? CurrentHostCpuUsage { get => _explicitNullValueCurrentHostCpuUsage; set { _explicitNullValueCurrentHostCpuUsage = value; AdditionalData?.Remove("currentHostCpuUsage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currentHostCpuUsage"); else _explicitNullProperties?.Remove("currentHostCpuUsage"); } }
         private float? _explicitNullValueCurrentHostCpuUsage = default!;
         /// <summary>System used memory as a float in the range [0.0, 1.0] where 1.0 is defined as all available memory on the host is used.</summary>
-        public float? CurrentHostMemUsage { get => _explicitNullValueCurrentHostMemUsage; set { _explicitNullValueCurrentHostMemUsage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currentHostMemUsage"); else _explicitNullProperties?.Remove("currentHostMemUsage"); } }
+        public float? CurrentHostMemUsage { get => _explicitNullValueCurrentHostMemUsage; set { _explicitNullValueCurrentHostMemUsage = value; AdditionalData?.Remove("currentHostMemUsage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currentHostMemUsage"); else _explicitNullProperties?.Remove("currentHostMemUsage"); } }
         private float? _explicitNullValueCurrentHostMemUsage = default!;
         /// <summary>Worker host identifier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HostName { get => _explicitNullValueHostName; set { _explicitNullValueHostName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hostName"); else _explicitNullProperties?.Remove("hostName"); } }
+        public string? HostName { get => _explicitNullValueHostName; set { _explicitNullValueHostName = value; AdditionalData?.Remove("hostName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hostName"); else _explicitNullProperties?.Remove("hostName"); } }
         private string? _explicitNullValueHostName = default!;
 #nullable restore
 #else
-        public string HostName { get => _explicitNullValueHostName; set { _explicitNullValueHostName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hostName"); else _explicitNullProperties?.Remove("hostName"); } }
+        public string HostName { get => _explicitNullValueHostName; set { _explicitNullValueHostName = value; AdditionalData?.Remove("hostName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hostName"); else _explicitNullProperties?.Remove("hostName"); } }
         private string _explicitNullValueHostName = default!;
 #endif
         /// <summary>Worker process identifier. This id only needs to be unique within one host (so using e.g. a unix pid would be appropriate).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProcessId { get => _explicitNullValueProcessId; set { _explicitNullValueProcessId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("processId"); else _explicitNullProperties?.Remove("processId"); } }
+        public string? ProcessId { get => _explicitNullValueProcessId; set { _explicitNullValueProcessId = value; AdditionalData?.Remove("processId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("processId"); else _explicitNullProperties?.Remove("processId"); } }
         private string? _explicitNullValueProcessId = default!;
 #nullable restore
 #else
-        public string ProcessId { get => _explicitNullValueProcessId; set { _explicitNullValueProcessId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("processId"); else _explicitNullProperties?.Remove("processId"); } }
+        public string ProcessId { get => _explicitNullValueProcessId; set { _explicitNullValueProcessId = value; AdditionalData?.Remove("processId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("processId"); else _explicitNullProperties?.Remove("processId"); } }
         private string _explicitNullValueProcessId = default!;
 #endif
         /// <summary>Worker grouping identifier. A key to group workers that share the same client+namespace+process. This will be used to build the worker command nexus task queue name: &quot;temporal-sys/worker-commands/{worker_grouping_key}&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkerGroupingKey { get => _explicitNullValueWorkerGroupingKey; set { _explicitNullValueWorkerGroupingKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerGroupingKey"); else _explicitNullProperties?.Remove("workerGroupingKey"); } }
+        public string? WorkerGroupingKey { get => _explicitNullValueWorkerGroupingKey; set { _explicitNullValueWorkerGroupingKey = value; AdditionalData?.Remove("workerGroupingKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerGroupingKey"); else _explicitNullProperties?.Remove("workerGroupingKey"); } }
         private string? _explicitNullValueWorkerGroupingKey = default!;
 #nullable restore
 #else
-        public string WorkerGroupingKey { get => _explicitNullValueWorkerGroupingKey; set { _explicitNullValueWorkerGroupingKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerGroupingKey"); else _explicitNullProperties?.Remove("workerGroupingKey"); } }
+        public string WorkerGroupingKey { get => _explicitNullValueWorkerGroupingKey; set { _explicitNullValueWorkerGroupingKey = value; AdditionalData?.Remove("workerGroupingKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerGroupingKey"); else _explicitNullProperties?.Remove("workerGroupingKey"); } }
         private string _explicitNullValueWorkerGroupingKey = default!;
 #endif
         /// <summary>

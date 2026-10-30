@@ -18,21 +18,24 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("lastChangedTime") is { } nullNodeLastChangedTime && nullNodeLastChangedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastChangedTime = null;
-            if (parseNode.GetChildNode("lastCheckedTime") is { } nullNodeLastCheckedTime && nullNodeLastCheckedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastCheckedTime = null;
-            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("lastChangedTime") is null) { _explicitNullValueLastChangedTime = default!; _explicitNullProperties?.Remove("lastChangedTime"); }
+            else if (parseNode.GetChildNode("lastChangedTime") is { } nullNodeLastChangedTime && nullNodeLastChangedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastChangedTime = null;
+            if (parseNode.GetChildNode("lastCheckedTime") is null) { _explicitNullValueLastCheckedTime = default!; _explicitNullProperties?.Remove("lastCheckedTime"); }
+            else if (parseNode.GetChildNode("lastCheckedTime") is { } nullNodeLastCheckedTime && nullNodeLastCheckedTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastCheckedTime = null;
+            if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
+            else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Last time the drainage status changed.</summary>
-        public DateTimeOffset? LastChangedTime { get => _explicitNullValueLastChangedTime; set { _explicitNullValueLastChangedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastChangedTime"); else _explicitNullProperties?.Remove("lastChangedTime"); } }
+        public DateTimeOffset? LastChangedTime { get => _explicitNullValueLastChangedTime; set { _explicitNullValueLastChangedTime = value; AdditionalData?.Remove("lastChangedTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastChangedTime"); else _explicitNullProperties?.Remove("lastChangedTime"); } }
         private DateTimeOffset? _explicitNullValueLastChangedTime = default!;
         /// <summary>Last time the system checked for drainage of this version.</summary>
-        public DateTimeOffset? LastCheckedTime { get => _explicitNullValueLastCheckedTime; set { _explicitNullValueLastCheckedTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastCheckedTime"); else _explicitNullProperties?.Remove("lastCheckedTime"); } }
+        public DateTimeOffset? LastCheckedTime { get => _explicitNullValueLastCheckedTime; set { _explicitNullValueLastCheckedTime = value; AdditionalData?.Remove("lastCheckedTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastCheckedTime"); else _explicitNullProperties?.Remove("lastCheckedTime"); } }
         private DateTimeOffset? _explicitNullValueLastCheckedTime = default!;
         /// <summary>Set to DRAINING when the version first stops accepting new executions (is no longer current or ramping). Set to DRAINED when no more open pinned workflows exist on this version.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.VersionDrainageInfoStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.VersionDrainageInfoStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.VersionDrainageInfoStatus? _explicitNullValueStatus = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersionInfoDrainageInfo"/> and sets the default values.
@@ -61,7 +64,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             {
                 { "lastChangedTime", n => { LastChangedTime = n.GetDateTimeOffsetValue(); } },
                 { "lastCheckedTime", n => { LastCheckedTime = n.GetDateTimeOffsetValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.VersionDrainageInfoStatus>(); } },
+                { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.VersionDrainageInfoStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
             };
         }
         /// <summary>

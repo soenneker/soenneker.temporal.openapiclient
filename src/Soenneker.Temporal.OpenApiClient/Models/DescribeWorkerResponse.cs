@@ -17,7 +17,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("workerInfo") is { } nullNodeWorkerInfo && nullNodeWorkerInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerInfo = null;
+            if (parseNode.GetChildNode("workerInfo") is null) { _explicitNullValueWorkerInfo = default!; _explicitNullProperties?.Remove("workerInfo"); }
+            else if (parseNode.GetChildNode("workerInfo") is { } nullNodeWorkerInfo && nullNodeWorkerInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerInfo = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Detailed worker information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerInfo? WorkerInfo { get => _explicitNullValueWorkerInfo; set { _explicitNullValueWorkerInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerInfo"); else _explicitNullProperties?.Remove("workerInfo"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerInfo? WorkerInfo { get => _explicitNullValueWorkerInfo; set { _explicitNullValueWorkerInfo = value; AdditionalData?.Remove("workerInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerInfo"); else _explicitNullProperties?.Remove("workerInfo"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkerInfo? _explicitNullValueWorkerInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerInfo WorkerInfo { get => _explicitNullValueWorkerInfo; set { _explicitNullValueWorkerInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerInfo"); else _explicitNullProperties?.Remove("workerInfo"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerInfo WorkerInfo { get => _explicitNullValueWorkerInfo; set { _explicitNullValueWorkerInfo = value; AdditionalData?.Remove("workerInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerInfo"); else _explicitNullProperties?.Remove("workerInfo"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkerInfo _explicitNullValueWorkerInfo = default!;
 #endif
         /// <summary>

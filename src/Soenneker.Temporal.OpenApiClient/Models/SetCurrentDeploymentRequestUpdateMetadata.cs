@@ -18,8 +18,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("removeEntries") is { } nullNodeRemoveEntries && nullNodeRemoveEntries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RemoveEntries = null;
-            if (parseNode.GetChildNode("upsertEntries") is { } nullNodeUpsertEntries && nullNodeUpsertEntries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpsertEntries = null;
+            if (parseNode.GetChildNode("removeEntries") is null) { _explicitNullValueRemoveEntries = default!; _explicitNullProperties?.Remove("removeEntries"); }
+            else if (parseNode.GetChildNode("removeEntries") is { } nullNodeRemoveEntries && nullNodeRemoveEntries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RemoveEntries = null;
+            if (parseNode.GetChildNode("upsertEntries") is null) { _explicitNullValueUpsertEntries = default!; _explicitNullProperties?.Remove("upsertEntries"); }
+            else if (parseNode.GetChildNode("upsertEntries") is { } nullNodeUpsertEntries && nullNodeUpsertEntries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpsertEntries = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>List of keys to remove from the metadata.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? RemoveEntries { get => _explicitNullValueRemoveEntries; set { _explicitNullValueRemoveEntries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("removeEntries"); else _explicitNullProperties?.Remove("removeEntries"); } }
+        public List<string>? RemoveEntries { get => _explicitNullValueRemoveEntries; set { _explicitNullValueRemoveEntries = value; AdditionalData?.Remove("removeEntries"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("removeEntries"); else _explicitNullProperties?.Remove("removeEntries"); } }
         private List<string>? _explicitNullValueRemoveEntries = default!;
 #nullable restore
 #else
-        public List<string> RemoveEntries { get => _explicitNullValueRemoveEntries; set { _explicitNullValueRemoveEntries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("removeEntries"); else _explicitNullProperties?.Remove("removeEntries"); } }
+        public List<string> RemoveEntries { get => _explicitNullValueRemoveEntries; set { _explicitNullValueRemoveEntries = value; AdditionalData?.Remove("removeEntries"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("removeEntries"); else _explicitNullProperties?.Remove("removeEntries"); } }
         private List<string> _explicitNullValueRemoveEntries = default!;
 #endif
         /// <summary>The upsertEntries property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentRequestUpdateMetadataUpsertEntries? UpsertEntries { get => _explicitNullValueUpsertEntries; set { _explicitNullValueUpsertEntries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upsertEntries"); else _explicitNullProperties?.Remove("upsertEntries"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentRequestUpdateMetadataUpsertEntries? UpsertEntries { get => _explicitNullValueUpsertEntries; set { _explicitNullValueUpsertEntries = value; AdditionalData?.Remove("upsertEntries"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upsertEntries"); else _explicitNullProperties?.Remove("upsertEntries"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentRequestUpdateMetadataUpsertEntries? _explicitNullValueUpsertEntries = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentRequestUpdateMetadataUpsertEntries UpsertEntries { get => _explicitNullValueUpsertEntries; set { _explicitNullValueUpsertEntries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upsertEntries"); else _explicitNullProperties?.Remove("upsertEntries"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentRequestUpdateMetadataUpsertEntries UpsertEntries { get => _explicitNullValueUpsertEntries; set { _explicitNullValueUpsertEntries = value; AdditionalData?.Remove("upsertEntries"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upsertEntries"); else _explicitNullProperties?.Remove("upsertEntries"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.SetCurrentDeploymentRequestUpdateMetadataUpsertEntries _explicitNullValueUpsertEntries = default!;
 #endif
         /// <summary>

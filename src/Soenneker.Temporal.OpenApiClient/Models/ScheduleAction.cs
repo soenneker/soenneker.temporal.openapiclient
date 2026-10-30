@@ -17,7 +17,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("startWorkflow") is { } nullNodeStartWorkflow && nullNodeStartWorkflow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartWorkflow = null;
+            if (parseNode.GetChildNode("startWorkflow") is null) { _explicitNullValueStartWorkflow = default!; _explicitNullProperties?.Remove("startWorkflow"); }
+            else if (parseNode.GetChildNode("startWorkflow") is { } nullNodeStartWorkflow && nullNodeStartWorkflow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartWorkflow = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>All fields of NewWorkflowExecutionInfo are valid except for: - workflow_id_reuse_policy - cron_schedule The workflow id of the started workflow may not match this exactly, it may have a timestamp appended for uniqueness.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionStartWorkflow? StartWorkflow { get => _explicitNullValueStartWorkflow; set { _explicitNullValueStartWorkflow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startWorkflow"); else _explicitNullProperties?.Remove("startWorkflow"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionStartWorkflow? StartWorkflow { get => _explicitNullValueStartWorkflow; set { _explicitNullValueStartWorkflow = value; AdditionalData?.Remove("startWorkflow"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startWorkflow"); else _explicitNullProperties?.Remove("startWorkflow"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionStartWorkflow? _explicitNullValueStartWorkflow = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionStartWorkflow StartWorkflow { get => _explicitNullValueStartWorkflow; set { _explicitNullValueStartWorkflow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startWorkflow"); else _explicitNullProperties?.Remove("startWorkflow"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionStartWorkflow StartWorkflow { get => _explicitNullValueStartWorkflow; set { _explicitNullValueStartWorkflow = value; AdditionalData?.Remove("startWorkflow"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startWorkflow"); else _explicitNullProperties?.Remove("startWorkflow"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionStartWorkflow _explicitNullValueStartWorkflow = default!;
 #endif
         /// <summary>

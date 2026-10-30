@@ -17,9 +17,12 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("conflictToken") is { } nullNodeConflictToken && nullNodeConflictToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConflictToken = null;
-            if (parseNode.GetChildNode("previousDeploymentVersion") is { } nullNodePreviousDeploymentVersion && nullNodePreviousDeploymentVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreviousDeploymentVersion = null;
-            if (parseNode.GetChildNode("previousVersion") is { } nullNodePreviousVersion && nullNodePreviousVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreviousVersion = null;
+            if (parseNode.GetChildNode("conflictToken") is null) { _explicitNullValueConflictToken = default!; _explicitNullProperties?.Remove("conflictToken"); }
+            else if (parseNode.GetChildNode("conflictToken") is { } nullNodeConflictToken && nullNodeConflictToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConflictToken = null;
+            if (parseNode.GetChildNode("previousDeploymentVersion") is null) { _explicitNullValuePreviousDeploymentVersion = default!; _explicitNullProperties?.Remove("previousDeploymentVersion"); }
+            else if (parseNode.GetChildNode("previousDeploymentVersion") is { } nullNodePreviousDeploymentVersion && nullNodePreviousDeploymentVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreviousDeploymentVersion = null;
+            if (parseNode.GetChildNode("previousVersion") is null) { _explicitNullValuePreviousVersion = default!; _explicitNullProperties?.Remove("previousVersion"); }
+            else if (parseNode.GetChildNode("previousVersion") is { } nullNodePreviousVersion && nullNodePreviousVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreviousVersion = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>This value is returned so that it can be optionally passed to APIs that write to the Worker Deployment state to ensure that the state did not change between this API call and a future write.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConflictToken { get => _explicitNullValueConflictToken; set { _explicitNullValueConflictToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conflictToken"); else _explicitNullProperties?.Remove("conflictToken"); } }
+        public string? ConflictToken { get => _explicitNullValueConflictToken; set { _explicitNullValueConflictToken = value; AdditionalData?.Remove("conflictToken"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conflictToken"); else _explicitNullProperties?.Remove("conflictToken"); } }
         private string? _explicitNullValueConflictToken = default!;
 #nullable restore
 #else
-        public string ConflictToken { get => _explicitNullValueConflictToken; set { _explicitNullValueConflictToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conflictToken"); else _explicitNullProperties?.Remove("conflictToken"); } }
+        public string ConflictToken { get => _explicitNullValueConflictToken; set { _explicitNullValueConflictToken = value; AdditionalData?.Remove("conflictToken"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conflictToken"); else _explicitNullProperties?.Remove("conflictToken"); } }
         private string _explicitNullValueConflictToken = default!;
 #endif
         /// <summary>The version that was current before executing this operation. Deprecated in favor of idempotency of the API. Use `DescribeWorkerDeployment` to get the Current version info before calling this API. By passing the `conflict_token` got from the `DescribeWorkerDeployment` call to this API you can ensure there is no interfering changes between the two calls.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.SetWorkerDeploymentCurrentVersionResponsePreviousDeploymentVersion? PreviousDeploymentVersion { get => _explicitNullValuePreviousDeploymentVersion; set { _explicitNullValuePreviousDeploymentVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previousDeploymentVersion"); else _explicitNullProperties?.Remove("previousDeploymentVersion"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SetWorkerDeploymentCurrentVersionResponsePreviousDeploymentVersion? PreviousDeploymentVersion { get => _explicitNullValuePreviousDeploymentVersion; set { _explicitNullValuePreviousDeploymentVersion = value; AdditionalData?.Remove("previousDeploymentVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previousDeploymentVersion"); else _explicitNullProperties?.Remove("previousDeploymentVersion"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.SetWorkerDeploymentCurrentVersionResponsePreviousDeploymentVersion? _explicitNullValuePreviousDeploymentVersion = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.SetWorkerDeploymentCurrentVersionResponsePreviousDeploymentVersion PreviousDeploymentVersion { get => _explicitNullValuePreviousDeploymentVersion; set { _explicitNullValuePreviousDeploymentVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previousDeploymentVersion"); else _explicitNullProperties?.Remove("previousDeploymentVersion"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SetWorkerDeploymentCurrentVersionResponsePreviousDeploymentVersion PreviousDeploymentVersion { get => _explicitNullValuePreviousDeploymentVersion; set { _explicitNullValuePreviousDeploymentVersion = value; AdditionalData?.Remove("previousDeploymentVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previousDeploymentVersion"); else _explicitNullProperties?.Remove("previousDeploymentVersion"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.SetWorkerDeploymentCurrentVersionResponsePreviousDeploymentVersion _explicitNullValuePreviousDeploymentVersion = default!;
 #endif
         /// <summary>Deprecated. Use `previous_deployment_version`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PreviousVersion { get => _explicitNullValuePreviousVersion; set { _explicitNullValuePreviousVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previousVersion"); else _explicitNullProperties?.Remove("previousVersion"); } }
+        public string? PreviousVersion { get => _explicitNullValuePreviousVersion; set { _explicitNullValuePreviousVersion = value; AdditionalData?.Remove("previousVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previousVersion"); else _explicitNullProperties?.Remove("previousVersion"); } }
         private string? _explicitNullValuePreviousVersion = default!;
 #nullable restore
 #else
-        public string PreviousVersion { get => _explicitNullValuePreviousVersion; set { _explicitNullValuePreviousVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previousVersion"); else _explicitNullProperties?.Remove("previousVersion"); } }
+        public string PreviousVersion { get => _explicitNullValuePreviousVersion; set { _explicitNullValuePreviousVersion = value; AdditionalData?.Remove("previousVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previousVersion"); else _explicitNullProperties?.Remove("previousVersion"); } }
         private string _explicitNullValuePreviousVersion = default!;
 #endif
         /// <summary>

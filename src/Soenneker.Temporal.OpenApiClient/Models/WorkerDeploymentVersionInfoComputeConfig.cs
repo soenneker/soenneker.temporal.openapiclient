@@ -18,7 +18,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("scalingGroups") is { } nullNodeScalingGroups && nullNodeScalingGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScalingGroups = null;
+            if (parseNode.GetChildNode("scalingGroups") is null) { _explicitNullValueScalingGroups = default!; _explicitNullProperties?.Remove("scalingGroups"); }
+            else if (parseNode.GetChildNode("scalingGroups") is { } nullNodeScalingGroups && nullNodeScalingGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScalingGroups = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Each scaling group describes a compute config for a specific subset of the worker deployment version: covering a specific set of task types and/or regions. Having different configurations for different task types, allows independent tuning of activity and workflow task processing (for example). The key of the map is the ID of the scaling group used to reference it in subsequent update calls.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersionInfoComputeConfigScalingGroups? ScalingGroups { get => _explicitNullValueScalingGroups; set { _explicitNullValueScalingGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scalingGroups"); else _explicitNullProperties?.Remove("scalingGroups"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersionInfoComputeConfigScalingGroups? ScalingGroups { get => _explicitNullValueScalingGroups; set { _explicitNullValueScalingGroups = value; AdditionalData?.Remove("scalingGroups"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scalingGroups"); else _explicitNullProperties?.Remove("scalingGroups"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersionInfoComputeConfigScalingGroups? _explicitNullValueScalingGroups = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersionInfoComputeConfigScalingGroups ScalingGroups { get => _explicitNullValueScalingGroups; set { _explicitNullValueScalingGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scalingGroups"); else _explicitNullProperties?.Remove("scalingGroups"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersionInfoComputeConfigScalingGroups ScalingGroups { get => _explicitNullValueScalingGroups; set { _explicitNullValueScalingGroups = value; AdditionalData?.Remove("scalingGroups"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scalingGroups"); else _explicitNullProperties?.Remove("scalingGroups"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersionInfoComputeConfigScalingGroups _explicitNullValueScalingGroups = default!;
 #endif
         /// <summary>

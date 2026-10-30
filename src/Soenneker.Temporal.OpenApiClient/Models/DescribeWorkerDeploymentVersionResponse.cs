@@ -17,8 +17,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("versionTaskQueues") is { } nullNodeVersionTaskQueues && nullNodeVersionTaskQueues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VersionTaskQueues = null;
-            if (parseNode.GetChildNode("workerDeploymentVersionInfo") is { } nullNodeWorkerDeploymentVersionInfo && nullNodeWorkerDeploymentVersionInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerDeploymentVersionInfo = null;
+            if (parseNode.GetChildNode("versionTaskQueues") is null) { _explicitNullValueVersionTaskQueues = default!; _explicitNullProperties?.Remove("versionTaskQueues"); }
+            else if (parseNode.GetChildNode("versionTaskQueues") is { } nullNodeVersionTaskQueues && nullNodeVersionTaskQueues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VersionTaskQueues = null;
+            if (parseNode.GetChildNode("workerDeploymentVersionInfo") is null) { _explicitNullValueWorkerDeploymentVersionInfo = default!; _explicitNullProperties?.Remove("workerDeploymentVersionInfo"); }
+            else if (parseNode.GetChildNode("workerDeploymentVersionInfo") is { } nullNodeWorkerDeploymentVersionInfo && nullNodeWorkerDeploymentVersionInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerDeploymentVersionInfo = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>All the Task Queues that have ever polled from this Deployment version.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponseVersionTaskQueue>? VersionTaskQueues { get => _explicitNullValueVersionTaskQueues; set { _explicitNullValueVersionTaskQueues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("versionTaskQueues"); else _explicitNullProperties?.Remove("versionTaskQueues"); } }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponseVersionTaskQueue>? VersionTaskQueues { get => _explicitNullValueVersionTaskQueues; set { _explicitNullValueVersionTaskQueues = value; AdditionalData?.Remove("versionTaskQueues"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("versionTaskQueues"); else _explicitNullProperties?.Remove("versionTaskQueues"); } }
         private List<global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponseVersionTaskQueue>? _explicitNullValueVersionTaskQueues = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponseVersionTaskQueue> VersionTaskQueues { get => _explicitNullValueVersionTaskQueues; set { _explicitNullValueVersionTaskQueues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("versionTaskQueues"); else _explicitNullProperties?.Remove("versionTaskQueues"); } }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponseVersionTaskQueue> VersionTaskQueues { get => _explicitNullValueVersionTaskQueues; set { _explicitNullValueVersionTaskQueues = value; AdditionalData?.Remove("versionTaskQueues"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("versionTaskQueues"); else _explicitNullProperties?.Remove("versionTaskQueues"); } }
         private List<global::Soenneker.Temporal.OpenApiClient.Models.DescribeWorkerDeploymentVersionResponseVersionTaskQueue> _explicitNullValueVersionTaskQueues = default!;
 #endif
         /// <summary>A Worker Deployment Version (Version, for short) represents all workers of the same code and config within a Deployment. Workers of the same Version are expected to behave exactly the same so when executions move between them there are no non-determinism issues. Worker Deployment Versions are created in Temporal server automatically when their first poller arrives to the server.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersionInfo? WorkerDeploymentVersionInfo { get => _explicitNullValueWorkerDeploymentVersionInfo; set { _explicitNullValueWorkerDeploymentVersionInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerDeploymentVersionInfo"); else _explicitNullProperties?.Remove("workerDeploymentVersionInfo"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersionInfo? WorkerDeploymentVersionInfo { get => _explicitNullValueWorkerDeploymentVersionInfo; set { _explicitNullValueWorkerDeploymentVersionInfo = value; AdditionalData?.Remove("workerDeploymentVersionInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerDeploymentVersionInfo"); else _explicitNullProperties?.Remove("workerDeploymentVersionInfo"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersionInfo? _explicitNullValueWorkerDeploymentVersionInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersionInfo WorkerDeploymentVersionInfo { get => _explicitNullValueWorkerDeploymentVersionInfo; set { _explicitNullValueWorkerDeploymentVersionInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerDeploymentVersionInfo"); else _explicitNullProperties?.Remove("workerDeploymentVersionInfo"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersionInfo WorkerDeploymentVersionInfo { get => _explicitNullValueWorkerDeploymentVersionInfo; set { _explicitNullValueWorkerDeploymentVersionInfo = value; AdditionalData?.Remove("workerDeploymentVersionInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerDeploymentVersionInfo"); else _explicitNullProperties?.Remove("workerDeploymentVersionInfo"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersionInfo _explicitNullValueWorkerDeploymentVersionInfo = default!;
 #endif
         /// <summary>

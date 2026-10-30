@@ -18,7 +18,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("indexedFields") is { } nullNodeIndexedFields && nullNodeIndexedFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IndexedFields = null;
+            if (parseNode.GetChildNode("indexedFields") is null) { _explicitNullValueIndexedFields = default!; _explicitNullProperties?.Remove("indexedFields"); }
+            else if (parseNode.GetChildNode("indexedFields") is { } nullNodeIndexedFields && nullNodeIndexedFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IndexedFields = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The indexedFields property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestSearchAttributesIndexedFields? IndexedFields { get => _explicitNullValueIndexedFields; set { _explicitNullValueIndexedFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("indexedFields"); else _explicitNullProperties?.Remove("indexedFields"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestSearchAttributesIndexedFields? IndexedFields { get => _explicitNullValueIndexedFields; set { _explicitNullValueIndexedFields = value; AdditionalData?.Remove("indexedFields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("indexedFields"); else _explicitNullProperties?.Remove("indexedFields"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestSearchAttributesIndexedFields? _explicitNullValueIndexedFields = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestSearchAttributesIndexedFields IndexedFields { get => _explicitNullValueIndexedFields; set { _explicitNullValueIndexedFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("indexedFields"); else _explicitNullProperties?.Remove("indexedFields"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestSearchAttributesIndexedFields IndexedFields { get => _explicitNullValueIndexedFields; set { _explicitNullValueIndexedFields = value; AdditionalData?.Remove("indexedFields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("indexedFields"); else _explicitNullProperties?.Remove("indexedFields"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.StartActivityExecutionRequestSearchAttributesIndexedFields _explicitNullValueIndexedFields = default!;
 #endif
         /// <summary>

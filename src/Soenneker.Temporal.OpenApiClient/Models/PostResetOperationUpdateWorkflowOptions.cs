@@ -18,8 +18,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("updateMask") is { } nullNodeUpdateMask && nullNodeUpdateMask.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateMask = null;
-            if (parseNode.GetChildNode("workflowExecutionOptions") is { } nullNodeWorkflowExecutionOptions && nullNodeWorkflowExecutionOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowExecutionOptions = null;
+            if (parseNode.GetChildNode("updateMask") is null) { _explicitNullValueUpdateMask = default!; _explicitNullProperties?.Remove("updateMask"); }
+            else if (parseNode.GetChildNode("updateMask") is { } nullNodeUpdateMask && nullNodeUpdateMask.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateMask = null;
+            if (parseNode.GetChildNode("workflowExecutionOptions") is null) { _explicitNullValueWorkflowExecutionOptions = default!; _explicitNullProperties?.Remove("workflowExecutionOptions"); }
+            else if (parseNode.GetChildNode("workflowExecutionOptions") is { } nullNodeWorkflowExecutionOptions && nullNodeWorkflowExecutionOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowExecutionOptions = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Controls which fields from `workflow_execution_options` will be applied. To unset a field, set it to null and use the update mask to indicate that it should be mutated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UpdateMask { get => _explicitNullValueUpdateMask; set { _explicitNullValueUpdateMask = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateMask"); else _explicitNullProperties?.Remove("updateMask"); } }
+        public string? UpdateMask { get => _explicitNullValueUpdateMask; set { _explicitNullValueUpdateMask = value; AdditionalData?.Remove("updateMask"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateMask"); else _explicitNullProperties?.Remove("updateMask"); } }
         private string? _explicitNullValueUpdateMask = default!;
 #nullable restore
 #else
-        public string UpdateMask { get => _explicitNullValueUpdateMask; set { _explicitNullValueUpdateMask = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateMask"); else _explicitNullProperties?.Remove("updateMask"); } }
+        public string UpdateMask { get => _explicitNullValueUpdateMask; set { _explicitNullValueUpdateMask = value; AdditionalData?.Remove("updateMask"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateMask"); else _explicitNullProperties?.Remove("updateMask"); } }
         private string _explicitNullValueUpdateMask = default!;
 #endif
         /// <summary>Update Workflow options that were originally specified via StartWorkflowExecution. Partial updates are accepted and controlled by update_mask.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptionsWorkflowExecutionOptions? WorkflowExecutionOptions { get => _explicitNullValueWorkflowExecutionOptions; set { _explicitNullValueWorkflowExecutionOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionOptions"); else _explicitNullProperties?.Remove("workflowExecutionOptions"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptionsWorkflowExecutionOptions? WorkflowExecutionOptions { get => _explicitNullValueWorkflowExecutionOptions; set { _explicitNullValueWorkflowExecutionOptions = value; AdditionalData?.Remove("workflowExecutionOptions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionOptions"); else _explicitNullProperties?.Remove("workflowExecutionOptions"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptionsWorkflowExecutionOptions? _explicitNullValueWorkflowExecutionOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptionsWorkflowExecutionOptions WorkflowExecutionOptions { get => _explicitNullValueWorkflowExecutionOptions; set { _explicitNullValueWorkflowExecutionOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionOptions"); else _explicitNullProperties?.Remove("workflowExecutionOptions"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptionsWorkflowExecutionOptions WorkflowExecutionOptions { get => _explicitNullValueWorkflowExecutionOptions; set { _explicitNullValueWorkflowExecutionOptions = value; AdditionalData?.Remove("workflowExecutionOptions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowExecutionOptions"); else _explicitNullProperties?.Remove("workflowExecutionOptions"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.PostResetOperationUpdateWorkflowOptionsWorkflowExecutionOptions _explicitNullValueWorkflowExecutionOptions = default!;
 #endif
         /// <summary>

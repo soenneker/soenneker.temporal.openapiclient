@@ -18,8 +18,10 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("percentageRamp") is { } nullNodePercentageRamp && nullNodePercentageRamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PercentageRamp = null;
-            if (parseNode.GetChildNode("targetBuildId") is { } nullNodeTargetBuildId && nullNodeTargetBuildId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetBuildId = null;
+            if (parseNode.GetChildNode("percentageRamp") is null) { _explicitNullValuePercentageRamp = default!; _explicitNullProperties?.Remove("percentageRamp"); }
+            else if (parseNode.GetChildNode("percentageRamp") is { } nullNodePercentageRamp && nullNodePercentageRamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PercentageRamp = null;
+            if (parseNode.GetChildNode("targetBuildId") is null) { _explicitNullValueTargetBuildId = default!; _explicitNullProperties?.Remove("targetBuildId"); }
+            else if (parseNode.GetChildNode("targetBuildId") is { } nullNodeTargetBuildId && nullNodeTargetBuildId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetBuildId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>This ramp is useful for gradual Blue/Green deployments (and similar) where you want to send a certain portion of the traffic to the target Build ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.BuildIdAssignmentRulePercentageRamp? PercentageRamp { get => _explicitNullValuePercentageRamp; set { _explicitNullValuePercentageRamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("percentageRamp"); else _explicitNullProperties?.Remove("percentageRamp"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BuildIdAssignmentRulePercentageRamp? PercentageRamp { get => _explicitNullValuePercentageRamp; set { _explicitNullValuePercentageRamp = value; AdditionalData?.Remove("percentageRamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("percentageRamp"); else _explicitNullProperties?.Remove("percentageRamp"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.BuildIdAssignmentRulePercentageRamp? _explicitNullValuePercentageRamp = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.BuildIdAssignmentRulePercentageRamp PercentageRamp { get => _explicitNullValuePercentageRamp; set { _explicitNullValuePercentageRamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("percentageRamp"); else _explicitNullProperties?.Remove("percentageRamp"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.BuildIdAssignmentRulePercentageRamp PercentageRamp { get => _explicitNullValuePercentageRamp; set { _explicitNullValuePercentageRamp = value; AdditionalData?.Remove("percentageRamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("percentageRamp"); else _explicitNullProperties?.Remove("percentageRamp"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.BuildIdAssignmentRulePercentageRamp _explicitNullValuePercentageRamp = default!;
 #endif
         /// <summary>The targetBuildId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TargetBuildId { get => _explicitNullValueTargetBuildId; set { _explicitNullValueTargetBuildId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetBuildId"); else _explicitNullProperties?.Remove("targetBuildId"); } }
+        public string? TargetBuildId { get => _explicitNullValueTargetBuildId; set { _explicitNullValueTargetBuildId = value; AdditionalData?.Remove("targetBuildId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetBuildId"); else _explicitNullProperties?.Remove("targetBuildId"); } }
         private string? _explicitNullValueTargetBuildId = default!;
 #nullable restore
 #else
-        public string TargetBuildId { get => _explicitNullValueTargetBuildId; set { _explicitNullValueTargetBuildId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetBuildId"); else _explicitNullProperties?.Remove("targetBuildId"); } }
+        public string TargetBuildId { get => _explicitNullValueTargetBuildId; set { _explicitNullValueTargetBuildId = value; AdditionalData?.Remove("targetBuildId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetBuildId"); else _explicitNullProperties?.Remove("targetBuildId"); } }
         private string _explicitNullValueTargetBuildId = default!;
 #endif
         /// <summary>

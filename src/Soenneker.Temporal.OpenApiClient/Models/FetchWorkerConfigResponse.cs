@@ -17,7 +17,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("workerConfig") is { } nullNodeWorkerConfig && nullNodeWorkerConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerConfig = null;
+            if (parseNode.GetChildNode("workerConfig") is null) { _explicitNullValueWorkerConfig = default!; _explicitNullProperties?.Remove("workerConfig"); }
+            else if (parseNode.GetChildNode("workerConfig") is { } nullNodeWorkerConfig && nullNodeWorkerConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkerConfig = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The worker configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.FetchWorkerConfigResponseWorkerConfig? WorkerConfig { get => _explicitNullValueWorkerConfig; set { _explicitNullValueWorkerConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerConfig"); else _explicitNullProperties?.Remove("workerConfig"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.FetchWorkerConfigResponseWorkerConfig? WorkerConfig { get => _explicitNullValueWorkerConfig; set { _explicitNullValueWorkerConfig = value; AdditionalData?.Remove("workerConfig"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerConfig"); else _explicitNullProperties?.Remove("workerConfig"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.FetchWorkerConfigResponseWorkerConfig? _explicitNullValueWorkerConfig = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.FetchWorkerConfigResponseWorkerConfig WorkerConfig { get => _explicitNullValueWorkerConfig; set { _explicitNullValueWorkerConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerConfig"); else _explicitNullProperties?.Remove("workerConfig"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.FetchWorkerConfigResponseWorkerConfig WorkerConfig { get => _explicitNullValueWorkerConfig; set { _explicitNullValueWorkerConfig = value; AdditionalData?.Remove("workerConfig"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workerConfig"); else _explicitNullProperties?.Remove("workerConfig"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.FetchWorkerConfigResponseWorkerConfig _explicitNullValueWorkerConfig = default!;
 #endif
         /// <summary>

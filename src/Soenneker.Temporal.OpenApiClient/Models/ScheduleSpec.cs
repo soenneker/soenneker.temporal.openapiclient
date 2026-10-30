@@ -18,17 +18,28 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("calendar") is { } nullNodeCalendar && nullNodeCalendar.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Calendar = null;
-            if (parseNode.GetChildNode("cronString") is { } nullNodeCronString && nullNodeCronString.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CronString = null;
-            if (parseNode.GetChildNode("endTime") is { } nullNodeEndTime && nullNodeEndTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndTime = null;
-            if (parseNode.GetChildNode("excludeCalendar") is { } nullNodeExcludeCalendar && nullNodeExcludeCalendar.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExcludeCalendar = null;
-            if (parseNode.GetChildNode("excludeStructuredCalendar") is { } nullNodeExcludeStructuredCalendar && nullNodeExcludeStructuredCalendar.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExcludeStructuredCalendar = null;
-            if (parseNode.GetChildNode("interval") is { } nullNodeInterval && nullNodeInterval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Interval = null;
-            if (parseNode.GetChildNode("jitter") is { } nullNodeJitter && nullNodeJitter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Jitter = null;
-            if (parseNode.GetChildNode("startTime") is { } nullNodeStartTime && nullNodeStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartTime = null;
-            if (parseNode.GetChildNode("structuredCalendar") is { } nullNodeStructuredCalendar && nullNodeStructuredCalendar.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StructuredCalendar = null;
-            if (parseNode.GetChildNode("timezoneData") is { } nullNodeTimezoneData && nullNodeTimezoneData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimezoneData = null;
-            if (parseNode.GetChildNode("timezoneName") is { } nullNodeTimezoneName && nullNodeTimezoneName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimezoneName = null;
+            if (parseNode.GetChildNode("calendar") is null) { _explicitNullValueCalendar = default!; _explicitNullProperties?.Remove("calendar"); }
+            else if (parseNode.GetChildNode("calendar") is { } nullNodeCalendar && nullNodeCalendar.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Calendar = null;
+            if (parseNode.GetChildNode("cronString") is null) { _explicitNullValueCronString = default!; _explicitNullProperties?.Remove("cronString"); }
+            else if (parseNode.GetChildNode("cronString") is { } nullNodeCronString && nullNodeCronString.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CronString = null;
+            if (parseNode.GetChildNode("endTime") is null) { _explicitNullValueEndTime = default!; _explicitNullProperties?.Remove("endTime"); }
+            else if (parseNode.GetChildNode("endTime") is { } nullNodeEndTime && nullNodeEndTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndTime = null;
+            if (parseNode.GetChildNode("excludeCalendar") is null) { _explicitNullValueExcludeCalendar = default!; _explicitNullProperties?.Remove("excludeCalendar"); }
+            else if (parseNode.GetChildNode("excludeCalendar") is { } nullNodeExcludeCalendar && nullNodeExcludeCalendar.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExcludeCalendar = null;
+            if (parseNode.GetChildNode("excludeStructuredCalendar") is null) { _explicitNullValueExcludeStructuredCalendar = default!; _explicitNullProperties?.Remove("excludeStructuredCalendar"); }
+            else if (parseNode.GetChildNode("excludeStructuredCalendar") is { } nullNodeExcludeStructuredCalendar && nullNodeExcludeStructuredCalendar.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExcludeStructuredCalendar = null;
+            if (parseNode.GetChildNode("interval") is null) { _explicitNullValueInterval = default!; _explicitNullProperties?.Remove("interval"); }
+            else if (parseNode.GetChildNode("interval") is { } nullNodeInterval && nullNodeInterval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Interval = null;
+            if (parseNode.GetChildNode("jitter") is null) { _explicitNullValueJitter = default!; _explicitNullProperties?.Remove("jitter"); }
+            else if (parseNode.GetChildNode("jitter") is { } nullNodeJitter && nullNodeJitter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Jitter = null;
+            if (parseNode.GetChildNode("startTime") is null) { _explicitNullValueStartTime = default!; _explicitNullProperties?.Remove("startTime"); }
+            else if (parseNode.GetChildNode("startTime") is { } nullNodeStartTime && nullNodeStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartTime = null;
+            if (parseNode.GetChildNode("structuredCalendar") is null) { _explicitNullValueStructuredCalendar = default!; _explicitNullProperties?.Remove("structuredCalendar"); }
+            else if (parseNode.GetChildNode("structuredCalendar") is { } nullNodeStructuredCalendar && nullNodeStructuredCalendar.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StructuredCalendar = null;
+            if (parseNode.GetChildNode("timezoneData") is null) { _explicitNullValueTimezoneData = default!; _explicitNullProperties?.Remove("timezoneData"); }
+            else if (parseNode.GetChildNode("timezoneData") is { } nullNodeTimezoneData && nullNodeTimezoneData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimezoneData = null;
+            if (parseNode.GetChildNode("timezoneName") is null) { _explicitNullValueTimezoneName = default!; _explicitNullProperties?.Remove("timezoneName"); }
+            else if (parseNode.GetChildNode("timezoneName") is { } nullNodeTimezoneName && nullNodeTimezoneName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimezoneName = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -36,97 +47,97 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Calendar-based specifications of times.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.CalendarSpec>? Calendar { get => _explicitNullValueCalendar; set { _explicitNullValueCalendar = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calendar"); else _explicitNullProperties?.Remove("calendar"); } }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.CalendarSpec>? Calendar { get => _explicitNullValueCalendar; set { _explicitNullValueCalendar = value; AdditionalData?.Remove("calendar"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calendar"); else _explicitNullProperties?.Remove("calendar"); } }
         private List<global::Soenneker.Temporal.OpenApiClient.Models.CalendarSpec>? _explicitNullValueCalendar = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.CalendarSpec> Calendar { get => _explicitNullValueCalendar; set { _explicitNullValueCalendar = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calendar"); else _explicitNullProperties?.Remove("calendar"); } }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.CalendarSpec> Calendar { get => _explicitNullValueCalendar; set { _explicitNullValueCalendar = value; AdditionalData?.Remove("calendar"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calendar"); else _explicitNullProperties?.Remove("calendar"); } }
         private List<global::Soenneker.Temporal.OpenApiClient.Models.CalendarSpec> _explicitNullValueCalendar = default!;
 #endif
         /// <summary>cron_string holds a traditional cron specification as a string. It accepts 5, 6, or 7 fields, separated by spaces, and interprets them the same way as CalendarSpec. 5 fields:         minute, hour, day_of_month, month, day_of_week 6 fields:         minute, hour, day_of_month, month, day_of_week, year 7 fields: second, minute, hour, day_of_month, month, day_of_week, year If year is not given, it defaults to *. If second is not given, it defaults to 0. Shorthands @yearly, @monthly, @weekly, @daily, and @hourly are also accepted instead of the 5-7 time fields. Optionally, the string can be preceded by CRON_TZ=&lt;timezone name&gt; or TZ=&lt;timezone name&gt;, which will get copied to timezone_name. (There must not also be a timezone_name present.) Optionally &quot;#&quot; followed by a comment can appear at the end of the string. Note that the special case that some cron implementations have for treating day_of_month and day_of_week as &quot;or&quot; instead of &quot;and&quot; when both are set is not implemented. @every &lt;interval&gt;[/&lt;phase&gt;] is accepted and gets compiled into an IntervalSpec instead. &lt;interval&gt; and &lt;phase&gt; should be a decimal integer with a unit suffix s, m, h, or d.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? CronString { get => _explicitNullValueCronString; set { _explicitNullValueCronString = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cronString"); else _explicitNullProperties?.Remove("cronString"); } }
+        public List<string>? CronString { get => _explicitNullValueCronString; set { _explicitNullValueCronString = value; AdditionalData?.Remove("cronString"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cronString"); else _explicitNullProperties?.Remove("cronString"); } }
         private List<string>? _explicitNullValueCronString = default!;
 #nullable restore
 #else
-        public List<string> CronString { get => _explicitNullValueCronString; set { _explicitNullValueCronString = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cronString"); else _explicitNullProperties?.Remove("cronString"); } }
+        public List<string> CronString { get => _explicitNullValueCronString; set { _explicitNullValueCronString = value; AdditionalData?.Remove("cronString"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cronString"); else _explicitNullProperties?.Remove("cronString"); } }
         private List<string> _explicitNullValueCronString = default!;
 #endif
         /// <summary>If end_time is set, any timestamps after end_time will be skipped.</summary>
-        public DateTimeOffset? EndTime { get => _explicitNullValueEndTime; set { _explicitNullValueEndTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endTime"); else _explicitNullProperties?.Remove("endTime"); } }
+        public DateTimeOffset? EndTime { get => _explicitNullValueEndTime; set { _explicitNullValueEndTime = value; AdditionalData?.Remove("endTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endTime"); else _explicitNullProperties?.Remove("endTime"); } }
         private DateTimeOffset? _explicitNullValueEndTime = default!;
         /// <summary>Any timestamps matching any of exclude_* will be skipped. Deprecated. Use exclude_structured_calendar.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.CalendarSpec>? ExcludeCalendar { get => _explicitNullValueExcludeCalendar; set { _explicitNullValueExcludeCalendar = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("excludeCalendar"); else _explicitNullProperties?.Remove("excludeCalendar"); } }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.CalendarSpec>? ExcludeCalendar { get => _explicitNullValueExcludeCalendar; set { _explicitNullValueExcludeCalendar = value; AdditionalData?.Remove("excludeCalendar"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("excludeCalendar"); else _explicitNullProperties?.Remove("excludeCalendar"); } }
         private List<global::Soenneker.Temporal.OpenApiClient.Models.CalendarSpec>? _explicitNullValueExcludeCalendar = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.CalendarSpec> ExcludeCalendar { get => _explicitNullValueExcludeCalendar; set { _explicitNullValueExcludeCalendar = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("excludeCalendar"); else _explicitNullProperties?.Remove("excludeCalendar"); } }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.CalendarSpec> ExcludeCalendar { get => _explicitNullValueExcludeCalendar; set { _explicitNullValueExcludeCalendar = value; AdditionalData?.Remove("excludeCalendar"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("excludeCalendar"); else _explicitNullProperties?.Remove("excludeCalendar"); } }
         private List<global::Soenneker.Temporal.OpenApiClient.Models.CalendarSpec> _explicitNullValueExcludeCalendar = default!;
 #endif
         /// <summary>The excludeStructuredCalendar property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.StructuredCalendarSpec>? ExcludeStructuredCalendar { get => _explicitNullValueExcludeStructuredCalendar; set { _explicitNullValueExcludeStructuredCalendar = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("excludeStructuredCalendar"); else _explicitNullProperties?.Remove("excludeStructuredCalendar"); } }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.StructuredCalendarSpec>? ExcludeStructuredCalendar { get => _explicitNullValueExcludeStructuredCalendar; set { _explicitNullValueExcludeStructuredCalendar = value; AdditionalData?.Remove("excludeStructuredCalendar"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("excludeStructuredCalendar"); else _explicitNullProperties?.Remove("excludeStructuredCalendar"); } }
         private List<global::Soenneker.Temporal.OpenApiClient.Models.StructuredCalendarSpec>? _explicitNullValueExcludeStructuredCalendar = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.StructuredCalendarSpec> ExcludeStructuredCalendar { get => _explicitNullValueExcludeStructuredCalendar; set { _explicitNullValueExcludeStructuredCalendar = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("excludeStructuredCalendar"); else _explicitNullProperties?.Remove("excludeStructuredCalendar"); } }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.StructuredCalendarSpec> ExcludeStructuredCalendar { get => _explicitNullValueExcludeStructuredCalendar; set { _explicitNullValueExcludeStructuredCalendar = value; AdditionalData?.Remove("excludeStructuredCalendar"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("excludeStructuredCalendar"); else _explicitNullProperties?.Remove("excludeStructuredCalendar"); } }
         private List<global::Soenneker.Temporal.OpenApiClient.Models.StructuredCalendarSpec> _explicitNullValueExcludeStructuredCalendar = default!;
 #endif
         /// <summary>Interval-based specifications of times.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.IntervalSpec>? Interval { get => _explicitNullValueInterval; set { _explicitNullValueInterval = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interval"); else _explicitNullProperties?.Remove("interval"); } }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.IntervalSpec>? Interval { get => _explicitNullValueInterval; set { _explicitNullValueInterval = value; AdditionalData?.Remove("interval"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interval"); else _explicitNullProperties?.Remove("interval"); } }
         private List<global::Soenneker.Temporal.OpenApiClient.Models.IntervalSpec>? _explicitNullValueInterval = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.IntervalSpec> Interval { get => _explicitNullValueInterval; set { _explicitNullValueInterval = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interval"); else _explicitNullProperties?.Remove("interval"); } }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.IntervalSpec> Interval { get => _explicitNullValueInterval; set { _explicitNullValueInterval = value; AdditionalData?.Remove("interval"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interval"); else _explicitNullProperties?.Remove("interval"); } }
         private List<global::Soenneker.Temporal.OpenApiClient.Models.IntervalSpec> _explicitNullValueInterval = default!;
 #endif
         /// <summary>All timestamps will be incremented by a random value from 0 to this amount of jitter. Default: 0</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Jitter { get => _explicitNullValueJitter; set { _explicitNullValueJitter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jitter"); else _explicitNullProperties?.Remove("jitter"); } }
+        public string? Jitter { get => _explicitNullValueJitter; set { _explicitNullValueJitter = value; AdditionalData?.Remove("jitter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jitter"); else _explicitNullProperties?.Remove("jitter"); } }
         private string? _explicitNullValueJitter = default!;
 #nullable restore
 #else
-        public string Jitter { get => _explicitNullValueJitter; set { _explicitNullValueJitter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jitter"); else _explicitNullProperties?.Remove("jitter"); } }
+        public string Jitter { get => _explicitNullValueJitter; set { _explicitNullValueJitter = value; AdditionalData?.Remove("jitter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jitter"); else _explicitNullProperties?.Remove("jitter"); } }
         private string _explicitNullValueJitter = default!;
 #endif
         /// <summary>If start_time is set, any timestamps before start_time will be skipped. (Together, start_time and end_time make an inclusive interval.)</summary>
-        public DateTimeOffset? StartTime { get => _explicitNullValueStartTime; set { _explicitNullValueStartTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startTime"); else _explicitNullProperties?.Remove("startTime"); } }
+        public DateTimeOffset? StartTime { get => _explicitNullValueStartTime; set { _explicitNullValueStartTime = value; AdditionalData?.Remove("startTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startTime"); else _explicitNullProperties?.Remove("startTime"); } }
         private DateTimeOffset? _explicitNullValueStartTime = default!;
         /// <summary>Calendar-based specifications of times.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.StructuredCalendarSpec>? StructuredCalendar { get => _explicitNullValueStructuredCalendar; set { _explicitNullValueStructuredCalendar = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("structuredCalendar"); else _explicitNullProperties?.Remove("structuredCalendar"); } }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.StructuredCalendarSpec>? StructuredCalendar { get => _explicitNullValueStructuredCalendar; set { _explicitNullValueStructuredCalendar = value; AdditionalData?.Remove("structuredCalendar"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("structuredCalendar"); else _explicitNullProperties?.Remove("structuredCalendar"); } }
         private List<global::Soenneker.Temporal.OpenApiClient.Models.StructuredCalendarSpec>? _explicitNullValueStructuredCalendar = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.StructuredCalendarSpec> StructuredCalendar { get => _explicitNullValueStructuredCalendar; set { _explicitNullValueStructuredCalendar = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("structuredCalendar"); else _explicitNullProperties?.Remove("structuredCalendar"); } }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.StructuredCalendarSpec> StructuredCalendar { get => _explicitNullValueStructuredCalendar; set { _explicitNullValueStructuredCalendar = value; AdditionalData?.Remove("structuredCalendar"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("structuredCalendar"); else _explicitNullProperties?.Remove("structuredCalendar"); } }
         private List<global::Soenneker.Temporal.OpenApiClient.Models.StructuredCalendarSpec> _explicitNullValueStructuredCalendar = default!;
 #endif
         /// <summary>The timezoneData property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TimezoneData { get => _explicitNullValueTimezoneData; set { _explicitNullValueTimezoneData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timezoneData"); else _explicitNullProperties?.Remove("timezoneData"); } }
+        public string? TimezoneData { get => _explicitNullValueTimezoneData; set { _explicitNullValueTimezoneData = value; AdditionalData?.Remove("timezoneData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timezoneData"); else _explicitNullProperties?.Remove("timezoneData"); } }
         private string? _explicitNullValueTimezoneData = default!;
 #nullable restore
 #else
-        public string TimezoneData { get => _explicitNullValueTimezoneData; set { _explicitNullValueTimezoneData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timezoneData"); else _explicitNullProperties?.Remove("timezoneData"); } }
+        public string TimezoneData { get => _explicitNullValueTimezoneData; set { _explicitNullValueTimezoneData = value; AdditionalData?.Remove("timezoneData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timezoneData"); else _explicitNullProperties?.Remove("timezoneData"); } }
         private string _explicitNullValueTimezoneData = default!;
 #endif
         /// <summary>Time zone to interpret all calendar-based specs in. If unset, defaults to UTC. We recommend using UTC for your application if at all possible, to avoid various surprising properties of time zones. Time zones may be provided by name, corresponding to names in the IANA time zone database (see https://www.iana.org/time-zones). The definition will be loaded by the Temporal server from the environment it runs in. If your application requires more control over the time zone definition used, it may pass in a complete definition in the form of a TZif file from the time zone database. If present, this will be used instead of loading anything from the environment. You are then responsible for updating timezone_data when the definition changes. Calendar spec matching is based on literal matching of the clock time with no special handling of DST: if you write a calendar spec that fires at 2:30am and specify a time zone that follows DST, that action will not be triggered on the day that has no 2:30am. Similarly, an action that fires at 1:30am will be triggered twice on the day that has two 1:30s. Also note that no actions are taken on leap-seconds (e.g. 23:59:60 UTC).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TimezoneName { get => _explicitNullValueTimezoneName; set { _explicitNullValueTimezoneName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timezoneName"); else _explicitNullProperties?.Remove("timezoneName"); } }
+        public string? TimezoneName { get => _explicitNullValueTimezoneName; set { _explicitNullValueTimezoneName = value; AdditionalData?.Remove("timezoneName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timezoneName"); else _explicitNullProperties?.Remove("timezoneName"); } }
         private string? _explicitNullValueTimezoneName = default!;
 #nullable restore
 #else
-        public string TimezoneName { get => _explicitNullValueTimezoneName; set { _explicitNullValueTimezoneName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timezoneName"); else _explicitNullProperties?.Remove("timezoneName"); } }
+        public string TimezoneName { get => _explicitNullValueTimezoneName; set { _explicitNullValueTimezoneName = value; AdditionalData?.Remove("timezoneName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timezoneName"); else _explicitNullProperties?.Remove("timezoneName"); } }
         private string _explicitNullValueTimezoneName = default!;
 #endif
         /// <summary>

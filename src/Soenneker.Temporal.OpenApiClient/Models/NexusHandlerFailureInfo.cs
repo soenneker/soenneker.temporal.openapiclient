@@ -17,23 +17,25 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("retryBehavior") is { } nullNodeRetryBehavior && nullNodeRetryBehavior.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RetryBehavior = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("retryBehavior") is null) { _explicitNullValueRetryBehavior = default!; _explicitNullProperties?.Remove("retryBehavior"); }
+            else if (parseNode.GetChildNode("retryBehavior") is { } nullNodeRetryBehavior && nullNodeRetryBehavior.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RetryBehavior = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Retry behavior, defaults to the retry behavior of the error type as defined in the spec.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.NexusHandlerFailureInfoRetryBehavior? RetryBehavior { get => _explicitNullValueRetryBehavior; set { _explicitNullValueRetryBehavior = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("retryBehavior"); else _explicitNullProperties?.Remove("retryBehavior"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.NexusHandlerFailureInfoRetryBehavior? RetryBehavior { get => _explicitNullValueRetryBehavior; set { _explicitNullValueRetryBehavior = value; AdditionalData?.Remove("retryBehavior"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("retryBehavior"); else _explicitNullProperties?.Remove("retryBehavior"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.NexusHandlerFailureInfoRetryBehavior? _explicitNullValueRetryBehavior = default!;
         /// <summary>The Nexus error type as defined in the spec: https://github.com/nexus-rpc/api/blob/main/SPEC.md#predefined-handler-errors.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private string? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private string _explicitNullValueType = default!;
 #endif
         /// <summary>
@@ -61,7 +63,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "retryBehavior", n => { RetryBehavior = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusHandlerFailureInfoRetryBehavior>(); } },
+                { "retryBehavior", n => { var parsed = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.NexusHandlerFailureInfoRetryBehavior>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRetryBehavior = default; _explicitNullProperties?.Remove("retryBehavior"); AdditionalData["retryBehavior"] = unknown; } else { RetryBehavior = parsed; AdditionalData.Remove("retryBehavior"); } } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
         }

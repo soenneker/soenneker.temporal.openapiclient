@@ -17,32 +17,36 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("actualTime") is { } nullNodeActualTime && nullNodeActualTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActualTime = null;
-            if (parseNode.GetChildNode("scheduleTime") is { } nullNodeScheduleTime && nullNodeScheduleTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduleTime = null;
-            if (parseNode.GetChildNode("startWorkflowResult") is { } nullNodeStartWorkflowResult && nullNodeStartWorkflowResult.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartWorkflowResult = null;
-            if (parseNode.GetChildNode("startWorkflowStatus") is { } nullNodeStartWorkflowStatus && nullNodeStartWorkflowStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartWorkflowStatus = null;
+            if (parseNode.GetChildNode("actualTime") is null) { _explicitNullValueActualTime = default!; _explicitNullProperties?.Remove("actualTime"); }
+            else if (parseNode.GetChildNode("actualTime") is { } nullNodeActualTime && nullNodeActualTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActualTime = null;
+            if (parseNode.GetChildNode("scheduleTime") is null) { _explicitNullValueScheduleTime = default!; _explicitNullProperties?.Remove("scheduleTime"); }
+            else if (parseNode.GetChildNode("scheduleTime") is { } nullNodeScheduleTime && nullNodeScheduleTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduleTime = null;
+            if (parseNode.GetChildNode("startWorkflowResult") is null) { _explicitNullValueStartWorkflowResult = default!; _explicitNullProperties?.Remove("startWorkflowResult"); }
+            else if (parseNode.GetChildNode("startWorkflowResult") is { } nullNodeStartWorkflowResult && nullNodeStartWorkflowResult.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartWorkflowResult = null;
+            if (parseNode.GetChildNode("startWorkflowStatus") is null) { _explicitNullValueStartWorkflowStatus = default!; _explicitNullProperties?.Remove("startWorkflowStatus"); }
+            else if (parseNode.GetChildNode("startWorkflowStatus") is { } nullNodeStartWorkflowStatus && nullNodeStartWorkflowStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartWorkflowStatus = null;
         }
 
         /// <summary>Time that the action was taken (real time).</summary>
-        public DateTimeOffset? ActualTime { get => _explicitNullValueActualTime; set { _explicitNullValueActualTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actualTime"); else _explicitNullProperties?.Remove("actualTime"); } }
+        public DateTimeOffset? ActualTime { get => _explicitNullValueActualTime; set { _explicitNullValueActualTime = value; AdditionalData?.Remove("actualTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actualTime"); else _explicitNullProperties?.Remove("actualTime"); } }
         private DateTimeOffset? _explicitNullValueActualTime = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Time that the action was taken (according to the schedule, including jitter).</summary>
-        public DateTimeOffset? ScheduleTime { get => _explicitNullValueScheduleTime; set { _explicitNullValueScheduleTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduleTime"); else _explicitNullProperties?.Remove("scheduleTime"); } }
+        public DateTimeOffset? ScheduleTime { get => _explicitNullValueScheduleTime; set { _explicitNullValueScheduleTime = value; AdditionalData?.Remove("scheduleTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduleTime"); else _explicitNullProperties?.Remove("scheduleTime"); } }
         private DateTimeOffset? _explicitNullValueScheduleTime = default!;
         /// <summary>If action was start_workflow:</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResultStartWorkflowResult? StartWorkflowResult { get => _explicitNullValueStartWorkflowResult; set { _explicitNullValueStartWorkflowResult = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startWorkflowResult"); else _explicitNullProperties?.Remove("startWorkflowResult"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResultStartWorkflowResult? StartWorkflowResult { get => _explicitNullValueStartWorkflowResult; set { _explicitNullValueStartWorkflowResult = value; AdditionalData?.Remove("startWorkflowResult"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startWorkflowResult"); else _explicitNullProperties?.Remove("startWorkflowResult"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResultStartWorkflowResult? _explicitNullValueStartWorkflowResult = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResultStartWorkflowResult StartWorkflowResult { get => _explicitNullValueStartWorkflowResult; set { _explicitNullValueStartWorkflowResult = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startWorkflowResult"); else _explicitNullProperties?.Remove("startWorkflowResult"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResultStartWorkflowResult StartWorkflowResult { get => _explicitNullValueStartWorkflowResult; set { _explicitNullValueStartWorkflowResult = value; AdditionalData?.Remove("startWorkflowResult"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startWorkflowResult"); else _explicitNullProperties?.Remove("startWorkflowResult"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResultStartWorkflowResult _explicitNullValueStartWorkflowResult = default!;
 #endif
         /// <summary>If the action was start_workflow, this field will reflect an eventually-consistent view of the started workflow&apos;s status.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResultStartWorkflowStatus? StartWorkflowStatus { get => _explicitNullValueStartWorkflowStatus; set { _explicitNullValueStartWorkflowStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startWorkflowStatus"); else _explicitNullProperties?.Remove("startWorkflowStatus"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResultStartWorkflowStatus? StartWorkflowStatus { get => _explicitNullValueStartWorkflowStatus; set { _explicitNullValueStartWorkflowStatus = value; AdditionalData?.Remove("startWorkflowStatus"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startWorkflowStatus"); else _explicitNullProperties?.Remove("startWorkflowStatus"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResultStartWorkflowStatus? _explicitNullValueStartWorkflowStatus = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResult"/> and sets the default values.
@@ -72,7 +76,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
                 { "actualTime", n => { ActualTime = n.GetDateTimeOffsetValue(); } },
                 { "scheduleTime", n => { ScheduleTime = n.GetDateTimeOffsetValue(); } },
                 { "startWorkflowResult", n => { StartWorkflowResult = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResultStartWorkflowResult>(global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResultStartWorkflowResult.CreateFromDiscriminatorValue); } },
-                { "startWorkflowStatus", n => { StartWorkflowStatus = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResultStartWorkflowStatus>(); } },
+                { "startWorkflowStatus", n => { var parsed = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.ScheduleActionResultStartWorkflowStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStartWorkflowStatus = default; _explicitNullProperties?.Remove("startWorkflowStatus"); AdditionalData["startWorkflowStatus"] = unknown; } else { StartWorkflowStatus = parsed; AdditionalData.Remove("startWorkflowStatus"); } } },
             };
         }
         /// <summary>

@@ -17,11 +17,16 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("failure") is { } nullNodeFailure && nullNodeFailure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Failure = null;
-            if (parseNode.GetChildNode("protocolInstanceId") is { } nullNodeProtocolInstanceId && nullNodeProtocolInstanceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProtocolInstanceId = null;
-            if (parseNode.GetChildNode("rejectedRequest") is { } nullNodeRejectedRequest && nullNodeRejectedRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RejectedRequest = null;
-            if (parseNode.GetChildNode("rejectedRequestMessageId") is { } nullNodeRejectedRequestMessageId && nullNodeRejectedRequestMessageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RejectedRequestMessageId = null;
-            if (parseNode.GetChildNode("rejectedRequestSequencingEventId") is { } nullNodeRejectedRequestSequencingEventId && nullNodeRejectedRequestSequencingEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RejectedRequestSequencingEventId = null;
+            if (parseNode.GetChildNode("failure") is null) { _explicitNullValueFailure = default!; _explicitNullProperties?.Remove("failure"); }
+            else if (parseNode.GetChildNode("failure") is { } nullNodeFailure && nullNodeFailure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Failure = null;
+            if (parseNode.GetChildNode("protocolInstanceId") is null) { _explicitNullValueProtocolInstanceId = default!; _explicitNullProperties?.Remove("protocolInstanceId"); }
+            else if (parseNode.GetChildNode("protocolInstanceId") is { } nullNodeProtocolInstanceId && nullNodeProtocolInstanceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProtocolInstanceId = null;
+            if (parseNode.GetChildNode("rejectedRequest") is null) { _explicitNullValueRejectedRequest = default!; _explicitNullProperties?.Remove("rejectedRequest"); }
+            else if (parseNode.GetChildNode("rejectedRequest") is { } nullNodeRejectedRequest && nullNodeRejectedRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RejectedRequest = null;
+            if (parseNode.GetChildNode("rejectedRequestMessageId") is null) { _explicitNullValueRejectedRequestMessageId = default!; _explicitNullProperties?.Remove("rejectedRequestMessageId"); }
+            else if (parseNode.GetChildNode("rejectedRequestMessageId") is { } nullNodeRejectedRequestMessageId && nullNodeRejectedRequestMessageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RejectedRequestMessageId = null;
+            if (parseNode.GetChildNode("rejectedRequestSequencingEventId") is null) { _explicitNullValueRejectedRequestSequencingEventId = default!; _explicitNullProperties?.Remove("rejectedRequestSequencingEventId"); }
+            else if (parseNode.GetChildNode("rejectedRequestSequencingEventId") is { } nullNodeRejectedRequestSequencingEventId && nullNodeRejectedRequestSequencingEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RejectedRequestSequencingEventId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,51 +34,51 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The cause of rejection.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateRejectedEventAttributesFailure? Failure { get => _explicitNullValueFailure; set { _explicitNullValueFailure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failure"); else _explicitNullProperties?.Remove("failure"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateRejectedEventAttributesFailure? Failure { get => _explicitNullValueFailure; set { _explicitNullValueFailure = value; AdditionalData?.Remove("failure"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failure"); else _explicitNullProperties?.Remove("failure"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateRejectedEventAttributesFailure? _explicitNullValueFailure = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateRejectedEventAttributesFailure Failure { get => _explicitNullValueFailure; set { _explicitNullValueFailure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failure"); else _explicitNullProperties?.Remove("failure"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateRejectedEventAttributesFailure Failure { get => _explicitNullValueFailure; set { _explicitNullValueFailure = value; AdditionalData?.Remove("failure"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failure"); else _explicitNullProperties?.Remove("failure"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateRejectedEventAttributesFailure _explicitNullValueFailure = default!;
 #endif
         /// <summary>The instance ID of the update protocol that generated this event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProtocolInstanceId { get => _explicitNullValueProtocolInstanceId; set { _explicitNullValueProtocolInstanceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("protocolInstanceId"); else _explicitNullProperties?.Remove("protocolInstanceId"); } }
+        public string? ProtocolInstanceId { get => _explicitNullValueProtocolInstanceId; set { _explicitNullValueProtocolInstanceId = value; AdditionalData?.Remove("protocolInstanceId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("protocolInstanceId"); else _explicitNullProperties?.Remove("protocolInstanceId"); } }
         private string? _explicitNullValueProtocolInstanceId = default!;
 #nullable restore
 #else
-        public string ProtocolInstanceId { get => _explicitNullValueProtocolInstanceId; set { _explicitNullValueProtocolInstanceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("protocolInstanceId"); else _explicitNullProperties?.Remove("protocolInstanceId"); } }
+        public string ProtocolInstanceId { get => _explicitNullValueProtocolInstanceId; set { _explicitNullValueProtocolInstanceId = value; AdditionalData?.Remove("protocolInstanceId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("protocolInstanceId"); else _explicitNullProperties?.Remove("protocolInstanceId"); } }
         private string _explicitNullValueProtocolInstanceId = default!;
 #endif
         /// <summary>The message payload of the original request message that initiated this update.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateRejectedEventAttributesRejectedRequest? RejectedRequest { get => _explicitNullValueRejectedRequest; set { _explicitNullValueRejectedRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rejectedRequest"); else _explicitNullProperties?.Remove("rejectedRequest"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateRejectedEventAttributesRejectedRequest? RejectedRequest { get => _explicitNullValueRejectedRequest; set { _explicitNullValueRejectedRequest = value; AdditionalData?.Remove("rejectedRequest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rejectedRequest"); else _explicitNullProperties?.Remove("rejectedRequest"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateRejectedEventAttributesRejectedRequest? _explicitNullValueRejectedRequest = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateRejectedEventAttributesRejectedRequest RejectedRequest { get => _explicitNullValueRejectedRequest; set { _explicitNullValueRejectedRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rejectedRequest"); else _explicitNullProperties?.Remove("rejectedRequest"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateRejectedEventAttributesRejectedRequest RejectedRequest { get => _explicitNullValueRejectedRequest; set { _explicitNullValueRejectedRequest = value; AdditionalData?.Remove("rejectedRequest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rejectedRequest"); else _explicitNullProperties?.Remove("rejectedRequest"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowExecutionUpdateRejectedEventAttributesRejectedRequest _explicitNullValueRejectedRequest = default!;
 #endif
         /// <summary>The message ID of the original request message that initiated this update. Needed so that the worker can recreate and deliver that same message as part of replay.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RejectedRequestMessageId { get => _explicitNullValueRejectedRequestMessageId; set { _explicitNullValueRejectedRequestMessageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rejectedRequestMessageId"); else _explicitNullProperties?.Remove("rejectedRequestMessageId"); } }
+        public string? RejectedRequestMessageId { get => _explicitNullValueRejectedRequestMessageId; set { _explicitNullValueRejectedRequestMessageId = value; AdditionalData?.Remove("rejectedRequestMessageId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rejectedRequestMessageId"); else _explicitNullProperties?.Remove("rejectedRequestMessageId"); } }
         private string? _explicitNullValueRejectedRequestMessageId = default!;
 #nullable restore
 #else
-        public string RejectedRequestMessageId { get => _explicitNullValueRejectedRequestMessageId; set { _explicitNullValueRejectedRequestMessageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rejectedRequestMessageId"); else _explicitNullProperties?.Remove("rejectedRequestMessageId"); } }
+        public string RejectedRequestMessageId { get => _explicitNullValueRejectedRequestMessageId; set { _explicitNullValueRejectedRequestMessageId = value; AdditionalData?.Remove("rejectedRequestMessageId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rejectedRequestMessageId"); else _explicitNullProperties?.Remove("rejectedRequestMessageId"); } }
         private string _explicitNullValueRejectedRequestMessageId = default!;
 #endif
         /// <summary>The event ID used to sequence the original request message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RejectedRequestSequencingEventId { get => _explicitNullValueRejectedRequestSequencingEventId; set { _explicitNullValueRejectedRequestSequencingEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rejectedRequestSequencingEventId"); else _explicitNullProperties?.Remove("rejectedRequestSequencingEventId"); } }
+        public string? RejectedRequestSequencingEventId { get => _explicitNullValueRejectedRequestSequencingEventId; set { _explicitNullValueRejectedRequestSequencingEventId = value; AdditionalData?.Remove("rejectedRequestSequencingEventId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rejectedRequestSequencingEventId"); else _explicitNullProperties?.Remove("rejectedRequestSequencingEventId"); } }
         private string? _explicitNullValueRejectedRequestSequencingEventId = default!;
 #nullable restore
 #else
-        public string RejectedRequestSequencingEventId { get => _explicitNullValueRejectedRequestSequencingEventId; set { _explicitNullValueRejectedRequestSequencingEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rejectedRequestSequencingEventId"); else _explicitNullProperties?.Remove("rejectedRequestSequencingEventId"); } }
+        public string RejectedRequestSequencingEventId { get => _explicitNullValueRejectedRequestSequencingEventId; set { _explicitNullValueRejectedRequestSequencingEventId = value; AdditionalData?.Remove("rejectedRequestSequencingEventId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rejectedRequestSequencingEventId"); else _explicitNullProperties?.Remove("rejectedRequestSequencingEventId"); } }
         private string _explicitNullValueRejectedRequestSequencingEventId = default!;
 #endif
         /// <summary>

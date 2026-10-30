@@ -17,10 +17,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("catchupWindow") is { } nullNodeCatchupWindow && nullNodeCatchupWindow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CatchupWindow = null;
-            if (parseNode.GetChildNode("keepOriginalWorkflowId") is { } nullNodeKeepOriginalWorkflowId && nullNodeKeepOriginalWorkflowId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KeepOriginalWorkflowId = null;
-            if (parseNode.GetChildNode("overlapPolicy") is { } nullNodeOverlapPolicy && nullNodeOverlapPolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverlapPolicy = null;
-            if (parseNode.GetChildNode("pauseOnFailure") is { } nullNodePauseOnFailure && nullNodePauseOnFailure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PauseOnFailure = null;
+            if (parseNode.GetChildNode("catchupWindow") is null) { _explicitNullValueCatchupWindow = default!; _explicitNullProperties?.Remove("catchupWindow"); }
+            else if (parseNode.GetChildNode("catchupWindow") is { } nullNodeCatchupWindow && nullNodeCatchupWindow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CatchupWindow = null;
+            if (parseNode.GetChildNode("keepOriginalWorkflowId") is null) { _explicitNullValueKeepOriginalWorkflowId = default!; _explicitNullProperties?.Remove("keepOriginalWorkflowId"); }
+            else if (parseNode.GetChildNode("keepOriginalWorkflowId") is { } nullNodeKeepOriginalWorkflowId && nullNodeKeepOriginalWorkflowId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KeepOriginalWorkflowId = null;
+            if (parseNode.GetChildNode("overlapPolicy") is null) { _explicitNullValueOverlapPolicy = default!; _explicitNullProperties?.Remove("overlapPolicy"); }
+            else if (parseNode.GetChildNode("overlapPolicy") is { } nullNodeOverlapPolicy && nullNodeOverlapPolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverlapPolicy = null;
+            if (parseNode.GetChildNode("pauseOnFailure") is null) { _explicitNullValuePauseOnFailure = default!; _explicitNullProperties?.Remove("pauseOnFailure"); }
+            else if (parseNode.GetChildNode("pauseOnFailure") is { } nullNodePauseOnFailure && nullNodePauseOnFailure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PauseOnFailure = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,21 +32,21 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Policy for catchups: If the Temporal server misses an action due to one or more components being down, and comes back up, the action will be run if the scheduled time is within this window from the current time. This value defaults to one year, and can&apos;t be less than 10 seconds.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CatchupWindow { get => _explicitNullValueCatchupWindow; set { _explicitNullValueCatchupWindow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("catchupWindow"); else _explicitNullProperties?.Remove("catchupWindow"); } }
+        public string? CatchupWindow { get => _explicitNullValueCatchupWindow; set { _explicitNullValueCatchupWindow = value; AdditionalData?.Remove("catchupWindow"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("catchupWindow"); else _explicitNullProperties?.Remove("catchupWindow"); } }
         private string? _explicitNullValueCatchupWindow = default!;
 #nullable restore
 #else
-        public string CatchupWindow { get => _explicitNullValueCatchupWindow; set { _explicitNullValueCatchupWindow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("catchupWindow"); else _explicitNullProperties?.Remove("catchupWindow"); } }
+        public string CatchupWindow { get => _explicitNullValueCatchupWindow; set { _explicitNullValueCatchupWindow = value; AdditionalData?.Remove("catchupWindow"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("catchupWindow"); else _explicitNullProperties?.Remove("catchupWindow"); } }
         private string _explicitNullValueCatchupWindow = default!;
 #endif
         /// <summary>If true, and the action would start a workflow, a timestamp will not be appended to the scheduled workflow id.</summary>
-        public bool? KeepOriginalWorkflowId { get => _explicitNullValueKeepOriginalWorkflowId; set { _explicitNullValueKeepOriginalWorkflowId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keepOriginalWorkflowId"); else _explicitNullProperties?.Remove("keepOriginalWorkflowId"); } }
+        public bool? KeepOriginalWorkflowId { get => _explicitNullValueKeepOriginalWorkflowId; set { _explicitNullValueKeepOriginalWorkflowId = value; AdditionalData?.Remove("keepOriginalWorkflowId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keepOriginalWorkflowId"); else _explicitNullProperties?.Remove("keepOriginalWorkflowId"); } }
         private bool? _explicitNullValueKeepOriginalWorkflowId = default!;
         /// <summary>Policy for overlaps. Note that this can be changed after a schedule has taken some actions, and some changes might produce unintuitive results. In general, the later policy overrides the earlier policy.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.SchedulePoliciesOverlapPolicy? OverlapPolicy { get => _explicitNullValueOverlapPolicy; set { _explicitNullValueOverlapPolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overlapPolicy"); else _explicitNullProperties?.Remove("overlapPolicy"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.SchedulePoliciesOverlapPolicy? OverlapPolicy { get => _explicitNullValueOverlapPolicy; set { _explicitNullValueOverlapPolicy = value; AdditionalData?.Remove("overlapPolicy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overlapPolicy"); else _explicitNullProperties?.Remove("overlapPolicy"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.SchedulePoliciesOverlapPolicy? _explicitNullValueOverlapPolicy = default!;
         /// <summary>If true, and a workflow run fails or times out, turn on &quot;paused&quot;. This applies after retry policies: the full chain of retries must fail to trigger a pause here.</summary>
-        public bool? PauseOnFailure { get => _explicitNullValuePauseOnFailure; set { _explicitNullValuePauseOnFailure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pauseOnFailure"); else _explicitNullProperties?.Remove("pauseOnFailure"); } }
+        public bool? PauseOnFailure { get => _explicitNullValuePauseOnFailure; set { _explicitNullValuePauseOnFailure = value; AdditionalData?.Remove("pauseOnFailure"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pauseOnFailure"); else _explicitNullProperties?.Remove("pauseOnFailure"); } }
         private bool? _explicitNullValuePauseOnFailure = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.SchedulePolicies"/> and sets the default values.
@@ -71,7 +75,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
             {
                 { "catchupWindow", n => { CatchupWindow = n.GetStringValue(); } },
                 { "keepOriginalWorkflowId", n => { KeepOriginalWorkflowId = n.GetBoolValue(); } },
-                { "overlapPolicy", n => { OverlapPolicy = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.SchedulePoliciesOverlapPolicy>(); } },
+                { "overlapPolicy", n => { var parsed = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.SchedulePoliciesOverlapPolicy>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOverlapPolicy = default; _explicitNullProperties?.Remove("overlapPolicy"); AdditionalData["overlapPolicy"] = unknown; } else { OverlapPolicy = parsed; AdditionalData.Remove("overlapPolicy"); } } },
                 { "pauseOnFailure", n => { PauseOnFailure = n.GetBoolValue(); } },
             };
         }

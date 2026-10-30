@@ -18,13 +18,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("lifecycleStage") is { } nullNodeLifecycleStage && nullNodeLifecycleStage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LifecycleStage = null;
+            if (parseNode.GetChildNode("lifecycleStage") is null) { _explicitNullValueLifecycleStage = default!; _explicitNullProperties?.Remove("lifecycleStage"); }
+            else if (parseNode.GetChildNode("lifecycleStage") is { } nullNodeLifecycleStage && nullNodeLifecycleStage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LifecycleStage = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Indicates the Update lifecycle stage that the Update must reach before API call is returned. NOTE: This field works together with API call timeout which is limited by server timeout (maximum wait time). If server timeout is expired before user specified timeout, API call returns even if specified stage is not reached.</summary>
-        public global::Soenneker.Temporal.OpenApiClient.Models.WaitPolicyLifecycleStage? LifecycleStage { get => _explicitNullValueLifecycleStage; set { _explicitNullValueLifecycleStage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lifecycleStage"); else _explicitNullProperties?.Remove("lifecycleStage"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WaitPolicyLifecycleStage? LifecycleStage { get => _explicitNullValueLifecycleStage; set { _explicitNullValueLifecycleStage = value; AdditionalData?.Remove("lifecycleStage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lifecycleStage"); else _explicitNullProperties?.Remove("lifecycleStage"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WaitPolicyLifecycleStage? _explicitNullValueLifecycleStage = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkflowExecutionRequestWaitPolicy"/> and sets the default values.
@@ -51,7 +52,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "lifecycleStage", n => { LifecycleStage = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WaitPolicyLifecycleStage>(); } },
+                { "lifecycleStage", n => { var parsed = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.WaitPolicyLifecycleStage>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueLifecycleStage = default; _explicitNullProperties?.Remove("lifecycleStage"); AdditionalData["lifecycleStage"] = unknown; } else { LifecycleStage = parsed; AdditionalData.Remove("lifecycleStage"); } } },
             };
         }
         /// <summary>

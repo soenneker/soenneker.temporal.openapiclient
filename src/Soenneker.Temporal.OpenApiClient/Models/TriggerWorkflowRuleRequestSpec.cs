@@ -18,56 +18,61 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("actions") is { } nullNodeActions && nullNodeActions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Actions = null;
-            if (parseNode.GetChildNode("activityStart") is { } nullNodeActivityStart && nullNodeActivityStart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActivityStart = null;
-            if (parseNode.GetChildNode("expirationTime") is { } nullNodeExpirationTime && nullNodeExpirationTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpirationTime = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("visibilityQuery") is { } nullNodeVisibilityQuery && nullNodeVisibilityQuery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VisibilityQuery = null;
+            if (parseNode.GetChildNode("actions") is null) { _explicitNullValueActions = default!; _explicitNullProperties?.Remove("actions"); }
+            else if (parseNode.GetChildNode("actions") is { } nullNodeActions && nullNodeActions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Actions = null;
+            if (parseNode.GetChildNode("activityStart") is null) { _explicitNullValueActivityStart = default!; _explicitNullProperties?.Remove("activityStart"); }
+            else if (parseNode.GetChildNode("activityStart") is { } nullNodeActivityStart && nullNodeActivityStart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActivityStart = null;
+            if (parseNode.GetChildNode("expirationTime") is null) { _explicitNullValueExpirationTime = default!; _explicitNullProperties?.Remove("expirationTime"); }
+            else if (parseNode.GetChildNode("expirationTime") is { } nullNodeExpirationTime && nullNodeExpirationTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpirationTime = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("visibilityQuery") is null) { _explicitNullValueVisibilityQuery = default!; _explicitNullProperties?.Remove("visibilityQuery"); }
+            else if (parseNode.GetChildNode("visibilityQuery") is { } nullNodeVisibilityQuery && nullNodeVisibilityQuery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VisibilityQuery = null;
         }
 
         /// <summary>WorkflowRuleAction to be taken when the rule is triggered and predicate is matched.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRuleAction>? Actions { get => _explicitNullValueActions; set { _explicitNullValueActions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actions"); else _explicitNullProperties?.Remove("actions"); } }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRuleAction>? Actions { get => _explicitNullValueActions; set { _explicitNullValueActions = value; AdditionalData?.Remove("actions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actions"); else _explicitNullProperties?.Remove("actions"); } }
         private List<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRuleAction>? _explicitNullValueActions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRuleAction> Actions { get => _explicitNullValueActions; set { _explicitNullValueActions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actions"); else _explicitNullProperties?.Remove("actions"); } }
+        public List<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRuleAction> Actions { get => _explicitNullValueActions; set { _explicitNullValueActions = value; AdditionalData?.Remove("actions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actions"); else _explicitNullProperties?.Remove("actions"); } }
         private List<global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRuleAction> _explicitNullValueActions = default!;
 #endif
         /// <summary>Activity trigger will be triggered when an activity is about to start.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRuleSpecActivityStartingTrigger? ActivityStart { get => _explicitNullValueActivityStart; set { _explicitNullValueActivityStart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityStart"); else _explicitNullProperties?.Remove("activityStart"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRuleSpecActivityStartingTrigger? ActivityStart { get => _explicitNullValueActivityStart; set { _explicitNullValueActivityStart = value; AdditionalData?.Remove("activityStart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityStart"); else _explicitNullProperties?.Remove("activityStart"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRuleSpecActivityStartingTrigger? _explicitNullValueActivityStart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRuleSpecActivityStartingTrigger ActivityStart { get => _explicitNullValueActivityStart; set { _explicitNullValueActivityStart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityStart"); else _explicitNullProperties?.Remove("activityStart"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRuleSpecActivityStartingTrigger ActivityStart { get => _explicitNullValueActivityStart; set { _explicitNullValueActivityStart = value; AdditionalData?.Remove("activityStart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityStart"); else _explicitNullProperties?.Remove("activityStart"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkflowRuleSpecActivityStartingTrigger _explicitNullValueActivityStart = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Expiration time of the rule. After this time, the rule will be deleted. Can be empty if the rule should never expire.</summary>
-        public DateTimeOffset? ExpirationTime { get => _explicitNullValueExpirationTime; set { _explicitNullValueExpirationTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expirationTime"); else _explicitNullProperties?.Remove("expirationTime"); } }
+        public DateTimeOffset? ExpirationTime { get => _explicitNullValueExpirationTime; set { _explicitNullValueExpirationTime = value; AdditionalData?.Remove("expirationTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expirationTime"); else _explicitNullProperties?.Remove("expirationTime"); } }
         private DateTimeOffset? _explicitNullValueExpirationTime = default!;
         /// <summary>The id of the new workflow rule. Must be unique within the namespace. Can be set by the user, and can have business meaning.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>Restricted Visibility query. This query is used to filter workflows in this namespace to which this rule should apply. It is applied to any running workflow each time a triggering event occurs, before the trigger predicate is evaluated. The following workflow attributes are supported: - WorkflowType - WorkflowId - StartTime - ExecutionStatus</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VisibilityQuery { get => _explicitNullValueVisibilityQuery; set { _explicitNullValueVisibilityQuery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visibilityQuery"); else _explicitNullProperties?.Remove("visibilityQuery"); } }
+        public string? VisibilityQuery { get => _explicitNullValueVisibilityQuery; set { _explicitNullValueVisibilityQuery = value; AdditionalData?.Remove("visibilityQuery"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visibilityQuery"); else _explicitNullProperties?.Remove("visibilityQuery"); } }
         private string? _explicitNullValueVisibilityQuery = default!;
 #nullable restore
 #else
-        public string VisibilityQuery { get => _explicitNullValueVisibilityQuery; set { _explicitNullValueVisibilityQuery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visibilityQuery"); else _explicitNullProperties?.Remove("visibilityQuery"); } }
+        public string VisibilityQuery { get => _explicitNullValueVisibilityQuery; set { _explicitNullValueVisibilityQuery = value; AdditionalData?.Remove("visibilityQuery"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visibilityQuery"); else _explicitNullProperties?.Remove("visibilityQuery"); } }
         private string _explicitNullValueVisibilityQuery = default!;
 #endif
         /// <summary>

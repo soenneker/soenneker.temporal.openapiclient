@@ -18,9 +18,12 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("autoscalingPollerBehavior") is { } nullNodeAutoscalingPollerBehavior && nullNodeAutoscalingPollerBehavior.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoscalingPollerBehavior = null;
-            if (parseNode.GetChildNode("simplePollerBehavior") is { } nullNodeSimplePollerBehavior && nullNodeSimplePollerBehavior.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SimplePollerBehavior = null;
-            if (parseNode.GetChildNode("workflowCacheSize") is { } nullNodeWorkflowCacheSize && nullNodeWorkflowCacheSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowCacheSize = null;
+            if (parseNode.GetChildNode("autoscalingPollerBehavior") is null) { _explicitNullValueAutoscalingPollerBehavior = default!; _explicitNullProperties?.Remove("autoscalingPollerBehavior"); }
+            else if (parseNode.GetChildNode("autoscalingPollerBehavior") is { } nullNodeAutoscalingPollerBehavior && nullNodeAutoscalingPollerBehavior.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoscalingPollerBehavior = null;
+            if (parseNode.GetChildNode("simplePollerBehavior") is null) { _explicitNullValueSimplePollerBehavior = default!; _explicitNullProperties?.Remove("simplePollerBehavior"); }
+            else if (parseNode.GetChildNode("simplePollerBehavior") is { } nullNodeSimplePollerBehavior && nullNodeSimplePollerBehavior.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SimplePollerBehavior = null;
+            if (parseNode.GetChildNode("workflowCacheSize") is null) { _explicitNullValueWorkflowCacheSize = default!; _explicitNullProperties?.Remove("workflowCacheSize"); }
+            else if (parseNode.GetChildNode("workflowCacheSize") is { } nullNodeWorkflowCacheSize && nullNodeWorkflowCacheSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowCacheSize = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,25 +31,25 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>The autoscalingPollerBehavior property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerConfigAutoscalingPollerBehavior? AutoscalingPollerBehavior { get => _explicitNullValueAutoscalingPollerBehavior; set { _explicitNullValueAutoscalingPollerBehavior = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("autoscalingPollerBehavior"); else _explicitNullProperties?.Remove("autoscalingPollerBehavior"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerConfigAutoscalingPollerBehavior? AutoscalingPollerBehavior { get => _explicitNullValueAutoscalingPollerBehavior; set { _explicitNullValueAutoscalingPollerBehavior = value; AdditionalData?.Remove("autoscalingPollerBehavior"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("autoscalingPollerBehavior"); else _explicitNullProperties?.Remove("autoscalingPollerBehavior"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkerConfigAutoscalingPollerBehavior? _explicitNullValueAutoscalingPollerBehavior = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerConfigAutoscalingPollerBehavior AutoscalingPollerBehavior { get => _explicitNullValueAutoscalingPollerBehavior; set { _explicitNullValueAutoscalingPollerBehavior = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("autoscalingPollerBehavior"); else _explicitNullProperties?.Remove("autoscalingPollerBehavior"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerConfigAutoscalingPollerBehavior AutoscalingPollerBehavior { get => _explicitNullValueAutoscalingPollerBehavior; set { _explicitNullValueAutoscalingPollerBehavior = value; AdditionalData?.Remove("autoscalingPollerBehavior"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("autoscalingPollerBehavior"); else _explicitNullProperties?.Remove("autoscalingPollerBehavior"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkerConfigAutoscalingPollerBehavior _explicitNullValueAutoscalingPollerBehavior = default!;
 #endif
         /// <summary>The simplePollerBehavior property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerConfigSimplePollerBehavior? SimplePollerBehavior { get => _explicitNullValueSimplePollerBehavior; set { _explicitNullValueSimplePollerBehavior = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("simplePollerBehavior"); else _explicitNullProperties?.Remove("simplePollerBehavior"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerConfigSimplePollerBehavior? SimplePollerBehavior { get => _explicitNullValueSimplePollerBehavior; set { _explicitNullValueSimplePollerBehavior = value; AdditionalData?.Remove("simplePollerBehavior"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("simplePollerBehavior"); else _explicitNullProperties?.Remove("simplePollerBehavior"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkerConfigSimplePollerBehavior? _explicitNullValueSimplePollerBehavior = default!;
 #nullable restore
 #else
-        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerConfigSimplePollerBehavior SimplePollerBehavior { get => _explicitNullValueSimplePollerBehavior; set { _explicitNullValueSimplePollerBehavior = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("simplePollerBehavior"); else _explicitNullProperties?.Remove("simplePollerBehavior"); } }
+        public global::Soenneker.Temporal.OpenApiClient.Models.WorkerConfigSimplePollerBehavior SimplePollerBehavior { get => _explicitNullValueSimplePollerBehavior; set { _explicitNullValueSimplePollerBehavior = value; AdditionalData?.Remove("simplePollerBehavior"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("simplePollerBehavior"); else _explicitNullProperties?.Remove("simplePollerBehavior"); } }
         private global::Soenneker.Temporal.OpenApiClient.Models.WorkerConfigSimplePollerBehavior _explicitNullValueSimplePollerBehavior = default!;
 #endif
         /// <summary>The workflowCacheSize property</summary>
-        public int? WorkflowCacheSize { get => _explicitNullValueWorkflowCacheSize; set { _explicitNullValueWorkflowCacheSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowCacheSize"); else _explicitNullProperties?.Remove("workflowCacheSize"); } }
+        public int? WorkflowCacheSize { get => _explicitNullValueWorkflowCacheSize; set { _explicitNullValueWorkflowCacheSize = value; AdditionalData?.Remove("workflowCacheSize"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowCacheSize"); else _explicitNullProperties?.Remove("workflowCacheSize"); } }
         private int? _explicitNullValueWorkflowCacheSize = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.FetchWorkerConfigResponseWorkerConfig"/> and sets the default values.

@@ -17,13 +17,14 @@ namespace Soenneker.Temporal.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("nonRetryable") is { } nullNodeNonRetryable && nullNodeNonRetryable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NonRetryable = null;
+            if (parseNode.GetChildNode("nonRetryable") is null) { _explicitNullValueNonRetryable = default!; _explicitNullProperties?.Remove("nonRetryable"); }
+            else if (parseNode.GetChildNode("nonRetryable") is { } nullNodeNonRetryable && nullNodeNonRetryable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NonRetryable = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The nonRetryable property</summary>
-        public bool? NonRetryable { get => _explicitNullValueNonRetryable; set { _explicitNullValueNonRetryable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nonRetryable"); else _explicitNullProperties?.Remove("nonRetryable"); } }
+        public bool? NonRetryable { get => _explicitNullValueNonRetryable; set { _explicitNullValueNonRetryable = value; AdditionalData?.Remove("nonRetryable"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nonRetryable"); else _explicitNullProperties?.Remove("nonRetryable"); } }
         private bool? _explicitNullValueNonRetryable = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.ServerFailureInfo"/> and sets the default values.
