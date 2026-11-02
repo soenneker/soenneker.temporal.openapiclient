@@ -25,8 +25,8 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Count of local activities which have begun an execution attempt during this workflow task, and whose first attempt occurred in some previous task. This is used for metering purposes, and does not affect workflow state. (-- api-linter: core::0141::forbidden-types=disabled     aip.dev/not-precedent: Negative values make no sense to represent. --)</summary>
-        public int? NonfirstLocalActivityExecutionAttempts { get => _explicitNullValueNonfirstLocalActivityExecutionAttempts; set { _explicitNullValueNonfirstLocalActivityExecutionAttempts = value; AdditionalData?.Remove("nonfirstLocalActivityExecutionAttempts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nonfirstLocalActivityExecutionAttempts"); else _explicitNullProperties?.Remove("nonfirstLocalActivityExecutionAttempts"); } }
-        private int? _explicitNullValueNonfirstLocalActivityExecutionAttempts = default!;
+        public long? NonfirstLocalActivityExecutionAttempts { get => _explicitNullValueNonfirstLocalActivityExecutionAttempts; set { _explicitNullValueNonfirstLocalActivityExecutionAttempts = value; AdditionalData?.Remove("nonfirstLocalActivityExecutionAttempts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nonfirstLocalActivityExecutionAttempts"); else _explicitNullProperties?.Remove("nonfirstLocalActivityExecutionAttempts"); } }
+        private long? _explicitNullValueNonfirstLocalActivityExecutionAttempts = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Temporal.OpenApiClient.Models.WorkflowTaskCompletedEventAttributesMeteringMetadata"/> and sets the default values.
         /// </summary>
@@ -52,7 +52,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "nonfirstLocalActivityExecutionAttempts", n => { NonfirstLocalActivityExecutionAttempts = n.GetIntValue(); } },
+                { "nonfirstLocalActivityExecutionAttempts", n => { NonfirstLocalActivityExecutionAttempts = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -62,7 +62,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("nonfirstLocalActivityExecutionAttempts", NonfirstLocalActivityExecutionAttempts);
+            writer.WriteLongValue("nonfirstLocalActivityExecutionAttempts", NonfirstLocalActivityExecutionAttempts);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
