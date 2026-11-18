@@ -509,7 +509,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(41)
             {
                 { "attempt", n => { Attempt = n.GetIntValue(); } },
                 { "completionCallbacks", n => { CompletionCallbacks = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.Callback>(global::Soenneker.Temporal.OpenApiClient.Models.Callback.CreateFromDiscriminatorValue)?.AsList(); } },

@@ -852,7 +852,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(69)
             {
                 { "activityPropertiesModifiedExternallyEventAttributes", n => { ActivityPropertiesModifiedExternallyEventAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityPropertiesModifiedExternallyEventAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.ActivityPropertiesModifiedExternallyEventAttributes.CreateFromDiscriminatorValue); } },
                 { "activityTaskCancelRequestedEventAttributes", n => { ActivityTaskCancelRequestedEventAttributes = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCancelRequestedEventAttributes>(global::Soenneker.Temporal.OpenApiClient.Models.ActivityTaskCancelRequestedEventAttributes.CreateFromDiscriminatorValue); } },

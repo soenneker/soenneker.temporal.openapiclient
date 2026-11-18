@@ -291,7 +291,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(24)
             {
                 { "activityPollerInfo", n => { ActivityPollerInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerPollerInfo>(global::Soenneker.Temporal.OpenApiClient.Models.WorkerPollerInfo.CreateFromDiscriminatorValue); } },
                 { "activityTaskSlotsInfo", n => { ActivityTaskSlotsInfo = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo>(global::Soenneker.Temporal.OpenApiClient.Models.WorkerSlotsInfo.CreateFromDiscriminatorValue); } },

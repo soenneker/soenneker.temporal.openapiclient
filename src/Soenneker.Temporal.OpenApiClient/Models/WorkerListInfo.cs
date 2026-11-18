@@ -187,7 +187,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(13)
             {
                 { "deploymentVersion", n => { DeploymentVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion>(global::Soenneker.Temporal.OpenApiClient.Models.WorkerDeploymentVersion.CreateFromDiscriminatorValue); } },
                 { "drivers", n => { Drivers = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.StorageDriverInfo>(global::Soenneker.Temporal.OpenApiClient.Models.StorageDriverInfo.CreateFromDiscriminatorValue)?.AsList(); } },

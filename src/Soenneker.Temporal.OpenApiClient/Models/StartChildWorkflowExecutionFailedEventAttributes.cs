@@ -133,7 +133,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "cause", n => { var parsed = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.StartChildWorkflowExecutionFailedEventAttributesCause>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCause = default; _explicitNullProperties?.Remove("cause"); AdditionalData["cause"] = unknown; } else { Cause = parsed; AdditionalData.Remove("cause"); } } },
                 { "control", n => { Control = n.GetStringValue(); } },

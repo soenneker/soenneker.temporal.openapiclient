@@ -222,7 +222,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(16)
             {
                 { "endpoint", n => { Endpoint = n.GetStringValue(); } },
                 { "idConflictPolicy", n => { var parsed = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.StartNexusOperationExecutionRequestIdConflictPolicy>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueIdConflictPolicy = default; _explicitNullProperties?.Remove("idConflictPolicy"); AdditionalData["idConflictPolicy"] = unknown; } else { IdConflictPolicy = parsed; AdditionalData.Remove("idConflictPolicy"); } } },

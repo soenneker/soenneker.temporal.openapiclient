@@ -90,7 +90,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "eagerWorkflowTask", n => { EagerWorkflowTask = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseEagerWorkflowTask>(global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseEagerWorkflowTask.CreateFromDiscriminatorValue); } },
                 { "link", n => { Link = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseLink>(global::Soenneker.Temporal.OpenApiClient.Models.StartWorkflowExecutionResponseLink.CreateFromDiscriminatorValue); } },

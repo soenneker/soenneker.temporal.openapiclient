@@ -109,7 +109,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "config", n => { Config = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.NamespaceConfig>(global::Soenneker.Temporal.OpenApiClient.Models.NamespaceConfig.CreateFromDiscriminatorValue); } },
                 { "failoverHistory", n => { FailoverHistory = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.FailoverStatus>(global::Soenneker.Temporal.OpenApiClient.Models.FailoverStatus.CreateFromDiscriminatorValue)?.AsList(); } },

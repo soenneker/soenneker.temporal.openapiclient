@@ -98,7 +98,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "alerts", n => { Alerts = n.GetCollectionOfObjectValues<global::Soenneker.Temporal.OpenApiClient.Models.Alert>(global::Soenneker.Temporal.OpenApiClient.Models.Alert.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "current", n => { Current = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.ReleaseInfo>(global::Soenneker.Temporal.OpenApiClient.Models.ReleaseInfo.CreateFromDiscriminatorValue); } },

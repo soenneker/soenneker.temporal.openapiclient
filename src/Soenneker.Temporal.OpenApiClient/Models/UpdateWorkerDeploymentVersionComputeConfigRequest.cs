@@ -117,7 +117,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "computeConfigScalingGroups", n => { ComputeConfigScalingGroups = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionComputeConfigRequestComputeConfigScalingGroupsProperty>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionComputeConfigRequestComputeConfigScalingGroupsProperty.CreateFromDiscriminatorValue); } },
                 { "deploymentVersion", n => { DeploymentVersion = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionComputeConfigRequestDeploymentVersion>(global::Soenneker.Temporal.OpenApiClient.Models.UpdateWorkerDeploymentVersionComputeConfigRequestDeploymentVersion.CreateFromDiscriminatorValue); } },

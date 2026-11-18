@@ -90,7 +90,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "category", n => { var parsed = n.GetEnumValue<global::Soenneker.Temporal.OpenApiClient.Models.ApplicationFailureInfoCategory>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCategory = default; _explicitNullProperties?.Remove("category"); AdditionalData["category"] = unknown; } else { Category = parsed; AdditionalData.Remove("category"); } } },
                 { "details", n => { Details = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.Payloads>(global::Soenneker.Temporal.OpenApiClient.Models.Payloads.CreateFromDiscriminatorValue); } },

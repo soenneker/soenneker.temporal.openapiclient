@@ -140,7 +140,7 @@ namespace Soenneker.Temporal.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "deployment", n => { Deployment = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestDeployment>(global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestDeployment.CreateFromDiscriminatorValue); } },
                 { "deploymentOptions", n => { DeploymentOptions = n.GetObjectValue<global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestDeploymentOptions>(global::Soenneker.Temporal.OpenApiClient.Models.RespondActivityTaskCompletedRequestDeploymentOptions.CreateFromDiscriminatorValue); } },
